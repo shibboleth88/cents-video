@@ -1,0 +1,167 @@
+{
+ "generated_at": "2026-10-03T10:05:43",
+ "essay": {
+  "title": "The Readymade of Loss",
+  "author": "Dr. Martin Lehnen",
+  "subtitle": "On what a system cannot witness",
+  "source": "FIXTURE \u2014 replace with the real essay reference",
+  "version": "fixture-0"
+ },
+ "timing_source": {
+  "alignment_is_fixture": false,
+  "model": "mlx-community/whisper-small-mlx",
+  "audio": "inputs/vo_scratch.wav",
+  "duration_s": 22.41,
+  "words": 59
+ },
+ "canvas": {
+  "width": 1080,
+  "height": 1920,
+  "fps": 30
+ },
+ "ledger_sha256": "e3559efaa87c6e5fc937efd0f39e4b83f8d301f2df94e25fdbf28dde155018a7",
+ "shots": [
+  {
+   "shot_id": "s01_title",
+   "purpose": "State the question and credit the essay author on first title.",
+   "visual_kind": "code",
+   "component": "TitleCard",
+   "asset_id": null,
+   "start": {
+    "at_start": true
+   },
+   "end": {
+    "at_phrase": "Rutherford Chang's CENTS"
+   }
+  },
+  {
+   "shot_id": "s02_recap",
+   "purpose": "Brief project recap, naming Rutherford Chang.",
+   "visual_kind": "code",
+   "component": "PullQuote",
+   "asset_id": null,
+   "start": {
+    "at_phrase": "Rutherford Chang's CENTS"
+   },
+   "end": {
+    "at_phrase": "A penny is photographed"
+   }
+  },
+  {
+   "shot_id": "s03_process",
+   "purpose": "Show the three-step process as a counted quantity, not a metaphor.",
+   "visual_kind": "code",
+   "component": "StatReveal",
+   "asset_id": null,
+   "start": {
+    "at_phrase": "A penny is photographed"
+   },
+   "end": {
+    "at_phrase": "The object persists. The record"
+   }
+  },
+  {
+   "shot_id": "s04_both_persist",
+   "purpose": "Hold the distinction between object and record before naming the gap.",
+   "visual_kind": "code",
+   "component": "PullQuote",
+   "asset_id": null,
+   "start": {
+    "at_phrase": "The object persists. The record"
+   },
+   "end": {
+    "at_phrase": "What goes missing"
+   }
+  },
+  {
+   "shot_id": "s05_gap",
+   "purpose": "Name the missing link \u2014 the essay's central turn.",
+   "visual_kind": "code",
+   "component": "PullQuote",
+   "asset_id": null,
+   "start": {
+    "at_phrase": "What goes missing"
+   },
+   "end": {
+    "at_phrase": "That gap is not"
+   }
+  },
+  {
+   "shot_id": "s06_credits",
+   "purpose": "Close on the final idea, then brief credits.",
+   "visual_kind": "code",
+   "component": "Credits",
+   "asset_id": null,
+   "start": {
+    "at_phrase": "That gap is not"
+   },
+   "end": {
+    "at_end": true
+   }
+  }
+ ],
+ "exports": {
+  "clean.mp4": {
+   "sha256": "1043844aa4bc80fc1619cfd6feee23b6f99a8e702d3767b8708e5ac475f7eeed",
+   "bytes": 1388028,
+   "duration_s": 22.4,
+   "frames": 672,
+   "size": "1080x1920",
+   "fps": "30/1"
+  },
+  "captioned.mp4": {
+   "sha256": "c058b73f2c6bb0ce99faeda6e49fb743dacb8cbdfde0877642cc2dac8cc0aab3",
+   "bytes": 1577161,
+   "duration_s": 22.4,
+   "frames": 672,
+   "size": "1080x1920",
+   "fps": "30/1"
+  }
+ },
+ "gates": {
+  "exports not stale": {
+   "verdict": "pass",
+   "detail": "all 3 exports are newer than captions/cues.json"
+  },
+  "visual mix": {
+   "verdict": "pass",
+   "detail": "6 shots, mix {'code': 6}, filler 0%"
+  },
+  "real alignment": {
+   "verdict": "pass",
+   "detail": "alignment came from a real recording"
+  },
+  "captioned decodes": {
+   "verdict": "pass",
+   "detail": "decodes end to end with no errors"
+  },
+  "captioned format": {
+   "verdict": "pass",
+   "detail": "1080x1920 @30fps, 672 frames, 22.40s, audio present"
+  },
+  "black tail": {
+   "verdict": "pass",
+   "detail": "tail is not black (peak luma 255 over last 15 frames)"
+  },
+  "frozen tail": {
+   "verdict": "pass",
+   "detail": "tail is moving (max inter-frame difference 244)"
+  },
+  "parity": {
+   "verdict": "pass",
+   "detail": "audio streams identical, durations match (22.40s)"
+  },
+  "safe area": {
+   "verdict": "pass",
+   "detail": "text present in 657/672 frames, all bands clear"
+  },
+  "loudness": {
+   "verdict": "FAIL",
+   "detail": "integrated loudness -19.42 LUFS, target -16.0\u00b11.0"
+  }
+ },
+ "releasable": false,
+ "limitations": [
+  "loudness"
+ ]
+}

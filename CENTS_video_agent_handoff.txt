@@ -1,0 +1,258 @@
+CENTS ESSAY VIDEOS — AGENT HANDOFF
+Version 1 | 3 October 2026
+Purpose: Give another agent enough context and operating instructions to produce a new CENTS essay video without repeating the mistakes of the first production.
+
+READ FIRST
+
+The deliverable is an engaging Instagram Reel that conveys an essay’s ideas. The audience already knows Rutherford Chang’s CENTS. A brief project recap helps, but a generic introduction to CENTS is not the assignment.
+
+Start with the spoken argument. Design the visuals around it. Measure delivery before locking timing. If the user supplies a video with recorded narration and revised cuts, that edit becomes the timing reference.
+
+This is a production handoff, not an instruction to copy the previous film’s argument or aesthetics. The user’s new instructions and the new essay govern. Recommendations below are defaults; explicitly requested revisions take priority. Do not add approval gates for routine work.
+
+1. STANDING REQUIREMENTS AND PREFERENCES
+
+- Name Rutherford Chang when introducing CENTS.
+- Credit the essay author when the title first appears. Include the essay subtitle when one is supplied. Do not assume the next author is Dr. Martin Lehnen.
+- Narration speaks the essay’s ideas directly. Avoid habitual distancing phrases such as “the essay links…” or “the author argues…”. Attribution belongs in the title and credits, with specific verbal attribution where needed.
+- Keep the source’s conceptual distinctions. Do not make an incidental fact the organizing principle of the work.
+- Use real supplied artwork images and footage meaningfully. Inspect them rather than inferring their contents from filenames.
+- Avoid long opening stills, repetitive imagery, and slow zooms used as the only source of motion. The user explicitly rejected visually boring versions.
+- Make the ending a visual expression of the final idea, followed by brief credits. Do not let a static title card do all the ending’s work.
+- No visible timer, timecode, diagnostic annotation, or safe-area overlay in the released video.
+- Compose for Instagram’s top, bottom, and right-side controls from the start.
+- Caption the actual recording, including meaningful changes from the written script.
+- Preserve the user’s recorded edit when adding audio cleanup, captions, or a layout revision unless they request changes to the edit.
+- Complete and verify the requested file; do not report “done” when only a script, storyboard, or render process exists.
+
+Terminology:
+  CENTS = the project.
+  Cents = the individual art collection pieces.
+  cents / pennies = ordinary monetary objects.
+  CENTS Block Copper = the physical block.
+  CENTS Block 839969 = the digital block.
+  sat / satoshi = a bitcoin unit; do not conflate the unit, its inscription, the image, and the physical penny.
+
+2. STARTUP AND INPUT RECOVERY
+
+At the start, establish:
+  a. Which essay and version are being adapted?
+  b. Which script, if any, has already been accepted?
+  c. Is there an actual recording or user-edited video?
+  d. Which uploads and artwork assets are available?
+  e. Is the task a new film, a revision, or postproduction on an existing edit?
+
+Read the complete essay, including its ending. Read the current script when one exists. Use project background at https://sovrn.art/cents as needed; use https://cents.vision/void for the previous void treatment. These are references to retrieve, not substitutes for reading the supplied essay.
+
+Recover relevant files from persistent storage before declaring them missing. Temporary scratch paths from earlier sessions may have been pruned. Resolve the current file and version through the available file tools. Never invent a file ID, download URL, asset, or script from a stale filename. Ask for re-upload only after reasonable recovery attempts fail.
+
+Create an asset inventory with these fields:
+  asset_id; original filename; persistent reference; local working path;
+  actual subject; still or motion; dimensions; duration and fps if motion;
+  attribution/source if known; useful passage; crop restrictions.
+
+View every image selected for use and representative frames from motion assets. If the user explains what an image depicts, retain that identification in the inventory. Keep originals unchanged.
+
+3. SCRIPT AND STORYBOARD WORKFLOW
+
+Step A — Map the essay
+Write a compact internal outline: central question; necessary argument turns; essential distinctions; optional context; final implication. Mark which phrases are quotations, paraphrases, or explanatory additions. Do not invent a cleaner thesis than the source supports.
+
+Step B — Draft the voiceover
+Use a strong opening, a short recap, the essay’s conceptual movement, and a concise ending. Prefer spoken, concrete sentences. Select distinctive essay phrases where they advance the argument. Do not include every good quotation.
+
+Initial runtime target: about 2.5 minutes, unless the new brief says otherwise. At roughly 130–145 spoken words per minute, this suggests about 325–360 spoken words before accounting for pauses. Treat this as a drafting estimate, not proof of delivery time. The previous recorded film finished at about 2:57. Do not automatically lengthen every future film to match it.
+
+Step C — Measure each passage
+Read aloud or use a scratch reading when available. Record the actual delivery time for each passage. Count UTXO as four spoken letters and an artwork number according to how it will be read. Allocate more time to technical terms and dense ideas, less to short transitions. If no real reading was measured, label timing as estimated; never say it was “checked by reading” when only word counts were used.
+
+An earlier revision added too much pause allowance and became unnecessarily long. Do not multiply generous margins across every sentence. The actual recording is the best timing reference.
+
+Step D — Plan visuals within passages
+Maintain one shot list with:
+  shot_id; start; end; narration cue; purpose;
+  asset references; motion or crop; heading/labels;
+  caption region; essential-content bounds.
+
+Use changes roughly every 3–5 seconds in photographic passages as a starting point. A longer narration passage can contain several shots. Diagrams may need longer holds. Each change should explain or reveal something, not merely add activity. Use establishing views, details, different assets, and genuinely useful motion. Avoid repeatedly returning to the same image without a new reason.
+
+For new production, settle the script before a costly final render. Use short previews to test the opening, a difficult diagram, and the ending. Continue routine work autonomously; ask only for missing information that materially blocks the task.
+
+4. REEL LAYOUT CONTRACT
+
+Canvas: 1080 × 1920, 9:16, square pixels.
+Coordinate origin: upper-left. x increases rightward; y increases downward.
+
+Working interface exclusions used in the previous organic Reel:
+  top: approximately y < 270
+  bottom: approximately y > 1535
+  right: approximately x > 900
+  left text margin: at least 70–80 px
+
+Practical initial bounds for essential text: x = 80–860; y = 270–1510. Leave additional breathing room rather than touching those boundaries.
+
+IMPORTANT: These are production starting guides, not official universal safe-zone specifications or a guarantee of visibility. Device, app version, viewing mode, post text, and expanded captions change the coverage. Ads may need considerably more bottom clearance. Verify current platform guidance and test the actual upload preview when possible.
+
+Create separate regions for title, main art/diagram, explanatory labels, and voiceover captions. Essential readouts are essential text too. Full-bleed photography is fine; full-bleed information is not. Check the feed preview as well as the full-screen player.
+
+Do not solve all layout problems by shrinking the whole film. The previous final rescue pass inset the existing picture to preserve the user’s edit; it cleared the edges but made readouts smaller. That reframe was delivered but had not received a subsequent user verdict at the time of this handoff. For new videos, reposition and rearrange components in editable source. Shorten labels, split a dense sequence, or simplify the diagram before reducing everything.
+
+Validate at phone scale. A label readable in a 1080 px desktop screenshot may still fail on a phone. Make captions and conceptual labels readable before adding decorative detail.
+
+5. EDITABLE PRODUCTION STRUCTURE
+
+Keep content, timing, and layout separate. Prefer a timeline data file and reusable render functions over a monolithic script with scattered durations and coordinates.
+
+Suggested working structure:
+  inputs/           original assets and essay
+  script/           voiceover and passage timings
+  timeline/         shot list and asset inventory
+  source/           renderer/editor files and dependencies
+  captions/         reviewed transcript, word timings, SRT, styled subtitles
+  audio/            extracted recording and processed intermediate
+  review/           temporary contact sheets and interface overlays
+  exports/          actual deliverable videos
+
+Retain font choices and versions, asset references, canvas dimensions, frame rate, caption style, audio settings, and export commands. Keep text layers editable until final delivery. Archive source and originals durably, not only in scratch.
+
+Preserve synchronization by using one timebase. Prefer frame boundaries for shot cuts. For example, a 30 fps timeline uses frame index n at t = n/30. Keep caption times tied to recorded speech, not to an earlier silent film’s passage estimates.
+
+If the user supplies an edited recording, work from that file. Do not regenerate its montage from an obsolete shot list. Retain its audio start offset, total duration, cuts, and frame rate. Copy the finished audio stream during later visual-only revisions where compatible.
+
+6. AUDIO POSTPRODUCTION
+
+Inspect the recording before choosing filters. Preserve the voice and timing. Do not trim pauses, accelerate delivery, or apply heavy noise removal as part of routine cleanup.
+
+Use restrained processing as needed: low-rumble removal, light denoising, gentle tonal correction, light compression, and de-essing. Compare processed and original speech at matched loudness. Check breaths, quiet phrases, sibilants, and sentence endings. Avoid metallic or watery noise-reduction artifacts.
+
+Previous mic-specific reference, not a universal preset:
+  high-pass 75 Hz
+  light denoising
+  EQ around 200 Hz: −1.5 dB
+  EQ around 2.8 kHz: +1.5 dB
+  gentle de-essing
+  compression about 2:1
+  two-pass normalization target: −16 LUFS, −1.5 dBTP
+  measured encoded output: about −16.04 LUFS, −1.32 dBTP
+
+Measure loudness and encoded peaks after export. Audition when playback is available. Distinguish measurements from listening judgments; do not claim to have listened to audio merely because a waveform or transcript was analyzed.
+
+Keep a clean intermediate such as PCM WAV. Preserve stereo/mono intent. If a visual revision is supposed to preserve the processed audio exactly, compare hashes of demuxed audio streams, not hashes of whole MP4 containers.
+
+7. TRANSCRIPTION AND CAPTIONING
+
+Transcribe the actual recording with word timing, then review. A written script is a spelling and meaning reference; it is not a substitute for recorded wording. Retain meaningful adlibs and revisions. Correct recognition mistakes without silently rewriting the user’s speech.
+
+Check names, titles, capitalization, and technical terms manually. Previous problem words included systems artwork, Seine, UTXO, Schrödinger, readymade, Cents, and the Block number. Do not normalize Cents and cents indiscriminately.
+
+Use readable phrases, normally at most two lines. Break at natural phrase boundaries. Avoid single orphan words, excessively fast cues, and overlap between cues. Check every cue against the words being spoken. Leave credits caption-free when narration has finished.
+
+Use light text with sufficient contrast; a subtle dark backing can help over photographs. Reserve a caption region. Narrow lines to clear the right-side buttons. Move captions by scene if necessary. In the previous scanning scene they occupied the gap between diagrams; a single fixed bottom position would have obscured information.
+
+Check subtitle bounds AND collisions with other text. Both can be inside the interface-safe area and still cover each other. Keep the captioned export and clean export identical in timing and visual layout apart from the caption layer.
+
+Deliver:
+  captioned MP4 for the Reel;
+  matching clean MP4 without voiceover captions;
+  SRT for future editing;
+  editable subtitle styling, such as ASS or editor source, in the source archive.
+
+SRT carries wording and timing, not the complete visual treatment. Burned-in captions preserve the reviewed presentation. Avoid adding a second visible platform caption layer over them. Verify platform subtitle import options if relevant rather than assuming support.
+
+8. EXPORT AND RELEASE GATES
+
+Normal export: MP4, H.264, AAC, yuv420p, fast-start metadata; high enough quality for photographs and fine diagram lines. Preserve the supplied edit’s frame rate. Use consistent fps for a new film. Recheck current platform duration and upload limits before posting; do not make a permanent rule from yesterday’s platform specifications.
+
+Before saying the task is complete:
+  [ ] Actual final file exists and can be decoded.
+  [ ] Correct dimensions, aspect ratio, fps, duration, and audio stream.
+  [ ] Opening title includes the correct author and requested subtitle.
+  [ ] Relevant stills and motion assets are present and correctly identified.
+  [ ] No excessive image repetition or long inactive opening.
+  [ ] Diagram states convey the intended concept, not merely motion.
+  [ ] All captions are reviewed, timed, readable, and free of text collisions.
+  [ ] Titles, readouts, captions, and ending URL clear the interface regions.
+  [ ] No timer, diagnostic overlay, missing segment, frozen unintended tail, or black ending.
+  [ ] Audio has no clipping or introduced artifacts; timing remains synchronized.
+  [ ] User-edited cuts and duration are preserved when required.
+  [ ] Final encoded opening, representative middle frames, transitions, and last frames are inspected.
+  [ ] Entire film is played through or decoded with a systematic inspection of every shot; explain any unavailable verification rather than claiming it occurred.
+  [ ] Final exports and recoverable production source are saved durably.
+  [ ] Final response links to the real finished deliverable.
+
+An earlier video went black after 3:08. A successful encoder exit does not establish that the tail is correct. Preview renders also do not establish that the assembled final export is correct.
+
+Useful verification commands, with paths replaced by actual resolved files:
+
+  ffprobe -v error -show_entries stream=codec_name,width,height,r_frame_rate,nb_frames,duration:format=duration,size -of json FINAL.mp4
+
+  ffmpeg -v error -i FINAL.mp4 -map 0:v:0 -map 0:a:0 -f null -
+
+  ffmpeg -v error -i FINAL.mp4 -map 0:a:0 -c copy -f hash -hash sha256 -
+
+Use extracted frames or contact sheets to inspect composition, including late frames. Contact sheets supplement viewing; tiny thumbnails are not a caption-legibility test. Do not rerun expensive checks without a reason after they pass; repeat relevant checks when a new change affects them.
+
+9. PREVIOUS FILM CASE STUDY — DO NOT APPLY AUTOMATICALLY
+
+Title: The Readymade of Loss.
+Essay author: Dr. Martin Lehnen.
+User-chosen opening: “What happens when a systems artwork produces something that the system itself cannot witness?”
+Project introduction: “Rutherford Chang’s CENTS begins with a discrepancy.”
+
+Important distinctions:
+- The void is a new, unintended layer or condition, not the piece’s end state. Avoid “ends with a stranger kind of loss.”
+- The film used five conditions—circulation, withdrawal, photography, melting, inscription—with the void as an unintended sixth. Read the essay’s actual enumeration before reusing it.
+- The inscription persists; ordinary BTC handling may not identify and protect its sat. The distinction is inscription-aware handling, not “a marketplace recognizes it as art.”
+- Do not generalize that all wallets segregate Ordinals or that all exchanges behave identically. Verify any named product’s behavior.
+- Recovery requires control of the output, recognition, and a transaction that separates the relevant sat. Attention alone does not recover it.
+- “Limbo, not ash,” “Schrödinger’s collectible,” and “the cauldron of decentralised perception” were valued phrases.
+- The infrastructure/ archive distinction matters: the infrastructure produces the condition; discovery, naming, and attention make it legible as art.
+- Brenner’s portrait was a contextual fact, not the central thesis. Verify superlative claims before repeating them.
+- Do not invent a simple opposition between Klein’s relinquished gold and Chang’s enduring image if the essay makes a more complex argument about immateriality.
+
+Previous diagram behavior, if rebuilding that diagram:
+- Marketplace = a grid of changing penny positions, not a circle of wallets.
+- All pennies start the same size and look like pennies.
+- One leaves the market and becomes a small blinking orange dot in a large exchange UTXO.
+- Both scan lines move in tandem throughout; both readouts update simultaneously.
+- Market readout: eight orange dots among grey dots; recognition visibly follows scans and reflects penny movement.
+- Exchange readout: visually parallel grey-dot field; scanning continues without singling out the inscribed sat.
+- Keep the technical labels about inscription awareness, not artistic value conferred by a marketplace.
+- This diagram supports the essay and must not take over the whole film.
+
+Asset identifications from the previous production:
+- Cover collage with Klein, the book, and Block: first image, with title/subtitle/author.
+- Black-and-white river photograph: Yves Klein throwing gold into the Seine.
+- Copper portrait plate: Victor David Brenner’s original Lincoln portrait.
+- Uploaded .mov: animated digital Block model, not a photograph of the physical Block.
+- Two visitors beside a podium: physical Block context.
+- UCCA views: physical book, physical Block, digital Block, and/or digital Cents, according to the individual image.
+- Office images: penny rolls, pennies on Chang’s desk, and photography setup.
+- Blue referenced artwork: Mitchell Chan’s piece.
+- Burned Punks screenshot and cents.vision/void screenshot: distinct projects/pages; do not interchange them.
+
+Ending: a triangular light beam revealed Cents in place within an active field. This conveyed perception without showing automatic release from the UTXO. Preserve that distinction if reusing the animation.
+
+10. HANDOFF STATE TO SAVE AFTER EACH VIDEO
+
+Record in a small plain-text or JSON manifest:
+  essay title, author, source and version;
+  approved or latest script reference;
+  latest user-edited recording reference;
+  source asset inventory and durable references;
+  fps, canvas, duration, frame count, audio offset;
+  shot timeline and renderer/editor entry point;
+  caption source, reviewed transcript, timing file, styling;
+  audio processing recipe and final measured loudness/peaks;
+  export filenames and persistent references;
+  checks completed and limitations;
+  accepted decisions, unreviewed revisions, and remaining work.
+
+Never label a delivered revision “approved” without user evidence. Keep the clean master, captioned version, and source archive separately identifiable. Use current persistent versions and preserve their identity when updating them.
+
+Companion human-readable guide:
+  CENTS_essay_video_production_guide.docx
+  Persistent reference at creation: libfile_2bbe058348c08191b943e507f5ab574e
+  Read its current version if needed; this handoff contains the operating essentials.
+
+The next agent should now recover the new essay and assets, identify whether a recording already exists, and proceed with the workflow above. The scanning diagram, Klein references, quotations, and previous opening belong to one essay, not to the CENTS video series as a whole.

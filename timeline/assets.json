@@ -1,0 +1,14 @@
+{
+ "_note": "No assets in the fixture. Real entries require a human-written subject and a sha256 captured at verification time; the renderer refuses an asset whose hash has changed since then.",
+ "_example": {
+  "asset_id": "klein_seine_bw",
+  "path": "klein_seine.jpg",
+  "motion": false,
+  "subject": "Yves Klein throwing gold leaf into the Seine, 1962. Black and white.",
+  "visual_kind": "real",
+  "source": "supplied by user 2026-10-03",
+  "sha256": "",
+  "verified_at": "",
+  "crop_restrictions": "do not crop the water line"
+ }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "cents-videos",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "preview": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts Video exports/clean.mp4",
+    "render:captioned": "remotion render src/index.ts VideoCaptioned exports/captioned.mp4",
+    "render:essential": "remotion render src/index.ts EssentialOnly review/essential.mp4",
+    "verify": "python3 pipeline/verify.py",
+    "selftest": "python3 pipeline/verify.py --self-test"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "remotion": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "typescript": "^5.6.0"
+  }
+}

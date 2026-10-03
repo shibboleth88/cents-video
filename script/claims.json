@@ -1,0 +1,27 @@
+{
+ "_what": "Every narration sentence maps to the essay. This is where an invented thesis has to show itself: anything not traceable to the source is tagged 'addition' and must be approved explicitly.",
+ "essay_version": "fixture-0",
+ "thesis": "A systems artwork can produce a condition its own system cannot witness; the gap is a new layer, not a failure.",
+ "claims": [
+  {"say": "What happens when a systems artwork produces something the system itself cannot witness.",
+   "kind": "quotation",
+   "span": "What happens when a systems artwork produces something that the system itself\ncannot witness?"},
+  {"say": "Rutherford Chang's CENTS begins with a discrepancy.",
+   "kind": "quotation",
+   "span": "Rutherford Chang's CENTS begins with a discrepancy."},
+  {"say": "A penny is photographed, catalogued, and inscribed.",
+   "kind": "paraphrase",
+   "span": "which is then photographed, catalogued and\ninscribed onto a satoshi"},
+  {"say": "The object persists.", "kind": "quotation", "span": "The object persists."},
+  {"say": "The record of the object persists.", "kind": "quotation", "span": "The record of the object persists."},
+  {"say": "What goes missing is the link between them.",
+   "kind": "quotation", "span": "What goes missing is the\nlink between them"},
+  {"say": "That gap is not an error in the work.",
+   "kind": "quotation", "span": "That gap is\nnot an error in the work."},
+  {"say": "It is the work's newest layer.", "kind": "quotation", "span": "It is the work's newest layer"}
+ ],
+ "distinctions_kept": [
+  {"distinction": "physical penny / photographic record / inscription are three artefacts",
+   "where": "shots s03-s05", "verdict": "kept", "by": "claude", "note": "StatReveal names the Block; quote shots hold object and record apart."}
+ ]
+}

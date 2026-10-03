@@ -1,0 +1,66 @@
+{
+ "essay": {
+  "title": "The Readymade of Loss",
+  "author": "Dr. Martin Lehnen",
+  "subtitle": "On what a system cannot witness",
+  "source": "FIXTURE — replace with the real essay reference",
+  "version": "fixture-0"
+ },
+ "shots": [
+  {
+   "shot_id": "s01_title",
+   "start": { "at_start": true },
+   "end": { "at_phrase": "Rutherford Chang's CENTS" },
+   "purpose": "State the question and credit the essay author on first title.",
+   "visual_kind": "code",
+   "component": "TitleCard",
+   "props": { "title": "The Readymade of Loss", "subtitle": "On what a system cannot witness", "author": "Dr. Martin Lehnen" }
+  },
+  {
+   "shot_id": "s02_recap",
+   "start": { "at_phrase": "Rutherford Chang's CENTS" },
+   "end": { "at_phrase": "A penny is photographed" },
+   "purpose": "Brief project recap, naming Rutherford Chang.",
+   "visual_kind": "code",
+   "component": "PullQuote",
+   "props": { "quote": "CENTS begins with a discrepancy.", "attribution": "Rutherford Chang" }
+  },
+  {
+   "shot_id": "s03_process",
+   "start": { "at_phrase": "A penny is photographed" },
+   "end": { "at_phrase": "The object persists. The record" },
+   "purpose": "Show the three-step process as a counted quantity, not a metaphor.",
+   "visual_kind": "code",
+   "component": "StatReveal",
+   "props": { "value": 839969, "caption": "CENTS Block 839969" }
+  },
+  {
+   "shot_id": "s04_both_persist",
+   "start": { "at_phrase": "The object persists. The record" },
+   "end": { "at_phrase": "What goes missing" },
+   "purpose": "Hold the distinction between object and record before naming the gap.",
+   "visual_kind": "code",
+   "component": "PullQuote",
+   "props": { "quote": "The object persists. The record persists." }
+  },
+  {
+   "shot_id": "s05_gap",
+   "start": { "at_phrase": "What goes missing" },
+   "end": { "at_phrase": "That gap is not" },
+   "purpose": "Name the missing link — the essay's central turn.",
+   "visual_kind": "code",
+   "component": "PullQuote",
+   "props": { "quote": "What goes missing is the link between them." }
+  },
+  {
+   "shot_id": "s06_credits",
+   "start": { "at_phrase": "That gap is not" },
+   "end": { "at_end": true },
+   "purpose": "Close on the final idea, then brief credits.",
+   "visual_kind": "code",
+   "component": "Credits",
+   "props": { "lines": ["Essay: Dr. Martin Lehnen", "Artwork: Rutherford Chang, CENTS"], "url": "sovrn.art/cents" }
+  }
+ ],
+ "credits": { "lines": ["Essay: Dr. Martin Lehnen"], "url": "sovrn.art/cents" }
+}

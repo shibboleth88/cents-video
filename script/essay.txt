@@ -1,0 +1,19 @@
+FIXTURE ESSAY — stands in for a real supplied essay so the fidelity gates can be
+exercised. Replace wholesale; nothing here is a claim about the real work.
+
+What happens when a systems artwork produces something that the system itself
+cannot witness? Rutherford Chang's CENTS begins with a discrepancy. Each piece
+starts as an ordinary penny, which is then photographed, catalogued and
+inscribed onto a satoshi. Three artefacts result, and they are not the same
+artefact: the physical penny, the photographic record, and the inscription that
+carries the image on chain.
+
+The object persists. The record of the object persists. What goes missing is the
+link between them — the correspondence that made the three one work. That gap is
+not an error in the work. It is the work's newest layer, produced by the
+infrastructure rather than authored by the artist.
+
+Recovery is not a matter of attention alone. It requires control of the output,
+recognition of which satoshi carries the inscription, and a transaction that
+separates that satoshi from the rest. Inscription-aware handling can do this.
+Ordinary handling will not, because ordinary handling has no reason to look.

@@ -1,0 +1,27 @@
+{
+ "_source": "Terminology section of CENTS_video_agent_handoff.txt",
+ "forbidden_phrases": [
+  {"pattern": "(?i)\\bthe essay (argues|links|suggests|claims)\\b",
+   "why": "Narration speaks the ideas directly; attribution belongs in the title and credits."},
+  {"pattern": "(?i)\\bthe author (argues|writes|says)\\b",
+   "why": "Habitual distancing phrase."},
+  {"pattern": "(?i)\\bends with a stranger kind of loss\\b",
+   "why": "The void is a new unintended layer, not the piece's end state."},
+  {"pattern": "(?i)\\ball (wallets|exchanges)\\b",
+   "why": "Do not generalise across wallets or exchanges; verify any named product."}
+ ],
+ "distinct_terms": [
+  {"terms": ["CENTS", "Cents", "cents"],
+   "why": "CENTS = the project; Cents = the collection pieces; cents = ordinary money."},
+  {"terms": ["CENTS Block Copper", "CENTS Block 839969"],
+   "why": "Physical block vs digital block."},
+  {"terms": ["satoshi", "inscription", "image", "penny"],
+   "why": "The unit, its inscription, the image and the physical penny are four things."}
+ ],
+ "must_not_equate": [
+  {"a": "inscription-aware handling", "b": "a marketplace recognising it as art",
+   "why": "The distinction is technical handling, not conferred artistic value."},
+  {"a": "attention", "b": "recovery",
+   "why": "Recovery needs control of the output, recognition and a separating transaction."}
+ ]
+}
