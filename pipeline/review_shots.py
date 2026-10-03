@@ -90,6 +90,27 @@ def check() -> int:
     if not problems: print(f"  \033[32mPASS\033[0m all {len(r['shots'])} shots reviewed and accepted")
     return 1 if problems else 0
 
+def merge(path: str) -> int:
+    """Fold verdicts collected on the review Artifact back into shot_review.json.
+
+    Dump them with the ArtifactData tool (action "list", collection "verdicts")
+    into a JSON file of {shot_id: {verdict, notes}} and pass it here, so the
+    user's judgement reaches the release gate rather than only Claude's."""
+    r = json.loads(REVIEW.read_text())
+    incoming = json.loads(pathlib.Path(path).read_text())
+    if not incoming: sys.exit("no verdicts in that file — nothing to merge")
+    n = 0
+    for s in r["shots"]:
+        v = incoming.get(s["shot_id"])
+        if not v: continue
+        s["verdict"], s["notes"] = v.get("verdict"), v.get("notes")
+        s["verdict_by"] = "user"; n += 1
+    if n == 0: sys.exit("none of the verdicts matched a shot id — wrong file?")
+    REVIEW.write_text(json.dumps(r, indent=1))
+    print(f"merged {n} user verdict(s)")
+    return 0
+
 if __name__ == "__main__":
     cmd = sys.argv[1] if len(sys.argv) > 1 else "prepare"
+    if cmd == "merge": sys.exit(merge(sys.argv[2]))
     sys.exit(prepare() if cmd == "prepare" else check())

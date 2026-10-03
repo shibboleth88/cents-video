@@ -1,47 +1,257 @@
 [
  {
   "start": 0.0,
-  "end": 2.4,
-  "text": "What happens when a systems artwork produces"
+  "end": 1.993,
+  "text": "A copper penny is worth one cent."
  },
  {
-  "start": 2.4,
-  "end": 4.72,
-  "text": "something the system itself cannot witness."
+  "start": 2.223,
+  "end": 5.084,
+  "text": "The copper inside it is worth about two and a half."
  },
  {
-  "start": 5.18,
-  "end": 8.08,
-  "text": "Rutherford Chang's CENTS begins with a discrepancy."
+  "start": 5.312,
+  "end": 7.64,
+  "text": "Rutherford Chang's CENTS begins in that gap."
  },
  {
-  "start": 8.32,
-  "end": 11.92,
-  "text": "A penny is photographed, catalogued, and inscribed."
+  "start": 7.86,
+  "end": 10.783,
+  "text": "Over several years he sorted a hundred thousand"
  },
  {
-  "start": 12.32,
-  "end": 13.52,
-  "text": "The object persists."
+  "start": 10.831,
+  "end": 13.754,
+  "text": "pennies down to ten thousand pre-1982 coppers."
  },
  {
-  "start": 13.88,
-  "end": 15.82,
-  "text": "The record of the object persists."
+  "start": 14.002,
+  "end": 15.54,
+  "text": "He photographed each one and"
  },
  {
-  "start": 16.14,
-  "end": 18.24,
-  "text": "What goes missing is the link between them."
+  "start": 15.556,
+  "end": 17.327,
+  "text": "catalogued its date and mintage."
  },
  {
-  "start": 18.68,
-  "end": 20.4,
-  "text": "That gap is not an error in the work."
+  "start": 17.568,
+  "end": 19.674,
+  "text": "Then he melted them into a single block."
  },
  {
-  "start": 20.78,
-  "end": 22.2,
-  "text": "It is the work's newest layer."
+  "start": 19.905,
+  "end": 22.205,
+  "text": "Then he inscribed each destroyed penny"
+ },
+ {
+  "start": 22.234,
+  "end": 25.223,
+  "text": "onto a sat, the smallest divisible unit of Bitcoin."
+ },
+ {
+  "start": 25.468,
+  "end": 29.927,
+  "text": "The block itself became a full-block inscription,"
+ },
+ {
+  "start": 30.028,
+  "end": 31.772,
+  "text": "CENTS Block 839969,"
+ },
+ {
+  "start": 31.831,
+  "end": 34.733,
+  "text": "the master object of the project."
+ },
+ {
+  "start": 35.001,
+  "end": 37.496,
+  "text": "He released all ten thousand inscriptions"
+ },
+ {
+  "start": 37.565,
+  "end": 40.243,
+  "text": "at one sat each, about one hundredth of a cent."
+ },
+ {
+  "start": 40.471,
+  "end": 41.895,
+  "text": "Every Cent passes through"
+ },
+ {
+  "start": 41.932,
+  "end": 43.693,
+  "text": "five transformations of value."
+ },
+ {
+  "start": 43.925,
+  "end": 47.159,
+  "text": "In circulation, its value defined by the Treasury."
+ },
+ {
+  "start": 47.414,
+  "end": 50.624,
+  "text": "Removed from circulation, that assignment subverted."
+ },
+ {
+  "start": 50.879,
+  "end": 52.565,
+  "text": "Archivally photographed,"
+ },
+ {
+  "start": 52.645,
+  "end": 54.681,
+  "text": "valued for what the image holds."
+ },
+ {
+  "start": 54.918,
+  "end": 57.448,
+  "text": "Destroyed, its value made undefinable."
+ },
+ {
+  "start": 57.721,
+  "end": 59.187,
+  "text": "Inscribed on Bitcoin,"
+ },
+ {
+  "start": 59.239,
+  "end": 62.769,
+  "text": "continually redefined by decentralized consensus."
+ },
+ {
+  "start": 63.033,
+  "end": 65.466,
+  "text": "And it arrives as five natures at once."
+ },
+ {
+  "start": 65.697,
+  "end": 66.909,
+  "text": "A unit of currency."
+ },
+ {
+  "start": 67.166,
+  "end": 68.395,
+  "text": "A quantity of copper."
+ },
+ {
+  "start": 68.635,
+  "end": 70.339,
+  "text": "A melted element of a sculpture."
+ },
+ {
+  "start": 70.591,
+  "end": 71.627,
+  "text": "A photograph."
+ },
+ {
+  "start": 71.909,
+  "end": 73.249,
+  "text": "A Bitcoin inscription."
+ },
+ {
+  "start": 73.517,
+  "end": 75.617,
+  "text": "All of these things, and none of them."
+ },
+ {
+  "start": 75.845,
+  "end": 78.313,
+  "text": "Conceptual art broke from the object in the"
+ },
+ {
+  "start": 78.329,
+  "end": 79.389,
+  "text": "nineteen sixties,"
+ },
+ {
+  "start": 79.434,
+  "end": 81.896,
+  "text": "when commodification had hollowed it out."
+ },
+ {
+  "start": 82.118,
+  "end": 84.796,
+  "text": "A split opened between materiality and meaning."
+ },
+ {
+  "start": 85.038,
+  "end": 86.626,
+  "text": "Digitization widened it."
+ },
+ {
+  "start": 86.843,
+  "end": 89.333,
+  "text": "Digital flows could not hold identity,"
+ },
+ {
+  "start": 89.389,
+  "end": 91.95,
+  "text": "singularity, provenance or ownership."
+ },
+ {
+  "start": 92.212,
+  "end": 93.38,
+  "text": "They lacked objecthood."
+ },
+ {
+  "start": 93.631,
+  "end": 95.337,
+  "text": "Blockchain was built to give them"
+ },
+ {
+  "start": 95.357,
+  "end": 97.834,
+  "text": "discrete boundaries and verifiable histories."
+ },
+ {
+  "start": 98.083,
+  "end": 100.038,
+  "text": "Blockchain is this era's objecthood."
+ },
+ {
+  "start": 100.294,
+  "end": 102.933,
+  "text": "CENTS holds that whole arc inside one gesture."
+ },
+ {
+  "start": 103.177,
+  "end": 104.883,
+  "text": "Its medium is not the penny,"
+ },
+ {
+  "start": 104.919,
+  "end": 106.928,
+  "text": "or the photograph, or the block."
+ },
+ {
+  "start": 107.165,
+  "end": 110.046,
+  "text": "Its medium is the gesture of its continual becoming."
+ },
+ {
+  "start": 110.294,
+  "end": 113.273,
+  "text": "A digital object is simultaneously itself,"
+ },
+ {
+  "start": 113.319,
+  "end": 116.381,
+  "text": "not itself, and an interpretation of itself."
+ },
+ {
+  "start": 116.627,
+  "end": 118.265,
+  "text": "Its meanings keep emerging,"
+ },
+ {
+  "start": 118.316,
+  "end": 120.128,
+  "text": "as participants co-create the"
+ },
+ {
+  "start": 120.145,
+  "end": 122.628,
+  "text": "intersubjective reality of its presence."
  }
 ]

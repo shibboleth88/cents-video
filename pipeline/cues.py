@@ -71,17 +71,30 @@ def _merge_short(cues: list[list[Word]]) -> list[list[Word]]:
             if prev is not None: cand.append((len(_text(prev)), i-1, "prev"))
             if nxt is not None: cand.append((len(_text(nxt)), i+1, "next"))
             if not cand: break
-            cand.sort()                      # merge into the SHORTER neighbour
+            # Merge into the shorter neighbour, but never into one that would
+            # then be over-long: a fix for an orphan must not create a wall.
+            cand.sort()
+            cand = [c for c in cand if c[0] + len(_text(c)) + 1 <= MAX_CHARS + 8] or cand
             _, j, side = cand[0]
             if side == "prev": cues[j] = cues[j] + c
             else: cues[j] = c + cues[j]
             cues.pop(i); changed = True; break
     return cues
 
+def _split_until_fits(ws: list[Word], depth: int = 0) -> list[list[Word]]:
+    """Split, then split the parts that are still too long. One pass leaves a
+    tail chunk over the limit whenever the first cut lands short of centre."""
+    parts = _split_balanced(ws)
+    if len(parts) == 1 or depth > 4: return parts
+    out: list[list[Word]] = []
+    for p in parts:
+        out.extend(_split_until_fits(p, depth + 1) if len(_text(p)) > MAX_CHARS and len(p) > MIN_WORDS else [p])
+    return out
+
 def build(words: list[Word]) -> list[dict]:
     chunks: list[list[Word]] = []
     for s in _sentences(words):
-        chunks.extend(_split_balanced(s))
+        chunks.extend(_split_until_fits(s))
     chunks = _merge_short(chunks)
     return [{"start": c[0]["start"], "end": c[-1]["end"], "text": _text(c)} for c in chunks]
 

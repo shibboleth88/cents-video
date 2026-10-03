@@ -14,7 +14,10 @@ OUT="${2:-inputs/vo_scratch.wav}"
 VOICE="${VOICE:-Daniel}"
 RATE="${RATE:-170}"   # words/min; close to a measured 130-145 delivery once pauses land
 say -v "$VOICE" -r "$RATE" -o /tmp/scratch.aiff -f "$SCRIPT"
-ffmpeg -v error -y -i /tmp/scratch.aiff -ar 48000 -ac 1 -c:a pcm_s16le "$OUT"
+# Tail padding: the ending needs room for credits AFTER the voice stops. Without
+# it the credits shot has nowhere to live and would have to run under narration.
+TAIL="${TAIL:-4.0}"
+ffmpeg -v error -y -i /tmp/scratch.aiff -af "apad=pad_dur=$TAIL" -ar 48000 -ac 1 -c:a pcm_s16le "$OUT"
 D=$(ffprobe -v error -show_entries format=duration -of csv=p=0 "$OUT")
 W=$(wc -w < "$SCRIPT")
 python3 - "$D" "$W" <<'PY'

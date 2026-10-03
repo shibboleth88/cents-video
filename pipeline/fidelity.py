@@ -115,15 +115,33 @@ def g_thesis(cl: dict) -> str:
     if len(t.split()) < 6: raise Fail("no stated thesis — without one, 'the script is faithful' has no referent")
     return f"thesis stated ({len(t.split())} words)"
 
+TEXT_KEYS = ("title", "subtitle", "quote", "attribution", "caption", "author", "readout", "centre")
+TEXT_LISTS = ("lines", "nodes", "items")
+
 def _onscreen(tl: dict) -> list[tuple[str, str, str]]:
-    """(shot_id, field, text) for every string the viewer reads on screen."""
-    fields = ("title", "subtitle", "quote", "attribution", "caption", "author")
+    """(shot_id, field, text) for every string the viewer reads on screen.
+
+    Walks nested props, because a diagram keeps its labels inside states[] and
+    nodes[] — and text the ledger cannot see is text that can say anything. This
+    is the same escape route a raw styled div used past the bounds gate."""
     out = []
+
+    def walk(sid: str, node, path: str):
+        if isinstance(node, dict):
+            for k, v in node.items():
+                if k in TEXT_KEYS and isinstance(v, str) and v.strip():
+                    out.append((sid, f"{path}{k}", v))
+                elif k in TEXT_LISTS and isinstance(v, list):
+                    for i, item in enumerate(v):
+                        if isinstance(item, str) and item.strip():
+                            out.append((sid, f"{path}{k}[{i}]", item))
+                else:
+                    walk(sid, v, f"{path}{k}.")
+        elif isinstance(node, list):
+            for i, item in enumerate(node): walk(sid, item, f"{path}{i}.")
+
     for sh in tl["shots"]:
-        pr = sh.get("props") or {}
-        for f in fields:
-            if pr.get(f): out.append((sh["shot_id"], f, str(pr[f])))
-        for i, l in enumerate(pr.get("lines") or []): out.append((sh["shot_id"], f"lines[{i}]", str(l)))
+        walk(sh["shot_id"], sh.get("props") or {}, "")
     return out
 
 def g_onscreen_covered(tl: dict, cl: dict) -> str:

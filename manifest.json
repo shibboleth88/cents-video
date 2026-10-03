@@ -1,99 +1,164 @@
 {
- "generated_at": "2026-10-03T10:05:43",
+ "generated_at": "2026-10-03T10:53:55",
  "essay": {
-  "title": "The Readymade of Loss",
-  "author": "Dr. Martin Lehnen",
-  "subtitle": "On what a system cannot witness",
-  "source": "FIXTURE \u2014 replace with the real essay reference",
-  "version": "fixture-0"
+  "title": "CENTS & digital objecthood",
+  "author": "shibboleth",
+  "subtitle": "an introduction to the primary concepts of CENTS by Rutherford Chang",
+  "source": "https://medium.com/@shibboleth88/cents-digital-conceptual-art-258b836a16a1",
+  "version": "medium 2025-10-30"
  },
  "timing_source": {
   "alignment_is_fixture": false,
-  "model": "mlx-community/whisper-small-mlx",
-  "audio": "inputs/vo_scratch.wav",
-  "duration_s": 22.41,
-  "words": 59
+  "model": "macos-say+measured",
+  "audio": "public/vo.wav",
+  "duration_s": 126.879,
+  "words": 293
  },
  "canvas": {
   "width": 1080,
   "height": 1920,
   "fps": 30
  },
- "ledger_sha256": "e3559efaa87c6e5fc937efd0f39e4b83f8d301f2df94e25fdbf28dde155018a7",
+ "ledger_sha256": "a5197c6e6c213628a6d77929bc0c7d4d4aea3beeab03a122943d54f672a71c65",
  "shots": [
   {
-   "shot_id": "s01_title",
-   "purpose": "State the question and credit the essay author on first title.",
+   "shot_id": "s01_gap",
+   "purpose": "Open on the discrepancy the project starts from, as two values that do not meet.",
    "visual_kind": "code",
-   "component": "TitleCard",
+   "component": "Distinction",
    "asset_id": null,
    "start": {
     "at_start": true
    },
    "end": {
-    "at_phrase": "Rutherford Chang's CENTS"
+    "at_phrase": "Rutherford Chang's CENTS begins"
    }
   },
   {
-   "shot_id": "s02_recap",
-   "purpose": "Brief project recap, naming Rutherford Chang.",
+   "shot_id": "s02_title",
+   "purpose": "Name the work and credit the essay and its author at first title.",
+   "visual_kind": "code",
+   "component": "TitleCard",
+   "asset_id": null,
+   "start": {
+    "at_phrase": "Rutherford Chang's CENTS begins"
+   },
+   "end": {
+    "at_phrase": "Over several years"
+   }
+  },
+  {
+   "shot_id": "s03_cull",
+   "purpose": "Show the scale of the sort: a hundred thousand pennies reduced to ten thousand pre-1982 coppers.",
+   "visual_kind": "code",
+   "component": "FieldScan",
+   "asset_id": null,
+   "start": {
+    "at_phrase": "Over several years"
+   },
+   "end": {
+    "at_phrase": "Then he melted them"
+   }
+  },
+  {
+   "shot_id": "s04_process",
+   "purpose": "The making, in the order the narration gives it, ending on the master object.",
+   "visual_kind": "code",
+   "component": "ProcessChain",
+   "asset_id": null,
+   "start": {
+    "at_phrase": "Then he melted them"
+   },
+   "end": {
+    "at_phrase": "Every Cent passes through five transformations"
+   }
+  },
+  {
+   "shot_id": "s05_transformations",
+   "purpose": "The five transformations of value, one per narrated line. This is the essay's first list of five.",
+   "visual_kind": "code",
+   "component": "ProcessChain",
+   "asset_id": null,
+   "start": {
+    "at_phrase": "Every Cent passes through five transformations"
+   },
+   "end": {
+    "at_phrase": "And it arrives as five natures"
+   }
+  },
+  {
+   "shot_id": "s06_natures",
+   "purpose": "The essay's SECOND list of five - what a Cent simultaneously is. Kept visually distinct from the transformations so the two are not read as one list.",
+   "visual_kind": "code",
+   "component": "Simultaneity",
+   "asset_id": null,
+   "start": {
+    "at_phrase": "And it arrives as five natures"
+   },
+   "end": {
+    "at_phrase": "Conceptual art broke from the object"
+   }
+  },
+  {
+   "shot_id": "s07_objecthood",
+   "purpose": "The split the essay traces, drawn as a link that opens and stays open, with blockchain named as what finally gives the digital discrete boundaries.",
+   "visual_kind": "code",
+   "component": "Distinction",
+   "asset_id": null,
+   "start": {
+    "at_phrase": "Conceptual art broke from the object"
+   },
+   "end": {
+    "at_phrase": "CENTS holds that whole arc"
+   }
+  },
+  {
+   "shot_id": "s08a_not",
+   "purpose": "Set aside the visible manifestations before naming the medium, as a figure rather than as the same words the caption is already speaking.",
+   "visual_kind": "code",
+   "component": "Distinction",
+   "asset_id": null,
+   "start": {
+    "at_phrase": "CENTS holds that whole arc"
+   },
+   "end": {
+    "at_phrase": "Its medium is the gesture"
+   }
+  },
+  {
+   "shot_id": "s08b_gesture",
+   "purpose": "The thesis phrase alone, with the caption carrying the full sentence.",
    "visual_kind": "code",
    "component": "PullQuote",
    "asset_id": null,
    "start": {
-    "at_phrase": "Rutherford Chang's CENTS"
+    "at_phrase": "Its medium is the gesture"
    },
    "end": {
-    "at_phrase": "A penny is photographed"
+    "at_phrase": "A digital object is simultaneously"
    }
   },
   {
-   "shot_id": "s03_process",
-   "purpose": "Show the three-step process as a counted quantity, not a metaphor.",
+   "shot_id": "s09_ending",
+   "purpose": "The ending as a visual expression of the final idea, not a title card: the three readings held together.",
    "visual_kind": "code",
-   "component": "StatReveal",
+   "component": "Distinction",
    "asset_id": null,
    "start": {
-    "at_phrase": "A penny is photographed"
+    "at_phrase": "A digital object is simultaneously"
    },
    "end": {
-    "at_phrase": "The object persists. The record"
+    "after_phrase": "intersubjective reality of its presence"
    }
   },
   {
-   "shot_id": "s04_both_persist",
-   "purpose": "Hold the distinction between object and record before naming the gap.",
-   "visual_kind": "code",
-   "component": "PullQuote",
-   "asset_id": null,
-   "start": {
-    "at_phrase": "The object persists. The record"
-   },
-   "end": {
-    "at_phrase": "What goes missing"
-   }
-  },
-  {
-   "shot_id": "s05_gap",
-   "purpose": "Name the missing link \u2014 the essay's central turn.",
-   "visual_kind": "code",
-   "component": "PullQuote",
-   "asset_id": null,
-   "start": {
-    "at_phrase": "What goes missing"
-   },
-   "end": {
-    "at_phrase": "That gap is not"
-   }
-  },
-  {
-   "shot_id": "s06_credits",
-   "purpose": "Close on the final idea, then brief credits.",
+   "shot_id": "s10_credits",
+   "purpose": "Brief credits after the voice has stopped.",
    "visual_kind": "code",
    "component": "Credits",
    "asset_id": null,
    "start": {
-    "at_phrase": "That gap is not"
+    "after_phrase": "intersubjective reality of its presence"
    },
    "end": {
     "at_end": true
@@ -102,18 +167,18 @@
  ],
  "exports": {
   "clean.mp4": {
-   "sha256": "1043844aa4bc80fc1619cfd6feee23b6f99a8e702d3767b8708e5ac475f7eeed",
-   "bytes": 1388028,
-   "duration_s": 22.4,
-   "frames": 672,
+   "sha256": "3b97c6fd63feb23506fbbed5621dd4e18347cc26a232744f511e621c9bde75ff",
+   "bytes": 6744761,
+   "duration_s": 126.869,
+   "frames": 3806,
    "size": "1080x1920",
    "fps": "30/1"
   },
   "captioned.mp4": {
-   "sha256": "c058b73f2c6bb0ce99faeda6e49fb743dacb8cbdfde0877642cc2dac8cc0aab3",
-   "bytes": 1577161,
-   "duration_s": 22.4,
-   "frames": 672,
+   "sha256": "29de1a963e518ec906b7f0708728aba9cb4085992e8e505352ff12a755e01873",
+   "bytes": 7406094,
+   "duration_s": 126.869,
+   "frames": 3806,
    "size": "1080x1920",
    "fps": "30/1"
   }
@@ -121,15 +186,15 @@
  "gates": {
   "exports not stale": {
    "verdict": "pass",
-   "detail": "all 3 exports are newer than captions/cues.json"
+   "detail": "all 3 exports are newer than src/style/diagrams.tsx"
   },
   "visual mix": {
    "verdict": "pass",
-   "detail": "6 shots, mix {'code': 6}, filler 0%"
+   "detail": "11 shots, mix {'code': 11}, filler 0%"
   },
   "real alignment": {
-   "verdict": "pass",
-   "detail": "alignment came from a real recording"
+   "verdict": "FAIL",
+   "detail": "alignment came from the SCRATCH synthetic voice, not a recording. The draft is for reviewing the edit; record the real voiceover before release."
   },
   "captioned decodes": {
    "verdict": "pass",
@@ -137,31 +202,32 @@
   },
   "captioned format": {
    "verdict": "pass",
-   "detail": "1080x1920 @30fps, 672 frames, 22.40s, audio present"
+   "detail": "1080x1920 @30fps, 3806 frames, 126.87s, audio present"
   },
   "black tail": {
    "verdict": "pass",
-   "detail": "tail is not black (peak luma 255 over last 15 frames)"
+   "detail": "tail is not black (peak luma 191 over last 14 frames)"
   },
   "frozen tail": {
    "verdict": "pass",
-   "detail": "tail is moving (max inter-frame difference 244)"
+   "detail": "tail is moving (max inter-frame difference 65)"
   },
   "parity": {
    "verdict": "pass",
-   "detail": "audio streams identical, durations match (22.40s)"
+   "detail": "audio streams identical, durations match (126.87s)"
   },
   "safe area": {
    "verdict": "pass",
-   "detail": "text present in 657/672 frames, all bands clear"
+   "detail": "text present in 3791/3806 frames, all bands clear"
   },
   "loudness": {
    "verdict": "FAIL",
-   "detail": "integrated loudness -19.42 LUFS, target -16.0\u00b11.0"
+   "detail": "integrated loudness -19.54 LUFS, target -16.0\u00b11.0"
   }
  },
  "releasable": false,
  "limitations": [
+  "real alignment",
   "loudness"
  ]
 }

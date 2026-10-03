@@ -34,6 +34,9 @@ export const REGIONS = {
   art:     { x0: 0,  y0: 270,  x1: 1080, y1: 1330 },
   quote:   { x0: 104, y0: 520,  x1: 836, y1: 1280 },
   stat:    { x0: 104, y0: 480,  x1: 836, y1: 1280 },
+  /** Diagrams are INFORMATION, so they are bounded like text, never full-bleed.
+   *  The SVG viewBox is this box exactly, so nothing drawn can escape it. */
+  diagram: { x0: 104, y0: 400,  x1: 836, y1: 1300 },
   labels:  { x0: 104, y0: 1130, x1: 836, y1: 1330 },
   caption: { x0: 104, y0: 1340, x1: 836, y1: 1500 },
   credits: { x0: 104, y0: 700,  x1: 836, y1: 1200 },

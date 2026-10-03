@@ -1,19 +1,44 @@
-FIXTURE ESSAY — stands in for a real supplied essay so the fidelity gates can be
-exercised. Replace wholesale; nothing here is a claim about the real work.
+CENTS & digital objecthood
+an introduction to the primary concepts of CENTS by Rutherford Chang
+shibboleth — Medium, 30 October 2025
+Source: https://medium.com/@shibboleth88/cents-digital-conceptual-art-258b836a16a1
 
-What happens when a systems artwork produces something that the system itself
-cannot witness? Rutherford Chang's CENTS begins with a discrepancy. Each piece
-starts as an ordinary penny, which is then photographed, catalogued and
-inscribed onto a satoshi. Three artefacts result, and they are not the same
-artefact: the physical penny, the photographic record, and the inscription that
-carries the image on chain.
+CENTS is a becoming, a gesture that unfolds continually through the actions of its participants in time.
+Rutherford Chang began this project with a simple value discrepancy: the difference between the value of ¢1 ascribed to copper pennies by the US Treasury versus the metal value of apx. ¢2.5. The penny, once able to get one a newspaper, a ride on a streetcar, a postage stamp, had long since begun to hover between an abstraction and a symbol of worthlessness. By the time the artist was born in 1979, there was no longer anything sold for a single cent, and by 2006, shortly after he graduated from university, it had become more expensive to produce one cent than one cent. Yet the object remained, buoyed into physicality by the force of its context.
+Chang became fascinated with the subculture of copper scavengers, people who took advantage of the discrepancy to harvest the metal value of the raw copper. The affinity makes sense for an artist who had long been working with collecting-as-a-practice in pieces like WE BUY WHITE ALBUMS, Boom Propaganda, and The Class of 2008. He followed these fellow hoarders through their often hilariously absurd pursuit (considering the amount of effort required) as they subverted State value ascription through an act of recontextualization: taking copper pennies out of circulation and melting them down.
+Chang recognized the parallels between these copper hoarders, conceptual art, and Bitcoin. Conceptual art emerged as a movement in the 1960s as a reaction against object-based, market-driven modernism. The art object, once a vital vessel for aura and authorship, had become hollowed out by hyper-commodification, first through the introduction of mechanical reproduction in the late 19th century, then in the post-WWII period through the rapid expansion of the gallery–collector market and the proliferation of mass industry and mass media. A shift occurred in the relationship between human and object, a split between materiality and meaning. By the 1990s, digitization had begun to envelop the world, and the presence of media, knowledge, and money increasingly became digital flows rather than physical things. Digitization became thoroughly integrated at all levels of society, but the digital lacked the continuity of identity, singularity, provenance and ownability of the physical. In short, it lacked objecthood. In response, blockchain architecture was created to allow digital flows to exist as discrete units with verifiable histories that could be uniquely possessed and exchanged. In 2009, the first public blockchain protocol was launched with Bitcoin’s genesis block, establishing a shared ledger for uniquely identifiable digital units. One way of conceiving of this is as a means of using cryptography to give digital flows the kind of discrete boundaries that define physical objects. If the current era can be characterized as “the digital era,” “the Internet era,” or the “post-truth era,” then blockchain constitutes this era’s objecthood. With CENTS, Rutherford Chang encapsulates this century-long transformational arc of objecthood and value in a work of digital conceptual art.
 
-The object persists. The record of the object persists. What goes missing is the
-link between them — the correspondence that made the three one work. That gap is
-not an error in the work. It is the work's newest layer, produced by the
-infrastructure rather than authored by the artist.
+To make CENTS, Chang culled 10,000 pre-1982 copper pennies over the course of several years from about 100,000 pennies that he found, received as change, or exchanged at banks. He then archivally photographed them and cataloged each of their dates and mintages. Next, he removed them from circulation by melting them down into a solid copper block. Once destroyed, he inscribed each of the pennies as Bitcoin ordinals, storing the image data of each cent on a “sat” (a satoshi, the smallest divisible unit of Bitcoin). He then inscribed a 3D model of the block on a block of the blockchain (what is known as a full-block inscription). Finally, he released the 10,000 cent inscriptions for the price of one sat each (apx. $ 0.0001), placing them into a system of permissionless exchange and indeterminate, continual revaluation.
+[IMAGE]
 
-Recovery is not a matter of attention alone. It requires control of the output,
-recognition of which satoshi carries the inscription, and a transaction that
-separates that satoshi from the rest. Inscription-aware handling can do this.
-Ordinary handling will not, because ordinary handling has no reason to look.
+CENTS uses this series of transformations to question the value assignment and objecthood of currency, work, history, and aesthetics. Each of Chang’s Cents has 5 distinct natures. It is all of these things and none of them:
+	•	a unit of currency
+	•	a quantity of copper
+	•	a melted element of a sculpture
+	•	a photograph
+	•	a Bitcoin inscription
+Each of the objects also goes through 5 transformations of value:
+	•	being in circulation (value defined by US treasury)
+	•	being removed from circulation (centralized value assignment subverted)
+	•	being archivally photographed (value defined by visual/conceptual/historical quality)
+	•	being destroyed (value made undefinable)
+	•	being inscribed on Bitcoin (value continually redefined by decentralized consensus)
+Recontextualizing the pennies as art objects creates a discrepancy between their functional value and their aesthetic value. Recontextualizing them again as cryptographic entities creates another breech between their value as physical objects and their value as digital registers. Overall, the original assigned value is decoupled from the object and transformed into a vessel for social-consensus based value defined by decentralized participants, creating a situation where their value and meaning is indeterminate and continually redefined.
+[IMAGE]
+
+CENT #3981
+The act of making the “worthless” one-cent coin into a valuable object is an intrinsic part of the artwork. Chang initiated an ongoing process of redefinition. This is in itself not unique, it’s something tokens do at a fundamental level I think, but CENTS integrates this quality holistically in its form and execution — its medium is the gesture of its continual becoming, rather than any of its visible manifestations. This is amplified by Rutherford’s act of destroying the physical cents, smelting them into a block and inscribing it as a digital object on a full Bitcoin block. Block 839969 serves as the master object of the project, and perfects the prism that CENTS holds up to the nature of contemporary objecthood.
+[IMAGE]
+
+CENTS Block 839969
+All of Rutherford Chang’s work has a prismatic quality. He works with readymade objects and databases, and transforms them by rigorously applying strict rule sets over long periods of time. In this case, the readymade he’s using is one of the most common objects in existence. The image of Lincoln on the face of the penny, created by Victor David Brenner, is the most reproduced artwork on planet Earth due to its presence on the 500+ billion Lincoln cents that have been struck.
+
+The structure of Chang’s engagement with these readymades holds a prism to the multivalent implications of the underlying materials. I love this about his work. And he brings what I call a “black hole humor” to the process — the kind of laughter that resonates within emptiness. With CENTS, he turns his eye to the absurdity of value ascription in particular. It is absurd that a nation’s currency should dissolve into worthlessness. It is absurd that a cent should be valued at hundreds/thousands of dollars. Yet, here we are.
+The digital scarcity of CENTS, its existence as a permanent set of 10,000, transforms this collection of pennies into a system with its own unique logics and rarities. Similarly to We Buy White Albums, the visual presence of the piece exists as time-based generative art. Each of these objects, initially identical, bear the marks of touch and time. I’ve witnessed collectors intricately dissect this set to determine its internal dynamics, and it reminds me of the way that individual words and phrases in texts accrue significance when they enter the scarce set of meanings referred to as “canon”.
+[IMAGE]
+
+Overall, CENTS performs a conceptual gesture that is uniquely relevant to its historical moment and to its medium. Digital objects on blockchain pose a novel form of contemporary conceptual art, as the nature of their medium inherently introduces a multivalent objecthood where a thing is simultaneously itself, not itself and an interpretation of itself. CENTS offers a living quintessence of the ways in which value is transformed by technology and time. Its meanings continue to emerge as participants co-create the intersubjective reality of its presence.
+
+3
+
+3

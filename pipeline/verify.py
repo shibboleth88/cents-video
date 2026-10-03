@@ -275,6 +275,9 @@ def g_shot_review() -> str:
 
 def g_fixture_not_shipped() -> str:
     al = json.loads((ROOT/"script"/"alignment.json").read_text())
+    if al.get("scratch"):
+        raise Fail("alignment came from the SCRATCH synthetic voice, not a recording. "
+                   "The draft is for reviewing the edit; record the real voiceover before release.")
     if al.get("_fixture"):
         raise Fail("alignment.json is the SYNTHETIC fixture — timings were invented, "
                    "not measured from a recording. Run pipeline/align.py on the real voiceover.")

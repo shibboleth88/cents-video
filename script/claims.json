@@ -1,27 +1,557 @@
 {
- "_what": "Every narration sentence maps to the essay. This is where an invented thesis has to show itself: anything not traceable to the source is tagged 'addition' and must be approved explicitly.",
- "essay_version": "fixture-0",
- "thesis": "A systems artwork can produce a condition its own system cannot witness; the gap is a new layer, not a failure.",
+ "_what": "Every narration sentence AND every on-screen string maps to the essay. Titles and credits are tagged as such and approved. Attributions are declared and signed off separately.",
+ "essay_version": "medium 2025-10-30",
+ "thesis": "Blockchain supplies the objecthood the digital era lacked, and CENTS holds that whole arc in one gesture: its medium is its continual becoming, not any of its visible forms.",
  "claims": [
-  {"say": "What happens when a systems artwork produces something the system itself cannot witness.",
-   "kind": "quotation",
-   "span": "What happens when a systems artwork produces something that the system itself\ncannot witness?"},
-  {"say": "Rutherford Chang's CENTS begins with a discrepancy.",
-   "kind": "quotation",
-   "span": "Rutherford Chang's CENTS begins with a discrepancy."},
-  {"say": "A penny is photographed, catalogued, and inscribed.",
+  {
+   "say": "A copper penny is worth one cent.",
    "kind": "paraphrase",
-   "span": "which is then photographed, catalogued and\ninscribed onto a satoshi"},
-  {"say": "The object persists.", "kind": "quotation", "span": "The object persists."},
-  {"say": "The record of the object persists.", "kind": "quotation", "span": "The record of the object persists."},
-  {"say": "What goes missing is the link between them.",
-   "kind": "quotation", "span": "What goes missing is the\nlink between them"},
-  {"say": "That gap is not an error in the work.",
-   "kind": "quotation", "span": "That gap is\nnot an error in the work."},
-  {"say": "It is the work's newest layer.", "kind": "quotation", "span": "It is the work's newest layer"}
+   "span": "the difference between the value of ¢1 ascribed to copper pennies by the US Treasury"
+  },
+  {
+   "say": "The copper inside it is worth about two and a half.",
+   "kind": "paraphrase",
+   "span": "the metal value of apx. ¢2.5"
+  },
+  {
+   "say": "Rutherford Chang's CENTS begins in that gap.",
+   "kind": "paraphrase",
+   "span": "Rutherford Chang began this project with a simple value discrepancy"
+  },
+  {
+   "say": "Over several years he sorted a hundred thousand pennies down to ten thousand pre-1982 coppers.",
+   "kind": "paraphrase",
+   "span": "Chang culled 10,000 pre-1982 copper pennies over the course of several years from about 100,000 pennies"
+  },
+  {
+   "say": "He photographed each one and catalogued its date and mintage.",
+   "kind": "paraphrase",
+   "span": "He then archivally photographed them and cataloged each of their dates and mintages"
+  },
+  {
+   "say": "Then he melted them into a single block.",
+   "kind": "paraphrase",
+   "span": "he removed them from circulation by melting them down into a solid copper block"
+  },
+  {
+   "say": "Then he inscribed each destroyed penny onto a sat, the smallest divisible unit of Bitcoin.",
+   "kind": "paraphrase",
+   "span": "a satoshi, the smallest divisible unit of Bitcoin"
+  },
+  {
+   "say": "The block itself became a full-block inscription, CENTS Block 839969, the master object of the project.",
+   "kind": "paraphrase",
+   "span": "Block 839969 serves as the master object of the project"
+  },
+  {
+   "say": "He released all ten thousand inscriptions at one sat each, about one hundredth of a cent.",
+   "kind": "paraphrase",
+   "span": "he released the 10,000 cent inscriptions for the price of one sat each"
+  },
+  {
+   "say": "Every Cent passes through five transformations of value.",
+   "kind": "paraphrase",
+   "span": "Each of the objects also goes through 5 transformations of value"
+  },
+  {
+   "say": "In circulation, its value defined by the Treasury.",
+   "kind": "paraphrase",
+   "span": "being in circulation (value defined by US treasury)"
+  },
+  {
+   "say": "Removed from circulation, that assignment subverted.",
+   "kind": "paraphrase",
+   "span": "being removed from circulation (centralized value assignment subverted)"
+  },
+  {
+   "say": "Archivally photographed, valued for what the image holds.",
+   "kind": "paraphrase",
+   "span": "being archivally photographed (value defined by visual/conceptual/historical quality)"
+  },
+  {
+   "say": "Destroyed, its value made undefinable.",
+   "kind": "paraphrase",
+   "span": "being destroyed (value made undefinable)"
+  },
+  {
+   "say": "Inscribed on Bitcoin, continually redefined by decentralized consensus.",
+   "kind": "paraphrase",
+   "span": "being inscribed on Bitcoin (value continually redefined by decentralized consensus)"
+  },
+  {
+   "say": "And it arrives as five natures at once.",
+   "kind": "paraphrase",
+   "span": "Each of Chang’s Cents has 5 distinct natures. It is all of these things and none of them"
+  },
+  {
+   "say": "A unit of currency.",
+   "kind": "quotation",
+   "span": "a unit of currency"
+  },
+  {
+   "say": "A quantity of copper.",
+   "kind": "quotation",
+   "span": "a quantity of copper"
+  },
+  {
+   "say": "A melted element of a sculpture.",
+   "kind": "quotation",
+   "span": "a melted element of a sculpture"
+  },
+  {
+   "say": "A photograph.",
+   "kind": "quotation",
+   "span": "a photograph"
+  },
+  {
+   "say": "A Bitcoin inscription.",
+   "kind": "quotation",
+   "span": "a Bitcoin inscription"
+  },
+  {
+   "say": "All of these things, and none of them.",
+   "kind": "quotation",
+   "span": "all of these things and none of them"
+  },
+  {
+   "say": "Conceptual art broke from the object in the nineteen sixties, when commodification had hollowed it out.",
+   "kind": "paraphrase",
+   "span": "Conceptual art emerged as a movement in the 1960s as a reaction against object-based, market-driven modernism"
+  },
+  {
+   "say": "A split opened between materiality and meaning.",
+   "kind": "quotation",
+   "span": "a split between materiality and meaning"
+  },
+  {
+   "say": "Digitization widened it.",
+   "kind": "paraphrase",
+   "span": "By the 1990s, digitization had begun to envelop the world"
+  },
+  {
+   "say": "Digital flows could not hold identity, singularity, provenance or ownership.",
+   "kind": "paraphrase",
+   "span": "the digital lacked the continuity of identity, singularity, provenance and ownability of the physical"
+  },
+  {
+   "say": "They lacked objecthood.",
+   "kind": "paraphrase",
+   "span": "In short, it lacked objecthood",
+   "note": "wording changed from the essay, so paraphrase rather than quotation"
+  },
+  {
+   "say": "Blockchain was built to give them discrete boundaries and verifiable histories.",
+   "kind": "paraphrase",
+   "span": "blockchain architecture was created to allow digital flows to exist as discrete units with verifiable histories"
+  },
+  {
+   "say": "Blockchain is this era's objecthood.",
+   "kind": "paraphrase",
+   "span": "blockchain constitutes this era’s objecthood",
+   "note": "wording changed from the essay, so paraphrase rather than quotation"
+  },
+  {
+   "say": "CENTS holds that whole arc inside one gesture.",
+   "kind": "paraphrase",
+   "span": "Rutherford Chang encapsulates this century-long transformational arc of objecthood and value"
+  },
+  {
+   "say": "Its medium is not the penny, or the photograph, or the block.",
+   "kind": "paraphrase",
+   "span": "its medium is the gesture of its continual becoming, rather than any of its visible manifestations"
+  },
+  {
+   "say": "Its medium is the gesture of its continual becoming.",
+   "kind": "quotation",
+   "span": "its medium is the gesture of its continual becoming"
+  },
+  {
+   "say": "A digital object is simultaneously itself, not itself, and an interpretation of itself.",
+   "kind": "quotation",
+   "span": "a thing is simultaneously itself, not itself and an interpretation of itself"
+  },
+  {
+   "say": "Its meanings keep emerging, as participants co-create the intersubjective reality of its presence.",
+   "kind": "quotation",
+   "span": "Its meanings continue to emerge as participants co-create the intersubjective reality of its presence"
+  }
  ],
+ "onscreen": [
+  {
+   "text": "1 cent",
+   "kind": "paraphrase",
+   "span": "the difference between the value of ¢1 ascribed to copper pennies by the US Treasury"
+  },
+  {
+   "text": "10,000 pre-1982 coppers",
+   "kind": "paraphrase",
+   "span": "Chang culled 10,000 pre-1982 copper pennies over the course of several years from about 100,000 pennies"
+  },
+  {
+   "text": "100,000 pennies",
+   "kind": "paraphrase",
+   "span": "Chang culled 10,000 pre-1982 copper pennies over the course of several years from about 100,000 pennies"
+  },
+  {
+   "text": "2.5 cents",
+   "kind": "paraphrase",
+   "span": "the metal value of apx. ¢2.5"
+  },
+  {
+   "text": "Artwork: CENTS, by Rutherford Chang",
+   "kind": "credit",
+   "approved": true
+  },
+  {
+   "text": "CENTS & digital objecthood",
+   "kind": "title",
+   "approved": true
+  },
+  {
+   "text": "CENTS Block 839969",
+   "kind": "paraphrase",
+   "span": "Block 839969 serves as the master object of the project"
+  },
+  {
+   "text": "Essay: CENTS & digital objecthood, by shibboleth",
+   "kind": "credit",
+   "approved": true
+  },
+  {
+   "text": "Its medium is the gesture of its continual becoming.",
+   "kind": "quotation",
+   "span": "its medium is the gesture of its continual becoming"
+  },
+  {
+   "text": "a Bitcoin inscription",
+   "kind": "quotation",
+   "span": "a Bitcoin inscription"
+  },
+  {
+   "text": "a Cent",
+   "kind": "paraphrase",
+   "span": "Each of Chang’s Cents has 5 distinct natures. It is all of these things and none of them"
+  },
+  {
+   "text": "a full-block inscription",
+   "kind": "quotation",
+   "span": "what is known as a full-block inscription"
+  },
+  {
+   "text": "a melted element of a sculpture",
+   "kind": "quotation",
+   "span": "a melted element of a sculpture"
+  },
+  {
+   "text": "a photograph",
+   "kind": "quotation",
+   "span": "a photograph"
+  },
+  {
+   "text": "a quantity of copper",
+   "kind": "quotation",
+   "span": "a quantity of copper"
+  },
+  {
+   "text": "a split between materiality and meaning",
+   "kind": "quotation",
+   "span": "a split between materiality and meaning"
+  },
+  {
+   "text": "a unit of currency",
+   "kind": "quotation",
+   "span": "a unit of currency"
+  },
+  {
+   "text": "about one hundredth of a cent each",
+   "kind": "paraphrase",
+   "span": "(apx. $ 0.0001)"
+  },
+  {
+   "text": "all of these things",
+   "kind": "quotation",
+   "span": "Each of Chang’s Cents has 5 distinct natures. It is all of these things and none of them"
+  },
+  {
+   "text": "an interpretation",
+   "kind": "quotation",
+   "span": "a thing is simultaneously itself, not itself and an interpretation of itself"
+  },
+  {
+   "text": "an introduction to the primary concepts of CENTS by Rutherford Chang",
+   "kind": "title",
+   "approved": true
+  },
+  {
+   "text": "and an interpretation of itself",
+   "kind": "quotation",
+   "span": "a thing is simultaneously itself, not itself and an interpretation of itself"
+  },
+  {
+   "text": "and none of them",
+   "kind": "quotation",
+   "span": "Each of Chang’s Cents has 5 distinct natures. It is all of these things and none of them"
+  },
+  {
+   "text": "and not itself",
+   "kind": "quotation",
+   "span": "a thing is simultaneously itself, not itself and an interpretation of itself"
+  },
+  {
+   "text": "archivally photographed",
+   "kind": "quotation",
+   "span": "being archivally photographed (value defined by visual/conceptual/historical quality)"
+  },
+  {
+   "text": "archivally photographed, each date and mintage catalogued",
+   "kind": "paraphrase",
+   "span": "He then archivally photographed them and cataloged each of their dates and mintages"
+  },
+  {
+   "text": "blockchain supplies it",
+   "kind": "paraphrase",
+   "span": "blockchain architecture was created to allow digital flows to exist as discrete units with verifiable histories"
+  },
+  {
+   "text": "centralized value assignment subverted",
+   "kind": "quotation",
+   "span": "being removed from circulation (centralized value assignment subverted)"
+  },
+  {
+   "text": "destroyed",
+   "kind": "quotation",
+   "span": "being destroyed (value made undefinable)"
+  },
+  {
+   "text": "digitization widens the split",
+   "kind": "paraphrase",
+   "span": "By the 1990s, digitization had begun to envelop the world"
+  },
+  {
+   "text": "discrete units with verifiable histories",
+   "kind": "quotation",
+   "span": "blockchain architecture was created to allow digital flows to exist as discrete units with verifiable histories"
+  },
+  {
+   "text": "each penny inscribed on a sat",
+   "kind": "paraphrase",
+   "span": "storing the image data of each cent on a"
+  },
+  {
+   "text": "five transformations of value",
+   "kind": "quotation",
+   "span": "Each of the objects also goes through 5 transformations of value"
+  },
+  {
+   "text": "found, received as change, exchanged at banks",
+   "kind": "paraphrase",
+   "span": "pennies that he found, received as change, or exchanged at banks"
+  },
+  {
+   "text": "in circulation",
+   "kind": "quotation",
+   "span": "being in circulation (value defined by US treasury)"
+  },
+  {
+   "text": "inscribed on Bitcoin",
+   "kind": "quotation",
+   "span": "being inscribed on Bitcoin (value continually redefined by decentralized consensus)"
+  },
+  {
+   "text": "itself",
+   "kind": "quotation",
+   "span": "a thing is simultaneously itself, not itself and an interpretation of itself"
+  },
+  {
+   "text": "meanings continue to emerge as participants co-create them",
+   "kind": "paraphrase",
+   "span": "Its meanings continue to emerge as participants co-create the intersubjective reality of its presence"
+  },
+  {
+   "text": "melted into a solid copper block",
+   "kind": "quotation",
+   "span": "he removed them from circulation by melting them down into a solid copper block"
+  },
+  {
+   "text": "no identity, singularity, provenance or ownership",
+   "kind": "paraphrase",
+   "span": "the digital lacked the continuity of identity, singularity, provenance and ownability of the physical"
+  },
+  {
+   "text": "not itself",
+   "kind": "quotation",
+   "span": "a thing is simultaneously itself, not itself and an interpretation of itself"
+  },
+  {
+   "text": "released at one sat each",
+   "kind": "quotation",
+   "span": "he released the 10,000 cent inscriptions for the price of one sat each"
+  },
+  {
+   "text": "removed from circulation",
+   "kind": "quotation",
+   "span": "he removed them from circulation by melting them down into a solid copper block"
+  },
+  {
+   "text": "shibboleth",
+   "kind": "title",
+   "approved": true
+  },
+  {
+   "text": "simultaneously itself",
+   "kind": "quotation",
+   "span": "a thing is simultaneously itself, not itself and an interpretation of itself"
+  },
+  {
+   "text": "the art object is hollowed out",
+   "kind": "paraphrase",
+   "span": "had become hollowed out by hyper-commodification"
+  },
+  {
+   "text": "the digital had no discrete boundaries",
+   "kind": "paraphrase",
+   "span": "using cryptography to give digital flows the kind of discrete boundaries that define physical objects"
+  },
+  {
+   "text": "the digital lacks objecthood",
+   "kind": "paraphrase",
+   "span": "In short, it lacked objecthood"
+  },
+  {
+   "text": "the image data of each cent, on chain",
+   "kind": "paraphrase",
+   "span": "storing the image data of each cent on a"
+  },
+  {
+   "text": "value continually redefined by decentralized consensus",
+   "kind": "quotation",
+   "span": "being inscribed on Bitcoin (value continually redefined by decentralized consensus)"
+  },
+  {
+   "text": "value defined by the US Treasury",
+   "kind": "paraphrase",
+   "span": "being in circulation (value defined by US treasury)"
+  },
+  {
+   "text": "value defined by visual, conceptual, historical quality",
+   "kind": "paraphrase",
+   "span": "being archivally photographed (value defined by visual/conceptual/historical quality)"
+  },
+  {
+   "text": "value made undefinable",
+   "kind": "quotation",
+   "span": "being destroyed (value made undefinable)"
+  },
+  {
+   "text": "what the Treasury says it is worth",
+   "kind": "paraphrase",
+   "span": "the difference between the value of ¢1 ascribed to copper pennies by the US Treasury"
+  },
+  {
+   "text": "what the copper inside it is worth",
+   "kind": "paraphrase",
+   "span": "the metal value of apx. ¢2.5"
+  },
+  {
+   "text": "its continual becoming",
+   "kind": "quotation",
+   "span": "its medium is the gesture of its continual becoming"
+  },
+  {
+   "text": "materiality",
+   "kind": "quotation",
+   "span": "a split between materiality and meaning"
+  },
+  {
+   "text": "meaning",
+   "kind": "quotation",
+   "span": "a split between materiality and meaning"
+  },
+  {
+   "text": "a reaction against object-based, market-driven modernism",
+   "kind": "quotation",
+   "span": "Conceptual art emerged as a movement in the 1960s as a reaction against object-based, market-driven modernism"
+  },
+  {
+   "text": "blockchain supplies discrete boundaries and verifiable histories",
+   "kind": "paraphrase",
+   "span": "blockchain architecture was created to allow digital flows to exist as discrete units with verifiable histories"
+  },
+  {
+   "text": "not the penny, or the photograph, or the block",
+   "kind": "paraphrase",
+   "span": "its medium is the gesture of its continual becoming"
+  },
+  {
+   "text": "an interpretation of itself",
+   "kind": "quotation",
+   "span": "a thing is simultaneously itself, not itself and an interpretation of itself"
+  },
+  {
+   "text": "the penny",
+   "kind": "paraphrase",
+   "span": "its medium is the gesture of its continual becoming, rather than any of its visible manifestations"
+  },
+  {
+   "text": "the photograph",
+   "kind": "paraphrase",
+   "span": "its medium is the gesture of its continual becoming, rather than any of its visible manifestations"
+  },
+  {
+   "text": "the block",
+   "kind": "paraphrase",
+   "span": "its medium is the gesture of its continual becoming, rather than any of its visible manifestations"
+  },
+  {
+   "text": "its visible manifestations",
+   "kind": "quotation",
+   "span": "its medium is the gesture of its continual becoming, rather than any of its visible manifestations"
+  },
+  {
+   "text": "none of these is the medium",
+   "kind": "paraphrase",
+   "span": "its medium is the gesture of its continual becoming, rather than any of its visible manifestations"
+  }
+ ],
+ "attributions": [],
  "distinctions_kept": [
-  {"distinction": "physical penny / photographic record / inscription are three artefacts",
-   "where": "shots s03-s05", "verdict": "kept", "by": "claude", "note": "StatReveal names the Block; quote shots hold object and record apart."}
+  {
+   "distinction": "FIVE NATURES (what a Cent simultaneously is) vs FIVE TRANSFORMATIONS OF VALUE (what it passes through) - two different lists of five",
+   "where": "s05_transformations uses a chain; s06_natures uses a different diagram entirely so the two are not read as one list",
+   "verdict": "kept",
+   "by": "claude",
+   "note": "The previous film's 'five conditions' matched the TRANSFORMATIONS only. Merging the two lists is the obvious failure here."
+  },
+  {
+   "distinction": "CENTS (project) / Cents (collection pieces) / cents (ordinary money)",
+   "where": "narration and all on-screen text",
+   "verdict": "kept",
+   "by": "claude"
+  },
+  {
+   "distinction": "the melted physical copper block vs CENTS Block 839969, the full-block inscription OF it",
+   "where": "s04_process names them as separate nodes",
+   "verdict": "kept",
+   "by": "claude"
+  },
+  {
+   "distinction": "the sat (unit) / the inscription it carries / the image data / the physical penny",
+   "where": "s04_process, s06_natures",
+   "verdict": "kept",
+   "by": "claude"
+  },
+  {
+   "distinction": "Brenner's Lincoln portrait is context, not thesis",
+   "where": "omitted from the film entirely",
+   "verdict": "n/a",
+   "by": "claude",
+   "note": "The essay's superlative claim about it is left out rather than repeated unverified."
+  },
+  {
+   "distinction": "CENTS is a becoming, not a finished object; the medium is the gesture, not its manifestations",
+   "where": "s08_gesture holds the sentence alone; the ending does not show a finished artefact",
+   "verdict": "kept",
+   "by": "claude"
+  }
  ]
 }
