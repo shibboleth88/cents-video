@@ -61,6 +61,20 @@ them was reasonable.
   unrepairable condition is *starts going backwards*. A check aimed at the wrong
   invariant blocks good data and still misses the bad kind.
 
+- **A recorded restriction is not an enforced one.** `a01` carries another
+  essay's title burned into its lower third. The constraint was written into
+  `crop_restrictions`, and the renderer honoured it with an `object-position`
+  that *could not* crop vertically — so the wrong title appeared on screen with
+  every gate green. **Remedy:** crops are applied in `assets.py stage`, so the
+  excluded pixels do not exist in what the renderer can reach, and `check`
+  refuses an asset whose restrictions mention burned-in text without a crop rect.
+
+- **A pixel floor is not a quality filter.** The CENTS Block animation came back
+  from Medium at 385x338 and was discarded as a thumbnail — 111 frames and 5 MB
+  of the film's most important asset. **Remedy:** judge motion assets on
+  substance, and record low resolution as a *usage constraint* rather than a
+  reason to drop the file.
+
 ## Refuted — killed by a measurement, do not re-investigate
 
 - *"The left-band safe-area failure is a mispositioned element."* **Refuted** by
@@ -89,6 +103,12 @@ them was reasonable.
   "The object persists" occurs twice in the fixture narration. The fix is a
   longer anchor, not a looser matcher.
 
+- **Remotion's `<Loop>` is a `<Sequence>`, and a `<Sequence>` is an absolute
+  fill.** The Block animation escaped its plate, covered the canvas and painted
+  over the plate's own caption — and the render exited cleanly. Visible only by
+  measuring where text appeared in the text-only export. `layout="none"` is
+  load-bearing, not tidiness.
+
 ## Open — not yet investigated
 
 - Whether burned-in captions plus Instagram's own auto-captions double up.
@@ -108,7 +128,11 @@ them was reasonable.
   *Resolution:* post a test Reel and look, or check the upload preview. Do not
   redesign the layout on blog numbers alone.
 - Whether the 24px gutter is enough at other device scales.
-- Real asset handling: nothing in the pipeline has yet processed a real image.
+- Whether `assets.py` should also SOURCE imagery (search, licence, provenance)
+  and GENERATE it. Ingest, inspection, rights and staging exist; sourcing is
+  manual, and this session has no image-generation tool, so 'generated' assets
+  would have to be procedural (code) or come from an external service the user
+  has keys for. Do not imply photographic generation is available.
 - Whether reconciliation can distinguish a genuine adlib from a recogniser
   hallucination. It currently cannot, and flags both for human judgement. The
   small model invented 9 words on one pass; large-v3-turbo may not.

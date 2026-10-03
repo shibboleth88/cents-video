@@ -15,7 +15,7 @@
    "end": {
     "at_phrase": "Rutherford Chang's CENTS begins"
    },
-   "purpose": "Open on the discrepancy the project starts from, as two values that do not meet.",
+   "purpose": "Open on the discrepancy the project starts from, as two values that do not meet. The coin itself sits behind the figure.",
    "visual_kind": "code",
    "component": "Distinction",
    "props": {
@@ -36,7 +36,10 @@
       "emphasise": 1,
       "caption": "what the copper inside it is worth"
      }
-    ]
+    ],
+    "backdrop": "a01",
+    "backdropFocus": "50% 28%",
+    "backdropDim": 0.72
    }
   },
   {
@@ -47,13 +50,16 @@
    "end": {
     "at_phrase": "Over several years"
    },
-   "purpose": "Name the work and credit the essay and its author at first title.",
+   "purpose": "Name the work and credit the essay and its author at first title. CENT #3981 behind the title, so the work is seen before it is described.",
    "visual_kind": "code",
    "component": "TitleCard",
    "props": {
     "title": "CENTS & digital objecthood",
     "subtitle": "an introduction to the primary concepts of CENTS by Rutherford Chang",
-    "author": "shibboleth"
+    "author": "shibboleth",
+    "backdrop": "a03",
+    "backdropFocus": "50% 45%",
+    "backdropDim": 0.66
    }
   },
   {
@@ -95,7 +101,7 @@
     "at_phrase": "Then he melted them"
    },
    "end": {
-    "at_phrase": "Every Cent passes through five transformations"
+    "at_phrase": "The block itself became"
    },
    "purpose": "The making, in the order the narration gives it, ending on the master object.",
    "visual_kind": "code",
@@ -103,9 +109,7 @@
    "props": {
     "nodes": [
      "melted into a solid copper block",
-     "each penny inscribed on a sat",
-     "CENTS Block 839969",
-     "released at one sat each"
+     "each penny inscribed on a sat"
     ],
     "states": [
      {
@@ -117,15 +121,68 @@
       "at_phrase": "Then he inscribed each destroyed penny",
       "active": 1,
       "caption": "the image data of each cent, on chain"
-     },
-     {
-      "at_phrase": "The block itself became",
-      "active": 2,
-      "caption": "a full-block inscription"
-     },
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s04b_block",
+   "start": {
+    "at_phrase": "The block itself became"
+   },
+   "end": {
+    "at_phrase": "One inscription, filling"
+   },
+   "purpose": "Show the digital Block itself at the moment it is named.",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "a05",
+   "props": {
+    "caption": "CENTS Block 839969 - the 3D model of the block, inscribed on chain",
+    "maxWidth": 616
+   }
+  },
+  {
+   "shot_id": "s04c_fullblock",
+   "start": {
+    "at_phrase": "One inscription, filling"
+   },
+   "end": {
+    "at_phrase": "He released all ten thousand"
+   },
+   "purpose": "Show what a full-block inscription looks like in the chain: the transactions a block would hold, beside the one inscription that filled it instead.",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "a04",
+   "props": {
+    "caption": "the transactions block 839969 would have held, beside the single inscription that filled it"
+   }
+  },
+  {
+   "shot_id": "s04d_release",
+   "start": {
+    "at_phrase": "He released all ten thousand"
+   },
+   "end": {
+    "at_phrase": "Every Cent passes through five transformations"
+   },
+   "purpose": "Close the making on the release, with the chain completed.",
+   "visual_kind": "code",
+   "component": "ProcessChain",
+   "props": {
+    "nodes": [
+     "CENTS Block 839969",
+     "released at one sat each"
+    ],
+    "states": [
      {
       "at_phrase": "He released all ten thousand",
-      "active": 3,
+      "active": 0,
+      "caption": "the master object"
+     },
+     {
+      "at_phrase": "about one hundredth of a cent",
+      "active": 1,
       "caption": "about one hundredth of a cent each"
      }
     ]
@@ -185,9 +242,25 @@
    }
   },
   {
-   "shot_id": "s06_natures",
+   "shot_id": "s06a_states",
    "start": {
     "at_phrase": "And it arrives as five natures"
+   },
+   "end": {
+    "at_phrase": "A unit of currency"
+   },
+   "purpose": "The essay's own figure of the object's states, before the five are named.",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "a02",
+   "props": {
+    "caption": "the cent, its inscription address, raw copper, the block, and one sat"
+   }
+  },
+  {
+   "shot_id": "s06_natures",
+   "start": {
+    "at_phrase": "A unit of currency"
    },
    "end": {
     "at_phrase": "Conceptual art broke from the object"
@@ -206,7 +279,7 @@
     ],
     "states": [
      {
-      "at_phrase": "And it arrives as five natures",
+      "at_phrase": "A unit of currency",
       "present": true,
       "caption": "all of these things"
      },

@@ -10,7 +10,7 @@ import cuesJson from "../captions/cues.json";
 
 const timeline = timelineJson as unknown as Timeline;
 const alignment = alignmentJson as unknown as Alignment;
-const assets = assetsJson as unknown as Record<string, { path: string; motion: boolean; subject: string }>;
+const assets = ((assetsJson as any).assets ?? {}) as Record<string, any>;
 const cues = cuesJson as unknown as { start: number; end: number; text: string }[];
 
 /** Duration comes from the recording. Nothing in this file names a number of seconds. */

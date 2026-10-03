@@ -5,6 +5,7 @@ He photographed each one and catalogued its date and mintage.
 Then he melted them into a single block.
 Then he inscribed each destroyed penny onto a sat, the smallest divisible unit of Bitcoin.
 The block itself became a full-block inscription, CENTS Block 839969, the master object of the project.
+One inscription, filling an entire block.
 He released all ten thousand inscriptions at one sat each, about one hundredth of a cent.
 Every Cent passes through five transformations of value.
 In circulation, its value defined by the Treasury.

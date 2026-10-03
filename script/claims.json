@@ -44,6 +44,11 @@
    "span": "Block 839969 serves as the master object of the project"
   },
   {
+   "say": "One inscription, filling an entire block.",
+   "kind": "paraphrase",
+   "span": "what is known as a full-block inscription"
+  },
+  {
    "say": "He released all ten thousand inscriptions at one sat each, about one hundredth of a cent.",
    "kind": "paraphrase",
    "span": "he released the 10,000 cent inscriptions for the price of one sat each"
@@ -511,6 +516,26 @@
    "text": "none of these is the medium",
    "kind": "paraphrase",
    "span": "its medium is the gesture of its continual becoming, rather than any of its visible manifestations"
+  },
+  {
+   "text": "CENTS Block 839969 - the 3D model of the block, inscribed on chain",
+   "kind": "paraphrase",
+   "span": "Block 839969 serves as the master object of the project"
+  },
+  {
+   "text": "the transactions block 839969 would have held, beside the single inscription that filled it",
+   "kind": "paraphrase",
+   "span": "what is known as a full-block inscription"
+  },
+  {
+   "text": "the cent, its inscription address, raw copper, the block, and one sat",
+   "kind": "paraphrase",
+   "span": "storing the image data of each cent on a"
+  },
+  {
+   "text": "the master object",
+   "kind": "quotation",
+   "span": "Block 839969 serves as the master object of the project"
   }
  ],
  "attributions": [],

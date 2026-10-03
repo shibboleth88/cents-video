@@ -448,1029 +448,1059 @@
    "end": 34.733
   },
   {
-   "word": "He",
+   "word": "One",
    "start": 35.001,
-   "end": 35.132
+   "end": 35.201
   },
   {
-   "word": "released",
-   "start": 35.143,
-   "end": 35.667
+   "word": "inscription,",
+   "start": 35.218,
+   "end": 36.02
   },
   {
-   "word": "all",
-   "start": 35.713,
-   "end": 35.909
-  },
-  {
-   "word": "ten",
-   "start": 35.926,
-   "end": 36.123
-  },
-  {
-   "word": "thousand",
-   "start": 36.14,
-   "end": 36.664
-  },
-  {
-   "word": "inscriptions",
-   "start": 36.71,
-   "end": 37.496
-  },
-  {
-   "word": "at",
-   "start": 37.565,
-   "end": 37.696
-  },
-  {
-   "word": "one",
-   "start": 37.707,
-   "end": 37.904
-  },
-  {
-   "word": "sat",
-   "start": 37.921,
-   "end": 38.117
-  },
-  {
-   "word": "each,",
-   "start": 38.134,
-   "end": 38.462
-  },
-  {
-   "word": "about",
-   "start": 38.49,
-   "end": 38.818
-  },
-  {
-   "word": "one",
-   "start": 38.847,
-   "end": 39.043
-  },
-  {
-   "word": "hundredth",
-   "start": 39.06,
-   "end": 39.65
-  },
-  {
-   "word": "of",
-   "start": 39.701,
-   "end": 39.832
-  },
-  {
-   "word": "a",
-   "start": 39.844,
-   "end": 39.909
-  },
-  {
-   "word": "cent.",
-   "start": 39.915,
-   "end": 40.243
-  },
-  {
-   "word": "Every",
-   "start": 40.471,
-   "end": 40.777
-  },
-  {
-   "word": "Cent",
-   "start": 40.803,
-   "end": 41.047
-  },
-  {
-   "word": "passes",
-   "start": 41.069,
-   "end": 41.435
-  },
-  {
-   "word": "through",
-   "start": 41.467,
-   "end": 41.895
-  },
-  {
-   "word": "five",
-   "start": 41.932,
-   "end": 42.176
-  },
-  {
-   "word": "transformations",
-   "start": 42.198,
-   "end": 43.114
-  },
-  {
-   "word": "of",
-   "start": 43.194,
-   "end": 43.316
-  },
-  {
-   "word": "value.",
-   "start": 43.327,
-   "end": 43.693
-  },
-  {
-   "word": "In",
-   "start": 43.925,
-   "end": 44.066
-  },
-  {
-   "word": "circulation,",
-   "start": 44.078,
-   "end": 44.922
-  },
-  {
-   "word": "its",
-   "start": 44.996,
-   "end": 45.207
-  },
-  {
-   "word": "value",
-   "start": 45.225,
-   "end": 45.577
-  },
-  {
-   "word": "defined",
-   "start": 45.608,
-   "end": 46.1
-  },
-  {
-   "word": "by",
-   "start": 46.143,
-   "end": 46.284
-  },
-  {
-   "word": "the",
-   "start": 46.296,
-   "end": 46.507
-  },
-  {
-   "word": "Treasury.",
-   "start": 46.526,
-   "end": 47.159
-  },
-  {
-   "word": "Removed",
-   "start": 47.414,
-   "end": 47.861
-  },
-  {
-   "word": "from",
-   "start": 47.9,
-   "end": 48.156
-  },
-  {
-   "word": "circulation,",
-   "start": 48.178,
-   "end": 48.945
-  },
-  {
-   "word": "that",
-   "start": 49.012,
-   "end": 49.268
-  },
-  {
-   "word": "assignment",
-   "start": 49.29,
-   "end": 49.929
-  },
-  {
-   "word": "subverted.",
-   "start": 49.985,
-   "end": 50.624
-  },
-  {
-   "word": "Archivally",
-   "start": 50.879,
-   "end": 51.586
-  },
-  {
-   "word": "photographed,",
-   "start": 51.647,
-   "end": 52.565
-  },
-  {
-   "word": "valued",
-   "start": 52.645,
-   "end": 53.069
-  },
-  {
-   "word": "for",
-   "start": 53.106,
-   "end": 53.318
-  },
-  {
-   "word": "what",
-   "start": 53.336,
-   "end": 53.619
-  },
-  {
-   "word": "the",
-   "start": 53.643,
-   "end": 53.855
-  },
-  {
-   "word": "image",
-   "start": 53.873,
-   "end": 54.227
-  },
-  {
-   "word": "holds.",
-   "start": 54.257,
-   "end": 54.681
-  },
-  {
-   "word": "Destroyed,",
-   "start": 54.918,
-   "end": 55.622
-  },
-  {
-   "word": "its",
-   "start": 55.684,
-   "end": 55.895
-  },
-  {
-   "word": "value",
-   "start": 55.913,
-   "end": 56.265
-  },
-  {
-   "word": "made",
-   "start": 56.296,
-   "end": 56.578
-  },
-  {
-   "word": "undefinable.",
-   "start": 56.602,
-   "end": 57.448
-  },
-  {
-   "word": "Inscribed",
-   "start": 57.721,
-   "end": 58.382
-  },
-  {
-   "word": "on",
-   "start": 58.44,
-   "end": 58.587
-  },
-  {
-   "word": "Bitcoin,",
-   "start": 58.6,
-   "end": 59.187
-  },
-  {
-   "word": "continually",
-   "start": 59.239,
-   "end": 60.047
-  },
-  {
-   "word": "redefined",
-   "start": 60.117,
-   "end": 60.778
-  },
-  {
-   "word": "by",
-   "start": 60.836,
-   "end": 60.983
-  },
-  {
-   "word": "decentralized",
-   "start": 60.996,
-   "end": 61.951
-  },
-  {
-   "word": "consensus.",
-   "start": 62.034,
-   "end": 62.769
-  },
-  {
-   "word": "And",
-   "start": 63.033,
-   "end": 63.245
-  },
-  {
-   "word": "it",
-   "start": 63.264,
-   "end": 63.405
-  },
-  {
-   "word": "arrives",
-   "start": 63.418,
-   "end": 63.914
-  },
-  {
-   "word": "as",
-   "start": 63.957,
-   "end": 64.099
-  },
-  {
-   "word": "five",
-   "start": 64.111,
-   "end": 64.394
-  },
-  {
-   "word": "natures",
-   "start": 64.419,
-   "end": 64.915
-  },
-  {
-   "word": "at",
-   "start": 64.958,
-   "end": 65.1
-  },
-  {
-   "word": "once.",
-   "start": 65.112,
-   "end": 65.466
-  },
-  {
-   "word": "A",
-   "start": 65.697,
-   "end": 65.77
-  },
-  {
-   "word": "unit",
-   "start": 65.777,
-   "end": 66.068
-  },
-  {
-   "word": "of",
-   "start": 66.094,
-   "end": 66.24
-  },
-  {
-   "word": "currency.",
-   "start": 66.252,
-   "end": 66.909
-  },
-  {
-   "word": "A",
-   "start": 67.166,
-   "end": 67.231
-  },
-  {
-   "word": "quantity",
-   "start": 67.236,
-   "end": 67.755
-  },
-  {
-   "word": "of",
-   "start": 67.8,
-   "end": 67.93
-  },
-  {
-   "word": "copper.",
-   "start": 67.941,
-   "end": 68.395
-  },
-  {
-   "word": "A",
-   "start": 68.635,
-   "end": 68.694
-  },
-  {
-   "word": "melted",
-   "start": 68.7,
-   "end": 69.059
-  },
-  {
-   "word": "element",
-   "start": 69.09,
-   "end": 69.509
-  },
-  {
-   "word": "of",
-   "start": 69.545,
-   "end": 69.665
-  },
-  {
-   "word": "a",
-   "start": 69.675,
-   "end": 69.735
-  },
-  {
-   "word": "sculpture.",
-   "start": 69.74,
-   "end": 70.339
-  },
-  {
-   "word": "A",
-   "start": 70.591,
-   "end": 70.677
-  },
-  {
-   "word": "photograph.",
-   "start": 70.684,
-   "end": 71.627
-  },
-  {
-   "word": "A",
-   "start": 71.909,
-   "end": 71.974
-  },
-  {
-   "word": "Bitcoin",
-   "start": 71.979,
-   "end": 72.433
-  },
-  {
-   "word": "inscription.",
-   "start": 72.472,
-   "end": 73.249
-  },
-  {
-   "word": "All",
-   "start": 73.517,
-   "end": 73.706
-  },
-  {
-   "word": "of",
-   "start": 73.723,
-   "end": 73.849
-  },
-  {
-   "word": "these",
-   "start": 73.86,
-   "end": 74.176
-  },
-  {
-   "word": "things,",
-   "start": 74.203,
-   "end": 74.645
-  },
-  {
-   "word": "and",
-   "start": 74.684,
-   "end": 74.873
-  },
-  {
-   "word": "none",
-   "start": 74.89,
-   "end": 75.142
-  },
-  {
-   "word": "of",
-   "start": 75.164,
-   "end": 75.29
-  },
-  {
-   "word": "them.",
-   "start": 75.301,
-   "end": 75.617
-  },
-  {
-   "word": "Conceptual",
-   "start": 75.845,
-   "end": 76.48
-  },
-  {
-   "word": "art",
-   "start": 76.535,
-   "end": 76.725
-  },
-  {
-   "word": "broke",
-   "start": 76.742,
-   "end": 77.059
-  },
-  {
-   "word": "from",
-   "start": 77.087,
-   "end": 77.341
-  },
-  {
-   "word": "the",
-   "start": 77.363,
-   "end": 77.554
-  },
-  {
-   "word": "object",
-   "start": 77.57,
-   "end": 77.951
-  },
-  {
-   "word": "in",
-   "start": 77.984,
-   "end": 78.111
-  },
-  {
-   "word": "the",
-   "start": 78.122,
-   "end": 78.313
-  },
-  {
-   "word": "nineteen",
-   "start": 78.329,
-   "end": 78.837
-  },
-  {
-   "word": "sixties,",
-   "start": 78.881,
-   "end": 79.389
-  },
-  {
-   "word": "when",
-   "start": 79.434,
-   "end": 79.688
-  },
-  {
-   "word": "commodification",
-   "start": 79.71,
-   "end": 80.662
-  },
-  {
-   "word": "had",
-   "start": 80.745,
-   "end": 80.936
-  },
-  {
-   "word": "hollowed",
-   "start": 80.952,
-   "end": 81.46
-  },
-  {
-   "word": "it",
-   "start": 81.504,
-   "end": 81.631
-  },
-  {
-   "word": "out.",
-   "start": 81.642,
-   "end": 81.896
-  },
-  {
-   "word": "A",
-   "start": 82.118,
-   "end": 82.179
-  },
-  {
-   "word": "split",
-   "start": 82.185,
-   "end": 82.49
-  },
-  {
-   "word": "opened",
-   "start": 82.516,
-   "end": 82.883
-  },
-  {
-   "word": "between",
-   "start": 82.914,
-   "end": 83.342
-  },
-  {
-   "word": "materiality",
-   "start": 83.379,
-   "end": 84.05
-  },
-  {
-   "word": "and",
-   "start": 84.109,
-   "end": 84.292
-  },
-  {
-   "word": "meaning.",
-   "start": 84.308,
-   "end": 84.796
-  },
-  {
-   "word": "Digitization",
-   "start": 85.038,
-   "end": 85.844
-  },
-  {
-   "word": "widened",
-   "start": 85.914,
-   "end": 86.383
-  },
-  {
-   "word": "it.",
-   "start": 86.424,
-   "end": 86.626
-  },
-  {
-   "word": "Digital",
-   "start": 86.843,
-   "end": 87.34
-  },
-  {
-   "word": "flows",
-   "start": 87.383,
-   "end": 87.738
-  },
-  {
-   "word": "could",
-   "start": 87.769,
-   "end": 88.124
-  },
-  {
-   "word": "not",
-   "start": 88.155,
-   "end": 88.367
-  },
-  {
-   "word": "hold",
-   "start": 88.386,
-   "end": 88.67
-  },
-  {
-   "word": "identity,",
-   "start": 88.695,
-   "end": 89.333
-  },
-  {
-   "word": "singularity,",
-   "start": 89.389,
-   "end": 90.241
-  },
-  {
-   "word": "provenance",
-   "start": 90.315,
-   "end": 91.024
-  },
-  {
-   "word": "or",
-   "start": 91.086,
-   "end": 91.228
-  },
-  {
-   "word": "ownership.",
-   "start": 91.24,
-   "end": 91.95
-  },
-  {
-   "word": "They",
-   "start": 92.212,
-   "end": 92.426
-  },
-  {
-   "word": "lacked",
-   "start": 92.444,
-   "end": 92.765
-  },
-  {
-   "word": "objecthood.",
-   "start": 92.793,
-   "end": 93.38
-  },
-  {
-   "word": "Blockchain",
-   "start": 93.631,
-   "end": 94.198
-  },
-  {
-   "word": "was",
-   "start": 94.247,
-   "end": 94.418
-  },
-  {
-   "word": "built",
-   "start": 94.432,
-   "end": 94.716
-  },
-  {
-   "word": "to",
-   "start": 94.74,
-   "end": 94.854
-  },
-  {
-   "word": "give",
-   "start": 94.864,
-   "end": 95.09
-  },
-  {
-   "word": "them",
-   "start": 95.11,
-   "end": 95.337
-  },
-  {
-   "word": "discrete",
-   "start": 95.357,
-   "end": 95.81
-  },
-  {
-   "word": "boundaries",
-   "start": 95.849,
-   "end": 96.416
-  },
-  {
-   "word": "and",
-   "start": 96.466,
-   "end": 96.636
-  },
-  {
-   "word": "verifiable",
-   "start": 96.651,
-   "end": 97.217
-  },
-  {
-   "word": "histories.",
-   "start": 97.267,
-   "end": 97.834
-  },
-  {
-   "word": "Blockchain",
-   "start": 98.083,
-   "end": 98.661
-  },
-  {
-   "word": "is",
-   "start": 98.711,
-   "end": 98.827
-  },
-  {
-   "word": "this",
-   "start": 98.837,
-   "end": 99.068
-  },
-  {
-   "word": "era's",
-   "start": 99.088,
-   "end": 99.377
-  },
-  {
-   "word": "objecthood.",
-   "start": 99.403,
-   "end": 100.038
-  },
-  {
-   "word": "CENTS",
-   "start": 100.294,
-   "end": 100.61
-  },
-  {
-   "word": "holds",
-   "start": 100.638,
-   "end": 100.954
-  },
-  {
-   "word": "that",
-   "start": 100.982,
-   "end": 101.235
-  },
-  {
-   "word": "whole",
-   "start": 101.257,
-   "end": 101.573
-  },
-  {
-   "word": "arc",
-   "start": 101.601,
-   "end": 101.791
-  },
-  {
-   "word": "inside",
-   "start": 101.807,
-   "end": 102.187
-  },
-  {
-   "word": "one",
-   "start": 102.22,
-   "end": 102.41
-  },
-  {
-   "word": "gesture.",
-   "start": 102.426,
-   "end": 102.933
-  },
-  {
-   "word": "Its",
-   "start": 103.177,
-   "end": 103.386
-  },
-  {
-   "word": "medium",
-   "start": 103.404,
-   "end": 103.822
-  },
-  {
-   "word": "is",
-   "start": 103.858,
-   "end": 103.998
-  },
-  {
-   "word": "not",
-   "start": 104.01,
-   "end": 104.219
-  },
-  {
-   "word": "the",
-   "start": 104.237,
-   "end": 104.446
-  },
-  {
-   "word": "penny,",
-   "start": 104.464,
-   "end": 104.883
-  },
-  {
-   "word": "or",
-   "start": 104.919,
-   "end": 105.058
-  },
-  {
-   "word": "the",
-   "start": 105.071,
-   "end": 105.28
-  },
-  {
-   "word": "photograph,",
-   "start": 105.298,
-   "end": 106.065
-  },
-  {
-   "word": "or",
-   "start": 106.131,
-   "end": 106.271
-  },
-  {
-   "word": "the",
-   "start": 106.283,
-   "end": 106.492
-  },
-  {
-   "word": "block.",
-   "start": 106.51,
-   "end": 106.928
-  },
-  {
-   "word": "Its",
-   "start": 107.165,
-   "end": 107.348
-  },
-  {
-   "word": "medium",
-   "start": 107.364,
-   "end": 107.732
-  },
-  {
-   "word": "is",
-   "start": 107.764,
-   "end": 107.886
-  },
-  {
-   "word": "the",
-   "start": 107.897,
-   "end": 108.081
-  },
-  {
-   "word": "gesture",
-   "start": 108.097,
-   "end": 108.525
-  },
-  {
-   "word": "of",
-   "start": 108.562,
-   "end": 108.685
-  },
-  {
-   "word": "its",
-   "start": 108.696,
-   "end": 108.879
-  },
-  {
-   "word": "continual",
-   "start": 108.895,
-   "end": 109.446
-  },
-  {
-   "word": "becoming.",
-   "start": 109.494,
-   "end": 110.046
-  },
-  {
-   "word": "A",
-   "start": 110.294,
-   "end": 110.369
-  },
-  {
-   "word": "digital",
-   "start": 110.375,
-   "end": 110.902
-  },
-  {
-   "word": "object",
-   "start": 110.948,
-   "end": 111.399
-  },
-  {
-   "word": "is",
-   "start": 111.438,
-   "end": 111.589
-  },
-  {
-   "word": "simultaneously",
-   "start": 111.602,
-   "end": 112.655
-  },
-  {
-   "word": "itself,",
-   "start": 112.747,
-   "end": 113.273
-  },
-  {
-   "word": "not",
-   "start": 113.319,
-   "end": 113.545
-  },
-  {
-   "word": "itself,",
-   "start": 113.565,
-   "end": 114.091
-  },
-  {
-   "word": "and",
-   "start": 114.137,
-   "end": 114.363
+   "word": "filling",
+   "start": 36.09,
+   "end": 36.558
   },
   {
    "word": "an",
-   "start": 114.382,
-   "end": 114.533
+   "start": 36.598,
+   "end": 36.732
   },
   {
-   "word": "interpretation",
-   "start": 114.546,
-   "end": 115.599
+   "word": "entire",
+   "start": 36.744,
+   "end": 37.144
+  },
+  {
+   "word": "block.",
+   "start": 37.179,
+   "end": 37.58
+  },
+  {
+   "word": "He",
+   "start": 37.815,
+   "end": 37.946
+  },
+  {
+   "word": "released",
+   "start": 37.958,
+   "end": 38.482
+  },
+  {
+   "word": "all",
+   "start": 38.527,
+   "end": 38.724
+  },
+  {
+   "word": "ten",
+   "start": 38.741,
+   "end": 38.938
+  },
+  {
+   "word": "thousand",
+   "start": 38.955,
+   "end": 39.479
+  },
+  {
+   "word": "inscriptions",
+   "start": 39.524,
+   "end": 40.311
+  },
+  {
+   "word": "at",
+   "start": 40.379,
+   "end": 40.51
+  },
+  {
+   "word": "one",
+   "start": 40.522,
+   "end": 40.718
+  },
+  {
+   "word": "sat",
+   "start": 40.735,
+   "end": 40.932
+  },
+  {
+   "word": "each,",
+   "start": 40.949,
+   "end": 41.276
+  },
+  {
+   "word": "about",
+   "start": 41.305,
+   "end": 41.633
+  },
+  {
+   "word": "one",
+   "start": 41.661,
+   "end": 41.858
+  },
+  {
+   "word": "hundredth",
+   "start": 41.875,
+   "end": 42.464
   },
   {
    "word": "of",
-   "start": 115.691,
-   "end": 115.841
+   "start": 42.516,
+   "end": 42.647
   },
   {
-   "word": "itself.",
-   "start": 115.854,
-   "end": 116.381
+   "word": "a",
+   "start": 42.658,
+   "end": 42.724
   },
   {
-   "word": "Its",
-   "start": 116.627,
-   "end": 116.821
+   "word": "cent.",
+   "start": 42.729,
+   "end": 43.057
   },
   {
-   "word": "meanings",
-   "start": 116.838,
-   "end": 117.356
+   "word": "Every",
+   "start": 43.286,
+   "end": 43.591
   },
   {
-   "word": "keep",
-   "start": 117.401,
-   "end": 117.66
+   "word": "Cent",
+   "start": 43.618,
+   "end": 43.862
   },
   {
-   "word": "emerging,",
-   "start": 117.682,
-   "end": 118.265
+   "word": "passes",
+   "start": 43.883,
+   "end": 44.25
   },
   {
-   "word": "as",
-   "start": 118.316,
-   "end": 118.445
+   "word": "through",
+   "start": 44.282,
+   "end": 44.709
   },
   {
-   "word": "participants",
-   "start": 118.456,
-   "end": 119.233
+   "word": "five",
+   "start": 44.747,
+   "end": 44.991
   },
   {
-   "word": "co-create",
-   "start": 119.301,
-   "end": 119.884
-  },
-  {
-   "word": "the",
-   "start": 119.934,
-   "end": 120.128
-  },
-  {
-   "word": "intersubjective",
-   "start": 120.145,
-   "end": 121.117
-  },
-  {
-   "word": "reality",
-   "start": 121.201,
-   "end": 121.654
+   "word": "transformations",
+   "start": 45.012,
+   "end": 45.929
   },
   {
    "word": "of",
-   "start": 121.694,
-   "end": 121.823
+   "start": 46.008,
+   "end": 46.131
+  },
+  {
+   "word": "value.",
+   "start": 46.141,
+   "end": 46.508
+  },
+  {
+   "word": "In",
+   "start": 46.74,
+   "end": 46.88
+  },
+  {
+   "word": "circulation,",
+   "start": 46.893,
+   "end": 47.737
   },
   {
    "word": "its",
-   "start": 121.834,
-   "end": 122.029
+   "start": 47.81,
+   "end": 48.021
+  },
+  {
+   "word": "value",
+   "start": 48.04,
+   "end": 48.392
+  },
+  {
+   "word": "defined",
+   "start": 48.422,
+   "end": 48.915
+  },
+  {
+   "word": "by",
+   "start": 48.958,
+   "end": 49.098
+  },
+  {
+   "word": "the",
+   "start": 49.111,
+   "end": 49.322
+  },
+  {
+   "word": "Treasury.",
+   "start": 49.34,
+   "end": 49.973
+  },
+  {
+   "word": "Removed",
+   "start": 50.228,
+   "end": 50.676
+  },
+  {
+   "word": "from",
+   "start": 50.715,
+   "end": 50.97
+  },
+  {
+   "word": "circulation,",
+   "start": 50.993,
+   "end": 51.76
+  },
+  {
+   "word": "that",
+   "start": 51.826,
+   "end": 52.082
+  },
+  {
+   "word": "assignment",
+   "start": 52.104,
+   "end": 52.743
+  },
+  {
+   "word": "subverted.",
+   "start": 52.799,
+   "end": 53.438
+  },
+  {
+   "word": "Archivally",
+   "start": 53.694,
+   "end": 54.4
+  },
+  {
+   "word": "photographed,",
+   "start": 54.462,
+   "end": 55.38
+  },
+  {
+   "word": "valued",
+   "start": 55.46,
+   "end": 55.883
+  },
+  {
+   "word": "for",
+   "start": 55.92,
+   "end": 56.132
+  },
+  {
+   "word": "what",
+   "start": 56.151,
+   "end": 56.433
+  },
+  {
+   "word": "the",
+   "start": 56.458,
+   "end": 56.669
+  },
+  {
+   "word": "image",
+   "start": 56.688,
+   "end": 57.041
+  },
+  {
+   "word": "holds.",
+   "start": 57.072,
+   "end": 57.496
+  },
+  {
+   "word": "Destroyed,",
+   "start": 57.732,
+   "end": 58.437
+  },
+  {
+   "word": "its",
+   "start": 58.498,
+   "end": 58.709
+  },
+  {
+   "word": "value",
+   "start": 58.728,
+   "end": 59.08
+  },
+  {
+   "word": "made",
+   "start": 59.111,
+   "end": 59.392
+  },
+  {
+   "word": "undefinable.",
+   "start": 59.417,
+   "end": 60.262
+  },
+  {
+   "word": "Inscribed",
+   "start": 60.536,
+   "end": 61.197
+  },
+  {
+   "word": "on",
+   "start": 61.254,
+   "end": 61.401
+  },
+  {
+   "word": "Bitcoin,",
+   "start": 61.414,
+   "end": 62.002
+  },
+  {
+   "word": "continually",
+   "start": 62.053,
+   "end": 62.861
+  },
+  {
+   "word": "redefined",
+   "start": 62.932,
+   "end": 63.593
+  },
+  {
+   "word": "by",
+   "start": 63.65,
+   "end": 63.797
+  },
+  {
+   "word": "decentralized",
+   "start": 63.81,
+   "end": 64.765
+  },
+  {
+   "word": "consensus.",
+   "start": 64.848,
+   "end": 65.583
+  },
+  {
+   "word": "And",
+   "start": 65.847,
+   "end": 66.06
+  },
+  {
+   "word": "it",
+   "start": 66.078,
+   "end": 66.22
+  },
+  {
+   "word": "arrives",
+   "start": 66.232,
+   "end": 66.728
+  },
+  {
+   "word": "as",
+   "start": 66.771,
+   "end": 66.913
+  },
+  {
+   "word": "five",
+   "start": 66.925,
+   "end": 67.209
+  },
+  {
+   "word": "natures",
+   "start": 67.233,
+   "end": 67.729
+  },
+  {
+   "word": "at",
+   "start": 67.773,
+   "end": 67.914
+  },
+  {
+   "word": "once.",
+   "start": 67.927,
+   "end": 68.281
+  },
+  {
+   "word": "A",
+   "start": 68.512,
+   "end": 68.585
+  },
+  {
+   "word": "unit",
+   "start": 68.591,
+   "end": 68.883
+  },
+  {
+   "word": "of",
+   "start": 68.908,
+   "end": 69.054
+  },
+  {
+   "word": "currency.",
+   "start": 69.067,
+   "end": 69.723
+  },
+  {
+   "word": "A",
+   "start": 69.98,
+   "end": 70.045
+  },
+  {
+   "word": "quantity",
+   "start": 70.051,
+   "end": 70.57
+  },
+  {
+   "word": "of",
+   "start": 70.615,
+   "end": 70.744
+  },
+  {
+   "word": "copper.",
+   "start": 70.756,
+   "end": 71.21
+  },
+  {
+   "word": "A",
+   "start": 71.449,
+   "end": 71.509
+  },
+  {
+   "word": "melted",
+   "start": 71.514,
+   "end": 71.873
+  },
+  {
+   "word": "element",
+   "start": 71.904,
+   "end": 72.323
+  },
+  {
+   "word": "of",
+   "start": 72.36,
+   "end": 72.479
+  },
+  {
+   "word": "a",
+   "start": 72.49,
+   "end": 72.55
+  },
+  {
+   "word": "sculpture.",
+   "start": 72.555,
+   "end": 73.153
+  },
+  {
+   "word": "A",
+   "start": 73.405,
+   "end": 73.491
+  },
+  {
+   "word": "photograph.",
+   "start": 73.499,
+   "end": 74.441
+  },
+  {
+   "word": "A",
+   "start": 74.723,
+   "end": 74.788
+  },
+  {
+   "word": "Bitcoin",
+   "start": 74.794,
+   "end": 75.247
+  },
+  {
+   "word": "inscription.",
+   "start": 75.286,
+   "end": 76.064
+  },
+  {
+   "word": "All",
+   "start": 76.331,
+   "end": 76.521
+  },
+  {
+   "word": "of",
+   "start": 76.537,
+   "end": 76.663
+  },
+  {
+   "word": "these",
+   "start": 76.674,
+   "end": 76.99
+  },
+  {
+   "word": "things,",
+   "start": 77.018,
+   "end": 77.46
+  },
+  {
+   "word": "and",
+   "start": 77.498,
+   "end": 77.688
+  },
+  {
+   "word": "none",
+   "start": 77.704,
+   "end": 77.957
+  },
+  {
+   "word": "of",
+   "start": 77.979,
+   "end": 78.105
+  },
+  {
+   "word": "them.",
+   "start": 78.116,
+   "end": 78.432
+  },
+  {
+   "word": "Conceptual",
+   "start": 78.659,
+   "end": 79.294
+  },
+  {
+   "word": "art",
+   "start": 79.349,
+   "end": 79.54
+  },
+  {
+   "word": "broke",
+   "start": 79.556,
+   "end": 79.874
+  },
+  {
+   "word": "from",
+   "start": 79.901,
+   "end": 80.155
+  },
+  {
+   "word": "the",
+   "start": 80.177,
+   "end": 80.368
+  },
+  {
+   "word": "object",
+   "start": 80.385,
+   "end": 80.766
+  },
+  {
+   "word": "in",
+   "start": 80.799,
+   "end": 80.926
+  },
+  {
+   "word": "the",
+   "start": 80.937,
+   "end": 81.127
+  },
+  {
+   "word": "nineteen",
+   "start": 81.144,
+   "end": 81.652
+  },
+  {
+   "word": "sixties,",
+   "start": 81.696,
+   "end": 82.204
+  },
+  {
+   "word": "when",
+   "start": 82.248,
+   "end": 82.502
+  },
+  {
+   "word": "commodification",
+   "start": 82.524,
+   "end": 83.477
+  },
+  {
+   "word": "had",
+   "start": 83.559,
+   "end": 83.75
+  },
+  {
+   "word": "hollowed",
+   "start": 83.767,
+   "end": 84.275
+  },
+  {
+   "word": "it",
+   "start": 84.319,
+   "end": 84.446
+  },
+  {
+   "word": "out.",
+   "start": 84.457,
+   "end": 84.711
+  },
+  {
+   "word": "A",
+   "start": 84.933,
+   "end": 84.994
+  },
+  {
+   "word": "split",
+   "start": 84.999,
+   "end": 85.304
+  },
+  {
+   "word": "opened",
+   "start": 85.331,
+   "end": 85.697
+  },
+  {
+   "word": "between",
+   "start": 85.729,
+   "end": 86.156
+  },
+  {
+   "word": "materiality",
+   "start": 86.193,
+   "end": 86.865
+  },
+  {
+   "word": "and",
+   "start": 86.923,
+   "end": 87.106
+  },
+  {
+   "word": "meaning.",
+   "start": 87.122,
+   "end": 87.61
+  },
+  {
+   "word": "Digitization",
+   "start": 87.853,
+   "end": 88.658
+  },
+  {
+   "word": "widened",
+   "start": 88.728,
+   "end": 89.198
+  },
+  {
+   "word": "it.",
+   "start": 89.239,
+   "end": 89.44
+  },
+  {
+   "word": "Digital",
+   "start": 89.658,
+   "end": 90.154
+  },
+  {
+   "word": "flows",
+   "start": 90.198,
+   "end": 90.552
+  },
+  {
+   "word": "could",
+   "start": 90.583,
+   "end": 90.938
+  },
+  {
+   "word": "not",
+   "start": 90.969,
+   "end": 91.182
+  },
+  {
+   "word": "hold",
+   "start": 91.2,
+   "end": 91.484
+  },
+  {
+   "word": "identity,",
+   "start": 91.509,
+   "end": 92.148
+  },
+  {
+   "word": "singularity,",
+   "start": 92.203,
+   "end": 93.055
+  },
+  {
+   "word": "provenance",
+   "start": 93.129,
+   "end": 93.839
+  },
+  {
+   "word": "or",
+   "start": 93.901,
+   "end": 94.043
+  },
+  {
+   "word": "ownership.",
+   "start": 94.055,
+   "end": 94.765
+  },
+  {
+   "word": "They",
+   "start": 95.026,
+   "end": 95.24
+  },
+  {
+   "word": "lacked",
+   "start": 95.259,
+   "end": 95.579
+  },
+  {
+   "word": "objecthood.",
+   "start": 95.607,
+   "end": 96.195
+  },
+  {
+   "word": "Blockchain",
+   "start": 96.446,
+   "end": 97.013
+  },
+  {
+   "word": "was",
+   "start": 97.062,
+   "end": 97.232
+  },
+  {
+   "word": "built",
+   "start": 97.247,
+   "end": 97.53
+  },
+  {
+   "word": "to",
+   "start": 97.555,
+   "end": 97.668
+  },
+  {
+   "word": "give",
+   "start": 97.678,
+   "end": 97.905
+  },
+  {
+   "word": "them",
+   "start": 97.925,
+   "end": 98.151
+  },
+  {
+   "word": "discrete",
+   "start": 98.171,
+   "end": 98.625
+  },
+  {
+   "word": "boundaries",
+   "start": 98.664,
+   "end": 99.231
+  },
+  {
+   "word": "and",
+   "start": 99.28,
+   "end": 99.45
+  },
+  {
+   "word": "verifiable",
+   "start": 99.465,
+   "end": 100.032
+  },
+  {
+   "word": "histories.",
+   "start": 100.081,
+   "end": 100.648
+  },
+  {
+   "word": "Blockchain",
+   "start": 100.897,
+   "end": 101.475
+  },
+  {
+   "word": "is",
+   "start": 101.526,
+   "end": 101.641
+  },
+  {
+   "word": "this",
+   "start": 101.651,
+   "end": 101.883
+  },
+  {
+   "word": "era's",
+   "start": 101.903,
+   "end": 102.192
+  },
+  {
+   "word": "objecthood.",
+   "start": 102.217,
+   "end": 102.853
+  },
+  {
+   "word": "CENTS",
+   "start": 103.108,
+   "end": 103.425
+  },
+  {
+   "word": "holds",
+   "start": 103.452,
+   "end": 103.769
+  },
+  {
+   "word": "that",
+   "start": 103.796,
+   "end": 104.049
+  },
+  {
+   "word": "whole",
+   "start": 104.071,
+   "end": 104.388
+  },
+  {
+   "word": "arc",
+   "start": 104.415,
+   "end": 104.605
+  },
+  {
+   "word": "inside",
+   "start": 104.622,
+   "end": 105.001
+  },
+  {
+   "word": "one",
+   "start": 105.034,
+   "end": 105.224
+  },
+  {
+   "word": "gesture.",
+   "start": 105.241,
+   "end": 105.747
+  },
+  {
+   "word": "Its",
+   "start": 105.991,
+   "end": 106.2
+  },
+  {
+   "word": "medium",
+   "start": 106.218,
+   "end": 106.637
+  },
+  {
+   "word": "is",
+   "start": 106.673,
+   "end": 106.812
+  },
+  {
+   "word": "not",
+   "start": 106.824,
+   "end": 107.034
+  },
+  {
+   "word": "the",
+   "start": 107.052,
+   "end": 107.261
+  },
+  {
+   "word": "penny,",
+   "start": 107.279,
+   "end": 107.697
+  },
+  {
+   "word": "or",
+   "start": 107.734,
+   "end": 107.873
+  },
+  {
+   "word": "the",
+   "start": 107.885,
+   "end": 108.094
+  },
+  {
+   "word": "photograph,",
+   "start": 108.112,
+   "end": 108.879
+  },
+  {
+   "word": "or",
+   "start": 108.946,
+   "end": 109.085
+  },
+  {
+   "word": "the",
+   "start": 109.097,
+   "end": 109.306
+  },
+  {
+   "word": "block.",
+   "start": 109.325,
+   "end": 109.743
+  },
+  {
+   "word": "Its",
+   "start": 109.979,
+   "end": 110.163
+  },
+  {
+   "word": "medium",
+   "start": 110.179,
+   "end": 110.546
+  },
+  {
+   "word": "is",
+   "start": 110.578,
+   "end": 110.701
+  },
+  {
+   "word": "the",
+   "start": 110.711,
+   "end": 110.895
+  },
+  {
+   "word": "gesture",
+   "start": 110.911,
+   "end": 111.34
+  },
+  {
+   "word": "of",
+   "start": 111.377,
+   "end": 111.499
+  },
+  {
+   "word": "its",
+   "start": 111.51,
+   "end": 111.694
+  },
+  {
+   "word": "continual",
+   "start": 111.71,
+   "end": 112.261
+  },
+  {
+   "word": "becoming.",
+   "start": 112.309,
+   "end": 112.86
+  },
+  {
+   "word": "A",
+   "start": 113.108,
+   "end": 113.183
+  },
+  {
+   "word": "digital",
+   "start": 113.19,
+   "end": 113.716
+  },
+  {
+   "word": "object",
+   "start": 113.762,
+   "end": 114.214
+  },
+  {
+   "word": "is",
+   "start": 114.253,
+   "end": 114.403
+  },
+  {
+   "word": "simultaneously",
+   "start": 114.416,
+   "end": 115.47
+  },
+  {
+   "word": "itself,",
+   "start": 115.561,
+   "end": 116.088
+  },
+  {
+   "word": "not",
+   "start": 116.134,
+   "end": 116.359
+  },
+  {
+   "word": "itself,",
+   "start": 116.379,
+   "end": 116.906
+  },
+  {
+   "word": "and",
+   "start": 116.952,
+   "end": 117.177
+  },
+  {
+   "word": "an",
+   "start": 117.197,
+   "end": 117.347
+  },
+  {
+   "word": "interpretation",
+   "start": 117.36,
+   "end": 118.414
+  },
+  {
+   "word": "of",
+   "start": 118.505,
+   "end": 118.656
+  },
+  {
+   "word": "itself.",
+   "start": 118.669,
+   "end": 119.195
+  },
+  {
+   "word": "Its",
+   "start": 119.441,
+   "end": 119.635
+  },
+  {
+   "word": "meanings",
+   "start": 119.652,
+   "end": 120.17
+  },
+  {
+   "word": "keep",
+   "start": 120.215,
+   "end": 120.474
+  },
+  {
+   "word": "emerging,",
+   "start": 120.497,
+   "end": 121.08
+  },
+  {
+   "word": "as",
+   "start": 121.13,
+   "end": 121.26
+  },
+  {
+   "word": "participants",
+   "start": 121.271,
+   "end": 122.048
+  },
+  {
+   "word": "co-create",
+   "start": 122.115,
+   "end": 122.698
+  },
+  {
+   "word": "the",
+   "start": 122.749,
+   "end": 122.943
+  },
+  {
+   "word": "intersubjective",
+   "start": 122.96,
+   "end": 123.931
+  },
+  {
+   "word": "reality",
+   "start": 124.015,
+   "end": 124.469
+  },
+  {
+   "word": "of",
+   "start": 124.508,
+   "end": 124.638
+  },
+  {
+   "word": "its",
+   "start": 124.649,
+   "end": 124.843
   },
   {
    "word": "presence.",
-   "start": 122.045,
-   "end": 122.628
+   "start": 124.86,
+   "end": 125.443
   }
  ],
- "duration": 126.879,
+ "duration": 129.693,
  "source_audio": "public/vo.wav",
  "model": "macos-say+measured",
- "narration_ends": 122.628,
+ "narration_ends": 125.443,
  "tail_silence": 4.0
 }

@@ -78,6 +78,38 @@ Safe bounds are a **starting guide measured from one Reel**, not an official
 spec. Device, app version and expanded captions change coverage; ads need more
 bottom clearance. Re-verify against the real upload preview.
 
+## Assets
+
+    pipeline/assets.py ingest <folder|zip> --page <saved.html> --label ... --rights ...
+    pipeline/assets.py sheet     # contact sheet - LOOK at every asset
+    pipeline/assets.py stage     # copies into public/, applying declared crops
+    pipeline/assets.py check     # release gate
+    pipeline/assets.py plan      # which shots want imagery
+
+Ingest keeps provenance. From a saved web page it takes only figures inside the
+article body, because a Medium export is mostly sidebar advertising and a
+filename cannot tell you which is which.
+
+Nothing is usable until someone has **looked at it**: `subject` and
+`crop_restrictions` are written from the image, never from its filename, and
+`check` refuses an asset with no subject, no rights basis, or a hash that no
+longer matches the file. It also fails when identified assets exist and the film
+uses none of them - "all used assets are fine" is vacuous at zero.
+
+A crop is applied at **staging**, not at render time. `a01` carries another
+essay's title burned into its lower third; recorded as advice, the restriction
+was ignored by an object-position that could not honour it, and the wrong title
+went on screen. Cutting the pixels before the renderer sees them removes the
+possibility.
+
+Low resolution is a usage constraint, not a reason to discard: the Block
+animation came back from Medium at 385x338 and `Plate` refuses to display it
+wider than it can carry.
+
+**Not yet built:** sourcing imagery from the web with licence and provenance, and
+generating it. This session has no image-generation tool, so "generated" here can
+only mean procedural/code imagery or an external service you hold keys for.
+
 ## Visual sourcing
 
 Every shot declares `visual_kind`:
