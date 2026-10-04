@@ -102,7 +102,13 @@ moves nothing at all between adjacent frames.
 
 ## Connecting fal (one-time)
 
-1. Make an account at fal.ai and create an API key in the dashboard.
+1. Create the key at **fal.ai/dashboard/keys** -> "Create Key". Choose the
+   **API** scope, not ADMIN: API calls models, ADMIN also allows deploys and
+   app management, which nothing here needs. The key is shown **once** — copy it
+   before leaving the page, or make a new one.
+   Then check **Billing**: fal is prepaid credits with starter credits on
+   signup, and the account locks when the balance runs low. There is **no
+   built-in spend cap**, so `plan` and `--confirm` are the only brake.
 2. Put it in your shell profile — **this machine's shell is bash, so `~/.bash_profile`**
    (add it to `~/.zshrc` too if you use zsh in Terminal):
 
@@ -128,10 +134,9 @@ reads it from the environment.
     pipeline/generate.py plan      # what it would do and cost; needs no key, spends nothing
     pipeline/generate.py run --shot s02_title --confirm
 
-Endpoints and parameter shapes are verified against fal's own API pages. The
-PRICES are not: fal does not publish a figure on the endpoint page, so the
-numbers in `generate.py` come from comparison articles. Confirm the real price in
-your dashboard before a run.
+Endpoints, parameter shapes and prices are verified against fal's own model
+pages (2026-10-04) and the verification date is recorded beside each price.
+Prices appear on the model's gallery page, not its /api page.
 
 `duration` accepts only 5 or 10 seconds, and image-to-video takes no aspect
 ratio — the output follows the source image.

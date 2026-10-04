@@ -22,35 +22,40 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 INV = ROOT / "timeline" / "assets.json"
 LEDGER = ROOT / "timeline" / "generation_log.json"
 
-# Endpoints and parameter shapes VERIFIED against fal's own API pages on
-# 2026-10-04. The v1 endpoint this file first guessed at is deprecated, it never
-# took an `aspect_ratio`, and `duration` is an ENUM of 5 or 10 — the earlier code
-# would have sent 2.5 and been rejected.
-#
-# Prices are NOT published on those pages. The figures below are carried over
-# from comparison articles and are therefore UNVERIFIED: check the price fal
-# shows for the endpoint in your dashboard before a real run.
+# Endpoints, parameter shapes AND PRICES verified against fal's own model pages
+# on 2026-10-04. Checking first caught four errors in the guessed version:
+#   - fal-ai/kling-video/v1/standard/image-to-video is deprecated
+#   - fal-ai/kling-video/v2/standard/image-to-video does not exist (404)
+#   - image-to-video takes no aspect_ratio; output follows the source image
+#   - duration is an enum of 5 or 10; the code was computing 2.5
+# Cost is a FLAT BASE for the first 5s plus a per-second rate after it on the
+# turbo tier, not a pure per-second rate as first assumed.
 MODELS = {
     "kling-2.5-turbo": {
         "endpoint": "fal-ai/kling-video/v2.5-turbo/pro/image-to-video",
-        "kind": "image-to-video", "usd_per_second": 0.09, "price_verified": False,
-        "note": "current default: pro quality at turbo speed, good on slow physical motion",
+        "kind": "image-to-video",
+        "base_usd": 0.35, "base_seconds": 5, "extra_usd_per_second": 0.07,
+        "price_verified": "2026-10-04, fal model page",
+        "note": "DEFAULT. $0.35 per 5s. Pro quality at turbo speed; good on slow physical motion",
     },
-    "kling-2-standard": {
-        "endpoint": "fal-ai/kling-video/v2/standard/image-to-video",
-        "kind": "image-to-video", "usd_per_second": 0.05, "price_verified": False,
-        "note": "cheapest current tier; try first, step up only if it is not enough",
-    },
-    "kling-2.6-pro": {
-        "endpoint": "fal-ai/kling-video/v2.6/pro/image-to-video",
-        "kind": "image-to-video", "usd_per_second": 0.17, "price_verified": False,
-        "note": "highest quality; also generates audio, which this pipeline does not need",
+    "kling-3-pro": {
+        "endpoint": "fal-ai/kling-video/v3/pro/image-to-video",
+        "kind": "image-to-video",
+        "base_usd": 0.0, "base_seconds": 0, "extra_usd_per_second": 0.112,
+        "price_verified": "2026-10-04, fal model page (audio OFF)",
+        "audio_off_required": True,
+        "note": "$0.112/s with audio off ($0.56 per 5s) - 60% dearer. Its edges are "
+                "cinematic invention and native audio, neither of which this film wants",
     },
 }
 # fal's image-to-video takes no aspect ratio: the output follows the source
-# image. Our stills are square and landscape, and backdrops are cover-fitted
-# anyway, so they are sent as they are.
+# image. Our stills are square and landscape; backdrops are cover-fitted anyway.
 DURATIONS = (5, 10)   # the API accepts nothing else
+
+def cost_of(model: dict, seconds: int) -> float:
+    """Flat base for the first `base_seconds`, then per second."""
+    extra = max(0, seconds - model["base_seconds"])
+    return model["base_usd"] + extra * model["extra_usd_per_second"]
 
 DEFAULT = "kling-2.5-turbo"
 
@@ -82,22 +87,22 @@ def plan(args) -> int:
     if not c:
         print("No still is held long enough to be worth animating.")
         return 0
-    print(f"model: {args.model}  ({m['endpoint']})  ${m['usd_per_second']}/s — {m['note']}\n")
+    print(f"model: {args.model}  ({m['endpoint']})")
+    print(f"  {m['note']}")
+    print(f"  price verified: {m['price_verified']}\n")
     total = 0.0
     for x in c:
         # The API accepts 5 or 10 seconds only. A 2.5s shot still costs a 5s
         # clip; the surplus is trimmed locally, not billed differently.
         clip = 5 if x["seconds"] <= 7 else (10 if args.long else 5)
-        cost = clip * m["usd_per_second"]
+        cost = cost_of(m, clip)
         total += cost
         flag = "  [LOW RES — animating a soft source gives a soft clip]" if x["low_res"] else ""
         print(f"  {x['shot_id']:<18} {x['asset_id']}  {clip}s clip for a {x['seconds']:5.1f}s shot  "
               f"~${cost:5.2f}{flag}")
         print(f"  {'':<18} {x['subject']}")
     print(f"\n  estimated total: ~${total:.2f} for {len(c)} clips")
-    if not m.get("price_verified"):
-        print("  PRICE UNVERIFIED. fal does not publish a figure on the endpoint page; this is")
-        print("  carried from comparison articles. Confirm it in your fal dashboard first.")
+    print("  fal has no built-in spend cap, so `plan` and --confirm are the only brake.")
     if not os.environ.get("FAL_KEY"):
         print("\n  FAL_KEY is not set, so nothing can be sent. Export it to run.")
     return 0
@@ -137,6 +142,8 @@ def run(args) -> int:
             "duration": str(clip),           # enum: "5" or "10"
             "negative_prompt": args.negative,
             "cfg_scale": args.cfg,
+            # v3 bills 50% more with audio on, and this film has its own voice.
+            **({"generate_audio": False} if m.get("audio_off_required") else {}),
         })
         out_url = (res.get("video") or {}).get("url")
         if not out_url: sys.exit(f"no video returned for {x['shot_id']}: {str(res)[:200]}")
@@ -154,7 +161,7 @@ def run(args) -> int:
         }
         log["runs"].append({"at": time.strftime("%Y-%m-%dT%H:%M:%S"), "shot": x["shot_id"],
                             "model": args.model, "endpoint": m["endpoint"],
-                            "seconds": clip, "est_usd": round(clip * m["usd_per_second"], 3),
+                            "seconds": clip, "est_usd": round(cost_of(m, clip), 3),
                             "prompt": prompt, "source_asset": x["asset_id"], "new_asset": aid})
         print(f"    -> {dst.relative_to(ROOT)}  (asset {aid})")
     INV.write_text(json.dumps(data, indent=1, ensure_ascii=False))
@@ -166,8 +173,8 @@ def run(args) -> int:
 
 def models(args) -> int:
     for k, m in MODELS.items():
-        price = f"${m['usd_per_second']}/s" if m["usd_per_second"] else f"${m.get('flat_usd')}/image"
-        print(f"  {k:<16} {m['kind']:<16} {price:<12} {m['note']}")
+        print(f"  {k:<16} {m['kind']:<16} ${cost_of(m, 5):.2f}/5s   {m['note']}")
+        print(f"  {'':<16} verified {m['price_verified']}")
     print(f"\n  default: {DEFAULT}")
     return 0
 
