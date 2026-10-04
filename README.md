@@ -117,7 +117,8 @@ moves nothing at all between adjacent frames.
    Keep it out of this repo. `.env` and `.env.local` are gitignored as a
    backstop, but the profile is the better place: nothing in the project
    directory then holds a credential.
-3. Open a new terminal (or `source ~/.bash_profile`) and check:
+3. Check it (no new terminal needed — `falenv.py` reads the profile directly,
+   because this pipeline runs in a non-login shell that does not):
 
        python3 pipeline/check_api.py
 

@@ -83,6 +83,15 @@ them was reasonable.
   to the question — stillness is perceived over seconds, so compare across
   seconds.
 
+- **Inherited environment is not a sourced profile.** A key plainly present in
+  `~/.bash_profile` was plainly invisible to the pipeline, because this shell is
+  non-login and non-interactive and never reads that file. Worse, the check that
+  "verified" the mechanism was confounded: the PATH entries taken as proof of
+  sourcing were inherited from the parent process. **Remedy:** `pipeline/falenv.py`
+  looks in the environment first, then parses the single export line from the
+  usual profiles. **Rule:** to prove a file is read, test a value that exists
+  ONLY in that file — never one the parent could also supply.
+
 ## Refuted — killed by a measurement, do not re-investigate
 
 - *"The left-band safe-area failure is a mispositioned element."* **Refuted** by
@@ -126,6 +135,14 @@ them was reasonable.
   a still passage was a severed link whose dashes drift apart and captions that
   read in word by word — both carry the argument. Raising the drift amount would
   also have passed the gate and said nothing.
+
+- **A 403 is four different facts.** No key, a malformed key, a rejected
+  credential, a valid credential on an account with no balance, and an
+  unreachable network all surface as "it did not work". The first run showed a
+  bare `403 Forbidden` and looked like an authentication failure; the response
+  BODY said `User is locked. Reason: Exhausted balance.` — a billing fact with a
+  completely different remedy. `check_api.py` now names which of the five it
+  found.
 
 ## Open — not yet investigated
 

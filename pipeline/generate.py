@@ -103,14 +103,20 @@ def plan(args) -> int:
         print(f"  {'':<18} {x['subject']}")
     print(f"\n  estimated total: ~${total:.2f} for {len(c)} clips")
     print("  fal has no built-in spend cap, so `plan` and --confirm are the only brake.")
-    if not os.environ.get("FAL_KEY"):
-        print("\n  FAL_KEY is not set, so nothing can be sent. Export it to run.")
+    sys.path.insert(0, str(ROOT / "pipeline"))
+    from falenv import load_key
+    if not load_key()[0]:
+        print("\n  No credential found, so nothing can be sent.")
     return 0
 
 def run(args) -> int:
-    key = os.environ.get("FAL_KEY")
+    sys.path.insert(0, str(ROOT / "pipeline"))
+    from falenv import load_key, redact
+    key, where = load_key()
     if not key:
-        sys.exit("FAL_KEY is not set. `plan` works without it; `run` does not.")
+        sys.exit("FAL_KEY not found in the environment or any shell profile. "
+                 "`plan` works without it; `run` does not.")
+    print(f"  credential found via {where}")
     if not args.confirm:
         sys.exit("run costs money. Re-run with --confirm once `plan` looks right.")
     try:
