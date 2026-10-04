@@ -3,3 +3,7 @@ review/
 .DS_Store
 exports/*.mp4
 !exports/.gitkeep
+
+# never commit credentials
+.env
+.env.local

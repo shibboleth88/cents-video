@@ -100,11 +100,41 @@ highlight — motion that states the argument rather than keeping the frame busy
 compares frames **two seconds apart**, because a drift slow enough to be tasteful
 moves nothing at all between adjacent frames.
 
+## Connecting fal (one-time)
+
+1. Make an account at fal.ai and create an API key in the dashboard.
+2. Put it in your shell profile — **this machine's shell is bash, so `~/.bash_profile`**
+   (add it to `~/.zshrc` too if you use zsh in Terminal):
+
+       export FAL_KEY="paste-your-key-here"
+
+   Keep it out of this repo. `.env` and `.env.local` are gitignored as a
+   backstop, but the profile is the better place: nothing in the project
+   directory then holds a credential.
+3. Open a new terminal (or `source ~/.bash_profile`) and check:
+
+       python3 pipeline/check_api.py
+
+   It reports only whether the key is present and whether a call is accepted.
+   It never prints, logs or stores the value, and redacts it from any error.
+
+Claude does not need to see the key and should not be given it: the pipeline
+reads it from the environment.
+
 ## Generated motion
 
-    pipeline/generate.py models   # catalogue and configured prices
-    pipeline/generate.py plan     # what it would do and cost; needs no key, spends nothing
+    pipeline/check_api.py          # is the connection live?
+    pipeline/generate.py models    # catalogue and configured prices
+    pipeline/generate.py plan      # what it would do and cost; needs no key, spends nothing
     pipeline/generate.py run --shot s02_title --confirm
+
+Endpoints and parameter shapes are verified against fal's own API pages. The
+PRICES are not: fal does not publish a figure on the endpoint page, so the
+numbers in `generate.py` come from comparison articles. Confirm the real price in
+your dashboard before a run.
+
+`duration` accepts only 5 or 10 seconds, and image-to-video takes no aspect
+ratio — the output follows the source image.
 
 Image-to-video on **your own stills** is the default path. For a film about the
 objecthood of real things, animating a photograph the artist took and inventing
