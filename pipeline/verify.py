@@ -254,6 +254,61 @@ def g_visual_variety(max_run=2, max_share=0.5) -> str:
         raise Fail(f"{top} occupies {sec/total:.0%} of runtime (max {max_share:.0%})")
     return f"longest same-component run {worst}, largest share {sec/total:.0%} ({top})"
 
+def g_no_static_passage(max_still=4.0, thresh=1.2, rate=2.0, lag_s=2.0) -> str:
+    """No passage of PICTURE may sit still for longer than max_still seconds.
+
+    Each sampled frame is compared with one `lag_s` seconds EARLIER, not with
+    its neighbour. Stillness is perceived over seconds, and the baseline has to
+    match the question. This was wrong twice before it was right: frame-to-frame
+    called every tasteful slow move static, and 0.5s apart still did — the same
+    passage measures 0.5 over half a second and 2.0 over two, so the threshold
+    was never the problem, the baseline was.
+
+    The caption band is excluded: captions change constantly by design, and
+    counting them would let a shot of two motionless circles pass because its
+    subtitles were busy.
+
+    LIMIT, stated rather than hidden: this detects whether the picture changes,
+    not whether the change is any good. A slow zoom used as the only motion
+    passes, and the production notes forbid that too. Looking is still required.
+    """
+    import tempfile
+    from PIL import Image, ImageChops
+    cap = ROOT/"exports"/"captioned.mp4"
+    with tempfile.TemporaryDirectory() as td:
+        d = pathlib.Path(td)
+        r = sh(["ffmpeg","-v","error","-y","-i",str(cap),
+                "-vf",f"fps={rate},crop=1080:1270:0:70,scale=160:188",
+                str(d/"f%05d.png")])
+        if r.returncode != 0: raise Fail(f"frame sampling failed: {r.stderr[:160]}")
+        frames = sorted(d.glob("*.png"))
+        expect = int(float(probe(cap)["format"]["duration"]) * rate)
+        # FLOOR: a sample that came back short measures a different film.
+        if len(frames) < expect * 0.8:
+            raise Fail(f"sampled {len(frames)} frames, expected about {expect} — the scan is broken")
+        ims = [Image.open(f).convert("L") for f in frames]
+        lag = max(1, int(round(lag_s * rate)))
+        if len(ims) <= lag: raise Fail(f"film is shorter than the {lag_s}s comparison baseline")
+        diffs = []
+        for x, y in zip(ims, ims[lag:]):
+            h = ImageChops.difference(x, y).histogram()
+            total = sum(h) or 1
+            diffs.append(sum(i * h[i] for i in range(256)) / total)
+    if not diffs: raise Fail("no frame pairs to compare")
+    # FLOOR: if nothing anywhere changes, suspect the instrument before the film.
+    if max(diffs) < thresh:
+        raise Fail(f"no sampled pair anywhere exceeds the threshold (peak {max(diffs):.2f}) — "
+                   f"either the film is a slideshow or the scan is broken")
+    run, worst, at = 0, 0, 0
+    for i, v in enumerate(diffs):
+        run = run + 1 if v < thresh else 0
+        if run > worst: worst, at = run, i
+    secs = worst / rate
+    if secs > max_still:
+        raise Fail(f"{secs:.1f}s of still picture ending at {at/rate:.1f}s (limit {max_still}s)")
+    return (f"longest still passage {secs:.1f}s (limit {max_still}s, measured over a {lag_s}s baseline); "
+            f"picture change median {sorted(diffs)[len(diffs)//2]:.1f}, peak {max(diffs):.1f}")
+
 def g_shot_review() -> str:
     """Every shot looked at, and the verdicts describe THIS render."""
     r = ROOT/"review"/"shot_review.json"
@@ -304,6 +359,9 @@ def make_broken(kind: str, d: pathlib.Path) -> pathlib.Path:
                   "drawbox=x=950:y=600:w=80:h=200:color=white:t=fill",*common,str(out)])
     elif kind == "empty_essential":
         sh(["ffmpeg","-v","error","-y","-f","lavfi","-i",f"color=c=black:s=1080x1920:r={FPS}:d=2",*common,str(out)])
+    elif kind == "static":
+        sh(["ffmpeg","-v","error","-y","-f","lavfi","-i",f"color=c=gray:s=1080x1920:r={FPS}:d=6",
+            "-vf","drawbox=x=300:y=600:w=400:h=300:color=white:t=fill",*common,str(out)])
     elif kind == "silent":
         sh(["ffmpeg","-v","error","-y","-f","lavfi","-i",f"color=c=white:s=1080x1920:r={FPS}:d=2",
             "-f","lavfi","-i","anullsrc=r=48000:cl=mono","-t","2",*common,"-c:a","aac","-shortest",str(out)])
@@ -315,7 +373,22 @@ CONTROLS = [
     ("out_of_bounds",   "safe area",         lambda p: g_safe_area(p)),
     ("empty_essential", "safe-area FLOOR",   lambda p: g_safe_area(p)),
     ("silent",          "loudness",          lambda p: g_loudness(p)),
+    ("static",          "static passage",    lambda p: _static_on(p)),
 ]
+
+def _static_on(p: pathlib.Path) -> str:
+    """Run the static-passage gate against an arbitrary file, for the control."""
+    import shutil as _sh
+    cap = ROOT/"exports"/"captioned.mp4"
+    bak = ROOT/"exports"/"_captioned_bak.mp4"
+    had = cap.exists()
+    if had: cap.rename(bak)
+    try:
+        _sh.copy(p, cap)
+        return g_no_static_passage()
+    finally:
+        cap.unlink(missing_ok=True)
+        if had: bak.rename(cap)
 
 def self_test() -> int:
     print("CONTROLS — each of these MUST go red. A green here means the gate is vacuous.\n")
@@ -358,6 +431,7 @@ def main() -> int:
         ("caption redundancy",    g_caption_redundancy),
         ("credits after voice",   g_credits_after_narration),
         ("visual variety",        g_visual_variety),
+        ("no static passage",     g_no_static_passage),
         ("shot review (vision)",  g_shot_review),
         ("captioned decodes",     lambda: g_decodes(cap)),
         ("captioned format",      lambda: g_format(cap)),

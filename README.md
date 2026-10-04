@@ -78,6 +78,41 @@ Safe bounds are a **starting guide measured from one Reel**, not an official
 spec. Device, app version and expanded captions change coverage; ads need more
 bottom clearance. Re-verify against the real upload preview.
 
+## Motion and art direction
+
+Colour is **sampled from the artwork**, not chosen: `pipeline/palette.py` takes
+the copper and the verdigris off CENT #3981 and the Block, and builds the
+neutrals on the copper hue so even the greys belong to this film. `--self-test`
+replaces a source with flat blue and requires the palette to move; a palette that
+did not move would be decoration wearing the costume of derivation.
+
+`src/style/motion.ts` holds motion as TOKENS with roles — `rise`, `settle`,
+`bloom`, `place` — plus stagger and a per-shot camera drift seeded by shot id.
+Components pick a role; nobody tunes a curve per shot, and a new shot inherits
+the film's character for free.
+
+Captions reveal word by word from the same alignment the edit is cut from, so the
+reveal cannot drift from the voice. Diagram captions read in the same way, and a
+severed link's dashes drift apart while an intact one carries a travelling
+highlight — motion that states the argument rather than keeping the frame busy.
+
+`no static passage` gates the production notes' rule against long stills. It
+compares frames **two seconds apart**, because a drift slow enough to be tasteful
+moves nothing at all between adjacent frames.
+
+## Generated motion
+
+    pipeline/generate.py models   # catalogue and configured prices
+    pipeline/generate.py plan     # what it would do and cost; needs no key, spends nothing
+    pipeline/generate.py run --shot s02_title --confirm
+
+Image-to-video on **your own stills** is the default path. For a film about the
+objecthood of real things, animating a photograph the artist took and inventing
+footage of an artwork that was never filmed are different acts. Generated clips
+enter the inventory with an empty `subject`, so `assets.py check` refuses them
+until they have been looked at — a generated clip can invent detail the still
+never had.
+
 ## Assets
 
     pipeline/assets.py ingest <folder|zip> --page <saved.html> --label ... --rights ...

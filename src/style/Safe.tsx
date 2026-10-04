@@ -44,7 +44,10 @@ export const SafeText: React.FC<{
   color?: string;
   maxLines?: number;
   style?: React.CSSProperties;
-}> = ({ children, role = "body", essential = true, fontSize, color, maxLines = 3, style }) => {
+  /** Per-word opacity. The full string is still laid out and measured, so the
+   *  bounds gate sees the final text and nothing reflows as words appear. */
+  wordOpacity?: number[];
+}> = ({ children, role = "body", essential = true, fontSize, color, maxLines = 3, style, wordOpacity }) => {
   const ref = useRef<HTMLDivElement>(null);
   const scale = useCurrentScale();
   const min = MIN_FONT_PX[role];
@@ -96,7 +99,15 @@ export const SafeText: React.FC<{
         ...style,
       }}
     >
-      {children}
+      {wordOpacity
+        ? children.split(/(\s+)/).map((tok, i) =>
+            /^\s+$/.test(tok) ? (
+              tok
+            ) : (
+              <span key={i} style={{ opacity: wordOpacity[Math.floor(i / 2)] ?? 1 }}>{tok}</span>
+            )
+          )
+        : children}
     </div>
   );
 };

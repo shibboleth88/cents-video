@@ -43,13 +43,24 @@ export const REGIONS = {
 } as const;
 export type RegionName = keyof typeof REGIONS;
 
+import palette from "./palette.json";
+
+/**
+ * Colours are SAMPLED FROM THE ARTWORK by pipeline/palette.py, not chosen.
+ * CENTS supplies two of its own — the copper and the verdigris that grows on
+ * it — and the neutrals are built on the copper hue so even the greys belong to
+ * this film. Rebuild with: python3 pipeline/palette.py build
+ */
 export const COLOR = {
-  bg: "#0b0b0c",
-  ink: "#f4f1ea",
-  inkDim: "#a9a49a",
-  accent: "#d98324",
-  rule: "#2a2a2d",
-  captionBack: "rgba(0,0,0,0.42)",
+  bg: palette.bg,
+  surface: palette.surface,
+  ink: palette.ink,
+  inkDim: palette.inkDim,
+  accent: palette.copper,
+  accent2: palette.verdigris,
+  accentDeep: palette.copper_deep,
+  rule: palette.rule,
+  captionBack: "rgba(0,0,0,0.46)",
 } as const;
 
 export const TYPE = {

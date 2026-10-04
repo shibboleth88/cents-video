@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-03T10:53:55",
+ "generated_at": "2026-10-04T16:17:05",
  "essay": {
   "title": "CENTS & digital objecthood",
   "author": "shibboleth",
@@ -11,19 +11,19 @@
   "alignment_is_fixture": false,
   "model": "macos-say+measured",
   "audio": "public/vo.wav",
-  "duration_s": 126.879,
-  "words": 293
+  "duration_s": 129.693,
+  "words": 299
  },
  "canvas": {
   "width": 1080,
   "height": 1920,
   "fps": 30
  },
- "ledger_sha256": "a5197c6e6c213628a6d77929bc0c7d4d4aea3beeab03a122943d54f672a71c65",
+ "ledger_sha256": "19f82ac3da8dbeb815d11cf222adf0602dd7a86d571d747d076a5ed61b3e560e",
  "shots": [
   {
    "shot_id": "s01_gap",
-   "purpose": "Open on the discrepancy the project starts from, as two values that do not meet.",
+   "purpose": "Open on the discrepancy the project starts from, as two values that do not meet. The coin itself sits behind the figure.",
    "visual_kind": "code",
    "component": "Distinction",
    "asset_id": null,
@@ -36,7 +36,7 @@
   },
   {
    "shot_id": "s02_title",
-   "purpose": "Name the work and credit the essay and its author at first title.",
+   "purpose": "Name the work and credit the essay and its author at first title. CENT #3981 behind the title, so the work is seen before it is described.",
    "visual_kind": "code",
    "component": "TitleCard",
    "asset_id": null,
@@ -70,6 +70,45 @@
     "at_phrase": "Then he melted them"
    },
    "end": {
+    "at_phrase": "The block itself became"
+   }
+  },
+  {
+   "shot_id": "s04b_block",
+   "purpose": "Show the digital Block itself at the moment it is named.",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "a05",
+   "start": {
+    "at_phrase": "The block itself became"
+   },
+   "end": {
+    "at_phrase": "One inscription, filling"
+   }
+  },
+  {
+   "shot_id": "s04c_fullblock",
+   "purpose": "Show what a full-block inscription looks like in the chain: the transactions a block would hold, beside the one inscription that filled it instead.",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "a04",
+   "start": {
+    "at_phrase": "One inscription, filling"
+   },
+   "end": {
+    "at_phrase": "He released all ten thousand"
+   }
+  },
+  {
+   "shot_id": "s04d_release",
+   "purpose": "Close the making on the release, with the chain completed.",
+   "visual_kind": "code",
+   "component": "ProcessChain",
+   "asset_id": null,
+   "start": {
+    "at_phrase": "He released all ten thousand"
+   },
+   "end": {
     "at_phrase": "Every Cent passes through five transformations"
    }
   },
@@ -87,13 +126,26 @@
    }
   },
   {
+   "shot_id": "s06a_states",
+   "purpose": "The essay's own figure of the object's states, before the five are named.",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "a02",
+   "start": {
+    "at_phrase": "And it arrives as five natures"
+   },
+   "end": {
+    "at_phrase": "A unit of currency"
+   }
+  },
+  {
    "shot_id": "s06_natures",
    "purpose": "The essay's SECOND list of five - what a Cent simultaneously is. Kept visually distinct from the transformations so the two are not read as one list.",
    "visual_kind": "code",
    "component": "Simultaneity",
    "asset_id": null,
    "start": {
-    "at_phrase": "And it arrives as five natures"
+    "at_phrase": "A unit of currency"
    },
    "end": {
     "at_phrase": "Conceptual art broke from the object"
@@ -167,18 +219,18 @@
  ],
  "exports": {
   "clean.mp4": {
-   "sha256": "3b97c6fd63feb23506fbbed5621dd4e18347cc26a232744f511e621c9bde75ff",
-   "bytes": 6744761,
-   "duration_s": 126.869,
-   "frames": 3806,
+   "sha256": "58f46122fcaf9c69d0d44e41450019ff9aa75beb07764be49d8231a23c42bdda",
+   "bytes": 28100055,
+   "duration_s": 129.707,
+   "frames": 3891,
    "size": "1080x1920",
    "fps": "30/1"
   },
   "captioned.mp4": {
-   "sha256": "29de1a963e518ec906b7f0708728aba9cb4085992e8e505352ff12a755e01873",
-   "bytes": 7406094,
-   "duration_s": 126.869,
-   "frames": 3806,
+   "sha256": "a29a59ae45e33e4a6fc1e15611ee37da988448cc3bb330cdc45896dbded138ac",
+   "bytes": 29544442,
+   "duration_s": 129.707,
+   "frames": 3891,
    "size": "1080x1920",
    "fps": "30/1"
   }
@@ -186,11 +238,11 @@
  "gates": {
   "exports not stale": {
    "verdict": "pass",
-   "detail": "all 3 exports are newer than src/style/diagrams.tsx"
+   "detail": "all 3 exports are newer than src/style/components.tsx"
   },
   "visual mix": {
    "verdict": "pass",
-   "detail": "11 shots, mix {'code': 11}, filler 0%"
+   "detail": "15 shots, mix {'code': 12, 'real': 3}, filler 0%"
   },
   "real alignment": {
    "verdict": "FAIL",
@@ -202,27 +254,27 @@
   },
   "captioned format": {
    "verdict": "pass",
-   "detail": "1080x1920 @30fps, 3806 frames, 126.87s, audio present"
+   "detail": "1080x1920 @30fps, 3891 frames, 129.71s, audio present"
   },
   "black tail": {
    "verdict": "pass",
-   "detail": "tail is not black (peak luma 191 over last 14 frames)"
+   "detail": "tail is not black (peak luma 182 over last 14 frames)"
   },
   "frozen tail": {
    "verdict": "pass",
-   "detail": "tail is moving (max inter-frame difference 65)"
+   "detail": "tail is moving (max inter-frame difference 119)"
   },
   "parity": {
    "verdict": "pass",
-   "detail": "audio streams identical, durations match (126.87s)"
+   "detail": "audio streams identical, durations match (129.71s)"
   },
   "safe area": {
    "verdict": "pass",
-   "detail": "text present in 3791/3806 frames, all bands clear"
+   "detail": "text present in 3783/3891 frames, all bands clear"
   },
   "loudness": {
    "verdict": "FAIL",
-   "detail": "integrated loudness -19.54 LUFS, target -16.0\u00b11.0"
+   "detail": "integrated loudness -19.55 LUFS, target -16.0\u00b11.0"
   }
  },
  "releasable": false,

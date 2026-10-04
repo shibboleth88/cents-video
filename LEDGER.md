@@ -75,6 +75,14 @@ them was reasonable.
   substance, and record low resolution as a *usage constraint* rather than a
   reason to drop the file.
 
+- **A measurement baseline is not a threshold.** The static-passage gate was
+  wrong twice before it was right: frame-to-frame called every tasteful slow
+  move static, and sampling 0.5s apart still did. The same passage measures 0.4
+  over half a second and 2.0 over two. Both times the instinct was to lower the
+  threshold; both times the fault was the baseline. **Rule:** match the interval
+  to the question — stillness is perceived over seconds, so compare across
+  seconds.
+
 ## Refuted — killed by a measurement, do not re-investigate
 
 - *"The left-band safe-area failure is a mispositioned element."* **Refuted** by
@@ -109,6 +117,16 @@ them was reasonable.
   measuring where text appeared in the text-only export. `layout="none"` is
   load-bearing, not tidiness.
 
+- **A drift slow enough to be tasteful is, per frame, indistinguishable from a
+  freeze.** 1.8% of frame over 24 seconds is 0.14 px per second. This is correct
+  behaviour that reads as a bug in any frame-differencing instrument, and it is
+  why the gate needed a time baseline rather than a looser threshold.
+
+- **Motion that means something beats motion added to pass a gate.** The fix for
+  a still passage was a severed link whose dashes drift apart and captions that
+  read in word by word — both carry the argument. Raising the drift amount would
+  also have passed the gate and said nothing.
+
 ## Open — not yet investigated
 
 - Whether burned-in captions plus Instagram's own auto-captions double up.
@@ -128,11 +146,12 @@ them was reasonable.
   *Resolution:* post a test Reel and look, or check the upload preview. Do not
   redesign the layout on blog numbers alone.
 - Whether the 24px gutter is enough at other device scales.
-- Whether `assets.py` should also SOURCE imagery (search, licence, provenance)
-  and GENERATE it. Ingest, inspection, rights and staging exist; sourcing is
-  manual, and this session has no image-generation tool, so 'generated' assets
-  would have to be procedural (code) or come from an external service the user
-  has keys for. Do not imply photographic generation is available.
+- Sourcing imagery from the web with licence and provenance is still manual.
+  `generate.py` now covers hosted generation, but has never been RUN — there is
+  no key, so its request shape, response shape and prices are all unverified.
+  Treat its cost estimates as configured numbers, not measurements.
+- The static-passage gate passes at exactly 4.0s against a 4.0s limit. That is a
+  pass, not a margin. `s07_objecthood` is 24 seconds carrying two circles.
 - Whether reconciliation can distinguish a genuine adlib from a recogniser
   hallucination. It currently cannot, and flags both for human judgement. The
   small model invented 9 words on one pass; large-v3-turbo may not.

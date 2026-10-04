@@ -5,6 +5,7 @@ import { ModeCtx, type RenderMode } from "./style/Safe";
 import { REGISTRY, CaptionLayer, type ComponentName } from "./style/components";
 import { DIAGRAMS, type DiagramName } from "./style/diagrams";
 import { Backdrop, Plate, type Asset } from "./style/plates";
+import { Atmosphere } from "./style/atmosphere";
 import { resolveShots, type Alignment, type Timeline } from "./lib/timeline";
 
 export type Props = {
@@ -52,17 +53,18 @@ export const Video: React.FC<Props> = ({ timeline, alignment, assets, cues, mode
             ...(isPlate && asset ? { asset } : {}),
             // Diagrams resolve their own states against the recording, so they
             // need the alignment and where this shot begins.
-            ...(isDiagram ? { alignment, shotStartFrame: s.fromFrame } : {}),
+            ...(isDiagram ? { alignment, shotStartFrame: s.fromFrame, seed: s.shot_id } : {}),
           };
           return (
             <Sequence key={s.shot_id} from={s.fromFrame} durationInFrames={s.durationInFrames} name={s.shot_id}>
-              {bdAsset ? <Backdrop asset={bdAsset} focus={(s.props as any)?.backdropFocus} dim={(s.props as any)?.backdropDim} /> : null}
+              {bdAsset ? <Backdrop asset={bdAsset} focus={(s.props as any)?.backdropFocus} dim={(s.props as any)?.backdropDim} seed={s.shot_id} /> : null}
               {/* @ts-expect-error props are validated against the schema, not the type system */}
               <C {...props} />
             </Sequence>
           );
         })}
-        {captions ? <CaptionLayer cues={cues} /> : null}
+        <Atmosphere />
+        {captions ? <CaptionLayer cues={cues} alignment={alignment} /> : null}
       </AbsoluteFill>
     </ModeCtx.Provider>
   );

@@ -1,17 +1,22 @@
 import React from "react";
 import { interpolate, useCurrentFrame, useVideoConfig, Img, OffthreadVideo, staticFile } from "remotion";
+import { useEntrance, useShotFade, wordProgress } from "./motion";
+import type { Alignment } from "../lib/timeline";
 import { COLOR, MOTION, REGIONS, TYPE } from "./tokens";
 import { Imagery, Region, SafeText } from "./Safe";
 
-const useFade = () => {
-  const f = useCurrentFrame();
-  const { durationInFrames } = useVideoConfig();
-  return interpolate(
-    f,
-    [0, MOTION.enterFrames, durationInFrames - MOTION.exitFrames, durationInFrames],
-    [0, 1, 1, 0],
-    { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
-  );
+const useFade = useShotFade;
+
+/** One member of a staggered group. Keeps the motion role out of every call site. */
+const Rise: React.FC<{ i: number; children: React.ReactNode; role?: "rise" | "place" }> = ({ i, children, role = "rise" }) => {
+  const e = useEntrance(role, i);
+  return <div style={{ opacity: e.opacity, transform: `translateY(${e.y}px) scale(${e.scale})`, transformOrigin: "left center" }}>{children}</div>;
+};
+
+/** The rule draws itself rather than fading in; a line that grows reads as an act. */
+const Rule: React.FC<{ i: number }> = ({ i }) => {
+  const e = useEntrance("place", i);
+  return <div style={{ width: 160 * e.opacity, height: 3, background: COLOR.accent, margin: "32px 0", opacity: e.opacity }} />;
 };
 
 export const TitleCard: React.FC<{ title: string; subtitle?: string; author: string }> = ({
@@ -21,16 +26,22 @@ export const TitleCard: React.FC<{ title: string; subtitle?: string; author: str
   return (
     <div style={{ opacity: o }}>
       <Region region="title" justify="center">
-        <SafeText role="display" fontSize={96} style={{ fontWeight: 700, letterSpacing: -2 }}>
-          {title}
-        </SafeText>
-        {subtitle ? (
-          <SafeText role="body" fontSize={52} color={COLOR.inkDim} style={{ marginTop: 18 }}>
-            {subtitle}
+        <Rise i={0}>
+          <SafeText role="display" fontSize={96} style={{ fontWeight: 700, letterSpacing: -2 }}>
+            {title}
           </SafeText>
+        </Rise>
+        {subtitle ? (
+          <Rise i={1}>
+            <SafeText role="body" fontSize={52} color={COLOR.inkDim} style={{ marginTop: 18 }}>
+              {subtitle}
+            </SafeText>
+          </Rise>
         ) : null}
-        <div style={{ width: 160, height: 3, background: COLOR.accent, margin: "32px 0" }} />
-        <SafeText role="body" fontSize={46} color={COLOR.inkDim}>{author}</SafeText>
+        <Rule i={2} />
+        <Rise i={3}>
+          <SafeText role="body" fontSize={46} color={COLOR.inkDim}>{author}</SafeText>
+        </Rise>
       </Region>
     </div>
   );
@@ -42,13 +53,17 @@ export const PullQuote: React.FC<{ quote: string; attribution?: string }> = ({ q
     <div style={{ opacity: o }}>
       <Region region="quote" justify="center">
         <div>
-          <SafeText role="display" fontSize={76} maxLines={6} style={{ fontWeight: 500, textWrap: "balance" }}>
-            {quote}
-          </SafeText>
-          {attribution ? (
-            <SafeText role="body" fontSize={46} color={COLOR.accent} style={{ marginTop: 28 }}>
-              {attribution}
+          <Rise i={0}>
+            <SafeText role="display" fontSize={76} maxLines={6} style={{ fontWeight: 500, textWrap: "balance" }}>
+              {quote}
             </SafeText>
+          </Rise>
+          {attribution ? (
+            <Rise i={1}>
+              <SafeText role="body" fontSize={46} color={COLOR.accent} style={{ marginTop: 28 }}>
+                {attribution}
+              </SafeText>
+            </Rise>
           ) : null}
         </div>
       </Region>
@@ -108,11 +123,15 @@ export const Credits: React.FC<{ lines: string[]; url?: string }> = ({ lines, ur
     <div style={{ opacity: o }}>
       <Region region="credits" justify="center">
         {lines.map((l, i) => (
-          <SafeText key={i} role="body" fontSize={46} color={COLOR.inkDim} style={{ marginBottom: 14 }}>
-            {l}
-          </SafeText>
+          <Rise key={i} i={i}>
+            <SafeText role="body" fontSize={46} color={COLOR.inkDim} style={{ marginBottom: 14 }}>{l}</SafeText>
+          </Rise>
         ))}
-        {url ? <SafeText role="body" fontSize={50} color={COLOR.accent} style={{ marginTop: 20 }}>{url}</SafeText> : null}
+        {url ? (
+          <Rise i={lines.length}>
+            <SafeText role="body" fontSize={50} color={COLOR.accent} style={{ marginTop: 20 }}>{url}</SafeText>
+          </Rise>
+        ) : null}
       </Region>
     </div>
   );
@@ -122,17 +141,39 @@ export const Credits: React.FC<{ lines: string[]; url?: string }> = ({ lines, ur
  * Burned-in captions, driven by the same alignment file the edit is cut from.
  * Sits in its own region so it cannot collide with labels.
  */
-export const CaptionLayer: React.FC<{ cues: { start: number; end: number; text: string }[] }> = ({ cues }) => {
+/**
+ * Captions reveal word by word, as the word is spoken.
+ *
+ * The timings are the same per-word alignment the whole edit is cut from, so
+ * this costs nothing to produce and cannot drift from the voice: if a word
+ * moves, its reveal moves with it. The whole cue is laid out from the first
+ * frame and words change opacity in place, so nothing reflows mid-cue.
+ */
+export const CaptionLayer: React.FC<{
+  cues: { start: number; end: number; text: string }[];
+  alignment?: Alignment;
+}> = ({ cues, alignment }) => {
   const f = useCurrentFrame();
   const { fps } = useVideoConfig();
   const t = f / fps;
   const cue = cues.find((c) => t >= c.start && t < c.end);
   if (!cue) return null;
   const { x0, y0, x1, y1 } = REGIONS.caption;
+  const words = cue.text.split(/\s+/).filter(Boolean);
+  const spoken = (alignment?.words ?? []).filter(
+    (w) => w.start >= cue.start - 0.01 && w.start <= cue.end + 0.01
+  );
+  // Only reveal word by word when the alignment and the cue agree on the word
+  // count. Otherwise show the cue whole: a half-matched reveal would dim words
+  // that have already been said.
+  const op =
+    spoken.length === words.length
+      ? spoken.map((w) => 0.45 + 0.55 * wordProgress(f, fps, w.start))
+      : undefined;
   return (
     <div style={{ position: "absolute", left: x0, top: y0, width: x1 - x0, height: y1 - y0, display: "flex", alignItems: "center" }}>
       <div style={{ background: COLOR.captionBack, padding: "14px 22px", borderRadius: 10 }}>
-        <SafeText role="caption" fontSize={48} maxLines={2} style={{ textWrap: "balance" }}>
+        <SafeText role="caption" fontSize={48} maxLines={2} style={{ textWrap: "balance" }} wordOpacity={op}>
           {cue.text}
         </SafeText>
       </div>

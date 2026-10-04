@@ -1,0 +1,25 @@
+{
+ "verdigris": "#76b7a6",
+ "verdigris_deep": "#233933",
+ "copper": "#af6b39",
+ "copper_deep": "#362010",
+ "bg": "#0b0a0a",
+ "surface": "#191817",
+ "ink": "#f4ede8",
+ "inkDim": "#a09993",
+ "rule": "#33302d",
+ "_sources": {
+  "a03": {
+   "role": "verdigris",
+   "share": 0.0779
+  },
+  "a05": {
+   "role": "copper",
+   "share": 0.3509
+  }
+ },
+ "_derived_from": {
+  "a03": "e61b85477fe9",
+  "a05": "40ec56e46859"
+ }
+}

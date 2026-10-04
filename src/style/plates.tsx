@@ -2,6 +2,7 @@ import React from "react";
 import { Img, OffthreadVideo, Loop, staticFile, useCurrentFrame, useVideoConfig, interpolate } from "remotion";
 import { COLOR, MIN_FONT_PX, REGIONS, SAFE, TYPE } from "./tokens";
 import { Imagery, SafeText } from "./Safe";
+import { useDrift, useEntrance, useShotFade } from "./motion";
 
 export type Asset = {
   path: string; motion: boolean; subject: string;
@@ -35,17 +36,19 @@ const Media: React.FC<{ asset: Asset; style?: React.CSSProperties }> = ({ asset,
  * `focus` is the object-position, which is how a crop restriction gets honoured
  * (a01 carries burned-in text in its lower third and must sit high in frame).
  */
-export const Backdrop: React.FC<{ asset: Asset; focus?: string; dim?: number }> = ({
-  asset, focus = "50% 50%", dim = 0.62,
+export const Backdrop: React.FC<{ asset: Asset; focus?: string; dim?: number; seed?: string }> = ({
+  asset, focus = "50% 50%", dim = 0.62, seed = "backdrop",
 }) => {
-  const f = useCurrentFrame();
-  const { durationInFrames } = useVideoConfig();
-  const o = interpolate(f, [0, 10, durationInFrames - 8, durationInFrames], [0, 1, 1, 0],
-                        { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  const o = useShotFade();
+  // A slow move whose direction comes from the shot id, so no two backdrops
+  // drift the same way and nobody picks a direction by hand.
+  const drift = useDrift(seed);
   return (
     <Imagery>
-      <div style={{ position: "absolute", inset: 0, opacity: o }}>
-        <Media asset={asset} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: focus }} />
+      <div style={{ position: "absolute", inset: 0, opacity: o, overflow: "hidden" }}>
+        <div style={{ position: "absolute", inset: 0, ...drift }}>
+          <Media asset={asset} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: focus }} />
+        </div>
         <div style={{ position: "absolute", inset: 0, background: COLOR.bg, opacity: dim }} />
       </div>
     </Imagery>
@@ -61,10 +64,9 @@ export const Backdrop: React.FC<{ asset: Asset; focus?: string; dim?: number }> 
 export const Plate: React.FC<{ asset: Asset; caption: string; maxWidth?: number }> = ({
   asset, caption, maxWidth,
 }) => {
-  const f = useCurrentFrame();
-  const { durationInFrames } = useVideoConfig();
-  const o = interpolate(f, [0, 10, durationInFrames - 8, durationInFrames], [0, 1, 1, 0],
-                        { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  const o = useShotFade();
+  const e = useEntrance("place", 0);
+  const cap0 = useEntrance("rise", 2);
   const R = REGIONS.diagram;
   const boxW = R.x1 - R.x0, boxH = R.y1 - R.y0;
   const cap = asset.max_display_width ?? 1080;
@@ -81,12 +83,13 @@ export const Plate: React.FC<{ asset: Asset; caption: string; maxWidth?: number 
                   justifyContent: "center", gap: 34, opacity: o }}>
       <Imagery>
         <div style={{ width: w, height: h, overflow: "hidden", borderRadius: 2,
-                      border: `1px solid ${COLOR.rule}` }}>
+                      border: `1px solid ${COLOR.rule}`,
+                      opacity: e.opacity, transform: `translateY(${e.y}px) scale(${e.scale})` }}>
           <Media asset={asset} style={{ width: "100%", height: "100%", objectFit: "contain",
                                         background: "#0f0f10" }} />
         </div>
       </Imagery>
-      <div style={{ width: boxW - 60, display: "flex", justifyContent: "center" }}>
+      <div style={{ width: boxW - 60, display: "flex", justifyContent: "center", opacity: cap0.opacity, transform: `translateY(${cap0.y}px)` }}>
         <SafeText role="label" fontSize={MIN_FONT_PX.label} color={COLOR.inkDim} maxLines={3}
                   style={{ textAlign: "center", fontFamily: TYPE.body }}>
           {caption}
