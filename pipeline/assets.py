@@ -172,7 +172,12 @@ def check(args) -> int:
     tl = json.loads((ROOT/"timeline"/"timeline.json").read_text())
     used = {s["asset_id"] for s in tl["shots"] if s.get("asset_id")}
     for s in tl["shots"]:
-        for a in (s.get("props") or {}).get("asset_ids", []) or []: used.add(a)
+        pr = s.get("props") or {}
+        # Backdrops are used assets too. Leaving them out made this gate report
+        # "all used assets are fine" while never looking at either generated
+        # clip — the exact shape of a check that passes by not checking.
+        if pr.get("backdrop"): used.add(pr["backdrop"])
+        for a in pr.get("asset_ids", []) or []: used.add(a)
     problems = []
     if not inv: problems.append("asset inventory is empty")
     # FLOOR: "all used assets are fine" is vacuous when none are used. If real
@@ -190,9 +195,22 @@ def check(args) -> int:
         if not a.get("rights", "").strip():
             problems.append(f"{aid}: no rights basis recorded")
         cr = a.get("crop_restrictions", "")
-        if ("text" in cr.lower() or "burn" in cr.lower()) and not a.get("crop"):
+        import re as _re
+        if _re.search(r"\b(text|burn\w*)\b", cr.lower()) and not a.get("crop"):
             problems.append(f"{aid}: its restrictions describe burned-in text but no crop is declared — "
                             f"a restriction that is only advice gets ignored")
+        if a.get("kind") == "generated" and a.get("derived_from"):
+            try:
+                drift = _object_drift(aid, a, inv)
+            except Exception as e:
+                problems.append(f"{aid}: drift check failed: {e}")
+                drift = None
+            if drift is None:
+                problems.append(f"{aid}: generated clip could not be compared with its source "
+                                f"(PIL missing, or the source is not on disk)")
+            elif drift > 12.0:
+                problems.append(f"{aid}: the subject drifts {drift:.1f} levels between the clip's start "
+                                f"and its midpoint — the model is altering the object, not moving the camera")
         if a.get("low_res") and not a.get("crop_restrictions", "").strip():
             problems.append(f"{aid}: low resolution ({a.get('width')}x{a.get('height')}) and no usage "
                             f"constraint recorded — it will soften if used full-bleed")
@@ -204,6 +222,103 @@ def check(args) -> int:
     if not problems:
         print(f"  \033[32mPASS\033[0m {len(used)} assets used, all identified by inspection and rights-cleared")
     return 1 if problems else 0
+
+def _object_drift(aid: str, a: dict, inv: dict) -> float | None:
+    """How far the OBJECT in a generated clip has wandered from how it starts.
+
+    Image-to-video was asked to move a camera, not to retouch. A clip that
+    brightens, cleans or restores the subject has changed it — a falsification in
+    a film about real objects, and one that arrives gradually enough that no
+    frame looks wrong beside the one before it.
+
+    Measured as median luminance and median saturation of the CENTRAL HALF of
+    the frame, comparing the clip's first frame with its midpoint.
+
+    Two earlier versions of this measured the wrong thing. Mean luminance over
+    the whole frame conflates the camera moving with the object changing: a
+    push-in replaces background with subject and shifts the mean on its own, so
+    a faithful clip and a retouched one score alike. The centre stays subject
+    throughout, and a median ignores the edge pixels the zoom is churning.
+    """
+    try:
+        from PIL import Image
+    except ImportError:
+        return None
+    staged = ROOT / "public" / "assets" / (a.get("staged_as") or "")
+    clip = staged if staged.exists() else ROOT / a["path"]
+    if not clip.exists(): return None
+    import tempfile, colorsys
+    pr = subprocess.run(["ffprobe","-v","error","-show_entries","format=duration",
+                         "-of","csv=p=0",str(clip)], capture_output=True, text=True)
+    dur = float(pr.stdout.strip() or 0)
+    if dur < 0.5: return None
+    with tempfile.TemporaryDirectory() as td:
+        d = pathlib.Path(td)
+        for ss, name in ((0.05, "a.png"), (dur * 0.5, "b.png")):
+            subprocess.run(["ffmpeg","-v","error","-y","-ss",str(ss),"-i",str(clip),
+                            "-frames:v","1","-vf","crop=iw/2:ih/2,scale=120:120",
+                            str(d/name)], check=False)
+        for name in ("a.png", "b.png"):
+            if not (d/name).exists():
+                raise RuntimeError(f"could not sample {name} from {aid}")
+        def stats(path):
+            im = Image.open(path).convert("RGB")
+            px = list(im.getdata())
+            lum = sorted(0.299*r + 0.587*g + 0.114*b for r, g, b in px)
+            sat = sorted(colorsys.rgb_to_hsv(r/255, g/255, b/255)[1] for r, g, b in px)
+            n = len(lum)
+            return lum[n//2], sat[n//2]
+        l0, s0 = stats(d/"a.png"); l1, s1 = stats(d/"b.png")
+    # Saturation is scaled to the same range as luminance so one number covers
+    # both "it got brighter" and "it got more colourful".
+    return max(abs(l1 - l0), abs(s1 - s0) * 255)
+
+def self_test(args) -> int:
+    """CONTROL for the drift gate.
+
+    The threshold was set after seeing real numbers, which on its own is worth
+    little. So: take a faithful clip, apply the exact fault the gate exists to
+    catch — a progressive brightening, as if the model were retouching — and
+    require the gate to call it. A threshold that passes a deliberately
+    retouched clip is not a threshold.
+    """
+    import tempfile, json as _j
+    inv = load()["assets"]
+    base = next((k for k, a in inv.items() if a.get("kind") == "generated"), None)
+    if not base: sys.exit("no generated clip to build a control from")
+    src = ROOT / "public" / "assets" / (inv[base].get("staged_as") or "")
+    if not src.exists(): sys.exit(f"{base} is not staged")
+    clean = _object_drift(base, inv[base], inv)
+    print(f"  faithful clip {base}: drift {clean:.1f}")
+    with tempfile.TemporaryDirectory() as td:
+        d = pathlib.Path(td)
+        out = ROOT / "public" / "assets" / "_control_retouched.mp4"
+        # Ramp brightness over the clip: the exact failure mode, at a size the
+        # gate must notice.
+        r = subprocess.run(["ffmpeg","-v","error","-y","-i",str(src),
+                            # eval=frame is load-bearing: eq evaluates its
+                            # expressions ONCE at init by default, so without it
+                            # the "ramp" is a constant zero and the control
+                            # silently tests nothing.
+                            "-vf","eq=eval=frame:brightness=0.18*t/3:saturation=1+0.25*t/3",
+                            "-an","-c:v","libx264","-pix_fmt","yuv420p",str(out)],
+                           capture_output=True, text=True)
+        if r.returncode != 0: sys.exit(f"could not build the control: {r.stderr[:160]}")
+        fake = {**inv[base], "staged_as": out.name}
+        bad = _object_drift("_control", fake, inv)
+        # FLOOR on the control itself: if the retouch did not actually change
+        # the pixels, a green result means nothing.
+        if abs(bad - clean) < 1.0:
+            print("  \033[31mCONTROL BROKEN\033[0m the retouched copy is indistinguishable from the "
+                  "original — the control is not applying the fault, so this proves nothing.")
+            out.unlink(missing_ok=True)
+            return 1
+        out.unlink(missing_ok=True)
+    print(f"  deliberately retouched copy: drift {bad:.1f}")
+    if bad <= 12.0:
+        print("  \033[31mVACUOUS\033[0m the gate passes a clip it was written to catch."); return 1
+    print(f"  \033[32mRED\033[0m the gate flags the retouched copy and passes the faithful one.")
+    return 0
 
 # ---------------------------------------------------------------- plan
 
@@ -237,6 +352,40 @@ def stage(args) -> int:
         src = ROOT / a["path"]
         if not src.exists(): continue
         out = dst / src.name
+        # A generated clip can drift away from its source over time. The honest
+        # fix is to keep only the faithful window and play it forward then
+        # backward, so a short window still covers a long shot without a cut —
+        # and the drifted frames do not exist in what the renderer can reach.
+        tp = a.get("trim_pingpong")
+        if tp:
+            keep = float(tp["keep_seconds"])
+            fwd, rev = dst / f"_f_{src.stem}.mp4", dst / f"_r_{src.stem}.mp4"
+            lst = dst / f"_l_{src.stem}.txt"
+            ok = True
+            # `-t` AFTER `-i` limits the OUTPUT. The reverse filter buffers the
+            # whole input first, so "-i clip -t 2.5 -vf reverse" yields the LAST
+            # 2.5s reversed — precisely the drifted frames this is meant to drop.
+            # Trim inside the filter chain instead, where it applies before reverse.
+            for vf, o in ((f"trim=0:{keep},setpts=PTS-STARTPTS", fwd),
+                          (f"trim=0:{keep},setpts=PTS-STARTPTS,reverse", rev)):
+                r = subprocess.run(["ffmpeg","-v","error","-y","-i",str(src),"-vf",vf,
+                                    "-an","-c:v","libx264","-pix_fmt","yuv420p",str(o)],
+                                   capture_output=True, text=True)
+                ok = ok and r.returncode == 0
+            lst.write_text(f"file '{fwd}'\nfile '{rev}'\n")
+            out = dst / f"{src.stem}.mp4"
+            r = subprocess.run(["ffmpeg","-v","error","-y","-f","concat","-safe","0","-i",str(lst),
+                                "-c","copy",str(out)], capture_output=True, text=True)
+            if not ok or r.returncode != 0:
+                sys.exit(f"{aid}: trim/ping-pong failed: {r.stderr[:160]}")
+            for f in (fwd, rev, lst): f.unlink(missing_ok=True)
+            pr = subprocess.run(["ffprobe","-v","error","-show_entries","format=duration",
+                                 "-of","csv=p=0",str(out)], capture_output=True, text=True)
+            a["staged_as"] = out.name
+            a["staged_width"], a["staged_height"] = a.get("width"), a.get("height")
+            a["staged_duration"] = round(float(pr.stdout.strip() or 0), 3)
+            n += 1
+            continue
         c = a.get("crop")
         if c:
             W, H = a.get("width") or 0, a.get("height") or 0
@@ -268,7 +417,8 @@ if __name__ == "__main__":
     g.add_argument("--kind", default="real", choices=["real","stock","generated"])
     g.add_argument("--rights", default="", help="the basis for using these")
     g.set_defaults(fn=ingest)
-    for name, fn in (("sheet", sheet), ("check", check), ("plan", plan), ("stage", stage)):
+    for name, fn in (("sheet", sheet), ("check", check), ("plan", plan), ("stage", stage),
+                     ("self-test", self_test)):
         sub.add_parser(name).set_defaults(fn=fn)
     a = ap.parse_args()
     sys.exit(a.fn(a))

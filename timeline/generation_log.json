@@ -1,0 +1,26 @@
+{
+ "runs": [
+  {
+   "at": "2026-10-06T11:18:09",
+   "shot": "s02_title",
+   "model": "kling-2.5-turbo",
+   "endpoint": "fal-ai/kling-video/v2.5-turbo/pro/image-to-video",
+   "seconds": 5,
+   "est_usd": 0.35,
+   "prompt": "Macro still-life of a single corroded copper coin lying flat, shot head-on. The coin itself does not move, change shape, or alter in any way. Only the camera moves: an extremely slow, almost imperceptible push in, with a faint shift of soft light grazing across the green patina. Locked-off studio lighting, shallow depth of field, single continuous shot.",
+   "source_asset": "a03",
+   "new_asset": "a03m"
+  },
+  {
+   "at": "2026-10-06T11:25:35",
+   "shot": "s01_gap",
+   "model": "kling-2.5-turbo",
+   "endpoint": "fal-ai/kling-video/v2.5-turbo/pro/image-to-video",
+   "seconds": 5,
+   "est_usd": 0.35,
+   "prompt": "Extreme macro of a single copper coin filling the frame, shot head-on in soft studio light. The coin itself does not move, change shape or alter in any way. Only the camera moves: a very slow lateral drift across the coin's surface, with light grazing almost imperceptibly over the worn metal. Single continuous locked-off shot.",
+   "source_asset": "a01",
+   "new_asset": "a01m"
+  }
+ ]
+}

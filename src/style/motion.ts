@@ -70,7 +70,7 @@ export function useShotFade(): number {
  * shot id, so every shot differs without anyone choosing, and the same shot
  * always moves the same way.
  */
-export function useDrift(seed: string, amount = TIMING.driftAmount): { transform: string } {
+export function useDrift(seed: string, amount: number = TIMING.driftAmount): { transform: string } {
   const frame = useCurrentFrame();
   const { durationInFrames } = useVideoConfig();
   let h = 0;

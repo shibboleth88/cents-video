@@ -7,7 +7,7 @@ import { useDrift, useEntrance, useShotFade } from "./motion";
 export type Asset = {
   path: string; motion: boolean; subject: string;
   width?: number; height?: number; low_res?: boolean; max_display_width?: number | null;
-  staged_as?: string; staged_width?: number; staged_height?: number; frames?: number;
+  staged_as?: string; staged_width?: number; staged_height?: number; frames?: number; duration?: number;
 };
 
 /** Always the staged copy: crops are applied at staging, so the original's
@@ -21,14 +21,24 @@ const dims = (a: Asset) => ({ w: a.staged_width ?? a.width ?? 4, h: a.staged_hei
  * covered the whole canvas and painted over the plate's own caption — and the
  * render reported no error, so only measuring the text-only export found it.
  */
-const Media: React.FC<{ asset: Asset; style?: React.CSSProperties }> = ({ asset, style }) =>
-  asset.motion ? (
-    <Loop durationInFrames={Math.max(2, Math.round(asset.frames ?? 111))} layout="none">
+/**
+ * Looping is only right for a short cycle like the Block animation. A generated
+ * clip is usually longer than the shot that holds it, and looping it would snap
+ * back to the first frame mid-shot; played straight, the shot simply ends before
+ * the clip does.
+ */
+const Media: React.FC<{ asset: Asset; style?: React.CSSProperties }> = ({ asset, style }) => {
+  const { durationInFrames, fps } = useVideoConfig();
+  if (!asset.motion) return <Img src={file(asset)} style={style} />;
+  const clipFrames = Math.round((asset.duration ?? 0) * fps) || Math.round(asset.frames ?? 0);
+  if (clipFrames >= durationInFrames - 1)
+    return <OffthreadVideo src={file(asset)} style={style} muted />;
+  return (
+    <Loop durationInFrames={Math.max(2, clipFrames || 111)} layout="none">
       <OffthreadVideo src={file(asset)} style={style} muted />
     </Loop>
-  ) : (
-    <Img src={file(asset)} style={style} />
   );
+};
 
 /**
  * Photography behind a shot. Full-bleed is allowed here because this is a
@@ -40,9 +50,9 @@ export const Backdrop: React.FC<{ asset: Asset; focus?: string; dim?: number; se
   asset, focus = "50% 50%", dim = 0.62, seed = "backdrop",
 }) => {
   const o = useShotFade();
-  // A slow move whose direction comes from the shot id, so no two backdrops
-  // drift the same way and nobody picks a direction by hand.
-  const drift = useDrift(seed);
+  // A still gets a camera move; a clip that already moves does not. Drifting
+  // generated motion stacks two camera moves on one shot and reads as a mistake.
+  const drift = useDrift(seed, asset.motion ? 0 : undefined);
   return (
     <Imagery>
       <div style={{ position: "absolute", inset: 0, opacity: o, overflow: "hidden" }}>

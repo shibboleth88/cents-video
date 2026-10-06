@@ -131,7 +131,18 @@ def run(args) -> int:
     data = inv()
     for x in c:
         a = data["assets"][x["asset_id"]]
-        src = ROOT / a["path"]
+        # Send the STAGED copy, not the original. a01 has another essay's title
+        # burned into its lower third; the crop that removes it is applied at
+        # staging, so generating from the original would animate the very text
+        # the crop exists to delete — the same "restriction recorded but not
+        # enforced" failure, one layer up.
+        staged = ROOT / "public" / "assets" / (a.get("staged_as") or "")
+        src = staged if a.get("staged_as") and staged.exists() else ROOT / a["path"]
+        if a.get("crop") and src != staged:
+            sys.exit(f"{x['asset_id']} declares a crop but no staged copy exists — "
+                     f"run `pipeline/assets.py stage` first")
+        print(f"  {x['shot_id']}: source {src.relative_to(ROOT)}"
+              + ("  (cropped at staging)" if a.get("crop") else ""))
         clip = 5 if x["seconds"] <= 7 else (10 if args.long else 5)
         # The prompt's job is to move the camera, not to invent anything. The
         # film is about real objects; a model that adds a reflection or a second
@@ -140,7 +151,7 @@ def run(args) -> int:
             f"Very slow, restrained camera move across this photograph: a gentle drift and "
             f"almost imperceptible push in. The subject stays exactly as it is. {a['subject']}"
         )
-        print(f"  {x['shot_id']}: uploading {src.name} …")
+        print(f"    uploading {src.name} …")
         url = fal_client.upload_file(str(src))
         res = fal_client.subscribe(m["endpoint"], arguments={
             "image_url": url,
@@ -156,20 +167,40 @@ def run(args) -> int:
         import urllib.request
         dst = ROOT / "inputs" / "assets" / f"{x['asset_id']}_motion.mp4"
         urllib.request.urlretrieve(out_url, dst)
+        # Measure what actually arrived: the renderer needs the real duration to
+        # decide whether to loop, and the gates need a hash.
+        import subprocess as _sp, hashlib as _h
+        pr = _sp.run(["ffprobe","-v","error","-select_streams","v:0","-count_frames",
+                      "-show_entries","stream=width,height,nb_read_frames:format=duration",
+                      "-of","json",str(dst)], capture_output=True, text=True)
+        meta = json.loads(pr.stdout) if pr.returncode == 0 else {}
+        st = (meta.get("streams") or [{}])[0]
+        got_dur = float((meta.get("format") or {}).get("duration") or 0)
+        got_frames = int(st.get("nb_read_frames") or 0)
+        if got_dur < 1.0 or got_frames < 10:
+            sys.exit(f"{x['shot_id']}: downloaded clip is {got_dur:.2f}s / {got_frames} frames — "
+                     f"something went wrong; not adding it to the inventory")
+        _hh = _h.sha256(); _hh.update(dst.read_bytes())
         aid = f"{x['asset_id']}m"
         data["assets"][aid] = {
             **a, "path": str(dst.relative_to(ROOT)), "motion": True,
             "kind": "generated", "derived_from": x["asset_id"],
             "subject": f"MOTION DERIVED from {x['asset_id']}: {a['subject']}",
             "rights": f"motion generated from the user's own still via {m['endpoint']}",
-            "verified_at": "", "sha256": "",
+            "verified_at": "", "sha256": _hh.hexdigest(),
+            "width": st.get("width"), "height": st.get("height"),
+            "duration": round(got_dur, 3), "frames": got_frames,
+            "low_res": bool((st.get("width") or 0) < 760),
+            "max_display_width": min(1080, int((st.get("width") or 0) * 1.6)) or None,
             "crop_restrictions": "Re-inspect before use: a generated clip may invent detail the still did not have.",
         }
         log["runs"].append({"at": time.strftime("%Y-%m-%dT%H:%M:%S"), "shot": x["shot_id"],
                             "model": args.model, "endpoint": m["endpoint"],
                             "seconds": clip, "est_usd": round(cost_of(m, clip), 3),
                             "prompt": prompt, "source_asset": x["asset_id"], "new_asset": aid})
-        print(f"    -> {dst.relative_to(ROOT)}  (asset {aid})")
+        print(f"    -> {dst.relative_to(ROOT)}  (asset {aid})  "
+              f"{st.get('width')}x{st.get('height')}, {got_dur:.1f}s, {got_frames} frames, "
+              f"~${cost_of(m, clip):.2f}")
     INV.write_text(json.dumps(data, indent=1, ensure_ascii=False))
     LEDGER.write_text(json.dumps(log, indent=1))
     print("\nEvery clip is recorded with an empty subject and verified_at, so assets.py check")

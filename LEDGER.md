@@ -92,6 +92,28 @@ them was reasonable.
   usual profiles. **Rule:** to prove a file is read, test a value that exists
   ONLY in that file — never one the parent could also supply.
 
+- **An aggregate is not the question.** The generated-clip gate first measured
+  mean luminance over the whole frame, which conflates the camera moving with
+  the object changing: a push-in replaces background with subject and shifts the
+  mean by itself, scoring a faithful clip like a retouched one. Now: median
+  luminance and saturation of the CENTRAL HALF, clip start versus midpoint.
+
+- **A broken control makes a good gate look vacuous.** The control for that gate
+  "brightened" a clip with `eq=brightness=0.18*t/3` — but `eq` evaluates its
+  expressions once at init, so the ramp was a constant zero and the control
+  tested nothing. The gate was reported VACUOUS when it was fine. Controls need
+  their own floor: assert the fault was actually applied before trusting that
+  the gate missed it.
+
+- **`-t` after `-i` limits the OUTPUT, and `reverse` buffers the whole input.**
+  `-i clip -t 2.5 -vf reverse` yields the LAST 2.5s reversed, not the first.
+  Staging meant to drop a clip's drifted tail was splicing that tail back in,
+  and the drift gate caught it at 47 levels. Trim inside the filter chain.
+
+- **`-ss 0` on a still image exits 0 and writes nothing.** It consumes the only
+  frame while seeking. The comparison that depended on it returned "could not
+  compare", which read as a missing file rather than a malformed command.
+
 ## Refuted — killed by a measurement, do not re-investigate
 
 - *"The left-band safe-area failure is a mispositioned element."* **Refuted** by
@@ -144,6 +166,11 @@ them was reasonable.
   completely different remedy. `check_api.py` now names which of the five it
   found.
 
+- **A gate that does not collect its subjects passes by not checking.** The
+  asset gate built its "used" set from `asset_id` and ignored `props.backdrop`,
+  so it reported "all used assets are fine" while never looking at either
+  generated clip.
+
 ## Open — not yet investigated
 
 - Whether burned-in captions plus Instagram's own auto-captions double up.
@@ -163,6 +190,11 @@ them was reasonable.
   *Resolution:* post a test Reel and look, or check the upload preview. Do not
   redesign the layout on blog numbers alone.
 - Whether the 24px gutter is enough at other device scales.
+- Whether a reroll with an explicit anti-retouch negative ("do not brighten, do
+  not clean, do not restore, keep the patina and wear") would give a fully
+  faithful 5s on a01. Untested; costs $0.35.
+- fal rejects an image whose aspect is outside 0.4-2.5, and does NOT bill for
+  the rejection. Worth knowing before padding a wide crop.
 - Sourcing imagery from the web with licence and provenance is still manual.
   `generate.py` now covers hosted generation, but has never been RUN — there is
   no key, so its request shape, response shape and prices are all unverified.

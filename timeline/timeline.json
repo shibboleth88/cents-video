@@ -16,7 +16,7 @@
     "at_phrase": "Rutherford Chang's CENTS begins"
    },
    "purpose": "Open on the discrepancy the project starts from, as two values that do not meet. The coin itself sits behind the figure.",
-   "visual_kind": "code",
+   "visual_kind": "real",
    "component": "Distinction",
    "props": {
     "items": [
@@ -37,7 +37,7 @@
       "caption": "what the copper inside it is worth"
      }
     ],
-    "backdrop": "a01",
+    "backdrop": "a01m",
     "backdropFocus": "50% 28%",
     "backdropDim": 0.72
    }
@@ -50,14 +50,14 @@
    "end": {
     "at_phrase": "Over several years"
    },
-   "purpose": "Name the work and credit the essay and its author at first title. CENT #3981 behind the title, so the work is seen before it is described.",
-   "visual_kind": "code",
+   "purpose": "Name the work and credit the essay and its author at first title, over the artwork itself in slow motion rather than a frozen still.",
+   "visual_kind": "real",
    "component": "TitleCard",
    "props": {
     "title": "CENTS & digital objecthood",
     "subtitle": "an introduction to the primary concepts of CENTS by Rutherford Chang",
     "author": "shibboleth",
-    "backdrop": "a03",
+    "backdrop": "a03m",
     "backdropFocus": "50% 45%",
     "backdropDim": 0.66
    }
