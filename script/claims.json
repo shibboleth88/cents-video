@@ -4,15 +4,21 @@
  "thesis": "Blockchain supplies the objecthood the digital era lacked, and CENTS holds that whole arc in one gesture: its medium is its continual becoming, not any of its visible forms.",
  "claims": [
   {
-   "say": "Brenner's Lincoln, on the face of the penny, is the most reproduced artwork on Earth.",
+   "say": "Brenner's Lincoln, on the penny, is the most reproduced artwork on Earth.",
    "kind": "paraphrase",
    "span": "The image of Lincoln on the face of the penny, created by Victor David Brenner, is the most reproduced artwork on planet Earth",
-   "note": "'Victor David' and the 500+ billion struck go on screen rather than in the voice, to keep the opening line short."
+   "note": "'Victor David' and the 500+ billion struck are carried by on-screen text, not the voice."
   },
   {
-   "say": "This is the readymade Chang chose.",
+   "say": "This is the readymade Rutherford Chang chose.",
    "kind": "paraphrase",
    "span": "the readymade he’s using is one of the most common objects in existence"
+  },
+  {
+   "say": "He brings a black hole humor to it — laughter that resonates within emptiness.",
+   "kind": "paraphrase",
+   "span": "he brings what I call a “black hole humor” to the process — the kind of laughter that resonates within emptiness",
+   "note": "ATTRIBUTION: the essay says Chang brings the humor, but 'black hole humor' is the ESSAYIST'S coinage ('what I call'). The narration credits the humor to Chang, which the essay asserts, and does not credit him with naming it. On screen the phrase appears in quotation marks with the essay credit, never beside Chang's name."
   },
   {
    "say": "It is absurd that a nation's currency should dissolve into worthlessness.",
@@ -31,10 +37,10 @@
    "span": "Yet, here we are"
   },
   {
-   "say": "He brings a black hole humor to it — laughter that resonates within emptiness.",
-   "kind": "paraphrase",
-   "span": "he brings what I call a “black hole humor” to the process — the kind of laughter that resonates within emptiness",
-   "note": "ATTRIBUTION: the essay says Chang brings the humor, but 'black hole humor' is the ESSAYIST'S coinage ('what I call'). The narration credits the humor to Chang, which the essay asserts, and does not credit him with naming it. On screen the phrase appears in quotation marks with the essay credit, never beside Chang's name."
+   "say": "The object remained, buoyed into physicality by the force of its context.",
+   "kind": "quotation",
+   "span": "the object remained, buoyed into physicality by the force of its context",
+   "note": "the essay's sentence opens 'Yet the object remained'; 'Yet' is dropped because the preceding line already ends on 'Yet, here we are'."
   },
   {
    "say": "Every Cent passes through five transformations of value.",
@@ -67,39 +73,19 @@
    "span": "being inscribed on Bitcoin (value continually redefined by decentralized consensus)"
   },
   {
-   "say": "And each is five natures at once.",
+   "say": "Commodification hollowed out the art object.",
    "kind": "paraphrase",
-   "span": "Each of Chang’s Cents has 5 distinct natures. It is all of these things and none of them"
+   "span": "The art object, once a vital vessel for aura and authorship, had become hollowed out by hyper-commodification"
   },
   {
-   "say": "A unit of currency.",
+   "say": "A split opened between materiality and meaning.",
    "kind": "quotation",
-   "span": "a unit of currency"
+   "span": "a split between materiality and meaning"
   },
   {
-   "say": "A quantity of copper.",
-   "kind": "quotation",
-   "span": "a quantity of copper"
-  },
-  {
-   "say": "A melted element of a sculpture.",
-   "kind": "quotation",
-   "span": "a melted element of a sculpture"
-  },
-  {
-   "say": "A photograph.",
-   "kind": "quotation",
-   "span": "a photograph"
-  },
-  {
-   "say": "A Bitcoin inscription.",
-   "kind": "quotation",
-   "span": "a Bitcoin inscription"
-  },
-  {
-   "say": "All of these things, and none of them.",
-   "kind": "quotation",
-   "span": "all of these things and none of them"
+   "say": "Digitization widened it.",
+   "kind": "paraphrase",
+   "span": "By the 1990s, digitization had begun to envelop the world"
   },
   {
    "say": "Digital flows could not hold identity, singularity, provenance or ownership.",
@@ -124,7 +110,7 @@
    "note": "wording changed from the essay, so paraphrase rather than quotation"
   },
   {
-   "say": "CENTS holds that whole arc in one gesture.",
+   "say": "CENTS holds that arc in one gesture.",
    "kind": "paraphrase",
    "span": "Rutherford Chang encapsulates this century-long transformational arc of objecthood and value"
   },
@@ -134,7 +120,12 @@
    "span": "its medium is the gesture of its continual becoming"
   },
   {
-   "say": "A digital object is simultaneously itself, not itself, and an interpretation of itself.",
+   "say": "Digital objects on blockchain are a new form of conceptual art.",
+   "kind": "paraphrase",
+   "span": "Digital objects on blockchain pose a novel form of contemporary conceptual art"
+  },
+  {
+   "say": "A thing is simultaneously itself, not itself, and an interpretation of itself.",
    "kind": "quotation",
    "span": "a thing is simultaneously itself, not itself and an interpretation of itself"
   }
@@ -515,10 +506,10 @@
  "distinctions_kept": [
   {
    "distinction": "FIVE NATURES (what a Cent simultaneously is) vs FIVE TRANSFORMATIONS OF VALUE (what it passes through) - two different lists of five",
-   "where": "Both fives are narrated. The TRANSFORMATIONS are a chain (s05) carrying the project's process, which this cut no longer narrates separately; the NATURES are a different diagram (s06), simultaneous rather than sequential.",
+   "where": "Only the TRANSFORMATIONS are narrated. The NATURES appear as on-screen text and are never on screen during the transformations chain - one list per channel, and never both at the same moment.",
    "verdict": "kept",
    "by": "claude",
-   "note": "The previous film's 'five conditions' matched the TRANSFORMATIONS only. In this cut the merge risk is HIGHER, not lower: the two lists are now adjacent in the narration with only 'And each is five natures at once' between them, so the visual distinction carries the whole load."
+   "note": "The previous film's 'five conditions' matched the TRANSFORMATIONS only. Separating the two lists by channel (voice vs frame) is the strongest separation so far, but it creates a NEW way to merge them: showing the five natures while the voice is reading the five transformations would read as one annotated list of five. The constraint is on the art direction, not on the script, so no script gate can catch it - review_shots.py is where it has to be seen."
   },
   {
    "distinction": "CENTS (project) / Cents (collection pieces) / cents (ordinary money)",
@@ -559,5 +550,5 @@
    "note": "Putting 'black hole humor' on screen beside Chang's name would credit the essay's phrase to the artist - the same class as the quotation once credited to Chang in the previous production."
   }
  ],
- "script_target": "90 seconds. 197 words; 82-91s of speech at 130-145 wpm, plus 4s of silence for credits."
+ "script_target": "90 seconds. 198 words, 24 sentences; 82-91s of speech at 130-145 wpm, plus 4s of silence for credits."
 }

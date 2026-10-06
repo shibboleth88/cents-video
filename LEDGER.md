@@ -208,7 +208,7 @@ them was reasonable.
   worth trusting for shot lengths, or only for structure. Measured once at
   158 wpm against a 130–145 target, so it runs ~10% fast.
 
-## Episode — 90-second cut (2026-10-06), revision 2
+## Episode — 90-second cut (2026-10-06), revisions 1-3
 
 **Script rewritten to a length brief.** The previous voiceover was 299 words
 (125-138s). A 90-second film with the 4s credit tail needs ~196 words. The
@@ -288,3 +288,38 @@ recursively, so the count is a measurement, not a key-name artefact.
 **Not in the voice:** Rutherford Chang's full name. Narration says "Chang"; the
 full name is carried by the approved on-screen credit. For an audience that
 knows the project this is correct, but it means the film must show that credit.
+
+### Revision 3 — one list of five, and the essay's actual hinge
+
+**One five, not two.** Both lists of five cost 76 of 197 words in revision 2 for
+two statements of the same idea at different grains. The TRANSFORMATIONS are
+kept in the voice because they are sequential (they carry the project's process
+for free) and because they state the essay's subject, value ascription. The
+NATURES move to on-screen text, and the closing line - "a thing is
+simultaneously itself, not itself, and an interpretation of itself" - already
+states their punchline in general form, so nothing is lost but the enumeration.
+
+**The sentence the first two cuts both missed:** "Yet the object remained,
+buoyed into physicality by the force of its context." This is the essay's hinge
+and it was not in either earlier script. The penny is ALREADY an object held in
+being by consensus rather than by intrinsic worth - which is exactly what
+blockchain later supplies to digital flows. With that line in, the arc reads as
+one claim about objecthood; without it, the film states the arc and asks the
+viewer to take it on trust.
+
+**"Conceptual art" moved from setup to payoff.** Both earlier cuts named
+conceptual art as 1960s history at the top of the arc. The essay names it in its
+CONCLUSION: "Digital objects on blockchain pose a novel form of contemporary
+conceptual art". Naming it at the end costs the same words and lands the
+article's own title claim as the result rather than the premise.
+
+**Failure-shape: a merge risk moved, it did not go away.** With the two fives in
+different channels - transformations in the voice, natures in the frame - no
+SCRIPT gate can catch them being merged, because the script now contains only
+one of them. Showing the natures while the voice reads the transformations would
+read as one annotated list of five. The constraint is on art direction, and
+review_shots.py is the only place it can be seen. Recorded in the distinction
+ledger with that explicitly stated.
+
+**Open:** 24 of 52 timeline anchors dangle. The shot list still wants rebuilding
+around this structure, which has changed again.
