@@ -107,16 +107,22 @@
    "note": "RESTORED in revision 4d as the antecedent for the next line. 'Each one initially identical' means nothing until the film has said the set is fixed and finite; the rarities are what make the differences legible as a system rather than as wear."
   },
   {
-   "say": "Each one initially identical, each bearing the marks of touch and time.",
+   "say": "Each one initially identical, now bearing the marks of touch and time.",
    "kind": "paraphrase",
    "span": "Each of these objects, initially identical, bear the marks of touch and time",
-   "note": "the essay's plural is made distributive; the marks are the physical pennies' wear, recorded in the photographs the inscriptions carry."
+   "note": "'now' replaces a repeated 'each' and marks the change as having happened over time, which is the sentence's point."
   },
   {
    "say": "Collectors dissect the set for its internal dynamics.",
    "kind": "paraphrase",
    "span": "collectors intricately dissect this set to determine its internal dynamics",
    "note": "the essay's first-person testimony - 'I've witnessed collectors intricately dissect this set' - is dropped, so the film states the behaviour rather than the essayist's observation of it. This is also the line that supplies the PARTICIPANTS the closing sentence turns on."
+  },
+  {
+   "say": "Like words that accrue significance on entering the scarce set of meanings we call canon.",
+   "kind": "paraphrase",
+   "span": "individual words and phrases in texts accrue significance when they enter the scarce set of meanings referred to as “canon”",
+   "note": "The essay offers this as the essayist's OWN association - 'it reminds me of the way that...'. The film keeps the comparison ('Like') but drops the first person, so the parallel is stated rather than offered as a personal reminder. The narrator IS the essay's author, so the first-person variant is equally available and more hedged: 'It reminds me of how words accrue significance...'. 'words and phrases' is shortened to 'words'. It sits directly after the collectors line because that is what the analogy is FOR - the dissection of a scarce set is the thing being compared."
   },
   {
    "say": "Its value and meaning are indeterminate and continually redefined.",
@@ -596,8 +602,15 @@
    "verdict": "kept",
    "by": "claude",
    "note": "The glossary already holds satoshi / inscription / image / penny apart as four things. This is the same distinction one step earlier in the work: the artwork and the object it is struck on. Collapsing them would be invisible, because the essay's own argument runs through the coin count."
+  },
+  {
+   "distinction": "an ANALOGY to canon vs a claim that CENTS has entered one",
+   "where": "'Like words that accrue significance on entering the scarce set of meanings we call canon' - the comparison is to the MECHANISM by which a scarce set confers significance, not a claim about this work's standing",
+   "verdict": "kept",
+   "by": "claude",
+   "note": "The essay compares collectors reading the set to words accruing significance in a canon. Said slightly differently - 'CENTS enters the canon' - it becomes a claim about the work's art-historical status that the essay never makes and that the film has no standing to make. On screen, 'canon' must not appear beside the work's title or any date."
   }
  ],
- "script_target": "About 100 seconds, lengthened from the 90s brief on request so the closing passage has its antecedents. 217 words, 23 sentences; 90-100s of speech at 130-145 wpm, plus 4s of silence for credits.",
+ "script_target": "About 105 seconds. 232 words, 24 sentences; 96-107s of speech at 130-145 wpm, plus 4s of silence for credits (100-111s total). Lengthened twice from the original 90s brief, on request, to give the closing passage its antecedents and to fit the canon analogy. IF 90s IS A PLATFORM CAP THIS NO LONGER MEETS IT - the brief needs restating before the film is cut.",
  "_thesis_note": "Film 1 of several on CENTS, framed on VALUE. The essay's other half - conceptual art, the loss of objecthood in digital flows, and blockchain as this era's objecthood - is a second film's thesis, not a compressed sub-section of this one. Earlier revisions of this script carried both and served neither."
 }

@@ -501,3 +501,35 @@ to.
 
 **Length:** 217 words, 23 sentences, 90-100s of speech, 94-104s with credits.
 Extended from the 90s brief on request. The brief is now "about 100 seconds".
+
+### Revision 4e — the canon analogy, and a length the brief no longer covers
+
+Added after the collectors line, which is what the analogy is FOR:
+
+    Collectors dissect the set for its internal dynamics.
+    Like words that accrue significance on entering the scarce set of
+      meanings we call canon.
+
+**Distinction recorded: an ANALOGY to canon is not a claim of entering one.**
+The essay compares collectors reading a scarce set to words accruing
+significance in a canon. Said slightly differently - "CENTS enters the canon" -
+it becomes a claim about the work's art-historical standing that the essay never
+makes and the film has no standing to make. On screen, 'canon' must not appear
+beside the work's title or a date, which is where that reading would form.
+
+**The first person was dropped, and that is a choice, not an oversight.** The
+essay says "it reminds me of the way that...". The narrator here IS the essay's
+author, so the hedged first-person form is equally legitimate and is recorded in
+the claim beside the chosen wording. "Like" keeps it a comparison; what it loses
+is that the comparison was offered as a personal association rather than
+asserted.
+
+**Length now exceeds the brief, and the brief has not been restated.** 232 words,
+96-107s of speech, 100-111s with credits, mid 106s. The film began as "90
+seconds"; it has been lengthened twice on request, first to carry the closing
+passage's premises and now to carry the canon analogy. If 90 seconds was a
+PLATFORM cap rather than a preference, this no longer meets it, and the three
+cheapest cuts back to ~95s are: "Chang initiated an ongoing process of
+redefinition" (7), "logics and" (2), and the second absurdity line (13). Written
+down because the number in the brief and the number in the file have diverged,
+and `script_target` now says so in the file itself rather than only here.
