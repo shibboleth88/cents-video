@@ -208,7 +208,7 @@ them was reasonable.
   worth trusting for shot lengths, or only for structure. Measured once at
   158 wpm against a 130–145 target, so it runs ~10% fast.
 
-## Episode — 90-second cut (2026-10-06), revisions 1-3
+## Episode — 90-second cut (2026-10-06), revisions 1-4
 
 **Script rewritten to a length brief.** The previous voiceover was 299 words
 (125-138s). A 90-second film with the 4s credit tail needs ~196 words. The
@@ -325,3 +325,42 @@ ledger with that explicitly stated.
 (measured, not estimated - an earlier draft of this entry said 24, which was a
 number I had not re-run after the restructure). The shot list is not a
 re-anchoring job; it wants rebuilding around this structure.
+
+### Revision 4 — the order invented an intention
+
+**The failure the gates could not see.** Revision 3 OPENED on "Brenner's Lincoln
+is the most reproduced artwork on Earth", which implies Chang chose the penny
+because of it. The essay says the opposite about origins: "Rutherford Chang began
+this project with a simple value discrepancy." Every sentence in revision 3 was
+individually faithful to a cited span, and ten fidelity gates were green. The
+infidelity was in the ORDER.
+
+**Failure-shape: a PROPERTY of the work is not a REASON for making it.** Those
+are close enough that putting the property first reads as the reason, and no
+sentence-level check can see the difference, because no sentence is wrong. The
+test is positional: ask what causal reading the position creates. Recorded as a
+distinction with verdict kept and `by: user`.
+
+**Why no gate caught it, stated plainly:** `fidelity.py` maps sentences to spans.
+It has no representation of narrative order, so claims about causation that arise
+from sequence are outside what it can measure. This is a known blind spot now,
+not a bug to fix — a gate that judged implied causation would have to understand
+the film.
+
+**Frame set for the series.** CENTS is primarily a work about VALUE, and there
+will be several films. The essay's other argument - conceptual art, the loss of
+objecthood in digital flows, blockchain as this era's objecthood - is now
+recorded as a SECOND film's thesis rather than a compressed sub-section of this
+one. Revisions 1-3 each carried fragments of both and served neither. The thesis
+field in claims.json is now this film's thesis, not the essay's whole claim.
+
+**The ongoing is the emphasis.** Four of the last five lines are about
+non-closure: value decoupled into a vessel for social consensus, value and
+meaning indeterminate and continually redefined, an ongoing process of
+redefinition, objects initially identical bearing the marks of touch and time.
+The film ends on the essay's FIRST sentence - "CENTS is a becoming, a gesture
+that unfolds continually through the actions of its participants in time" - so
+the film earns it rather than asserting it up front.
+
+**Open:** 45 of 52 timeline anchors dangle across 14 of 15 shots.
+Measured this revision, not carried over.

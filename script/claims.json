@@ -1,24 +1,41 @@
 {
  "_what": "Every narration sentence AND every on-screen string maps to the essay. Titles and credits are tagged as such and approved. Attributions are declared and signed off separately.",
  "essay_version": "medium 2025-10-30",
- "thesis": "Blockchain supplies the objecthood the digital era lacked, and CENTS holds that whole arc in one gesture: its medium is its continual becoming, not any of its visible forms.",
+ "thesis": "Value is ascribed, not intrinsic. CENTS runs one of the most ordinary objects on Earth through five regimes of value ascription and leaves it in a sixth that never closes, so the work's value, meaning and even its nature keep being redefined by its participants.",
  "claims": [
   {
-   "say": "Brenner's Lincoln, on the penny, is the most reproduced artwork on Earth.",
+   "say": "Chang began with a simple value discrepancy.",
+   "kind": "paraphrase",
+   "span": "Rutherford Chang began this project with a simple value discrepancy",
+   "note": "This is the essay's account of the project's ORIGIN, and it opens the film for that reason."
+  },
+  {
+   "say": "One cent to the Treasury.",
+   "kind": "paraphrase",
+   "span": "the value of ¢1 ascribed to copper pennies by the US Treasury"
+  },
+  {
+   "say": "About two and a half as copper.",
+   "kind": "paraphrase",
+   "span": "the metal value of apx. ¢2.5"
+  },
+  {
+   "say": "The readymade he chose is the most common object in existence.",
+   "kind": "paraphrase",
+   "span": "the readymade he’s using is one of the most common objects in existence",
+   "note": "A property of the object, not a reason for choosing it. The essay states it under Chang's practice of working with readymades, after the origin has already been given as the value discrepancy."
+  },
+  {
+   "say": "Brenner's Lincoln is the most reproduced artwork on Earth.",
    "kind": "paraphrase",
    "span": "The image of Lincoln on the face of the penny, created by Victor David Brenner, is the most reproduced artwork on planet Earth",
-   "note": "'Victor David' and the 500+ billion struck are carried by on-screen text, not the voice."
+   "note": "ATTRIBUTION/INTENTION: the essay offers this as a fact about the readymade's ubiquity, NOT as the artist's motive. It must never be placed where it reads as why Chang made the work. 'Victor David' and the 500+ billion struck go on screen."
   },
   {
-   "say": "This is the readymade Rutherford Chang chose.",
-   "kind": "paraphrase",
-   "span": "the readymade he’s using is one of the most common objects in existence"
-  },
-  {
-   "say": "He brings a black hole humor to it — laughter that resonates within emptiness.",
-   "kind": "paraphrase",
-   "span": "he brings what I call a “black hole humor” to the process — the kind of laughter that resonates within emptiness",
-   "note": "ATTRIBUTION: the essay says Chang brings the humor, but 'black hole humor' is the ESSAYIST'S coinage ('what I call'). The narration credits the humor to Chang, which the essay asserts, and does not credit him with naming it. On screen the phrase appears in quotation marks with the essay credit, never beside Chang's name."
+   "say": "The object remained, buoyed into physicality by the force of its context.",
+   "kind": "quotation",
+   "span": "the object remained, buoyed into physicality by the force of its context",
+   "note": "the essay's sentence opens 'Yet the object remained'; 'Yet' is dropped because the preceding line already ends on 'Yet, here we are'."
   },
   {
    "say": "It is absurd that a nation's currency should dissolve into worthlessness.",
@@ -37,10 +54,10 @@
    "span": "Yet, here we are"
   },
   {
-   "say": "The object remained, buoyed into physicality by the force of its context.",
-   "kind": "quotation",
-   "span": "the object remained, buoyed into physicality by the force of its context",
-   "note": "the essay's sentence opens 'Yet the object remained'; 'Yet' is dropped because the preceding line already ends on 'Yet, here we are'."
+   "say": "He brings a black hole humor to it — laughter that resonates within emptiness.",
+   "kind": "paraphrase",
+   "span": "he brings what I call a “black hole humor” to the process — the kind of laughter that resonates within emptiness",
+   "note": "ATTRIBUTION: the essay says Chang brings the humor, but 'black hole humor' is the ESSAYIST'S coinage ('what I call'). The narration credits the humor to Chang, which the essay asserts, and does not credit him with naming it. On screen the phrase appears in quotation marks with the essay credit, never beside Chang's name."
   },
   {
    "say": "Every Cent passes through five transformations of value.",
@@ -73,61 +90,32 @@
    "span": "being inscribed on Bitcoin (value continually redefined by decentralized consensus)"
   },
   {
-   "say": "Commodification hollowed out the art object.",
+   "say": "The assigned value is decoupled from the object and becomes a vessel for social consensus.",
    "kind": "paraphrase",
-   "span": "The art object, once a vital vessel for aura and authorship, had become hollowed out by hyper-commodification"
+   "span": "the original assigned value is decoupled from the object and transformed into a vessel for social-consensus based value defined by decentralized participants"
   },
   {
-   "say": "A split opened between materiality and meaning.",
+   "say": "Its value and meaning are indeterminate and continually redefined.",
+   "kind": "paraphrase",
+   "span": "their value and meaning is indeterminate and continually redefined",
+   "note": "the essay's plural is made singular, so paraphrase rather than quotation"
+  },
+  {
+   "say": "Chang initiated an ongoing process of redefinition.",
    "kind": "quotation",
-   "span": "a split between materiality and meaning"
+   "span": "Chang initiated an ongoing process of redefinition"
   },
   {
-   "say": "Digitization widened it.",
+   "say": "Each object, initially identical, bears the marks of touch and time.",
    "kind": "paraphrase",
-   "span": "By the 1990s, digitization had begun to envelop the world"
+   "span": "Each of these objects, initially identical, bear the marks of touch and time",
+   "note": "wording changed from the essay's plural, so paraphrase rather than quotation"
   },
   {
-   "say": "Digital flows could not hold identity, singularity, provenance or ownership.",
-   "kind": "paraphrase",
-   "span": "the digital lacked the continuity of identity, singularity, provenance and ownability of the physical"
-  },
-  {
-   "say": "They lacked objecthood.",
-   "kind": "paraphrase",
-   "span": "In short, it lacked objecthood",
-   "note": "wording changed from the essay, so paraphrase rather than quotation"
-  },
-  {
-   "say": "Blockchain gave them discrete boundaries and verifiable histories.",
-   "kind": "paraphrase",
-   "span": "blockchain architecture was created to allow digital flows to exist as discrete units with verifiable histories"
-  },
-  {
-   "say": "Blockchain is this era's objecthood.",
-   "kind": "paraphrase",
-   "span": "blockchain constitutes this era’s objecthood",
-   "note": "wording changed from the essay, so paraphrase rather than quotation"
-  },
-  {
-   "say": "CENTS holds that arc in one gesture.",
-   "kind": "paraphrase",
-   "span": "Rutherford Chang encapsulates this century-long transformational arc of objecthood and value"
-  },
-  {
-   "say": "Its medium is the gesture of its continual becoming.",
+   "say": "CENTS is a becoming, a gesture that unfolds continually through the actions of its participants in time.",
    "kind": "quotation",
-   "span": "its medium is the gesture of its continual becoming"
-  },
-  {
-   "say": "Digital objects on blockchain are a new form of conceptual art.",
-   "kind": "paraphrase",
-   "span": "Digital objects on blockchain pose a novel form of contemporary conceptual art"
-  },
-  {
-   "say": "A thing is simultaneously itself, not itself, and an interpretation of itself.",
-   "kind": "quotation",
-   "span": "a thing is simultaneously itself, not itself and an interpretation of itself"
+   "span": "CENTS is a becoming, a gesture that unfolds continually through the actions of its participants in time",
+   "note": "The essay's FIRST sentence, used as the film's last. The film earns it rather than asserting it."
   }
  ],
  "onscreen": [
@@ -548,7 +536,15 @@
    "verdict": "kept",
    "by": "claude",
    "note": "Putting 'black hole humor' on screen beside Chang's name would credit the essay's phrase to the artist - the same class as the quotation once credited to Chang in the previous production."
+  },
+  {
+   "distinction": "a PROPERTY of the readymade (the Lincoln portrait's ubiquity) vs the artist's MOTIVE for choosing it",
+   "where": "the film gives the origin first - 'Chang began with a simple value discrepancy' - and only then describes the object. Brenner never appears before the discrepancy.",
+   "verdict": "kept",
+   "by": "user",
+   "note": "Caught by the user in revision 3, where the film OPENED on Brenner and so implied Chang chose the penny because the portrait is the most reproduced artwork on Earth. The essay claims no such thing. This is the quietest kind of infidelity: every sentence was individually true to a span, and the ORDER invented an intention."
   }
  ],
- "script_target": "90 seconds. 198 words, 24 sentences; 82-91s of speech at 130-145 wpm, plus 4s of silence for credits."
+ "script_target": "90 seconds. 196 words, 21 sentences; 81-90s of speech at 130-145 wpm, plus 4s of silence for credits.",
+ "_thesis_note": "Film 1 of several on CENTS, framed on VALUE. The essay's other half - conceptual art, the loss of objecthood in digital flows, and blockchain as this era's objecthood - is a second film's thesis, not a compressed sub-section of this one. Earlier revisions of this script carried both and served neither."
 }
