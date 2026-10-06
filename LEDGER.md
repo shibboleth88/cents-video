@@ -321,5 +321,7 @@ read as one annotated list of five. The constraint is on art direction, and
 review_shots.py is the only place it can be seen. Recorded in the distinction
 ledger with that explicitly stated.
 
-**Open:** 24 of 52 timeline anchors dangle. The shot list still wants rebuilding
-around this structure, which has changed again.
+**Open:** 39 of 52 timeline anchors dangle, across 14 of the 15 shots
+(measured, not estimated - an earlier draft of this entry said 24, which was a
+number I had not re-run after the restructure). The shot list is not a
+re-anchoring job; it wants rebuilding around this structure.
