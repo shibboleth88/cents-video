@@ -207,3 +207,44 @@ them was reasonable.
 - Whether `say`-generated scratch timing is close enough to a human read to be
   worth trusting for shot lengths, or only for structure. Measured once at
   158 wpm against a 130–145 target, so it runs ~10% fast.
+
+## Episode — 90-second cut (2026-10-06)
+
+**Script rewritten to a length brief.** The previous voiceover was 299 words
+(125-138s). A 90-second film with the 4s credit tail needs ~196 words. The
+previous script had no length target recorded anywhere, so nothing was wrong
+with it — it answered a different question.
+
+**Failure-shape: an estimate assembled by hand is not a measurement.** Drafting
+the cut, I counted words line by line and predicted 185-200. `wc -w` said 236.
+Per-line counting under-counts by compounding small errors in the same
+direction. Write the file, then measure it.
+
+**Defeated instrument found: `fidelity.py --self-test`'s misquotation control
+could never go red.** It corrupted `claims[3]` and asserted `g_quotation_exact`
+fails. But `claims[3]` was a *paraphrase* in both the old and new ledger, and
+that gate only inspects claims tagged `quotation`, so the control passed every
+script it had ever been run against — and a control that passes prints VACUOUS
+only because the harness checks for it. This was NOT introduced by the rewrite;
+measured against `HEAD:script/claims.json`, the old ledger's `claims[3]` is the
+same paraphrase sentence. A fixed index into a ledger is not a reference to a
+claim. Fixed to select the first claim tagged `quotation`, and to fail loudly if
+no claim carries that tag. 9/10 -> 10/10 controls red.
+
+**Failure-shape: a zero from the wrong key name is not a zero.** My first check
+of whether timeline anchors survived the rewrite read `shot["at_phrase"]` and
+`shot["id"]` and reported "15 shots; 0 anchors no longer in the script". Both
+keys are wrong — the schema is `shot_id`, with anchors nested under `start`,
+`end` and inside `props`. Flooring the scan (anchors found must be at least one
+per shot) and walking recursively found 52 anchors, of which **21 are now
+dangling**. A clean bill of health and a misspelled key render identically.
+
+**Open, not refuted:** the timeline is still cut to the 299-word script. 21
+anchors dangle; the render fails rather than mis-cutting, so this is safe but
+unfinished. Re-anchoring is the next step, not a known-good state.
+
+**Correct but looks wrong:** the five TRANSFORMATIONS of value are no longer
+narrated as a list. They are enacted by the process narration (in circulation ->
+removed -> photographed -> destroyed -> inscribed), which is the same five in
+order. Only the five NATURES are spoken as a list. This removes rather than
+creates the merge risk the distinction ledger was written against.

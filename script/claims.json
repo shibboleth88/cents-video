@@ -24,9 +24,10 @@
    "span": "Chang culled 10,000 pre-1982 copper pennies over the course of several years from about 100,000 pennies"
   },
   {
-   "say": "He photographed each one and catalogued its date and mintage.",
+   "say": "He photographed and catalogued every one.",
    "kind": "paraphrase",
-   "span": "He then archivally photographed them and cataloged each of their dates and mintages"
+   "span": "He then archivally photographed them and cataloged each of their dates and mintages",
+   "note": "shortened for a 90s cut; the dates and mintages appear as on-screen text, not in the voice"
   },
   {
    "say": "Then he melted them into a single block.",
@@ -39,52 +40,19 @@
    "span": "a satoshi, the smallest divisible unit of Bitcoin"
   },
   {
-   "say": "The block itself became a full-block inscription, CENTS Block 839969, the master object of the project.",
+   "say": "The block itself filled an entire Bitcoin block — CENTS Block 839969.",
    "kind": "paraphrase",
-   "span": "Block 839969 serves as the master object of the project"
+   "span": "what is known as a full-block inscription",
+   "note": "'the block itself' = the 3D model of the smelted copper block, per 'he inscribed a 3D model of the block on a block of the blockchain'. The identifier is from 'Block 839969 serves as the master object of the project'; 'the master object' is carried by on-screen text instead of the voice."
   },
   {
-   "say": "One inscription, filling an entire block.",
+   "say": "He released all ten thousand at one sat each.",
    "kind": "paraphrase",
-   "span": "what is known as a full-block inscription"
+   "span": "he released the 10,000 cent inscriptions for the price of one sat each",
+   "note": "the dollar equivalent (apx. $0.0001) moved to on-screen text to save narration time"
   },
   {
-   "say": "He released all ten thousand inscriptions at one sat each, about one hundredth of a cent.",
-   "kind": "paraphrase",
-   "span": "he released the 10,000 cent inscriptions for the price of one sat each"
-  },
-  {
-   "say": "Every Cent passes through five transformations of value.",
-   "kind": "paraphrase",
-   "span": "Each of the objects also goes through 5 transformations of value"
-  },
-  {
-   "say": "In circulation, its value defined by the Treasury.",
-   "kind": "paraphrase",
-   "span": "being in circulation (value defined by US treasury)"
-  },
-  {
-   "say": "Removed from circulation, that assignment subverted.",
-   "kind": "paraphrase",
-   "span": "being removed from circulation (centralized value assignment subverted)"
-  },
-  {
-   "say": "Archivally photographed, valued for what the image holds.",
-   "kind": "paraphrase",
-   "span": "being archivally photographed (value defined by visual/conceptual/historical quality)"
-  },
-  {
-   "say": "Destroyed, its value made undefinable.",
-   "kind": "paraphrase",
-   "span": "being destroyed (value made undefinable)"
-  },
-  {
-   "say": "Inscribed on Bitcoin, continually redefined by decentralized consensus.",
-   "kind": "paraphrase",
-   "span": "being inscribed on Bitcoin (value continually redefined by decentralized consensus)"
-  },
-  {
-   "say": "And it arrives as five natures at once.",
+   "say": "Each Cent is five natures at once.",
    "kind": "paraphrase",
    "span": "Each of Chang’s Cents has 5 distinct natures. It is all of these things and none of them"
   },
@@ -124,16 +92,6 @@
    "span": "Conceptual art emerged as a movement in the 1960s as a reaction against object-based, market-driven modernism"
   },
   {
-   "say": "A split opened between materiality and meaning.",
-   "kind": "quotation",
-   "span": "a split between materiality and meaning"
-  },
-  {
-   "say": "Digitization widened it.",
-   "kind": "paraphrase",
-   "span": "By the 1990s, digitization had begun to envelop the world"
-  },
-  {
    "say": "Digital flows could not hold identity, singularity, provenance or ownership.",
    "kind": "paraphrase",
    "span": "the digital lacked the continuity of identity, singularity, provenance and ownability of the physical"
@@ -145,7 +103,7 @@
    "note": "wording changed from the essay, so paraphrase rather than quotation"
   },
   {
-   "say": "Blockchain was built to give them discrete boundaries and verifiable histories.",
+   "say": "Blockchain gave them discrete boundaries and verifiable histories.",
    "kind": "paraphrase",
    "span": "blockchain architecture was created to allow digital flows to exist as discrete units with verifiable histories"
   },
@@ -156,14 +114,9 @@
    "note": "wording changed from the essay, so paraphrase rather than quotation"
   },
   {
-   "say": "CENTS holds that whole arc inside one gesture.",
+   "say": "CENTS holds that whole arc in one gesture.",
    "kind": "paraphrase",
    "span": "Rutherford Chang encapsulates this century-long transformational arc of objecthood and value"
-  },
-  {
-   "say": "Its medium is not the penny, or the photograph, or the block.",
-   "kind": "paraphrase",
-   "span": "its medium is the gesture of its continual becoming, rather than any of its visible manifestations"
   },
   {
    "say": "Its medium is the gesture of its continual becoming.",
@@ -174,11 +127,6 @@
    "say": "A digital object is simultaneously itself, not itself, and an interpretation of itself.",
    "kind": "quotation",
    "span": "a thing is simultaneously itself, not itself and an interpretation of itself"
-  },
-  {
-   "say": "Its meanings keep emerging, as participants co-create the intersubjective reality of its presence.",
-   "kind": "quotation",
-   "span": "Its meanings continue to emerge as participants co-create the intersubjective reality of its presence"
   }
  ],
  "onscreen": [
@@ -542,10 +490,10 @@
  "distinctions_kept": [
   {
    "distinction": "FIVE NATURES (what a Cent simultaneously is) vs FIVE TRANSFORMATIONS OF VALUE (what it passes through) - two different lists of five",
-   "where": "s05_transformations uses a chain; s06_natures uses a different diagram entirely so the two are not read as one list",
+   "where": "90s cut: the five TRANSFORMATIONS are enacted by the process narration (in circulation, removed, photographed, destroyed, inscribed) and shown as the s04_process chain; only the five NATURES are spoken as a list, on a different diagram. The two are therefore never read as one list.",
    "verdict": "kept",
    "by": "claude",
-   "note": "The previous film's 'five conditions' matched the TRANSFORMATIONS only. Merging the two lists is the obvious failure here."
+   "note": "The previous film's 'five conditions' matched the TRANSFORMATIONS only. Merging the two lists is the obvious failure here. At 90 seconds there is no room to narrate both fives; narrating only the natures and letting the process carry the transformations is the compression chosen, and it removes rather than creates the merge risk."
   },
   {
    "distinction": "CENTS (project) / Cents (collection pieces) / cents (ordinary money)",
@@ -578,5 +526,6 @@
    "verdict": "kept",
    "by": "claude"
   }
- ]
+ ],
+ "script_target": "90 seconds. 196 words; 81-90s of speech at 130-145 wpm, plus 4s of silence for credits."
 }

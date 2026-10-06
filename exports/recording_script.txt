@@ -1,8 +1,8 @@
 CENTS & digital objecthood — RECORDING SCRIPT
 ====================================================
 
-35 sentences, 299 words.
-At 130-145 words a minute that is about 124-138 seconds of speech, before pauses.
+24 sentences, 196 words.
+At 130-145 words a minute that is about 81-90 seconds of speech, before pauses.
 
 HOW TO RECORD
   One take, straight through. Do not stop to fix a stumble — say the line
@@ -30,72 +30,49 @@ HOW TO RECORD
       [1982: 'nineteen eighty-two']
       [pre-1982: 'pre nineteen eighty-two']
 
- 5.  He photographed each one and catalogued its date and mintage.
+ 5.  He photographed and catalogued every one.
 
  6.  Then he melted them into a single block.
 
  7.  Then he inscribed each destroyed penny onto a sat, the smallest divisible unit of Bitcoin.
       [sat: rhymes with 'cat'; a satoshi]
 
- 8.  The block itself became a full-block inscription, CENTS Block 839969, the master object of the project.
+ 8.  The block itself filled an entire Bitcoin block — CENTS Block 839969.
       [839969: read as 'eight three nine, nine six nine']
 
- 9.  One inscription, filling an entire block.
+ 9.  He released all ten thousand at one sat each.
 
-10.  He released all ten thousand inscriptions at one sat each, about one hundredth of a cent.
+10.  Each Cent is five natures at once.
+      [Cent: one collection piece, said the same as 'cent' — the script uses the singular too]
 
-11.  Every Cent passes through five transformations of value.
+11.  A unit of currency.
 
-12.  In circulation, its value defined by the Treasury.
+12.  A quantity of copper.
 
-13.  Removed from circulation, that assignment subverted.
+13.  A melted element of a sculpture.
 
-14.  Archivally photographed, valued for what the image holds.
+14.  A photograph.
 
-15.  Destroyed, its value made undefinable.
+15.  A Bitcoin inscription.
 
-16.  Inscribed on Bitcoin, continually redefined by decentralized consensus.
-      [decentralized: four syllables, do not rush]
+16.  All of these things, and none of them.
 
-17.  And it arrives as five natures at once.
+17.  Conceptual art broke from the object in the nineteen sixties, when commodification had hollowed it out.
 
-18.  A unit of currency.
+18.  Digital flows could not hold identity, singularity, provenance or ownership.
 
-19.  A quantity of copper.
-
-20.  A melted element of a sculpture.
-
-21.  A photograph.
-
-22.  A Bitcoin inscription.
-
-23.  All of these things, and none of them.
-
-24.  Conceptual art broke from the object in the nineteen sixties, when commodification had hollowed it out.
-
-25.  A split opened between materiality and meaning.
-
-26.  Digitization widened it.
-
-27.  Digital flows could not hold identity, singularity, provenance or ownership.
-
-28.  They lacked objecthood.
+19.  They lacked objecthood.
       [objecthood: OB-ject-hood]
 
-29.  Blockchain was built to give them discrete boundaries and verifiable histories.
+20.  Blockchain gave them discrete boundaries and verifiable histories.
 
-30.  Blockchain is this era's objecthood.
+21.  Blockchain is this era's objecthood.
 
-31.  CENTS holds that whole arc inside one gesture.
+22.  CENTS holds that whole arc in one gesture.
 
-32.  Its medium is not the penny, or the photograph, or the block.
+23.  Its medium is the gesture of its continual becoming.
 
-33.  Its medium is the gesture of its continual becoming.
-
-34.  A digital object is simultaneously itself, not itself, and an interpretation of itself.
-
-35.  Its meanings keep emerging, as participants co-create the intersubjective reality of its presence.
-      [intersubjective: in-ter-sub-JEC-tive]
+24.  A digital object is simultaneously itself, not itself, and an interpretation of itself.
 
 ----------------------------------------------------
 

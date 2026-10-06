@@ -187,8 +187,16 @@ def self_test() -> int:
         c["claims"][1]["span"] = "Chang has described the project as a meditation on entropy."
         return lambda: g_spans(essay, c)
     def corrupt_misquote():
+        # Target the first claim actually TAGGED as a quotation. A fixed index
+        # silently decouples from the ledger: claims[3] was a paraphrase, which
+        # g_quotation_exact does not inspect, so this control passed for every
+        # script it was ever run against.
         c = json.loads(json.dumps(cl))
-        c["claims"][3]["say"] = "The object vanishes."
+        i = next((j for j, x in enumerate(c["claims"]) if x["kind"] == "quotation"), None)
+        if i is None:
+            return lambda: (_ for _ in ()).throw(
+                Fail("no claim is tagged quotation - this control has nothing to misquote"))
+        c["claims"][i]["say"] = "The object vanishes."
         return lambda: g_quotation_exact(essay, c)
     def corrupt_addition():
         c = json.loads(json.dumps(cl))

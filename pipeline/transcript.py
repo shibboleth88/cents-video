@@ -18,6 +18,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 NOTES = {
     "CENTS": "say 'cents' — the PROJECT (capitals are for the reader, not the voice)",
     "Cents": "the collection pieces, said the same as 'cents'",
+    "Cent": "one collection piece, said the same as 'cent' — the script uses the singular too",
     "sat": "rhymes with 'cat'; a satoshi",
     "839969": "read as 'eight three nine, nine six nine'",
     "1982": "'nineteen eighty-two'",
