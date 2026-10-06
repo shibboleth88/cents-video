@@ -628,6 +628,17 @@
    "kind": "paraphrase",
    "span": "he removed them from circulation by melting them down into a solid copper block",
    "note": "added so the chain changes state during 'melted into a block of copper' - the diagram sat on one state for 7.6s and the no-static-passage gate read 4.5s of still picture."
+  },
+  {
+   "text": "CENTS principles",
+   "kind": "title",
+   "approved": true,
+   "note": "the film's title. The essay is titled 'CENTS & digital objecthood'; its objecthood argument is a separate film, so this one is titled for what it covers. The essay keeps its own title in the credits."
+  },
+  {
+   "text": "redefined",
+   "kind": "paraphrase",
+   "span": "their value and meaning is indeterminate and continually redefined"
   }
  ],
  "attributions": [],

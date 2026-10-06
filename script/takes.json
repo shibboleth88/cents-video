@@ -3,15 +3,83 @@
  "_rule": "Last complete take wins, which is the convention the recording script asks for ('say the line again and carry on'). Every cut point was placed at a measured silence trough (10ms RMS), not at a recogniser word boundary, because several joins are butt-ended in the word timings.",
  "source": "inputs/vo_raw.m4a",
  "segments": [
-  {"id": "A", "start": 0.0,    "end": 21.55,  "says": "Rutherford Chang began CENTS with a simple value discrepancy. What was one cent to the US Treasury was about two and a half cents as copper at the time he made the piece. Nothing had been sold for a single cent since before Chang was born,", "takes": "only take"},
-  {"id": "B", "start": 29.30,  "end": 37.00,  "says": "yet the object remained, buoyed into physicality by the force of its context.", "takes": "2nd of 2; the first runs 21.96-29.02"},
-  {"id": "C", "start": 37.60,  "end": 44.35,  "says": "The readymade he chose is also perhaps the most reproduced physical artwork on Earth.", "takes": "only take"},
-  {"id": "D", "start": 49.41,  "end": 58.30,  "says": "More than 500 billion Lincoln cents were produced, each with the portrait of Lincoln that Victor David Brenner made in 1909.", "takes": "2nd of 2; the first runs 45.07-49.24"},
-  {"id": "E", "start": 59.95,  "end": 65.50,  "says": "It is absurd that a nation's currency should dissolve into worthlessness.", "takes": "only complete take"},
-  {"id": "F", "start": 68.75,  "end": 76.20,  "says": "It is absurd that a cent should be valued at hundreds or thousands of dollars. Yet here we are.", "takes": "only complete take; a false start 'It is absurd.' at 66.58 is dropped"},
-  {"id": "G", "start": 104.80, "end": 116.50, "says": "Chang brings a kind of black hole humor to his work, laughing at this absurdity with a laughter that resonates with an emptiness.", "takes": "6th of 6; earlier attempts at 77.40, 87.56, 93.28, 98.54"},
-  {"id": "H", "start": 133.60, "end": 165.45, "says": "In the system Chang created, every cent is passed through five transformations of value. One, in circulation... Two... Three... Four, destroyed, melted into a block of copper, its value made undefinable.", "takes": "revised version; the earlier 'Every cent passes through five transformations of value' at 117.92 and a false start at 125.40 are dropped"},
-  {"id": "I", "start": 276.30, "end": 288.74, "says": "Five, inscribed on Bitcoin, its value continually redefined by decentralized consensus as the objects are traded every day on the open market.", "takes": "LAST of ~12 attempts spanning 165.2-288.9; this is the only one that reaches 'on the open market'. A stray 'it.' at 288.84 is excluded."},
-  {"id": "J", "start": 307.10, "end": 318.00, "says": "CENTS is a becoming, a gesture that unfolds continually through the actions of its participants through time.", "takes": "3rd of 3; earlier at 291.58 and 303.80. Note: 'through time', not the essay's 'in time'."}
- ]
+  {
+   "id": "A",
+   "start": 0.0,
+   "end": 21.55,
+   "says": "Rutherford Chang began CENTS with a simple value discrepancy. What was one cent to the US Treasury was about two and a half cents as copper at the time he made the piece. Nothing had been sold for a single cent since before Chang was born,",
+   "takes": "only take"
+  },
+  {
+   "id": "B",
+   "start": 29.3,
+   "end": 37.0,
+   "says": "yet the object remained, buoyed into physicality by the force of its context.",
+   "takes": "2nd of 2; the first runs 21.96-29.02"
+  },
+  {
+   "id": "C",
+   "start": 37.6,
+   "end": 44.35,
+   "says": "The readymade he chose is also perhaps the most reproduced physical artwork on Earth.",
+   "takes": "only take"
+  },
+  {
+   "id": "D",
+   "start": 49.41,
+   "end": 58.3,
+   "says": "More than 500 billion Lincoln cents were produced, each with the portrait of Lincoln that Victor David Brenner made in 1909.",
+   "takes": "2nd of 2; the first runs 45.07-49.24"
+  },
+  {
+   "id": "E",
+   "start": 59.95,
+   "end": 65.5,
+   "says": "It is absurd that a nation's currency should dissolve into worthlessness.",
+   "takes": "only complete take"
+  },
+  {
+   "id": "F",
+   "start": 68.75,
+   "end": 76.2,
+   "says": "It is absurd that a cent should be valued at hundreds or thousands of dollars. Yet here we are.",
+   "takes": "only complete take; a false start 'It is absurd.' at 66.58 is dropped"
+  },
+  {
+   "id": "G1",
+   "start": 104.8,
+   "end": 109.66,
+   "says": "Chang brings a kind of black hole humor to his work,",
+   "takes": "6th of 6; earlier attempts at 77.40, 87.56, 93.28, 98.54"
+  },
+  {
+   "id": "G2",
+   "start": 111.2,
+   "end": 116.5,
+   "says": "laughing at this absurdity with a laughter that resonates within emptiness.",
+   "takes": "same take as G1, continued. The 2.00s the speaker left mid-sentence is cut to 0.46s: it is one sentence, and two seconds reads as a full stop."
+  },
+  {
+   "id": "H",
+   "start": 133.6,
+   "end": 165.45,
+   "says": "In the system Chang created, every cent is passed through five transformations of value. One, in circulation... Two... Three... Four, destroyed, melted into a block of copper, its value made undefinable.",
+   "takes": "revised version; the earlier 'Every cent passes through five transformations of value' at 117.92 and a false start at 125.40 are dropped"
+  },
+  {
+   "id": "I",
+   "start": 276.3,
+   "end": 288.74,
+   "says": "Five, inscribed on Bitcoin, its value continually redefined by decentralized consensus as the objects are traded every day on the open market.",
+   "takes": "LAST of ~12 attempts spanning 165.2-288.9; this is the only one that reaches 'on the open market'. A stray 'it.' at 288.84 is excluded."
+  },
+  {
+   "id": "J",
+   "start": 307.1,
+   "end": 318.0,
+   "says": "CENTS is a becoming, a gesture that unfolds continually through the actions of its participants through time.",
+   "takes": "3rd of 3; earlier at 291.58 and 303.80. Note: 'through time', not the essay's 'in time'."
+  }
+ ],
+ "_gap_note": "Segment G was one span until 2026-10-06. The speaker left 2.00s of silence between 'to his work,' and 'laughing', which reads as a sentence break in a sentence that has none. Split and rejoined with 0.46s. Whisper's word timings put the gap at 1.34s; the measured energy says 2.00s, and the energy is what was cut on."
 }

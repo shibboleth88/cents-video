@@ -1,6 +1,6 @@
 {
  "essay": {
-  "title": "CENTS & digital objecthood",
+  "title": "CENTS principles",
   "subtitle": "an introduction to the primary concepts of CENTS by Rutherford Chang",
   "author": "shibboleth",
   "source": "https://medium.com/@shibboleth88/cents-digital-conceptual-art-258b836a16a1",
@@ -16,11 +16,11 @@
    "end": {
     "at_phrase": "What was one cent to the US"
    },
-   "purpose": "Name the film over the object it is about, while the first line states the project's origin.",
+   "purpose": "Name the film over the object it is about, while the first line states the project's origin. Titled 'CENTS principles': the essay's objecthood argument is a separate film, not a section of this one.",
    "visual_kind": "generated",
    "component": "TitleCard",
    "props": {
-    "title": "CENTS & digital objecthood",
+    "title": "CENTS principles",
     "subtitle": "an introduction to the primary concepts of CENTS by Rutherford Chang",
     "author": "shibboleth",
     "backdrop": "a01m",
@@ -144,7 +144,7 @@
    "props": {
     "items": [
      "worthless",
-     "thousands of dollars"
+     "redefined"
     ],
     "vertical": true,
     "states": [
@@ -177,13 +177,13 @@
    "end": {
     "at_phrase": "In the system Chang created"
    },
-   "purpose": "The emptiness the laughter resonates in, as material rather than as a joke.",
+   "purpose": "The essayist's phrase set large over the emptiness it names - dispersing copper against cold points of light. Chang's name is not on screen beside it, which the attribution distinction requires. Set as a quote rather than a plate so three plates do not run together.",
    "visual_kind": "generated",
-   "component": "Plate",
-   "asset_id": "g02m",
+   "component": "PullQuote",
    "props": {
-    "caption": "“black hole humor”",
-    "maxWidth": 560
+    "quote": "“black hole humor”",
+    "backdrop": "g02m",
+    "backdropDim": 0.62
    }
   },
   {
@@ -206,53 +206,93 @@
    }
   },
   {
-   "shot_id": "s10_chain",
+   "shot_id": "s10a_one",
    "start": {
     "at_phrase": "One, in circulation"
    },
    "end": {
-    "at_phrase": "Five, inscribed on Bitcoin"
+    "at_phrase": "Two, removed"
    },
-   "purpose": "Light each transformation as it is spoken and keep it lit, so the finished chain is the argument rather than a travelling highlight. Carries a dimmed backdrop because a diagram holding one state for 7.6s reads as a still picture to the no-static-passage gate - a caption change alone is too few pixels to count as movement.",
-   "visual_kind": "code",
-   "component": "ProcessChain",
+   "purpose": "Transformation one as the thing itself: a cent in circulation, worth what the Treasury says.",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "a01",
    "props": {
-    "nodes": [
+    "caption": "the state decides",
+    "maxWidth": 499,
+    "backdrop": "a03",
+    "backdropDim": 0.88
+   }
+  },
+  {
+   "shot_id": "s10b_two",
+   "start": {
+    "at_phrase": "Two, removed"
+   },
+   "end": {
+    "at_phrase": "Three, archivally"
+   },
+   "purpose": "Transformation two is a severing, not an object: the link between the coin and its assigned value breaks on the word 'subverted'.",
+   "visual_kind": "code",
+   "component": "Distinction",
+   "props": {
+    "items": [
      "in circulation",
-     "removed from circulation",
-     "archivally photographed",
-     "destroyed",
-     "inscribed on Bitcoin"
+     "removed from circulation"
     ],
+    "vertical": true,
     "states": [
      {
-      "at_phrase": "One, in circulation",
-      "active": 0,
+      "at_phrase": "Two, removed",
+      "linked": true,
+      "emphasise": 0,
       "caption": "the state decides"
      },
      {
-      "at_phrase": "Two, removed",
-      "active": 1,
+      "at_phrase": "that value assignment",
+      "linked": false,
+      "emphasise": 1,
       "caption": "the state is refused"
-     },
-     {
-      "at_phrase": "Three, archivally",
-      "active": 2,
-      "caption": "the photograph carries it"
-     },
-     {
-      "at_phrase": "Four, destroyed",
-      "active": 3,
-      "caption": "the object is gone"
-     },
-     {
-      "at_phrase": "its value made undefinable",
-      "active": 3,
-      "caption": "no assignable value"
      }
-    ],
-    "backdrop": "a03",
-    "backdropDim": 0.86
+    ]
+   }
+  },
+  {
+   "shot_id": "s10c_three",
+   "start": {
+    "at_phrase": "Three, archivally"
+   },
+   "end": {
+    "at_phrase": "Four, destroyed"
+   },
+   "purpose": "Transformation three shown as one of the archival photographs themselves - CENT #3981, the image carrying what the object no longer can.",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "a03",
+   "props": {
+    "caption": "the photograph carries it",
+    "maxWidth": 620,
+    "backdrop": "g01",
+    "backdropDim": 0.9
+   }
+  },
+  {
+   "shot_id": "s10d_four",
+   "start": {
+    "at_phrase": "Four, destroyed"
+   },
+   "end": {
+    "at_phrase": "Five, inscribed on Bitcoin"
+   },
+   "purpose": "Transformation four as material: copper as particulate, the coin no longer a coin. Carries a motion backdrop: a still plate on black holds the picture still past the 4s limit.",
+   "visual_kind": "generated",
+   "component": "Plate",
+   "asset_id": "g01",
+   "props": {
+    "caption": "no assignable value",
+    "maxWidth": 560,
+    "backdrop": "g02m",
+    "backdropDim": 0.88
    }
   },
   {
@@ -261,9 +301,9 @@
     "at_phrase": "Five, inscribed on Bitcoin"
    },
    "end": {
-    "at_phrase": "CENTS is a becoming"
+    "at_phrase": "as the objects are"
    },
-   "purpose": "Show the fifth transformation as what it actually was: TEN THOUSAND cents, each inscribed on its own sat, then priced by whoever holds them. The first cut put the copper Block under this line, which reads as though the one block were the thing inscribed.",
+   "purpose": "Transformation five as TEN THOUSAND inscriptions, one per sat - not one object inscribed.",
    "visual_kind": "code",
    "component": "FieldScan",
    "props": {
@@ -274,25 +314,35 @@
      {
       "at_phrase": "Five, inscribed on Bitcoin",
       "markedVisible": false,
-      "scanned": 0.3,
+      "scanned": 0.35,
       "caption": "each penny inscribed on a sat",
       "readout": "10,000"
      },
      {
-      "at_phrase": "as the objects are",
-      "markedVisible": true,
-      "scanned": 0.7,
-      "caption": "a permanent set of 10,000",
-      "readout": "10,000"
-     },
-     {
-      "at_phrase": "every day on the open",
+      "at_phrase": "its value continually",
       "markedVisible": true,
       "scanned": 1.0,
-      "caption": "priced by whoever holds it",
-      "readout": "indeterminate"
+      "caption": "a permanent set of 10,000",
+      "readout": "10,000"
      }
     ]
+   }
+  },
+  {
+   "shot_id": "s11b_market",
+   "start": {
+    "at_phrase": "as the objects are"
+   },
+   "end": {
+    "at_phrase": "CENTS is a becoming"
+   },
+   "purpose": "The trading itself, as it actually appears: members of the set listed with their numbers and their prices in bitcoin.",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "a13",
+   "props": {
+    "caption": "priced by whoever holds it",
+    "maxWidth": 1000
    }
   },
   {

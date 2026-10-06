@@ -1,7 +1,7 @@
 {
- "generated_at": "2026-10-06T18:31:45",
+ "generated_at": "2026-10-06T19:18:01",
  "essay": {
-  "title": "CENTS & digital objecthood",
+  "title": "CENTS principles",
   "subtitle": "an introduction to the primary concepts of CENTS by Rutherford Chang",
   "author": "shibboleth",
   "source": "https://medium.com/@shibboleth88/cents-digital-conceptual-art-258b836a16a1",
@@ -11,7 +11,7 @@
   "alignment_is_fixture": false,
   "model": "mlx-community/whisper-large-v3-turbo",
   "audio": "public/vo.wav",
-  "duration_s": 128.78,
+  "duration_s": 127.24,
   "words": 237
  },
  "canvas": {
@@ -19,11 +19,11 @@
   "height": 1920,
   "fps": 30
  },
- "ledger_sha256": "cbe67abf72018a736e51ed091a4edbf1baba97f04e69fec08b05723f5f538fc5",
+ "ledger_sha256": "d8eb105325ee6af45e48c2476a3fc73b36451331f3461c2a398460a1d72795f8",
  "shots": [
   {
    "shot_id": "s01_title",
-   "purpose": "Name the film over the object it is about, while the first line states the project's origin.",
+   "purpose": "Name the film over the object it is about, while the first line states the project's origin. Titled 'CENTS principles': the essay's objecthood argument is a separate film, not a section of this one.",
    "visual_kind": "generated",
    "component": "TitleCard",
    "asset_id": null,
@@ -114,10 +114,10 @@
   },
   {
    "shot_id": "s08_humor",
-   "purpose": "The emptiness the laughter resonates in, as material rather than as a joke.",
+   "purpose": "The essayist's phrase set large over the emptiness it names - dispersing copper against cold points of light. Chang's name is not on screen beside it, which the attribution distinction requires. Set as a quote rather than a plate so three plates do not run together.",
    "visual_kind": "generated",
-   "component": "Plate",
-   "asset_id": "g02m",
+   "component": "PullQuote",
+   "asset_id": null,
    "start": {
     "at_phrase": "Chang brings a kind"
    },
@@ -139,13 +139,52 @@
    }
   },
   {
-   "shot_id": "s10_chain",
-   "purpose": "Light each transformation as it is spoken and keep it lit, so the finished chain is the argument rather than a travelling highlight. Carries a dimmed backdrop because a diagram holding one state for 7.6s reads as a still picture to the no-static-passage gate - a caption change alone is too few pixels to count as movement.",
-   "visual_kind": "code",
-   "component": "ProcessChain",
-   "asset_id": null,
+   "shot_id": "s10a_one",
+   "purpose": "Transformation one as the thing itself: a cent in circulation, worth what the Treasury says.",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "a01",
    "start": {
     "at_phrase": "One, in circulation"
+   },
+   "end": {
+    "at_phrase": "Two, removed"
+   }
+  },
+  {
+   "shot_id": "s10b_two",
+   "purpose": "Transformation two is a severing, not an object: the link between the coin and its assigned value breaks on the word 'subverted'.",
+   "visual_kind": "code",
+   "component": "Distinction",
+   "asset_id": null,
+   "start": {
+    "at_phrase": "Two, removed"
+   },
+   "end": {
+    "at_phrase": "Three, archivally"
+   }
+  },
+  {
+   "shot_id": "s10c_three",
+   "purpose": "Transformation three shown as one of the archival photographs themselves - CENT #3981, the image carrying what the object no longer can.",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "a03",
+   "start": {
+    "at_phrase": "Three, archivally"
+   },
+   "end": {
+    "at_phrase": "Four, destroyed"
+   }
+  },
+  {
+   "shot_id": "s10d_four",
+   "purpose": "Transformation four as material: copper as particulate, the coin no longer a coin. Carries a motion backdrop: a still plate on black holds the picture still past the 4s limit.",
+   "visual_kind": "generated",
+   "component": "Plate",
+   "asset_id": "g01",
+   "start": {
+    "at_phrase": "Four, destroyed"
    },
    "end": {
     "at_phrase": "Five, inscribed on Bitcoin"
@@ -153,12 +192,25 @@
   },
   {
    "shot_id": "s11_inscribed",
-   "purpose": "Show the fifth transformation as what it actually was: TEN THOUSAND cents, each inscribed on its own sat, then priced by whoever holds them. The first cut put the copper Block under this line, which reads as though the one block were the thing inscribed.",
+   "purpose": "Transformation five as TEN THOUSAND inscriptions, one per sat - not one object inscribed.",
    "visual_kind": "code",
    "component": "FieldScan",
    "asset_id": null,
    "start": {
     "at_phrase": "Five, inscribed on Bitcoin"
+   },
+   "end": {
+    "at_phrase": "as the objects are"
+   }
+  },
+  {
+   "shot_id": "s11b_market",
+   "purpose": "The trading itself, as it actually appears: members of the set listed with their numbers and their prices in bitcoin.",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "a13",
+   "start": {
+    "at_phrase": "as the objects are"
    },
    "end": {
     "at_phrase": "CENTS is a becoming"
@@ -193,18 +245,18 @@
  ],
  "exports": {
   "clean.mp4": {
-   "sha256": "f3de0e97dd2c50e183bcf4571cdcee81e2fe230394ae873a9018d5070cfc0df5",
-   "bytes": 59089735,
-   "duration_s": 128.768,
-   "frames": 3863,
+   "sha256": "6c561cd0f3e81ab829b73a673d899a70e9a0ed0f4c70c0424f928f8d88c0ce07",
+   "bytes": 63070076,
+   "duration_s": 127.253,
+   "frames": 3817,
    "size": "1080x1920",
    "fps": "30/1"
   },
   "captioned.mp4": {
-   "sha256": "e07724236f1c92ef35e63f2cc58731f221f271446f1d31d985d64df100ba4ba4",
-   "bytes": 58981410,
-   "duration_s": 128.768,
-   "frames": 3863,
+   "sha256": "8ce6c9371463a21eec637b58bb7d627f42b7d70dbe6630e6c2a8cf6efce0a2b0",
+   "bytes": 63013789,
+   "duration_s": 127.253,
+   "frames": 3817,
    "size": "1080x1920",
    "fps": "30/1"
   }
@@ -212,11 +264,11 @@
  "gates": {
   "exports not stale": {
    "verdict": "pass",
-   "detail": "all 3 exports are newer than captions/cues.json"
+   "detail": "all 3 exports are newer than timeline/timeline.json"
   },
   "visual mix": {
    "verdict": "pass",
-   "detail": "13 shots, mix {'generated': 4, 'code': 6, 'real': 3}, filler 31%"
+   "detail": "17 shots, mix {'generated': 5, 'code': 6, 'real': 6}, filler 29%"
   },
   "real alignment": {
    "verdict": "pass",
@@ -228,11 +280,11 @@
   },
   "captioned format": {
    "verdict": "pass",
-   "detail": "1080x1920 @30fps, 3863 frames, 128.77s, audio present"
+   "detail": "1080x1920 @30fps, 3817 frames, 127.25s, audio present"
   },
   "black tail": {
    "verdict": "pass",
-   "detail": "tail is not black (peak luma 184 over last 14 frames)"
+   "detail": "tail is not black (peak luma 181 over last 14 frames)"
   },
   "frozen tail": {
    "verdict": "pass",
@@ -240,15 +292,15 @@
   },
   "parity": {
    "verdict": "pass",
-   "detail": "audio streams identical, durations match (128.77s)"
+   "detail": "audio streams identical, durations match (127.25s)"
   },
   "safe area": {
    "verdict": "pass",
-   "detail": "text present in 3794/3863 frames, all bands clear"
+   "detail": "text present in 3747/3817 frames, all bands clear"
   },
   "loudness": {
    "verdict": "pass",
-   "detail": "-16.37 LUFS, -4.47 dBTP"
+   "detail": "-16.38 LUFS, -4.46 dBTP"
   }
  },
  "releasable": true,

@@ -864,3 +864,42 @@ ignores punctuation and the replacement did not carry it back - and `cues.py`
 splits sentences on full stops, so the caption ran on into the next sentence.
 The replacement now inherits the trailing punctuation of what it replaces, with
 a control over the five shapes that matter.
+
+## Episode — five visuals, a retitle, and a tighter sentence (2026-10-06)
+
+17 shots, 127.24s, 18/18 gates. Still no new API spend; the one new asset is a
+screenshot the author supplied.
+
+**The two-second gap inside one sentence.** Whisper's word timings put the pause
+between "to his work," and "laughing" at 1.34s. The measured energy says 2.00s -
+and two seconds reads as a full stop in a sentence that has none. Cut to 0.46s.
+*The timings a recogniser reports are not a measurement of the audio; the audio
+is.* The cut was made on the energy, not the transcript.
+
+**Five transformations, five visuals.** The ProcessChain gave the five one
+picture between them. Now each gets its own, and the one that is not a picture
+is the interesting one: transformation two is a SEVERING, not an object, so it
+is the Distinction diagram with the link breaking on "subverted". A thing that
+happens should not be drawn as a thing that exists.
+
+**a13, the market screenshot.** Supplied by the author. Ingested with
+provenance, cropped to keep coin, id and price together - the restriction
+recorded on it is that a crop keeping the coins and losing the prices turns a
+market into a contact sheet. Note the policy line this sits beside: the film may
+never GENERATE a screenshot of a real interface, and this is a real one, which
+is exactly why it is usable.
+
+**Retitled "CENTS principles".** The essay is "CENTS & digital objecthood" and
+its objecthood argument is a separate film. The essay keeps its own title in the
+credits, so the film is titled for what it covers and the source is still named
+accurately.
+
+**Open: transformation three is standing in for itself.** It shows one of
+Chang's archival photographs because an archival photograph is what we have. The
+author has an image of the photography SETUP, which is the better picture -
+process rather than product. Recorded as interim in the shot review rather than
+quietly accepted.
+
+**Open: the penultimate-to-final transition.** The film goes from the market to
+"CENTS is a becoming" with nothing between. Adding a line needs a recording, so
+it is a question for the author, not a fix.
