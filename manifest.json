@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-06T18:14:22",
+ "generated_at": "2026-10-06T18:31:45",
  "essay": {
   "title": "CENTS & digital objecthood",
   "subtitle": "an introduction to the primary concepts of CENTS by Rutherford Chang",
@@ -12,14 +12,14 @@
   "model": "mlx-community/whisper-large-v3-turbo",
   "audio": "public/vo.wav",
   "duration_s": 128.78,
-  "words": 238
+  "words": 237
  },
  "canvas": {
   "width": 1080,
   "height": 1920,
   "fps": 30
  },
- "ledger_sha256": "be286c5dae01199ad3beeeba9bd11ef0e0b4e083c4f7ef4b18f7ed36f480341b",
+ "ledger_sha256": "cbe67abf72018a736e51ed091a4edbf1baba97f04e69fec08b05723f5f538fc5",
  "shots": [
   {
    "shot_id": "s01_title",
@@ -152,26 +152,13 @@
    }
   },
   {
-   "shot_id": "s11_block",
-   "purpose": "The fifth transformation as the object it produced: the block, turning, inscribed on chain.",
-   "visual_kind": "real",
-   "component": "Plate",
-   "asset_id": "a05",
-   "start": {
-    "at_phrase": "Five, inscribed on Bitcoin"
-   },
-   "end": {
-    "at_phrase": "as the objects are"
-   }
-  },
-  {
-   "shot_id": "s12_market",
-   "purpose": "The set as a population being priced - scarce, fixed, and valued by whoever holds it.",
+   "shot_id": "s11_inscribed",
+   "purpose": "Show the fifth transformation as what it actually was: TEN THOUSAND cents, each inscribed on its own sat, then priced by whoever holds them. The first cut put the copper Block under this line, which reads as though the one block were the thing inscribed.",
    "visual_kind": "code",
    "component": "FieldScan",
    "asset_id": null,
    "start": {
-    "at_phrase": "as the objects are"
+    "at_phrase": "Five, inscribed on Bitcoin"
    },
    "end": {
     "at_phrase": "CENTS is a becoming"
@@ -206,16 +193,16 @@
  ],
  "exports": {
   "clean.mp4": {
-   "sha256": "add98b8e06b7fe0e4b67709b9dc26579b60c4cd2f6a329efe5dec50f5bf11b21",
-   "bytes": 61166050,
+   "sha256": "f3de0e97dd2c50e183bcf4571cdcee81e2fe230394ae873a9018d5070cfc0df5",
+   "bytes": 59089735,
    "duration_s": 128.768,
    "frames": 3863,
    "size": "1080x1920",
    "fps": "30/1"
   },
   "captioned.mp4": {
-   "sha256": "6b7f8600bf3b0f4e7c2686a6506d98230cf6e00c173636b39ee6a3b2a570f83f",
-   "bytes": 61175044,
+   "sha256": "e07724236f1c92ef35e63f2cc58731f221f271446f1d31d985d64df100ba4ba4",
+   "bytes": 58981410,
    "duration_s": 128.768,
    "frames": 3863,
    "size": "1080x1920",
@@ -225,11 +212,11 @@
  "gates": {
   "exports not stale": {
    "verdict": "pass",
-   "detail": "all 3 exports are newer than timeline/timeline.json"
+   "detail": "all 3 exports are newer than captions/cues.json"
   },
   "visual mix": {
    "verdict": "pass",
-   "detail": "14 shots, mix {'generated': 4, 'code': 6, 'real': 4}, filler 29%"
+   "detail": "13 shots, mix {'generated': 4, 'code': 6, 'real': 3}, filler 31%"
   },
   "real alignment": {
    "verdict": "pass",
@@ -261,7 +248,7 @@
   },
   "loudness": {
    "verdict": "pass",
-   "detail": "-16.44 LUFS, -4.46 dBTP"
+   "detail": "-16.37 LUFS, -4.47 dBTP"
   }
  },
  "releasable": true,

@@ -1,0 +1,11 @@
+{
+ "_what": "The speaker's own rulings on what was said, applied after reconciliation.",
+ "_why": "reconcile.py keeps the SPOKEN words wherever the recording departs from the script, which is right - an adlib must survive. But where the SCRIPT ITSELF was transcribed from the recogniser, both sources carry the same error and reconciliation has nothing to correct against. A recogniser cannot tell 'with an' from 'within'; only the speaker can.",
+ "_floor": "Every correction must match exactly once. A previous hand-keyed correction list was removed from this pipeline because it could not survive a non-deterministic recogniser; that objection was sound, and the answer is not to omit the list but to make a miss FAIL loudly instead of passing silently.",
+ "corrections": [
+  {"heard": "resonates with an emptiness",
+   "say": "resonates within emptiness",
+   "why": "the essay's phrase and the speaker's word; 'with an' and 'within' are acoustically all but identical, so the recogniser's reading is not evidence either way",
+   "by": "user", "at": "2026-10-06"}
+ ]
+}

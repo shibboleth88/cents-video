@@ -51,10 +51,10 @@
    "note": "spoken without the essay's comma"
   },
   {
-   "say": "Chang brings a kind of black hole humor to his work, laughing at this absurdity with a laughter that resonates with an emptiness.",
+   "say": "Chang brings a kind of black hole humor to his work, laughing at this absurdity with a laughter that resonates within emptiness.",
    "kind": "paraphrase",
    "span": "he brings what I call a “black hole humor” to the process — the kind of laughter that resonates within emptiness",
-   "note": "ATTRIBUTION: 'black hole humor' is the ESSAYIST'S coinage ('what I call'). The humor is credited to Chang, which the essay asserts; the naming is not. 'laughing at this absurdity' is the speaker's link to 'the absurdity of value ascription', which the essay names. Said 'resonates with an emptiness', not the essay's 'within emptiness'."
+   "note": "ATTRIBUTION: 'black hole humor' is the ESSAYIST'S coinage ('what I call'). The humor is credited to Chang, which the essay asserts; the naming is not. 'laughing at this absurdity' is the speaker's link to 'the absurdity of value ascription', which the essay names. The closing phrase is the essay's exactly - 'resonates within emptiness'. The recogniser heard 'with an emptiness' on both passes, and because this script was transcribed FROM the recogniser the reconciler had nothing to correct against; the speaker settled it. See script/corrections.json."
   },
   {
    "say": "In the system Chang created, every cent is passed through five transformations of value.",
@@ -697,6 +697,13 @@
    "verdict": "kept",
    "by": "claude",
    "note": "The essay compares collectors reading the set to words accruing significance in a canon. Said slightly differently - 'CENTS enters the canon' - it becomes a claim about the work's art-historical status that the essay never makes and that the film has no standing to make. On screen, 'canon' must not appear beside the work's title or any date."
+  },
+  {
+   "distinction": "the TEN THOUSAND cent inscriptions (one per sat) vs the ONE full-block inscription of the block's 3D model",
+   "where": "the fifth transformation is shown as a field of ten thousand, not as the Block. a05 (the Block) is not used in this cut: the narration never mentions the full-block inscription, so there is no line it can sit under without implying it is the thing that was inscribed.",
+   "verdict": "kept",
+   "by": "user",
+   "note": "Caught by the user on the first cut, where a05 sat under 'Five, inscribed on Bitcoin' captioned 'CENTS Block 839969'. Every gate was green: the caption was true of the image, the image was a real asset, and the narration was faithful. The error was in the PAIRING - a true picture under a true sentence, asserting a third thing that neither says."
   }
  ],
  "script_target": "SUPERSEDED BY THE RECORDING. The written script was 200 words / ~90s. What was recorded on 2026-10-06 is 239 words and, after take selection, 124.8s of voice (~128.8s with the 4s credit tail). The lines were expanded in performance; the brief needs restating or lines need cutting.",

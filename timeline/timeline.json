@@ -256,31 +256,14 @@
    }
   },
   {
-   "shot_id": "s11_block",
+   "shot_id": "s11_inscribed",
    "start": {
     "at_phrase": "Five, inscribed on Bitcoin"
    },
    "end": {
-    "at_phrase": "as the objects are"
-   },
-   "purpose": "The fifth transformation as the object it produced: the block, turning, inscribed on chain.",
-   "visual_kind": "real",
-   "component": "Plate",
-   "asset_id": "a05",
-   "props": {
-    "caption": "CENTS Block 839969",
-    "maxWidth": 616
-   }
-  },
-  {
-   "shot_id": "s12_market",
-   "start": {
-    "at_phrase": "as the objects are"
-   },
-   "end": {
     "at_phrase": "CENTS is a becoming"
    },
-   "purpose": "The set as a population being priced - scarce, fixed, and valued by whoever holds it.",
+   "purpose": "Show the fifth transformation as what it actually was: TEN THOUSAND cents, each inscribed on its own sat, then priced by whoever holds them. The first cut put the copper Block under this line, which reads as though the one block were the thing inscribed.",
    "visual_kind": "code",
    "component": "FieldScan",
    "props": {
@@ -289,9 +272,16 @@
     "markedFraction": 0.08,
     "states": [
      {
-      "at_phrase": "as the objects are",
+      "at_phrase": "Five, inscribed on Bitcoin",
       "markedVisible": false,
       "scanned": 0.3,
+      "caption": "each penny inscribed on a sat",
+      "readout": "10,000"
+     },
+     {
+      "at_phrase": "as the objects are",
+      "markedVisible": true,
+      "scanned": 0.7,
       "caption": "a permanent set of 10,000",
       "readout": "10,000"
      },

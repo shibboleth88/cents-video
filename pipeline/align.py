@@ -45,6 +45,42 @@ def transcribe(p: pathlib.Path, prompt: str | None, model: str) -> list[dict]:
     return [{"word": w["word"].strip(), "start": round(w["start"],3), "end": round(w["end"],3)}
             for w in words if w["word"].strip()]
 
+def apply_corrections(words: list[dict], path: pathlib.Path) -> list[dict]:
+    """Apply the speaker's rulings on what was said. See script/corrections.json.
+
+    Each correction must match exactly once. A correction that no longer matches
+    is a FAILURE, not a no-op: a silently-skipped correction is how a hand-keyed
+    list rots without anyone noticing.
+    """
+    if not path.exists(): return words
+    doc = json.loads(path.read_text())
+    out = list(words)
+    for c in doc.get("corrections", []):
+        want = [re.sub(r"[^a-z0-9]", "", t.lower()) for t in c["heard"].split()]
+        said = c["say"].split()
+        toks = [re.sub(r"[^a-z0-9]", "", w["word"].lower()) for w in out]
+        hits = [i for i in range(len(toks) - len(want) + 1) if toks[i:i + len(want)] == want]
+        if len(hits) != 1:
+            sys.exit(f"correction {c['heard']!r} matched {len(hits)} times, expected exactly 1 — "
+                     f"the recording or the recogniser changed; re-check it rather than ignoring it")
+        i = hits[0]; j = i + len(want)
+        t0, t1 = out[i]["start"], out[j - 1]["end"]
+        # Carry the replaced run's trailing punctuation onto the replacement.
+        # Matching ignores punctuation, so a correction otherwise silently eats
+        # the full stop — and cues.py splits sentences on it, so "emptiness."
+        # became "emptiness" and the caption ran on into the next sentence.
+        m = re.search(r"[^\w\u2019']+$", out[j - 1]["word"])
+        tail = m.group(0) if m else ""
+        if tail and not re.search(r"[^\w\u2019']$", said[-1]):
+            said = said[:-1] + [said[-1] + tail]
+        step = (t1 - t0) / max(1, len(said))
+        new = [{"word": w, "start": round(t0 + k * step, 3), "end": round(t0 + (k + 1) * step, 3)}
+               for k, w in enumerate(said)]
+        out = out[:i] + new + out[j:]
+        print(f"  CORRECTION @{t0}s  {c['heard']!r} -> {c['say']!r}  ({c['by']})")
+    return out
+
+
 def spelling_prompt(script: str) -> str:
     """A prompt of TERMS, not prose.
 
@@ -129,6 +165,8 @@ def main() -> int:
               f"the recording departs from the script")
         for d in spk:
             print(f"  ADLIB @{d['at']}s  said {d['heard']!r}  script had {d['script']!r}")
+
+    words = apply_corrections(words, ROOT/"script"/"corrections.json")
 
     noise = C.audit_transcript(words)
     if noise:

@@ -791,3 +791,76 @@ moved into the caption and the figure stands alone.
 credits needed four seconds of silence the recording does not contain, so the
 cleaned voice is padded by 4.0s before `public/vo.wav` - a gain-and-pad change
 that leaves every word time untouched, so the existing alignment stayed valid.
+
+## Episode — audio re-fit and two corrections (2026-10-06)
+
+### The EQ was fitted to a different microphone, and nobody had measured it
+
+`audio_clean.sh` carried a comment saying the EQ was fitted to one microphone
+and should be re-fitted for another. It never had been. Measured on this
+recording, against its own 630-1000Hz band, the inherited chain was **adding
++4.6dB below 100Hz and cutting -4.3dB at 6-10kHz** - making a phone-recorded,
+proximity-heavy voice boomier and duller still.
+
+Re-fitted against the RAW CAPTURE: low end -3.9dB, presence +3.5dB, and SNR in
+200Hz-8kHz improved from 30.5dB to 35.0dB. Better signal-to-noise with LESS
+denoising, because most of what the old chain was removing at HF was voice and
+most of what it was leaving at LF was rumble.
+
+**Two failed predictions before the one that held, and the second failure was
+the instructive one.** I predicted the change against the OLD CHAIN's output and
+missed twice - the first fit moved twice as far as predicted, the second nearly
+as far. The reference was wrong. The old chain is not a baseline of correctness;
+it is the thing being corrected. Measured against the raw capture the same fit
+lands inside the predicted band on every number.
+
+*Failure-shape: a delta is meaningless without saying what it is a delta FROM,
+and the tempting reference is the thing you are replacing.*
+
+Also: an absolute noise reading in quiet frames said noise rose 1.9dB, while SNR
+said it improved 4.5dB. Both were true of different quantities. SNR is the one
+that answers "is this cleaner", because the files are at different levels.
+
+### A true picture under a true sentence, asserting a third thing
+
+The user caught the fifth transformation sitting over a Plate of the copper
+Block, captioned "CENTS Block 839969". Every gate was green and nothing on
+screen was false: the caption was true of the image, the image was a real
+asset, the narration was faithful to the essay. But "Five, inscribed on
+Bitcoin" over a picture of the Block says *the Block was the thing inscribed*,
+when in fact **ten thousand cents were inscribed, one per sat**, and the block's
+3D model was a separate full-block inscription the film never mentions.
+
+*Failure-shape: the error was in the PAIRING. Image and sentence were each
+checkable and each checked out; the claim they make together was asserted by
+neither and verified by nothing.* No gate in this pipeline reads a picture
+against a sentence - `review_shots.py` pairs them for a human precisely because
+nothing else can.
+
+Replaced with a FieldScan of ten thousand units, each inscribed, then repriced.
+`a05` is now unused: the narration never mentions the full-block inscription, so
+there is no line it can sit under without implying it is the thing inscribed.
+
+### "within emptiness", and the hazard of a script derived from its own transcript
+
+The speaker said the essay's phrase, "resonates within emptiness". Both
+recogniser passes heard "with an emptiness" - acoustically all but identical.
+Reconciliation could not help, because **this script was transcribed FROM the
+recogniser**, so both sources carried the same error and there was nothing to
+correct against.
+
+*Failure-shape: a reconciler compares two sources. Deriving one from the other
+collapses it into a single source wearing two names, and it goes on reporting
+agreement.*
+
+`script/corrections.json` now records the speaker's rulings, applied after
+reconciliation. The pipeline previously removed a hand-keyed correction list
+because it "could not survive a non-deterministic recogniser" - a sound
+objection whose answer is not to omit the list but to make a miss FAIL: every
+correction must match exactly once or the run stops.
+
+Its first version silently ate the full stop on "emptiness.", because matching
+ignores punctuation and the replacement did not carry it back - and `cues.py`
+splits sentences on full stops, so the caption ran on into the next sentence.
+The replacement now inherits the trailing punctuation of what it replaces, with
+a control over the five shapes that matter.

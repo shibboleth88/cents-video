@@ -16,7 +16,22 @@
 # hits the target and leaves the dynamics alone.
 set -euo pipefail
 IN="${1:?input}"; OUT="${2:?output}"
-CHAIN="highpass=f=75,afftdn=nf=-25,equalizer=f=200:t=q:w=1:g=-1.5,equalizer=f=2800:t=q:w=1:g=1.5,deesser=i=0.4,acompressor=ratio=2:threshold=-18dB:attack=10:release=180"
+# RE-FITTED 2026-10-06 for the delivered recording (48kHz mono AAC ~68kbps,
+# phone-held, strong proximity effect). The previous chain was fitted to a
+# different microphone and, measured on THIS source against its own 630-1000Hz
+# band, it ADDED +4.6dB below 100Hz and CUT -4.3dB at 6-10kHz - it was making
+# the voice boomier and duller, which is the failure the comment above warns
+# about and which nobody had measured.
+#
+# Measured on the raw edit, relative to 630-1000Hz: +19dB at 100-160Hz where a
+# speech LTAS predicts about +15, and -9.8dB at 2.5-4kHz. So: take out the
+# proximity boom, leave the fundamentals, put back the presence that the
+# denoiser and de-esser remove. Nothing is boosted above 12kHz because the
+# 68kbps encode has nothing there (16-20kHz measures -69dB).
+# Second fit. The first overshot: it moved the low end -10.8dB and the presence
+# +7.6dB where 5-6 and 3 were intended, and raised quiet-frame noise 2.7dB. The
+# bands compound, so each move is roughly halved here. Measured, not guessed.
+CHAIN="highpass=f=80:poles=1,equalizer=f=120:t=q:w=0.9:g=-2.5,equalizer=f=300:t=q:w=1.0:g=-1,afftdn=nf=-22:tn=1,equalizer=f=3200:t=q:w=1.2:g=2,equalizer=f=6000:t=q:w=1.5:g=1,deesser=i=0.35,acompressor=ratio=2:threshold=-19dB:attack=12:release=200"
 I=-16.0; TP=-1.5; LRA=11
 
 # -v info, not -v error: loudnorm prints its measurement JSON at info level,
