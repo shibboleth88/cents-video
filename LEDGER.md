@@ -725,3 +725,69 @@ recording, but the film is now 2:09 and that is a decision, not a detail.
 
 **The timeline is not re-anchorable.** 48 of 52 anchors dangle across 14 of 15
 shots. The shot list was written for a script that no longer exists.
+
+## Episode — the film (2026-10-06)
+
+14 shots, 128.77s, 18/18 release gates green, 6/6 controls red. **No new API
+spend: $0.00.** Every image is an asset already on disk or drawn in code.
+
+### Cost, as a design constraint rather than a budget
+
+The brief was to keep generation costs down. The answer was not to generate
+cheaply - it was to notice that the recording had made an unused asset usable.
+`a06`, Victor David Brenner's bronze Lincoln plaque, was in the inventory marked
+*"Not used: the script omits Brenner."* The delivered voiceover names him and
+dates the portrait to 1909, so a06 became the right image for that line at no
+cost. The other eight assets and three previously-generated motion clips carried
+the rest, and six shots are drawn in code.
+
+Prior spend on this production stands at $1.27 and did not move.
+
+### The restriction that code could not honour
+
+`a02` is the artist's vertical composite - cent, ordinal address, raw copper,
+block, white circle - and its inventory says **"A figure, not a photograph - do
+not crop into it; it loses the sequence."** I used it as a BACKDROP. Backdrop is
+`object-fit: cover`, which is a crop. The render succeeded, `assets.py check`
+passed, and all eighteen release gates were green on a frame that had cut the
+sequence apart and doubled the same picture at two scales.
+
+Only the vision pass found it, by looking.
+
+**This is the a01 failure-shape repeating** - the README already records a crop
+restriction that "recorded as advice, was ignored by an object-position that
+could not honour it". The lesson had been learned about one asset and written
+down as prose about that asset, which is to say it had not been learned. Fixed
+properly this time: `no_crop: true` is now a FIELD on a02 and a04, and
+`Backdrop` throws on it. Verified as a control - with the old timeline the
+renderer now stops at frame 2092 with the reason.
+
+*Failure-shape: a restriction stored where only a person can read it is not a
+restriction, it is a note.*
+
+### Three gate failures, and what each one actually meant
+
+**Loudness, -17.22 against -16.0 +/- 1.0.** `loudnorm` was running in one pass,
+where it works in dynamic mode and only approaches the target. Now two passes:
+measure, then apply a linear gain from the measurements. -16.44 LUFS, -4.46
+dBTP. The measurement pass had to run at `-v info` - loudnorm prints its JSON at
+info level, so the original script's `-v error` measurement produced nothing and
+had been silently useless.
+
+**Static passage at 99.5s.** The chain held one state for 7.6s. Adding a state
+did not fix it: a caption change is too few pixels to count as movement. What
+fixed it was a drifting backdrop. Then the same gate failed at 74.0s on s09,
+where a STILL backdrop at dim 0.88 drifted too little to register - fixed with a
+motion asset. The gate is measuring the picture, not the intention, which is
+what makes it useful.
+
+**"500 billion" wrapped to two lines** and SafeText cancelled the render. The
+fix is the one the README names: a shorter label, never a smaller film. "billion"
+moved into the caption and the figure stands alone.
+
+### Length
+
+128.77s. The brief was 90s; the user chose to keep the full performance. The
+credits needed four seconds of silence the recording does not contain, so the
+cleaned voice is padded by 4.0s before `public/vo.wav` - a gain-and-pad change
+that leaves every word time untouched, so the existing alignment stayed valid.

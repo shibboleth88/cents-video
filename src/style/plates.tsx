@@ -5,7 +5,7 @@ import { Imagery, SafeText } from "./Safe";
 import { useDrift, useEntrance, useShotFade } from "./motion";
 
 export type Asset = {
-  path: string; motion: boolean; subject: string;
+  path: string; motion: boolean; subject: string; no_crop?: boolean;
   width?: number; height?: number; low_res?: boolean; max_display_width?: number | null;
   staged_as?: string; staged_width?: number; staged_height?: number; frames?: number; duration?: number;
 };
@@ -49,6 +49,13 @@ const Media: React.FC<{ asset: Asset; style?: React.CSSProperties }> = ({ asset,
 export const Backdrop: React.FC<{ asset: Asset; focus?: string; dim?: number; seed?: string }> = ({
   asset, focus = "50% 50%", dim = 0.62, seed = "backdrop",
 }) => {
+  // A backdrop is object-fit: cover, which is a crop. An asset whose inventory
+  // says it must not be cropped therefore cannot be one — a02 is a FIGURE whose
+  // sequence is the content, and covering it cut the sequence apart while every
+  // gate stayed green. The restriction was recorded in prose, which is to say it
+  // was recorded where only a person could honour it.
+  if (asset.no_crop)
+    throw new Error(`${asset.path} is marked no_crop; a backdrop crops it. Use Plate, which fits rather than covers.`);
   const o = useShotFade();
   // A still gets a camera move; a clip that already moves does not. Drifting
   // generated motion stacks two camera moves on one shot and reads as a mistake.

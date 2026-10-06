@@ -993,12 +993,12 @@
   {
    "word": "undefinable.",
    "start": 100.18,
-   "end": 101.3
+   "end": 101.28
   },
   {
    "word": "Five,",
-   "start": 102.24,
-   "end": 102.74
+   "start": 102.22,
+   "end": 102.72
   },
   {
    "word": "inscribed",
@@ -1017,7 +1017,7 @@
   },
   {
    "word": "its",
-   "start": 104.82,
+   "start": 105.02,
    "end": 105.52
   },
   {
@@ -1063,11 +1063,11 @@
   {
    "word": "objects",
    "start": 110.54,
-   "end": 111.04
+   "end": 111.02
   },
   {
    "word": "are",
-   "start": 111.04,
+   "start": 111.02,
    "end": 111.46
   },
   {
@@ -1118,11 +1118,11 @@
   {
    "word": "a",
    "start": 115.84,
-   "end": 116.0
+   "end": 115.98
   },
   {
    "word": "becoming,",
-   "start": 116.0,
+   "start": 115.98,
    "end": 116.38
   },
   {
@@ -1133,11 +1133,11 @@
   {
    "word": "gesture",
    "start": 117.48,
-   "end": 117.98
+   "end": 117.96
   },
   {
    "word": "that",
-   "start": 117.98,
+   "start": 117.96,
    "end": 119.02
   },
   {
@@ -1178,20 +1178,20 @@
   {
    "word": "participants",
    "start": 122.54,
-   "end": 123.26
+   "end": 123.24
   },
   {
    "word": "through",
-   "start": 123.26,
+   "start": 123.24,
    "end": 124.1
   },
   {
    "word": "time.",
    "start": 124.1,
-   "end": 124.36
+   "end": 124.46
   }
  ],
- "duration": 124.78,
+ "duration": 128.78,
  "source_audio": "public/vo.wav",
  "model": "mlx-community/whisper-large-v3-turbo",
  "divergences": [

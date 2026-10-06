@@ -1,216 +1,203 @@
 {
- "generated_at": "2026-10-04T16:17:05",
+ "generated_at": "2026-10-06T18:14:22",
  "essay": {
   "title": "CENTS & digital objecthood",
-  "author": "shibboleth",
   "subtitle": "an introduction to the primary concepts of CENTS by Rutherford Chang",
+  "author": "shibboleth",
   "source": "https://medium.com/@shibboleth88/cents-digital-conceptual-art-258b836a16a1",
   "version": "medium 2025-10-30"
  },
  "timing_source": {
   "alignment_is_fixture": false,
-  "model": "macos-say+measured",
+  "model": "mlx-community/whisper-large-v3-turbo",
   "audio": "public/vo.wav",
-  "duration_s": 129.693,
-  "words": 299
+  "duration_s": 128.78,
+  "words": 238
  },
  "canvas": {
   "width": 1080,
   "height": 1920,
   "fps": 30
  },
- "ledger_sha256": "19f82ac3da8dbeb815d11cf222adf0602dd7a86d571d747d076a5ed61b3e560e",
+ "ledger_sha256": "be286c5dae01199ad3beeeba9bd11ef0e0b4e083c4f7ef4b18f7ed36f480341b",
  "shots": [
   {
-   "shot_id": "s01_gap",
-   "purpose": "Open on the discrepancy the project starts from, as two values that do not meet. The coin itself sits behind the figure.",
-   "visual_kind": "code",
-   "component": "Distinction",
+   "shot_id": "s01_title",
+   "purpose": "Name the film over the object it is about, while the first line states the project's origin.",
+   "visual_kind": "generated",
+   "component": "TitleCard",
    "asset_id": null,
    "start": {
     "at_start": true
    },
    "end": {
-    "at_phrase": "Rutherford Chang's CENTS begins"
+    "at_phrase": "What was one cent to the US"
    }
   },
   {
-   "shot_id": "s02_title",
-   "purpose": "Name the work and credit the essay and its author at first title. CENT #3981 behind the title, so the work is seen before it is described.",
+   "shot_id": "s02_gap",
+   "purpose": "Hold the two values apart as the narration names them, so the discrepancy is seen rather than asserted.",
    "visual_kind": "code",
-   "component": "TitleCard",
+   "component": "Distinction",
    "asset_id": null,
    "start": {
-    "at_phrase": "Rutherford Chang's CENTS begins"
+    "at_phrase": "What was one cent to the US"
    },
    "end": {
-    "at_phrase": "Over several years"
+    "at_phrase": "Nothing had been sold"
    }
   },
   {
-   "shot_id": "s03_cull",
-   "purpose": "Show the scale of the sort: a hundred thousand pennies reduced to ten thousand pre-1982 coppers.",
-   "visual_kind": "code",
-   "component": "FieldScan",
+   "shot_id": "s03_remained",
+   "purpose": "The hinge: the coin's function is gone and the object persists on context alone. The essay's own phrase for that state, over dissolving material.",
+   "visual_kind": "generated",
+   "component": "PullQuote",
    "asset_id": null,
    "start": {
-    "at_phrase": "Over several years"
+    "at_phrase": "Nothing had been sold"
    },
    "end": {
-    "at_phrase": "Then he melted them"
+    "at_phrase": "The readymade he chose"
    }
   },
   {
-   "shot_id": "s04_process",
-   "purpose": "The making, in the order the narration gives it, ending on the master object.",
-   "visual_kind": "code",
-   "component": "ProcessChain",
-   "asset_id": null,
-   "start": {
-    "at_phrase": "Then he melted them"
-   },
-   "end": {
-    "at_phrase": "The block itself became"
-   }
-  },
-  {
-   "shot_id": "s04b_block",
-   "purpose": "Show the digital Block itself at the moment it is named.",
+   "shot_id": "s04_readymade",
+   "purpose": "Show the readymade itself, at its own size, at the moment it is named.",
    "visual_kind": "real",
    "component": "Plate",
-   "asset_id": "a05",
+   "asset_id": "a01",
    "start": {
-    "at_phrase": "The block itself became"
+    "at_phrase": "The readymade he chose"
    },
    "end": {
-    "at_phrase": "One inscription, filling"
+    "at_phrase": "More than 500"
    }
   },
   {
-   "shot_id": "s04c_fullblock",
-   "purpose": "Show what a full-block inscription looks like in the chain: the transactions a block would hold, beside the one inscription that filled it instead.",
+   "shot_id": "s05_scale",
+   "purpose": "Give the number a size the voice cannot: five hundred billion as a figure that counts up.",
+   "visual_kind": "code",
+   "component": "StatReveal",
+   "asset_id": null,
+   "start": {
+    "at_phrase": "More than 500"
+   },
+   "end": {
+    "at_phrase": "each with the portrait"
+   }
+  },
+  {
+   "shot_id": "s06_brenner",
+   "purpose": "Credit the portrait to Brenner by showing his original plaque, not the coin - the artwork, not its reproduction.",
    "visual_kind": "real",
    "component": "Plate",
-   "asset_id": "a04",
+   "asset_id": "a06",
    "start": {
-    "at_phrase": "One inscription, filling"
+    "at_phrase": "each with the portrait"
    },
    "end": {
-    "at_phrase": "He released all ten thousand"
+    "at_phrase": "It is absurd that a nation\u2019s"
    }
   },
   {
-   "shot_id": "s04d_release",
-   "purpose": "Close the making on the release, with the chain completed.",
+   "shot_id": "s07_absurdity",
+   "purpose": "Put the two absurdities in one frame - worthless and priceless - and link them on 'yet here we are'.",
    "visual_kind": "code",
-   "component": "ProcessChain",
+   "component": "Distinction",
    "asset_id": null,
    "start": {
-    "at_phrase": "He released all ten thousand"
+    "at_phrase": "It is absurd that a nation\u2019s"
    },
    "end": {
-    "at_phrase": "Every Cent passes through five transformations"
+    "at_phrase": "Chang brings a kind"
    }
   },
   {
-   "shot_id": "s05_transformations",
-   "purpose": "The five transformations of value, one per narrated line. This is the essay's first list of five.",
-   "visual_kind": "code",
-   "component": "ProcessChain",
-   "asset_id": null,
+   "shot_id": "s08_humor",
+   "purpose": "The emptiness the laughter resonates in, as material rather than as a joke.",
+   "visual_kind": "generated",
+   "component": "Plate",
+   "asset_id": "g02m",
    "start": {
-    "at_phrase": "Every Cent passes through five transformations"
+    "at_phrase": "Chang brings a kind"
    },
    "end": {
-    "at_phrase": "And it arrives as five natures"
+    "at_phrase": "In the system Chang created"
    }
   },
   {
-   "shot_id": "s06a_states",
-   "purpose": "The essay's own figure of the object's states, before the five are named.",
+   "shot_id": "s09_states",
+   "purpose": "Show the whole series at once before the chain walks it, using the artist's own composite. The backdrop is a MOTION asset (g01's drift at this dim was too small to register as movement) and is NOT a02: a02 is a figure marked no_crop, and a backdrop covers, which cut its sequence apart and doubled the same picture at two scales.",
    "visual_kind": "real",
    "component": "Plate",
    "asset_id": "a02",
    "start": {
-    "at_phrase": "And it arrives as five natures"
+    "at_phrase": "In the system Chang created"
    },
    "end": {
-    "at_phrase": "A unit of currency"
+    "at_phrase": "One, in circulation"
    }
   },
   {
-   "shot_id": "s06_natures",
-   "purpose": "The essay's SECOND list of five - what a Cent simultaneously is. Kept visually distinct from the transformations so the two are not read as one list.",
+   "shot_id": "s10_chain",
+   "purpose": "Light each transformation as it is spoken and keep it lit, so the finished chain is the argument rather than a travelling highlight. Carries a dimmed backdrop because a diagram holding one state for 7.6s reads as a still picture to the no-static-passage gate - a caption change alone is too few pixels to count as movement.",
    "visual_kind": "code",
-   "component": "Simultaneity",
+   "component": "ProcessChain",
    "asset_id": null,
    "start": {
-    "at_phrase": "A unit of currency"
+    "at_phrase": "One, in circulation"
    },
    "end": {
-    "at_phrase": "Conceptual art broke from the object"
+    "at_phrase": "Five, inscribed on Bitcoin"
    }
   },
   {
-   "shot_id": "s07_objecthood",
-   "purpose": "The split the essay traces, drawn as a link that opens and stays open, with blockchain named as what finally gives the digital discrete boundaries.",
+   "shot_id": "s11_block",
+   "purpose": "The fifth transformation as the object it produced: the block, turning, inscribed on chain.",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "a05",
+   "start": {
+    "at_phrase": "Five, inscribed on Bitcoin"
+   },
+   "end": {
+    "at_phrase": "as the objects are"
+   }
+  },
+  {
+   "shot_id": "s12_market",
+   "purpose": "The set as a population being priced - scarce, fixed, and valued by whoever holds it.",
    "visual_kind": "code",
-   "component": "Distinction",
+   "component": "FieldScan",
    "asset_id": null,
    "start": {
-    "at_phrase": "Conceptual art broke from the object"
+    "at_phrase": "as the objects are"
    },
    "end": {
-    "at_phrase": "CENTS holds that whole arc"
+    "at_phrase": "CENTS is a becoming"
    }
   },
   {
-   "shot_id": "s08a_not",
-   "purpose": "Set aside the visible manifestations before naming the medium, as a figure rather than as the same words the caption is already speaking.",
-   "visual_kind": "code",
-   "component": "Distinction",
-   "asset_id": null,
-   "start": {
-    "at_phrase": "CENTS holds that whole arc"
-   },
-   "end": {
-    "at_phrase": "Its medium is the gesture"
-   }
-  },
-  {
-   "shot_id": "s08b_gesture",
-   "purpose": "The thesis phrase alone, with the caption carrying the full sentence.",
-   "visual_kind": "code",
+   "shot_id": "s13_becoming",
+   "purpose": "Close on the coin the film opened on, under the essay's own words for what the work finally is.",
+   "visual_kind": "generated",
    "component": "PullQuote",
    "asset_id": null,
    "start": {
-    "at_phrase": "Its medium is the gesture"
+    "at_phrase": "CENTS is a becoming"
    },
    "end": {
-    "at_phrase": "A digital object is simultaneously"
+    "after_phrase": "participants through time"
    }
   },
   {
-   "shot_id": "s09_ending",
-   "purpose": "The ending as a visual expression of the final idea, not a title card: the three readings held together.",
-   "visual_kind": "code",
-   "component": "Distinction",
-   "asset_id": null,
-   "start": {
-    "at_phrase": "A digital object is simultaneously"
-   },
-   "end": {
-    "after_phrase": "intersubjective reality of its presence"
-   }
-  },
-  {
-   "shot_id": "s10_credits",
-   "purpose": "Brief credits after the voice has stopped.",
+   "shot_id": "s14_credits",
+   "purpose": "Credit the essay and the artwork, in the silence left for them.",
    "visual_kind": "code",
    "component": "Credits",
    "asset_id": null,
    "start": {
-    "after_phrase": "intersubjective reality of its presence"
+    "after_phrase": "participants through time"
    },
    "end": {
     "at_end": true
@@ -219,18 +206,18 @@
  ],
  "exports": {
   "clean.mp4": {
-   "sha256": "58f46122fcaf9c69d0d44e41450019ff9aa75beb07764be49d8231a23c42bdda",
-   "bytes": 28100055,
-   "duration_s": 129.707,
-   "frames": 3891,
+   "sha256": "add98b8e06b7fe0e4b67709b9dc26579b60c4cd2f6a329efe5dec50f5bf11b21",
+   "bytes": 61166050,
+   "duration_s": 128.768,
+   "frames": 3863,
    "size": "1080x1920",
    "fps": "30/1"
   },
   "captioned.mp4": {
-   "sha256": "a29a59ae45e33e4a6fc1e15611ee37da988448cc3bb330cdc45896dbded138ac",
-   "bytes": 29544442,
-   "duration_s": 129.707,
-   "frames": 3891,
+   "sha256": "6b7f8600bf3b0f4e7c2686a6506d98230cf6e00c173636b39ee6a3b2a570f83f",
+   "bytes": 61175044,
+   "duration_s": 128.768,
+   "frames": 3863,
    "size": "1080x1920",
    "fps": "30/1"
   }
@@ -238,15 +225,15 @@
  "gates": {
   "exports not stale": {
    "verdict": "pass",
-   "detail": "all 3 exports are newer than src/style/components.tsx"
+   "detail": "all 3 exports are newer than timeline/timeline.json"
   },
   "visual mix": {
    "verdict": "pass",
-   "detail": "15 shots, mix {'code': 12, 'real': 3}, filler 0%"
+   "detail": "14 shots, mix {'generated': 4, 'code': 6, 'real': 4}, filler 29%"
   },
   "real alignment": {
-   "verdict": "FAIL",
-   "detail": "alignment came from the SCRATCH synthetic voice, not a recording. The draft is for reviewing the edit; record the real voiceover before release."
+   "verdict": "pass",
+   "detail": "alignment came from a real recording"
   },
   "captioned decodes": {
    "verdict": "pass",
@@ -254,32 +241,29 @@
   },
   "captioned format": {
    "verdict": "pass",
-   "detail": "1080x1920 @30fps, 3891 frames, 129.71s, audio present"
+   "detail": "1080x1920 @30fps, 3863 frames, 128.77s, audio present"
   },
   "black tail": {
    "verdict": "pass",
-   "detail": "tail is not black (peak luma 182 over last 14 frames)"
+   "detail": "tail is not black (peak luma 184 over last 14 frames)"
   },
   "frozen tail": {
    "verdict": "pass",
-   "detail": "tail is moving (max inter-frame difference 119)"
+   "detail": "tail is moving (max inter-frame difference 115)"
   },
   "parity": {
    "verdict": "pass",
-   "detail": "audio streams identical, durations match (129.71s)"
+   "detail": "audio streams identical, durations match (128.77s)"
   },
   "safe area": {
    "verdict": "pass",
-   "detail": "text present in 3783/3891 frames, all bands clear"
+   "detail": "text present in 3794/3863 frames, all bands clear"
   },
   "loudness": {
-   "verdict": "FAIL",
-   "detail": "integrated loudness -19.55 LUFS, target -16.0\u00b11.0"
+   "verdict": "pass",
+   "detail": "-16.44 LUFS, -4.46 dBTP"
   }
  },
- "releasable": false,
- "limitations": [
-  "real alignment",
-  "loudness"
- ]
+ "releasable": true,
+ "limitations": []
 }

@@ -527,6 +527,107 @@
    "text": "its own logics and rarities",
    "kind": "quotation",
    "span": "a system with its own unique logics and rarities"
+  },
+  {
+   "text": "an abstraction and a symbol of worthlessness",
+   "kind": "quotation",
+   "span": "an abstraction and a symbol of worthlessness"
+  },
+  {
+   "text": "the readymade",
+   "kind": "paraphrase",
+   "span": "the readymade he’s using is one of the most common objects in existence"
+  },
+  {
+   "text": "Victor David Brenner, 1909",
+   "kind": "addition",
+   "approved": true,
+   "by": "user",
+   "note": "the name is the essay's; the DATE is not. The Lincoln cent was first struck in 1909 and the speaker says so in the narration, where it is recorded as an approved addition. Same claim, same approval, on screen."
+  },
+  {
+   "text": "worthless",
+   "kind": "paraphrase",
+   "span": "an abstraction and a symbol of worthlessness"
+  },
+  {
+   "text": "thousands of dollars",
+   "kind": "paraphrase",
+   "span": "It is absurd that a cent should be valued at hundreds/thousands of dollars"
+  },
+  {
+   "text": "a currency dissolving",
+   "kind": "paraphrase",
+   "span": "It is absurd that a nation’s currency should dissolve into worthlessness"
+  },
+  {
+   "text": "the same object, revalued",
+   "kind": "paraphrase",
+   "span": "placing them into a system of permissionless exchange and indeterminate, continual revaluation"
+  },
+  {
+   "text": "both true at once",
+   "kind": "paraphrase",
+   "span": "Yet, here we are",
+   "note": "the two absurdities are held together rather than resolved, which is what the essay's 'Yet, here we are' does"
+  },
+  {
+   "text": "the object, state by state",
+   "kind": "paraphrase",
+   "span": "CENTS uses this series of transformations to question the value assignment and objecthood"
+  },
+  {
+   "text": "the state decides",
+   "kind": "paraphrase",
+   "span": "being in circulation (value defined by US treasury)",
+   "note": "deliberately NOT the essay's own words: the narration says 'its value defined by the Treasury' at this moment, and repeating it on screen is the caption-redundancy failure"
+  },
+  {
+   "text": "the state is refused",
+   "kind": "paraphrase",
+   "span": "being removed from circulation (centralized value assignment subverted)"
+  },
+  {
+   "text": "the photograph carries it",
+   "kind": "paraphrase",
+   "span": "being archivally photographed (value defined by visual/conceptual/historical quality)"
+  },
+  {
+   "text": "no assignable value",
+   "kind": "paraphrase",
+   "span": "being destroyed (value made undefinable)"
+  },
+  {
+   "text": "10,000",
+   "kind": "paraphrase",
+   "span": "its existence as a permanent set of 10,000"
+  },
+  {
+   "text": "indeterminate",
+   "kind": "paraphrase",
+   "span": "their value and meaning is indeterminate and continually redefined"
+  },
+  {
+   "text": "priced by whoever holds it",
+   "kind": "paraphrase",
+   "span": "social-consensus based value defined by decentralized participants"
+  },
+  {
+   "text": "the intersubjective reality of its presence",
+   "kind": "quotation",
+   "span": "the intersubjective reality of its presence"
+  },
+  {
+   "text": "billion Lincoln cents produced",
+   "kind": "paraphrase",
+   "span": "its presence on the 500+ billion Lincoln cents that have been struck",
+   "note": "'billion' sits in the caption, not beside the figure: '500 billion' at the 150px display size wraps to two lines and SafeText cancels the render. The fix is a shorter label, never a smaller number."
+  },
+  {
+   "text": "the object is gone",
+   "kind": "paraphrase",
+   "span": "he removed them from circulation by melting them down into a solid copper block",
+   "note": "added so the chain changes state during 'melted into a block of copper' - the diagram sat on one state for 7.6s and the no-static-passage gate read 4.5s of still picture."
   }
  ],
  "attributions": [],

@@ -123,15 +123,15 @@ valued for what the image holds.
 Four, destroyed, melted into a block
 
 32
-00:01:38,159 --> 00:01:41,299
+00:01:38,159 --> 00:01:41,280
 of copper, its value made undefinable.
 
 33
-00:01:42,239 --> 00:01:44,439
+00:01:42,219 --> 00:01:44,439
 Five, inscribed on Bitcoin,
 
 34
-00:01:44,819 --> 00:01:48,480
+00:01:45,019 --> 00:01:48,480
 its value continually redefined by decentralized
 
 35
@@ -155,5 +155,5 @@ a gesture that unfolds continually
 through the actions of
 
 40
-00:02:02,359 --> 00:02:04,359
+00:02:02,359 --> 00:02:04,459
 its participants through time.

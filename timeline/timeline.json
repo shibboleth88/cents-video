@@ -1,22 +1,42 @@
 {
  "essay": {
   "title": "CENTS & digital objecthood",
-  "author": "shibboleth",
   "subtitle": "an introduction to the primary concepts of CENTS by Rutherford Chang",
+  "author": "shibboleth",
   "source": "https://medium.com/@shibboleth88/cents-digital-conceptual-art-258b836a16a1",
   "version": "medium 2025-10-30"
  },
+ "_what": "Rebuilt 2026-10-06 against the RECORDING. Every anchor is a phrase of the delivered voiceover. No new generation: every image is an asset already on disk or drawn in code.",
  "shots": [
   {
-   "shot_id": "s01_gap",
+   "shot_id": "s01_title",
    "start": {
     "at_start": true
    },
    "end": {
-    "at_phrase": "Rutherford Chang's CENTS begins"
+    "at_phrase": "What was one cent to the US"
    },
-   "purpose": "Open on the discrepancy the project starts from, as two values that do not meet. The coin itself sits behind the figure.",
-   "visual_kind": "real",
+   "purpose": "Name the film over the object it is about, while the first line states the project's origin.",
+   "visual_kind": "generated",
+   "component": "TitleCard",
+   "props": {
+    "title": "CENTS & digital objecthood",
+    "subtitle": "an introduction to the primary concepts of CENTS by Rutherford Chang",
+    "author": "shibboleth",
+    "backdrop": "a01m",
+    "backdropDim": 0.72
+   }
+  },
+  {
+   "shot_id": "s02_gap",
+   "start": {
+    "at_phrase": "What was one cent to the US"
+   },
+   "end": {
+    "at_phrase": "Nothing had been sold"
+   },
+   "purpose": "Hold the two values apart as the narration names them, so the discrepancy is seen rather than asserted.",
+   "visual_kind": "code",
    "component": "Distinction",
    "props": {
     "items": [
@@ -25,178 +45,175 @@
     ],
     "states": [
      {
-      "at_phrase": "A copper penny is worth one cent",
+      "at_phrase": "What was one cent to the US",
       "linked": true,
       "emphasise": 0,
       "caption": "what the Treasury says it is worth"
      },
      {
-      "at_phrase": "The copper inside it",
+      "at_phrase": "was about two and a half",
       "linked": false,
       "emphasise": 1,
       "caption": "what the copper inside it is worth"
      }
-    ],
-    "backdrop": "a01m",
-    "backdropFocus": "50% 28%",
-    "backdropDim": 0.72
+    ]
    }
   },
   {
-   "shot_id": "s02_title",
+   "shot_id": "s03_remained",
    "start": {
-    "at_phrase": "Rutherford Chang's CENTS begins"
+    "at_phrase": "Nothing had been sold"
    },
    "end": {
-    "at_phrase": "Over several years"
+    "at_phrase": "The readymade he chose"
    },
-   "purpose": "Name the work and credit the essay and its author at first title, over the artwork itself in slow motion rather than a frozen still.",
-   "visual_kind": "real",
-   "component": "TitleCard",
+   "purpose": "The hinge: the coin's function is gone and the object persists on context alone. The essay's own phrase for that state, over dissolving material.",
+   "visual_kind": "generated",
+   "component": "PullQuote",
    "props": {
-    "title": "CENTS & digital objecthood",
-    "subtitle": "an introduction to the primary concepts of CENTS by Rutherford Chang",
-    "author": "shibboleth",
+    "quote": "an abstraction and a symbol of worthlessness",
+    "backdrop": "g02",
+    "backdropDim": 0.74
+   }
+  },
+  {
+   "shot_id": "s04_readymade",
+   "start": {
+    "at_phrase": "The readymade he chose"
+   },
+   "end": {
+    "at_phrase": "More than 500"
+   },
+   "purpose": "Show the readymade itself, at its own size, at the moment it is named.",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "a01",
+   "props": {
+    "caption": "the readymade",
+    "maxWidth": 499,
+    "backdrop": "a03",
+    "backdropDim": 0.88
+   }
+  },
+  {
+   "shot_id": "s05_scale",
+   "start": {
+    "at_phrase": "More than 500"
+   },
+   "end": {
+    "at_phrase": "each with the portrait"
+   },
+   "purpose": "Give the number a size the voice cannot: five hundred billion as a figure that counts up.",
+   "visual_kind": "code",
+   "component": "StatReveal",
+   "props": {
+    "value": 500,
+    "caption": "billion Lincoln cents produced"
+   }
+  },
+  {
+   "shot_id": "s06_brenner",
+   "start": {
+    "at_phrase": "each with the portrait"
+   },
+   "end": {
+    "at_phrase": "It is absurd that a nation’s"
+   },
+   "purpose": "Credit the portrait to Brenner by showing his original plaque, not the coin - the artwork, not its reproduction.",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "a06",
+   "props": {
+    "caption": "Victor David Brenner, 1909",
+    "maxWidth": 333,
+    "backdrop": "a06",
+    "backdropDim": 0.86
+   }
+  },
+  {
+   "shot_id": "s07_absurdity",
+   "start": {
+    "at_phrase": "It is absurd that a nation’s"
+   },
+   "end": {
+    "at_phrase": "Chang brings a kind"
+   },
+   "purpose": "Put the two absurdities in one frame - worthless and priceless - and link them on 'yet here we are'.",
+   "visual_kind": "code",
+   "component": "Distinction",
+   "props": {
+    "items": [
+     "worthless",
+     "thousands of dollars"
+    ],
+    "vertical": true,
+    "states": [
+     {
+      "at_phrase": "It is absurd that a nation’s",
+      "linked": false,
+      "emphasise": 0,
+      "caption": "a currency dissolving"
+     },
+     {
+      "at_phrase": "It is absurd that a cent",
+      "linked": false,
+      "emphasise": 1,
+      "caption": "the same object, revalued"
+     },
+     {
+      "at_phrase": "Yet here we are",
+      "linked": true,
+      "emphasise": 1,
+      "caption": "both true at once"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s08_humor",
+   "start": {
+    "at_phrase": "Chang brings a kind"
+   },
+   "end": {
+    "at_phrase": "In the system Chang created"
+   },
+   "purpose": "The emptiness the laughter resonates in, as material rather than as a joke.",
+   "visual_kind": "generated",
+   "component": "Plate",
+   "asset_id": "g02m",
+   "props": {
+    "caption": "“black hole humor”",
+    "maxWidth": 560
+   }
+  },
+  {
+   "shot_id": "s09_states",
+   "start": {
+    "at_phrase": "In the system Chang created"
+   },
+   "end": {
+    "at_phrase": "One, in circulation"
+   },
+   "purpose": "Show the whole series at once before the chain walks it, using the artist's own composite. The backdrop is a MOTION asset (g01's drift at this dim was too small to register as movement) and is NOT a02: a02 is a figure marked no_crop, and a backdrop covers, which cut its sequence apart and doubled the same picture at two scales.",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "a02",
+   "props": {
+    "caption": "the object, state by state",
+    "maxWidth": 420,
     "backdrop": "a03m",
-    "backdropFocus": "50% 45%",
-    "backdropDim": 0.66
+    "backdropDim": 0.88
    }
   },
   {
-   "shot_id": "s03_cull",
+   "shot_id": "s10_chain",
    "start": {
-    "at_phrase": "Over several years"
+    "at_phrase": "One, in circulation"
    },
    "end": {
-    "at_phrase": "Then he melted them"
+    "at_phrase": "Five, inscribed on Bitcoin"
    },
-   "purpose": "Show the scale of the sort: a hundred thousand pennies reduced to ten thousand pre-1982 coppers.",
-   "visual_kind": "code",
-   "component": "FieldScan",
-   "props": {
-    "cols": 14,
-    "rows": 10,
-    "states": [
-     {
-      "at_phrase": "Over several years",
-      "scanned": 0.12,
-      "markedVisible": false,
-      "readout": "100,000 pennies",
-      "caption": "found, received as change, exchanged at banks"
-     },
-     {
-      "at_phrase": "He photographed each one",
-      "scanned": 1.0,
-      "markedVisible": true,
-      "readout": "10,000 pre-1982 coppers",
-      "caption": "archivally photographed, each date and mintage catalogued"
-     }
-    ],
-    "markedFraction": 0.1
-   }
-  },
-  {
-   "shot_id": "s04_process",
-   "start": {
-    "at_phrase": "Then he melted them"
-   },
-   "end": {
-    "at_phrase": "The block itself became"
-   },
-   "purpose": "The making, in the order the narration gives it, ending on the master object.",
-   "visual_kind": "code",
-   "component": "ProcessChain",
-   "props": {
-    "nodes": [
-     "melted into a solid copper block",
-     "each penny inscribed on a sat"
-    ],
-    "states": [
-     {
-      "at_phrase": "Then he melted them",
-      "active": 0,
-      "caption": "removed from circulation"
-     },
-     {
-      "at_phrase": "Then he inscribed each destroyed penny",
-      "active": 1,
-      "caption": "the image data of each cent, on chain"
-     }
-    ]
-   }
-  },
-  {
-   "shot_id": "s04b_block",
-   "start": {
-    "at_phrase": "The block itself became"
-   },
-   "end": {
-    "at_phrase": "One inscription, filling"
-   },
-   "purpose": "Show the digital Block itself at the moment it is named.",
-   "visual_kind": "real",
-   "component": "Plate",
-   "asset_id": "a05",
-   "props": {
-    "caption": "CENTS Block 839969 - the 3D model of the block, inscribed on chain",
-    "maxWidth": 616
-   }
-  },
-  {
-   "shot_id": "s04c_fullblock",
-   "start": {
-    "at_phrase": "One inscription, filling"
-   },
-   "end": {
-    "at_phrase": "He released all ten thousand"
-   },
-   "purpose": "Show what a full-block inscription looks like in the chain: the transactions a block would hold, beside the one inscription that filled it instead.",
-   "visual_kind": "real",
-   "component": "Plate",
-   "asset_id": "a04",
-   "props": {
-    "caption": "the transactions block 839969 would have held, beside the single inscription that filled it"
-   }
-  },
-  {
-   "shot_id": "s04d_release",
-   "start": {
-    "at_phrase": "He released all ten thousand"
-   },
-   "end": {
-    "at_phrase": "Every Cent passes through five transformations"
-   },
-   "purpose": "Close the making on the release, with the chain completed.",
-   "visual_kind": "code",
-   "component": "ProcessChain",
-   "props": {
-    "nodes": [
-     "CENTS Block 839969",
-     "released at one sat each"
-    ],
-    "states": [
-     {
-      "at_phrase": "He released all ten thousand",
-      "active": 0,
-      "caption": "the master object"
-     },
-     {
-      "at_phrase": "about one hundredth of a cent",
-      "active": 1,
-      "caption": "about one hundredth of a cent each"
-     }
-    ]
-   }
-  },
-  {
-   "shot_id": "s05_transformations",
-   "start": {
-    "at_phrase": "Every Cent passes through five transformations"
-   },
-   "end": {
-    "at_phrase": "And it arrives as five natures"
-   },
-   "purpose": "The five transformations of value, one per narrated line. This is the essay's first list of five.",
+   "purpose": "Light each transformation as it is spoken and keep it lit, so the finished chain is the argument rather than a travelling highlight. Carries a dimmed backdrop because a diagram holding one state for 7.6s reads as a still picture to the no-static-passage gate - a caption change alone is too few pixels to count as movement.",
    "visual_kind": "code",
    "component": "ProcessChain",
    "props": {
@@ -209,234 +226,111 @@
     ],
     "states": [
      {
-      "at_phrase": "Every Cent passes through five transformations",
-      "active": -1,
-      "caption": "five transformations of value"
-     },
-     {
-      "at_phrase": "In circulation, its value",
+      "at_phrase": "One, in circulation",
       "active": 0,
-      "caption": "value defined by the US Treasury"
+      "caption": "the state decides"
      },
      {
-      "at_phrase": "Removed from circulation",
+      "at_phrase": "Two, removed",
       "active": 1,
-      "caption": "centralized value assignment subverted"
+      "caption": "the state is refused"
      },
      {
-      "at_phrase": "Archivally photographed",
+      "at_phrase": "Three, archivally",
       "active": 2,
-      "caption": "value defined by visual, conceptual, historical quality"
+      "caption": "the photograph carries it"
      },
      {
-      "at_phrase": "Destroyed, its value",
+      "at_phrase": "Four, destroyed",
       "active": 3,
-      "caption": "value made undefinable"
+      "caption": "the object is gone"
      },
      {
-      "at_phrase": "Inscribed on Bitcoin",
-      "active": 4,
-      "caption": "value continually redefined by decentralized consensus"
+      "at_phrase": "its value made undefinable",
+      "active": 3,
+      "caption": "no assignable value"
      }
-    ]
+    ],
+    "backdrop": "a03",
+    "backdropDim": 0.86
    }
   },
   {
-   "shot_id": "s06a_states",
+   "shot_id": "s11_block",
    "start": {
-    "at_phrase": "And it arrives as five natures"
+    "at_phrase": "Five, inscribed on Bitcoin"
    },
    "end": {
-    "at_phrase": "A unit of currency"
+    "at_phrase": "as the objects are"
    },
-   "purpose": "The essay's own figure of the object's states, before the five are named.",
+   "purpose": "The fifth transformation as the object it produced: the block, turning, inscribed on chain.",
    "visual_kind": "real",
    "component": "Plate",
-   "asset_id": "a02",
+   "asset_id": "a05",
    "props": {
-    "caption": "the cent, its inscription address, raw copper, the block, and one sat"
+    "caption": "CENTS Block 839969",
+    "maxWidth": 616
    }
   },
   {
-   "shot_id": "s06_natures",
+   "shot_id": "s12_market",
    "start": {
-    "at_phrase": "A unit of currency"
+    "at_phrase": "as the objects are"
    },
    "end": {
-    "at_phrase": "Conceptual art broke from the object"
+    "at_phrase": "CENTS is a becoming"
    },
-   "purpose": "The essay's SECOND list of five - what a Cent simultaneously is. Kept visually distinct from the transformations so the two are not read as one list.",
+   "purpose": "The set as a population being priced - scarce, fixed, and valued by whoever holds it.",
    "visual_kind": "code",
-   "component": "Simultaneity",
+   "component": "FieldScan",
    "props": {
-    "centre": "a Cent",
-    "items": [
-     "a unit of currency",
-     "a quantity of copper",
-     "a melted element of a sculpture",
-     "a photograph",
-     "a Bitcoin inscription"
-    ],
+    "cols": 20,
+    "rows": 12,
+    "markedFraction": 0.08,
     "states": [
      {
-      "at_phrase": "A unit of currency",
-      "present": true,
-      "caption": "all of these things"
+      "at_phrase": "as the objects are",
+      "markedVisible": false,
+      "scanned": 0.3,
+      "caption": "a permanent set of 10,000",
+      "readout": "10,000"
      },
      {
-      "at_phrase": "All of these things, and none of them",
-      "present": false,
-      "caption": "and none of them"
+      "at_phrase": "every day on the open",
+      "markedVisible": true,
+      "scanned": 1.0,
+      "caption": "priced by whoever holds it",
+      "readout": "indeterminate"
      }
     ]
    }
   },
   {
-   "shot_id": "s07_objecthood",
+   "shot_id": "s13_becoming",
    "start": {
-    "at_phrase": "Conceptual art broke from the object"
+    "at_phrase": "CENTS is a becoming"
    },
    "end": {
-    "at_phrase": "CENTS holds that whole arc"
+    "after_phrase": "participants through time"
    },
-   "purpose": "The split the essay traces, drawn as a link that opens and stays open, over abstract imagery of matter dissolving into immateriality. Nothing real is depicted, so nothing can be falsified.",
+   "purpose": "Close on the coin the film opened on, under the essay's own words for what the work finally is.",
    "visual_kind": "generated",
-   "component": "Distinction",
-   "props": {
-    "items": [
-     "materiality",
-     "meaning"
-    ],
-    "states": [
-     {
-      "at_phrase": "Conceptual art broke from the object",
-      "linked": true,
-      "caption": "a reaction against object-based, market-driven modernism"
-     },
-     {
-      "at_phrase": "A split opened between materiality",
-      "linked": false,
-      "caption": "a split between materiality and meaning"
-     },
-     {
-      "at_phrase": "Digitization widened it",
-      "linked": false,
-      "emphasise": 1,
-      "caption": "no identity, singularity, provenance or ownership"
-     },
-     {
-      "at_phrase": "Blockchain was built",
-      "linked": false,
-      "emphasise": 0,
-      "caption": "blockchain supplies discrete boundaries and verifiable histories"
-     }
-    ],
-    "backdrop": "g02m",
-    "backdropDim": 0.58,
-    "backdropFocus": "50% 60%"
-   }
-  },
-  {
-   "shot_id": "s08a_not",
-   "start": {
-    "at_phrase": "CENTS holds that whole arc"
-   },
-   "end": {
-    "at_phrase": "Its medium is the gesture"
-   },
-   "purpose": "Set aside the visible manifestations before naming the medium, as a figure rather than as the same words the caption is already speaking.",
-   "visual_kind": "code",
-   "component": "Distinction",
-   "props": {
-    "vertical": true,
-    "items": [
-     "the penny",
-     "the photograph",
-     "the block"
-    ],
-    "states": [
-     {
-      "at_phrase": "CENTS holds that whole arc",
-      "linked": true,
-      "caption": "its visible manifestations"
-     },
-     {
-      "at_phrase": "Its medium is not the penny",
-      "linked": false,
-      "caption": "none of these is the medium"
-     }
-    ]
-   }
-  },
-  {
-   "shot_id": "s08b_gesture",
-   "start": {
-    "at_phrase": "Its medium is the gesture"
-   },
-   "end": {
-    "at_phrase": "A digital object is simultaneously"
-   },
-   "purpose": "The thesis phrase alone, with the caption carrying the full sentence.",
-   "visual_kind": "code",
    "component": "PullQuote",
    "props": {
-    "quote": "its continual becoming"
+    "quote": "the intersubjective reality of its presence",
+    "backdrop": "a01m",
+    "backdropDim": 0.7
    }
   },
   {
-   "shot_id": "s09_ending",
+   "shot_id": "s14_credits",
    "start": {
-    "at_phrase": "A digital object is simultaneously"
-   },
-   "end": {
-    "after_phrase": "intersubjective reality of its presence"
-   },
-   "purpose": "The ending as a visual expression of the final idea, not a title card: the three readings held together.",
-   "visual_kind": "code",
-   "component": "Distinction",
-   "props": {
-    "items": [
-     "itself",
-     "not itself",
-     "an interpretation of itself"
-    ],
-    "states": [
-     {
-      "at_phrase": "A digital object is simultaneously",
-      "linked": true,
-      "emphasise": 0,
-      "caption": "simultaneously itself"
-     },
-     {
-      "at_phrase": "not itself",
-      "linked": true,
-      "emphasise": 1,
-      "caption": "and not itself"
-     },
-     {
-      "at_phrase": "an interpretation of itself",
-      "linked": true,
-      "emphasise": 2,
-      "caption": "and an interpretation of itself"
-     },
-     {
-      "at_phrase": "Its meanings keep emerging",
-      "linked": true,
-      "caption": "meanings continue to emerge as participants co-create them"
-     }
-    ],
-    "vertical": true
-   }
-  },
-  {
-   "shot_id": "s10_credits",
-   "start": {
-    "after_phrase": "intersubjective reality of its presence"
+    "after_phrase": "participants through time"
    },
    "end": {
     "at_end": true
    },
-   "purpose": "Brief credits after the voice has stopped.",
+   "purpose": "Credit the essay and the artwork, in the silence left for them.",
    "visual_kind": "code",
    "component": "Credits",
    "props": {
@@ -450,7 +344,8 @@
  ],
  "credits": {
   "lines": [
-   "Essay: CENTS & digital objecthood, by shibboleth"
+   "Essay: CENTS & digital objecthood, by shibboleth",
+   "Artwork: CENTS, by Rutherford Chang"
   ],
   "url": "sovrn.art/cents"
  }
