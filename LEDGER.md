@@ -533,3 +533,55 @@ cheapest cuts back to ~95s are: "Chang initiated an ongoing process of
 redefinition" (7), "logics and" (2), and the second absurdity line (13). Written
 down because the number in the brief and the number in the file have diverged,
 and `script_target` now says so in the file itself rather than only here.
+
+### Revision 4f — repetition that was lexical, not conceptual
+
+Four sentences had stated continual redefinition: the fifth transformation
+("continually redefined by decentralized consensus"), "Chang initiated an
+ongoing process of redefinition", "its value and meaning are indeterminate and
+continually redefined", and the closer ("unfolds continually"). Three of them
+used the same root, and the two middle ones were abstract restatements that
+added no new register.
+
+**Both abstract restatements cut; the claim is still made four times, in four
+different registers.** The mechanism is in the transformation list. The OBJECT
+changing is in "now bearing the marks of touch and time". The MEANING changing
+is in the collectors and canon lines. The nature of the work is in the closer.
+Repetition of an idea across registers is argument; repetition of a sentence in
+synonyms is padding, and only the second kind was cut. Both dropped lines are
+now on-screen strings, so the frame names once what the voice shows.
+
+**Failure-shape: showing a thing four ways is not saying it four times.** The
+instinct when a point matters is to restate it, which is how the script arrived
+at four near-identical sentences while believing it was emphasising. The test is
+whether each instance adds a register - mechanism, object, reader, work - or
+only a synonym.
+
+**The collectors/canon pair was the weakest writing in the script, and the user
+said so.** It read:
+
+    Collectors dissect the set for its internal dynamics.
+    Like words that accrue significance on entering the scarce set of
+      meanings we call canon.
+
+Two faults. "Dissect the set for its internal dynamics" is the essay's phrase
+but opaque spoken aloud - it never says what is being determined. And nothing
+linked the second sentence to the first, so the canon analogy floated, which is
+the dangling-reference shape from 4c and 4d a third time. Now:
+
+    Collectors read the set closely, deciding which Cents matter.
+    Words accrue significance the same way, inside the scarce set of
+      meanings we call canon.
+
+"Read" is deliberate: the essay's analogy is TEXTUAL, so describing the
+collectors' activity with the verb the canon line needs makes the metaphor
+cohere rather than arrive from nowhere. "The same way" is the link. "Inside"
+replaces the essay's "when they enter", because the CENTS set is already closed
+at ten thousand - nothing enters it, and what varies is which members accrue
+significance. That is also a sharper reading of the essay's own analogy than the
+essay's wording gives, and it keeps the canon distinction intact: significance
+accrues to MEMBERS of a scarce set, never to the work's standing.
+
+**Length:** 217 words, 90-100s of speech, 94-104s with credits, mid 99s - back
+within sight of the brief, because the cut repetition paid for the canon
+passage.

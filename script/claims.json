@@ -96,11 +96,6 @@
    "span": "being inscribed on Bitcoin (value continually redefined by decentralized consensus)"
   },
   {
-   "say": "Chang initiated an ongoing process of redefinition.",
-   "kind": "quotation",
-   "span": "Chang initiated an ongoing process of redefinition"
-  },
-  {
    "say": "A permanent set of ten thousand, with its own logics and rarities.",
    "kind": "paraphrase",
    "span": "its existence as a permanent set of 10,000, transforms this collection of pennies into a system with its own unique logics and rarities",
@@ -113,22 +108,16 @@
    "note": "'now' replaces a repeated 'each' and marks the change as having happened over time, which is the sentence's point."
   },
   {
-   "say": "Collectors dissect the set for its internal dynamics.",
+   "say": "Collectors read the set closely, deciding which Cents matter.",
    "kind": "paraphrase",
    "span": "collectors intricately dissect this set to determine its internal dynamics",
-   "note": "the essay's first-person testimony - 'I've witnessed collectors intricately dissect this set' - is dropped, so the film states the behaviour rather than the essayist's observation of it. This is also the line that supplies the PARTICIPANTS the closing sentence turns on."
+   "note": "'read ... closely' rather than the essay's 'dissect', and 'which Cents matter' rather than 'internal dynamics', which is opaque spoken aloud. 'Read' also primes the next line: the essay's analogy is TEXTUAL, so the collectors' activity and the canon's are described with the same verb. The essay's first-person 'I've witnessed' is dropped, so the film states the behaviour."
   },
   {
-   "say": "Like words that accrue significance on entering the scarce set of meanings we call canon.",
+   "say": "Words accrue significance the same way, inside the scarce set of meanings we call canon.",
    "kind": "paraphrase",
    "span": "individual words and phrases in texts accrue significance when they enter the scarce set of meanings referred to as “canon”",
-   "note": "The essay offers this as the essayist's OWN association - 'it reminds me of the way that...'. The film keeps the comparison ('Like') but drops the first person, so the parallel is stated rather than offered as a personal reminder. The narrator IS the essay's author, so the first-person variant is equally available and more hedged: 'It reminds me of how words accrue significance...'. 'words and phrases' is shortened to 'words'. It sits directly after the collectors line because that is what the analogy is FOR - the dissection of a scarce set is the thing being compared."
-  },
-  {
-   "say": "Its value and meaning are indeterminate and continually redefined.",
-   "kind": "paraphrase",
-   "span": "their value and meaning is indeterminate and continually redefined",
-   "note": "Moved after the collectors line in revision 4d: their reading of the set IS the continual redefinition, so the sentence now concludes something the film has shown rather than repeating 'redefined' for the third line running."
+   "note": "'the same way' is what links the analogy to the collectors line - without it the canon sentence floated. 'Inside' rather than the essay's 'when they enter', because the CENTS set is already closed at ten thousand: nothing enters it, and what varies is which members accrue significance. The essay offers this as its author's own association ('it reminds me of'); the film states the parallel. The hedged first-person variant stays available: 'It reminds me of how words accrue significance...'. 'words and phrases' shortened to 'words'."
   },
   {
    "say": "CENTS is a becoming, a gesture that unfolds continually through the actions of its participants in time.",
@@ -540,6 +529,23 @@
    "text": "a permanent set of 10,000",
    "kind": "paraphrase",
    "span": "its existence as a permanent set of 10,000"
+  },
+  {
+   "text": "indeterminate and continually redefined",
+   "kind": "paraphrase",
+   "span": "their value and meaning is indeterminate and continually redefined",
+   "note": "dropped from the VOICE in revision 4f as one of four restatements of the same claim; the frame names it once instead"
+  },
+  {
+   "text": "an ongoing process of redefinition",
+   "kind": "quotation",
+   "span": "Chang initiated an ongoing process of redefinition",
+   "note": "also dropped from the voice in 4f; available to the frame"
+  },
+  {
+   "text": "which Cents matter",
+   "kind": "paraphrase",
+   "span": "collectors intricately dissect this set to determine its internal dynamics"
   }
  ],
  "attributions": [],
@@ -611,6 +617,6 @@
    "note": "The essay compares collectors reading the set to words accruing significance in a canon. Said slightly differently - 'CENTS enters the canon' - it becomes a claim about the work's art-historical status that the essay never makes and that the film has no standing to make. On screen, 'canon' must not appear beside the work's title or any date."
   }
  ],
- "script_target": "About 105 seconds. 232 words, 24 sentences; 96-107s of speech at 130-145 wpm, plus 4s of silence for credits (100-111s total). Lengthened twice from the original 90s brief, on request, to give the closing passage its antecedents and to fit the canon analogy. IF 90s IS A PLATFORM CAP THIS NO LONGER MEETS IT - the brief needs restating before the film is cut.",
+ "script_target": "About 100 seconds. 217 words, 22 sentences; 90-100s of speech at 130-145 wpm, plus 4s of silence for credits (94-104s total, mid 99s). Lengthened from the original 90s brief on request; if 90s is a PLATFORM cap rather than a preference, this does not meet it.",
  "_thesis_note": "Film 1 of several on CENTS, framed on VALUE. The essay's other half - conceptual art, the loss of objecthood in digital flows, and blockchain as this era's objecthood - is a second film's thesis, not a compressed sub-section of this one. Earlier revisions of this script carried both and served neither."
 }
