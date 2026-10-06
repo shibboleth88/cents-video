@@ -208,7 +208,7 @@ them was reasonable.
   worth trusting for shot lengths, or only for structure. Measured once at
   158 wpm against a 130–145 target, so it runs ~10% fast.
 
-## Episode — 90-second cut (2026-10-06)
+## Episode — 90-second cut (2026-10-06), revision 2
 
 **Script rewritten to a length brief.** The previous voiceover was 299 words
 (125-138s). A 90-second film with the 4s credit tail needs ~196 words. The
@@ -248,3 +248,43 @@ narrated as a list. They are enacted by the process narration (in circulation ->
 removed -> photographed -> destroyed -> inscribed), which is the same five in
 order. Only the five NATURES are spoken as a list. This removes rather than
 creates the merge risk the distinction ledger was written against.
+
+### Revision 2 — the brief was wrong about what to cut
+
+The first 90s cut kept the project's process (sorted, photographed, melted,
+inscribed, released) and spent its budget there, dropping the five
+TRANSFORMATIONS, the five NATURES, Brenner and the black hole humor. The
+audience is assumed to know the basics already, which inverts the priority: the
+process is the part they have.
+
+**The structural saving: the five transformations ARE the process.** In
+circulation -> removed -> archivally photographed -> destroyed -> inscribed is
+the same sequence of events as sorted/photographed/melted/inscribed/released,
+stated as value-events rather than as biography. Narrating the transformations
+therefore costs nothing extra — the preliminary information arrives inside the
+argument instead of in front of it. This is why both fives, Brenner and the
+humor now fit inside 197 words where the first cut could not hold even one of
+the fives.
+
+**Attribution hazard recorded as a distinction, not a note.** 'Black hole
+humor' is the ESSAYIST'S coinage — the essay says "he brings what I call a
+'black hole humor'". The humor is credited to Chang; the phrase is not his.
+Putting the phrase on screen beside Chang's name would be the same class of
+error as the quotation once credited to Chang in the previous production. The
+narration credits him with the humor only, and the phrase appears quoted with
+the essay credit.
+
+**The merge risk between the two fives went UP in this revision, not down.**
+They are now adjacent in the narration with only "And each is five natures at
+once" between them. The distinction ledger previously relied on them being far
+apart; now the visual difference — a left-to-right chain versus one object held
+open — carries the whole load.
+
+**Open:** 31 of 52 timeline anchors now dangle across 13 of 15 shots (the first
+cut dangled 21). The timeline is no longer a near-miss re-anchoring; the shot
+list itself wants rebuilding around the new structure. Floored and walked
+recursively, so the count is a measurement, not a key-name artefact.
+
+**Not in the voice:** Rutherford Chang's full name. Narration says "Chang"; the
+full name is carried by the approved on-screen credit. For an audience that
+knows the project this is correct, but it means the film must show that credit.

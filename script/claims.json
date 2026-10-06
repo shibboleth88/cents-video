@@ -4,55 +4,70 @@
  "thesis": "Blockchain supplies the objecthood the digital era lacked, and CENTS holds that whole arc in one gesture: its medium is its continual becoming, not any of its visible forms.",
  "claims": [
   {
-   "say": "A copper penny is worth one cent.",
+   "say": "Brenner's Lincoln, on the face of the penny, is the most reproduced artwork on Earth.",
    "kind": "paraphrase",
-   "span": "the difference between the value of ¢1 ascribed to copper pennies by the US Treasury"
+   "span": "The image of Lincoln on the face of the penny, created by Victor David Brenner, is the most reproduced artwork on planet Earth",
+   "note": "'Victor David' and the 500+ billion struck go on screen rather than in the voice, to keep the opening line short."
   },
   {
-   "say": "The copper inside it is worth about two and a half.",
+   "say": "This is the readymade Chang chose.",
    "kind": "paraphrase",
-   "span": "the metal value of apx. ¢2.5"
+   "span": "the readymade he’s using is one of the most common objects in existence"
   },
   {
-   "say": "Rutherford Chang's CENTS begins in that gap.",
-   "kind": "paraphrase",
-   "span": "Rutherford Chang began this project with a simple value discrepancy"
+   "say": "It is absurd that a nation's currency should dissolve into worthlessness.",
+   "kind": "quotation",
+   "span": "It is absurd that a nation’s currency should dissolve into worthlessness"
   },
   {
-   "say": "Over several years he sorted a hundred thousand pennies down to ten thousand pre-1982 coppers.",
+   "say": "It is absurd that a cent should be valued at hundreds or thousands of dollars.",
    "kind": "paraphrase",
-   "span": "Chang culled 10,000 pre-1982 copper pennies over the course of several years from about 100,000 pennies"
+   "span": "It is absurd that a cent should be valued at hundreds/thousands of dollars",
+   "note": "the essay's slash is read as 'or'; otherwise the sentence is the essay's"
   },
   {
-   "say": "He photographed and catalogued every one.",
-   "kind": "paraphrase",
-   "span": "He then archivally photographed them and cataloged each of their dates and mintages",
-   "note": "shortened for a 90s cut; the dates and mintages appear as on-screen text, not in the voice"
+   "say": "Yet, here we are.",
+   "kind": "quotation",
+   "span": "Yet, here we are"
   },
   {
-   "say": "Then he melted them into a single block.",
+   "say": "He brings a black hole humor to it — laughter that resonates within emptiness.",
    "kind": "paraphrase",
-   "span": "he removed them from circulation by melting them down into a solid copper block"
+   "span": "he brings what I call a “black hole humor” to the process — the kind of laughter that resonates within emptiness",
+   "note": "ATTRIBUTION: the essay says Chang brings the humor, but 'black hole humor' is the ESSAYIST'S coinage ('what I call'). The narration credits the humor to Chang, which the essay asserts, and does not credit him with naming it. On screen the phrase appears in quotation marks with the essay credit, never beside Chang's name."
   },
   {
-   "say": "Then he inscribed each destroyed penny onto a sat, the smallest divisible unit of Bitcoin.",
+   "say": "Every Cent passes through five transformations of value.",
    "kind": "paraphrase",
-   "span": "a satoshi, the smallest divisible unit of Bitcoin"
+   "span": "Each of the objects also goes through 5 transformations of value"
   },
   {
-   "say": "The block itself filled an entire Bitcoin block — CENTS Block 839969.",
+   "say": "In circulation, value defined by the Treasury.",
    "kind": "paraphrase",
-   "span": "what is known as a full-block inscription",
-   "note": "'the block itself' = the 3D model of the smelted copper block, per 'he inscribed a 3D model of the block on a block of the blockchain'. The identifier is from 'Block 839969 serves as the master object of the project'; 'the master object' is carried by on-screen text instead of the voice."
+   "span": "being in circulation (value defined by US treasury)"
   },
   {
-   "say": "He released all ten thousand at one sat each.",
+   "say": "Removed from circulation, that assignment subverted.",
    "kind": "paraphrase",
-   "span": "he released the 10,000 cent inscriptions for the price of one sat each",
-   "note": "the dollar equivalent (apx. $0.0001) moved to on-screen text to save narration time"
+   "span": "being removed from circulation (centralized value assignment subverted)"
   },
   {
-   "say": "Each Cent is five natures at once.",
+   "say": "Archivally photographed, valued for what the image holds.",
+   "kind": "paraphrase",
+   "span": "being archivally photographed (value defined by visual/conceptual/historical quality)"
+  },
+  {
+   "say": "Destroyed, its value made undefinable.",
+   "kind": "paraphrase",
+   "span": "being destroyed (value made undefinable)"
+  },
+  {
+   "say": "Inscribed on Bitcoin, continually redefined by decentralized consensus.",
+   "kind": "paraphrase",
+   "span": "being inscribed on Bitcoin (value continually redefined by decentralized consensus)"
+  },
+  {
+   "say": "And each is five natures at once.",
    "kind": "paraphrase",
    "span": "Each of Chang’s Cents has 5 distinct natures. It is all of these things and none of them"
   },
@@ -85,11 +100,6 @@
    "say": "All of these things, and none of them.",
    "kind": "quotation",
    "span": "all of these things and none of them"
-  },
-  {
-   "say": "Conceptual art broke from the object in the nineteen sixties, when commodification had hollowed it out.",
-   "kind": "paraphrase",
-   "span": "Conceptual art emerged as a movement in the 1960s as a reaction against object-based, market-driven modernism"
   },
   {
    "say": "Digital flows could not hold identity, singularity, provenance or ownership.",
@@ -484,16 +494,31 @@
    "text": "the master object",
    "kind": "quotation",
    "span": "Block 839969 serves as the master object of the project"
+  },
+  {
+   "text": "Victor David Brenner",
+   "kind": "paraphrase",
+   "span": "The image of Lincoln on the face of the penny, created by Victor David Brenner, is the most reproduced artwork on planet Earth"
+  },
+  {
+   "text": "500+ billion struck",
+   "kind": "paraphrase",
+   "span": "its presence on the 500+ billion Lincoln cents that have been struck"
+  },
+  {
+   "text": "“black hole humor”",
+   "kind": "quotation",
+   "span": "he brings what I call a “black hole humor” to the process"
   }
  ],
  "attributions": [],
  "distinctions_kept": [
   {
    "distinction": "FIVE NATURES (what a Cent simultaneously is) vs FIVE TRANSFORMATIONS OF VALUE (what it passes through) - two different lists of five",
-   "where": "90s cut: the five TRANSFORMATIONS are enacted by the process narration (in circulation, removed, photographed, destroyed, inscribed) and shown as the s04_process chain; only the five NATURES are spoken as a list, on a different diagram. The two are therefore never read as one list.",
+   "where": "Both fives are narrated. The TRANSFORMATIONS are a chain (s05) carrying the project's process, which this cut no longer narrates separately; the NATURES are a different diagram (s06), simultaneous rather than sequential.",
    "verdict": "kept",
    "by": "claude",
-   "note": "The previous film's 'five conditions' matched the TRANSFORMATIONS only. Merging the two lists is the obvious failure here. At 90 seconds there is no room to narrate both fives; narrating only the natures and letting the process carry the transformations is the compression chosen, and it removes rather than creates the merge risk."
+   "note": "The previous film's 'five conditions' matched the TRANSFORMATIONS only. In this cut the merge risk is HIGHER, not lower: the two lists are now adjacent in the narration with only 'And each is five natures at once' between them, so the visual distinction carries the whole load."
   },
   {
    "distinction": "CENTS (project) / Cents (collection pieces) / cents (ordinary money)",
@@ -525,7 +550,14 @@
    "where": "s08_gesture holds the sentence alone; the ending does not show a finished artefact",
    "verdict": "kept",
    "by": "claude"
+  },
+  {
+   "distinction": "'black hole humor' is the ESSAYIST'S coinage vs the humor itself, which the essay credits to Chang",
+   "where": "narration credits Chang with the humor only; the phrase appears on screen in quotation marks with the essay credit",
+   "verdict": "kept",
+   "by": "claude",
+   "note": "Putting 'black hole humor' on screen beside Chang's name would credit the essay's phrase to the artist - the same class as the quotation once credited to Chang in the previous production."
   }
  ],
- "script_target": "90 seconds. 196 words; 81-90s of speech at 130-145 wpm, plus 4s of silence for credits."
+ "script_target": "90 seconds. 197 words; 82-91s of speech at 130-145 wpm, plus 4s of silence for credits."
 }
