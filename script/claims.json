@@ -20,16 +20,17 @@
    "span": "the metal value of apx. ¢2.5"
   },
   {
-   "say": "The readymade he chose is the most common object in existence.",
-   "kind": "paraphrase",
-   "span": "the readymade he’s using is one of the most common objects in existence",
-   "note": "A property of the object, not a reason for choosing it. The essay states it under Chang's practice of working with readymades, after the origin has already been given as the value discrepancy."
+   "say": "The readymade he chose is the most reproduced physical object in history.",
+   "kind": "addition",
+   "approved": true,
+   "by": "user",
+   "note": "BEYOND THE ESSAY, APPROVED BY THE AUTHOR (requested 2026-10-06). The essay says 'the readymade he’s using is one of the most common objects in existence' and reserves the superlative for the IMAGE: 'the most reproduced artwork on planet Earth'. 'The most reproduced physical object in history' is a stronger claim than the essay makes - it ranks the penny against all manufactured objects, where bottle caps, fasteners and other mass-produced items plausibly exceed 500+ billion. Approved because the essay's author asked for this wording; recorded here so the claim is the author's and not the film's invention. The faithful alternative, if it is ever challenged, is 'carries the most reproduced artwork in history, on more than five hundred billion coins'."
   },
   {
-   "say": "Brenner's Lincoln is the most reproduced artwork on Earth.",
+   "say": "The Lincoln on it, by Victor David Brenner, is the most reproduced artwork.",
    "kind": "paraphrase",
    "span": "The image of Lincoln on the face of the penny, created by Victor David Brenner, is the most reproduced artwork on planet Earth",
-   "note": "ATTRIBUTION/INTENTION: the essay offers this as a fact about the readymade's ubiquity, NOT as the artist's motive. It must never be placed where it reads as why Chang made the work. 'Victor David' and the 500+ billion struck go on screen."
+   "note": "'on planet Earth' is dropped because the previous line already ends on a superlative of scope; the artist's full name moves INTO the voice here, since this line credits the most reproduced artwork to him."
   },
   {
    "say": "The object remained, buoyed into physicality by the force of its context.",
@@ -43,10 +44,10 @@
    "span": "It is absurd that a nation’s currency should dissolve into worthlessness"
   },
   {
-   "say": "It is absurd that a cent should be valued at hundreds or thousands of dollars.",
+   "say": "It is absurd that a cent should be valued at thousands of dollars.",
    "kind": "paraphrase",
    "span": "It is absurd that a cent should be valued at hundreds/thousands of dollars",
-   "note": "the essay's slash is read as 'or'; otherwise the sentence is the essay's"
+   "note": "the essay's 'hundreds/thousands' is shortened to 'thousands'; the lower bound is carried by on-screen text"
   },
   {
    "say": "Yet, here we are.",
@@ -90,7 +91,7 @@
    "span": "being inscribed on Bitcoin (value continually redefined by decentralized consensus)"
   },
   {
-   "say": "The assigned value is decoupled from the object and becomes a vessel for social consensus.",
+   "say": "The assigned value is decoupled from the object, a vessel for social consensus.",
    "kind": "paraphrase",
    "span": "the original assigned value is decoupled from the object and transformed into a vessel for social-consensus based value defined by decentralized participants"
   },
@@ -488,6 +489,11 @@
    "text": "“black hole humor”",
    "kind": "quotation",
    "span": "he brings what I call a “black hole humor” to the process"
+  },
+  {
+   "text": "hundreds or thousands of dollars",
+   "kind": "quotation",
+   "span": "valued at hundreds/thousands of dollars"
   }
  ],
  "attributions": [],
@@ -545,6 +551,6 @@
    "note": "Caught by the user in revision 3, where the film OPENED on Brenner and so implied Chang chose the penny because the portrait is the most reproduced artwork on Earth. The essay claims no such thing. This is the quietest kind of infidelity: every sentence was individually true to a span, and the ORDER invented an intention."
   }
  ],
- "script_target": "90 seconds. 196 words, 21 sentences; 81-90s of speech at 130-145 wpm, plus 4s of silence for credits.",
+ "script_target": "90 seconds. 197 words, 21 sentences; 82-91s of speech at 130-145 wpm, plus 4s of silence for credits.",
  "_thesis_note": "Film 1 of several on CENTS, framed on VALUE. The essay's other half - conceptual art, the loss of objecthood in digital flows, and blockchain as this era's objecthood - is a second film's thesis, not a compressed sub-section of this one. Earlier revisions of this script carried both and served neither."
 }

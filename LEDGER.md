@@ -364,3 +364,27 @@ the film earns it rather than asserting it up front.
 
 **Open:** 45 of 52 timeline anchors dangle across 14 of 15 shots.
 Measured this revision, not carried over.
+
+### Revision 4a — the first approved addition
+
+The Brenner pair now reads "the readymade he chose is the most reproduced
+physical object in history" / "the Lincoln on it, by Victor David Brenner, is
+the most reproduced artwork."
+
+**This is the ledger's first `addition`, and it is the author's claim, not the
+film's.** The essay says "one of the most common objects in existence" and
+reserves the superlative for the IMAGE ("the most reproduced artwork on planet
+Earth"). "The most reproduced physical object in history" ranks the penny
+against all manufactured objects — bottle caps, fasteners and other mass-produced
+items plausibly exceed 500+ billion units. Requested by the essay's author on
+2026-10-06, so it is recorded as `kind: addition, approved: true, by: user`
+with the faithful alternative written beside it.
+
+**Side effect worth noting: the `additions approved` gate stopped being
+vacuous.** It had reported "no additions" on every run of this production. A
+gate measuring an empty set passes for the wrong reason — it now has one row to
+check, and the self-test control that appends an UNAPPROVED addition still goes
+red, so both directions are now exercised.
+
+Victor David Brenner's full name moves into the voice on this line, because this
+is the line that credits the most reproduced artwork on Earth to him.
