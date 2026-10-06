@@ -13,7 +13,7 @@ the Block number) as an initial prompt. It never replaces the recorded wording:
 adlibs and on-the-fly revisions must survive into the captions.
 """
 from __future__ import annotations
-import argparse, json, pathlib, subprocess, sys
+import argparse, json, pathlib, re, subprocess, sys
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import cues as C
 
@@ -33,10 +33,42 @@ def transcribe(p: pathlib.Path, prompt: str | None, model: str) -> list[dict]:
     res = mlx_whisper.transcribe(
         str(p), word_timestamps=True,
         path_or_hf_repo=model,
-        initial_prompt=prompt)
+        initial_prompt=prompt,
+        # Conditioning each window on the previous window's text makes the
+        # decoder loop: on this production's first run it emitted "5 inscribed
+        # on bitcoin" fourteen times and then "5" for seventeen seconds, over
+        # audio that measures -28 dB (i.e. real speech, not silence). A
+        # voiceover take with deliberate repetition is exactly the input that
+        # triggers it. Off, the same audio transcribes cleanly.
+        condition_on_previous_text=False)
     words = [w for seg in res["segments"] for w in seg.get("words", [])]
     return [{"word": w["word"].strip(), "start": round(w["start"],3), "end": round(w["end"],3)}
             for w in words if w["word"].strip()]
+
+def spelling_prompt(script: str) -> str:
+    """A prompt of TERMS, not prose.
+
+    The prompt's documented job is to supply spellings (Cents vs cents, the
+    Block number, a name). Feeding it the script's opening SENTENCES instead
+    invites the decoder to carry on writing them: over audio that says the name
+    once, with a pause, it produced "Rutherford. Rutherford Chang began CENTS
+    with a simple value discrepancy." twice. Reconciliation then reads the echo
+    as an adlib and keeps it, because an adlib is exactly what an unmatched run
+    of words looks like.
+
+    So: proper nouns, numbers and long technical words, comma separated. No
+    sentence for the decoder to finish.
+    """
+    seen: set[str] = set()
+    terms: list[str] = []
+    for t in re.findall(r"[A-Za-z0-9\u2019'\-]+", script):
+        k = t.lower()
+        if k in seen: continue
+        if t[:1].isupper() or any(ch.isdigit() for ch in t) or len(t) > 9:
+            seen.add(k); terms.append(t)
+    if not terms:
+        raise ValueError("no spelling terms found in the script - prompt would be empty")
+    return ", ".join(terms)[:900]
 
 def srt(cues: list[dict]) -> str:
     def ts(t: float) -> str:
@@ -54,7 +86,7 @@ def main() -> int:
     p = pathlib.Path(a.audio)
     if not p.exists(): sys.exit(f"{p} does not exist")
     dur = audio_duration(p)
-    prompt = pathlib.Path(a.script).read_text()[:900] if a.script else None
+    prompt = spelling_prompt(pathlib.Path(a.script).read_text()) if a.script else None
     sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 
     words = transcribe(p, prompt, a.model)

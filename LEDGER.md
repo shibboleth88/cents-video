@@ -635,3 +635,93 @@ still changing. It went with the passage. It is now an on-screen string.
 
 **Length:** 200 words, 83-92s of speech, 87-96s with credits, mid 92s - back
 inside the original 90s brief, which the canon passage had pushed to ~106s.
+
+## Episode — the recording (2026-10-06)
+
+321.4s of tape for a 200-word script. Retakes, revised lines and cut lines, as
+the recording script invites. 124.78s kept.
+
+### Four instrument failures, found before any of them reached the film
+
+**1. The recogniser looped on real speech and I nearly read it as performance.**
+The first transcription emitted "More than 500 billion Lincoln cents were
+produced" three times, then "5 inscribed on bitcoin" fourteen times, then bare
+"5" for seventeen seconds. The obvious reading is a speaker stuck in retakes.
+Measured instead: that seventeen-second stretch is **-25 to -32 dB, i.e. normal
+speech**, not silence. So the decoder degenerated over content, and the content
+was unknown. `condition_on_previous_text=False` transcribes the same audio
+cleanly and reveals the real line - the last take, the only one that reaches "on
+the open market". Fixed in `align.py` with the measurement in the comment.
+
+*Failure-shape: a looping instrument and a repeating subject render
+identically.* The distinguishing measurement is not in the transcript at all -
+it is in the audio energy. Had I trusted the first transcript, the film would
+have been cut from a hallucination, and every sentence of it would have looked
+plausible.
+
+**2. The initial prompt echoed into the transcript.** `align.py` passed the
+script's first 900 characters - prose - as the decoder's initial prompt. Over
+audio that says "Rutherford Chang" once, with a 0.7s pause, it produced
+"Rutherford. Rutherford Chang began CENTS with a simple value discrepancy."
+twice. Reconciliation then reads the echo as an ADLIB and preserves it, because
+an unmatched run of words is exactly what an adlib looks like. The prompt's
+documented job is spellings, so it now carries proper nouns, numbers and long
+technical words, comma separated - nothing for the decoder to finish.
+
+**3. `cues.py` crashed, and the filter it crashed in was measuring the wrong
+thing.** In `_merge_short`, the comprehension variable shadowed the cue being
+folded away: `[c for c in cand if c[0] + len(_text(c)) ...]` handed `_text` a
+`(len, index, side)` tuple. Beyond the crash, the filter never compared what it
+claims to - neighbour length plus THIS cue's length. Both fixed.
+
+*The first control I wrote for it was vacuous.* "Yet here we are." is a single
+sentence, so it never reached `_merge_short` at all, and the pre-fix code
+"passed". A real control needs a one-word SENTENCE beside a normal one. Against
+that, pre-fix goes RED and the fix goes green.
+
+**4. A hyphen-split token read as a departure from the script.** Whisper emits
+"ready" + "-made"; the comparison sees 2-against-1, which is the shape of a
+structural difference, so the artefact was preserved as though spoken and "The
+ready -made he chose" reached the captions. A token that is only a hyphen plus
+letters is a tokenisation seam, not a word. Healed before comparison, with a
+self-test case that goes red against the pre-healing code.
+
+### Take selection
+
+`script/takes.json` records every kept segment, what it says, and which take it
+is. Rule: last complete take, which is what the recording script asks for. Cut
+points were placed at measured 10ms-RMS silence troughs, not at recogniser word
+boundaries - four of the joins are butt-ended in the word timings, including one
+where "undefinable" and the next "5" share a timestamp.
+
+The heaviest: transformation five was attempted about twelve times between 165s
+and 289s. Only the last reaches "as the objects are traded every day on the open
+market".
+
+### The script file is now a transcript
+
+`script/voiceover.txt` holds what was SAID, not what was written. The written
+version is archived at `script/archive/voiceover_2026-10-06_as-written.txt`. All
+ten fidelity gates pass against the spoken text, and the ledger records what the
+performance changed:
+
+- "at the time he made the piece" - the speaker's qualifier, narrowing the
+  essay's 2.5x claim rather than extending it.
+- "also perhaps the most reproduced physical artwork" - a hedge, so safer than
+  the written line.
+- "that Victor David Brenner made in 1909" - NOT in the essay. Correct (the
+  Lincoln cent was first struck in 1909) and said by the essay's author, so
+  recorded as `addition / approved: true / by: user`.
+- "melted into a block of copper" and "as the objects are traded every day on
+  the open market" - both the essay's own content, said concretely.
+- The closer says "through time" where the essay has "in time", so it is now a
+  paraphrase rather than a quotation.
+
+### Open
+
+**Length.** 124.78s of voice, ~128.8s with the credit tail. The brief was 90
+seconds. The lines were expanded in performance; nothing is wrong with the
+recording, but the film is now 2:09 and that is a decision, not a detail.
+
+**The timeline is not re-anchorable.** 48 of 52 anchors dangle across 14 of 15
+shots. The shot list was written for a script that no longer exists.

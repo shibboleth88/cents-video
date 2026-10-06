@@ -1,35 +1,159 @@
 1
-00:00:00,000 --> 00:00:02,399
-What happens when a systems artwork produces
+00:00:00,000 --> 00:00:03,220
+Rutherford Chang began CENTS
 
 2
-00:00:02,399 --> 00:00:04,719
-something the system itself cannot witness.
+00:00:03,220 --> 00:00:05,700
+with a simple value discrepancy.
 
 3
-00:00:05,179 --> 00:00:08,080
-Rutherford Chang's CENTS begins with a discrepancy.
+00:00:06,700 --> 00:00:09,640
+What was one cent to the US Treasury
 
 4
-00:00:08,320 --> 00:00:11,919
-A penny is photographed, catalogued, and inscribed.
+00:00:09,640 --> 00:00:12,279
+was about two and a half cents
 
 5
-00:00:12,320 --> 00:00:13,519
-The object persists.
+00:00:12,279 --> 00:00:14,980
+as copper at the time he made the piece.
 
 6
-00:00:13,880 --> 00:00:15,820
-The record of the object persists.
+00:00:16,399 --> 00:00:20,000
+Nothing had been sold for a single cent since
 
 7
-00:00:16,140 --> 00:00:18,239
-What goes missing is the link between them.
+00:00:20,000 --> 00:00:24,079
+before Chang was born, yet the object remained,
 
 8
-00:00:18,679 --> 00:00:20,399
-That gap is not an error in the work.
+00:00:24,800 --> 00:00:28,940
+buoyed into physicality by the force of its context.
 
 9
-00:00:20,780 --> 00:00:22,199
-It is the work's newest layer.
+00:00:30,000 --> 00:00:32,960
+The readymade he chose is also perhaps
+
+10
+00:00:32,960 --> 00:00:35,700
+the most reproduced physical artwork on Earth.
+
+11
+00:00:35,979 --> 00:00:38,380
+More than 500 billion Lincoln cents
+
+12
+00:00:38,380 --> 00:00:41,020
+were produced, each with the portrait
+
+13
+00:00:41,020 --> 00:00:44,719
+of Lincoln that Victor David Brenner made in 1909.
+
+14
+00:00:45,359 --> 00:00:48,200
+It is absurd that a nation's currency
+
+15
+00:00:48,200 --> 00:00:50,179
+should dissolve into worthlessness.
+
+16
+00:00:51,119 --> 00:00:53,479
+It is absurd that a cent should be
+
+17
+00:00:53,479 --> 00:00:55,740
+valued at hundreds or thousands of dollars.
+
+18
+00:00:56,439 --> 00:00:57,659
+Yet here we are.
+
+19
+00:00:57,659 --> 00:01:01,600
+Chang brings a kind of black hole humor
+
+20
+00:01:01,600 --> 00:01:06,040
+to his work, laughing at this absurdity
+
+21
+00:01:06,040 --> 00:01:09,299
+with a laughter that resonates with an emptiness.
+
+22
+00:01:09,299 --> 00:01:12,159
+In the system Chang created,
+
+23
+00:01:12,459 --> 00:01:14,180
+every cent is passed through
+
+24
+00:01:14,180 --> 00:01:16,299
+five transformations of value.
+
+25
+00:01:16,920 --> 00:01:19,079
+One, in circulation,
+
+26
+00:01:19,420 --> 00:01:21,420
+its value defined by the Treasury.
+
+27
+00:01:21,920 --> 00:01:24,939
+Two, removed from circulation,
+
+28
+00:01:25,379 --> 00:01:27,819
+that value assignment subverted.
+
+29
+00:01:28,459 --> 00:01:31,040
+Three, archivally photographed,
+
+30
+00:01:31,959 --> 00:01:33,900
+valued for what the image holds.
+
+31
+00:01:34,599 --> 00:01:38,159
+Four, destroyed, melted into a block
+
+32
+00:01:38,159 --> 00:01:41,299
+of copper, its value made undefinable.
+
+33
+00:01:42,239 --> 00:01:44,439
+Five, inscribed on Bitcoin,
+
+34
+00:01:44,819 --> 00:01:48,480
+its value continually redefined by decentralized
+
+35
+00:01:48,480 --> 00:01:51,459
+consensus as the objects are
+
+36
+00:01:51,459 --> 00:01:53,900
+traded every day on the open market.
+
+37
+00:01:54,400 --> 00:01:56,379
+CENTS is a becoming,
+
+38
+00:01:56,920 --> 00:02:00,400
+a gesture that unfolds continually
+
+39
+00:02:00,400 --> 00:02:02,359
+through the actions of
+
+40
+00:02:02,359 --> 00:02:04,359
+its participants through time.

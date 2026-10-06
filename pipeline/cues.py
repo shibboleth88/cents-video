@@ -74,7 +74,12 @@ def _merge_short(cues: list[list[Word]]) -> list[list[Word]]:
             # Merge into the shorter neighbour, but never into one that would
             # then be over-long: a fix for an orphan must not create a wall.
             cand.sort()
-            cand = [c for c in cand if c[0] + len(_text(c)) + 1 <= MAX_CHARS + 8] or cand
+            # `c` is the cue being folded away; the comprehension variable must
+            # not shadow it. It did, so `_text` was handed a (len, index, side)
+            # tuple and raised, and the filter was never measuring what it says:
+            # neighbour length + THIS cue's length against the limit.
+            cur_len = len(_text(c))
+            cand = [t for t in cand if t[0] + cur_len + 1 <= MAX_CHARS + 8] or cand
             _, j, side = cand[0]
             if side == "prev": cues[j] = cues[j] + c
             else: cues[j] = c + cues[j]

@@ -4,44 +4,34 @@
  "thesis": "Value is ascribed, not intrinsic. CENTS runs one of the most ordinary objects on Earth through five regimes of value ascription and leaves it in a sixth that never closes, so the work's value, meaning and even its nature keep being redefined by its participants.",
  "claims": [
   {
-   "say": "Chang began with a simple value discrepancy.",
+   "say": "Rutherford Chang began CENTS with a simple value discrepancy.",
    "kind": "paraphrase",
-   "span": "Rutherford Chang began this project with a simple value discrepancy",
-   "note": "This is the essay's account of the project's ORIGIN, and it opens the film for that reason."
+   "span": "Rutherford Chang began this project with a simple value discrepancy"
   },
   {
-   "say": "One cent to the Treasury.",
+   "say": "What was one cent to the US Treasury was about two and a half cents as copper at the time he made the piece.",
    "kind": "paraphrase",
-   "span": "the value of ¢1 ascribed to copper pennies by the US Treasury"
+   "span": "the difference between the value of ¢1 ascribed to copper pennies by the US Treasury versus the metal value of apx. ¢2.5",
+   "note": "SPOKEN REVISION. 'at the time he made the piece' is the speaker's qualifier and is not in the essay. It NARROWS the essay's claim rather than extending it - the copper price moves, so the 2.5x ratio is tied to when the work was made. Recorded as a paraphrase for that reason, but the qualifier is the speaker's, not the source's."
   },
   {
-   "say": "About two and a half as copper.",
+   "say": "Nothing had been sold for a single cent since before Chang was born, yet the object remained, buoyed into physicality by the force of its context.",
    "kind": "paraphrase",
-   "span": "the metal value of apx. ¢2.5"
+   "span": "there was no longer anything sold for a single cent, and by 2006, shortly after he graduated from university, it had become more expensive to produce one cent than one cent. Yet the object remained, buoyed into physicality by the force of its context",
+   "note": "two written lines spoken as one sentence; the span is contiguous in the essay and covers both clauses."
   },
   {
-   "say": "Nothing has been sold for a single cent since before Chang was born.",
-   "kind": "paraphrase",
-   "span": "By the time the artist was born in 1979, there was no longer anything sold for a single cent",
-   "note": "RESTORED in revision 4c. Without it the next line's 'the object remained' has no antecedent - nothing in the film had said the penny lost its function. The 1979 date goes on screen; the voice says 'before Chang was born' because the film has already named him."
-  },
-  {
-   "say": "Yet the object remained, buoyed into physicality by the force of its context.",
-   "kind": "quotation",
-   "span": "Yet the object remained, buoyed into physicality by the force of its context",
-   "note": "the essay's 'Yet' is restored now that the preceding line supplies the contrast it points at."
-  },
-  {
-   "say": "The readymade he chose is the most reproduced physical artwork.",
+   "say": "The readymade he chose is also perhaps the most reproduced physical artwork on Earth.",
    "kind": "paraphrase",
    "span": "The image of Lincoln on the face of the penny, created by Victor David Brenner, is the most reproduced artwork on planet Earth",
-   "note": "DISTINCTION: the essay's superlative is about the IMAGE; this line applies it to the physical OBJECT that carries it, which is what the word 'physical' marks. The essay's own reasoning licenses the move - the image is the most reproduced artwork 'due to its presence on the 500+ billion Lincoln cents that have been struck' - and 'physical' NARROWS the claim rather than widening it. Requested in this wording by the essay's author, 2026-10-06, replacing 'most reproduced physical object', which did exceed the essay and was carried as an approved addition."
+   "note": "SPOKEN REVISION: 'also perhaps' hedges the superlative. The essay asserts it outright for the image; the speaker hedges it for the object. A hedge can only reduce the claim, so this is safer than the written line it replaces."
   },
   {
-   "say": "More than five hundred billion Lincoln cents, each carrying Victor David Brenner's portrait.",
-   "kind": "paraphrase",
-   "span": "its presence on the 500+ billion Lincoln cents that have been struck",
-   "note": "the evidence for the previous line, and the line that credits the artwork to Brenner by name."
+   "say": "More than five hundred billion Lincoln cents were produced, each with the portrait of Lincoln that Victor David Brenner made in 1909.",
+   "kind": "addition",
+   "approved": true,
+   "by": "user",
+   "note": "SPOKEN ADDITION: the date 1909 is not in the essay. It is correct - the Lincoln cent was first struck in 1909, for the centenary of Lincoln's birth, from Victor David Brenner's portrait - and it was said by the essay's author, so it is approved rather than removed. The coin count and the attribution to Brenner are the essay's: 'its presence on the 500+ billion Lincoln cents that have been struck'."
   },
   {
    "say": "It is absurd that a nation's currency should dissolve into worthlessness.",
@@ -49,75 +39,61 @@
    "span": "It is absurd that a nation’s currency should dissolve into worthlessness"
   },
   {
-   "say": "It is absurd that a cent should be valued at thousands of dollars.",
+   "say": "It is absurd that a cent should be valued at hundreds or thousands of dollars.",
    "kind": "paraphrase",
    "span": "It is absurd that a cent should be valued at hundreds/thousands of dollars",
-   "note": "the essay's 'hundreds/thousands' is shortened to 'thousands'; the lower bound is carried by on-screen text"
+   "note": "the essay's slash is read as 'or'"
   },
   {
-   "say": "Yet, here we are.",
+   "say": "Yet here we are.",
    "kind": "quotation",
-   "span": "Yet, here we are"
+   "span": "Yet, here we are",
+   "note": "spoken without the essay's comma"
   },
   {
-   "say": "He brings a black hole humor to it — laughter that resonates within emptiness.",
+   "say": "Chang brings a kind of black hole humor to his work, laughing at this absurdity with a laughter that resonates with an emptiness.",
    "kind": "paraphrase",
    "span": "he brings what I call a “black hole humor” to the process — the kind of laughter that resonates within emptiness",
-   "note": "ATTRIBUTION: the essay says Chang brings the humor, but 'black hole humor' is the ESSAYIST'S coinage ('what I call'). The narration credits the humor to Chang, which the essay asserts, and does not credit him with naming it. On screen the phrase appears in quotation marks with the essay credit, never beside Chang's name."
+   "note": "ATTRIBUTION: 'black hole humor' is the ESSAYIST'S coinage ('what I call'). The humor is credited to Chang, which the essay asserts; the naming is not. 'laughing at this absurdity' is the speaker's link to 'the absurdity of value ascription', which the essay names. Said 'resonates with an emptiness', not the essay's 'within emptiness'."
   },
   {
-   "say": "Every Cent passes through five transformations of value.",
+   "say": "In the system Chang created, every cent is passed through five transformations of value.",
    "kind": "paraphrase",
-   "span": "Each of the objects also goes through 5 transformations of value"
+   "span": "Each of the objects also goes through 5 transformations of value",
+   "note": "SPOKEN REVISION: 'In the system Chang created' replaces the written 'Every Cent passes through'."
   },
   {
-   "say": "In circulation, value defined by the Treasury.",
+   "say": "One, in circulation, its value defined by the Treasury.",
    "kind": "paraphrase",
    "span": "being in circulation (value defined by US treasury)"
   },
   {
-   "say": "Removed from circulation, that assignment subverted.",
+   "say": "Two, removed from circulation, that value assignment subverted.",
    "kind": "paraphrase",
    "span": "being removed from circulation (centralized value assignment subverted)"
   },
   {
-   "say": "Archivally photographed, valued for what the image holds.",
+   "say": "Three, archivally photographed, valued for what the image holds.",
    "kind": "paraphrase",
    "span": "being archivally photographed (value defined by visual/conceptual/historical quality)"
   },
   {
-   "say": "Destroyed, its value made undefinable.",
+   "say": "Four, destroyed, melted into a block of copper, its value made undefinable.",
    "kind": "paraphrase",
-   "span": "being destroyed (value made undefinable)"
+   "span": "being destroyed (value made undefinable)",
+   "note": "SPOKEN ADDITION of the mechanism, which is the essay's: 'melting them down into a solid copper block'."
   },
   {
-   "say": "Inscribed on Bitcoin, continually redefined by decentralized consensus.",
+   "say": "Five, inscribed on Bitcoin, its value continually redefined by decentralized consensus as the objects are traded every day on the open market.",
    "kind": "paraphrase",
-   "span": "being inscribed on Bitcoin (value continually redefined by decentralized consensus)"
+   "span": "being inscribed on Bitcoin (value continually redefined by decentralized consensus)",
+   "note": "SPOKEN ADDITION of 'as the objects are traded every day on the open market', which is the essay's 'placing them into a system of permissionless exchange and indeterminate, continual revaluation' said concretely. 'Every day' is the speaker's."
   },
   {
-   "say": "Ten thousand inscriptions, and never any more.",
+   "say": "CENTS is a becoming, a gesture that unfolds continually through the actions of its participants through time.",
    "kind": "paraphrase",
-   "span": "its existence as a permanent set of 10,000",
-   "note": "The scarcity has to be stated here or the next two lines have no subject. It follows 'Inscribed on Bitcoin' directly, so 'inscriptions' carries the link rather than introducing a new topic."
-  },
-  {
-   "say": "In a set this fixed, each Cent accrues its own significance.",
-   "kind": "paraphrase",
-   "span": "transforms this collection of pennies into a system with its own unique logics and rarities",
-   "note": "The verb 'accrues significance' is borrowed deliberately from the canon sentence that follows - using the same verb on both sides of the analogy is what makes the next line land as a comparison rather than a new thought. The essay's own term for the differentiation is 'its own unique logics and rarities'."
-  },
-  {
-   "say": "The way words do, inside the scarce set of meanings we call canon.",
-   "kind": "paraphrase",
-   "span": "individual words and phrases in texts accrue significance when they enter the scarce set of meanings referred to as “canon”",
-   "note": "Grammatically continuous with the line before it, so the analogy cannot float. 'Inside' rather than the essay's 'when they enter', because the CENTS set is closed at ten thousand - nothing enters it, and what varies is which members accrue significance. The essay offers this as its author's own association ('it reminds me of'); the hedged first-person variant remains available."
-  },
-  {
-   "say": "CENTS is a becoming, a gesture that unfolds continually through the actions of its participants in time.",
-   "kind": "quotation",
    "span": "CENTS is a becoming, a gesture that unfolds continually through the actions of its participants in time",
-   "note": "The essay's FIRST sentence, used as the film's last. The film earns it rather than asserting it."
+   "note": "spoken as 'through time' where the essay has 'in time', so paraphrase rather than quotation."
   }
  ],
  "onscreen": [
@@ -622,6 +598,7 @@
    "note": "The essay compares collectors reading the set to words accruing significance in a canon. Said slightly differently - 'CENTS enters the canon' - it becomes a claim about the work's art-historical status that the essay never makes and that the film has no standing to make. On screen, 'canon' must not appear beside the work's title or any date."
   }
  ],
- "script_target": "About 90 seconds. 200 words, 21 sentences; 83-92s of speech at 130-145 wpm, plus 4s of silence for credits (87-96s total, mid 92s). Back within the original brief after the collector-dynamics passage was replaced by a shorter bridge.",
- "_thesis_note": "Film 1 of several on CENTS, framed on VALUE. The essay's other half - conceptual art, the loss of objecthood in digital flows, and blockchain as this era's objecthood - is a second film's thesis, not a compressed sub-section of this one. Earlier revisions of this script carried both and served neither."
+ "script_target": "SUPERSEDED BY THE RECORDING. The written script was 200 words / ~90s. What was recorded on 2026-10-06 is 239 words and, after take selection, 124.8s of voice (~128.8s with the 4s credit tail). The lines were expanded in performance; the brief needs restating or lines need cutting.",
+ "_thesis_note": "Film 1 of several on CENTS, framed on VALUE. The essay's other half - conceptual art, the loss of objecthood in digital flows, and blockchain as this era's objecthood - is a second film's thesis, not a compressed sub-section of this one. Earlier revisions of this script carried both and served neither.",
+ "_source_of_truth": "script/voiceover.txt is now a TRANSCRIPT of the recording, not a plan for it. See script/takes.json for which audio was kept."
 }

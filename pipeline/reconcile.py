@@ -25,8 +25,28 @@ import difflib, re, sys
 def norm(w: str) -> str:
     return re.sub(r"[^a-z0-9]", "", w.lower().replace("’", "'"))
 
+def heal_split_tokens(words: list[dict]) -> list[dict]:
+    """Join a token that is only a hyphen plus letters onto the one before it.
+
+    Whisper emits a hyphenated word as two tokens with the hyphen leading the
+    second: "ready" + "-made". That is one word with a tokenisation seam, not
+    two words. Left split, it reaches the comparison below as a 2-against-1
+    opcode, which is the shape of a STRUCTURAL difference - so a spelling
+    artefact gets preserved as though the speaker had departed from the script,
+    and "The ready -made he chose" goes on screen.
+    """
+    out: list[dict] = []
+    for w in words:
+        if out and re.fullmatch(r"-\w[\w'\u2019-]*", w["word"]):
+            out[-1] = {**out[-1], "word": out[-1]["word"] + w["word"], "end": w["end"]}
+        else:
+            out.append(dict(w))
+    return out
+
+
 def reconcile(words: list[dict], script: str) -> tuple[list[dict], list[dict]]:
     """Returns (corrected_words, divergences)."""
+    words = heal_split_tokens(words)
     sw = [t for t in re.findall(r"\S+", script) if norm(t)]
     a = [norm(w["word"]) for w in words]
     b = [norm(t) for t in sw]
@@ -87,6 +107,13 @@ def self_test() -> int:
              "the","system","itself","cannot","witness."]),
          lambda o, d: any(w["word"] == "actually" for w in o)
                       and any(x["kind"] == "spoken_differs" for x in d)),
+        ("hyphen-split token is healed, not treated as a departure",
+         mk(["What","happens","when","a","systems","artwork","produces","something","the",
+             "system","itself","cannot","witness."])[:4] +
+         [{"word":"sys","start":1.6,"end":1.8},{"word":"-tems","start":1.8,"end":2.0}] +
+         mk(["artwork","produces","something","the","system","itself","cannot","witness."])[0:8],
+         lambda o, d: any(w["word"] == "systems" for w in o)
+                      and not any(x["kind"] == "spoken_differs" for x in d)),
         ("timings come from the audio, never the script",
          mk(["What","happens","when","a","system's","artwork","produces","something","the",
              "system","itself","cannot","witness."]),
