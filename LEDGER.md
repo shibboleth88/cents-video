@@ -452,3 +452,52 @@ vessel for social consensus." It was the most redundant line in the script: the
 mechanism is already in "continually redefined by decentralized consensus" and
 the result is already in "its value and meaning are indeterminate and
 continually redefined."
+
+### Revision 4d — the same failure again, at the other end
+
+The user could not follow 19 -> 20 -> 21: "Chang initiated an ongoing process of
+redefinition" / "Each object, initially identical, bears the marks of touch and
+time" / "CENTS is a becoming... through the actions of its participants." Right
+again, and it is the SAME shape as 4c, which should have made me look for it:
+**a conclusion kept while its premises were cut.**
+
+In the essay the marks of touch and time arrive after the permanent set of
+10,000 has become "a system with its own unique logics and rarities", and the
+participants of the closing sentence are the collectors "intricately dissect[ing]
+this set to determine its internal dynamics". With both of those cut, line 20
+was a sentence about wear and line 21 invoked participants the film had never
+shown.
+
+**Two restored lines and a reorder, with the length extended on request:**
+
+    Chang initiated an ongoing process of redefinition.
+    A permanent set of ten thousand, with its own logics and rarities.
+    Each one initially identical, each bearing the marks of touch and time.
+    Collectors dissect the set for its internal dynamics.
+    Its value and meaning are indeterminate and continually redefined.
+    CENTS is a becoming, a gesture that unfolds continually through the
+      actions of its participants in time.
+
+Every transition now has a reason: the fifth transformation does not terminate,
+so Chang started something ongoing; its form is a fixed finite set with internal
+structure; the structure comes from each object's own history; people read those
+differences; so value and meaning stay open; so the work is a becoming through
+its participants' actions. The closing sentence is now earned by the line
+directly above it rather than asserted.
+
+**Also fixed in passing: three consecutive lines said "redefin-".** The
+indeterminacy line moved from before the set to after the collectors, where it
+concludes something the film has shown. Same words, different position, and the
+repetition is gone.
+
+**Failure-shape, now seen twice in two days — write the rule.** *A premise is
+not a conclusion.* When a sentence is cut for length, the sentences that pointed
+at it do not fail; they go quiet. `fidelity.py` maps each claim to a span
+independently and cannot see a reference with nothing behind it, so this class
+is green every time. Both instances were found by a reader, not a gate, and both
+were at a seam where a passage had been compressed. The practical rule: after
+cutting for length, read the SURVIVORS in order and ask of each what it refers
+to.
+
+**Length:** 217 words, 23 sentences, 90-100s of speech, 94-104s with credits.
+Extended from the 90s brief on request. The brief is now "about 100 seconds".

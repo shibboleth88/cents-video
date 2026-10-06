@@ -96,21 +96,33 @@
    "span": "being inscribed on Bitcoin (value continually redefined by decentralized consensus)"
   },
   {
-   "say": "Its value and meaning are indeterminate and continually redefined.",
-   "kind": "paraphrase",
-   "span": "their value and meaning is indeterminate and continually redefined",
-   "note": "the essay's plural is made singular, so paraphrase rather than quotation"
-  },
-  {
    "say": "Chang initiated an ongoing process of redefinition.",
    "kind": "quotation",
    "span": "Chang initiated an ongoing process of redefinition"
   },
   {
-   "say": "Each object, initially identical, bears the marks of touch and time.",
+   "say": "A permanent set of ten thousand, with its own logics and rarities.",
+   "kind": "paraphrase",
+   "span": "its existence as a permanent set of 10,000, transforms this collection of pennies into a system with its own unique logics and rarities",
+   "note": "RESTORED in revision 4d as the antecedent for the next line. 'Each one initially identical' means nothing until the film has said the set is fixed and finite; the rarities are what make the differences legible as a system rather than as wear."
+  },
+  {
+   "say": "Each one initially identical, each bearing the marks of touch and time.",
    "kind": "paraphrase",
    "span": "Each of these objects, initially identical, bear the marks of touch and time",
-   "note": "wording changed from the essay's plural, so paraphrase rather than quotation"
+   "note": "the essay's plural is made distributive; the marks are the physical pennies' wear, recorded in the photographs the inscriptions carry."
+  },
+  {
+   "say": "Collectors dissect the set for its internal dynamics.",
+   "kind": "paraphrase",
+   "span": "collectors intricately dissect this set to determine its internal dynamics",
+   "note": "the essay's first-person testimony - 'I've witnessed collectors intricately dissect this set' - is dropped, so the film states the behaviour rather than the essayist's observation of it. This is also the line that supplies the PARTICIPANTS the closing sentence turns on."
+  },
+  {
+   "say": "Its value and meaning are indeterminate and continually redefined.",
+   "kind": "paraphrase",
+   "span": "their value and meaning is indeterminate and continually redefined",
+   "note": "Moved after the collectors line in revision 4d: their reading of the set IS the continual redefinition, so the sentence now concludes something the film has shown rather than repeating 'redefined' for the third line running."
   },
   {
    "say": "CENTS is a becoming, a gesture that unfolds continually through the actions of its participants in time.",
@@ -511,6 +523,17 @@
    "kind": "paraphrase",
    "span": "once able to get one a newspaper, a ride on a streetcar, a postage stamp",
    "note": "what a cent once bought - available to the frame if the decay needs more than one card"
+  },
+  {
+   "text": "time-based generative art",
+   "kind": "quotation",
+   "span": "the visual presence of the piece exists as time-based generative art",
+   "note": "available to the frame; it was left out of the voice because it needs explaining and the rarities line already does that work"
+  },
+  {
+   "text": "a permanent set of 10,000",
+   "kind": "paraphrase",
+   "span": "its existence as a permanent set of 10,000"
   }
  ],
  "attributions": [],
@@ -575,6 +598,6 @@
    "note": "The glossary already holds satoshi / inscription / image / penny apart as four things. This is the same distinction one step earlier in the work: the artwork and the object it is struck on. Collapsing them would be invisible, because the essay's own argument runs through the coin count."
   }
  ],
- "script_target": "90 seconds. 196 words, 21 sentences; 81-90s of speech at 130-145 wpm, plus 4s of silence for credits.",
+ "script_target": "About 100 seconds, lengthened from the 90s brief on request so the closing passage has its antecedents. 217 words, 23 sentences; 90-100s of speech at 130-145 wpm, plus 4s of silence for credits.",
  "_thesis_note": "Film 1 of several on CENTS, framed on VALUE. The essay's other half - conceptual art, the loss of objecthood in digital flows, and blockchain as this era's objecthood - is a second film's thesis, not a compressed sub-section of this one. Earlier revisions of this script carried both and served neither."
 }
