@@ -20,6 +20,18 @@
    "span": "the metal value of apx. ¢2.5"
   },
   {
+   "say": "Nothing has been sold for a single cent since before Chang was born.",
+   "kind": "paraphrase",
+   "span": "By the time the artist was born in 1979, there was no longer anything sold for a single cent",
+   "note": "RESTORED in revision 4c. Without it the next line's 'the object remained' has no antecedent - nothing in the film had said the penny lost its function. The 1979 date goes on screen; the voice says 'before Chang was born' because the film has already named him."
+  },
+  {
+   "say": "Yet the object remained, buoyed into physicality by the force of its context.",
+   "kind": "quotation",
+   "span": "Yet the object remained, buoyed into physicality by the force of its context",
+   "note": "the essay's 'Yet' is restored now that the preceding line supplies the contrast it points at."
+  },
+  {
    "say": "The readymade he chose is the most reproduced physical artwork.",
    "kind": "paraphrase",
    "span": "The image of Lincoln on the face of the penny, created by Victor David Brenner, is the most reproduced artwork on planet Earth",
@@ -32,21 +44,15 @@
    "note": "the evidence for the previous line, and the line that credits the artwork to Brenner by name."
   },
   {
-   "say": "The object remained, buoyed into physicality by the force of its context.",
-   "kind": "quotation",
-   "span": "the object remained, buoyed into physicality by the force of its context",
-   "note": "the essay's sentence opens 'Yet the object remained'; 'Yet' is dropped because the preceding line already ends on 'Yet, here we are'."
-  },
-  {
    "say": "It is absurd that a nation's currency should dissolve into worthlessness.",
    "kind": "quotation",
    "span": "It is absurd that a nation’s currency should dissolve into worthlessness"
   },
   {
-   "say": "It is absurd that a cent should be valued at hundreds or thousands of dollars.",
+   "say": "It is absurd that a cent should be valued at thousands of dollars.",
    "kind": "paraphrase",
    "span": "It is absurd that a cent should be valued at hundreds/thousands of dollars",
-   "note": "the essay's slash is read as 'or'; otherwise the sentence is the essay's"
+   "note": "the essay's 'hundreds/thousands' is shortened to 'thousands'; the lower bound is carried by on-screen text"
   },
   {
    "say": "Yet, here we are.",
@@ -88,11 +94,6 @@
    "say": "Inscribed on Bitcoin, continually redefined by decentralized consensus.",
    "kind": "paraphrase",
    "span": "being inscribed on Bitcoin (value continually redefined by decentralized consensus)"
-  },
-  {
-   "say": "The assigned value is decoupled from the object, a vessel for social consensus.",
-   "kind": "paraphrase",
-   "span": "the original assigned value is decoupled from the object and transformed into a vessel for social-consensus based value defined by decentralized participants"
   },
   {
    "say": "Its value and meaning are indeterminate and continually redefined.",
@@ -493,6 +494,23 @@
    "text": "hundreds or thousands of dollars",
    "kind": "quotation",
    "span": "valued at hundreds/thousands of dollars"
+  },
+  {
+   "text": "2006: more expensive to produce one cent than one cent",
+   "kind": "paraphrase",
+   "span": "it had become more expensive to produce one cent than one cent",
+   "note": "the fact is carried by the frame, not the voice - it is the second half of the decay the hinge line turns on"
+  },
+  {
+   "text": "1979",
+   "kind": "paraphrase",
+   "span": "By the time the artist was born in 1979, there was no longer anything sold for a single cent"
+  },
+  {
+   "text": "a newspaper, a streetcar ride, a postage stamp",
+   "kind": "paraphrase",
+   "span": "once able to get one a newspaper, a ride on a streetcar, a postage stamp",
+   "note": "what a cent once bought - available to the frame if the decay needs more than one card"
   }
  ],
  "attributions": [],
@@ -557,6 +575,6 @@
    "note": "The glossary already holds satoshi / inscription / image / penny apart as four things. This is the same distinction one step earlier in the work: the artwork and the object it is struck on. Collapsing them would be invisible, because the essay's own argument runs through the coin count."
   }
  ],
- "script_target": "90 seconds. 197 words, 21 sentences; 82-91s of speech at 130-145 wpm, plus 4s of silence for credits.",
+ "script_target": "90 seconds. 196 words, 21 sentences; 81-90s of speech at 130-145 wpm, plus 4s of silence for credits.",
  "_thesis_note": "Film 1 of several on CENTS, framed on VALUE. The essay's other half - conceptual art, the loss of objecthood in digital flows, and blockchain as this era's objecthood - is a second film's thesis, not a compressed sub-section of this one. Earlier revisions of this script carried both and served neither."
 }

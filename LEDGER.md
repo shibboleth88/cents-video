@@ -414,3 +414,41 @@ again.** For one revision it had a row to check. It is back to passing over an
 empty set, which is the vacuous state noted in 4a — not a regression, but worth
 knowing that this gate is only meaningful when the script actually reaches
 beyond the essay.
+
+### Revision 4c — a sentence whose antecedent had been cut
+
+"The object remained, buoyed into physicality by the force of its context" did
+not make sense in the film, and the user said so. Correctly: in the essay it
+closes a decay passage — a cent once bought a newspaper, a streetcar ride, a
+postage stamp; by 1979 nothing was sold for a single cent; by 2006 it cost more
+than a cent to produce one — and only then "Yet the object remained." I had cut
+that passage for word count in revision 1 and kept the conclusion. Nothing in
+the film said the penny had lost its function, so "remained" pointed at nothing.
+
+**Failure-shape: a line can survive a cut while its antecedent does not.** The
+sentence stayed individually faithful to its span, and the span was real, and
+the gate was green. What was missing was not in the sentence; it was the
+sentence it answered. A span-mapping gate reads each claim alone, so it cannot
+see a dangling reference — the same blind spot as revision 4's implied
+intention, in the opposite direction. There, order ADDED a claim nobody made;
+here, a cut REMOVED one the remaining line depended on.
+
+**Both halves of the decay are not needed in the voice.** One restored line
+("Nothing has been sold for a single cent since before Chang was born") supplies
+the antecedent; the 2006 production-cost fact is now an on-screen string, with
+the newspaper / streetcar / stamp list available to the frame as well. The
+essay's "Yet" comes back to the hinge line now that there is something for it to
+point at, which also makes the line an exact quotation again.
+
+**Reordered so the connection cannot be missed:** discrepancy, decay, hinge,
+then Brenner. The Brenner pair used to sit between the discrepancy and the
+hinge, interrupting the only causal chain in the opening. Moved after it, the
+scale of the thing — the most reproduced physical artwork, five hundred billion
+of them — now lands immediately before "absurd that a nation's currency should
+dissolve into worthlessness", which is the juxtaposition the film wants anyway.
+
+**Paid for by cutting** "The assigned value is decoupled from the object, a
+vessel for social consensus." It was the most redundant line in the script: the
+mechanism is already in "continually redefined by decentralized consensus" and
+the result is already in "its value and meaning are indeterminate and
+continually redefined."
