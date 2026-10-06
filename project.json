@@ -1,0 +1,17 @@
+{
+ "_what": "Per-film policy. These were hard-coded rules that suited an article arriving with seven photographs; most articles arrive with none, and a film then has to be built from generated imagery. Policy belongs here, where it can differ per film, not inside a gate.",
+ "visual_policy": {
+  "max_generated_share": 0.75,
+  "_max_generated_share": "Share of shots that may be stock or generated. A film about an artwork with its own photographs should sit low; a film about an article with no pictures will sit high, and capping it low there just produces diagrams.",
+  "never_generate_depictions_of": [
+   "a specific real record, transaction, block or address",
+   "a screenshot of a real interface",
+   "a named real artwork, where the article's own photograph exists"
+  ],
+  "_never_generate": "The narrow line that survives: invented imagery is fine, an invented picture OF a specific real thing is not, because the viewer reads it as evidence.",
+  "prefer_article_images_for": ["the work itself", "people", "places", "documents"],
+  "prefer_generated_for": ["abstraction", "atmosphere", "transitions", "anything with no photograph"]
+ },
+ "models": {"image": "nano-banana-pro", "video": "kling-2.5-turbo"},
+ "_models": "nano-banana-pro reads better and lands on the film's palette; flux-dev is half the price and fine for texture."
+}

@@ -1,40 +1,52 @@
 # CENTS essay videos — pipeline
 
-Give it an article. Record the voiceover. Everything else is automated.
+Give it an article. You get a recording script. You record it. You get a film.
 
-    article/topic
-      -> [auto]  essay -> outline -> VO script, claims ledger, shot list
-      -> [auto]  pipeline/fidelity.py      is the script true to the essay?
-      -> [auto]  pipeline/scratch_vo.sh    synthetic read of the script
-      -> [auto]  align -> render -> verify -> review
-      -> YOU     WATCH THE DRAFT and say what's wrong        <- before recording
-      -> YOU     record the real voiceover into inputs/vo_raw.wav
-      -> [auto]  audio_clean -> align -> render -> verify -> review
-      -> YOU     final verdict (and the audio judgement, which Claude cannot make)
+## The two stages
 
-The scratch read is the point of the ordering: you see a complete film, cut and
-captioned, before you record anything. You then record once, against an edit you
-have already approved. Re-recording re-cuts the film automatically, because
-nothing is timed to seconds.
+**Stage 1 — the transcript.** This is the deliverable, and it comes first.
 
-## Run
+    (give Claude the article)
+    python3 pipeline/fidelity.py        # is the script true to the source?
+    python3 pipeline/transcript.py      # -> exports/recording_script.txt
 
-    python3 pipeline/fidelity.py                      # before anything is recorded
-    pipeline/scratch_vo.sh script/voiceover.txt inputs/vo_scratch.wav
-    cp inputs/vo_scratch.wav public/vo.wav            # draft only
+`recording_script.txt` is laid out for reading aloud: one sentence per line,
+numbered, with the words that trip a reader marked. Record it in one take to
+`inputs/vo_raw.wav`, leaving four seconds of silence at the end for credits.
 
-    pipeline/audio_clean.sh inputs/vo_raw.wav public/vo.wav    # the real take
+**Stage 2 — the film.** Built from your recording, not from a guess at it.
+
+    pipeline/audio_clean.sh inputs/vo_raw.wav public/vo.wav
     python3 pipeline/align.py public/vo.wav --script script/voiceover.txt
+    pipeline/assets.py ingest ... && pipeline/assets.py sheet     # the article's own images
+    python3 pipeline/generate.py image --prompt ... --asset-id ... --confirm
+    python3 pipeline/generate.py run --shot ... --confirm          # generated video
     npm run render && npm run render:captioned && npm run render:essential
-    python3 pipeline/review_shots.py prepare          # frames + narration per shot
-    python3 pipeline/verify.py && python3 pipeline/manifest.py
+    python3 pipeline/review_shots.py prepare && python3 pipeline/verify.py
 
-### Proving the instruments
+Shots are anchored to phrases of the narration, so re-recording re-cuts the film.
+Nothing is timed to seconds.
 
-    npm run selftest                    # 5 video gates, each must go red
-    python3 pipeline/fidelity.py --self-test    # 10 script gates
-    python3 pipeline/cues.py --self-test        # caption chunker vs the one it replaced
-    python3 pipeline/reconcile.py --self-test   # incl. "an adlib is not overwritten"
+A synthetic scratch pass (`pipeline/scratch_align.py`) still exists for seeing an
+edit before recording, but it is a side road, not the main one.
+
+## Imagery: a mix
+
+The film draws on three sources and `project.json` sets the balance per film:
+
+| source | for |
+|---|---|
+| the article's own images | the work itself, people, places, documents |
+| generated stills and video | abstraction, atmosphere, transitions, anything with no photograph |
+| code | the argument: diagrams, data, type |
+
+Most articles arrive with no pictures, so generated imagery is the normal case,
+not a fallback. `max_generated_share` is policy, not a fixed rule.
+
+One narrow line survives: **never generate a picture of a specific real thing** —
+a real transaction or block, a screenshot of a real interface, a named artwork
+the article photographed. Invented imagery is fine; an invented picture *of*
+something real reads as evidence.
 
 ## The three ideas this rests on
 

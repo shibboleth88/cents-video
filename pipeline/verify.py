@@ -141,8 +141,20 @@ def g_parity(clean: pathlib.Path, cap: pathlib.Path) -> str:
     if abs(dc-dp) > 0.04: raise Fail(f"durations differ: clean {dc:.3f}s vs captioned {dp:.3f}s")
     return f"audio streams identical, durations match ({dc:.2f}s)"
 
-def g_visual_mix(cap_frac=0.45) -> str:
-    """Stock + generated imagery may not take over the film."""
+def g_visual_mix(cap_frac=None) -> str:
+    """Stock and generated imagery are capped by the FILM'S OWN policy.
+
+    A fixed 45% suited a film whose source arrived with seven photographs. Most
+    articles arrive with none, and holding that cap there does not protect
+    anything — it just forces the film to be diagrams. The policy lives in
+    project.json so it can differ per film; what does not differ is the narrow
+    rule against inventing a picture of a specific real thing, which is a
+    judgement at authoring time, not a share.
+    """
+    if cap_frac is None:
+        pj = ROOT / "project.json"
+        cap_frac = (json.loads(pj.read_text())["visual_policy"]["max_generated_share"]
+                    if pj.exists() else 0.75)
     tl = json.loads((ROOT/"timeline"/"timeline.json").read_text())
     al = json.loads((ROOT/"script"/"alignment.json").read_text())
     shots = tl["shots"]

@@ -1,0 +1,109 @@
+CENTS & digital objecthood — RECORDING SCRIPT
+====================================================
+
+35 sentences, 299 words.
+At 130-145 words a minute that is about 124-138 seconds of speech, before pauses.
+
+HOW TO RECORD
+  One take, straight through. Do not stop to fix a stumble — say the line
+  again and carry on; the alignment keeps whatever you actually said, and
+  a second attempt inside one take is easier to cut than a second take.
+  Leave a breath between sentences. Leave four seconds of silence at the
+  end: the credits live there.
+  Changing a line as you read is fine. The transcript follows your voice,
+  not the page, and anything you add is flagged for review rather than
+  overwritten.
+
+  Save as: inputs/vo_raw.wav
+
+----------------------------------------------------
+
+ 1.  A copper penny is worth one cent.
+
+ 2.  The copper inside it is worth about two and a half.
+
+ 3.  Rutherford Chang's CENTS begins in that gap.
+      [CENTS: say 'cents' — the PROJECT (capitals are for the reader, not the voice)]
+      [Rutherford: RUTH-er-ford]
+
+ 4.  Over several years he sorted a hundred thousand pennies down to ten thousand pre-1982 coppers.
+      [1982: 'nineteen eighty-two']
+      [pre-1982: 'pre nineteen eighty-two']
+
+ 5.  He photographed each one and catalogued its date and mintage.
+
+ 6.  Then he melted them into a single block.
+
+ 7.  Then he inscribed each destroyed penny onto a sat, the smallest divisible unit of Bitcoin.
+      [sat: rhymes with 'cat'; a satoshi]
+
+ 8.  The block itself became a full-block inscription, CENTS Block 839969, the master object of the project.
+      [839969: read as 'eight three nine, nine six nine']
+
+ 9.  One inscription, filling an entire block.
+
+10.  He released all ten thousand inscriptions at one sat each, about one hundredth of a cent.
+
+11.  Every Cent passes through five transformations of value.
+
+12.  In circulation, its value defined by the Treasury.
+
+13.  Removed from circulation, that assignment subverted.
+
+14.  Archivally photographed, valued for what the image holds.
+
+15.  Destroyed, its value made undefinable.
+
+16.  Inscribed on Bitcoin, continually redefined by decentralized consensus.
+      [decentralized: four syllables, do not rush]
+
+17.  And it arrives as five natures at once.
+
+18.  A unit of currency.
+
+19.  A quantity of copper.
+
+20.  A melted element of a sculpture.
+
+21.  A photograph.
+
+22.  A Bitcoin inscription.
+
+23.  All of these things, and none of them.
+
+24.  Conceptual art broke from the object in the nineteen sixties, when commodification had hollowed it out.
+
+25.  A split opened between materiality and meaning.
+
+26.  Digitization widened it.
+
+27.  Digital flows could not hold identity, singularity, provenance or ownership.
+
+28.  They lacked objecthood.
+      [objecthood: OB-ject-hood]
+
+29.  Blockchain was built to give them discrete boundaries and verifiable histories.
+
+30.  Blockchain is this era's objecthood.
+
+31.  CENTS holds that whole arc inside one gesture.
+
+32.  Its medium is not the penny, or the photograph, or the block.
+
+33.  Its medium is the gesture of its continual becoming.
+
+34.  A digital object is simultaneously itself, not itself, and an interpretation of itself.
+
+35.  Its meanings keep emerging, as participants co-create the intersubjective reality of its presence.
+      [intersubjective: in-ter-sub-JEC-tive]
+
+----------------------------------------------------
+
+AFTER RECORDING
+
+  pipeline/audio_clean.sh inputs/vo_raw.wav public/vo.wav
+  python3 pipeline/align.py public/vo.wav --script script/voiceover.txt
+  npm run render && npm run render:captioned && npm run render:essential
+  python3 pipeline/verify.py
+
+  The edit re-cuts itself around your timing. Nothing needs re-timing by hand.

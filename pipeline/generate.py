@@ -52,6 +52,29 @@ MODELS = {
 # image. Our stills are square and landscape; backdrops are cover-fitted anyway.
 DURATIONS = (5, 10)   # the API accepts nothing else
 
+# Image generation. This is the capability that makes the pipeline work for an
+# ARTICLE rather than for an artist's archive: most sources arrive with no
+# pictures at all, and without imagery a film is diagrams and type.
+IMAGE_MODELS = {
+    "flux-dev": {
+        "endpoint": "fal-ai/flux/dev",
+        "usd_per_image": 0.075,  # $0.025/megapixel, rounded up; a 9:16 is ~2.1MP
+        "price_verified": "2026-10-06, fal model page ($0.025/MP)",
+        "args": lambda prompt, n: {"prompt": prompt, "num_images": n,
+                                   "image_size": {"width": 1080, "height": 1920}},
+        "note": "cheap; good texture and abstraction, weaker at anything structured",
+    },
+    "nano-banana-pro": {
+        "endpoint": "fal-ai/nano-banana-pro",
+        "usd_per_image": 0.15,
+        "price_verified": "2026-10-06, fal model page ($0.15/image)",
+        "args": lambda prompt, n: {"prompt": prompt, "num_images": n,
+                                   "aspect_ratio": "9:16", "resolution": "2K"},
+        "note": "dearer; native 9:16 and stronger overall",
+    },
+}
+DEFAULT_IMAGE = "flux-dev"
+
 def cost_of(model: dict, seconds: int) -> float:
     """Flat base for the first `base_seconds`, then per second."""
     extra = max(0, seconds - model["base_seconds"])
@@ -208,11 +231,77 @@ def run(args) -> int:
     print("still never had, which is exactly what must not slip into a film about real objects.")
     return 0
 
+def image(args) -> int:
+    """Generate a still for a shot from a written prompt.
+
+    The prompt is kept with the asset, because for a generated image the prompt
+    IS the provenance: it is the only record of what was asked for, and the only
+    way to tell later whether the picture shows what the film claims it shows.
+    """
+    sys.path.insert(0, str(ROOT / "pipeline"))
+    from falenv import load_key, redact
+    key, where = load_key()
+    if not key: sys.exit("FAL_KEY not found.")
+    m = IMAGE_MODELS[args.image_model]
+    n = args.n
+    est = m["usd_per_image"] * n
+    print(f"  {args.image_model} ({m['endpoint']})  ~${est:.2f} for {n} image(s)")
+    print(f"  price verified: {m['price_verified']}")
+    if not args.confirm:
+        sys.exit("  costs money. Re-run with --confirm.")
+    try:
+        import fal_client
+    except ImportError:
+        sys.exit("pip3 install fal-client")
+    res = fal_client.subscribe(m["endpoint"], arguments=m["args"](args.prompt, n))
+    urls = [i.get("url") for i in (res.get("images") or []) if i.get("url")]
+    if not urls: sys.exit(f"no image returned: {str(res)[:200]}")
+
+    import urllib.request, hashlib, subprocess as _sp
+    data = inv()
+    log = json.loads(LEDGER.read_text()) if LEDGER.exists() else {"runs": []}
+    made = []
+    for k, u in enumerate(urls):
+        aid = args.asset_id if n == 1 else f"{args.asset_id}{k+1}"
+        dst = ROOT / "inputs" / "assets" / f"{aid}.png"
+        urllib.request.urlretrieve(u, dst)
+        pr = _sp.run(["ffprobe","-v","error","-select_streams","v:0","-show_entries",
+                      "stream=width,height","-of","json",str(dst)], capture_output=True, text=True)
+        st = (json.loads(pr.stdout).get("streams") or [{}])[0] if pr.returncode == 0 else {}
+        h = hashlib.sha256(); h.update(dst.read_bytes())
+        data["assets"][aid] = {
+            "path": str(dst.relative_to(ROOT)), "sha256": h.hexdigest(),
+            "bytes": dst.stat().st_size, "width": st.get("width"), "height": st.get("height"),
+            "motion": False, "kind": "generated", "source": f"generated via {m['endpoint']}",
+            "generation_prompt": args.prompt, "model": args.image_model,
+            "rights": "generated image; no real person, place or artwork depicted",
+            # Empty on purpose: a prompt says what was ASKED for, not what arrived.
+            "subject": "", "verified_at": "", "crop_restrictions": "",
+            "low_res": bool((st.get("width") or 0) < 760),
+            "max_display_width": 1080,
+        }
+        made.append((aid, dst, st))
+        log["runs"].append({"at": time.strftime("%Y-%m-%dT%H:%M:%S"), "kind": "image",
+                            "model": args.image_model, "endpoint": m["endpoint"],
+                            "est_usd": m["usd_per_image"], "prompt": args.prompt, "asset": aid})
+    INV.write_text(json.dumps(data, indent=1, ensure_ascii=False))
+    LEDGER.write_text(json.dumps(log, indent=1))
+    for aid, dst, st in made:
+        print(f"    -> {dst.relative_to(ROOT)}  ({aid})  {st.get('width')}x{st.get('height')}")
+    print("\n  subject is empty until the image has been LOOKED AT: the prompt records what was")
+    print("  asked for, never what arrived.")
+    return 0
+
 def models(args) -> int:
     for k, m in MODELS.items():
         print(f"  {k:<16} {m['kind']:<16} ${cost_of(m, 5):.2f}/5s   {m['note']}")
         print(f"  {'':<16} verified {m['price_verified']}")
-    print(f"\n  default: {DEFAULT}")
+    print(f"\n  default video: {DEFAULT}")
+    print("\n  images:")
+    for k, m in IMAGE_MODELS.items():
+        print(f"  {k:<16} ${m['usd_per_image']:.3f}/image   {m['note']}")
+        print(f"  {'':<16} verified {m['price_verified']}")
+    print(f"\n  default image: {DEFAULT_IMAGE}")
     return 0
 
 if __name__ == "__main__":
@@ -226,6 +315,11 @@ if __name__ == "__main__":
     sub = ap.add_subparsers(dest="cmd", required=True)
     sub.add_parser("plan").set_defaults(fn=plan)
     sub.add_parser("models").set_defaults(fn=models)
+    i = sub.add_parser("image")
+    i.add_argument("--prompt", required=True); i.add_argument("--asset-id", required=True)
+    i.add_argument("--image-model", default=DEFAULT_IMAGE, choices=list(IMAGE_MODELS))
+    i.add_argument("-n", type=int, default=1); i.add_argument("--confirm", action="store_true")
+    i.set_defaults(fn=image)
     r = sub.add_parser("run"); r.add_argument("--shot"); r.add_argument("--prompt")
     r.add_argument("--confirm", action="store_true"); r.set_defaults(fn=run)
     a = ap.parse_args(); sys.exit(a.fn(a))

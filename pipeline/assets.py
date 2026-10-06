@@ -190,16 +190,24 @@ def check(args) -> int:
         if not a: problems.append(f"{aid}: used by a shot but not in the inventory"); continue
         p = ROOT / a["path"]
         if not p.exists(): problems.append(f"{aid}: file missing at {a['path']}"); continue
+        # The drift gate exists to catch a model RETOUCHING SOMETHING REAL. A
+        # clip derived from a generated image has no real subject to falsify,
+        # and abstract footage is supposed to change — billowing dust that held
+        # still would be the failure. Scope it to real sources.
+        src_kind = (inv.get(a.get("derived_from") or "", {}) or {}).get("kind")
         if not a.get("subject", "").strip():
             problems.append(f"{aid}: no subject — it was never looked at, so what is in it is unknown")
         if not a.get("rights", "").strip():
             problems.append(f"{aid}: no rights basis recorded")
+        if a.get("kind") == "generated" and a.get("derived_from") and src_kind != "real":
+            if not a.get("subject", "").strip():
+                problems.append(f"{aid}: generated-from-generated clip still needs a written subject")
         cr = a.get("crop_restrictions", "")
         import re as _re
         if _re.search(r"\b(text|burn\w*)\b", cr.lower()) and not a.get("crop"):
             problems.append(f"{aid}: its restrictions describe burned-in text but no crop is declared — "
                             f"a restriction that is only advice gets ignored")
-        if a.get("kind") == "generated" and a.get("derived_from"):
+        if a.get("kind") == "generated" and a.get("derived_from") and src_kind == "real":
             try:
                 drift = _object_drift(aid, a, inv)
             except Exception as e:
@@ -248,10 +256,32 @@ def _object_drift(aid: str, a: dict, inv: dict) -> float | None:
     clip = staged if staged.exists() else ROOT / a["path"]
     if not clip.exists(): return None
     import tempfile, colorsys
-    pr = subprocess.run(["ffprobe","-v","error","-show_entries","format=duration",
-                         "-of","csv=p=0",str(clip)], capture_output=True, text=True)
-    dur = float(pr.stdout.strip() or 0)
-    if dur < 0.5: return None
+    # Some containers report format=duration as "N/A"; fall back to the video
+    # stream, then to frames/rate. A duration that fails to parse must not read
+    # as "no drift".
+    def _dur(path) -> float:
+        for args in (["-show_entries","format=duration"],
+                     ["-select_streams","v:0","-show_entries","stream=duration"],
+                     ["-select_streams","v:0","-count_frames",
+                      "-show_entries","stream=nb_read_frames,avg_frame_rate"]):
+            r = subprocess.run(["ffprobe","-v","error",*args,"-of","json",str(path)],
+                               capture_output=True, text=True)
+            if r.returncode != 0: continue
+            try: j = json.loads(r.stdout)
+            except Exception: continue
+            v = (j.get("format") or {}).get("duration")
+            if v and v != "N/A": return float(v)
+            st = (j.get("streams") or [{}])[0]
+            v = st.get("duration")
+            if v and v != "N/A": return float(v)
+            nf, rate = st.get("nb_read_frames"), st.get("avg_frame_rate")
+            if nf and rate and "/" in rate:
+                a, b = rate.split("/")
+                if float(b): return int(nf) / (float(a) / float(b))
+        return 0.0
+    dur = _dur(clip)
+    if dur < 0.5:
+        raise RuntimeError(f"could not determine the duration of {aid}'s clip")
     with tempfile.TemporaryDirectory() as td:
         d = pathlib.Path(td)
         for ss, name in ((0.05, "a.png"), (dur * 0.5, "b.png")):

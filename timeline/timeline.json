@@ -299,8 +299,8 @@
    "end": {
     "at_phrase": "CENTS holds that whole arc"
    },
-   "purpose": "The split the essay traces, drawn as a link that opens and stays open, with blockchain named as what finally gives the digital discrete boundaries.",
-   "visual_kind": "code",
+   "purpose": "The split the essay traces, drawn as a link that opens and stays open, over abstract imagery of matter dissolving into immateriality. Nothing real is depicted, so nothing can be falsified.",
+   "visual_kind": "generated",
    "component": "Distinction",
    "props": {
     "items": [
@@ -330,7 +330,10 @@
       "emphasise": 0,
       "caption": "blockchain supplies discrete boundaries and verifiable histories"
      }
-    ]
+    ],
+    "backdrop": "g02m",
+    "backdropDim": 0.58,
+    "backdropFocus": "50% 60%"
    }
   },
   {
