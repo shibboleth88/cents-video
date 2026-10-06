@@ -96,28 +96,22 @@
    "span": "being inscribed on Bitcoin (value continually redefined by decentralized consensus)"
   },
   {
-   "say": "A permanent set of ten thousand, with its own logics and rarities.",
+   "say": "Ten thousand inscriptions, and never any more.",
    "kind": "paraphrase",
-   "span": "its existence as a permanent set of 10,000, transforms this collection of pennies into a system with its own unique logics and rarities",
-   "note": "RESTORED in revision 4d as the antecedent for the next line. 'Each one initially identical' means nothing until the film has said the set is fixed and finite; the rarities are what make the differences legible as a system rather than as wear."
+   "span": "its existence as a permanent set of 10,000",
+   "note": "The scarcity has to be stated here or the next two lines have no subject. It follows 'Inscribed on Bitcoin' directly, so 'inscriptions' carries the link rather than introducing a new topic."
   },
   {
-   "say": "Each one initially identical, now bearing the marks of touch and time.",
+   "say": "In a set this fixed, each Cent accrues its own significance.",
    "kind": "paraphrase",
-   "span": "Each of these objects, initially identical, bear the marks of touch and time",
-   "note": "'now' replaces a repeated 'each' and marks the change as having happened over time, which is the sentence's point."
+   "span": "transforms this collection of pennies into a system with its own unique logics and rarities",
+   "note": "The verb 'accrues significance' is borrowed deliberately from the canon sentence that follows - using the same verb on both sides of the analogy is what makes the next line land as a comparison rather than a new thought. The essay's own term for the differentiation is 'its own unique logics and rarities'."
   },
   {
-   "say": "Collectors read the set closely, deciding which Cents matter.",
-   "kind": "paraphrase",
-   "span": "collectors intricately dissect this set to determine its internal dynamics",
-   "note": "'read ... closely' rather than the essay's 'dissect', and 'which Cents matter' rather than 'internal dynamics', which is opaque spoken aloud. 'Read' also primes the next line: the essay's analogy is TEXTUAL, so the collectors' activity and the canon's are described with the same verb. The essay's first-person 'I've witnessed' is dropped, so the film states the behaviour."
-  },
-  {
-   "say": "Words accrue significance the same way, inside the scarce set of meanings we call canon.",
+   "say": "The way words do, inside the scarce set of meanings we call canon.",
    "kind": "paraphrase",
    "span": "individual words and phrases in texts accrue significance when they enter the scarce set of meanings referred to as “canon”",
-   "note": "'the same way' is what links the analogy to the collectors line - without it the canon sentence floated. 'Inside' rather than the essay's 'when they enter', because the CENTS set is already closed at ten thousand: nothing enters it, and what varies is which members accrue significance. The essay offers this as its author's own association ('it reminds me of'); the film states the parallel. The hedged first-person variant stays available: 'It reminds me of how words accrue significance...'. 'words and phrases' shortened to 'words'."
+   "note": "Grammatically continuous with the line before it, so the analogy cannot float. 'Inside' rather than the essay's 'when they enter', because the CENTS set is closed at ten thousand - nothing enters it, and what varies is which members accrue significance. The essay offers this as its author's own association ('it reminds me of'); the hedged first-person variant remains available."
   },
   {
    "say": "CENTS is a becoming, a gesture that unfolds continually through the actions of its participants in time.",
@@ -546,6 +540,17 @@
    "text": "which Cents matter",
    "kind": "paraphrase",
    "span": "collectors intricately dissect this set to determine its internal dynamics"
+  },
+  {
+   "text": "marks of touch and time",
+   "kind": "paraphrase",
+   "span": "Each of these objects, initially identical, bear the marks of touch and time",
+   "note": "dropped from the voice in revision 4g with the collector-dynamics passage; it is the best single image in the essay for the object still changing, and belongs in the frame"
+  },
+  {
+   "text": "its own logics and rarities",
+   "kind": "quotation",
+   "span": "a system with its own unique logics and rarities"
   }
  ],
  "attributions": [],
@@ -617,6 +622,6 @@
    "note": "The essay compares collectors reading the set to words accruing significance in a canon. Said slightly differently - 'CENTS enters the canon' - it becomes a claim about the work's art-historical status that the essay never makes and that the film has no standing to make. On screen, 'canon' must not appear beside the work's title or any date."
   }
  ],
- "script_target": "About 100 seconds. 217 words, 22 sentences; 90-100s of speech at 130-145 wpm, plus 4s of silence for credits (94-104s total, mid 99s). Lengthened from the original 90s brief on request; if 90s is a PLATFORM cap rather than a preference, this does not meet it.",
+ "script_target": "About 90 seconds. 200 words, 21 sentences; 83-92s of speech at 130-145 wpm, plus 4s of silence for credits (87-96s total, mid 92s). Back within the original brief after the collector-dynamics passage was replaced by a shorter bridge.",
  "_thesis_note": "Film 1 of several on CENTS, framed on VALUE. The essay's other half - conceptual art, the loss of objecthood in digital flows, and blockchain as this era's objecthood - is a second film's thesis, not a compressed sub-section of this one. Earlier revisions of this script carried both and served neither."
 }

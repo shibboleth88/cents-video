@@ -585,3 +585,53 @@ accrues to MEMBERS of a scarce set, never to the work's standing.
 **Length:** 217 words, 90-100s of speech, 94-104s with credits, mid 99s - back
 within sight of the brief, because the cut repetition paid for the canon
 passage.
+
+### Revision 4g — the passage after the list had the wrong subject
+
+Replaced:
+
+    A permanent set of ten thousand, with its own logics and rarities.
+    Each one initially identical, now bearing the marks of touch and time.
+    Collectors read the set closely, deciding which Cents matter.
+    Words accrue significance the same way, inside the scarce set of
+      meanings we call canon.
+
+with:
+
+    Ten thousand inscriptions, and never any more.
+    In a set this fixed, each Cent accrues its own significance.
+    The way words do, inside the scarce set of meanings we call canon.
+
+**What was wrong: a digression into collector-market behaviour in a film whose
+subject is value ascription.** Four lines on how collectors dissect a set, in a
+film that had spent the previous nine on what value is and who assigns it. It
+was faithful to the essay and it answered a question the film had not asked.
+
+**Why the passage kept sprawling, which is the useful part.** Line 17 - the
+fifth transformation - already delivers the endpoint: value continually
+redefined by decentralized consensus. Anything placed after it that is ALSO
+about consensus, redefinition or participants restates it. Only three things
+were left that are genuinely new after that line: the set is closed, its members
+differentiate, and that differentiation is how canons work. The replacement is
+exactly those three, and the repetition problem of 4f cannot recur in it.
+
+**Each transition now has a reason, and the last one is grammatical.** The
+inscriptions are finite, so the set is closed; a closed set differentiates its
+members; that is how canons work; and that accrual, through participants over
+time, is what the work IS. "The way words do" is a continuation of the sentence
+before it rather than a new sentence, so the analogy cannot float - the failure
+of 4c, 4d and 4f was always a reference with nothing behind it, and a
+grammatical dependency is the strongest fix available.
+
+**Deliberate vocabulary theft:** "each Cent accrues its own significance" borrows
+the verb from the canon sentence that follows. Using the same verb on both sides
+is what makes the next line read as a comparison instead of a new thought. The
+essay's own word for the differentiation is "its own unique logics and rarities",
+recorded as the span.
+
+**Lost, and worth putting in the frame:** "initially identical, now bearing the
+marks of touch and time" is the best single image in the essay for the object
+still changing. It went with the passage. It is now an on-screen string.
+
+**Length:** 200 words, 83-92s of speech, 87-96s with credits, mid 92s - back
+inside the original 90s brief, which the canon passage had pushed to ~106s.
