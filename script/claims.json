@@ -20,17 +20,16 @@
    "span": "the metal value of apx. ¢2.5"
   },
   {
-   "say": "The readymade he chose is the most reproduced physical object in history.",
-   "kind": "addition",
-   "approved": true,
-   "by": "user",
-   "note": "BEYOND THE ESSAY, APPROVED BY THE AUTHOR (requested 2026-10-06). The essay says 'the readymade he’s using is one of the most common objects in existence' and reserves the superlative for the IMAGE: 'the most reproduced artwork on planet Earth'. 'The most reproduced physical object in history' is a stronger claim than the essay makes - it ranks the penny against all manufactured objects, where bottle caps, fasteners and other mass-produced items plausibly exceed 500+ billion. Approved because the essay's author asked for this wording; recorded here so the claim is the author's and not the film's invention. The faithful alternative, if it is ever challenged, is 'carries the most reproduced artwork in history, on more than five hundred billion coins'."
-  },
-  {
-   "say": "The Lincoln on it, by Victor David Brenner, is the most reproduced artwork.",
+   "say": "The readymade he chose is the most reproduced physical artwork.",
    "kind": "paraphrase",
    "span": "The image of Lincoln on the face of the penny, created by Victor David Brenner, is the most reproduced artwork on planet Earth",
-   "note": "'on planet Earth' is dropped because the previous line already ends on a superlative of scope; the artist's full name moves INTO the voice here, since this line credits the most reproduced artwork to him."
+   "note": "DISTINCTION: the essay's superlative is about the IMAGE; this line applies it to the physical OBJECT that carries it, which is what the word 'physical' marks. The essay's own reasoning licenses the move - the image is the most reproduced artwork 'due to its presence on the 500+ billion Lincoln cents that have been struck' - and 'physical' NARROWS the claim rather than widening it. Requested in this wording by the essay's author, 2026-10-06, replacing 'most reproduced physical object', which did exceed the essay and was carried as an approved addition."
+  },
+  {
+   "say": "More than five hundred billion Lincoln cents, each carrying Victor David Brenner's portrait.",
+   "kind": "paraphrase",
+   "span": "its presence on the 500+ billion Lincoln cents that have been struck",
+   "note": "the evidence for the previous line, and the line that credits the artwork to Brenner by name."
   },
   {
    "say": "The object remained, buoyed into physicality by the force of its context.",
@@ -44,10 +43,10 @@
    "span": "It is absurd that a nation’s currency should dissolve into worthlessness"
   },
   {
-   "say": "It is absurd that a cent should be valued at thousands of dollars.",
+   "say": "It is absurd that a cent should be valued at hundreds or thousands of dollars.",
    "kind": "paraphrase",
    "span": "It is absurd that a cent should be valued at hundreds/thousands of dollars",
-   "note": "the essay's 'hundreds/thousands' is shortened to 'thousands'; the lower bound is carried by on-screen text"
+   "note": "the essay's slash is read as 'or'; otherwise the sentence is the essay's"
   },
   {
    "say": "Yet, here we are.",
@@ -549,6 +548,13 @@
    "verdict": "kept",
    "by": "user",
    "note": "Caught by the user in revision 3, where the film OPENED on Brenner and so implied Chang chose the penny because the portrait is the most reproduced artwork on Earth. The essay claims no such thing. This is the quietest kind of infidelity: every sentence was individually true to a span, and the ORDER invented an intention."
+  },
+  {
+   "distinction": "the IMAGE of Lincoln (what the essay calls the most reproduced artwork) vs the PHYSICAL PENNY that carries it",
+   "where": "'the most reproduced physical artwork' - 'physical' is what locates the superlative in the object; the next line gives the coin count as the evidence",
+   "verdict": "kept",
+   "by": "claude",
+   "note": "The glossary already holds satoshi / inscription / image / penny apart as four things. This is the same distinction one step earlier in the work: the artwork and the object it is struck on. Collapsing them would be invisible, because the essay's own argument runs through the coin count."
   }
  ],
  "script_target": "90 seconds. 197 words, 21 sentences; 82-91s of speech at 130-145 wpm, plus 4s of silence for credits.",

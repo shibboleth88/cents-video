@@ -388,3 +388,29 @@ red, so both directions are now exercised.
 
 Victor David Brenner's full name moves into the voice on this line, because this
 is the line that credits the most reproduced artwork on Earth to him.
+
+### Revision 4b — physical ARTWORK, not physical object
+
+Corrected wording: "The readymade he chose is the most reproduced physical
+artwork. More than five hundred billion Lincoln cents, each carrying Victor
+David Brenner's portrait."
+
+**The addition disappeared, and that is the point.** "Most reproduced physical
+OBJECT" ranked the penny against all manufactured things and exceeded the essay.
+"Most reproduced physical ARTWORK" is the essay's own superlative with 'physical'
+NARROWING it — the essay claims the image is the most reproduced artwork on
+planet Earth outright. So the claim went from `addition / approved: true` back to
+`paraphrase`, and the ledger holds no additions again.
+
+**New distinction recorded: the IMAGE vs the PHYSICAL PENNY that carries it.**
+The essay's superlative is about the image; this line applies it to the object,
+and the word 'physical' is the whole of what licenses that. The glossary already
+holds satoshi / inscription / image / penny apart as four things; this is the
+same cut one step earlier in the work. Collapsing them would be invisible,
+because the essay's own argument runs through the coin count.
+
+**Correct-but-looks-wrong: the `additions approved` gate reads "no additions"
+again.** For one revision it had a row to check. It is back to passing over an
+empty set, which is the vacuous state noted in 4a — not a regression, but worth
+knowing that this gate is only meaningful when the script actually reaches
+beyond the essay.
