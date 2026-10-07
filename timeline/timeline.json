@@ -265,14 +265,14 @@
    "end": {
     "at_phrase": "Four, destroyed"
    },
-   "purpose": "Transformation three shown as one of the archival photographs themselves - CENT #3981, the image carrying what the object no longer can.",
+   "purpose": "Transformation three as the APPARATUS, not the product: the copy stand, the lit pad with one cent on it, and the laptop showing the capture. The process is what the line names; an archival photograph was standing in for the archival photographing.",
    "visual_kind": "real",
    "component": "Plate",
-   "asset_id": "a03",
+   "asset_id": "a17",
    "props": {
     "caption": "the photograph carries it",
-    "maxWidth": 620,
-    "backdrop": "g01",
+    "maxWidth": 1000,
+    "backdrop": "a17",
     "backdropDim": 0.9
    }
   },
@@ -284,15 +284,13 @@
    "end": {
     "at_phrase": "Five, inscribed on Bitcoin"
    },
-   "purpose": "Transformation four as material: copper as particulate, the coin no longer a coin. Carries a motion backdrop: a still plate on black holds the picture still past the 4s limit.",
-   "visual_kind": "generated",
+   "purpose": "Transformation four as it actually happened: molten copper poured from the crucible into the block mould. Real footage of the casting replaces generated particulate - for a work about the objecthood of real things, the difference matters.",
+   "visual_kind": "real",
    "component": "Plate",
-   "asset_id": "g01",
+   "asset_id": "a14",
    "props": {
     "caption": "no assignable value",
-    "maxWidth": 560,
-    "backdrop": "g02m",
-    "backdropDim": 0.88
+    "maxWidth": 560
    }
   },
   {

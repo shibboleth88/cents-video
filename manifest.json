@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-06T19:18:01",
+ "generated_at": "2026-10-07T10:51:05",
  "essay": {
   "title": "CENTS principles",
   "subtitle": "an introduction to the primary concepts of CENTS by Rutherford Chang",
@@ -19,7 +19,7 @@
   "height": 1920,
   "fps": 30
  },
- "ledger_sha256": "d8eb105325ee6af45e48c2476a3fc73b36451331f3461c2a398460a1d72795f8",
+ "ledger_sha256": "37fd7d34b5a635f240c9f15a590887da73b6218e23d24cbe5829a31676a963fd",
  "shots": [
   {
    "shot_id": "s01_title",
@@ -166,10 +166,10 @@
   },
   {
    "shot_id": "s10c_three",
-   "purpose": "Transformation three shown as one of the archival photographs themselves - CENT #3981, the image carrying what the object no longer can.",
+   "purpose": "Transformation three as the APPARATUS, not the product: the copy stand, the lit pad with one cent on it, and the laptop showing the capture. The process is what the line names; an archival photograph was standing in for the archival photographing.",
    "visual_kind": "real",
    "component": "Plate",
-   "asset_id": "a03",
+   "asset_id": "a17",
    "start": {
     "at_phrase": "Three, archivally"
    },
@@ -179,10 +179,10 @@
   },
   {
    "shot_id": "s10d_four",
-   "purpose": "Transformation four as material: copper as particulate, the coin no longer a coin. Carries a motion backdrop: a still plate on black holds the picture still past the 4s limit.",
-   "visual_kind": "generated",
+   "purpose": "Transformation four as it actually happened: molten copper poured from the crucible into the block mould. Real footage of the casting replaces generated particulate - for a work about the objecthood of real things, the difference matters.",
+   "visual_kind": "real",
    "component": "Plate",
-   "asset_id": "g01",
+   "asset_id": "a14",
    "start": {
     "at_phrase": "Four, destroyed"
    },
@@ -245,16 +245,16 @@
  ],
  "exports": {
   "clean.mp4": {
-   "sha256": "6c561cd0f3e81ab829b73a673d899a70e9a0ed0f4c70c0424f928f8d88c0ce07",
-   "bytes": 63070076,
+   "sha256": "3020840c9cb46ec7ef1375d2095eebc5324837df428471a6f8e70064275e0887",
+   "bytes": 61889542,
    "duration_s": 127.253,
    "frames": 3817,
    "size": "1080x1920",
    "fps": "30/1"
   },
   "captioned.mp4": {
-   "sha256": "8ce6c9371463a21eec637b58bb7d627f42b7d70dbe6630e6c2a8cf6efce0a2b0",
-   "bytes": 63013789,
+   "sha256": "950b34d3c77b83f4aa8b34d439d395f5ed9da2b7d7c0f4f5cedf9cb9f1dd17a2",
+   "bytes": 61729656,
    "duration_s": 127.253,
    "frames": 3817,
    "size": "1080x1920",
@@ -268,7 +268,7 @@
   },
   "visual mix": {
    "verdict": "pass",
-   "detail": "17 shots, mix {'generated': 5, 'code': 6, 'real': 6}, filler 29%"
+   "detail": "17 shots, mix {'generated': 4, 'code': 6, 'real': 7}, filler 24%"
   },
   "real alignment": {
    "verdict": "pass",

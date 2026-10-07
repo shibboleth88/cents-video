@@ -903,3 +903,36 @@ quietly accepted.
 **Open: the penultimate-to-final transition.** The film goes from the market to
 "CENTS is a becoming" with nothing between. Adding a line needs a recording, so
 it is a question for the author, not a fix.
+
+## Episode — the artist's own process footage (2026-10-07)
+
+The author supplied four assets from Rutherford Chang's workspace: his
+photography setup, two desk views, and 110s of the CENTS Block being cast.
+Ingested as a14-a17 with provenance. Still no API spend; the generated share
+fell from 29% to 24% because real material replaced invented material.
+
+**Transformation three was the product standing in for the process.** It showed
+one of Chang's archival photographs, because an archival photograph was what we
+had. The line is "archivally photographed" - a verb. It now shows the apparatus:
+the copy stand, the lit pad with one cent on it, the laptop displaying the
+capture, the penny rolls behind. *An image OF the result is not an image of the
+act, and the two are close enough to swap without anyone noticing.*
+
+**Transformation four was generated particulate; it is now the actual pour.**
+Molten copper tilted from the crucible into the brick mould. For a film about
+the objecthood of real things, invented copper standing in for the copper that
+was actually melted is the substitution the project's own policy exists to
+prevent - and it had passed every gate, because the policy forbids inventing a
+picture OF a specific real thing and a generic abstraction is not that. It was
+within the rules and still the wrong picture when the right one existed.
+
+The pour was located by measurement, not by scrubbing: frames sampled every few
+seconds across 110s put the tilt at ~76s, and a second pass at 1s resolution
+fixed it. The clip is 8.0s against a 7.36s shot, so it plays straight and never
+loops.
+
+Held at 560px because the source is 480 wide. Small and true beats large and
+soft, which is the same rule the Block animation already lives under.
+
+**Open:** the author is recording the bridging line between the market and "CENTS
+is a becoming".
