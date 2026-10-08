@@ -588,11 +588,11 @@
   {
    "word": "thousands",
    "start": 54.74,
-   "end": 55.16
+   "end": 55.14
   },
   {
    "word": "of",
-   "start": 55.16,
+   "start": 55.14,
    "end": 55.36
   },
   {
@@ -892,13 +892,13 @@
   },
   {
    "word": "archivally",
-   "start": 88.2,
+   "start": 88.16,
    "end": 88.96
   },
   {
    "word": "photographed,",
    "start": 88.96,
-   "end": 89.5
+   "end": 89.7
   },
   {
    "word": "valued",
@@ -933,7 +933,7 @@
   {
    "word": "Four,",
    "start": 92.38,
-   "end": 93.8
+   "end": 93.82
   },
   {
    "word": "destroyed,",
@@ -972,7 +972,7 @@
   },
   {
    "word": "its",
-   "start": 97.8,
+   "start": 97.74,
    "end": 97.92
   },
   {
@@ -1012,22 +1012,22 @@
   },
   {
    "word": "its",
-   "start": 103.3,
+   "start": 103.36,
    "end": 103.98
   },
   {
    "word": "value",
    "start": 103.98,
-   "end": 104.42
+   "end": 104.44
   },
   {
    "word": "continually",
-   "start": 104.42,
-   "end": 105.12
+   "start": 104.44,
+   "end": 105.14
   },
   {
    "word": "redefined",
-   "start": 105.12,
+   "start": 105.14,
    "end": 106.04
   },
   {
@@ -1098,95 +1098,200 @@
   {
    "word": "market.",
    "start": 112.02,
-   "end": 112.36
+   "end": 112.38
   },
   {
-   "word": "CENTS",
-   "start": 112.36,
-   "end": 113.72
+   "word": "Chang",
+   "start": 112.38,
+   "end": 113.18
   },
   {
-   "word": "is",
-   "start": 113.72,
-   "end": 114.3
+   "word": "cracks",
+   "start": 113.18,
+   "end": 114.1
   },
   {
-   "word": "a",
-   "start": 114.3,
-   "end": 114.46
-  },
-  {
-   "word": "becoming,",
-   "start": 114.46,
-   "end": 114.84
-  },
-  {
-   "word": "a",
-   "start": 115.28,
-   "end": 115.96
-  },
-  {
-   "word": "gesture",
-   "start": 115.96,
-   "end": 116.44
-  },
-  {
-   "word": "that",
-   "start": 116.44,
-   "end": 117.48
-  },
-  {
-   "word": "unfolds",
-   "start": 117.48,
-   "end": 118.22
-  },
-  {
-   "word": "continually",
-   "start": 118.22,
-   "end": 118.88
-  },
-  {
-   "word": "through",
-   "start": 118.88,
-   "end": 119.56
+   "word": "open",
+   "start": 114.1,
+   "end": 114.52
   },
   {
    "word": "the",
-   "start": 119.56,
-   "end": 119.72
+   "start": 114.52,
+   "end": 114.84
   },
   {
-   "word": "actions",
-   "start": 119.72,
-   "end": 120.24
+   "word": "worthless",
+   "start": 114.84,
+   "end": 115.52
+  },
+  {
+   "word": "one-cent",
+   "start": 115.52,
+   "end": 116.42
+  },
+  {
+   "word": "coin",
+   "start": 116.42,
+   "end": 116.98
+  },
+  {
+   "word": "and",
+   "start": 116.98,
+   "end": 118.08
+  },
+  {
+   "word": "allows",
+   "start": 118.08,
+   "end": 118.46
+  },
+  {
+   "word": "it",
+   "start": 118.46,
+   "end": 118.84
+  },
+  {
+   "word": "to",
+   "start": 118.84,
+   "end": 119.34
+  },
+  {
+   "word": "function",
+   "start": 119.34,
+   "end": 119.8
+  },
+  {
+   "word": "as",
+   "start": 119.8,
+   "end": 120.26
+  },
+  {
+   "word": "a",
+   "start": 120.26,
+   "end": 120.38
+  },
+  {
+   "word": "vessel",
+   "start": 120.38,
+   "end": 120.84
   },
   {
    "word": "of",
-   "start": 120.24,
-   "end": 120.82
+   "start": 120.84,
+   "end": 121.5
   },
   {
-   "word": "its",
-   "start": 120.82,
-   "end": 121.0
+   "word": "indeterminate",
+   "start": 121.5,
+   "end": 122.42
   },
   {
-   "word": "participants",
-   "start": 121.0,
-   "end": 121.7
+   "word": "value",
+   "start": 122.42,
+   "end": 123.04
+  },
+  {
+   "word": "and",
+   "start": 123.04,
+   "end": 124.02
+  },
+  {
+   "word": "emergent",
+   "start": 124.02,
+   "end": 124.76
+  },
+  {
+   "word": "meaning.",
+   "start": 124.76,
+   "end": 125.32
+  },
+  {
+   "word": "CENTS",
+   "start": 126.61,
+   "end": 127.16
+  },
+  {
+   "word": "is",
+   "start": 127.16,
+   "end": 127.74
+  },
+  {
+   "word": "a",
+   "start": 127.74,
+   "end": 127.88
+  },
+  {
+   "word": "becoming,",
+   "start": 127.88,
+   "end": 128.3
+  },
+  {
+   "word": "a",
+   "start": 128.74,
+   "end": 129.38
+  },
+  {
+   "word": "gesture",
+   "start": 129.38,
+   "end": 129.88
+  },
+  {
+   "word": "that",
+   "start": 129.88,
+   "end": 130.94
+  },
+  {
+   "word": "unfolds",
+   "start": 130.94,
+   "end": 131.66
+  },
+  {
+   "word": "continually",
+   "start": 131.66,
+   "end": 132.32
   },
   {
    "word": "through",
-   "start": 121.7,
-   "end": 122.56
+   "start": 132.32,
+   "end": 133.02
+  },
+  {
+   "word": "the",
+   "start": 133.02,
+   "end": 133.18
+  },
+  {
+   "word": "actions",
+   "start": 133.18,
+   "end": 133.7
+  },
+  {
+   "word": "of",
+   "start": 133.7,
+   "end": 134.26
+  },
+  {
+   "word": "its",
+   "start": 134.26,
+   "end": 134.44
+  },
+  {
+   "word": "participants",
+   "start": 134.44,
+   "end": 135.16
+  },
+  {
+   "word": "through",
+   "start": 135.16,
+   "end": 136.02
   },
   {
    "word": "time.",
-   "start": 122.56,
-   "end": 122.92
+   "start": 136.02,
+   "end": 136.36
   }
  ],
- "duration": 127.24,
+ "duration": 140.69,
  "source_audio": "public/vo.wav",
  "model": "mlx-community/whisper-large-v3-turbo",
  "divergences": [
@@ -1554,7 +1659,7 @@
    "kind": "recognition",
    "heard": "Archivally",
    "used": "archivally",
-   "at": 88.2
+   "at": 88.16
   },
   {
    "kind": "recognition",
@@ -1602,7 +1707,7 @@
    "kind": "recognition",
    "heard": "Sense",
    "used": "CENTS",
-   "at": 112.36
+   "at": 126.61
   }
  ]
 }

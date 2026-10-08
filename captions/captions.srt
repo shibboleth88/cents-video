@@ -111,7 +111,7 @@ Two, removed from circulation,
 that value assignment subverted.
 
 29
-00:01:26,280 --> 00:01:29,500
+00:01:26,280 --> 00:01:29,700
 Three, archivally photographed,
 
 30
@@ -131,7 +131,7 @@ of copper, its value made undefinable.
 Five, inscribed on Bitcoin,
 
 34
-00:01:43,299 --> 00:01:46,920
+00:01:43,359 --> 00:01:46,920
 its value continually redefined by decentralized
 
 35
@@ -139,21 +139,33 @@ its value continually redefined by decentralized
 consensus as the objects are
 
 36
-00:01:49,920 --> 00:01:52,359
+00:01:49,920 --> 00:01:52,379
 traded every day on the open market.
 
 37
-00:01:52,359 --> 00:01:54,840
-CENTS is a becoming,
+00:01:52,379 --> 00:01:56,420
+Chang cracks open the worthless one-cent
 
 38
-00:01:55,280 --> 00:01:58,879
-a gesture that unfolds continually
+00:01:56,420 --> 00:02:00,379
+coin and allows it to function as a
 
 39
-00:01:58,879 --> 00:02:00,819
-through the actions of
+00:02:00,379 --> 00:02:05,319
+vessel of indeterminate value and emergent meaning.
 
 40
-00:02:00,819 --> 00:02:02,920
+00:02:06,609 --> 00:02:08,300
+CENTS is a becoming,
+
+41
+00:02:08,740 --> 00:02:12,319
+a gesture that unfolds continually
+
+42
+00:02:12,319 --> 00:02:14,259
+through the actions of
+
+43
+00:02:14,259 --> 00:02:16,360
 its participants through time.

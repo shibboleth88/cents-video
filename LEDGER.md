@@ -936,3 +936,45 @@ soft, which is the same rule the Block animation already lives under.
 
 **Open:** the author is recording the bridging line between the market and "CENTS
 is a becoming".
+
+## Episode — the bridging line (2026-10-08)
+
+18 shots, 140.69s, 18/18 gates. The author wrote and recorded the line the film
+was missing:
+
+> Chang cracks open the worthless one-cent coin and allows it to function as a
+> vessel of indeterminate value and emergent meaning.
+
+Not one of the three I proposed, and better than all of them: it does the
+bridging work without repeating a sentence the film has already used.
+
+**Two sources, and the level between them is not free.** The new take measured
+**3.25 dB hotter** than the main recording at matched gating. loudnorm
+normalises the WHOLE file, so a difference between sources survives it intact -
+the line would have sat proud of everything around it. The EDL now carries a
+per-segment `source` and `gain_db`, and the new segment is attenuated before the
+concat, so the shared chain sees one consistent level.
+
+*Failure-shape: a normaliser equalises a FILE, not the takes inside it. Loudness
+matching between sources has to happen before the thing that looks like it is
+doing loudness matching.*
+
+**Fidelity of the new line.** 'vessel', 'indeterminate' and 'value and meaning'
+are all inside one contiguous span; 'emergent meaning' is the essay's 'Its
+meanings continue to emerge'; 'the worthless one-cent coin' is the essay's
+phrase, quotation marks and all. **'Cracks open' is the author's own image and
+appears nowhere in the essay.** It is a metaphor for the decoupling the span
+describes rather than a new claim, so it is recorded as a paraphrase with the
+metaphor named - not smuggled, and not inflated into an addition either.
+
+**An anchor that silently became an overlap.** `s11b_market` ended at "CENTS is
+a becoming". Inserting a line before that phrase did not break the anchor - the
+phrase still resolved, to a point 14s later than before - so the market shot
+quietly swallowed the new line and overlapped the shot built for it. The cover
+check caught it as a gap. *An anchor is a position relative to the words; adding
+words moves it, and it will not complain.*
+
+**The performance was left alone.** The line carries 0.85s and 0.68s pauses
+mid-sentence. The earlier tightening was of a 2.00s gap that read as a full
+stop; these are inside the range of a deliberate delivery, and editing them
+would be editing the reading rather than fixing a fault.

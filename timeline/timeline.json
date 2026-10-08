@@ -332,7 +332,7 @@
     "at_phrase": "as the objects are"
    },
    "end": {
-    "at_phrase": "CENTS is a becoming"
+    "at_phrase": "Chang cracks open"
    },
    "purpose": "The trading itself, as it actually appears: members of the set listed with their numbers and their prices in bitcoin.",
    "visual_kind": "real",
@@ -341,6 +341,25 @@
    "props": {
     "caption": "priced by whoever holds it",
     "maxWidth": 1000
+   }
+  },
+  {
+   "shot_id": "s12_vessel",
+   "start": {
+    "at_phrase": "Chang cracks open"
+   },
+   "end": {
+    "at_phrase": "CENTS is a becoming"
+   },
+   "purpose": "The line that bridges the market to the closer, over the one Cent the essay singles out - an ordinary coin that time has turned into something else. Dust drifting behind it for the emergent half of the sentence.",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "a03",
+   "props": {
+    "caption": "a vessel",
+    "maxWidth": 620,
+    "backdrop": "g02m",
+    "backdropDim": 0.88
    }
   },
   {

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-07T10:51:05",
+ "generated_at": "2026-10-08T12:03:09",
  "essay": {
   "title": "CENTS principles",
   "subtitle": "an introduction to the primary concepts of CENTS by Rutherford Chang",
@@ -11,15 +11,15 @@
   "alignment_is_fixture": false,
   "model": "mlx-community/whisper-large-v3-turbo",
   "audio": "public/vo.wav",
-  "duration_s": 127.24,
-  "words": 237
+  "duration_s": 140.69,
+  "words": 258
  },
  "canvas": {
   "width": 1080,
   "height": 1920,
   "fps": 30
  },
- "ledger_sha256": "37fd7d34b5a635f240c9f15a590887da73b6218e23d24cbe5829a31676a963fd",
+ "ledger_sha256": "b5bcfda565f515f1b49e244822bc0fcce0fdf77e882563ae8a46a74518f5e3a9",
  "shots": [
   {
    "shot_id": "s01_title",
@@ -213,6 +213,19 @@
     "at_phrase": "as the objects are"
    },
    "end": {
+    "at_phrase": "Chang cracks open"
+   }
+  },
+  {
+   "shot_id": "s12_vessel",
+   "purpose": "The line that bridges the market to the closer, over the one Cent the essay singles out - an ordinary coin that time has turned into something else. Dust drifting behind it for the emergent half of the sentence.",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "a03",
+   "start": {
+    "at_phrase": "Chang cracks open"
+   },
+   "end": {
     "at_phrase": "CENTS is a becoming"
    }
   },
@@ -245,18 +258,18 @@
  ],
  "exports": {
   "clean.mp4": {
-   "sha256": "3020840c9cb46ec7ef1375d2095eebc5324837df428471a6f8e70064275e0887",
-   "bytes": 61889542,
-   "duration_s": 127.253,
-   "frames": 3817,
+   "sha256": "6d3a84954008a638e7bbd46ad6501768fcc7222797d776d82a85edc793e9e11a",
+   "bytes": 71328475,
+   "duration_s": 140.715,
+   "frames": 4221,
    "size": "1080x1920",
    "fps": "30/1"
   },
   "captioned.mp4": {
-   "sha256": "950b34d3c77b83f4aa8b34d439d395f5ed9da2b7d7c0f4f5cedf9cb9f1dd17a2",
-   "bytes": 61729656,
-   "duration_s": 127.253,
-   "frames": 3817,
+   "sha256": "858e3cf0961ba7ba024189ae59f37f847df1fcf583e6ccd5c18f6e1e3c9ac66a",
+   "bytes": 71096977,
+   "duration_s": 140.715,
+   "frames": 4221,
    "size": "1080x1920",
    "fps": "30/1"
   }
@@ -268,7 +281,7 @@
   },
   "visual mix": {
    "verdict": "pass",
-   "detail": "17 shots, mix {'generated': 4, 'code': 6, 'real': 7}, filler 24%"
+   "detail": "18 shots, mix {'generated': 4, 'code': 6, 'real': 8}, filler 22%"
   },
   "real alignment": {
    "verdict": "pass",
@@ -280,11 +293,11 @@
   },
   "captioned format": {
    "verdict": "pass",
-   "detail": "1080x1920 @30fps, 3817 frames, 127.25s, audio present"
+   "detail": "1080x1920 @30fps, 4221 frames, 140.72s, audio present"
   },
   "black tail": {
    "verdict": "pass",
-   "detail": "tail is not black (peak luma 181 over last 14 frames)"
+   "detail": "tail is not black (peak luma 184 over last 14 frames)"
   },
   "frozen tail": {
    "verdict": "pass",
@@ -292,15 +305,15 @@
   },
   "parity": {
    "verdict": "pass",
-   "detail": "audio streams identical, durations match (127.25s)"
+   "detail": "audio streams identical, durations match (140.72s)"
   },
   "safe area": {
    "verdict": "pass",
-   "detail": "text present in 3747/3817 frames, all bands clear"
+   "detail": "text present in 4143/4221 frames, all bands clear"
   },
   "loudness": {
    "verdict": "pass",
-   "detail": "-16.38 LUFS, -4.46 dBTP"
+   "detail": "-16.4 LUFS, -4.47 dBTP"
   }
  },
  "releasable": true,

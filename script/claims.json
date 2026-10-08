@@ -90,6 +90,12 @@
    "note": "SPOKEN ADDITION of 'as the objects are traded every day on the open market', which is the essay's 'placing them into a system of permissionless exchange and indeterminate, continual revaluation' said concretely. 'Every day' is the speaker's."
   },
   {
+   "say": "Chang cracks open the worthless one-cent coin and allows it to function as a vessel of indeterminate value and emergent meaning.",
+   "kind": "paraphrase",
+   "span": "the original assigned value is decoupled from the object and transformed into a vessel for social-consensus based value defined by decentralized participants, creating a situation where their value and meaning is indeterminate and continually redefined",
+   "note": "WRITTEN AND SPOKEN BY THE ESSAY'S AUTHOR, 2026-10-08, to bridge the market to the closer. 'vessel', 'indeterminate' and 'value and meaning' are all in the cited span; 'emergent meaning' is the essay's 'Its meanings continue to emerge'; 'the worthless one-cent coin' is the essay's phrase, quotation marks and all. 'Cracks open' is the author's own image and appears nowhere in the essay - it is a metaphor for the decoupling the span describes, not a new claim, which is why it is recorded as a paraphrase with the metaphor named rather than as an addition."
+  },
+  {
    "say": "CENTS is a becoming, a gesture that unfolds continually through the actions of its participants through time.",
    "kind": "paraphrase",
    "span": "CENTS is a becoming, a gesture that unfolds continually through the actions of its participants in time",
@@ -639,6 +645,11 @@
    "text": "redefined",
    "kind": "paraphrase",
    "span": "their value and meaning is indeterminate and continually redefined"
+  },
+  {
+   "text": "a vessel",
+   "kind": "paraphrase",
+   "span": "transformed into a vessel for social-consensus based value defined by decentralized participants"
   }
  ],
  "attributions": [],
