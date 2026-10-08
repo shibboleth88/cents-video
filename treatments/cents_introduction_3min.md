@@ -74,12 +74,12 @@ Numbered for recording. 28 lines.
 1. Victor David Brenner's Lincoln, cut in 1909, is the most reproduced artwork on Earth.
 2. Struck on two hundred and eighty-eight billion pennies still in existence.
 3. A penny is worth one cent, because the Treasury says it is.
-4. The copper in the older ones has long been worth more than a cent.
+4. The copper in a pre-1983 cent has long been worth more.
 5. On the ninth of February 2025, the President ordered the Treasury to stop making them.
 6. The last was struck that November.
 
 **II — THE ARTIST**
-7. The same day, the New York Times ran Rutherford Chang's obituary. He was forty-five.
+7. On that ninth of February, the New York Times also ran Rutherford Chang's obituary. He was forty-five.
 8. He had spent his working life collecting ordinary things until time made them singular.
 9. Shown for two decades, from the ICA in London to the Art Gallery of Ontario.
 10. Three thousand copies of the same Beatles record, no two worn alike.
@@ -290,3 +290,31 @@ exhibitions, curators, dates, URLs — **`data/museums.json` and the live site
 are the fact; `corpus/pages/museum-*.md` is the prose.** The film's only
 institutional line ("UCCA Beijing gave him a retrospective in 2026") was taken
 from the live page, not the corpus, and names no curator.
+
+
+---
+
+## 10. Two defects the new skill found in this script
+
+`.claude/skills/video-concept-relations/SKILL.md` was written from this
+project's ledger. Run against **this** treatment — after four rounds of revision
+— its first two passes found two live faults. Recorded because a check that has
+never gone red is worth nothing, and this one went red immediately on the
+material it was derived from.
+
+**Pass 1, referents — line 4 pointed at a premise eighteen lines downstream.**
+It read *"The copper in **the older ones** has long been worth more than a
+cent."* Older than what? The copper-to-zinc cutoff is not supplied until line 22.
+An earlier draft said *"a cent minted in 1982 or earlier"*; I trimmed it for
+length and the referent went vague — the cut-premise failure, committed while
+writing the skill that names it. Now *"a pre-1983 cent"*, which also plants the
+date that line 22 pays off.
+
+**Pass 2, sequence — "the same day" pointed at the wrong day.** Line 7 meant the
+ninth of February in line 5. But line 6 — *"The last was struck that November"* —
+sits between them, so the nearest date antecedent a listener holds is **November**.
+Each sentence true; the order put the wrong referent closest. Now *"On that ninth
+of February…"*, which is explicit and costs four words.
+
+Neither is catchable by any gate in this repo. Both were found by reading the
+survivors in order and asking what each one refers to.
