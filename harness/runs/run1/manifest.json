@@ -1,0 +1,18 @@
+{
+ "tag": "run1",
+ "relations": [
+  "dangling-premise",
+  "order-causation",
+  "synonym-repetition"
+ ],
+ "cases": [
+  "order-causation-brenner",
+  "dangling-premise-remained",
+  "dangling-premise-set",
+  "synonym-repetition-redefinition"
+ ],
+ "runs": 24,
+ "malformed": 0,
+ "model": "default",
+ "disallowed_tools": "Bash,Read,Write,Edit,Grep,Glob,WebFetch,WebSearch,Task,Agent,NotebookEdit,TodoWrite,Skill,SlashCommand"
+}

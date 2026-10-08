@@ -1,0 +1,24 @@
+{
+ "relation": "synonym-repetition",
+ "case": "dangling-premise-remained",
+ "version": "after",
+ "seconds": 29.4,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     17,
+     18
+    ],
+    "claim": "This tells me that the value of each Cent is never fixed but kept in continual redefinition.",
+    "why": "Line 16 already closes the five-transformation list with \"continually redefined by decentralized consensus\"; 17 then generalises that same clause (\"indeterminate and continually redefined\") and 18 says it a third time with the artist as subject (\"an ongoing process of redefinition\"), sharing the root \"redefin-\" each time. None of the three adds a new register \u2014 the mechanism is demonstrated by 11\u201316 and the form/participant register is covered by 20 \u2014 so 17 and 18 are the same point in fresh wording. Keep 18, which at least carries agency into line 19\u201320; cut 17.",
+    "confidence": "high"
+   }
+  ],
+  "strongest": 17
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [17, 18],\n      \"claim\": \"This tells me that the value of each Cent is never fixed but kept in continual redefinition.\",\n      \"why\": \"Line 16 already closes the five-transformation list with \\\"continually redefined by decentralized consensus\\\"; 17 then generalises that same clause (\\\"indeterminate and continually redefined\\\") and 18 says it a third time with the artist as subject (\\\"an ongoing process of redefinition\\\"), sharing the root \\\"redefin-\\\" each time. None of the three adds a new register \u2014 the mechanism is demonstrated by 11\u201316 and the form/participant register is covered by 20 \u2014 so 17 and 18 are the same point in fresh wording. Keep 18, which at least carries agency into line 19\u201320; cut 17.\",\n      \"confidence\": \"high\"\n    }\n  ],\n  \"strongest\": 17\n}"
+}

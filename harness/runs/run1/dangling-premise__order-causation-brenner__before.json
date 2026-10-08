@@ -1,0 +1,23 @@
+{
+ "relation": "dangling-premise",
+ "case": "order-causation-brenner",
+ "version": "before",
+ "seconds": 54.0,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     7
+    ],
+    "claim": "This tells me that the piece has already described a force pulling the object out of physical existence \u2014 a dematerialization the object survived.",
+    "why": "\"Remained\" and \"buoyed into physicality\" are conclusions about something that resisted disappearing, but nothing before line 7 raises any threat to the object's physical existence; lines 4\u20135 concern its monetary value, not its materiality. The premise it points at does exist in the draft \u2014 the hollowing-out, the split between materiality and meaning, the loss of objecthood \u2014 but it arrives at lines 14\u201318, after the line that depends on it.",
+    "confidence": "high"
+   }
+  ],
+  "strongest": 7
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [7],\n      \"claim\": \"This tells me that the piece has already described a force pulling the object out of physical existence \u2014 a dematerialization the object survived.\",\n      \"why\": \"\\\"Remained\\\" and \\\"buoyed into physicality\\\" are conclusions about something that resisted disappearing, but nothing before line 7 raises any threat to the object's physical existence; lines 4\u20135 concern its monetary value, not its materiality. The premise it points at does exist in the draft \u2014 the hollowing-out, the split between materiality and meaning, the loss of objecthood \u2014 but it arrives at lines 14\u201318, after the line that depends on it.\",\n      \"confidence\": \"high\"\n    }\n  ],\n  \"strongest\": 7\n}"
+}

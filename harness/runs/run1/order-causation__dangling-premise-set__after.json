@@ -1,0 +1,24 @@
+{
+ "relation": "order-causation",
+ "case": "dangling-premise-set",
+ "version": "after",
+ "seconds": 96.8,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     6,
+     7
+    ],
+    "claim": "This tells me that the cent became worthless because so many of them were made \u2014 that half a trillion mintings is what dissolved the currency's value.",
+    "why": "A production figure stated immediately before a statement about currency dissolving into worthlessness reads as the cause of it, but line 6's number is offered as a measure of the artwork's reproduction, not of monetary debasement, and no line in the draft claims mint volume drove the loss of purchasing power.",
+    "confidence": "medium"
+   }
+  ],
+  "strongest": 7
+ },
+ "malformed": null,
+ "raw": "{\"verdict\":\"FOUND\",\"instances\":[{\"lines\":[6,7],\"claim\":\"This tells me that the cent became worthless because so many of them were made \u2014 that half a trillion mintings is what dissolved the currency's value.\",\"why\":\"A production figure stated immediately before a statement about currency dissolving into worthlessness reads as the cause of it, but line 6's number is offered as a measure of the artwork's reproduction, not of monetary debasement, and no line in the draft claims mint volume drove the loss of purchasing power.\",\"confidence\":\"medium\"}],\"strongest\":7}"
+}

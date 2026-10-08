@@ -1,0 +1,25 @@
+{
+ "relation": "dangling-premise",
+ "case": "order-causation-brenner",
+ "version": "after",
+ "seconds": 32.1,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     3,
+     4,
+     5
+    ],
+    "claim": "This tells me that the object was at risk of ceasing to exist, or of losing its physical status, and that something held it in place anyway.",
+    "why": "\"Remained\" and \"buoyed into physicality\" both answer a threat, but lines 1\u20134 establish only a price discrepancy and the ubiquity of the object \u2014 nothing earlier says the cent was being destroyed, withdrawn, or dematerialized, so the survival these words report has no event to survive. The premise about destruction arrives only at line 14, nine lines later.",
+    "confidence": "high"
+   }
+  ],
+  "strongest": 5
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [3, 4, 5],\n      \"claim\": \"This tells me that the object was at risk of ceasing to exist, or of losing its physical status, and that something held it in place anyway.\",\n      \"why\": \"\\\"Remained\\\" and \\\"buoyed into physicality\\\" both answer a threat, but lines 1\u20134 establish only a price discrepancy and the ubiquity of the object \u2014 nothing earlier says the cent was being destroyed, withdrawn, or dematerialized, so the survival these words report has no event to survive. The premise about destruction arrives only at line 14, nine lines later.\",\n      \"confidence\": \"high\"\n    }\n  ],\n  \"strongest\": 5\n}"
+}

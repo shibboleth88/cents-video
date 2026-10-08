@@ -1,0 +1,24 @@
+{
+ "relation": "order-causation",
+ "case": "dangling-premise-set",
+ "version": "before",
+ "seconds": 86.2,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     2,
+     3
+    ],
+    "claim": "This tells me that the cent stopped being used in transactions because its metal came to be worth more than its face value.",
+    "why": "Line 2 states the melt-value discrepancy and line 3 states the cent's disappearance from pricing, with no connective between them, so the second reads as the consequence of the first; nothing in the draft offers any account of why nothing costs a cent, and the two facts are in fact independent (the metal premium is not what removed the one-cent price point). The lines also point opposite ways \u2014 one says the coin is worth more than a cent, the other that a cent buys nothing \u2014 which is what makes the bare adjacency do the explaining.",
+    "confidence": "medium"
+   }
+  ],
+  "strongest": 3
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [2, 3],\n      \"claim\": \"This tells me that the cent stopped being used in transactions because its metal came to be worth more than its face value.\",\n      \"why\": \"Line 2 states the melt-value discrepancy and line 3 states the cent's disappearance from pricing, with no connective between them, so the second reads as the consequence of the first; nothing in the draft offers any account of why nothing costs a cent, and the two facts are in fact independent (the metal premium is not what removed the one-cent price point). The lines also point opposite ways \u2014 one says the coin is worth more than a cent, the other that a cent buys nothing \u2014 which is what makes the bare adjacency do the explaining.\",\n      \"confidence\": \"medium\"\n    }\n  ],\n  \"strongest\": 3\n}"
+}

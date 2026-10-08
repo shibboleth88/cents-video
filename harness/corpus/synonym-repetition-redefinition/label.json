@@ -1,0 +1,29 @@
+{
+ "id": "synonym-repetition-redefinition",
+ "commit": "2f9c7cd",
+ "relation": "synonym-repetition",
+ "defect": "Continual redefinition is stated three times in six lines, sharing the root 'redefin': 'continually redefined by decentralized consensus', 'an ongoing process of redefinition', and 'indeterminate and continually redefined'. None adds a register the previous one lacked.",
+ "evidence_lines_before": [
+  16,
+  17,
+  21
+ ],
+ "fix": "Cuts two; keeps the mechanism inside the transformation list and replaces the others with register-distinct lines (collectors reading the set; canon).",
+ "also_fixed": [
+  "Rewrote the canon simile as a grammatical continuation."
+ ],
+ "other_relations_present": {
+  "before": [
+   "foreign-passage"
+  ],
+  "after": []
+ },
+ "relation_definition": "Repetition in synonyms mistaken for emphasis: restatements that add no new register, only another word for the last one.",
+ "before_lines": 23,
+ "after_lines": 21,
+ "evidence_text": [
+  "Inscribed on Bitcoin, continually redefined by decentralized consensus.",
+  "Chang initiated an ongoing process of redefinition.",
+  "Like words that accrue significance on entering the scarce set of meanings we call canon."
+ ]
+}

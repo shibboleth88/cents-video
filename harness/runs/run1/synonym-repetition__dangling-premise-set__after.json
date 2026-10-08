@@ -1,0 +1,25 @@
+{
+ "relation": "synonym-repetition",
+ "case": "dangling-premise-set",
+ "version": "after",
+ "seconds": 31.9,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     17,
+     21,
+     22
+    ],
+    "claim": "This tells me that the work is continually redefined and never settled \u2014 three times, in three sets of words, at the same level of abstraction.",
+    "why": "Line 16 has already stated redefinition as a mechanism (consensus re-pricing the inscribed cent) and line 20 has given it a reader (collectors working the set), so 17 and 21 are left asserting the same abstract property of the whole \u2014 'ongoing process of redefinition' and 'indeterminate and continually redefined' \u2014 with 22's 'unfolds continually' repeating it a third time. Only 22 adds a register, naming what kind of thing the work is; 17 and 21 differ from it in vocabulary, not in level, and cutting them loses no claim.",
+    "confidence": "high"
+   }
+  ],
+  "strongest": 21
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [17, 21, 22],\n      \"claim\": \"This tells me that the work is continually redefined and never settled \u2014 three times, in three sets of words, at the same level of abstraction.\",\n      \"why\": \"Line 16 has already stated redefinition as a mechanism (consensus re-pricing the inscribed cent) and line 20 has given it a reader (collectors working the set), so 17 and 21 are left asserting the same abstract property of the whole \u2014 'ongoing process of redefinition' and 'indeterminate and continually redefined' \u2014 with 22's 'unfolds continually' repeating it a third time. Only 22 adds a register, naming what kind of thing the work is; 17 and 21 differ from it in vocabulary, not in level, and cutting them loses no claim.\",\n      \"confidence\": \"high\"\n    }\n  ],\n  \"strongest\": 21\n}"
+}

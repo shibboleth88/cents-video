@@ -1,0 +1,33 @@
+{
+ "relation": "dangling-premise",
+ "case": "dangling-premise-set",
+ "version": "after",
+ "seconds": 54.6,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     3,
+     4
+    ],
+    "claim": "This tells me that the cent was expected to disappear \u2014 withdrawn, discontinued, abolished \u2014 and that against that expectation it physically persisted.",
+    "why": "\"Yet\" and \"remained\" need a prior statement that the object was ceasing to exist, but lines 1\u20133 only establish a price gap and a loss of purchasing power, which is not a threat to the coin's existence. \"The object\" is also a definite reference to a thing the draft has not yet named \u2014 no coin or artwork appears until lines 5\u20136 \u2014 so both the contrast and the noun point back at a premise that is not in the piece.",
+    "confidence": "high"
+   },
+   {
+    "lines": [
+     11,
+     18
+    ],
+    "claim": "This tells me that there is a defined, bounded group of individual works called Cents, already introduced, which the five transformations are being quantified over.",
+    "why": "\"Every Cent\" is a quantifier over a set, but the only set established before line 11 is the five hundred billion circulating Lincoln cents of line 6, which plainly do not pass through archival photography and Bitcoin inscription. The set it actually means \u2014 the permanent ten thousand \u2014 is not introduced until line 18, seven lines after the line that counts over it.",
+    "confidence": "medium"
+   }
+  ],
+  "strongest": 4
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [3, 4],\n      \"claim\": \"This tells me that the cent was expected to disappear \u2014 withdrawn, discontinued, abolished \u2014 and that against that expectation it physically persisted.\",\n      \"why\": \"\\\"Yet\\\" and \\\"remained\\\" need a prior statement that the object was ceasing to exist, but lines 1\u20133 only establish a price gap and a loss of purchasing power, which is not a threat to the coin's existence. \\\"The object\\\" is also a definite reference to a thing the draft has not yet named \u2014 no coin or artwork appears until lines 5\u20136 \u2014 so both the contrast and the noun point back at a premise that is not in the piece.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"lines\": [11, 18],\n      \"claim\": \"This tells me that there is a defined, bounded group of individual works called Cents, already introduced, which the five transformations are being quantified over.\",\n      \"why\": \"\\\"Every Cent\\\" is a quantifier over a set, but the only set established before line 11 is the five hundred billion circulating Lincoln cents of line 6, which plainly do not pass through archival photography and Bitcoin inscription. The set it actually means \u2014 the permanent ten thousand \u2014 is not introduced until line 18, seven lines after the line that counts over it.\",\n      \"confidence\": \"medium\"\n    }\n  ],\n  \"strongest\": 4\n}"
+}

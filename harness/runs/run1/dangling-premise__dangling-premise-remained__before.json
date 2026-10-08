@@ -1,0 +1,23 @@
+{
+ "relation": "dangling-premise",
+ "case": "dangling-premise-remained",
+ "version": "before",
+ "seconds": 42.7,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     4,
+     5
+    ],
+    "claim": "This tells me that the object was expected to disappear, dematerialize, or lose its physical standing \u2014 and that something had to hold it in place against that.",
+    "why": "\"Remained\" and \"buoyed into physicality\" are both recoveries from a threat, but nothing earlier in the draft puts the object under any threat of vanishing: lines 1\u20134 establish only a price gap and a reproduction count, both of which affirm the object's physical presence rather than endanger it. The premise the line concludes from \u2014 that readymades or conceptual gestures dissolve the object into idea \u2014 is not in the piece."
+   }
+  ],
+  "strongest": 5
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [4, 5],\n      \"claim\": \"This tells me that the object was expected to disappear, dematerialize, or lose its physical standing \u2014 and that something had to hold it in place against that.\",\n      \"why\": \"\\\"Remained\\\" and \\\"buoyed into physicality\\\" are both recoveries from a threat, but nothing earlier in the draft puts the object under any threat of vanishing: lines 1\u20134 establish only a price gap and a reproduction count, both of which affirm the object's physical presence rather than endanger it. The premise the line concludes from \u2014 that readymades or conceptual gestures dissolve the object into idea \u2014 is not in the piece.\"\n    }\n  ],\n  \"strongest\": 5\n}"
+}

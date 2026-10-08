@@ -1,0 +1,25 @@
+{
+ "relation": "dangling-premise",
+ "case": "synonym-repetition-redefinition",
+ "version": "after",
+ "seconds": 188.0,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     7,
+     8,
+     9
+    ],
+    "claim": "This tells me that the draft has already shown me cents selling for thousands of dollars, so that 'here we are' names two facts I have both been given.",
+    "why": "Line 7's absurdity is earned by lines 2-3 (a cent buys nothing, costs two and a half), but line 8 presupposes a cent fetching thousands, which no earlier line establishes \u2014 the only valuations in the piece are one cent and two and a half cents. Line 9 then asserts that both states actually obtain, treating the unestablished one as something the draft has demonstrated.",
+    "confidence": "medium"
+   }
+  ],
+  "strongest": 8
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [7, 8, 9],\n      \"claim\": \"This tells me that the draft has already shown me cents selling for thousands of dollars, so that 'here we are' names two facts I have both been given.\",\n      \"why\": \"Line 7's absurdity is earned by lines 2-3 (a cent buys nothing, costs two and a half), but line 8 presupposes a cent fetching thousands, which no earlier line establishes \u2014 the only valuations in the piece are one cent and two and a half cents. Line 9 then asserts that both states actually obtain, treating the unestablished one as something the draft has demonstrated.\",\n      \"confidence\": \"medium\"\n    }\n  ],\n  \"strongest\": 8\n}"
+}

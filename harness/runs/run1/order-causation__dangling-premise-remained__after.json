@@ -1,0 +1,34 @@
+{
+ "relation": "order-causation",
+ "case": "dangling-premise-remained",
+ "version": "after",
+ "seconds": 62.8,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     18,
+     19,
+     20
+    ],
+    "claim": "This tells me that the marks of touch and time on each object were made by the participants, as part of the process Chang set in motion.",
+    "why": "Line 19 states only that the objects, identical when struck, now bear wear \u2014 which for circulated cents is ordinary pre-existing history. Placed between 18's \"Chang initiated an ongoing process\" and 20's \"unfolds through the actions of its participants,\" the order converts that inherited property into evidence of the authored process, an origin for the wear that no line asserts.",
+    "confidence": "medium"
+   },
+   {
+    "lines": [
+     17,
+     18
+    ],
+    "claim": "This tells me that Chang set the work up in order to make its value indeterminate \u2014 that indeterminacy was the aim.",
+    "why": "Line 17 reports a condition of the object, including redefinition by decentralized consensus that is outside anyone's control; line 18 immediately names Chang as the initiator. The adjacency reads the stated outcome back as his intention, when 18 claims only that he began a process of redefinition.",
+    "confidence": "low"
+   }
+  ],
+  "strongest": 19
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [18, 19, 20],\n      \"claim\": \"This tells me that the marks of touch and time on each object were made by the participants, as part of the process Chang set in motion.\",\n      \"why\": \"Line 19 states only that the objects, identical when struck, now bear wear \u2014 which for circulated cents is ordinary pre-existing history. Placed between 18's \\\"Chang initiated an ongoing process\\\" and 20's \\\"unfolds through the actions of its participants,\\\" the order converts that inherited property into evidence of the authored process, an origin for the wear that no line asserts.\",\n      \"confidence\": \"medium\"\n    },\n    {\n      \"lines\": [17, 18],\n      \"claim\": \"This tells me that Chang set the work up in order to make its value indeterminate \u2014 that indeterminacy was the aim.\",\n      \"why\": \"Line 17 reports a condition of the object, including redefinition by decentralized consensus that is outside anyone's control; line 18 immediately names Chang as the initiator. The adjacency reads the stated outcome back as his intention, when 18 claims only that he began a process of redefinition.\",\n      \"confidence\": \"low\"\n    }\n  ],\n  \"strongest\": 19\n}"
+}

@@ -1109,3 +1109,46 @@ control goes RED on each, against each one's own first pair.
 
 **The pair:** *a control written for a subject is not a control derived from it.*
 Written twice now, so it is a rule.
+
+### The key is an instrument, and a wrong key reads as a failing subject
+
+Three reviewer agents were scored against a key built from commit messages. The
+first result read **22 of 24 cells FOUND — precision collapse, reviewers
+unusable**. The reviewers were fine. The key was wrong in two ways:
+
+- It assumed each case's defect existed only in that case's `before` script. But
+  the cases are successive revisions of **one** script, so a defect persists from
+  the revision that introduced it until the revision that fixed it. The
+  unanchored "The object remained" line is in four of the eight scripts; the key
+  claimed one.
+- Its evidence line numbers were read off **diff hunks** rather than the files,
+  so several pointed at the wrong lines, and a correct report scored as a miss.
+
+Re-adjudicating every cell against the text moved one reviewer from "unusable"
+to "works, and the corpus is too small to measure its precision".
+
+**The pair:** *a subject that disagrees with the key is not a failing subject.*
+Before concluding that a measured thing is broken, re-derive the key from the
+primary artefact. The direction of the error is the tell: a key that makes
+everything look broken is as suspect as one that makes everything look clean.
+
+### Three ways a reviewer can fail to be a gate, and they need different fixes
+
+Reported as one number they look like the same problem. They are not:
+
+- **Works, unmeasurable.** `synonym-repetition`: recall 6/6, and NONE on exactly
+  the script where the defect was cut. But the corpus holds only two cells where
+  the relation is absent, so its precision figure rests on two observations.
+  *Fix the corpus.*
+- **Blind to a sub-case.** `dangling-premise` caught every backward-pointing word
+  without an antecedent and missed every **quantifier over a set never
+  introduced**, though the prompt names that case. It also returned one same
+  instance on four different scripts. *Fix the prompt.*
+- **Not sharply defined.** `order-causation`: six of eight cells adjudicated
+  ARGUABLE — defensible readings neither confirmable nor refutable from the text.
+  *Fix the definition.* A relation with no sharp boundary cannot be a gate, and a
+  low score would have concealed that by making it look like a tuning problem.
+
+An ARGUABLE verdict must therefore be a **first-class outcome of scoring**,
+excluded from both recall and precision. Folding it into either direction
+flatters or condemns the reviewer arbitrarily and destroys the distinction above.

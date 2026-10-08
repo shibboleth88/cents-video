@@ -1,0 +1,24 @@
+{
+ "relation": "order-causation",
+ "case": "order-causation-brenner",
+ "version": "before",
+ "seconds": 24.7,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     1,
+     2
+    ],
+    "claim": "This tells me that Rutherford Chang chose the penny because Brenner's Lincoln is the most reproduced artwork on Earth.",
+    "why": "Line 1 states a property of the object and line 2 immediately reports the act of choosing it, so the property is read as the criterion for the choice; nothing anywhere in the draft says how or why Chang came to the cent. Each line is true alone \u2014 the motive exists only in the adjacency.",
+    "confidence": "high"
+   }
+  ],
+  "strongest": 1
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [1, 2],\n      \"claim\": \"This tells me that Rutherford Chang chose the penny because Brenner's Lincoln is the most reproduced artwork on Earth.\",\n      \"why\": \"Line 1 states a property of the object and line 2 immediately reports the act of choosing it, so the property is read as the criterion for the choice; nothing anywhere in the draft says how or why Chang came to the cent. Each line is true alone \u2014 the motive exists only in the adjacency.\",\n      \"confidence\": \"high\"\n    }\n  ],\n  \"strongest\": 1\n}"
+}

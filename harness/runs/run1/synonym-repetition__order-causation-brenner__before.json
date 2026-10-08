@@ -1,0 +1,24 @@
+{
+ "relation": "synonym-repetition",
+ "case": "order-causation-brenner",
+ "version": "before",
+ "seconds": 44.7,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     14,
+     15
+    ],
+    "claim": "This tells me that the art object's meaning came loose from its material \u2014 and then tells me again.",
+    "why": "Line 14 already says the object was emptied of what it held; line 15 renames that emptying as a split between materiality and meaning, adding no new register \u2014 commodification was the mechanism in 14, nothing physical changes, no audience and no shift in what kind of thing the work is. Keep 14 and let line 16 widen the gap it names directly, since 15 survives now only as the antecedent for 16's \"it\".",
+    "confidence": "medium"
+   }
+  ],
+  "strongest": 15
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [14, 15],\n      \"claim\": \"This tells me that the art object's meaning came loose from its material \u2014 and then tells me again.\",\n      \"why\": \"Line 14 already says the object was emptied of what it held; line 15 renames that emptying as a split between materiality and meaning, adding no new register \u2014 commodification was the mechanism in 14, nothing physical changes, no audience and no shift in what kind of thing the work is. Keep 14 and let line 16 widen the gap it names directly, since 15 survives now only as the antecedent for 16's \\\"it\\\".\",\n      \"confidence\": \"medium\"\n    }\n  ],\n  \"strongest\": 15\n}"
+}

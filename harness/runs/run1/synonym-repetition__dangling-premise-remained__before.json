@@ -1,0 +1,25 @@
+{
+ "relation": "synonym-repetition",
+ "case": "dangling-premise-remained",
+ "version": "before",
+ "seconds": 32.9,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     16,
+     17,
+     18
+    ],
+    "claim": "This tells me that the value of the work is detached from the object and never settles \u2014 stated three times at the same altitude, with no new level of operation added on the second or third pass.",
+    "why": "Line 16 states the mechanism (value decoupled from object, held by consensus); 17 asserts the consequence in purely abstract terms ('indeterminate and continually redefined') and 18 asserts it again as process ('an ongoing process of redefinition'), sharing the root 'redefin-' with both 17 and line 15's 'continually redefined'. None of 17 or 18 moves to the object, the participant, or the form \u2014 those registers arrive separately in 19 and 20 \u2014 so the three lines occupy one register and one point. Keep 16 for the mechanism and 18 for the agency it gives Chang; 17 is the one that adds no level.",
+    "confidence": "high"
+   }
+  ],
+  "strongest": 17
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [16, 17, 18],\n      \"claim\": \"This tells me that the value of the work is detached from the object and never settles \u2014 stated three times at the same altitude, with no new level of operation added on the second or third pass.\",\n      \"why\": \"Line 16 states the mechanism (value decoupled from object, held by consensus); 17 asserts the consequence in purely abstract terms ('indeterminate and continually redefined') and 18 asserts it again as process ('an ongoing process of redefinition'), sharing the root 'redefin-' with both 17 and line 15's 'continually redefined'. None of 17 or 18 moves to the object, the participant, or the form \u2014 those registers arrive separately in 19 and 20 \u2014 so the three lines occupy one register and one point. Keep 16 for the mechanism and 18 for the agency it gives Chang; 17 is the one that adds no level.\",\n      \"confidence\": \"high\"\n    }\n  ],\n  \"strongest\": 17\n}"
+}

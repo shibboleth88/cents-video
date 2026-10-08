@@ -1,0 +1,24 @@
+{
+ "relation": "order-causation",
+ "case": "dangling-premise-remained",
+ "version": "before",
+ "seconds": 53.8,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     2,
+     3,
+     4
+    ],
+    "claim": "This tells me that Chang chose the cent because it is the most reproduced physical artwork \u2014 that its art-historical status, and Brenner's authorship of the design, were reasons for the selection.",
+    "why": "Lines 1\u20132 establish the origin of the work as a value discrepancy, and the very next line attaches the choice ('the readymade he chose') to a different property entirely; placed in that slot, the reproduction-count and the named portraitist are heard as further grounds for the choice rather than as facts about the object. Nothing in the draft states that the cent's status as the most reproduced artwork, or Brenner's portrait, had any part in why it was picked."
+   }
+  ],
+  "strongest": 3
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [2, 3, 4],\n      \"claim\": \"This tells me that Chang chose the cent because it is the most reproduced physical artwork \u2014 that its art-historical status, and Brenner's authorship of the design, were reasons for the selection.\",\n      \"why\": \"Lines 1\u20132 establish the origin of the work as a value discrepancy, and the very next line attaches the choice ('the readymade he chose') to a different property entirely; placed in that slot, the reproduction-count and the named portraitist are heard as further grounds for the choice rather than as facts about the object. Nothing in the draft states that the cent's status as the most reproduced artwork, or Brenner's portrait, had any part in why it was picked.\"\n    }\n  ],\n  \"strongest\": 3\n}"
+}

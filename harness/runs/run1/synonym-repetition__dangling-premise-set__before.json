@@ -1,0 +1,25 @@
+{
+ "relation": "synonym-repetition",
+ "case": "dangling-premise-set",
+ "version": "before",
+ "seconds": 35.7,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     16,
+     17,
+     18
+    ],
+    "claim": "This tells me that the film has exactly one thing to say about the indeterminacy of the Cent's value, and is saying it three times to be sure I heard it.",
+    "why": "Line 16 already closes the five-transformations list with 'continually redefined by decentralized consensus'; line 17 then states 'indeterminate and continually redefined' with no new level of operation, and line 18 states it a third time as 'an ongoing process of redefinition'. Only 18 adds anything \u2014 authorship, that Chang set the process going \u2014 so 17 sits between two lines that each already carry its content, sharing the word root 'redefined' with both. Keep 16 and 18; cut 17.",
+    "confidence": "high"
+   }
+  ],
+  "strongest": 17
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [16, 17, 18],\n      \"claim\": \"This tells me that the film has exactly one thing to say about the indeterminacy of the Cent's value, and is saying it three times to be sure I heard it.\",\n      \"why\": \"Line 16 already closes the five-transformations list with 'continually redefined by decentralized consensus'; line 17 then states 'indeterminate and continually redefined' with no new level of operation, and line 18 states it a third time as 'an ongoing process of redefinition'. Only 18 adds anything \u2014 authorship, that Chang set the process going \u2014 so 17 sits between two lines that each already carry its content, sharing the word root 'redefined' with both. Keep 16 and 18; cut 17.\",\n      \"confidence\": \"high\"\n    }\n  ],\n  \"strongest\": 17\n}"
+}

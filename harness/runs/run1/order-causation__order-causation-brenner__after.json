@@ -1,0 +1,33 @@
+{
+ "relation": "order-causation",
+ "case": "order-causation-brenner",
+ "version": "after",
+ "seconds": 150.2,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     3,
+     4
+    ],
+    "claim": "This tells me that Chang chose the cent because of its art-historical standing \u2014 because Brenner's Lincoln is the most reproduced artwork on Earth.",
+    "why": "Line 3 is framed as an account of the choice ('the readymade he chose'), so the bare superlative in line 4 is read as a second item in that same account rather than as an independent fact. Nothing in the draft says the artwork's reproduction record played any part in the selection \u2014 line 1 locates the origin in a value discrepancy instead \u2014 yet the adjacency supplies an art-historical motive, converting a property of the object into a reason for picking it.",
+    "confidence": "high"
+   },
+   {
+    "lines": [
+     18,
+     19
+    ],
+    "claim": "This tells me that the marks of touch and time on the objects are a product of the process Chang initiated.",
+    "why": "Placing the wear immediately after 'Chang initiated an ongoing process of redefinition' makes the marks read as that process's output, when a circulated cent's handling and age largely precede the work entirely. The order assigns the artist authorship of a pre-existing physical history that neither line claims for him.",
+    "confidence": "medium"
+   }
+  ],
+  "strongest": 4
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [3, 4],\n      \"claim\": \"This tells me that Chang chose the cent because of its art-historical standing \u2014 because Brenner's Lincoln is the most reproduced artwork on Earth.\",\n      \"why\": \"Line 3 is framed as an account of the choice ('the readymade he chose'), so the bare superlative in line 4 is read as a second item in that same account rather than as an independent fact. Nothing in the draft says the artwork's reproduction record played any part in the selection \u2014 line 1 locates the origin in a value discrepancy instead \u2014 yet the adjacency supplies an art-historical motive, converting a property of the object into a reason for picking it.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"lines\": [18, 19],\n      \"claim\": \"This tells me that the marks of touch and time on the objects are a product of the process Chang initiated.\",\n      \"why\": \"Placing the wear immediately after 'Chang initiated an ongoing process of redefinition' makes the marks read as that process's output, when a circulated cent's handling and age largely precede the work entirely. The order assigns the artist authorship of a pre-existing physical history that neither line claims for him.\",\n      \"confidence\": \"medium\"\n    }\n  ],\n  \"strongest\": 4\n}"
+}

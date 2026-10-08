@@ -1,0 +1,26 @@
+{
+ "id": "dangling-premise-set",
+ "commit": "7fdce22",
+ "relation": "dangling-premise",
+ "defect": "'Each object, initially identical, bears the marks of touch and time.' depends on a permanent set of ten thousand that the script never establishes, so 'each object' has no set to be a member of.",
+ "evidence_lines_before": [
+  17
+ ],
+ "fix": "Adds 'A permanent set of ten thousand, with its own logics and rarities.' before it.",
+ "also_fixed": [],
+ "other_relations_present": {
+  "before": [
+   "synonym-repetition"
+  ],
+  "after": [
+   "synonym-repetition",
+   "foreign-passage"
+  ]
+ },
+ "relation_definition": "A cut premise leaves its conclusion standing: a surviving sentence refers to something no longer in the piece.",
+ "before_lines": 20,
+ "after_lines": 22,
+ "evidence_text": [
+  "Its value and meaning are indeterminate and continually redefined."
+ ]
+}

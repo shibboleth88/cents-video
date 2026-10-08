@@ -1,0 +1,24 @@
+{
+ "id": "dangling-premise-remained",
+ "commit": "6ccd148",
+ "relation": "dangling-premise",
+ "defect": "'The object remained, buoyed into physicality by the force of its context.' has no antecedent: nothing earlier says the penny lost its function, so 'remained' refers to nothing in the piece.",
+ "evidence_lines_before": [
+  5
+ ],
+ "fix": "Adds 'Nothing has been sold for a single cent since before Chang was born.' immediately before it, and makes the line a 'Yet...' continuation.",
+ "also_fixed": [
+  "'hundreds or thousands' -> 'thousands'",
+  "cut a decoupling line"
+ ],
+ "other_relations_present": {
+  "before": [],
+  "after": []
+ },
+ "relation_definition": "A cut premise leaves its conclusion standing: a surviving sentence refers to something no longer in the piece.",
+ "before_lines": 20,
+ "after_lines": 20,
+ "evidence_text": [
+  "The object remained, buoyed into physicality by the force of its context."
+ ]
+}

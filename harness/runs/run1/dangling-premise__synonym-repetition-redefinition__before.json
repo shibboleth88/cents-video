@@ -1,0 +1,25 @@
+{
+ "relation": "dangling-premise",
+ "case": "synonym-repetition-redefinition",
+ "version": "before",
+ "seconds": 68.9,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     7,
+     8,
+     9
+    ],
+    "claim": "This tells me that Cents \u2014 or cents \u2014 have actually changed hands for thousands of dollars, a fact the film has shown me.",
+    "why": "Line 7's absurdity is earned by lines 2 and 3 (a cent worth more as metal, nothing priced at a cent), but the matched absurdity in line 8 rests on a valuation the draft never states anywhere, and line 9's \"Yet, here we are\" then presents both as established facts of the world the film has laid out. The pairing borrows line 7's grounding to cover for line 8, which points back at a premise about sale prices that is not in the piece.",
+    "confidence": "high"
+   }
+  ],
+  "strongest": 8
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [7, 8, 9],\n      \"claim\": \"This tells me that Cents \u2014 or cents \u2014 have actually changed hands for thousands of dollars, a fact the film has shown me.\",\n      \"why\": \"Line 7's absurdity is earned by lines 2 and 3 (a cent worth more as metal, nothing priced at a cent), but the matched absurdity in line 8 rests on a valuation the draft never states anywhere, and line 9's \\\"Yet, here we are\\\" then presents both as established facts of the world the film has laid out. The pairing borrows line 7's grounding to cover for line 8, which points back at a premise about sale prices that is not in the piece.\",\n      \"confidence\": \"high\"\n    }\n  ],\n  \"strongest\": 8\n}"
+}

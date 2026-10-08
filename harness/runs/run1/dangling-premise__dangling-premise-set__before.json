@@ -1,0 +1,24 @@
+{
+ "relation": "dangling-premise",
+ "case": "dangling-premise-set",
+ "version": "before",
+ "seconds": 47.4,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     8,
+     9
+    ],
+    "claim": "This tells me that the draft has already shown cents changing hands for thousands of dollars.",
+    "why": "Line 7's absurdity is anchored by line 3 (currency that buys nothing), but line 8's parallel construction presupposes a fact the draft never states \u2014 that a cent is ever valued at thousands \u2014 and line 9's \"here we are\" asserts both absurdities are actual, converting the missing premise into a conclusion the piece never earned.",
+    "confidence": "high"
+   }
+  ],
+  "strongest": 8
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [8, 9],\n      \"claim\": \"This tells me that the draft has already shown cents changing hands for thousands of dollars.\",\n      \"why\": \"Line 7's absurdity is anchored by line 3 (currency that buys nothing), but line 8's parallel construction presupposes a fact the draft never states \u2014 that a cent is ever valued at thousands \u2014 and line 9's \\\"here we are\\\" asserts both absurdities are actual, converting the missing premise into a conclusion the piece never earned.\",\n      \"confidence\": \"high\"\n    }\n  ],\n  \"strongest\": 8\n}"
+}

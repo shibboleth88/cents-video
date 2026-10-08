@@ -1,0 +1,24 @@
+{
+ "relation": "dangling-premise",
+ "case": "dangling-premise-remained",
+ "version": "after",
+ "seconds": 62.0,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     8,
+     9
+    ],
+    "claim": "This tells me that Cents \u2014 or cents \u2014 have in fact changed hands for thousands of dollars, a fact the film has shown me.",
+    "why": "Line 8 is built as the matching half of line 7, whose absurdity is earned (line 3 established that a cent buys nothing), but nothing anywhere in the draft has put a cent at thousands of dollars \u2014 the only figure given is two and a half cents of copper in line 2. Line 9's \"here we are\" then closes over both absurdities as though both had been demonstrated, so the missing premise is asserted twice rather than noticed.",
+    "confidence": "high"
+   }
+  ],
+  "strongest": 8
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [8, 9],\n      \"claim\": \"This tells me that Cents \u2014 or cents \u2014 have in fact changed hands for thousands of dollars, a fact the film has shown me.\",\n      \"why\": \"Line 8 is built as the matching half of line 7, whose absurdity is earned (line 3 established that a cent buys nothing), but nothing anywhere in the draft has put a cent at thousands of dollars \u2014 the only figure given is two and a half cents of copper in line 2. Line 9's \\\"here we are\\\" then closes over both absurdities as though both had been demonstrated, so the missing premise is asserted twice rather than noticed.\",\n      \"confidence\": \"high\"\n    }\n  ],\n  \"strongest\": 8\n}"
+}

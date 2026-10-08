@@ -1,0 +1,40 @@
+{
+ "cases": [
+  {
+   "id": "order-causation-brenner",
+   "relation": "order-causation",
+   "commit": "6ebc608",
+   "subject": "Revision 4: value is the frame, and the order no longer invents an intention"
+  },
+  {
+   "id": "dangling-premise-remained",
+   "relation": "dangling-premise",
+   "commit": "6ccd148",
+   "subject": "Restore the antecedent the hinge line needs"
+  },
+  {
+   "id": "dangling-premise-set",
+   "relation": "dangling-premise",
+   "commit": "7fdce22",
+   "subject": "Restore the premises the closing passage needs; extend to ~100s"
+  },
+  {
+   "id": "synonym-repetition-redefinition",
+   "relation": "synonym-repetition",
+   "commit": "2f9c7cd",
+   "subject": "Cut repeated statements of continual redefinition; rewrite the canon pair"
+  }
+ ],
+ "relations": {
+  "order-causation": "Order asserts causation: putting B after A proposes that A explains B, though no sentence says so.",
+  "dangling-premise": "A cut premise leaves its conclusion standing: a surviving sentence refers to something no longer in the piece.",
+  "synonym-repetition": "Repetition in synonyms mistaken for emphasis: restatements that add no new register, only another word for the last one.",
+  "foreign-passage": "A passage answering a question the piece never asked."
+ },
+ "limits": [
+  "defects a human caught, not defects that shipped unnoticed",
+  "one author, one project",
+  "several commits fix more than one thing (see also_fixed)",
+  "a negative for one relation can be a positive for another"
+ ]
+}

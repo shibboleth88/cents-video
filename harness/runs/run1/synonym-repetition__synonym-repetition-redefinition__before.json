@@ -1,0 +1,25 @@
+{
+ "relation": "synonym-repetition",
+ "case": "synonym-repetition-redefinition",
+ "version": "before",
+ "seconds": 36.4,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     17,
+     22,
+     23
+    ],
+    "claim": "This tells me that the work's continual redefinition is the film's conclusion, and that the draft has nothing more to add about it \u2014 the same claim arrives three times in different vocabulary.",
+    "why": "Line 16 already makes the redefinition point in the mechanism register (decentralized consensus continually redefining the inscription); 17 ('ongoing process of redefinition'), 22 ('indeterminate and continually redefined') and 23 ('a becoming... unfolds continually') then restate it with no change of level \u2014 the shared roots 'redefin-' and 'continual-' mark it. Only 23 earns its place, adding the form register (what kind of thing CENTS is) and the participants who do the redefining; 17 and 22 are each another word for the last.",
+    "confidence": "high"
+   }
+  ],
+  "strongest": 22
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [17, 22, 23],\n      \"claim\": \"This tells me that the work's continual redefinition is the film's conclusion, and that the draft has nothing more to add about it \u2014 the same claim arrives three times in different vocabulary.\",\n      \"why\": \"Line 16 already makes the redefinition point in the mechanism register (decentralized consensus continually redefining the inscription); 17 ('ongoing process of redefinition'), 22 ('indeterminate and continually redefined') and 23 ('a becoming... unfolds continually') then restate it with no change of level \u2014 the shared roots 'redefin-' and 'continual-' mark it. Only 23 earns its place, adding the form register (what kind of thing CENTS is) and the participants who do the redefining; 17 and 22 are each another word for the last.\",\n      \"confidence\": \"high\"\n    }\n  ],\n  \"strongest\": 22\n}"
+}

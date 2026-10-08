@@ -1,0 +1,27 @@
+{
+ "id": "order-causation-brenner",
+ "commit": "6ebc608",
+ "relation": "order-causation",
+ "defect": "The script opens on Brenner's Lincoln being the most reproduced artwork on Earth, and the next line is 'This is the readymade Rutherford Chang chose.' The sequence asserts that the portrait's ubiquity was the REASON for the choice. The source gives the origin as a value discrepancy. A property of the readymade is not a motive for selecting it.",
+ "evidence_lines_before": [
+  1,
+  2
+ ],
+ "fix": "Opens on the value discrepancy; Brenner demoted to a property of the object, stated after the origin.",
+ "also_fixed": [
+  "Restructured the closing passage; replaced the objecthood arc."
+ ],
+ "other_relations_present": {
+  "before": [],
+  "after": [
+   "dangling-premise"
+  ]
+ },
+ "relation_definition": "Order asserts causation: putting B after A proposes that A explains B, though no sentence says so.",
+ "before_lines": 24,
+ "after_lines": 20,
+ "evidence_text": [
+  "Brenner's Lincoln, on the penny, is the most reproduced artwork on Earth.",
+  "This is the readymade Rutherford Chang chose."
+ ]
+}

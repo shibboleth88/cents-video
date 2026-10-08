@@ -1,0 +1,25 @@
+{
+ "relation": "synonym-repetition",
+ "case": "order-causation-brenner",
+ "version": "after",
+ "seconds": 37.3,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     16,
+     17,
+     18
+    ],
+    "claim": "This tells me that the work's value is detached from the object and endlessly re-decided \u2014 and then tells me again, and then a third time, with no new level of operation added.",
+    "why": "Line 16 states the mechanism (value decoupled from object, held by social consensus); line 17 repeats its back half as 'indeterminate and continually redefined'; line 18 repeats it again as 'an ongoing process of redefinition', adding only Chang as the subject of a verb. The shared roots ('redefined'/'redefinition', 'consensus' carried over from 15) mark it, but the test is that none of the three moves to the object, the participant, or the form \u2014 line 19 does the object and line 20 does the form and the participants, which is why 16 alone is sufficient scaffolding for them.",
+    "confidence": "high"
+   }
+  ],
+  "strongest": 17
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [16, 17, 18],\n      \"claim\": \"This tells me that the work's value is detached from the object and endlessly re-decided \u2014 and then tells me again, and then a third time, with no new level of operation added.\",\n      \"why\": \"Line 16 states the mechanism (value decoupled from object, held by social consensus); line 17 repeats its back half as 'indeterminate and continually redefined'; line 18 repeats it again as 'an ongoing process of redefinition', adding only Chang as the subject of a verb. The shared roots ('redefined'/'redefinition', 'consensus' carried over from 15) mark it, but the test is that none of the three moves to the object, the participant, or the form \u2014 line 19 does the object and line 20 does the form and the participants, which is why 16 alone is sufficient scaffolding for them.\",\n      \"confidence\": \"high\"\n    }\n  ],\n  \"strongest\": 17\n}"
+}
