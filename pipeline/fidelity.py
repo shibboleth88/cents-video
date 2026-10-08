@@ -17,6 +17,10 @@ S = ROOT / "script"
 
 class Fail(Exception): pass
 
+class Unbuildable(Exception):
+    """A control could not be constructed: the subject lacks what it corrupts."""
+
+
 def norm(s: str) -> str:
     return re.sub(r"\s+", " ", s.replace("’", "'").replace("—", "-")).strip().lower()
 
@@ -206,7 +210,16 @@ def self_test() -> int:
     def corrupt_distancing():
         return lambda: g_terminology(vo + "\nThe essay argues that the gap is the point.\n", gl)
     def corrupt_equation():
-        return lambda: g_equations(vo + "\nAttention is recovery.\n", gl)
+        # Was a hardcoded "Attention is recovery." - a pair from the objecthood
+        # film's glossary. Carried to a film with a different glossary it asserted
+        # nothing the gate looks for, so the control read green and the gate was
+        # never shown able to fire. Build the collapse out of the glossary under
+        # test instead, so the control cannot decouple from its subject again.
+        pairs = gl.get("must_not_equate") or []
+        if not pairs:
+            raise Unbuildable("glossary declares no must_not_equate pairs to collapse")
+        e = pairs[0]
+        return lambda: g_equations(vo + f"\n{e['a']} is {e['b']}.\n", gl)
     def corrupt_distinction():
         c = json.loads(json.dumps(cl)); c["distinctions_kept"][0]["verdict"] = "collapsed"
         return lambda: g_distinctions_reviewed(c)
@@ -214,36 +227,63 @@ def self_test() -> int:
         c = json.loads(json.dumps(cl)); c["thesis"] = ""
         return lambda: g_thesis(c)
 
+    # A control that cannot be built is not a control that passed, and it is not
+    # a control that fired. Before this, corrupt_onscreen() indexed shots[1] and
+    # raised IndexError on a film whose timeline is still a stub - crashing the
+    # whole suite, so the eight controls that COULD be built were never reported.
+    # The three outcomes are now distinct: RED (fired), VACUOUS (gate is blind),
+    # UNBUILDABLE (the subject has nothing for this control to corrupt yet).
+    def _shot_for_control(t, prop, value):
+        shots = t.get("shots") or []
+        targets = [sh for sh in shots if isinstance(sh.get("props"), dict)]
+        if not targets:
+            raise Unbuildable(
+                f"timeline has {len(shots)} shots with props - nothing to put bad {prop} on")
+        targets[min(1, len(targets) - 1)]["props"][prop] = value
+
     def corrupt_onscreen():
         t = json.loads(json.dumps(tl))
-        t["shots"][1]["props"]["quote"] = "CENTS is finally about the fragility of money."
+        _shot_for_control(t, "quote", "CENTS is finally about the fragility of money.")
         return lambda: g_onscreen_covered(t, cl)
     def corrupt_attribution():
         t = json.loads(json.dumps(tl))
-        t["shots"][1]["props"]["attribution"] = "Marcel Duchamp"
+        _shot_for_control(t, "attribution", "Marcel Duchamp")
         return lambda: g_attributions(t, cl)
 
     controls = [
-        ("coverage / invented thesis", corrupt_unmapped()),
-        ("unledgered on-screen text",  corrupt_onscreen()),
-        ("wrong attribution",          corrupt_attribution()),
-        ("fabricated citation",        corrupt_fabricated_span()),
-        ("misquotation",               corrupt_misquote()),
-        ("unapproved addition",        corrupt_addition()),
-        ("distancing phrase",          corrupt_distancing()),
-        ("collapsed distinction",      corrupt_equation()),
-        ("unconfirmed distinction",    corrupt_distinction()),
-        ("missing thesis",             corrupt_thesis()),
+        ("coverage / invented thesis", corrupt_unmapped),
+        ("unledgered on-screen text",  corrupt_onscreen),
+        ("wrong attribution",          corrupt_attribution),
+        ("fabricated citation",        corrupt_fabricated_span),
+        ("misquotation",               corrupt_misquote),
+        ("unapproved addition",        corrupt_addition),
+        ("distancing phrase",          corrupt_distancing),
+        ("collapsed distinction",      corrupt_equation),
+        ("unconfirmed distinction",    corrupt_distinction),
+        ("missing thesis",             corrupt_thesis),
     ]
-    print("CONTROLS — each corrupts the script in a way the last production actually shipped.\n")
-    bad = 0
-    for name, fn in controls:
+    print("CONTROLS \u2014 each corrupts the script in a way a production actually shipped.\n")
+    bad = 0; unbuilt = []
+    for name, build in controls:
         try:
-            fn(); print(f"  \033[31mVACUOUS\033[0m {name:<28} passed a script that should fail"); bad += 1
+            fn = build()
+        except Unbuildable as e:
+            print(f"  \033[33mUNBUILT\033[0m {name:<28} {e}"); unbuilt.append(name); continue
+        try:
+            fn()
+            print(f"  \033[31mVACUOUS\033[0m {name:<28} passed a script that should fail"); bad += 1
+        except Unbuildable as e:
+            print(f"  \033[33mUNBUILT\033[0m {name:<28} {e}"); unbuilt.append(name)
         except Fail as e:
             print(f"  \033[32mRED\033[0m     {name:<28} {str(e)[:84]}")
-    print(f"\n{len(controls)-bad}/{len(controls)} fidelity gates demonstrated they can fail.")
-    return 1 if bad else 0
+    built = len(controls) - len(unbuilt)
+    print(f"\n{built-bad}/{built} buildable controls went red"
+          f" ({len(controls)} gates, {len(unbuilt)} control(s) unbuildable).")
+    if unbuilt:
+        print("  unbuildable: " + ", ".join(unbuilt)
+              + "\n  these gates are UNDEMONSTRATED on this film - not passing, not failing.")
+    # A suite that could not build half its controls has not vouched for itself.
+    return 1 if bad or len(unbuilt) > len(controls) // 2 else 0
 
 def main() -> int:
     ap = argparse.ArgumentParser(); ap.add_argument("--self-test", action="store_true")

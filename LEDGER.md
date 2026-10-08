@@ -1070,3 +1070,42 @@ CENTS; and "He photographed every one" sat five lines and one biography after
 its referent. All three fixed before the line count was touched.
 
 25 lines, 355 words, ~3:11.
+
+### A control that cannot be built is not a control that passed
+
+`corrupt_onscreen()` indexed `tl["shots"][1]`. On the introduction film the
+timeline is a stub (`"shots": []`), so it raised `IndexError` **during list
+construction** — before any control ran. The entire suite died, and the eight
+controls that *were* buildable were never reported. The visible symptom was a
+traceback; the invisible one was that a crash and a clean suite both leave you
+knowing nothing about the other eight.
+
+Three outcomes now render differently: **RED** (the gate fired), **VACUOUS**
+(the gate is blind to the corruption), **UNBUILT** (the subject has nothing for
+this control to corrupt yet). UNBUILT prints what was missing and how many shots
+were found — the floor — and the summary names the undemonstrated gates
+explicitly as *not passing, not failing*. The suite returns non-zero if more
+than half its controls are unbuildable, because a suite that could not build
+most of its controls has not vouched for itself.
+
+**The pair:** *a crashed control is not a red control, and neither is an
+unbuildable one.*
+
+### A control hardcoded to one subject reads green on the next
+
+`corrupt_equation()` appended the fixed sentence *"Attention is recovery."* That
+pair is in the **objecthood** film's glossary. Run against the introduction
+film's glossary — which holds apart entirely different pairs — the sentence
+asserts nothing `g_equations` looks for, so the control passed and the gate
+showed **VACUOUS**. Two films, one shared suite, and the control silently
+stopped testing anything when the subject changed.
+
+This is the second instance of the identical shape: `corrupt_misquote()` used
+`claims[3]`, which had been a quotation when written and was a paraphrase by the
+time it mattered. Both were fixed the same way — **derive the corruption from
+the artefact under test**, here `gl["must_not_equate"][0]`, with an `Unbuildable`
+floor when the list is empty. Verified afterwards on both films: the repaired
+control goes RED on each, against each one's own first pair.
+
+**The pair:** *a control written for a subject is not a control derived from it.*
+Written twice now, so it is a rule.
