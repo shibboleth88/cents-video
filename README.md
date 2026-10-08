@@ -220,12 +220,45 @@ from the essay credited on screen to the artist. Two of those findings became
 permanent gates (`caption redundancy`, `credits after voice`). That is the
 intended direction of travel: the eye finds the class, a rule catches it forever.
 
+## Two films, one pipeline
+
+Per-film state lives in `films/<slug>/`; the working directories at the repo
+root are **symlinks** into the active one.
+
+    python3 pipeline/film.py status            # which film is checked out
+    python3 pipeline/film.py switch <slug>     # repoint at another
+    python3 pipeline/film.py new <slug>        # scaffold one
+
+Symlinks rather than copies, deliberately. A copy is how you get two versions
+of a file with only one of them current — the failure this repo keeps meeting,
+most recently in a corpus that reintroduced a corrected fact hours after it was
+fixed. There is exactly one of every file; switching repoints and never
+duplicates.
+
+**Shared, never per-film:** `shared/assets.json` (the inventory both films draw
+on), `shared/generation_log.json` (API spend is global), `inputs/` (raw
+material), `public/assets/` (staged imagery), `pipeline/`, `src/`.
+
+**The one exception is the voiceover.** Remotion serves `public/` over HTTP and
+will not follow a link out of it — the render 404s. So the master stays in
+`films/<slug>/audio/vo.wav` and `switch` *stages a copy* to `public/vo.wav`,
+the same way `assets.py stage` populates `public/assets/`. `film.py status`
+hashes both and fails if they differ, so the copy cannot silently go stale.
+
+`status` also refuses to guess at a **mixed** state. Script from one film and
+timeline from another would render a coherent-looking film of a script nobody
+wrote, so a disagreement among the symlinks reports INCONSISTENT and exits
+non-zero rather than picking a winner.
+
 ## Layout of the repo
 
+    films/<slug>/   per-film state; the root script/ timeline/ captions/
+                    exports/ review/ are symlinks into the active one
+    shared/     assets.json (inventory), generation_log.json (API spend)
     inputs/     raw voiceover and supplied assets, unmodified
-    script/     voiceover.txt, alignment.json (generated)
-    timeline/   timeline.json (the edit), assets.json (inventory)
-    captions/   cues.json, captions.srt (generated)
+    script/     -> voiceover.txt, alignment.json (generated)
+    timeline/   -> timeline.json (the edit); assets.json links to shared/
+    captions/   -> cues.json, captions.srt (generated)
     src/        renderer: style/ tokens + components, lib/ anchor resolution
     pipeline/   fidelity, scratch_vo, align, reconcile, cues, audio_clean,
                 review_shots, verify, manifest

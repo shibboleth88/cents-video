@@ -1,8 +1,8 @@
 node_modules/
-review/
+films/*/review/
 .DS_Store
-exports/*.mp4
-!exports/.gitkeep
+films/*/exports/*.mp4
+public/vo.wav
 
 # never commit credentials
 .env
