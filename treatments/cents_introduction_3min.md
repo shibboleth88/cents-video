@@ -46,15 +46,23 @@ work's own subject arriving on schedule.
 ## 2. The arc
 
 Five movements. The first film argues; this one *introduces*, so it moves from
-the object in your hand to the object that outlived it.
+the object in your hand to the system still running.
+
+**The film does not end.** CENTS is a becoming — a set whose form is fixed and
+whose meaning is not — so a film that closes on the artist's death and the
+penny's discontinuation would contradict the thing it is introducing. Both
+facts are true and both stay, but they belong to the OBJECT and the ARTIST, in
+movements I and II. The coincidence of the two — the order to stop minting and
+the obituary on the same day — is stronger as the hinge between them than as a
+terminus. The last movement is in the present continuous and stays there.
 
 | | movement | ~time | does |
 |---|---|---|---|
-| I | **The object** | 0:00–0:45 | the most reproduced artwork on Earth, and what it is worth |
+| I | **The object** | 0:00–0:50 | the most reproduced artwork on Earth, what it is worth, and the end of its production |
 | II | **The artist** | 0:45–1:15 | collecting until time makes identical things singular |
 | III | **The act** | 1:15–2:00 | cull, photograph, destroy, inscribe, release |
 | IV | **What it made** | 2:00–2:35 | traits nobody assigned; 1971 |
-| V | **The ending** | 2:35–3:00 | 9 February 2025; the block outlives the coin |
+| V | **What it is doing** | 2:35–3:05 | a closed set whose meaning is still open |
 
 ---
 
@@ -63,41 +71,41 @@ the object in your hand to the object that outlived it.
 Numbered for recording. 30 lines.
 
 **I — THE OBJECT**
-1. The most reproduced artwork on Earth is Victor David Brenner's Lincoln, made in 1909.
-2. It is struck on two hundred and eighty-eight billion pennies still in existence.
+1. Victor David Brenner's Lincoln, cut in 1909, is the most reproduced artwork on Earth.
+2. Struck on two hundred and eighty-eight billion pennies still in existence.
 3. A penny is worth one cent, because the Treasury says it is.
 4. The copper in the older ones has been worth more than a cent for twenty years.
-5. By 2024 it cost the Mint nearly four cents to make one.
-6. Yet the object remained, buoyed into physicality by the force of its context.
+5. By 2024 a penny cost nearly four cents to make.
+6. On the ninth of February 2025, the President ordered the Treasury to stop making them.
+7. The last was struck that November.
 
 **II — THE ARTIST**
-7. Rutherford Chang spent twenty years collecting ordinary things until time made them singular.
-8. Three thousand copies of the same Beatles record, no two worn alike.
-9. CENTS was that method, turned on money itself.
+8. The same day, the New York Times ran Rutherford Chang's obituary. He was forty-five.
+9. He had spent twenty years collecting ordinary things until time made them singular.
+10. Three thousand copies of the same Beatles record, no two worn alike.
+11. CENTS was that method turned on money itself.
 
 **III — THE ACT**
-10. Between 2017 and 2024 he culled ten thousand copper cents by hand from a hundred thousand.
-11. He photographed every one.
-12. Then he destroyed them, smelted into a single block of thirty-one kilograms.
-13. Each photograph he inscribed on a satoshi, the smallest unit of Bitcoin.
-14. The block itself he had scanned, and inscribed as the whole of Bitcoin block 839969.
-15. He released all ten thousand at one sat each.
+12. Between 2017 and 2024 he culled ten thousand copper cents by hand from a hundred thousand.
+13. He photographed every one.
+14. Then he destroyed them, smelted into one block of thirty-one kilograms.
+15. Each photograph he inscribed on a satoshi, the smallest unit of Bitcoin.
+16. The block he had scanned, and inscribed as the whole of Bitcoin block 839969.
+17. He released all ten thousand at one sat each.
 
 **IV — WHAT IT MADE**
-16. No algorithm assigned the traits.
-17. Circulation made the marks: verdigris, abrasion, a fingerprint, the way each left the world.
-18. The names came afterwards, from the collectors themselves, over two years of voting.
-19. More than half the set carries no mark at all, which is what makes the rest mean anything.
-20. And the collection has edges nobody chose.
-21. It stops at 1982, because in 1983 the penny stopped being copper.
-22. One year is missing. In 1943 the copper went to the war, and the cent was struck in steel.
-23. A ceiling set by metallurgy, and a hole cut by a war.
+18. No algorithm assigned the traits.
+19. Circulation made the marks: verdigris, abrasion, a fingerprint, the way each one left.
+20. The names came afterwards, from the collectors themselves, over two years of voting.
+21. More than half the set carries no mark at all, which is what makes the rest mean anything.
+22. It stops at 1982, because in 1983 the penny stopped being copper.
+23. Of the years it misses, only one means anything: in 1943 the copper went to the war, and the cent was struck in steel.
+24. A ceiling set by metallurgy, and a hole cut by a war.
 
-**V — THE ENDING**
-24. On the ninth of February 2025, the New York Times ran Rutherford Chang's obituary. He was forty-five.
-25. The same day, the President ordered the Treasury to stop making pennies.
-26. The last one was struck that November.
-27. The block outlives the coin it was made from.
+**V — WHAT IT IS DOING**
+25. The set is closed. Ten thousand, and never any more.
+26. What they are worth is argued out daily, by whoever holds them.
+27. The coins stopped changing in 2024. The work has not.
 28. CENTS is a becoming, a gesture that unfolds continually through the actions of its participants in time.
 
 ---
@@ -175,9 +183,13 @@ number). Mint marks: 8,343 none / 1,597 D / **60 S**. 19 traits in five families
 2. **The set's edges were set by metallurgy and a war.** 867 cents dated 1982
    and *zero* later — the collection's ceiling *is* the copper-to-zinc cutoff.
    And **1943 is missing entirely** (1942 has 2, 1944 has 22), because in 1943
-   the cent was struck in zinc-coated steel to save copper for the war. Of the
-   15 absent years, 1943's absence is structural; the other 14 are attrition.
-   Nothing about either edge was curated.
+   the cent was struck in zinc-coated steel to save copper for the war.
+   **Fifteen years are absent, and only 1943's absence means anything**:
+   P(zero by chance) = 2.75 × 10⁻⁵ against a local mean of 10.5, where the
+   1913–1933 gaps run 0.37–0.85 and are simply small numbers — 1910–1939 holds
+   26 cents across 30 years, where you would expect 12.4 empty years and there
+   are 14. Verified here against the bot's CSV: 73 rows, sum 10,000, 15 zeros,
+   exactly one classed ANOMALOUS. Nothing about either edge was curated.
 
 **Corrections to my first draft, from the corpus's own house guidance:**
 
