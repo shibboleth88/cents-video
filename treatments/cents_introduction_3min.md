@@ -1,7 +1,7 @@
 # CENTS — a three-minute introduction
 
-**Live treatment.** Script below is current and recordable: **28 lines, 349
-words, ≈3:08** at the 114 wpm measured from your existing recordings.
+**Live treatment.** Script below is current and recordable: **25 lines, 355
+words, ≈3:11** at the 114 wpm measured from your existing recordings.
 
 Superseded reasoning is kept verbatim at
 [`archive/cents_introduction_3min_2026-10-08_superseded.md`](archive/cents_introduction_3min_2026-10-08_superseded.md).
@@ -16,43 +16,40 @@ the CENTS catalogue measured directly.
 
 ## 1. The script
 
-**I — THE OBJECT**
-1. Victor David Brenner's Lincoln, cut in 1909, is the most reproduced artwork on Earth.
-2. Struck on two hundred and eighty-eight billion pennies still in existence.
-3. A penny is worth one cent, because the Treasury says it is.
-4. The copper in a pre-1983 cent has long been worth more.
-5. On the ninth of February 2025, the President ordered the Treasury to stop making them.
-6. The last was struck that November.
+**I — THREE PRICES, ONE OBJECT**
+1. A penny is a nuisance. Most people would not stoop to pick one up.
+2. The Treasury says it is worth exactly one cent, whatever year it was struck.
+3. Those made before 1983 are copper, and that copper is worth about three.
+4. Three valuations of the same small object, and none of them agree.
+5. Recognising those discrepancies, Rutherford Chang removed ten thousand copper cents from circulation and called the work CENTS.
 
 **II — THE ARTIST**
-7. On that ninth of February, the New York Times also ran Rutherford Chang's obituary. He was forty-five.
-8. He had spent his working life collecting ordinary things until time made them singular.
-9. Shown for two decades, from the ICA in London to the Art Gallery of Ontario.
-10. Three thousand copies of the same Beatles record, no two worn alike.
-11. CENTS was that method turned on money itself.
+6. He had spent his working life collecting ordinary things until time made them singular.
+7. Three thousand copies of the same Beatles record, no two worn alike.
+8. Shown for two decades, from the ICA in London to the Art Gallery of Ontario.
+9. CENTS was his only work on a blockchain.
+10. He died in February 2025, at forty-five, on the day the President ordered the Treasury to stop making pennies.
 
-**III — THE ACT**
-12. Between 2017 and 2024 he culled ten thousand copper cents by hand from a hundred thousand.
-13. He photographed every one.
-14. Then he destroyed them, smelted into one block of thirty-one kilograms.
-15. Each photograph he inscribed on a satoshi, the smallest unit of Bitcoin.
-16. The block he had scanned, and inscribed as the whole of Bitcoin block 839969.
-17. He released all ten thousand at one sat each.
+**III — WHAT A CENTURY HAD DONE TO THEM**
+11. Every one of the ten thousand was photographed first.
+12. The portrait on them, Victor David Brenner's Lincoln, is the most reproduced artwork on Earth. Two hundred and eighty-eight billion still in existence.
+13. Circulation made the marks: verdigris, abrasion, a fingerprint, the way each one left.
+14. No algorithm assigned any of it. The names came afterwards, from the collectors, over two years of voting.
+15. More than half the set carries no mark at all, which is what makes the rest mean anything.
 
-**IV — WHAT IT MADE**
-18. No algorithm assigned the traits.
-19. Circulation made the marks: verdigris, abrasion, a fingerprint, the way each one left.
-20. The names came afterwards, from the collectors themselves, over two years of voting.
-21. More than half the set carries no mark at all, which is what makes the rest mean anything.
-22. It stops at 1982, because in 1983 the penny stopped being copper.
-23. Only one of the years it misses means anything. In 1943 the copper went to the war, and the cent was struck in steel.
+**IV — THE TRANSFORMATION**
+16. Then he destroyed them, smelted into one block of thirty-one kilograms.
+17. Each photograph he inscribed on a satoshi, the smallest unit of Bitcoin.
+18. The block he had scanned, and inscribed as the whole of Bitcoin block 839969.
+19. An ingot so dense it cannot be destroyed.
+20. He released all ten thousand at one sat each.
 
 **V — WHAT IT IS DOING**
-24. The set is closed. Ten thousand, and never any more.
-25. What they are worth is argued out daily, by whoever holds them.
-26. Christie's sold the block in 2024. UCCA Beijing gave him a retrospective in 2026.
-27. The coins stopped changing in 2024. The work has not.
-28. CENTS is a becoming, a gesture that unfolds continually through the actions of its participants in time.
+21. The set is closed. It stops at 1982, because in 1983 the penny stopped being copper.
+22. Only one of the years it misses means anything. In 1943 the copper went to the war, and the cent was struck in steel.
+23. A set with edges nobody chose.
+24. The last penny was struck in November 2025, which the project had described as coming.
+25. As the coin fades, its value goes on being redefined, through ten thousand objects and the block that holds their transformation.
 
 ---
 
@@ -60,11 +57,20 @@ the CENTS catalogue measured directly.
 
 | | movement | time | does |
 |---|---|---|---|
-| I | **The object** | 0:00–0:38 | the most reproduced artwork on Earth, what it is worth, and the end of its production |
-| II | **The artist** | 0:38–1:08 | two decades of institutional work; collecting until time makes things singular |
-| III | **The act** | 1:08–1:52 | cull, photograph, destroy, inscribe, release |
-| IV | **What it made** | 1:52–2:38 | marks nobody designed; a set with edges nobody chose |
-| V | **What it is doing** | 2:38–3:08 | a closed set whose meaning is still open |
+| I | **Three prices, one object** | 0:00–0:38 | a nuisance, exactly 1¢ by decree, three cents of copper — and none agree |
+| II | **The artist** | 0:38–1:09 | two decades of collecting until time makes things singular |
+| III | **What a century had done to them** | 1:09–1:52 | the portrait, the marks, who named them, and how ordinary most are |
+| IV | **The transformation** | 1:52–2:25 | destroy, inscribe, release |
+| V | **What it is doing** | 2:25–3:11 | edges nobody chose; the coin ends, the revaluation doesn't |
+
+**The spine is the work's own.** Its project description opens on three
+valuations that disagree — *"considered a worthless nuisance… **yet** worth
+exactly 1¢… **furthermore** a metal value of approximately 3.1¢… **recognizing
+these discrepancies**, Rutherford Chang removed 10,000"* — and closes on *"as
+the traditional penny fades into irrelevance and its production is ultimately
+terminated, its value can continue to be redefined."* Written March 2024, a
+year before the penny's end was ordered. The film opens and closes where the
+work does.
 
 **The film does not end.** CENTS is a becoming — a set whose form is fixed and
 whose meaning is not — so closing on the artist's death and the penny's

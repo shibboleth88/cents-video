@@ -1026,3 +1026,47 @@ the discriminator — *"how the parts relate, not whether each part is
 accurate"* — rather than with examples. It ends on why per-item checks cannot
 see any of it, which is the sentence that separates this skill from
 `fidelity.py`.
+
+## Episode — the opening, rewritten from the source (2026-10-08)
+
+The user: *"how is it that this still starts with the Victor David Brenner
+thing, even after all we've been through?"*
+
+**The honest diagnosis is worse than forgetting.** When told the Brenner fact
+mattered, I treated that as an instruction to FEATURE it, and when drafting a
+new film I put the most striking available fact first — a hook instinct, not an
+argument instinct. Then I never ran the opening check on the new script,
+because I had "already fixed that" in the other film.
+
+*Failure-shape: a corrected instance is not a corrected class.* The Brenner
+ordering error was recorded as prose about one film, written into a memory
+about one film, and listed as failure mode 1 in a skill — and still recurred in
+the next film I wrote, four hours later. Recording a fix where it happened does
+not generalise it; only applying the check to the NEW artefact does.
+
+**Re-reading beat resequencing.** Asked to start over from the material rather
+than shuffle lines, the work's own project description turned out to carry a
+better spine than anything assembled:
+
+- It opens on **three valuations that disagree** — treated as a worthless
+  nuisance, *yet* fixed at exactly 1¢ by the Treasury whatever the year,
+  *furthermore* about 3.1¢ as copper — and then: *"Recognizing these
+  discrepancies in value, Rutherford Chang removed 10,000 copper cents."* Three
+  prices for one object is a stronger and more accurate origin than the single
+  gap I had been using since the first film.
+- Brenner appears in its **second** paragraph, as a property of the object.
+  Exactly where the user said he belonged, stated by the source itself.
+- It closes on *"as the traditional penny fades into irrelevance and its
+  production is ultimately terminated, its value can continue to be
+  redefined."* Written March 2024 — **a year before the penny's end was
+  ordered.** The film can now end where the work ends, and the prediction is a
+  better carrier for the penny's termination than an obituary coincidence.
+
+**Three defects the skill's own passes caught in the new draft, before trim:**
+the referent "the older ones" again pointed at a 1983 cutoff eighteen lines
+downstream (the identical fault, in a fresh draft); **CENTS was not named until
+line 9**, in a subordinate clause of the artist's death, in a film introducing
+CENTS; and "He photographed every one" sat five lines and one biography after
+its referent. All three fixed before the line count was touched.
+
+25 lines, 355 words, ~3:11.
