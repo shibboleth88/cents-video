@@ -1,0 +1,18 @@
+{
+ "essay": {
+  "title": "CENTS",
+  "subtitle": "an introduction",
+  "author": "shibboleth",
+  "source": "https://www.sovrn.art/cents/",
+  "version": "corpus 2026-10-08"
+ },
+ "_status": "STUB. Shots are not built yet - this film has not been recorded, so there are no anchors to cut to. It carries the credits only, so the on-screen gates have something real to measure.",
+ "shots": [],
+ "credits": {
+  "lines": [
+   "Artwork: CENTS, by Rutherford Chang",
+   "Rutherford Chang, 1979-2025"
+  ],
+  "url": "sovrn.art/cents"
+ }
+}

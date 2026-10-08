@@ -1,0 +1,223 @@
+SOURCES OF RECORD — CENTS, a three-minute introduction
+Assembled 2026-10-08. Every narration claim is checked against a span of this
+file. Each block names where it came from and, where the fact moves over time,
+when it was true.
+
+================================================================
+[1] PROJECT DESCRIPTION — sovrn.art/cents/project-description, dated 2024-03-26
+================================================================
+10,000 cents on 10,000 sats
+
+CENTS examines value through the lens of the copper penny. After over a century in circulation the lowly denomination has become so commonplace that it is considered a worthless nuisance. Yet a penny from any given year will always be worth exactly 1¢, according to the United States Treasury. Furthermore, those minted in 1982 and before were struck in copper and now have a metal value of approximately 3.1¢. Recognizing these discrepancies in value, Rutherford Chang removed 10,000 copper cents from circulation and archivally documented them.
+
+ 
+
+With approximately 288 billion Lincoln pennies in existence, the portrait of Abraham Lincoln on the cent's obverse is the most reproduced piece of art on Earth. The course of history has endowed each of these metal discs with unique characteristics, which are now encoded as digital artifacts. Images of these 10,000 individuals are inscribed as ordinals on 10,000 satoshis, the smallest units of Bitcoin, while the physical coins are smelted and cast into a solid 68.56-pound copper block. 
+
+ 
+
+This metal block is rendered as a three-dimensional digital model and in turn inscribed as a 4-megabyte ordinal, comprising the entirety of Bitcoin block #839969. Equivalent to casting a copper ingot so heavy and dense that it is indestructible, inscribing this data on the fundamental structure of the blockchain forms an immutable digital monument. As the traditional penny fades into irrelevance and its production is ultimately terminated, its value can continue to be redefined through this digitally scarce set of 10,000 and the block that encapsulates their transformation. 
+
+ 
+ 
+
+CENTS Block 839969
+
+ 
+
+an [inscription](<https://ordinals.com/inscription/70262998>) of the copper block into which the 10,000 CENTS were smelted, comprising the full [BTC block #839969](<https://mempool.space/block/00000000000000000002b81b8432b04bd1636d553c03645dbf4505b3da7a7c21>), auctioned at [Christie's](<https://onlineonly.christies.com/s/beyond-screen/rutherford-chang-b-1979-10/224213?ldp_breadcrumb=back>) in June 2024
+
+================================================================
+[2] PHILIP TINARI on CENTS — in On NFTs, ed. Robert Alice, Taschen
+    Director, UCCA Center for Contemporary Art. Reproduced on sovrn.art.
+================================================================
+Rutherford Chang's CENTS exists at the intersection of the analog and the digital, and in line with the late artist's lifelong practice of obsessive collecting. Chang's best-known project, We Buy Wbite Albums, entailed a quixotic, decades-long pursuit to buy and catalog every extant copy from the first pressing of the Beatles' signature release, allowing him to compare the accretions and distortions to the palimpsest-like surfaces of these originally identical objects. He generally exhibited this work in the form of a record shop, turning gallery-goers into a community of crate-diggers. For CENTS, he collected pre-1982 pennies, minted in the years before the US Treasury, recognizing the increased value of copper, changed to a zinc alloy. Having dutifully photographed and cataloged these coins, he melted them down into a 68-pound copper block. The individual cents, as well as a 3D model of the cubic copper ingot, were then minted on the blockchain and continue to be circulated as digital inscriptions.
+
+ 
+
+Consistently amused by the divergent valuations assigned by societies and economies to different objects, symbols and uses of time, Chang was particularly interested in how, just as the value of a physical copper penny had long surpassed $0.01, the value of his digital CENTS became permanently indeterminate. A lively online community has since arisen around the work, echoing those that have appeared around his earlier projects. As Chang's first and only work on the blockchain, CENTS connects to his ongoing aesthetic and conceptual concerns, and reflects poeticallv on his own life and career, in which the demands of a role in a family technology business were often in tension with the Palo Alto native's own work as an artist. Ironically and tragically, Chang's obituary ran in the New York Times on the same day as a story announcing a government decision to discontinue the production of new pennies.
+
+ 
+
+Philip Tinari
+
+Director, UCCA Center for Contemporary Art
+
+The book On NFTs, edited by Robert Alice and published by Taschen is available here: https://www.taschen.com/en/books/art/08154/on-nfts/
+
+================================================================
+[3] UCCA BEIJING — Rutherford Chang: Hundreds and Thousands
+    17 January – 12 April 2026. Live page: sovrn.art/exhibitions/ucca
+    (the retrieved corpus copy of this page is stale on curators; the live
+    page and data/museums.json give three: Philip Tinari, Aki Sasamoto and
+    Danielle Chang)
+================================================================
+UCCA Center for Contemporary Art · Beijing
+Rutherford Chang: Hundreds and Thousands
+17 January – 12 April 2026
+CENTS was exhibited in Hundreds and Thousands at UCCA Beijing, the first institutional and most comprehensive solo exhibition of Rutherford Chang’s work. Surveying two decades of practice, the retrospective was co-curated by UCCA Director Philip Tinari and the artist Aki Sasamoto, and presented in collaboration with the Estate of Rutherford Chang.
+Rutherford Chang, CENTS , 2017–2024, installation view Artist Rutherford Chang , 1979–2025 Work CENTS #1–10,000, 2017–2024; CENTS Block 839969, 2024; CENTS book Curators Philip Tinari and Aki Sasamoto Presented with The Estate of Rutherford Chang CENTS at UCCA
+CENTS is made from 10,000 American pennies minted before 1982 and valued for their copper content. Chang photographed each coin to record its particular wear and patina, then had the collection pressed into a single 31-kilogram copper cube. The images were inscribed on the Bitcoin blockchain, tying digital renderings of physical currency to virtual systems of value.
+At UCCA the collection could be explored on touchscreens or in a book, decades of circulation legible in the abrasions and discolouration of individual coins. With the U.S. Mint having permanently suspended penny production in November 2025, the copper block reads as a monument to the coin and to an economy in transition.
+The exhibition set CENTS alongside We Buy White Albums (2006–2025), Game Boy Tetris (2013–2018), Class of 2008 (2008–2012), NBC Nightly News (2004), The Epic (2004–2005) and Portraits by Tone (2005). Together they trace a practice built on accumulation, repetition and the slow revaluation of ordinary things.
+CENTS in the exhibition
+The exhibition
+Installation views, UCCA Center for Contemporary Art, Beijing, 2026. Photography Sun Shi. Courtesy UCCA and the Estate of Rutherford Chang.
+Press
+Trait Explorer ↗ Artist obituary ↗
+Rutherford Chang, CENTS , 2017–2024. Rutherford Chang: Hundreds and Thousands , 17 January – 12 April 2026, UCCA Center for Contemporary Art, Beijing. Co-curated by Philip Tinari and Aki Sasamoto, in collaboration with the Estate of Rutherford Chang, established in 2025.
+
+================================================================
+[4] TRAIT COUNCIL — sovrn.art/cents/trait-council
+================================================================
+# Trait Council
+
+Trait Explorer explainer
+
+video by [DocT](<https://x.com/DocT___>)
+
+Trait Explorer site: [cents.vision 
+](<http://cents.vision>)[Trait Atlas](<https://cents.vision/traits-atlas.html>) (comprehensive information about each trait)
+
+ 
+
+ * For trait questions, tag @council in the CENTS [discord](<https://discord.gg/eQXjJHx8FF>). 
+ 
+The cataloging of emergent traits in the CENTS collection is a community-led initiative carried out over the course of 2 years through multiple reviews of the full 10k set, numerous voting rounds, and in-depth discussions threshold cases. 
+ 
+Core members of the Trait Council:
+
+ * JWphase
+
+ * Martin Lehnen (daidatep)
+
+ * ScrappyT
+
+ * cryptocam
+
+ * Plutonium Fitzgerald
+
+ * Trace
+
+ * vinkuvakikkeli
+
+ * Shibboleth
+
+Thoughts about the unique nature of CENTS traits and their significance 
+[read this article on Medium [here](<https://medium.com/@ml_54234/thoughts-about-the-unique-nature-of-cents-traits-and-their-significance-308dc70ee3d4>)]
+
+ 
+
+[by Martin Lehnen](<https://x.com/daidatep>)
+
+The CENTS community is redefining traits by intertwining the organic wear of each coin with its historical and aesthetic uniqueness, creating a tapestry of individuality rarely seen in digital collections. Unlike algorithmic randomization, CENTS traits emerge from real-world narratives, making each piece a singular, irreplicable artifact of time – or as @shibboleth named it: „time-based generative art”.
+
+1\. Traits Rooted in Reality
+
+ * 
+Unlike generative 10K collections with algorithmically assigned traits, CENTS traits are derived from real-world physicality. 
+
+ * 
+Each CENT is a high-resolution photograph of a genuine coin, and its traits 
+are natural phenomena like wear, patina, and imperfections—etched by time, not code. 
+
+ 
+
+2\. Surface as a Trait 
+
+ * 
+The surface uniqueness of each CENT is unparalleled. Scratches, 
+ 
+contaminations, patinas, and aging patterns create a distinctive fingerprint, 
+ 
+ensuring no two CENTS are alike. 
+
+ * 
+These traits offer a visual and textural narrative, turning each CENT into a 
+ 
+time capsule.
+
+ 
+ 
+
+3\. Mint Year Significance 
+
+ * 
+CENTS includes mint years as a trait, drawing parallels to traditional 
+
+================================================================
+[5] THE ARTIST — facts of record
+================================================================
+Rutherford Chang, 1979–2025. He died in February 2025, at the age of 45.
+His obituary, by Richard Sandomir, ran in the New York Times on 9 February
+2025 (nytimes.com/2025/02/09/arts/rutherford-chang-dead.html; archive capture
+stamped 9 Feb 2025 22:24 UTC).
+From knowledge/artists.md: "An artist of accumulation, repetition and the slow
+revaluation of ordinary things."
+He exhibited for two decades; the record below runs 2002 to 2024.
+Exhibition record, from the artist's own list at rutherfordchang.com
+(2002–2024), includes: Insomnia, Institute of Contemporary Arts, London, 2005;
+I AM HERE: Home Movies and Everyday Masterpieces, Art Gallery of Ontario,
+Toronto, 2022; NOTHINGTOSEENESS, Akademie der Kuenste, Berlin, 2021; Kunsthal
+Rotterdam, 2020; Deichtorhallen, Hamburg, 2019; Rhizome and the New Museum,
+New York, 2016; BALTIC Centre for Contemporary Art, Newcastle, 2015; FACT,
+Liverpool, 2014; Indianapolis Museum of Contemporary Art, 2013; Central
+Academy of Fine Art Museum, Beijing, 2012; Queens Museum of Art, New York,
+2006; Haus der Kulturen der Welt, Berlin, 2005; Singapore Art Museum, 2004;
+The Bronx Museum of the Arts, 2003; Beyond The Screen, Christie's, New York,
+2024.
+We Buy White Albums, 2006–2025: copies of the first pressing of the Beatles'
+White Album, collected and catalogued. The New York Times obituary (Feb 2025)
+gives more than 3,400 copies. The materials list for the UCCA retrospective
+(2026) gives 3,555 records and a neon sign — the later and current figure.
+
+================================================================
+[6] THE PENNY — facts of record
+================================================================
+On the ninth of February 2025 the President of the United States ordered the
+Treasury to stop making pennies, announced that evening. The United States
+Mint struck the last cent in November 2025 and permanently suspended penny
+production.
+The US Mint reported that each penny cost nearly four cents to produce in
+fiscal 2024.
+
+================================================================
+[7] THE CATALOGUE — measured from metadata.json, 2026-10-08
+================================================================
+The collection holds 10,000 records exactly, contiguous and without
+duplicates. Mint years run from 1910 to 1982, 58 distinct years. Mint marks:
+8,343 with no mark, 1,597 D, 60 S. The trait codebook holds 19 traits in five
+families.
+50.20 per cent of the collection was struck before 1976; 25.79 per cent
+between 1980 and 1982; 2.91 per cent before 1960.
+5,306 cents — 53.06 per cent — carry no catalogued visual trait at all.
+867 cents are dated 1982 and none later.
+Fifteen years between 1910 and 1982 are absent from the collection. Only the
+absence of 1943 is anomalous: P(zero by chance) is 2.75 x 10^-5 against a
+local mean of 10.5, where the 1913-1933 gaps run 0.37 to 0.85 and are
+explained by small numbers. 1942 holds 2 cents and 1944 holds 22.
+In 1943 the United States struck the cent in zinc-coated steel to save copper
+for the war.
+Cents minted in 1982 and earlier were struck in copper; from 1983 the cent was
+made of zinc.
+The 19 catalogued traits, by family. Patina: verdigris, obsidian, desert, red,
+gold, orange, corroded, iridescent. Wear: abraded, faceless, lustrous,
+striated. Motif: assassin, fingerprint, ghost, wheat. Residue: contaminated,
+white drips and streaks. Alteration: vandalized.
+
+================================================================
+[8] CENTS & DIGITAL OBJECTHOOD — shibboleth, Medium, 30 October 2025
+    Essay 01 in the reading path at sovrn.art/cents/makes-cents
+================================================================
+Finally, he released the 10,000 cent inscriptions for the price of one sat
+each (apx. $ 0.0001), placing them into a system of permissionless exchange
+and indeterminate, continual revaluation.
+He then inscribed a 3D model of the block on a block of the blockchain (what
+is known as a full-block inscription).
+Each of these objects, initially identical, bear the marks of touch and time.
+NOTE ON THIS SOURCE: the essay gives the copper melt value as approximately
+2.5 cents and the Lincoln count as 500+ billion struck. The project
+description, dated March 2024 and contemporaneous with the work, gives 3.1
+cents and 288 billion in existence. Where they differ, this film uses the
+project description, and says which population it means.
+

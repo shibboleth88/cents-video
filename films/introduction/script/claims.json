@@ -1,0 +1,215 @@
+{
+ "_what": "Every narration sentence maps to a span of script/essay.txt, the assembled sources of record for this film.",
+ "essay_version": "corpus 2026-10-08",
+ "thesis": "Three valuations of one ordinary object disagree; Chang took the disagreement as the material, destroyed the coins into a block and inscribed them, and the value of what remains goes on being redefined after the coin itself has stopped being made.",
+ "script_target": "About 3 minutes. 24 lines, 357 words, 28 sentences; 188-165s of speech at 114-130 wpm, plus 4s for credits.",
+ "claims": [
+  {
+   "say": "After a century in circulation, the penny is considered a worthless nuisance.",
+   "kind": "paraphrase",
+   "span": "so commonplace that it is considered a worthless nuisance"
+  },
+  {
+   "say": "The Treasury says it is worth exactly one cent, and always will be, whatever year it was struck.",
+   "kind": "paraphrase",
+   "span": "a penny from any given year will always be worth exactly 1¢, according to the United States Treasury"
+  },
+  {
+   "say": "Those made before 1983 are copper, and in 2024 that copper was worth about three cents.",
+   "kind": "paraphrase",
+   "span": "those minted in 1982 and before were struck in copper and now have a metal value of approximately 3.1¢",
+   "note": "EPOCH: 'in 2024' is stated because this is a moving figure. The source is the project description, dated 2024-03-26 and contemporaneous with the work. The Medium essay's later 2.5¢ is noted in block [8] and not used."
+  },
+  {
+   "say": "Three valuations of the same small object, and none of them agree.",
+   "kind": "paraphrase",
+   "span": "Recognizing these discrepancies in value",
+   "note": "The three valuations are lines 1-3: treated as worthless, fixed at 1¢ by the Treasury, about 3¢ as copper. The source's word is 'discrepancies', plural."
+  },
+  {
+   "say": "Recognising those discrepancies, Rutherford Chang removed ten thousand copper cents from circulation and called the work CENTS.",
+   "kind": "paraphrase",
+   "span": "Recognizing these discrepancies in value, Rutherford Chang removed 10,000 copper cents from circulation and archivally documented them"
+  },
+  {
+   "say": "He had spent his working life collecting ordinary things until time made them singular.",
+   "kind": "paraphrase",
+   "span": "An artist of accumulation, repetition and the slow revaluation of ordinary things"
+  },
+  {
+   "say": "More than three and a half thousand copies of the same Beatles record, no two worn alike.",
+   "kind": "paraphrase",
+   "span": "The materials list for the UCCA retrospective (2026) gives 3,555 records and a neon sign",
+   "note": "CURRENT FIGURE. The NYT obituary (Feb 2025) gives more than 3,400; the collection grew until he died, so 3,555 supersedes it. 'More than three and a half thousand' is true of 3,555 and not of the superseded count."
+  },
+  {
+   "say": "Shown for two decades, from the ICA in London to the Art Gallery of Ontario.",
+   "kind": "paraphrase",
+   "span": "Insomnia, Institute of Contemporary Arts, London, 2005; I AM HERE: Home Movies and Everyday Masterpieces, Art Gallery of Ontario,",
+   "note": "Two anchors spanning the record rather than a list. 'Two decades' is the 2002-2024 span of the artist's own exhibition list."
+  },
+  {
+   "say": "He died in February 2025, at forty-five, on the day the President ordered the Treasury to stop making pennies.",
+   "kind": "paraphrase",
+   "span": "He died in February 2025, at the age of 45",
+   "note": "The same-day coincidence is block [6]: the order was given on the ninth of February 2025, and the obituary ran that day. Stated in the past tense per the corpus house guidance, with no speculation."
+  },
+  {
+   "say": "Every one of the ten thousand was photographed first.",
+   "kind": "paraphrase",
+   "span": "Chang photographed each coin to record its particular wear and patina"
+  },
+  {
+   "say": "The portrait on them, Victor David Brenner's Lincoln, is the most reproduced artwork on Earth.",
+   "kind": "paraphrase",
+   "span": "the portrait of Abraham Lincoln on the cent's obverse is the most reproduced piece of art on Earth",
+   "note": "Brenner is named from the Medium essay; the project description does not name him. He appears here as a property of the object, after the origin has been given — not as a reason for choosing it."
+  },
+  {
+   "say": "Two hundred and eighty-eight billion still in existence.",
+   "kind": "paraphrase",
+   "span": "With approximately 288 billion Lincoln pennies in existence",
+   "note": "POPULATION NAMED. 'Still in existence' is said aloud because 288 billion surviving and 500+ billion struck are different quantities."
+  },
+  {
+   "say": "Circulation made the marks: verdigris, abrasion, a fingerprint, the way each one left.",
+   "kind": "paraphrase",
+   "span": "Patina: verdigris, obsidian, desert, red, gold, orange, corroded, iridescent. Wear: abraded, faceless, lustrous, striated. Motif: assassin, fingerprint, ghost, wheat",
+   "note": "The three named are drawn from the catalogued trait list. 'Circulation made the marks' is the project description's 'The course of history has endowed each of these metal discs with unique characteristics'."
+  },
+  {
+   "say": "No algorithm assigned any of it.",
+   "kind": "paraphrase",
+   "span": "Unlike generative 10K collections with algorithmically assigned traits, CENTS traits are derived from real-world physicality"
+  },
+  {
+   "say": "The names came afterwards, from the collectors, over two years of voting.",
+   "kind": "paraphrase",
+   "span": "a community-led initiative carried out over the course of 2 years through multiple reviews of the full 10k set, numerous voting rounds",
+   "note": "The source writes '2 years'; the line says 'two years'. The marks were made by circulation and the NAMES by the Trait Council — the distinction the glossary holds apart."
+  },
+  {
+   "say": "More than half the set carries no mark at all, which is what makes the rest mean anything.",
+   "kind": "paraphrase",
+   "span": "5,306 cents — 53.06 per cent — carry no catalogued visual trait at all"
+  },
+  {
+   "say": "Then he destroyed them, smelted into one block of thirty-one kilograms.",
+   "kind": "paraphrase",
+   "span": "the physical coins are smelted and cast into a solid 68.56-pound copper block",
+   "note": "Said as thirty-one kilograms, which is the UCCA figure for the same block; 68.56 lb = 31.1 kg."
+  },
+  {
+   "say": "Each photograph he inscribed on a satoshi, the smallest unit of Bitcoin.",
+   "kind": "paraphrase",
+   "span": "Images of these 10,000 individuals are inscribed as ordinals on 10,000 satoshis, the smallest units of Bitcoin"
+  },
+  {
+   "say": "The block he had scanned, and inscribed as the whole of Bitcoin block 839969.",
+   "kind": "paraphrase",
+   "span": "This metal block is rendered as a three-dimensional digital model and in turn inscribed as a 4-megabyte ordinal, comprising the entirety of Bitcoin block #839969"
+  },
+  {
+   "say": "An ingot so dense it cannot be destroyed.",
+   "kind": "paraphrase",
+   "span": "Equivalent to casting a copper ingot so heavy and dense that it is indestructible"
+  },
+  {
+   "say": "He released all ten thousand at one sat each.",
+   "kind": "paraphrase",
+   "span": "he released the 10,000 cent inscriptions for the price of one sat each"
+  },
+  {
+   "say": "The set is closed.",
+   "kind": "paraphrase",
+   "span": "this digitally scarce set of 10,000"
+  },
+  {
+   "say": "It stops at 1982, because in 1983 the penny stopped being copper.",
+   "kind": "paraphrase",
+   "span": "Cents minted in 1982 and earlier were struck in copper; from 1983 the cent was made of zinc",
+   "note": "867 cents are dated 1982 and none later, so the ceiling IS the metallurgical cutoff."
+  },
+  {
+   "say": "Only one of the years it misses means anything.",
+   "kind": "paraphrase",
+   "span": "Only the absence of 1943 is anomalous",
+   "note": "A claim about a set: fifteen years are absent and only one absence is anomalous. Counted before it was said."
+  },
+  {
+   "say": "In 1943 the copper went to the war, and the cent was struck in steel.",
+   "kind": "paraphrase",
+   "span": "In 1943 the United States struck the cent in zinc-coated steel to save copper for the war"
+  },
+  {
+   "say": "A set with edges nobody chose.",
+   "kind": "paraphrase",
+   "span": "Fifteen years between 1910 and 1982 are absent from the collection",
+   "note": "Summation of 23-25: a ceiling set by metallurgy and a hole cut by a war, neither curated."
+  },
+  {
+   "say": "The project had described this as coming: the last penny was struck in November 2025.",
+   "kind": "paraphrase",
+   "span": "As the traditional penny fades into irrelevance and its production is ultimately terminated",
+   "note": "The project description is dated 2024-03-26 — a year before the order. 'Which the project had described as coming' refers to that sentence, not to a prediction by the artist."
+  },
+  {
+   "say": "Its value can continue to be redefined through this digitally scarce set of ten thousand, and the block that encapsulates their transformation.",
+   "kind": "quotation",
+   "span": "its value can continue to be redefined through this digitally scarce set of 10,000 and the block that encapsulates their transformation",
+   "note": "The work's own closing sentence, quoted. '10,000' is spoken as 'ten thousand'. The source's bridge clause ('as the traditional penny fades into irrelevance') is dropped because keeping it put the line below the quotation threshold — measured, not guessed — so line 27 was reordered to end on the penny, which is what gives 'Its value' its referent."
+  }
+ ],
+ "onscreen": [
+  {
+   "text": "Artwork: CENTS, by Rutherford Chang",
+   "kind": "credit",
+   "approved": true
+  },
+  {
+   "text": "Rutherford Chang, 1979-2025",
+   "kind": "credit",
+   "approved": true
+  }
+ ],
+ "attributions": [],
+ "distinctions_kept": [
+  {
+   "distinction": "a PROPERTY of the readymade (the Lincoln portrait's ubiquity) vs the artist's MOTIVE",
+   "where": "the origin is stated in lines 1-5 as three disagreeing valuations; Brenner appears at line 11, after it",
+   "verdict": "kept",
+   "by": "user",
+   "note": "Caught twice by the user. The first film opened on Brenner; so did the first draft of this one. The source itself puts the ubiquity in its second paragraph, after the discrepancies."
+  },
+  {
+   "distinction": "the MARKS on a cent (made by circulation) vs the NAMES of its traits (given by the Trait Council)",
+   "where": "lines 13-15 say circulation made the marks and the names came afterwards, from the collectors, over two years of voting",
+   "verdict": "kept",
+   "by": "claude"
+  },
+  {
+   "distinction": "288 billion IN EXISTENCE vs 500+ billion STRUCK",
+   "where": "line 12 says 'still in existence' aloud",
+   "verdict": "kept",
+   "by": "claude"
+  },
+  {
+   "distinction": "the end of the PENNY vs the end of CENTS",
+   "where": "line 27 ends the coin; line 28 continues the work. The film's last movement is in the present continuous.",
+   "verdict": "kept",
+   "by": "user"
+  },
+  {
+   "distinction": "CENTS Block Copper (the physical block) vs CENTS Block 839969 (the inscription of its model)",
+   "where": "line 17 smelts the physical block; line 19 inscribes the scan of it",
+   "verdict": "kept",
+   "by": "claude"
+  },
+  {
+   "distinction": "a melt value NOW vs a melt value WHEN THE WORK WAS MADE",
+   "where": "line 3 says 'in 2024', the epoch of the project description and of the work's completion",
+   "verdict": "kept",
+   "by": "user"
+  }
+ ]
+}

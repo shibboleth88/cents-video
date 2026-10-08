@@ -47,8 +47,8 @@ the CENTS catalogue measured directly.
 20. The set is closed. It stops at 1982, because in 1983 the penny stopped being copper.
 21. Only one of the years it misses means anything. In 1943 the copper went to the war, and the cent was struck in steel.
 22. A set with edges nobody chose.
-23. The last penny was struck in November 2025, which the project had described as coming.
-24. As the coin fades, its value goes on being redefined, through ten thousand objects and the block that holds their transformation.
+23. The project had described this as coming: the last penny was struck in November 2025.
+24. Its value can continue to be redefined through this digitally scarce set of ten thousand, and the block that encapsulates their transformation.
 
 ---
 
