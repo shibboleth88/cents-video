@@ -1,74 +1,20 @@
 # CENTS — a three-minute introduction
-### Treatment and draft script, 2026-10-08
 
-Built from the whole corpus at sovrn.art/cents (18 essays, 24 collector
-interviews, 12 press pieces, 2 books), the project description, the UCCA
-retrospective page, the Block page, Philip Tinari's Taschen text, and the
-NYT obituary. Target 3:00 — about 335 words at the pace of the existing
-recordings (114 wpm measured, not assumed).
+**Live treatment.** Script below is current and recordable: **28 lines, 349
+words, ≈3:08** at the 114 wpm measured from your existing recordings.
 
----
+Superseded reasoning is kept verbatim at
+[`archive/cents_introduction_3min_2026-10-08_superseded.md`](archive/cents_introduction_3min_2026-10-08_superseded.md).
+Where the archive disagrees with this file, **this file is right**.
 
-## 1. What the corpus gives that the first film did not have
-
-The first film was made from one essay and is framed on **value**. The corpus
-adds four things that an introduction needs and that essay could not supply:
-
-**The artist, and his death.** Rutherford Chang, 1979–2025. Twenty years of
-rule-based collecting — *We Buy White Albums*, *Class of 2008*, *Game Boy
-Tetris* — before a single work on the blockchain. The first institutional
-retrospective, *Hundreds and Thousands*, opened at UCCA Beijing in January
-2026, presented with the Estate.
-
-**Hard figures, from the project's own description.** 2017–2024. 10,000
-pre-1982 coppers culled by hand from ~100,000. 68.56 lb / 31 kg block. A 4 MB
-glTF inscribed as the entirety of Bitcoin block #839969. Christie's, June 2024.
-~288 billion Lincoln pennies in existence. Copper value ~3.1¢.
-
-**The traits are not decoration, they are the argument.** Nobody assigned them.
-Wear, patina, the way each coin left circulation — "time-based generative art".
-Mint year is a trait no generative collection can imitate. And one year carries
-more than the others: **1971**, when the dollar stopped being convertible to
-gold. The archive already holds Nixon footage.
-
-**An ending that is true.** Tinari, in Taschen: Chang's obituary ran in the
-*New York Times* on the same day as the announcement that the penny would be
-discontinued. **Both ends verified**: the obituary is nytimes.com/**2025/02/09**/
-arts/rutherford-chang-dead.html; Trump announced the directive to Treasury on
-the night of Sunday **9 February 2025**. The Mint struck its last penny in
-**November 2025**. The block, made of destroyed pennies, outlives the penny.
-
-That last fact is the reason to make this film. It is not a flourish. It is the
-work's own subject arriving on schedule.
+Sources: the corpus at sovrn.art/cents (18 essays, 24 collector interviews, 12
+press pieces, 2 books), the project description, the UCCA page, the Block page,
+Tinari's Taschen text, the NYT obituary, the artist's own exhibition list, and
+the CENTS catalogue measured directly.
 
 ---
 
-## 2. The arc
-
-Five movements. The first film argues; this one *introduces*, so it moves from
-the object in your hand to the system still running.
-
-**The film does not end.** CENTS is a becoming — a set whose form is fixed and
-whose meaning is not — so a film that closes on the artist's death and the
-penny's discontinuation would contradict the thing it is introducing. Both
-facts are true and both stay, but they belong to the OBJECT and the ARTIST, in
-movements I and II. The coincidence of the two — the order to stop minting and
-the obituary on the same day — is stronger as the hinge between them than as a
-terminus. The last movement is in the present continuous and stays there.
-
-| | movement | ~time | does |
-|---|---|---|---|
-| I | **The object** | 0:00–0:50 | the most reproduced artwork on Earth, what it is worth, and the end of its production |
-| II | **The artist** | 0:45–1:15 | two decades of institutional work; collecting until time makes things singular |
-| III | **The act** | 1:15–2:00 | cull, photograph, destroy, inscribe, release |
-| IV | **What it made** | 2:00–2:35 | traits nobody assigned; 1971 |
-| V | **What it is doing** | 2:35–3:05 | a closed set whose meaning is still open |
-
----
-
-## 3. Draft script
-
-Numbered for recording. 28 lines.
+## 1. The script
 
 **I — THE OBJECT**
 1. Victor David Brenner's Lincoln, cut in 1909, is the most reproduced artwork on Earth.
@@ -110,211 +56,173 @@ Numbered for recording. 28 lines.
 
 ---
 
-## 4. Imagery — all of it already on disk
+## 2. The shape, and why
 
-No generation, no API spend. From `~/Pictures/cents shortlist` (249 files) plus
-the staged inventory:
+| | movement | time | does |
+|---|---|---|---|
+| I | **The object** | 0:00–0:38 | the most reproduced artwork on Earth, what it is worth, and the end of its production |
+| II | **The artist** | 0:38–1:08 | two decades of institutional work; collecting until time makes things singular |
+| III | **The act** | 1:08–1:52 | cull, photograph, destroy, inscribe, release |
+| IV | **What it made** | 1:52–2:38 | marks nobody designed; a set with edges nobody chose |
+| V | **What it is doing** | 2:38–3:08 | a closed set whose meaning is still open |
+
+**The film does not end.** CENTS is a becoming — a set whose form is fixed and
+whose meaning is not — so closing on the artist's death and the penny's
+discontinuation would frame as finished the one work whose claim is that it is
+open. Both facts are true, sourced, and stay; they belong to the **object** and
+the **artist**, in movements I and II. Their coincidence — the order to stop
+minting and the obituary on the same day — is stronger as the hinge between
+those two movements than as a terminus. Movement V is in the present continuous
+and stays there.
+
+**Movement IV rests on two measured facts, not on exotic patina.** More than
+half the set carries no catalogued trait at all, which is what makes the rest
+mean anything; and the collection's edges were set by metallurgy and a war.
+Both are in §4.
+
+---
+
+## 3. Imagery
+
+No generation and no API spend: every frame is an asset already on this
+machine. From `~/Pictures/cents shortlist` (249 files) and the staged
+inventory.
 
 | movement | material |
 |---|---|
-| I | `most reproduced images.jpg`; a06 Brenner plaque; a01 cent; `10K all heads` mosaic held back |
-| II | White Albums material; `Rutherford's desk with cents` (the sort in progress) |
+| I | `most reproduced images.jpg` · a06 Brenner plaque · a01 cent · the penny's end as dated record |
+| II | White Albums material · `Rutherford's desk with cents` (the sort in progress) · a15/a16 desk views |
 | III | photo setup (a17) → `copper pour cube pour.mov` → `cents to cube.mp4` → `BLOCK loop.mp4` |
-| IV | `patina sets diagram.png`, `cents traits final.png`, `1971_heads.jpg`, `nixon 1971 bretton video to post.MP4` |
-| V | UCCA installation stills; `Block copper still.png`; the obituary as a dated record |
+| IV | `patina sets diagram.png` · `cents traits final.png` · the year histogram, drawn from the CSV · the 1943 gap |
+| V | a13 market band · UCCA installation stills · `Block copper still.png` |
 
-**The one thing worth building:** a mosaic of all 10,000 real cent images, from
-the mirror the CENTS bot pointed to (300×300 WebP, edge-cached, fine to pull).
-`10K all heads` already exists as a print file, but a *built* mosaic can be
-zoomed and resolved to single coins — which is the whole argument of movement
-IV in one move. Asked the bot whether to pull sequentially or take a tarball.
+**The one thing worth building:** a mosaic of all 10,000 real cent images.
+Unlike the existing `10K all heads` print file, a built one can zoom and
+resolve to single coins — movement IV's argument in a single move. The images
+are **already on this disk** at `/Users/moobook/sovrn-onchain/cents/` (10,000
+WebP, 1–10000, no gaps, plus `index.json`), so this costs nothing and needs no
+network. At native 300px it is a 30,000×30,000 canvas; decode in one process.
 
----
-
-## 5. What this forces on the existing 2:21 film
-
-Three things, none of them silent:
-
-1. **"More than five hundred billion Lincoln cents were produced."** The project
-   description says **~288 billion in existence**. Both can be true — struck
-   since 1909 versus surviving today — but the film states one and the project
-   states the other. The 3-minute script says "hundreds of billions", which is
-   true on either reading.
-2. **"about two and a half cents as copper."** The project description says
-   ~3.1¢. The recorded qualifier *"at the time he made the piece"* already
-   saves it — that was a good instinct and it holds.
-3. **Present tense throughout.** "Chang brings a kind of black hole humor to his
-   work." Chang died in February 2025. The source essay is dated October 2025
-   and also uses the present tense, so the film is faithful to it — but a
-   viewer who knows will hear it. **This is the author's call, not mine.**
+Before either the mosaic or the histogram ships, run `derived-not-decorated`:
+perturb the source and confirm the output moves. The 1964 spike (356 against
+neighbours near 120) is the specific thing a hand-drawn curve would smooth away.
 
 ---
 
-## 6. Open questions
+## 4. Figures, measured against the catalogue
 
-- **Is the ending right?** It is the strongest material available and it is
-  verified. It is also an obituary. Everything else here is a craft decision;
-  this one is not mine to make.
-- **Figures now measured** by the CENTS bot against `metadata.json` — see §7.
-- **What to leave out.** Deliberately omitted: the five natures and the five
-  transformations (the first film has them), digital objecthood (its own film),
-  Christie's, the collector community, the 25 stuck cents. A three-minute
-  introduction that mentions everything introduces nothing.
+Measured by the CENTS bot from `metadata.json`, and spot-verified here against
+its CSV (73 rows, sum 10,000, 15 zero-count years, exactly one ANOMALOUS).
 
+**Used:** 10,000 records, contiguous, no duplicates · years 1910–1982, 58
+distinct · mint marks 8,343 none / 1,597 D / **60 S** · 19 traits in five
+families · 50.20% struck before 1976, 25.79% in 1980–82, 2.91% before 1960
+(true, but 0.09pp from false — give the number rather than "under 3%").
 
----
+**The two facts movement IV is built on:**
 
-## 7. Measured against the catalogue (CENTS bot, 2026-10-08)
+1. **53.06% of cents carry no catalogued trait at all.** Introductions lead
+   with exotic patina and imply a typical CENT is a riot of colour. It is not,
+   and saying so beats the montage: a population where half the objects are
+   unremarkable is what makes the remarkable ones mean something.
+2. **The edges were set by metallurgy and a war.** 867 cents dated 1982 and
+   *zero* later — the ceiling **is** the copper-to-zinc cutoff. And 1943 is
+   missing entirely (1942 has 2, 1944 has 22), because that year the cent was
+   struck in zinc-coated steel to save copper. **Fifteen years are absent and
+   only 1943's means anything**: P(zero by chance) = 2.75 × 10⁻⁵ against a
+   local mean of 10.5, where the 1913–1933 gaps run 0.37–0.85 and are simply
+   small numbers — 1910–1939 holds 26 cents across 30 years, where you would
+   expect 12.4 empty years and there are 14.
 
-Everything below is measured from `metadata.json`, not from published write-ups.
+**Not used, and why:**
 
-**Verified and used:** 10,000 records, contiguous, no duplicates. Years 1910–1982,
-58 distinct. Essay #13's claims all hold — 50.20% before 1976, 25.79% in 1980–82,
-2.91% before 1960 (true, but 0.09pp from false — say "about 3%" or give the
-number). Mint marks: 8,343 none / 1,597 D / **60 S**. 19 traits in five families.
+- *The Readymade of Loss* (25 cents in large exchange outputs) — unverifiable
+  from anything held locally; no UTXO or custodian fields exist and exchange
+  attribution is a third-party heuristic. Would have to be attributed to
+  Lehnen, not asserted. Also 362 cents are dated 1971, so "a matched pair of
+  1971s" is not constrained by rarity.
+- *1/1 by trait combination (38)* — not derivable from the metadata; cite
+  cents.vision, never a calculation.
+- *Per-cent curation membership* (Genesis Day 110, Taschen 99) — counts sound,
+  membership transcribed by eye from screenshots. Never name a specific cent.
+- *A dated melt value* — line 4 uses the durable form, "has long been worth
+  more", because any figure needs a date attached or it goes wrong after
+  release and the film cannot know.
+- *1971 and the Nixon footage* — a good interpretive overlay, but 1943 is
+  intrinsic, measured, and almost never said. At 349 words the intrinsic one
+  wins. The footage stays available.
 
-**The two facts that rebuilt movement IV:**
-
-1. **53.06% of cents carry no catalogued trait at all.** The standard
-   introduction leads with exotic patina and leaves the impression that a
-   typical CENT is a riot of colour. It is not, and saying so is better than the
-   montage: a population where half the objects are unremarkable is what makes
-   the remarkable ones mean something.
-2. **The set's edges were set by metallurgy and a war.** 867 cents dated 1982
-   and *zero* later — the collection's ceiling *is* the copper-to-zinc cutoff.
-   And **1943 is missing entirely** (1942 has 2, 1944 has 22), because in 1943
-   the cent was struck in zinc-coated steel to save copper for the war.
-   **Fifteen years are absent, and only 1943's absence means anything**:
-   P(zero by chance) = 2.75 × 10⁻⁵ against a local mean of 10.5, where the
-   1913–1933 gaps run 0.37–0.85 and are simply small numbers — 1910–1939 holds
-   26 cents across 30 years, where you would expect 12.4 empty years and there
-   are 14. Verified here against the bot's CSV: 73 rows, sum 10,000, 15 zeros,
-   exactly one classed ANOMALOUS. Nothing about either edge was curated.
-
-**Corrections to my first draft, from the corpus's own house guidance:**
-
-- *"Nobody assigned the traits"* was wrong. The **marks** were made by
-  circulation; the **names** were given by the **Trait Council** — a
-  community-led catalogue built over two years of full-set reviews and voting,
-  the user among its core members. Not algorithmic, and not from the artist
-  either. The corrected line is better than the error.
-- Chang's death is to be stated **in the past tense**, raised only where it adds
-  something, never speculated about. The whole script is now past tense.
-- Block weight: **68.56 lb ≈ 31 kg**. Script says thirty-one kilograms.
-
-**Cut on the bot's advice:**
-
-- *The Readymade of Loss* (25 cents sealed in exchange outputs). **Not
-  verifiable from anything held locally** — no UTXO or custodian fields exist,
-  and exchange attribution is a third-party heuristic, not on-chain fact. It
-  would have to be attributed to Lehnen rather than asserted. Also: 362 cents
-  are dated 1971, so "a matched pair of 1971s" is not constrained by rarity.
-- *1/1 by trait combination (38)* is **not derivable** from the metadata; it
-  carries a further restriction in cents.vision's code or Council judgement.
-  Cite the site, never a calculation.
-- Per-cent curation membership (Genesis Day 110, Taschen 99) — **counts are
-  sound, membership is not**, having been transcribed by eye from screenshots.
-  Never put "CENT #4273 was in Taschen's book" on screen.
-- Melt value needs a date or a hedge. The script uses the durable form: the
-  copper has been worth more than a cent *for twenty years*.
-- 288 billion **in existence** vs 500+ billion **struck** are different
-  populations. The script says "still in existence" and means it.
-
-**Images: already on this machine.** `/Users/moobook/sovrn-onchain/cents/` —
-10,000 WebP, 1–10000, no gaps, 157 MB on disk, plus `index.json`. Verified by
-count. No fetching, no API. A real 10,000-tile mosaic is buildable offline; at
-native 300px that is a 30,000×30,000 canvas, so decode in one process.
-
+**288 billion vs 500+ billion** are different populations — surviving today
+versus struck since 1909. Line 2 says **"still in existence"** and names which.
 
 ---
 
-## 8. Chang's credentials — what went in, and what is held back
+## 5. Sourcing, with the legs named
 
-From the artist's own exhibition list (rutherfordchang.com/exhibitions.html,
-2002–2024) and the UCCA material. Ocula's artist page is behind bot
-verification and was not worked around.
+A URL slug is not confirmation: if the date comes from the slug, the date and
+the source are one artifact doing both jobs.
 
-**In the film, two lines:**
-- *"Shown for two decades, from the ICA in London to the Art Gallery of
-  Ontario."* — two real anchors spanning the record (ICA 2005, AGO 2022)
-  rather than a list that no viewer retains.
-- *"Christie's sold the block in 2024. In 2026 UCCA Beijing gave him his first
-  retrospective."* — placed in movement **V**, not II, because the work's
-  institutional afterlife is evidence that it is *still running*, which is what
-  that movement is for.
+- **Penny order, 9 Feb 2025** — independent press, retrieved this session.
+- **Obituary the same day** — Tinari's Taschen text verbatim in the local
+  corpus, plus an archive.today capture stamped 9 Feb 2025 22:24 UTC. Say
+  *"the same day"*; "the same night" is not sourced.
+- **Last penny struck November 2025** — `knowledge/cents.md` and the UCCA text.
 
-**Cut to pay for them:** *"A ceiling set by metallurgy, and a hole cut by a
-war."* — the summation of the 1982/1943 pair. Both facts are still spoken; only
-the sentence binding them into one idea is gone. Twelve words, one line to
-restore if you would rather have it than Christie's and UCCA.
+**Which copy to trust.** Three defects in the local corpus, verified here: its
+README claims frontmatter carries `source` and `retrieved` (measured: **0/58
+and 0/58**, so no corpus page can date itself); all six `museum-*.md` carry
+`/museums/<slug>` URLs that **404**; and `museum-ucca.md` undercounts the UCCA
+curators in three places. **For institutional facts, `data/museums.json` and
+the live site are the fact; `corpus/pages/museum-*.md` is the prose.**
 
-**Held in reserve, all verified, any of them one line:** Akademie der Künste
-Berlin (2021) · Kunsthal Rotterdam (2020) · Deichtorhallen Hamburg (2019) ·
-Rhizome & the New Museum (2016) · BALTIC Newcastle (2015) · FACT Liverpool
-(2014) · Indianapolis MCA (2013) · CAFA Museum Beijing (2012) · Queens Museum
-(2006) · Haus der Kulturen der Welt (2005) · Singapore Art Museum (2004) · The
-Bronx Museum (2003). Plus Philip Tinari's text on CENTS in Taschen's *On NFTs*.
+**House style on Chang's death:** past tense, raised only where it adds
+something, never speculated about. The 2026 retrospective is posthumous.
 
 ---
 
-## 9. Provenance: which copy to trust
+## 6. Credentials — in, and held back
 
-Three defects found in the local corpus, all **verified here before being
-written down** — the CENTS bot raised them, and it had itself repeated one from
-a README without opening a file, which is the whole reason to re-measure.
+From the artist's own list (rutherfordchang.com/exhibitions.html, 2002–2024).
+Ocula's page is behind bot verification and was not worked around.
 
-**1. The corpus cannot date its own contents.** Its `README.md` says
-*"Frontmatter carries `source` and `retrieved`."* Measured across all 58 pages:
-**`source` 0/58, `retrieved` 0/58.** What exists is `url` 58/58 and `date`
-22/58 — and `date` is the document's own date, not a retrieval date. So no
-corpus page can say *when* it was true. For anything load-bearing, cite the
-live page or a dated capture, the way the obituary is cited in §1. The corpus
-is excellent **reading material** and weak **provenance**.
+**In:** *"Shown for two decades, from the ICA in London to the Art Gallery of
+Ontario"* (two real anchors spanning the record — ICA 2005, AGO 2022 — rather
+than a list no viewer retains), and *"Christie's sold the block in 2024. UCCA
+Beijing gave him a retrospective in 2026"*, placed in movement **V** because
+the institutional afterlife is evidence the work is still running.
 
-**2. Every museum URL in it is dead.** All six `museum-*.md` pages carry
-`https://www.sovrn.art/museums/<slug>`. Fetched: **404, "That page isn't
-here."** Those pages now live under `/exhibitions/` and `/collections/`. The
-one frontmatter field that is universally present is wrong for every museum
-page.
+**Held in reserve, all verified, any one line:** Akademie der Künste Berlin
+(2021) · Kunsthal Rotterdam (2020) · Deichtorhallen Hamburg (2019) · Rhizome &
+the New Museum (2016) · BALTIC Newcastle (2015) · FACT Liverpool (2014) ·
+Indianapolis MCA (2013) · CAFA Museum Beijing (2012) · Queens Museum (2006) ·
+Haus der Kulturen der Welt (2005) · Singapore Art Museum (2004) · The Bronx
+Museum (2003). Plus Tinari's text in Taschen's *On NFTs*.
 
-**3. `pages/museum-ucca.md` undercounts the curators in three places** (lines
-11, 12, 21): "Philip Tinari and Aki Sasamoto." The live page and
-`data/museums.json` both give three — *"Co-curated by UCCA Director Philip
-Tinari, the artist Aki Sasamoto and Danielle Chang."* The data file was
-corrected first and the corpus import then reintroduced the stale version into
-the same repository hours later. Nothing was overwritten; two copies were
-created and only one was current.
-
-**Rule for this project, going forward:** for institutional facts —
-exhibitions, curators, dates, URLs — **`data/museums.json` and the live site
-are the fact; `corpus/pages/museum-*.md` is the prose.** The film's only
-institutional line ("UCCA Beijing gave him a retrospective in 2026") was taken
-from the live page, not the corpus, and names no curator.
-
+**Paid for by cutting** *"A ceiling set by metallurgy, and a hole cut by a
+war."* Both facts are still spoken; only the sentence binding them is gone.
+Twelve words, one line to restore in place of Christie's and UCCA.
 
 ---
 
-## 10. Two defects the new skill found in this script
+## 7. Open
 
-`.claude/skills/video-concept-relations/SKILL.md` was written from this
-project's ledger. Run against **this** treatment — after four rounds of revision
-— its first two passes found two live faults. Recorded because a check that has
-never gone red is worth nothing, and this one went red immediately on the
-material it was derived from.
+- **The two facts in I and II are yours to approve.** They are verified and
+  they are an obituary. The craft decisions here are mine; that one is not.
+- **Deliberately omitted:** the five natures and five transformations (the
+  first film has them), digital objecthood (its own film), the collector
+  community, the 25 stuck cents. A three-minute introduction that mentions
+  everything introduces nothing.
+- **Then:** record §1, align, rebuild the shot list against the recording.
 
-**Pass 1, referents — line 4 pointed at a premise eighteen lines downstream.**
-It read *"The copper in **the older ones** has long been worth more than a
-cent."* Older than what? The copper-to-zinc cutoff is not supplied until line 22.
-An earlier draft said *"a cent minted in 1982 or earlier"*; I trimmed it for
-length and the referent went vague — the cut-premise failure, committed while
-writing the skill that names it. Now *"a pre-1983 cent"*, which also plants the
-date that line 22 pays off.
+---
 
-**Pass 2, sequence — "the same day" pointed at the wrong day.** Line 7 meant the
-ninth of February in line 5. But line 6 — *"The last was struck that November"* —
-sits between them, so the nearest date antecedent a listener holds is **November**.
-Each sentence true; the order put the wrong referent closest. Now *"On that ninth
-of February…"*, which is explicit and costs four words.
+## 8. What this forces on the finished 2:21 film
 
-Neither is catchable by any gate in this repo. Both were found by reading the
-survivors in order and asking what each one refers to.
+1. **"More than five hundred billion Lincoln cents were produced."** The
+   project description says ~288 billion *in existence*. Both can be true —
+   struck versus surviving — but the film states one and the project the other.
+2. **"about two and a half cents as copper."** The description says ~3.1¢. The
+   recorded qualifier *"at the time he made the piece"* saves it, and holds.
+3. **Present tense throughout.** Chang died in February 2025. The source essay
+   is dated October 2025 and also uses the present tense, so the film is
+   faithful to it — but a viewer who knows will hear it. Author's call.
