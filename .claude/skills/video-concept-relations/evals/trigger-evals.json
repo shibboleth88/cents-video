@@ -1,0 +1,23 @@
+[
+  {"query": "the 3 min cents script is at 349 words and every line maps to a span in fidelity.py, but when i read it out loud the 1943 bit doesn't land. can you look at where it sits in the order", "should_trigger": true},
+  {"query": "i trimmed about 40 words off the voiceover to get it under 3 minutes and now the second half feels like something's missing. gates are still 10/10 though so i cant point at anything", "should_trigger": true},
+  {"query": "before i record this can you do a proper read through of script/voiceover.txt. not fact checking — i mean does it actually follow", "should_trigger": true},
+  {"query": "the shot with the copper block under 'five, inscribed on bitcoin' bugs me. the caption is accurate and the asset is rights-cleared so i cant say whats wrong", "should_trigger": true},
+  {"query": "every single gate is green and i still think the ending is wrong. the whole piece is supposed to be about something that doesnt finish", "should_trigger": true},
+  {"query": "what happens if i move the brenner line to the top of the film — does that change what its saying about why he chose the penny", "should_trigger": true},
+  {"query": "ive got four lines in a row that all say the value keeps getting redefined. is that emphasis or am i just padding", "should_trigger": true},
+  {"query": "reviewing the cut before we lock it. anything in the shot-and-narration pairings that claims more than the essay actually says?", "should_trigger": true},
+  {"query": "spliced a new line in before 'CENTS is a becoming' and the market shot runs long now. can you check the whole edit still holds together", "should_trigger": true},
+  {"query": "starting the opening for the digital objecthood film. i want to be careful the order doesnt imply chang made the work for a reason he didnt actually have", "should_trigger": true},
+
+  {"query": "is it 288 billion lincoln pennies or 500+ billion? the medium essay and the sovrn project description disagree and i dont know which to use", "should_trigger": false},
+  {"query": "the render just died with 'LINE COUNT: \"0 billion\" wrapped to 2 lines, max 1'. whats going on there", "should_trigger": false},
+  {"query": "can you check the loudness on public/vo.wav, it sounds hot compared to the last export", "should_trigger": false},
+  {"query": "which of the 249 files in ~/Pictures/cents shortlist should i use for the melting shot", "should_trigger": false},
+  {"query": "make a chart of the mint year distribution from cents-year-histogram.csv, 1910 to 1982", "should_trigger": false},
+  {"query": "summarise the 18 essays listed on sovrn.art/cents/makes-cents so i know whats in them", "should_trigger": false},
+  {"query": "proofread this exhibition wall text for typos and check im consistent on british vs american spelling", "should_trigger": false},
+  {"query": "review this PR before i merge — mostly worried about the anchor resolution logic in src/lib/timeline.ts", "should_trigger": false},
+  {"query": "a02 is marked no_crop but i want it as a backdrop. whats the cleanest way around that without breaking the restriction", "should_trigger": false},
+  {"query": "add captions to the VideoCaptioned composition and make sure they dont overlap the safe area at the bottom", "should_trigger": false}
+]

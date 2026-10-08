@@ -1,18 +1,18 @@
 ---
 name: video-concept-relations
 description: >-
-  Catch the failures that survive every per-item check — a script where each
-  sentence is faithful to its source and the ORDER asserts something no sentence
-  says; a shot whose image and caption are each true and whose PAIRING claims a
-  third thing; an ending whose FORM contradicts the thesis. Use this whenever
-  writing, cutting, reordering or reviewing a narration or voiceover script;
-  whenever deciding what a shot shows under a given line; whenever trimming for
-  length, because cutting a premise leaves its conclusion standing and nothing
-  goes red; when choosing how a piece opens or ends; and before recording or
-  locking a cut. Reach for it especially when every gate is green and the piece
-  still feels wrong, or when a reader says "this doesn't follow" and the
-  sentences all check out — that is the signature of a relational failure,
-  because fidelity checking reads each claim alone.
+  Use this when the question is about how the parts of a film or script
+  relate, not whether each part is accurate: where a line sits and what its
+  position implies; whether moving, reordering, opening or ending with
+  something changes what the piece argues; whether repeated lines are emphasis
+  or padding; whether a trim left a conclusion without its premise; whether a
+  shot and the words over it assert a third thing neither says; whether the
+  ending's shape fits the thesis. Reach for it in any narration or voiceover
+  work — drafting, cutting to length, resequencing, pairing shots to lines,
+  reviewing before recording or locking — and especially when a line "doesn't
+  land", a reader says "this doesn't follow", or every fidelity check passes
+  and the piece still feels wrong. Per-sentence source checks read each claim
+  alone and cannot see any of this.
 ---
 
 # Relational failures in an essay film

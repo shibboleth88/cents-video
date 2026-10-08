@@ -978,3 +978,51 @@ words moves it, and it will not complain.*
 mid-sentence. The earlier tightening was of a 2.00s gap that read as a full
 stop; these are inside the range of a deliberate delivery, and editing them
 would be editing the reading rather than fixing a fault.
+
+## Episode — the description optimizer, and a third blind instrument (2026-10-08)
+
+Ran skill-creator's description optimizer over `video-concept-relations`.
+Result: **held-out score 7/8, selected by test rather than train** — iteration 3
+scored better on train (94% accuracy, 89% recall) and *worse* on held-out (79%,
+58%), so the loop correctly kept iteration 2. Precision stayed 100% throughout:
+no false triggers on any of the ten near-miss negatives.
+
+**Getting there took three instrument failures, and two of them read as
+success.**
+
+**1. Unauthenticated CLI scoring 50%.** The first run reported 20 queries
+graded, 10 PASS. Every one was `rate=0/3` — `claude -p` was answering *"Not
+logged in"* to everything **and exiting 0**. The harness saw no skill invoked
+and recorded "did not trigger", which for the ten should-NOT-trigger queries
+*is* the pass condition. So half the eval set passed off a dead instrument, and
+50% looks like a plausible first-iteration score rather than total failure.
+*A broken instrument scored exactly as well as a perfectly tuned description
+would have on half the set.*
+
+**2. Detection watching the wrong name.** Authenticated, still 0/3 everywhere —
+`recall=0%` across ten realistic should-trigger queries. A description can be
+mediocre; it cannot be so mediocre that nothing fires. Probed one query directly
+and captured the nested session's tool calls: the **first** call was
+`Skill{"skill": "video-concept-relations"}`. It had been triggering all along.
+The harness injects a uuid-suffixed *command* into `.claude/commands/` and
+watches for **that** name — but this skill is genuinely installed under
+`.claude/skills/`, so Claude invokes it by its real name. Patched a working copy
+to accept either. *The harness assumes the skill under test is not installed;
+when it is, the measurement silently inverts.*
+
+**3. The floor that should have existed.** Both failures are the same shape as
+`verify.py`'s rule that every scan asserts a minimum first. A trigger-rate
+harness needs one too: **if zero should-trigger queries fire, that is an
+instrument failure, not a score.** A liveness check (one `claude -p` that must
+return real content) was added before the third run and is the only reason the
+third run could be trusted.
+
+**Failure-shape: a detector keyed to a synthetic name cannot see the real
+thing.** The uuid suffix exists to avoid collisions, and it is exactly what
+made the detector blind to the genuine article.
+
+The optimized description is 143 words against the original 149, and leads with
+the discriminator — *"how the parts relate, not whether each part is
+accurate"* — rather than with examples. It ends on why per-item checks cannot
+see any of it, which is the sentence that separates this skill from
+`fidelity.py`.

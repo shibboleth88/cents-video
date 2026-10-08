@@ -1,0 +1,840 @@
+{
+  "exit_reason": "all_passed (iteration 3)",
+  "original_description": "Catch the failures that survive every per-item check \u2014 a script where each sentence is faithful to its source and the ORDER asserts something no sentence says; a shot whose image and caption are each true and whose PAIRING claims a third thing; an ending whose FORM contradicts the thesis. Use this whenever writing, cutting, reordering or reviewing a narration or voiceover script; whenever deciding what a shot shows under a given line; whenever trimming for length, because cutting a premise leaves its conclusion standing and nothing goes red; when choosing how a piece opens or ends; and before recording or locking a cut. Reach for it especially when every gate is green and the piece still feels wrong, or when a reader says \"this doesn't follow\" and the sentences all check out \u2014 that is the signature of a relational failure, because fidelity checking reads each claim alone.",
+  "best_description": "Use this when the question is about how the parts of a film or script relate, not whether each part is accurate: where a line sits and what its position implies; whether moving, reordering, opening or ending with something changes what the piece argues; whether repeated lines are emphasis or padding; whether a trim left a conclusion without its premise; whether a shot and the words over it assert a third thing neither says; whether the ending's shape fits the thesis. Reach for it in any narration or voiceover work \u2014 drafting, cutting to length, resequencing, pairing shots to lines, reviewing before recording or locking \u2014 and especially when a line \"doesn't land\", a reader says \"this doesn't follow\", or every fidelity check passes and the piece still feels wrong. Per-sentence source checks read each claim alone and cannot see any of this.",
+  "best_score": "7/8",
+  "best_train_score": "10/12",
+  "best_test_score": "7/8",
+  "final_description": "Use this for any question about what a film or script implies by its arrangement, not whether its facts are right. Reach for it when: moving, reordering, opening with or ending on a line, and asking what that position asserts; worrying an order suggests a cause, motive or intention nobody stated; trimming to length and wondering what the surviving lines still refer to; repeated lines that may be emphasis or padding; choosing which image sits under which narration, and what the pair claims together; whether an ending's shape fits the argument. Applies while drafting an opening, resequencing, cutting to time, pairing shots to lines, or reviewing before recording or locking \u2014 and whenever a line \"doesn't land\", someone says \"this doesn't follow\", or every source check passes and the piece still feels wrong. Not for fact-checking, proofreading, captions, rendering or code: those read each item alone and are blind to all of this.",
+  "iterations_run": 3,
+  "holdout": 0.4,
+  "train_size": 12,
+  "test_size": 8,
+  "history": [
+    {
+      "iteration": 1,
+      "description": "Catch the failures that survive every per-item check \u2014 a script where each sentence is faithful to its source and the ORDER asserts something no sentence says; a shot whose image and caption are each true and whose PAIRING claims a third thing; an ending whose FORM contradicts the thesis. Use this whenever writing, cutting, reordering or reviewing a narration or voiceover script; whenever deciding what a shot shows under a given line; whenever trimming for length, because cutting a premise leaves its conclusion standing and nothing goes red; when choosing how a piece opens or ends; and before recording or locking a cut. Reach for it especially when every gate is green and the piece still feels wrong, or when a reader says \"this doesn't follow\" and the sentences all check out \u2014 that is the signature of a relational failure, because fidelity checking reads each claim alone.",
+      "train_passed": 9,
+      "train_failed": 3,
+      "train_total": 12,
+      "train_results": [
+        {
+          "query": "what happens if i move the brenner line to the top of the film \u2014 does that change what its saying about why he chose the penny",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "every single gate is green and i still think the ending is wrong. the whole piece is supposed to be about something that doesnt finish",
+          "should_trigger": true,
+          "trigger_rate": 0.6666666666666666,
+          "triggers": 2,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "starting the opening for the digital objecthood film. i want to be careful the order doesnt imply chang made the work for a reason he didnt actually have",
+          "should_trigger": true,
+          "trigger_rate": 0.6666666666666666,
+          "triggers": 2,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "ive got four lines in a row that all say the value keeps getting redefined. is that emphasis or am i just padding",
+          "should_trigger": true,
+          "trigger_rate": 0.3333333333333333,
+          "triggers": 1,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "the 3 min cents script is at 349 words and every line maps to a span in fidelity.py, but when i read it out loud the 1943 bit doesn't land. can you look at where it sits in the order",
+          "should_trigger": true,
+          "trigger_rate": 0.3333333333333333,
+          "triggers": 1,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "the render just died with 'LINE COUNT: \"0 billion\" wrapped to 2 lines, max 1'. whats going on there",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "i trimmed about 40 words off the voiceover to get it under 3 minutes and now the second half feels like something's missing. gates are still 10/10 though so i cant point at anything",
+          "should_trigger": true,
+          "trigger_rate": 1.0,
+          "triggers": 3,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "a02 is marked no_crop but i want it as a backdrop. whats the cleanest way around that without breaking the restriction",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "review this PR before i merge \u2014 mostly worried about the anchor resolution logic in src/lib/timeline.ts",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "is it 288 billion lincoln pennies or 500+ billion? the medium essay and the sovrn project description disagree and i dont know which to use",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "proofread this exhibition wall text for typos and check im consistent on british vs american spelling",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "add captions to the VideoCaptioned composition and make sure they dont overlap the safe area at the bottom",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ],
+      "test_passed": 6,
+      "test_failed": 2,
+      "test_total": 8,
+      "test_results": [
+        {
+          "query": "reviewing the cut before we lock it. anything in the shot-and-narration pairings that claims more than the essay actually says?",
+          "should_trigger": true,
+          "trigger_rate": 0.3333333333333333,
+          "triggers": 1,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "before i record this can you do a proper read through of script/voiceover.txt. not fact checking \u2014 i mean does it actually follow",
+          "should_trigger": true,
+          "trigger_rate": 1.0,
+          "triggers": 3,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "the shot with the copper block under 'five, inscribed on bitcoin' bugs me. the caption is accurate and the asset is rights-cleared so i cant say whats wrong",
+          "should_trigger": true,
+          "trigger_rate": 1.0,
+          "triggers": 3,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "spliced a new line in before 'CENTS is a becoming' and the market shot runs long now. can you check the whole edit still holds together",
+          "should_trigger": true,
+          "trigger_rate": 0.3333333333333333,
+          "triggers": 1,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "which of the 249 files in ~/Pictures/cents shortlist should i use for the melting shot",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "summarise the 18 essays listed on sovrn.art/cents/makes-cents so i know whats in them",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "can you check the loudness on public/vo.wav, it sounds hot compared to the last export",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "make a chart of the mint year distribution from cents-year-histogram.csv, 1910 to 1982",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ],
+      "passed": 9,
+      "failed": 3,
+      "total": 12,
+      "results": [
+        {
+          "query": "what happens if i move the brenner line to the top of the film \u2014 does that change what its saying about why he chose the penny",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "every single gate is green and i still think the ending is wrong. the whole piece is supposed to be about something that doesnt finish",
+          "should_trigger": true,
+          "trigger_rate": 0.6666666666666666,
+          "triggers": 2,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "starting the opening for the digital objecthood film. i want to be careful the order doesnt imply chang made the work for a reason he didnt actually have",
+          "should_trigger": true,
+          "trigger_rate": 0.6666666666666666,
+          "triggers": 2,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "ive got four lines in a row that all say the value keeps getting redefined. is that emphasis or am i just padding",
+          "should_trigger": true,
+          "trigger_rate": 0.3333333333333333,
+          "triggers": 1,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "the 3 min cents script is at 349 words and every line maps to a span in fidelity.py, but when i read it out loud the 1943 bit doesn't land. can you look at where it sits in the order",
+          "should_trigger": true,
+          "trigger_rate": 0.3333333333333333,
+          "triggers": 1,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "the render just died with 'LINE COUNT: \"0 billion\" wrapped to 2 lines, max 1'. whats going on there",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "i trimmed about 40 words off the voiceover to get it under 3 minutes and now the second half feels like something's missing. gates are still 10/10 though so i cant point at anything",
+          "should_trigger": true,
+          "trigger_rate": 1.0,
+          "triggers": 3,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "a02 is marked no_crop but i want it as a backdrop. whats the cleanest way around that without breaking the restriction",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "review this PR before i merge \u2014 mostly worried about the anchor resolution logic in src/lib/timeline.ts",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "is it 288 billion lincoln pennies or 500+ billion? the medium essay and the sovrn project description disagree and i dont know which to use",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "proofread this exhibition wall text for typos and check im consistent on british vs american spelling",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "add captions to the VideoCaptioned composition and make sure they dont overlap the safe area at the bottom",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "iteration": 2,
+      "description": "Use this when the question is about how the parts of a film or script relate, not whether each part is accurate: where a line sits and what its position implies; whether moving, reordering, opening or ending with something changes what the piece argues; whether repeated lines are emphasis or padding; whether a trim left a conclusion without its premise; whether a shot and the words over it assert a third thing neither says; whether the ending's shape fits the thesis. Reach for it in any narration or voiceover work \u2014 drafting, cutting to length, resequencing, pairing shots to lines, reviewing before recording or locking \u2014 and especially when a line \"doesn't land\", a reader says \"this doesn't follow\", or every fidelity check passes and the piece still feels wrong. Per-sentence source checks read each claim alone and cannot see any of this.",
+      "train_passed": 10,
+      "train_failed": 2,
+      "train_total": 12,
+      "train_results": [
+        {
+          "query": "what happens if i move the brenner line to the top of the film \u2014 does that change what its saying about why he chose the penny",
+          "should_trigger": true,
+          "trigger_rate": 0.3333333333333333,
+          "triggers": 1,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "ive got four lines in a row that all say the value keeps getting redefined. is that emphasis or am i just padding",
+          "should_trigger": true,
+          "trigger_rate": 1.0,
+          "triggers": 3,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "starting the opening for the digital objecthood film. i want to be careful the order doesnt imply chang made the work for a reason he didnt actually have",
+          "should_trigger": true,
+          "trigger_rate": 0.3333333333333333,
+          "triggers": 1,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "every single gate is green and i still think the ending is wrong. the whole piece is supposed to be about something that doesnt finish",
+          "should_trigger": true,
+          "trigger_rate": 1.0,
+          "triggers": 3,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "the 3 min cents script is at 349 words and every line maps to a span in fidelity.py, but when i read it out loud the 1943 bit doesn't land. can you look at where it sits in the order",
+          "should_trigger": true,
+          "trigger_rate": 0.6666666666666666,
+          "triggers": 2,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "the render just died with 'LINE COUNT: \"0 billion\" wrapped to 2 lines, max 1'. whats going on there",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "i trimmed about 40 words off the voiceover to get it under 3 minutes and now the second half feels like something's missing. gates are still 10/10 though so i cant point at anything",
+          "should_trigger": true,
+          "trigger_rate": 1.0,
+          "triggers": 3,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "a02 is marked no_crop but i want it as a backdrop. whats the cleanest way around that without breaking the restriction",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "review this PR before i merge \u2014 mostly worried about the anchor resolution logic in src/lib/timeline.ts",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "is it 288 billion lincoln pennies or 500+ billion? the medium essay and the sovrn project description disagree and i dont know which to use",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "proofread this exhibition wall text for typos and check im consistent on british vs american spelling",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "add captions to the VideoCaptioned composition and make sure they dont overlap the safe area at the bottom",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ],
+      "test_passed": 7,
+      "test_failed": 1,
+      "test_total": 8,
+      "test_results": [
+        {
+          "query": "reviewing the cut before we lock it. anything in the shot-and-narration pairings that claims more than the essay actually says?",
+          "should_trigger": true,
+          "trigger_rate": 0.6666666666666666,
+          "triggers": 2,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "before i record this can you do a proper read through of script/voiceover.txt. not fact checking \u2014 i mean does it actually follow",
+          "should_trigger": true,
+          "trigger_rate": 0.3333333333333333,
+          "triggers": 1,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "the shot with the copper block under 'five, inscribed on bitcoin' bugs me. the caption is accurate and the asset is rights-cleared so i cant say whats wrong",
+          "should_trigger": true,
+          "trigger_rate": 1.0,
+          "triggers": 3,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "spliced a new line in before 'CENTS is a becoming' and the market shot runs long now. can you check the whole edit still holds together",
+          "should_trigger": true,
+          "trigger_rate": 0.6666666666666666,
+          "triggers": 2,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "which of the 249 files in ~/Pictures/cents shortlist should i use for the melting shot",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "summarise the 18 essays listed on sovrn.art/cents/makes-cents so i know whats in them",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "can you check the loudness on public/vo.wav, it sounds hot compared to the last export",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "make a chart of the mint year distribution from cents-year-histogram.csv, 1910 to 1982",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ],
+      "passed": 10,
+      "failed": 2,
+      "total": 12,
+      "results": [
+        {
+          "query": "what happens if i move the brenner line to the top of the film \u2014 does that change what its saying about why he chose the penny",
+          "should_trigger": true,
+          "trigger_rate": 0.3333333333333333,
+          "triggers": 1,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "ive got four lines in a row that all say the value keeps getting redefined. is that emphasis or am i just padding",
+          "should_trigger": true,
+          "trigger_rate": 1.0,
+          "triggers": 3,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "starting the opening for the digital objecthood film. i want to be careful the order doesnt imply chang made the work for a reason he didnt actually have",
+          "should_trigger": true,
+          "trigger_rate": 0.3333333333333333,
+          "triggers": 1,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "every single gate is green and i still think the ending is wrong. the whole piece is supposed to be about something that doesnt finish",
+          "should_trigger": true,
+          "trigger_rate": 1.0,
+          "triggers": 3,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "the 3 min cents script is at 349 words and every line maps to a span in fidelity.py, but when i read it out loud the 1943 bit doesn't land. can you look at where it sits in the order",
+          "should_trigger": true,
+          "trigger_rate": 0.6666666666666666,
+          "triggers": 2,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "the render just died with 'LINE COUNT: \"0 billion\" wrapped to 2 lines, max 1'. whats going on there",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "i trimmed about 40 words off the voiceover to get it under 3 minutes and now the second half feels like something's missing. gates are still 10/10 though so i cant point at anything",
+          "should_trigger": true,
+          "trigger_rate": 1.0,
+          "triggers": 3,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "a02 is marked no_crop but i want it as a backdrop. whats the cleanest way around that without breaking the restriction",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "review this PR before i merge \u2014 mostly worried about the anchor resolution logic in src/lib/timeline.ts",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "is it 288 billion lincoln pennies or 500+ billion? the medium essay and the sovrn project description disagree and i dont know which to use",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "proofread this exhibition wall text for typos and check im consistent on british vs american spelling",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "add captions to the VideoCaptioned composition and make sure they dont overlap the safe area at the bottom",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "iteration": 3,
+      "description": "Use this for any question about what a film or script implies by its arrangement, not whether its facts are right. Reach for it when: moving, reordering, opening with or ending on a line, and asking what that position asserts; worrying an order suggests a cause, motive or intention nobody stated; trimming to length and wondering what the surviving lines still refer to; repeated lines that may be emphasis or padding; choosing which image sits under which narration, and what the pair claims together; whether an ending's shape fits the argument. Applies while drafting an opening, resequencing, cutting to time, pairing shots to lines, or reviewing before recording or locking \u2014 and whenever a line \"doesn't land\", someone says \"this doesn't follow\", or every source check passes and the piece still feels wrong. Not for fact-checking, proofreading, captions, rendering or code: those read each item alone and are blind to all of this.",
+      "train_passed": 12,
+      "train_failed": 0,
+      "train_total": 12,
+      "train_results": [
+        {
+          "query": "what happens if i move the brenner line to the top of the film \u2014 does that change what its saying about why he chose the penny",
+          "should_trigger": true,
+          "trigger_rate": 0.6666666666666666,
+          "triggers": 2,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "ive got four lines in a row that all say the value keeps getting redefined. is that emphasis or am i just padding",
+          "should_trigger": true,
+          "trigger_rate": 1.0,
+          "triggers": 3,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "starting the opening for the digital objecthood film. i want to be careful the order doesnt imply chang made the work for a reason he didnt actually have",
+          "should_trigger": true,
+          "trigger_rate": 1.0,
+          "triggers": 3,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "every single gate is green and i still think the ending is wrong. the whole piece is supposed to be about something that doesnt finish",
+          "should_trigger": true,
+          "trigger_rate": 1.0,
+          "triggers": 3,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "the 3 min cents script is at 349 words and every line maps to a span in fidelity.py, but when i read it out loud the 1943 bit doesn't land. can you look at where it sits in the order",
+          "should_trigger": true,
+          "trigger_rate": 0.6666666666666666,
+          "triggers": 2,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "i trimmed about 40 words off the voiceover to get it under 3 minutes and now the second half feels like something's missing. gates are still 10/10 though so i cant point at anything",
+          "should_trigger": true,
+          "trigger_rate": 1.0,
+          "triggers": 3,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "the render just died with 'LINE COUNT: \"0 billion\" wrapped to 2 lines, max 1'. whats going on there",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "a02 is marked no_crop but i want it as a backdrop. whats the cleanest way around that without breaking the restriction",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "review this PR before i merge \u2014 mostly worried about the anchor resolution logic in src/lib/timeline.ts",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "is it 288 billion lincoln pennies or 500+ billion? the medium essay and the sovrn project description disagree and i dont know which to use",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "proofread this exhibition wall text for typos and check im consistent on british vs american spelling",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "add captions to the VideoCaptioned composition and make sure they dont overlap the safe area at the bottom",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ],
+      "test_passed": 6,
+      "test_failed": 2,
+      "test_total": 8,
+      "test_results": [
+        {
+          "query": "reviewing the cut before we lock it. anything in the shot-and-narration pairings that claims more than the essay actually says?",
+          "should_trigger": true,
+          "trigger_rate": 0.3333333333333333,
+          "triggers": 1,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "before i record this can you do a proper read through of script/voiceover.txt. not fact checking \u2014 i mean does it actually follow",
+          "should_trigger": true,
+          "trigger_rate": 0.3333333333333333,
+          "triggers": 1,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "the shot with the copper block under 'five, inscribed on bitcoin' bugs me. the caption is accurate and the asset is rights-cleared so i cant say whats wrong",
+          "should_trigger": true,
+          "trigger_rate": 1.0,
+          "triggers": 3,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "spliced a new line in before 'CENTS is a becoming' and the market shot runs long now. can you check the whole edit still holds together",
+          "should_trigger": true,
+          "trigger_rate": 0.6666666666666666,
+          "triggers": 2,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "which of the 249 files in ~/Pictures/cents shortlist should i use for the melting shot",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "summarise the 18 essays listed on sovrn.art/cents/makes-cents so i know whats in them",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "can you check the loudness on public/vo.wav, it sounds hot compared to the last export",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "make a chart of the mint year distribution from cents-year-histogram.csv, 1910 to 1982",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ],
+      "passed": 12,
+      "failed": 0,
+      "total": 12,
+      "results": [
+        {
+          "query": "what happens if i move the brenner line to the top of the film \u2014 does that change what its saying about why he chose the penny",
+          "should_trigger": true,
+          "trigger_rate": 0.6666666666666666,
+          "triggers": 2,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "ive got four lines in a row that all say the value keeps getting redefined. is that emphasis or am i just padding",
+          "should_trigger": true,
+          "trigger_rate": 1.0,
+          "triggers": 3,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "starting the opening for the digital objecthood film. i want to be careful the order doesnt imply chang made the work for a reason he didnt actually have",
+          "should_trigger": true,
+          "trigger_rate": 1.0,
+          "triggers": 3,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "every single gate is green and i still think the ending is wrong. the whole piece is supposed to be about something that doesnt finish",
+          "should_trigger": true,
+          "trigger_rate": 1.0,
+          "triggers": 3,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "the 3 min cents script is at 349 words and every line maps to a span in fidelity.py, but when i read it out loud the 1943 bit doesn't land. can you look at where it sits in the order",
+          "should_trigger": true,
+          "trigger_rate": 0.6666666666666666,
+          "triggers": 2,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "i trimmed about 40 words off the voiceover to get it under 3 minutes and now the second half feels like something's missing. gates are still 10/10 though so i cant point at anything",
+          "should_trigger": true,
+          "trigger_rate": 1.0,
+          "triggers": 3,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "the render just died with 'LINE COUNT: \"0 billion\" wrapped to 2 lines, max 1'. whats going on there",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "a02 is marked no_crop but i want it as a backdrop. whats the cleanest way around that without breaking the restriction",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "review this PR before i merge \u2014 mostly worried about the anchor resolution logic in src/lib/timeline.ts",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "is it 288 billion lincoln pennies or 500+ billion? the medium essay and the sovrn project description disagree and i dont know which to use",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "proofread this exhibition wall text for typos and check im consistent on british vs american spelling",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "add captions to the VideoCaptioned composition and make sure they dont overlap the safe area at the bottom",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ]
+    }
+  ]
+}
