@@ -255,7 +255,38 @@ Rhizome & the New Museum (2016) · BALTIC Newcastle (2015) · FACT Liverpool
 (2006) · Haus der Kulturen der Welt (2005) · Singapore Art Museum (2004) · The
 Bronx Museum (2003). Plus Philip Tinari's text on CENTS in Taschen's *On NFTs*.
 
-**A discrepancy to note:** the live sovrn.art UCCA page gives three curators —
-Philip Tinari, Aki Sasamoto **and Danielle Chang**; the retrieved corpus copy
-(`pages/museum-ucca.md`) gives two. The live page is newer. The film names none
-of them, so nothing turns on it here, but the corpus copy is stale.
+---
+
+## 9. Provenance: which copy to trust
+
+Three defects found in the local corpus, all **verified here before being
+written down** — the CENTS bot raised them, and it had itself repeated one from
+a README without opening a file, which is the whole reason to re-measure.
+
+**1. The corpus cannot date its own contents.** Its `README.md` says
+*"Frontmatter carries `source` and `retrieved`."* Measured across all 58 pages:
+**`source` 0/58, `retrieved` 0/58.** What exists is `url` 58/58 and `date`
+22/58 — and `date` is the document's own date, not a retrieval date. So no
+corpus page can say *when* it was true. For anything load-bearing, cite the
+live page or a dated capture, the way the obituary is cited in §1. The corpus
+is excellent **reading material** and weak **provenance**.
+
+**2. Every museum URL in it is dead.** All six `museum-*.md` pages carry
+`https://www.sovrn.art/museums/<slug>`. Fetched: **404, "That page isn't
+here."** Those pages now live under `/exhibitions/` and `/collections/`. The
+one frontmatter field that is universally present is wrong for every museum
+page.
+
+**3. `pages/museum-ucca.md` undercounts the curators in three places** (lines
+11, 12, 21): "Philip Tinari and Aki Sasamoto." The live page and
+`data/museums.json` both give three — *"Co-curated by UCCA Director Philip
+Tinari, the artist Aki Sasamoto and Danielle Chang."* The data file was
+corrected first and the corpus import then reintroduced the stale version into
+the same repository hours later. Nothing was overwritten; two copies were
+created and only one was current.
+
+**Rule for this project, going forward:** for institutional facts —
+exhibitions, curators, dates, URLs — **`data/museums.json` and the live site
+are the fact; `corpus/pages/museum-*.md` is the prose.** The film's only
+institutional line ("UCCA Beijing gave him a retrospective in 2026") was taken
+from the live page, not the corpus, and names no curator.
