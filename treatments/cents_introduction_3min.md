@@ -1,7 +1,7 @@
 # CENTS — a three-minute introduction
 
-**Live treatment.** Script below is current and recordable: **25 lines, 355
-words, ≈3:11** at the 114 wpm measured from your existing recordings.
+**Live treatment.** Script below is current and recordable: **24 lines, 357
+words, ≈3:12** at the 114 wpm measured from your existing recordings.
 
 Superseded reasoning is kept verbatim at
 [`archive/cents_introduction_3min_2026-10-08_superseded.md`](archive/cents_introduction_3min_2026-10-08_superseded.md).
@@ -17,39 +17,38 @@ the CENTS catalogue measured directly.
 ## 1. The script
 
 **I — THREE PRICES, ONE OBJECT**
-1. A penny is a nuisance. Most people would not stoop to pick one up.
-2. The Treasury says it is worth exactly one cent, whatever year it was struck.
-3. Those made before 1983 are copper, and that copper is worth about three.
+1. After a century in circulation, the penny is considered a worthless nuisance.
+2. The Treasury says it is worth exactly one cent, and always will be, whatever year it was struck.
+3. Those made before 1983 are copper, and in 2024 that copper was worth about three cents.
 4. Three valuations of the same small object, and none of them agree.
 5. Recognising those discrepancies, Rutherford Chang removed ten thousand copper cents from circulation and called the work CENTS.
 
 **II — THE ARTIST**
 6. He had spent his working life collecting ordinary things until time made them singular.
-7. Three thousand copies of the same Beatles record, no two worn alike.
+7. More than three and a half thousand copies of the same Beatles record, no two worn alike.
 8. Shown for two decades, from the ICA in London to the Art Gallery of Ontario.
-9. CENTS was his only work on a blockchain.
-10. He died in February 2025, at forty-five, on the day the President ordered the Treasury to stop making pennies.
+9. He died in February 2025, at forty-five, on the day the President ordered the Treasury to stop making pennies.
 
 **III — WHAT A CENTURY HAD DONE TO THEM**
-11. Every one of the ten thousand was photographed first.
-12. The portrait on them, Victor David Brenner's Lincoln, is the most reproduced artwork on Earth. Two hundred and eighty-eight billion still in existence.
-13. Circulation made the marks: verdigris, abrasion, a fingerprint, the way each one left.
-14. No algorithm assigned any of it. The names came afterwards, from the collectors, over two years of voting.
-15. More than half the set carries no mark at all, which is what makes the rest mean anything.
+10. Every one of the ten thousand was photographed first.
+11. The portrait on them, Victor David Brenner's Lincoln, is the most reproduced artwork on Earth. Two hundred and eighty-eight billion still in existence.
+12. Circulation made the marks: verdigris, abrasion, a fingerprint, the way each one left.
+13. No algorithm assigned any of it. The names came afterwards, from the collectors, over two years of voting.
+14. More than half the set carries no mark at all, which is what makes the rest mean anything.
 
 **IV — THE TRANSFORMATION**
-16. Then he destroyed them, smelted into one block of thirty-one kilograms.
-17. Each photograph he inscribed on a satoshi, the smallest unit of Bitcoin.
-18. The block he had scanned, and inscribed as the whole of Bitcoin block 839969.
-19. An ingot so dense it cannot be destroyed.
-20. He released all ten thousand at one sat each.
+15. Then he destroyed them, smelted into one block of thirty-one kilograms.
+16. Each photograph he inscribed on a satoshi, the smallest unit of Bitcoin.
+17. The block he had scanned, and inscribed as the whole of Bitcoin block 839969.
+18. An ingot so dense it cannot be destroyed.
+19. He released all ten thousand at one sat each.
 
 **V — WHAT IT IS DOING**
-21. The set is closed. It stops at 1982, because in 1983 the penny stopped being copper.
-22. Only one of the years it misses means anything. In 1943 the copper went to the war, and the cent was struck in steel.
-23. A set with edges nobody chose.
-24. The last penny was struck in November 2025, which the project had described as coming.
-25. As the coin fades, its value goes on being redefined, through ten thousand objects and the block that holds their transformation.
+20. The set is closed. It stops at 1982, because in 1983 the penny stopped being copper.
+21. Only one of the years it misses means anything. In 1943 the copper went to the war, and the cent was struck in steel.
+22. A set with edges nobody chose.
+23. The last penny was struck in November 2025, which the project had described as coming.
+24. As the coin fades, its value goes on being redefined, through ten thousand objects and the block that holds their transformation.
 
 ---
 
@@ -157,6 +156,22 @@ families · 50.20% struck before 1976, 25.79% in 1980–82, 2.91% before 1960
 - *1971 and the Nixon footage* — a good interpretive overlay, but 1943 is
   intrinsic, measured, and almost never said. At 349 words the intrinsic one
   wins. The footage stays available.
+
+**Time-varying facts carry an epoch, chosen for what the claim does.** Several
+figures moved across the writings, so "most recent" and "most relevant" are not
+always the same answer:
+
+| fact | values, with dates | used, and why |
+|---|---|---|
+| melt value of a copper cent | **3.1¢** (project description, Mar 2024) · **2.5¢** (essay, Oct 2025) | **3.1¢, dated "in 2024"** — the epoch that matters is when the work was made, not when a later writer wrote. The source frames it the same way: *"will **always** be worth exactly 1¢ … **now** have a metal value of approximately 3.1¢"*, a decree against a market. Line 2 carries "always", line 3 carries the date. |
+| *We Buy White Albums* copies | **3,400+** (NYT obituary, Feb 2025) · **3,555** (UCCA materials list, 2026) | **the current one.** The collection grew until he died and 3,555 is what was exhibited; the script says "more than three and a half thousand", true against 3,555 and not against the superseded figure. |
+| Lincolns in existence | **288 billion** (project description, Mar 2024) | that figure, with **"still in existence"** said aloud so the population is named rather than implied. |
+
+*Failure-shape: a figure without an epoch is not a fact, it is a snapshot
+presented as one.* It will be wrong at some point after release and the film
+will not know. Either date it or use a form that stays true — line 3 is dated
+because the exact number carries the argument; the earlier film's melt value
+used the durable form instead.
 
 **288 billion vs 500+ billion** are different populations — surviving today
 versus struck since 1909. Line 2 says **"still in existence"** and names which.
