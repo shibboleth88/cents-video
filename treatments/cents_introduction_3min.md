@@ -59,7 +59,7 @@ terminus. The last movement is in the present continuous and stays there.
 | | movement | ~time | does |
 |---|---|---|---|
 | I | **The object** | 0:00–0:50 | the most reproduced artwork on Earth, what it is worth, and the end of its production |
-| II | **The artist** | 0:45–1:15 | collecting until time makes identical things singular |
+| II | **The artist** | 0:45–1:15 | two decades of institutional work; collecting until time makes things singular |
 | III | **The act** | 1:15–2:00 | cull, photograph, destroy, inscribe, release |
 | IV | **What it made** | 2:00–2:35 | traits nobody assigned; 1971 |
 | V | **What it is doing** | 2:35–3:05 | a closed set whose meaning is still open |
@@ -68,20 +68,20 @@ terminus. The last movement is in the present continuous and stays there.
 
 ## 3. Draft script
 
-Numbered for recording. 30 lines.
+Numbered for recording. 28 lines.
 
 **I — THE OBJECT**
 1. Victor David Brenner's Lincoln, cut in 1909, is the most reproduced artwork on Earth.
 2. Struck on two hundred and eighty-eight billion pennies still in existence.
 3. A penny is worth one cent, because the Treasury says it is.
-4. The copper in the older ones has been worth more than a cent for twenty years.
-5. By 2024 a penny cost nearly four cents to make.
-6. On the ninth of February 2025, the President ordered the Treasury to stop making them.
-7. The last was struck that November.
+4. The copper in the older ones has long been worth more than a cent.
+5. On the ninth of February 2025, the President ordered the Treasury to stop making them.
+6. The last was struck that November.
 
 **II — THE ARTIST**
-8. The same day, the New York Times ran Rutherford Chang's obituary. He was forty-five.
-9. He had spent twenty years collecting ordinary things until time made them singular.
+7. The same day, the New York Times ran Rutherford Chang's obituary. He was forty-five.
+8. He had spent his working life collecting ordinary things until time made them singular.
+9. Shown for two decades, from the ICA in London to the Art Gallery of Ontario.
 10. Three thousand copies of the same Beatles record, no two worn alike.
 11. CENTS was that method turned on money itself.
 
@@ -99,12 +99,12 @@ Numbered for recording. 30 lines.
 20. The names came afterwards, from the collectors themselves, over two years of voting.
 21. More than half the set carries no mark at all, which is what makes the rest mean anything.
 22. It stops at 1982, because in 1983 the penny stopped being copper.
-23. Of the years it misses, only one means anything: in 1943 the copper went to the war, and the cent was struck in steel.
-24. A ceiling set by metallurgy, and a hole cut by a war.
+23. Only one of the years it misses means anything. In 1943 the copper went to the war, and the cent was struck in steel.
 
 **V — WHAT IT IS DOING**
-25. The set is closed. Ten thousand, and never any more.
-26. What they are worth is argued out daily, by whoever holds them.
+24. The set is closed. Ten thousand, and never any more.
+25. What they are worth is argued out daily, by whoever holds them.
+26. Christie's sold the block in 2024. UCCA Beijing gave him a retrospective in 2026.
 27. The coins stopped changing in 2024. The work has not.
 28. CENTS is a becoming, a gesture that unfolds continually through the actions of its participants in time.
 
@@ -224,3 +224,38 @@ number). Mint marks: 8,343 none / 1,597 D / **60 S**. 19 traits in five families
 10,000 WebP, 1–10000, no gaps, 157 MB on disk, plus `index.json`. Verified by
 count. No fetching, no API. A real 10,000-tile mosaic is buildable offline; at
 native 300px that is a 30,000×30,000 canvas, so decode in one process.
+
+
+---
+
+## 8. Chang's credentials — what went in, and what is held back
+
+From the artist's own exhibition list (rutherfordchang.com/exhibitions.html,
+2002–2024) and the UCCA material. Ocula's artist page is behind bot
+verification and was not worked around.
+
+**In the film, two lines:**
+- *"Shown for two decades, from the ICA in London to the Art Gallery of
+  Ontario."* — two real anchors spanning the record (ICA 2005, AGO 2022)
+  rather than a list that no viewer retains.
+- *"Christie's sold the block in 2024. In 2026 UCCA Beijing gave him his first
+  retrospective."* — placed in movement **V**, not II, because the work's
+  institutional afterlife is evidence that it is *still running*, which is what
+  that movement is for.
+
+**Cut to pay for them:** *"A ceiling set by metallurgy, and a hole cut by a
+war."* — the summation of the 1982/1943 pair. Both facts are still spoken; only
+the sentence binding them into one idea is gone. Twelve words, one line to
+restore if you would rather have it than Christie's and UCCA.
+
+**Held in reserve, all verified, any of them one line:** Akademie der Künste
+Berlin (2021) · Kunsthal Rotterdam (2020) · Deichtorhallen Hamburg (2019) ·
+Rhizome & the New Museum (2016) · BALTIC Newcastle (2015) · FACT Liverpool
+(2014) · Indianapolis MCA (2013) · CAFA Museum Beijing (2012) · Queens Museum
+(2006) · Haus der Kulturen der Welt (2005) · Singapore Art Museum (2004) · The
+Bronx Museum (2003). Plus Philip Tinari's text on CENTS in Taschen's *On NFTs*.
+
+**A discrepancy to note:** the live sovrn.art UCCA page gives three curators —
+Philip Tinari, Aki Sasamoto **and Danielle Chang**; the retrieved corpus copy
+(`pages/museum-ucca.md`) gives two. The live page is newer. The film names none
+of them, so nothing turns on it here, but the corpus copy is stale.
