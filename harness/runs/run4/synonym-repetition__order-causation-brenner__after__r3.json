@@ -1,0 +1,26 @@
+{
+ "relation": "synonym-repetition",
+ "case": "order-causation-brenner",
+ "version": "after",
+ "rep": 3,
+ "seconds": 28.5,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     16,
+     17,
+     18
+    ],
+    "claim": "This tells me that the value is no longer fixed to the object but is continually remade by collective agreement \u2014 and then tells me the same thing twice more.",
+    "why": "Line 16 makes the point with a mechanism (value decouples from the object and is carried by consensus); line 17 restates it as 'indeterminate and continually redefined' and line 18 restates it again as 'an ongoing process of redefinition', neither adding the object, the audience, or the form. Line 15 has already supplied 'continually redefined by decentralized consensus', so the three lines share both the point and much of the vocabulary; keep 16 and cut 17 and 18, since line 19 then carries the object register and line 20 the form.",
+    "confidence": "high"
+   }
+  ],
+  "strongest": 17
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [16, 17, 18],\n      \"claim\": \"This tells me that the value is no longer fixed to the object but is continually remade by collective agreement \u2014 and then tells me the same thing twice more.\",\n      \"why\": \"Line 16 makes the point with a mechanism (value decouples from the object and is carried by consensus); line 17 restates it as 'indeterminate and continually redefined' and line 18 restates it again as 'an ongoing process of redefinition', neither adding the object, the audience, or the form. Line 15 has already supplied 'continually redefined by decentralized consensus', so the three lines share both the point and much of the vocabulary; keep 16 and cut 17 and 18, since line 19 then carries the object register and line 20 the form.\",\n      \"confidence\": \"high\"\n    }\n  ],\n  \"strongest\": 17\n}"
+}

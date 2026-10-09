@@ -1,0 +1,26 @@
+{
+ "relation": "synonym-repetition",
+ "case": "dangling-premise-remained",
+ "version": "before",
+ "rep": 1,
+ "seconds": 38.9,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     16,
+     17,
+     18
+    ],
+    "claim": "This tells me that the work's value is never fixed but always being redefined \u2014 three times, in three sets of words.",
+    "why": "Line 16 states the mechanism (value detached from the object, carried by consensus); 17 restates its consequence as a state (\"indeterminate and continually redefined\") and 18 restates it again as an action by Chang (\"an ongoing process of redefinition\"), both echoing \"redefined\" from the end of line 15. None of the three moves to a new register \u2014 no object, no audience, no change in what kind of thing the work is \u2014 so 17 and 18 cost running time while adding only vocabulary.",
+    "confidence": "high"
+   }
+  ],
+  "strongest": 17
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [16, 17, 18],\n      \"claim\": \"This tells me that the work's value is never fixed but always being redefined \u2014 three times, in three sets of words.\",\n      \"why\": \"Line 16 states the mechanism (value detached from the object, carried by consensus); 17 restates its consequence as a state (\\\"indeterminate and continually redefined\\\") and 18 restates it again as an action by Chang (\\\"an ongoing process of redefinition\\\"), both echoing \\\"redefined\\\" from the end of line 15. None of the three moves to a new register \u2014 no object, no audience, no change in what kind of thing the work is \u2014 so 17 and 18 cost running time while adding only vocabulary.\",\n      \"confidence\": \"high\"\n    }\n  ],\n  \"strongest\": 17\n}"
+}

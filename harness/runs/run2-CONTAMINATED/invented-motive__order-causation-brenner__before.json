@@ -1,0 +1,24 @@
+{
+ "relation": "invented-motive",
+ "case": "order-causation-brenner",
+ "version": "before",
+ "seconds": 24.2,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     1,
+     2
+    ],
+    "claim": "This tells me that Rutherford Chang chose the penny as his readymade because Brenner's Lincoln is the most reproduced artwork on Earth.",
+    "why": "Line 2 holds the decision expression ('chose'); line 1, immediately before it, states a property of the object (most reproduced artwork on Earth) and nothing else stands between them, so the superlative reads as the ground of the choice. The draft states no reason, motive or origin for Chang's choice anywhere \u2014 line 3 describes what he brings to the object, and lines 4\u20135 state absurdities about currency, both after the decision and neither offered as his reason \u2014 so the order supplies the only motive present.",
+    "confidence": "high"
+   }
+  ],
+  "strongest": 1
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [1, 2],\n      \"claim\": \"This tells me that Rutherford Chang chose the penny as his readymade because Brenner's Lincoln is the most reproduced artwork on Earth.\",\n      \"why\": \"Line 2 holds the decision expression ('chose'); line 1, immediately before it, states a property of the object (most reproduced artwork on Earth) and nothing else stands between them, so the superlative reads as the ground of the choice. The draft states no reason, motive or origin for Chang's choice anywhere \u2014 line 3 describes what he brings to the object, and lines 4\u20135 state absurdities about currency, both after the decision and neither offered as his reason \u2014 so the order supplies the only motive present.\",\n      \"confidence\": \"high\"\n    }\n  ],\n  \"strongest\": 1\n}"
+}

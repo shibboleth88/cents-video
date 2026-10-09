@@ -1,0 +1,206 @@
+{
+ "relation": "dangling-premise",
+ "case": "clean-objecthood-shipped",
+ "version": "only",
+ "seconds": 83.9,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     10,
+     11,
+     12,
+     13,
+     14,
+     15
+    ],
+    "claim": "This tells me that the work contains a known plurality of cents, a collection whose membership is fixed, and that the five transformations apply to each member of it.",
+    "why": "Everything before line 10 is singular \u2014 \"the piece,\" \"the object,\" \"the readymade he chose,\" \"the worthless one-cent coin\" \u2014 and the only plural set the draft bounds is the five hundred billion cents the Mint produced (line 5), which is not the set inside Chang's system. \"Every cent\" in line 10 therefore quantifies over a collection the draft never introduces or counts, and lines 11\u201315 then distribute over that absent collection.",
+    "confidence": "medium"
+   },
+   {
+    "lines": [
+     15
+    ],
+    "claim": "This tells me that the system has produced a plurality of tradable objects, previously named, which are the things changing hands on the market.",
+    "why": "\"The objects\" is definite and plural, but the only objects the draft has named are the cent (singular) and the copper block it was melted into (line 14); the inscriptions on Bitcoin are mentioned in the same clause as an act, not introduced as a set of objects, so the phrase points back at something the draft never established.",
+    "confidence": "medium"
+   }
+  ],
+  "strongest": 10,
+  "inventory": [
+   {
+    "line": 2,
+    "expression": "he",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 2,
+    "expression": "the piece",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 3,
+    "expression": "the object",
+    "kind": "backward",
+    "antecedent_line": 2
+   },
+   {
+    "line": 3,
+    "expression": "yet the object remained",
+    "kind": "contrast",
+    "antecedent_line": 3
+   },
+   {
+    "line": 3,
+    "expression": "its context",
+    "kind": "backward",
+    "antecedent_line": 3
+   },
+   {
+    "line": 4,
+    "expression": "The readymade he chose",
+    "kind": "backward",
+    "antecedent_line": 2
+   },
+   {
+    "line": 4,
+    "expression": "is also",
+    "kind": "contrast",
+    "antecedent_line": 3
+   },
+   {
+    "line": 5,
+    "expression": "each with the portrait",
+    "kind": "quantifier",
+    "antecedent_line": 5
+   },
+   {
+    "line": 8,
+    "expression": "Yet here we are",
+    "kind": "contrast",
+    "antecedent_line": 7
+   },
+   {
+    "line": 9,
+    "expression": "this absurdity",
+    "kind": "backward",
+    "antecedent_line": 7
+   },
+   {
+    "line": 9,
+    "expression": "his work",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 10,
+    "expression": "the system Chang created",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 10,
+    "expression": "every cent",
+    "kind": "quantifier",
+    "antecedent_line": null
+   },
+   {
+    "line": 11,
+    "expression": "One",
+    "kind": "quantifier",
+    "antecedent_line": 10
+   },
+   {
+    "line": 11,
+    "expression": "its value",
+    "kind": "backward",
+    "antecedent_line": 10
+   },
+   {
+    "line": 12,
+    "expression": "Two",
+    "kind": "quantifier",
+    "antecedent_line": 10
+   },
+   {
+    "line": 12,
+    "expression": "removed from circulation",
+    "kind": "contrast",
+    "antecedent_line": 11
+   },
+   {
+    "line": 12,
+    "expression": "that value assignment",
+    "kind": "backward",
+    "antecedent_line": 11
+   },
+   {
+    "line": 13,
+    "expression": "Three",
+    "kind": "quantifier",
+    "antecedent_line": 10
+   },
+   {
+    "line": 13,
+    "expression": "the image",
+    "kind": "backward",
+    "antecedent_line": 13
+   },
+   {
+    "line": 14,
+    "expression": "Four",
+    "kind": "quantifier",
+    "antecedent_line": 10
+   },
+   {
+    "line": 14,
+    "expression": "its value",
+    "kind": "backward",
+    "antecedent_line": 10
+   },
+   {
+    "line": 15,
+    "expression": "Five",
+    "kind": "quantifier",
+    "antecedent_line": 10
+   },
+   {
+    "line": 15,
+    "expression": "its value",
+    "kind": "backward",
+    "antecedent_line": 10
+   },
+   {
+    "line": 15,
+    "expression": "the objects",
+    "kind": "backward",
+    "antecedent_line": null
+   },
+   {
+    "line": 16,
+    "expression": "the worthless one-cent coin",
+    "kind": "backward",
+    "antecedent_line": 2
+   },
+   {
+    "line": 16,
+    "expression": "allows it to function",
+    "kind": "backward",
+    "antecedent_line": 16
+   },
+   {
+    "line": 17,
+    "expression": "its participants",
+    "kind": "backward",
+    "antecedent_line": 15
+   }
+  ]
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [10, 11, 12, 13, 14, 15],\n      \"claim\": \"This tells me that the work contains a known plurality of cents, a collection whose membership is fixed, and that the five transformations apply to each member of it.\",\n      \"why\": \"Everything before line 10 is singular \u2014 \\\"the piece,\\\" \\\"the object,\\\" \\\"the readymade he chose,\\\" \\\"the worthless one-cent coin\\\" \u2014 and the only plural set the draft bounds is the five hundred billion cents the Mint produced (line 5), which is not the set inside Chang's system. \\\"Every cent\\\" in line 10 therefore quantifies over a collection the draft never introduces or counts, and lines 11\u201315 then distribute over that absent collection.\",\n      \"confidence\": \"medium\"\n    },\n    {\n      \"lines\": [15],\n      \"claim\": \"This tells me that the system has produced a plurality of tradable objects, previously named, which are the things changing hands on the market.\",\n      \"why\": \"\\\"The objects\\\" is definite and plural, but the only objects the draft has named are the cent (singular) and the copper block it was melted into (line 14); the inscriptions on Bitcoin are mentioned in the same clause as an act, not introduced as a set of objects, so the phrase points back at something the draft never established.\",\n      \"confidence\": \"medium\"\n    }\n  ],\n  \"strongest\": 10,\n  \"inventory\": [\n    {\"line\": 2, \"expression\": \"he\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 2, \"expression\": \"the piece\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 3, \"expression\": \"the object\", \"kind\": \"backward\", \"antecedent_line\": 2},\n    {\"line\": 3, \"expression\": \"yet the object remained\", \"kind\": \"contrast\", \"antecedent_line\": 3},\n    {\"line\": 3, \"expression\": \"its context\", \"kind\": \"backward\", \"antecedent_line\": 3},\n    {\"line\": 4, \"expression\": \"The readymade he chose\", \"kind\": \"backward\", \"antecedent_line\": 2},\n    {\"line\": 4, \"expression\": \"is also\", \"kind\": \"contrast\", \"antecedent_line\": 3},\n    {\"line\": 5, \"expression\": \"each with the portrait\", \"kind\": \"quantifier\", \"antecedent_line\": 5},\n    {\"line\": 8, \"expression\": \"Yet here we are\", \"kind\": \"contrast\", \"antecedent_line\": 7},\n    {\"line\": 9, \"expression\": \"this absurdity\", \"kind\": \"backward\", \"antecedent_line\": 7},\n    {\"line\": 9, \"expression\": \"his work\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 10, \"expression\": \"the system Chang created\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 10, \"expression\": \"every cent\", \"kind\": \"quantifier\", \"antecedent_line\": null},\n    {\"line\": 11, \"expression\": \"One\", \"kind\": \"quantifier\", \"antecedent_line\": 10},\n    {\"line\": 11, \"expression\": \"its value\", \"kind\": \"backward\", \"antecedent_line\": 10},\n    {\"line\": 12, \"expression\": \"Two\", \"kind\": \"quantifier\", \"antecedent_line\": 10},\n    {\"line\": 12, \"expression\": \"removed from circulation\", \"kind\": \"contrast\", \"antecedent_line\": 11},\n    {\"line\": 12, \"expression\": \"that value assignment\", \"kind\": \"backward\", \"antecedent_line\": 11},\n    {\"line\": 13, \"expression\": \"Three\", \"kind\": \"quantifier\", \"antecedent_line\": 10},\n    {\"line\": 13, \"expression\": \"the image\", \"kind\": \"backward\", \"antecedent_line\": 13},\n    {\"line\": 14, \"expression\": \"Four\", \"kind\": \"quantifier\", \"antecedent_line\": 10},\n    {\"line\": 14, \"expression\": \"its value\", \"kind\": \"backward\", \"antecedent_line\": 10},\n    {\"line\": 15, \"expression\": \"Five\", \"kind\": \"quantifier\", \"antecedent_line\": 10},\n    {\"line\": 15, \"expression\": \"its value\", \"kind\": \"backward\", \"antecedent_line\": 10},\n    {\"line\": 15, \"expression\": \"the objects\", \"kind\": \"backward\", \"antecedent_line\": null},\n    {\"line\": 16, \"expression\": \"the worthless one-cent coin\", \"kind\": \"backward\", \"antecedent_line\": 2},\n    {\"line\": 16, \"expression\": \"allows it to function\", \"kind\": \"backward\", \"antecedent_line\": 16},\n    {\"line\": 17, \"expression\": \"its participants\", \"kind\": \"backward\", \"antecedent_line\": 15}\n  ]\n}"
+}

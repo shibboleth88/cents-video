@@ -1,0 +1,14 @@
+{
+ "relation": "synonym-repetition",
+ "case": "clean-introduction",
+ "version": "only",
+ "rep": 3,
+ "seconds": 1,
+ "exit": 0,
+ "verdict": {
+  "verdict": "NONE",
+  "instances": []
+ },
+ "malformed": null,
+ "raw": ""
+}

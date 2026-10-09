@@ -1,0 +1,24 @@
+{
+ "relation": "synonym-repetition",
+ "case": "dangling-premise-remained",
+ "version": "after",
+ "seconds": 37.1,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     17,
+     18
+    ],
+    "claim": "This tells me that the work's value is never fixed but always being redefined \u2014 and then tells me the same thing again with the artist's name attached.",
+    "why": "Line 17 states the abstract property ('indeterminate and continually redefined') that the five-item list has just demonstrated, and line 18 restates that same property as 'an ongoing process of redefinition'; both sit in the same register \u2014 the work's standing condition \u2014 and share the root 'redefin-' with each other and with line 16's closing clause. Neither adds a mechanism, an object, a participant, or a claim about form that the other lacks, so cutting one costs nothing; I would keep 18, which at least names an agent and sets up line 20.",
+    "confidence": "high"
+   }
+  ],
+  "strongest": 17
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [17, 18],\n      \"claim\": \"This tells me that the work's value is never fixed but always being redefined \u2014 and then tells me the same thing again with the artist's name attached.\",\n      \"why\": \"Line 17 states the abstract property ('indeterminate and continually redefined') that the five-item list has just demonstrated, and line 18 restates that same property as 'an ongoing process of redefinition'; both sit in the same register \u2014 the work's standing condition \u2014 and share the root 'redefin-' with each other and with line 16's closing clause. Neither adds a mechanism, an object, a participant, or a claim about form that the other lacks, so cutting one costs nothing; I would keep 18, which at least names an agent and sets up line 20.\",\n      \"confidence\": \"high\"\n    }\n  ],\n  \"strongest\": 17\n}"
+}

@@ -1,0 +1,26 @@
+{
+ "relation": "synonym-repetition",
+ "case": "order-causation-brenner",
+ "version": "after",
+ "rep": 1,
+ "seconds": 34.2,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     16,
+     17,
+     18
+    ],
+    "claim": "This tells me that the value of a Cent is not fixed but keeps being reassigned \u2014 stated three times in three vocabularies for the same register.",
+    "why": "Line 16 makes the point at the level of mechanism (value detaches from the object and is held by social consensus); line 17 then asserts the same thing with the abstractions swapped ('indeterminate and continually redefined'), and line 18 says it a third time with an agent attached but no new level of operation \u2014 nothing physically changes, no audience is implicated, no claim about what kind of thing the work is. Line 15 has already supplied 'continually redefined by consensus' as a concrete mechanism, so by 17 the idea is on its third pass; line 20 is the one line in this cluster that earns its place, because it moves to participants and to the form of the work. Keep 16 and 20, cut 17 and 18.",
+    "confidence": "high"
+   }
+  ],
+  "strongest": 17
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [16, 17, 18],\n      \"claim\": \"This tells me that the value of a Cent is not fixed but keeps being reassigned \u2014 stated three times in three vocabularies for the same register.\",\n      \"why\": \"Line 16 makes the point at the level of mechanism (value detaches from the object and is held by social consensus); line 17 then asserts the same thing with the abstractions swapped ('indeterminate and continually redefined'), and line 18 says it a third time with an agent attached but no new level of operation \u2014 nothing physically changes, no audience is implicated, no claim about what kind of thing the work is. Line 15 has already supplied 'continually redefined by consensus' as a concrete mechanism, so by 17 the idea is on its third pass; line 20 is the one line in this cluster that earns its place, because it moves to participants and to the form of the work. Keep 16 and 20, cut 17 and 18.\",\n      \"confidence\": \"high\"\n    }\n  ],\n  \"strongest\": 17\n}"
+}

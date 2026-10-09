@@ -1,0 +1,24 @@
+{
+ "relation": "synonym-repetition",
+ "case": "dangling-premise-set",
+ "version": "before",
+ "seconds": 32.4,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     17,
+     18
+    ],
+    "claim": "This tells me that the work's value is continually redefined and the process is ongoing \u2014 twice, in the same register, immediately after the list already said it.",
+    "why": "Line 16 closes the five-transformation list with \"continually redefined\"; 17 then says \"indeterminate and continually redefined\" and 18 says \"an ongoing process of redefinition\" \u2014 the same root, the same point, neither adding a mechanism, an object, an audience or a claim about form. Line 20 earns its place because it moves to the participants and to what kind of thing CENTS is, so cutting 17 and keeping 18 (or the reverse) loses nothing that 16 and 20 do not already carry.",
+    "confidence": "high"
+   }
+  ],
+  "strongest": 17
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [17, 18],\n      \"claim\": \"This tells me that the work's value is continually redefined and the process is ongoing \u2014 twice, in the same register, immediately after the list already said it.\",\n      \"why\": \"Line 16 closes the five-transformation list with \\\"continually redefined\\\"; 17 then says \\\"indeterminate and continually redefined\\\" and 18 says \\\"an ongoing process of redefinition\\\" \u2014 the same root, the same point, neither adding a mechanism, an object, an audience or a claim about form. Line 20 earns its place because it moves to the participants and to what kind of thing CENTS is, so cutting 17 and keeping 18 (or the reverse) loses nothing that 16 and 20 do not already carry.\",\n      \"confidence\": \"high\"\n    }\n  ],\n  \"strongest\": 17\n}"
+}

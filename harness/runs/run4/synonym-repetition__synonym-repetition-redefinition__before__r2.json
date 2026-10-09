@@ -1,0 +1,26 @@
+{
+ "relation": "synonym-repetition",
+ "case": "synonym-repetition-redefinition",
+ "version": "before",
+ "rep": 2,
+ "seconds": 41.0,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     17,
+     22,
+     23
+    ],
+    "claim": "This tells me that the work is continually redefined and never settles \u2014 three times, in the same abstract register.",
+    "why": "All three state the bare proposition 'the meaning keeps being remade' without naming a mechanism, a physical change, or a specific audience: 17 asserts an 'ongoing process of redefinition', 22 asserts value and meaning are 'continually redefined', and 23 asserts a 'gesture that unfolds continually'. Only 23 adds anything \u2014 the form claim ('is a becoming') and the participants who do the remaking \u2014 so 17 and 22 are its vocabulary rehearsed in advance; the shared roots 'ongoing / continually / continually' and 'redefinition / redefined' mark it. Keep 23.",
+    "confidence": "high"
+   }
+  ],
+  "strongest": 22
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [17, 22, 23],\n      \"claim\": \"This tells me that the work is continually redefined and never settles \u2014 three times, in the same abstract register.\",\n      \"why\": \"All three state the bare proposition 'the meaning keeps being remade' without naming a mechanism, a physical change, or a specific audience: 17 asserts an 'ongoing process of redefinition', 22 asserts value and meaning are 'continually redefined', and 23 asserts a 'gesture that unfolds continually'. Only 23 adds anything \u2014 the form claim ('is a becoming') and the participants who do the remaking \u2014 so 17 and 22 are its vocabulary rehearsed in advance; the shared roots 'ongoing / continually / continually' and 'redefinition / redefined' mark it. Keep 23.\",\n      \"confidence\": \"high\"\n    }\n  ],\n  \"strongest\": 22\n}"
+}

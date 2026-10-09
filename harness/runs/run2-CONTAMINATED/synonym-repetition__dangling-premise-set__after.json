@@ -1,0 +1,25 @@
+{
+ "relation": "synonym-repetition",
+ "case": "dangling-premise-set",
+ "version": "after",
+ "seconds": 36.6,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     17,
+     21,
+     22
+    ],
+    "claim": "This tells me that the work's value and meaning are never fixed but continually redefined over time \u2014 stated three times, once in each line, in the same register.",
+    "why": "All three make the single point 'continually redefined' at the level of the work's abstract status: 17 ('ongoing process of redefinition'), 21 ('indeterminate and continually redefined'), 22 ('unfolds continually'); the shared roots redefinition/redefined and continually/continually mark it. Line 22 at least adds form ('CENTS is a becoming') and the participants who do the redefining, and line 16 already shows the mechanism concretely (decentralized consensus), which leaves 21 as pure synonym and 17 as a general-level echo of the list it follows \u2014 keep 22, cut 21, and let 17 go or make it say something 16 does not.",
+    "confidence": "high"
+   }
+  ],
+  "strongest": 21
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [17, 21, 22],\n      \"claim\": \"This tells me that the work's value and meaning are never fixed but continually redefined over time \u2014 stated three times, once in each line, in the same register.\",\n      \"why\": \"All three make the single point 'continually redefined' at the level of the work's abstract status: 17 ('ongoing process of redefinition'), 21 ('indeterminate and continually redefined'), 22 ('unfolds continually'); the shared roots redefinition/redefined and continually/continually mark it. Line 22 at least adds form ('CENTS is a becoming') and the participants who do the redefining, and line 16 already shows the mechanism concretely (decentralized consensus), which leaves 21 as pure synonym and 17 as a general-level echo of the list it follows \u2014 keep 22, cut 21, and let 17 go or make it say something 16 does not.\",\n      \"confidence\": \"high\"\n    }\n  ],\n  \"strongest\": 21\n}"
+}

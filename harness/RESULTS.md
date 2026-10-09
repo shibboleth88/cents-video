@@ -70,3 +70,56 @@ diff hunks rather than files, so several were wrong.
 Scored against that key the result read **22/24 FOUND — catastrophic precision**.
 That was the key failing, not the reviewers. The reviewers' disagreement with it
 is what exposed it.
+
+---
+
+# Run 4 — repeated sampling, majority vote (the live result)
+
+99 reviews: 3 reviewers x 11 scripts x 3 reps. 99/99 parseable, 0 malformed.
+Scoring is a majority vote over OUTCOMES, not verdicts.
+
+| reviewer | recall | precision | stability | per-rep detection | verdict |
+|---|---|---|---|---|---|
+| synonym-repetition | 6/6 = 1.00 | 5/5 = 1.00 | 9/11 = 0.82 | 18/18 = 1.00 | not deployable: unstable |
+| dangling-premise   | 4/5 = 0.80 | 5/6 = 0.83 | 7/11 = 0.64 | 12/15 = 0.80 | not deployable: unstable |
+| invented-motive    | 1/7 = 0.14 | 3/4 = 0.75 | 8/11 = 0.73 | 5/21 = 0.24 | not deployable: unstable |
+
+Thresholds were declared before the run: recall >= 0.90, precision >= 0.60,
+stability >= 0.90 unanimous. **All three fail, all three on stability.**
+
+## What repeating changed
+
+- **It refuted the one success.** `synonym-repetition` scored 11/11 unanimous on
+  the accidental two-sample comparison. At three reps it is 9/11. The perfect
+  figure was luck, and a single extra sample per cell was enough to show it.
+- **It improved a precision figure by removing noise.** `dangling-premise` went
+  3/6 -> 5/6 on precision, because two single-sample false positives were
+  outvoted. That is majority voting doing the job it was added for.
+- **It located each reviewer's instability**, which the majority alone hides.
+  `synonym-repetition` hit **18 of 18** reps on present cells: it never misses.
+  Both its flips are false positives on absent cells, 2 of 15 draws. Its failure
+  is entirely precision-side noise. `invented-motive`, by contrast, detects its
+  instance in **5 of 21** reps - the `Chang initiated` pair is real (one rep
+  argued it better than the key does: the indeterminacy is a *product* of the
+  process, not a condition Chang responded to) but is found about a quarter of
+  the time. That is a detection failure, not a threshold problem.
+
+## On the stability threshold
+
+0.90-unanimous at three reps permits one flip in eleven cells, which is a hard
+bar: a single flip in three draws is consistent with a true flip rate near 10%.
+The threshold was declared in advance and is reported against as declared - it
+is not being moved now that all three fail it. But the honest reading is that
+three reps cannot separate "flips rarely" from "flips often", and five reps
+would. For `synonym-repetition` specifically, a per-rep false-positive rate of
+0.13 on absent cells would need three simultaneous flips to survive a
+majority-of-five, so it is the one plausibly deployable at higher reps.
+
+## Status of earlier runs
+
+- **run1** — valid, single-rep, 24 cells. Baseline for the prompt changes.
+- **run2** — **DISCARDED, kept as `runs/run2-CONTAMINATED`.** Two runners wrote
+  into one directory. Its records are still individually valid, which is what
+  made the accidental stability comparison possible.
+- **run3** — valid, single-rep, 33 cells. Superseded by run4.
+- **control-vote** — synthetic records demonstrating the scorer's vote logic.

@@ -1,0 +1,292 @@
+{
+ "relation": "dangling-premise",
+ "case": "clean-introduction",
+ "version": "only",
+ "rep": 2,
+ "seconds": 97.0,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "inventory": [
+   {
+    "line": 2,
+    "expression": "it",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 3,
+    "expression": "Those made before 1983",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 3,
+    "expression": "that copper",
+    "kind": "backward",
+    "antecedent_line": 3
+   },
+   {
+    "line": 4,
+    "expression": "Three valuations",
+    "kind": "quantifier",
+    "antecedent_line": 3
+   },
+   {
+    "line": 4,
+    "expression": "none of them",
+    "kind": "quantifier",
+    "antecedent_line": 4
+   },
+   {
+    "line": 4,
+    "expression": "the same small object",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 5,
+    "expression": "those discrepancies",
+    "kind": "backward",
+    "antecedent_line": 4
+   },
+   {
+    "line": 6,
+    "expression": "He",
+    "kind": "backward",
+    "antecedent_line": 5
+   },
+   {
+    "line": 6,
+    "expression": "them",
+    "kind": "backward",
+    "antecedent_line": 6
+   },
+   {
+    "line": 7,
+    "expression": "the same Beatles record",
+    "kind": "backward",
+    "antecedent_line": 7
+   },
+   {
+    "line": 7,
+    "expression": "no two",
+    "kind": "quantifier",
+    "antecedent_line": 7
+   },
+   {
+    "line": 8,
+    "expression": "Shown for two decades (elided subject)",
+    "kind": "contrast",
+    "antecedent_line": 7
+   },
+   {
+    "line": 9,
+    "expression": "He",
+    "kind": "backward",
+    "antecedent_line": 5
+   },
+   {
+    "line": 10,
+    "expression": "Every one of the ten thousand",
+    "kind": "quantifier",
+    "antecedent_line": 5
+   },
+   {
+    "line": 10,
+    "expression": "first",
+    "kind": "contrast",
+    "antecedent_line": 15
+   },
+   {
+    "line": 11,
+    "expression": "The portrait on them",
+    "kind": "backward",
+    "antecedent_line": 5
+   },
+   {
+    "line": 11,
+    "expression": "still in existence",
+    "kind": "contrast",
+    "antecedent_line": 1
+   },
+   {
+    "line": 12,
+    "expression": "the marks",
+    "kind": "backward",
+    "antecedent_line": 12
+   },
+   {
+    "line": 12,
+    "expression": "the way each one left",
+    "kind": "quantifier",
+    "antecedent_line": 5
+   },
+   {
+    "line": 13,
+    "expression": "any of it",
+    "kind": "backward",
+    "antecedent_line": 12
+   },
+   {
+    "line": 13,
+    "expression": "The names",
+    "kind": "backward",
+    "antecedent_line": null
+   },
+   {
+    "line": 13,
+    "expression": "afterwards",
+    "kind": "contrast",
+    "antecedent_line": 12
+   },
+   {
+    "line": 13,
+    "expression": "the collectors",
+    "kind": "backward",
+    "antecedent_line": null
+   },
+   {
+    "line": 14,
+    "expression": "More than half the set",
+    "kind": "quantifier",
+    "antecedent_line": 5
+   },
+   {
+    "line": 14,
+    "expression": "the rest",
+    "kind": "quantifier",
+    "antecedent_line": 14
+   },
+   {
+    "line": 14,
+    "expression": "no mark at all",
+    "kind": "backward",
+    "antecedent_line": 12
+   },
+   {
+    "line": 15,
+    "expression": "Then",
+    "kind": "contrast",
+    "antecedent_line": 10
+   },
+   {
+    "line": 15,
+    "expression": "them",
+    "kind": "backward",
+    "antecedent_line": 5
+   },
+   {
+    "line": 16,
+    "expression": "Each photograph",
+    "kind": "quantifier",
+    "antecedent_line": 10
+   },
+   {
+    "line": 17,
+    "expression": "The block",
+    "kind": "backward",
+    "antecedent_line": 15
+   },
+   {
+    "line": 18,
+    "expression": "An ingot",
+    "kind": "backward",
+    "antecedent_line": 15
+   },
+   {
+    "line": 19,
+    "expression": "all ten thousand",
+    "kind": "quantifier",
+    "antecedent_line": 5
+   },
+   {
+    "line": 20,
+    "expression": "The set",
+    "kind": "backward",
+    "antecedent_line": 5
+   },
+   {
+    "line": 20,
+    "expression": "It stops at 1982",
+    "kind": "backward",
+    "antecedent_line": 5
+   },
+   {
+    "line": 20,
+    "expression": "the penny stopped being copper",
+    "kind": "contrast",
+    "antecedent_line": 3
+   },
+   {
+    "line": 21,
+    "expression": "Only one of the years it misses",
+    "kind": "quantifier",
+    "antecedent_line": null
+   },
+   {
+    "line": 22,
+    "expression": "edges",
+    "kind": "backward",
+    "antecedent_line": 20
+   },
+   {
+    "line": 23,
+    "expression": "The project",
+    "kind": "backward",
+    "antecedent_line": 5
+   },
+   {
+    "line": 23,
+    "expression": "this",
+    "kind": "backward",
+    "antecedent_line": 9
+   },
+   {
+    "line": 24,
+    "expression": "Its value",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 24,
+    "expression": "continue to be redefined",
+    "kind": "contrast",
+    "antecedent_line": 4
+   },
+   {
+    "line": 24,
+    "expression": "this digitally scarce set",
+    "kind": "backward",
+    "antecedent_line": 19
+   },
+   {
+    "line": 24,
+    "expression": "the block that encapsulates their transformation",
+    "kind": "backward",
+    "antecedent_line": 17
+   }
+  ],
+  "instances": [
+   {
+    "lines": [
+     13
+    ],
+    "claim": "This tells me that the coins were given names, and that there was a body of collectors whose votes produced them.",
+    "why": "The definite phrases \"The names\" and \"the collectors\" both point back to things the draft never introduces: line 12 lists marks (verdigris, abrasion, a fingerprint), not names, and no line before 13 establishes that anything was named or that any collector community existed. \"No algorithm assigned any of it\" sets up a contrast with a human naming process that has been cut, so the second half of the line refers to a premise no longer in the piece.",
+    "confidence": "high"
+   },
+   {
+    "lines": [
+     21
+    ],
+    "claim": "This tells me that the set is organised by year and that it has gaps inside its range, of which 1943 is one.",
+    "why": "\"The years it misses\" is a partitive over a bounded collection of absent years, but the only edge the draft establishes is line 20's upper cutoff at 1982; nothing says the coins are dated year by year or that any year before 1982 is absent, so a missing 1943 is not licensed by anything in the draft.",
+    "confidence": "medium"
+   }
+  ],
+  "strongest": 13
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"inventory\": [\n    {\"line\": 2, \"expression\": \"it\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 3, \"expression\": \"Those made before 1983\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 3, \"expression\": \"that copper\", \"kind\": \"backward\", \"antecedent_line\": 3},\n    {\"line\": 4, \"expression\": \"Three valuations\", \"kind\": \"quantifier\", \"antecedent_line\": 3},\n    {\"line\": 4, \"expression\": \"none of them\", \"kind\": \"quantifier\", \"antecedent_line\": 4},\n    {\"line\": 4, \"expression\": \"the same small object\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 5, \"expression\": \"those discrepancies\", \"kind\": \"backward\", \"antecedent_line\": 4},\n    {\"line\": 6, \"expression\": \"He\", \"kind\": \"backward\", \"antecedent_line\": 5},\n    {\"line\": 6, \"expression\": \"them\", \"kind\": \"backward\", \"antecedent_line\": 6},\n    {\"line\": 7, \"expression\": \"the same Beatles record\", \"kind\": \"backward\", \"antecedent_line\": 7},\n    {\"line\": 7, \"expression\": \"no two\", \"kind\": \"quantifier\", \"antecedent_line\": 7},\n    {\"line\": 8, \"expression\": \"Shown for two decades (elided subject)\", \"kind\": \"contrast\", \"antecedent_line\": 7},\n    {\"line\": 9, \"expression\": \"He\", \"kind\": \"backward\", \"antecedent_line\": 5},\n    {\"line\": 10, \"expression\": \"Every one of the ten thousand\", \"kind\": \"quantifier\", \"antecedent_line\": 5},\n    {\"line\": 10, \"expression\": \"first\", \"kind\": \"contrast\", \"antecedent_line\": 15},\n    {\"line\": 11, \"expression\": \"The portrait on them\", \"kind\": \"backward\", \"antecedent_line\": 5},\n    {\"line\": 11, \"expression\": \"still in existence\", \"kind\": \"contrast\", \"antecedent_line\": 1},\n    {\"line\": 12, \"expression\": \"the marks\", \"kind\": \"backward\", \"antecedent_line\": 12},\n    {\"line\": 12, \"expression\": \"the way each one left\", \"kind\": \"quantifier\", \"antecedent_line\": 5},\n    {\"line\": 13, \"expression\": \"any of it\", \"kind\": \"backward\", \"antecedent_line\": 12},\n    {\"line\": 13, \"expression\": \"The names\", \"kind\": \"backward\", \"antecedent_line\": null},\n    {\"line\": 13, \"expression\": \"afterwards\", \"kind\": \"contrast\", \"antecedent_line\": 12},\n    {\"line\": 13, \"expression\": \"the collectors\", \"kind\": \"backward\", \"antecedent_line\": null},\n    {\"line\": 14, \"expression\": \"More than half the set\", \"kind\": \"quantifier\", \"antecedent_line\": 5},\n    {\"line\": 14, \"expression\": \"the rest\", \"kind\": \"quantifier\", \"antecedent_line\": 14},\n    {\"line\": 14, \"expression\": \"no mark at all\", \"kind\": \"backward\", \"antecedent_line\": 12},\n    {\"line\": 15, \"expression\": \"Then\", \"kind\": \"contrast\", \"antecedent_line\": 10},\n    {\"line\": 15, \"expression\": \"them\", \"kind\": \"backward\", \"antecedent_line\": 5},\n    {\"line\": 16, \"expression\": \"Each photograph\", \"kind\": \"quantifier\", \"antecedent_line\": 10},\n    {\"line\": 17, \"expression\": \"The block\", \"kind\": \"backward\", \"antecedent_line\": 15},\n    {\"line\": 18, \"expression\": \"An ingot\", \"kind\": \"backward\", \"antecedent_line\": 15},\n    {\"line\": 19, \"expression\": \"all ten thousand\", \"kind\": \"quantifier\", \"antecedent_line\": 5},\n    {\"line\": 20, \"expression\": \"The set\", \"kind\": \"backward\", \"antecedent_line\": 5},\n    {\"line\": 20, \"expression\": \"It stops at 1982\", \"kind\": \"backward\", \"antecedent_line\": 5},\n    {\"line\": 20, \"expression\": \"the penny stopped being copper\", \"kind\": \"contrast\", \"antecedent_line\": 3},\n    {\"line\": 21, \"expression\": \"Only one of the years it misses\", \"kind\": \"quantifier\", \"antecedent_line\": null},\n    {\"line\": 22, \"expression\": \"edges\", \"kind\": \"backward\", \"antecedent_line\": 20},\n    {\"line\": 23, \"expression\": \"The project\", \"kind\": \"backward\", \"antecedent_line\": 5},\n    {\"line\": 23, \"expression\": \"this\", \"kind\": \"backward\", \"antecedent_line\": 9},\n    {\"line\": 24, \"expression\": \"Its value\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 24, \"expression\": \"continue to be redefined\", \"kind\": \"contrast\", \"antecedent_line\": 4},\n    {\"line\": 24, \"expression\": \"this digitally scarce set\", \"kind\": \"backward\", \"antecedent_line\": 19},\n    {\"line\": 24, \"expression\": \"the block that encapsulates their trans"
+}

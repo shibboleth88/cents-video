@@ -1,0 +1,26 @@
+{
+ "relation": "synonym-repetition",
+ "case": "dangling-premise-remained",
+ "version": "after",
+ "rep": 3,
+ "seconds": 35.4,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     16,
+     17,
+     18
+    ],
+    "claim": "This tells me that the work's value is continually redefined \u2014 and then tells me again, and then once more.",
+    "why": "Line 16 ends the five-transformation list with \"continually redefined\"; line 17 asserts the same thing as a general property (\"indeterminate and continually redefined\" is just the predicates of 15 and 16 restated), and line 18 asserts it a third time as \"an ongoing process of redefinition\" \u2014 all three in the register of what happens to the value, with the root \"redefin-\" repeated verbatim. None of the three adds the object, the viewer, or the form; line 20 already carries the form register (\"a becoming... through the actions of its participants\"), and line 19 already carries the object register, so 17 and 18 are the words between them, not the argument. Keep 20 and cut 17 and 18; if one summary line is wanted before 19, keep 18 for naming the agent, but not both.",
+    "confidence": "high"
+   }
+  ],
+  "strongest": 17
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [16, 17, 18],\n      \"claim\": \"This tells me that the work's value is continually redefined \u2014 and then tells me again, and then once more.\",\n      \"why\": \"Line 16 ends the five-transformation list with \\\"continually redefined\\\"; line 17 asserts the same thing as a general property (\\\"indeterminate and continually redefined\\\" is just the predicates of 15 and 16 restated), and line 18 asserts it a third time as \\\"an ongoing process of redefinition\\\" \u2014 all three in the register of what happens to the value, with the root \\\"redefin-\\\" repeated verbatim. None of the three adds the object, the viewer, or the form; line 20 already carries the form register (\\\"a becoming... through the actions of its participants\\\"), and line 19 already carries the object register, so 17 and 18 are the words between them, not the argument. Keep 20 and cut 17 and 18; if one summary line is wanted before 19, keep 18 for naming the agent, but not both.\",\n      \"confidence\": \"high\"\n    }\n  ],\n  \"strongest\": 17\n}"
+}

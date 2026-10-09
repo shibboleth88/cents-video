@@ -1,0 +1,15 @@
+{
+ "relation": "synonym-repetition",
+ "case": "clean-introduction",
+ "version": "only",
+ "rep": 3,
+ "seconds": 32.6,
+ "exit": 0,
+ "verdict": {
+  "verdict": "NONE",
+  "instances": [],
+  "strongest": null
+ },
+ "malformed": null,
+ "raw": "{\"verdict\": \"NONE\", \"instances\": [], \"strongest\": null}"
+}

@@ -46,3 +46,36 @@ case the finding is about the output contract, not about the relations.
   known-findable problems, and is an upper bound.
 - n=4 cases. Nothing here supports a confident percentage; it supports
   "deployable / not deployable / needs a different contract".
+
+---
+
+# Predictions for reviewer run 2
+
+Changes since run 1: `dangling-premise` rewritten as an enumerate-then-judge
+sweep with a required `inventory` field and two explicit out-of-scope cases;
+`order-causation` replaced by the narrower `invented-motive`; three clean drafts
+added. Key re-adjudicated, 33 cells, zero arguable.
+
+1. **dangling-premise recall goes 3/5 -> 5/5.** The misses were both the
+   quantifier case, and the sweep now forces every quantifier to be listed with
+   its antecedent or `none`. If recall does not improve, the diagnosis was wrong
+   and the problem is not that the reviewer skipped the case.
+2. **dangling-premise precision goes 0/3 -> at least 4/6.** The sole false
+   positive family was *"Yet, here we are"*, now named as out of scope with a
+   worked example. Residual risk: it finds a new fixation instead.
+3. **invented-motive recall at least 5/7, precision at least 3/4.** Run 1's
+   wider reviewer already flagged the `Chang initiated` pair once unprompted, so
+   the instance is findable; the narrow definition should make it findable
+   consistently.
+4. **synonym-repetition is unchanged, so recall should reproduce at 6/6.** Any
+   deviation is run-to-run variance in the reviewer, not a prompt effect, and
+   would mean single runs cannot be compared at all. Precision now has 5 cells;
+   predict at least 4/5, the known false positive being `brenner/before`.
+5. **At most 2 malformed reviews.** The new required `inventory` field is the
+   risk: a reviewer that omits it is recorded as malformed rather than clean.
+
+## Falsifier for the whole exercise, restated
+
+If `dangling-premise` recall does not improve, prompt-level fixes do not address
+blindness to a sub-case, and the honest conclusion is that relational review
+needs a different mechanism than a better-written reviewer.

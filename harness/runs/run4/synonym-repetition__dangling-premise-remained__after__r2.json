@@ -1,0 +1,26 @@
+{
+ "relation": "synonym-repetition",
+ "case": "dangling-premise-remained",
+ "version": "after",
+ "rep": 2,
+ "seconds": 30.9,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     16,
+     17,
+     18
+    ],
+    "claim": "This tells me that the work's value is continually redefined, and then tells me again twice with nothing added.",
+    "why": "Line 16 closes the five-transformations list with the mechanism of ongoing redefinition (decentralized consensus); line 17 states the same conclusion in the same register with the same word root ('continually redefined'), and line 18 states it once more with Chang as grammatical subject but no new level of operation \u2014 the artist's initiating agency is already given by lines 1 and 11. Keep 16, which carries the mechanism; 17 and 18 are the same point in other words, and line 20 already supplies the form and participant registers that these two lack.",
+    "confidence": "high"
+   }
+  ],
+  "strongest": 17
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [16, 17, 18],\n      \"claim\": \"This tells me that the work's value is continually redefined, and then tells me again twice with nothing added.\",\n      \"why\": \"Line 16 closes the five-transformations list with the mechanism of ongoing redefinition (decentralized consensus); line 17 states the same conclusion in the same register with the same word root ('continually redefined'), and line 18 states it once more with Chang as grammatical subject but no new level of operation \u2014 the artist's initiating agency is already given by lines 1 and 11. Keep 16, which carries the mechanism; 17 and 18 are the same point in other words, and line 20 already supplies the form and participant registers that these two lack.\",\n      \"confidence\": \"high\"\n    }\n  ],\n  \"strongest\": 17\n}"
+}

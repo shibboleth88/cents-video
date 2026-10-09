@@ -1,0 +1,159 @@
+{
+ "relation": "dangling-premise",
+ "case": "dangling-premise-set",
+ "version": "before",
+ "rep": 1,
+ "seconds": 60.3,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     11,
+     19
+    ],
+    "claim": "This tells me that Chang produced a fixed, countable group of Cent objects that started out the same as each other and have since diverged through handling.",
+    "why": "Both 'Every Cent' and 'Each object, initially identical' quantify over a bounded collection of the work's own objects with fixed membership, and no line introduces one \u2014 line 5 names a kind of thing (a readymade) and line 6 counts all Lincoln cents ever minted, which is the mint's population, not Chang's. Without that set the population claims ('every', 'each', 'initially identical') have nothing to range over, so the five-transformation structure and the divergence-through-touch claim both rest on a group the draft never put on screen.",
+    "confidence": "high"
+   }
+  ],
+  "strongest": 11,
+  "inventory": [
+   {
+    "line": 2,
+    "expression": "as copper",
+    "kind": "contrast",
+    "antecedent_line": 2
+   },
+   {
+    "line": 4,
+    "expression": "Yet",
+    "kind": "contrast",
+    "antecedent_line": 3
+   },
+   {
+    "line": 4,
+    "expression": "remained",
+    "kind": "contrast",
+    "antecedent_line": 3
+   },
+   {
+    "line": 4,
+    "expression": "the object",
+    "kind": "backward",
+    "antecedent_line": 2
+   },
+   {
+    "line": 4,
+    "expression": "its context",
+    "kind": "backward",
+    "antecedent_line": 4
+   },
+   {
+    "line": 5,
+    "expression": "The readymade he chose",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 6,
+    "expression": "each carrying Victor David Brenner's portrait",
+    "kind": "quantifier",
+    "antecedent_line": 6
+   },
+   {
+    "line": 9,
+    "expression": "Yet, here we are",
+    "kind": "contrast",
+    "antecedent_line": 8
+   },
+   {
+    "line": 10,
+    "expression": "He",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 10,
+    "expression": "to it",
+    "kind": "backward",
+    "antecedent_line": 5
+   },
+   {
+    "line": 11,
+    "expression": "Every Cent",
+    "kind": "quantifier",
+    "antecedent_line": null
+   },
+   {
+    "line": 12,
+    "expression": "In circulation, value defined by the Treasury",
+    "kind": "backward",
+    "antecedent_line": 2
+   },
+   {
+    "line": 13,
+    "expression": "Removed from circulation",
+    "kind": "contrast",
+    "antecedent_line": 12
+   },
+   {
+    "line": 13,
+    "expression": "that assignment",
+    "kind": "backward",
+    "antecedent_line": 12
+   },
+   {
+    "line": 14,
+    "expression": "the image",
+    "kind": "backward",
+    "antecedent_line": 14
+   },
+   {
+    "line": 15,
+    "expression": "its value",
+    "kind": "backward",
+    "antecedent_line": 11
+   },
+   {
+    "line": 16,
+    "expression": "continually redefined",
+    "kind": "contrast",
+    "antecedent_line": 15
+   },
+   {
+    "line": 17,
+    "expression": "Its value and meaning",
+    "kind": "backward",
+    "antecedent_line": 11
+   },
+   {
+    "line": 18,
+    "expression": "an ongoing process of redefinition",
+    "kind": "backward",
+    "antecedent_line": 17
+   },
+   {
+    "line": 19,
+    "expression": "Each object, initially identical",
+    "kind": "quantifier",
+    "antecedent_line": null
+   },
+   {
+    "line": 19,
+    "expression": "the marks of touch and time",
+    "kind": "backward",
+    "antecedent_line": null
+   },
+   {
+    "line": 20,
+    "expression": "its participants",
+    "kind": "backward",
+    "antecedent_line": 19
+   }
+  ]
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [11, 19],\n      \"claim\": \"This tells me that Chang produced a fixed, countable group of Cent objects that started out the same as each other and have since diverged through handling.\",\n      \"why\": \"Both 'Every Cent' and 'Each object, initially identical' quantify over a bounded collection of the work's own objects with fixed membership, and no line introduces one \u2014 line 5 names a kind of thing (a readymade) and line 6 counts all Lincoln cents ever minted, which is the mint's population, not Chang's. Without that set the population claims ('every', 'each', 'initially identical') have nothing to range over, so the five-transformation structure and the divergence-through-touch claim both rest on a group the draft never put on screen.\",\n      \"confidence\": \"high\"\n    }\n  ],\n  \"strongest\": 11,\n  \"inventory\": [\n    {\"line\": 2, \"expression\": \"as copper\", \"kind\": \"contrast\", \"antecedent_line\": 2},\n    {\"line\": 4, \"expression\": \"Yet\", \"kind\": \"contrast\", \"antecedent_line\": 3},\n    {\"line\": 4, \"expression\": \"remained\", \"kind\": \"contrast\", \"antecedent_line\": 3},\n    {\"line\": 4, \"expression\": \"the object\", \"kind\": \"backward\", \"antecedent_line\": 2},\n    {\"line\": 4, \"expression\": \"its context\", \"kind\": \"backward\", \"antecedent_line\": 4},\n    {\"line\": 5, \"expression\": \"The readymade he chose\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 6, \"expression\": \"each carrying Victor David Brenner's portrait\", \"kind\": \"quantifier\", \"antecedent_line\": 6},\n    {\"line\": 9, \"expression\": \"Yet, here we are\", \"kind\": \"contrast\", \"antecedent_line\": 8},\n    {\"line\": 10, \"expression\": \"He\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 10, \"expression\": \"to it\", \"kind\": \"backward\", \"antecedent_line\": 5},\n    {\"line\": 11, \"expression\": \"Every Cent\", \"kind\": \"quantifier\", \"antecedent_line\": null},\n    {\"line\": 12, \"expression\": \"In circulation, value defined by the Treasury\", \"kind\": \"backward\", \"antecedent_line\": 2},\n    {\"line\": 13, \"expression\": \"Removed from circulation\", \"kind\": \"contrast\", \"antecedent_line\": 12},\n    {\"line\": 13, \"expression\": \"that assignment\", \"kind\": \"backward\", \"antecedent_line\": 12},\n    {\"line\": 14, \"expression\": \"the image\", \"kind\": \"backward\", \"antecedent_line\": 14},\n    {\"line\": 15, \"expression\": \"its value\", \"kind\": \"backward\", \"antecedent_line\": 11},\n    {\"line\": 16, \"expression\": \"continually redefined\", \"kind\": \"contrast\", \"antecedent_line\": 15},\n    {\"line\": 17, \"expression\": \"Its value and meaning\", \"kind\": \"backward\", \"antecedent_line\": 11},\n    {\"line\": 18, \"expression\": \"an ongoing process of redefinition\", \"kind\": \"backward\", \"antecedent_line\": 17},\n    {\"line\": 19, \"expression\": \"Each object, initially identical\", \"kind\": \"quantifier\", \"antecedent_line\": null},\n    {\"line\": 19, \"expression\": \"the marks of touch and time\", \"kind\": \"backward\", \"antecedent_line\": null},\n    {\"line\": 20, \"expression\": \"its participants\", \"kind\": \"backward\", \"antecedent_line\": 19}\n  ]\n}"
+}

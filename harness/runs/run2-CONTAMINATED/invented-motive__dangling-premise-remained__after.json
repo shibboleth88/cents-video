@@ -1,0 +1,14 @@
+{
+ "relation": "invented-motive",
+ "case": "dangling-premise-remained",
+ "version": "after",
+ "seconds": 31.0,
+ "exit": 0,
+ "verdict": {
+  "verdict": "NONE",
+  "instances": [],
+  "strongest": null
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"NONE\",\n  \"instances\": [],\n  \"strongest\": null\n}"
+}

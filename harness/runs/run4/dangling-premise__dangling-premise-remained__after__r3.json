@@ -1,0 +1,209 @@
+{
+ "relation": "dangling-premise",
+ "case": "dangling-premise-remained",
+ "version": "after",
+ "rep": 3,
+ "seconds": 94.5,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     11,
+     19
+    ],
+    "claim": "This tells me that CENTS comprises a definite, countable set of cent-objects \u2014 a fixed membership, identical at the start, now dispersed \u2014 and that the film has already shown me what that set is.",
+    "why": "Both lines quantify over a bounded collection ('Every Cent', 'Each object, initially identical'), but the only collection the draft ever bounds is the 500 billion minted Lincoln cents at line 6, which cannot be the set that is removed from circulation, destroyed and inscribed on Bitcoin; no line introduces the project's own set of objects or fixes its membership, so 'initially identical' is a claim about a population the draft never names.",
+    "confidence": "high"
+   },
+   {
+    "lines": [
+     20
+    ],
+    "claim": "This tells me that CENTS has participants \u2014 people other than Chang who hold and act on the objects \u2014 whom the film has introduced.",
+    "why": "'its participants' is a definite plural arriving with no prior mention of anyone but Chang; line 19's 'marks of touch' gestures at handling but names no one, so the agents the closing line turns the whole work over to have never entered the piece.",
+    "confidence": "low"
+   }
+  ],
+  "strongest": 11,
+  "inventory": [
+   {
+    "line": 2,
+    "expression": "the Treasury",
+    "kind": "backward",
+    "antecedent_line": null
+   },
+   {
+    "line": 2,
+    "expression": "About two and a half as copper",
+    "kind": "contrast",
+    "antecedent_line": 2
+   },
+   {
+    "line": 3,
+    "expression": "Chang",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 3,
+    "expression": "a single cent",
+    "kind": "backward",
+    "antecedent_line": 2
+   },
+   {
+    "line": 4,
+    "expression": "Yet",
+    "kind": "contrast",
+    "antecedent_line": 3
+   },
+   {
+    "line": 4,
+    "expression": "the object",
+    "kind": "backward",
+    "antecedent_line": 2
+   },
+   {
+    "line": 4,
+    "expression": "remained",
+    "kind": "contrast",
+    "antecedent_line": 3
+   },
+   {
+    "line": 4,
+    "expression": "its context",
+    "kind": "backward",
+    "antecedent_line": 4
+   },
+   {
+    "line": 5,
+    "expression": "he",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 5,
+    "expression": "The readymade he chose",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 6,
+    "expression": "each carrying Victor David Brenner's portrait",
+    "kind": "quantifier",
+    "antecedent_line": 6
+   },
+   {
+    "line": 7,
+    "expression": "dissolve into worthlessness",
+    "kind": "backward",
+    "antecedent_line": 3
+   },
+   {
+    "line": 9,
+    "expression": "Yet, here we are",
+    "kind": "contrast",
+    "antecedent_line": 8
+   },
+   {
+    "line": 10,
+    "expression": "He",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 10,
+    "expression": "to it",
+    "kind": "backward",
+    "antecedent_line": 5
+   },
+   {
+    "line": 11,
+    "expression": "Every Cent",
+    "kind": "quantifier",
+    "antecedent_line": null
+   },
+   {
+    "line": 12,
+    "expression": "In circulation",
+    "kind": "backward",
+    "antecedent_line": 11
+   },
+   {
+    "line": 12,
+    "expression": "the Treasury",
+    "kind": "backward",
+    "antecedent_line": 2
+   },
+   {
+    "line": 13,
+    "expression": "Removed from circulation",
+    "kind": "contrast",
+    "antecedent_line": 12
+   },
+   {
+    "line": 13,
+    "expression": "that assignment",
+    "kind": "backward",
+    "antecedent_line": 12
+   },
+   {
+    "line": 14,
+    "expression": "the image",
+    "kind": "backward",
+    "antecedent_line": 14
+   },
+   {
+    "line": 15,
+    "expression": "its value",
+    "kind": "backward",
+    "antecedent_line": 11
+   },
+   {
+    "line": 16,
+    "expression": "Inscribed on Bitcoin",
+    "kind": "backward",
+    "antecedent_line": 11
+   },
+   {
+    "line": 17,
+    "expression": "Its value and meaning",
+    "kind": "backward",
+    "antecedent_line": 11
+   },
+   {
+    "line": 17,
+    "expression": "continually redefined",
+    "kind": "continuation",
+    "antecedent_line": 16
+   },
+   {
+    "line": 18,
+    "expression": "an ongoing process of redefinition",
+    "kind": "backward",
+    "antecedent_line": 17
+   },
+   {
+    "line": 19,
+    "expression": "Each object, initially identical",
+    "kind": "quantifier",
+    "antecedent_line": null
+   },
+   {
+    "line": 20,
+    "expression": "unfolds continually",
+    "kind": "continuation",
+    "antecedent_line": 18
+   },
+   {
+    "line": 20,
+    "expression": "its participants",
+    "kind": "backward",
+    "antecedent_line": null
+   }
+  ]
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [11, 19],\n      \"claim\": \"This tells me that CENTS comprises a definite, countable set of cent-objects \u2014 a fixed membership, identical at the start, now dispersed \u2014 and that the film has already shown me what that set is.\",\n      \"why\": \"Both lines quantify over a bounded collection ('Every Cent', 'Each object, initially identical'), but the only collection the draft ever bounds is the 500 billion minted Lincoln cents at line 6, which cannot be the set that is removed from circulation, destroyed and inscribed on Bitcoin; no line introduces the project's own set of objects or fixes its membership, so 'initially identical' is a claim about a population the draft never names.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"lines\": [20],\n      \"claim\": \"This tells me that CENTS has participants \u2014 people other than Chang who hold and act on the objects \u2014 whom the film has introduced.\",\n      \"why\": \"'its participants' is a definite plural arriving with no prior mention of anyone but Chang; line 19's 'marks of touch' gestures at handling but names no one, so the agents the closing line turns the whole work over to have never entered the piece.\",\n      \"confidence\": \"low\"\n    }\n  ],\n  \"strongest\": 11,\n  \"inventory\": [\n    {\"line\": 2, \"expression\": \"the Treasury\", \"kind\": \"backward\", \"antecedent_line\": null},\n    {\"line\": 2, \"expression\": \"About two and a half as copper\", \"kind\": \"contrast\", \"antecedent_line\": 2},\n    {\"line\": 3, \"expression\": \"Chang\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 3, \"expression\": \"a single cent\", \"kind\": \"backward\", \"antecedent_line\": 2},\n    {\"line\": 4, \"expression\": \"Yet\", \"kind\": \"contrast\", \"antecedent_line\": 3},\n    {\"line\": 4, \"expression\": \"the object\", \"kind\": \"backward\", \"antecedent_line\": 2},\n    {\"line\": 4, \"expression\": \"remained\", \"kind\": \"contrast\", \"antecedent_line\": 3},\n    {\"line\": 4, \"expression\": \"its context\", \"kind\": \"backward\", \"antecedent_line\": 4},\n    {\"line\": 5, \"expression\": \"he\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 5, \"expression\": \"The readymade he chose\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 6, \"expression\": \"each carrying Victor David Brenner's portrait\", \"kind\": \"quantifier\", \"antecedent_line\": 6},\n    {\"line\": 7, \"expression\": \"dissolve into worthlessness\", \"kind\": \"backward\", \"antecedent_line\": 3},\n    {\"line\": 9, \"expression\": \"Yet, here we are\", \"kind\": \"contrast\", \"antecedent_line\": 8},\n    {\"line\": 10, \"expression\": \"He\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 10, \"expression\": \"to it\", \"kind\": \"backward\", \"antecedent_line\": 5},\n    {\"line\": 11, \"expression\": \"Every Cent\", \"kind\": \"quantifier\", \"antecedent_line\": null},\n    {\"line\": 12, \"expression\": \"In circulation\", \"kind\": \"backward\", \"antecedent_line\": 11},\n    {\"line\": 12, \"expression\": \"the Treasury\", \"kind\": \"backward\", \"antecedent_line\": 2},\n    {\"line\": 13, \"expression\": \"Removed from circulation\", \"kind\": \"contrast\", \"antecedent_line\": 12},\n    {\"line\": 13, \"expression\": \"that assignment\", \"kind\": \"backward\", \"antecedent_line\": 12},\n    {\"line\": 14, \"expression\": \"the image\", \"kind\": \"backward\", \"antecedent_line\": 14},\n    {\"line\": 15, \"expression\": \"its value\", \"kind\": \"backward\", \"antecedent_line\": 11},\n    {\"line\": 16, \"expression\": \"Inscribed on Bitcoin\", \"kind\": \"backward\", \"antecedent_line\": 11},\n    {\"line\": 17, \"expression\": \"Its value and meaning\", \"kind\": \"backward\", \"antecedent_line\": 11},\n    {\"line\": 17, \"expression\": \"continually redefined\", \"kind\": \"continuation\", \"antecedent_line\": 16},\n    {\"line\": 18, \"expression\": \"an ongoing process of redefinition\", \"kind\": \"backward\", \"antecedent_line\": 17},\n    {\"line\": 19, \"expression\": \"Each object, initially identical\", \"kind\": \"quantifier\", \"antecedent_line\": null},\n    {\"line\": 20, \"expression\": \"unfolds continually\", \"kind\": \"continuation\", \"antecedent_line\": 18},\n    {\"line\": 20, \"expression\": \"its participants\", "
+}

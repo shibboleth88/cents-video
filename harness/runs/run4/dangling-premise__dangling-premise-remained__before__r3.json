@@ -1,0 +1,180 @@
+{
+ "relation": "dangling-premise",
+ "case": "dangling-premise-remained",
+ "version": "before",
+ "rep": 3,
+ "seconds": 111.5,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "inventory": [
+   {
+    "line": 2,
+    "expression": "About two and a half as copper",
+    "kind": "quantifier",
+    "antecedent_line": 2
+   },
+   {
+    "line": 3,
+    "expression": "he chose",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 3,
+    "expression": "The readymade",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 4,
+    "expression": "each carrying Victor David Brenner's portrait",
+    "kind": "quantifier",
+    "antecedent_line": 4
+   },
+   {
+    "line": 5,
+    "expression": "The object",
+    "kind": "backward",
+    "antecedent_line": 3
+   },
+   {
+    "line": 5,
+    "expression": "remained",
+    "kind": "contrast",
+    "antecedent_line": null
+   },
+   {
+    "line": 5,
+    "expression": "buoyed into physicality",
+    "kind": "contrast",
+    "antecedent_line": null
+   },
+   {
+    "line": 5,
+    "expression": "its context",
+    "kind": "backward",
+    "antecedent_line": 2
+   },
+   {
+    "line": 8,
+    "expression": "Yet, here we are",
+    "kind": "contrast",
+    "antecedent_line": 7
+   },
+   {
+    "line": 9,
+    "expression": "He",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 9,
+    "expression": "to it",
+    "kind": "backward",
+    "antecedent_line": 3
+   },
+   {
+    "line": 10,
+    "expression": "Every Cent",
+    "kind": "quantifier",
+    "antecedent_line": null
+   },
+   {
+    "line": 11,
+    "expression": "In circulation",
+    "kind": "contrast",
+    "antecedent_line": 10
+   },
+   {
+    "line": 12,
+    "expression": "Removed from circulation",
+    "kind": "contrast",
+    "antecedent_line": 11
+   },
+   {
+    "line": 12,
+    "expression": "that assignment",
+    "kind": "backward",
+    "antecedent_line": 11
+   },
+   {
+    "line": 13,
+    "expression": "what the image holds",
+    "kind": "backward",
+    "antecedent_line": 13
+   },
+   {
+    "line": 14,
+    "expression": "its value",
+    "kind": "backward",
+    "antecedent_line": 10
+   },
+   {
+    "line": 16,
+    "expression": "The assigned value",
+    "kind": "backward",
+    "antecedent_line": 11
+   },
+   {
+    "line": 16,
+    "expression": "the object",
+    "kind": "backward",
+    "antecedent_line": 5
+   },
+   {
+    "line": 17,
+    "expression": "Its value and meaning",
+    "kind": "backward",
+    "antecedent_line": 16
+   },
+   {
+    "line": 18,
+    "expression": "an ongoing process of redefinition",
+    "kind": "backward",
+    "antecedent_line": 17
+   },
+   {
+    "line": 19,
+    "expression": "Each object, initially identical",
+    "kind": "quantifier",
+    "antecedent_line": null
+   },
+   {
+    "line": 19,
+    "expression": "the marks of touch and time",
+    "kind": "backward",
+    "antecedent_line": null
+   },
+   {
+    "line": 20,
+    "expression": "its participants",
+    "kind": "backward",
+    "antecedent_line": null
+   }
+  ],
+  "instances": [
+   {
+    "lines": [
+     5
+    ],
+    "claim": "This tells me that the object had already been shown losing its physical existence, and that some force was pulling it out of physicality for its context to hold it in.",
+    "why": "\"Remained\" and \"buoyed into physicality\" both push against a prior state of threatened or lost materiality, and nothing in lines 1-4 establishes one: those lines give a value discrepancy, a readymade, and a production count. The only dematerialization in the draft (destruction, inscription on Bitcoin) arrives at lines 14-15, after the line that presupposes it.",
+    "confidence": "high"
+   },
+   {
+    "lines": [
+     10,
+     19,
+     20
+    ],
+    "claim": "This tells me that Chang produced a fixed, countable set of cent objects and placed them in the hands of participants who hold and handle them.",
+    "why": "\"Every Cent\", \"Each object, initially identical\" and \"its participants\" all quantify over or point into a bounded collection of Chang's objects and its holders, but the only collection the draft introduces is the 500 billion circulating Lincoln cents of line 4 \u2014 which is not a set that gets photographed, destroyed and inscribed \u2014 and no participant other than Chang is ever named. One cut premise about an edition given to people leaves all three expressions pointing at nothing.",
+    "confidence": "high"
+   }
+  ],
+  "strongest": 5
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"inventory\": [\n    {\"line\": 2, \"expression\": \"About two and a half as copper\", \"kind\": \"quantifier\", \"antecedent_line\": 2},\n    {\"line\": 3, \"expression\": \"he chose\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 3, \"expression\": \"The readymade\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 4, \"expression\": \"each carrying Victor David Brenner's portrait\", \"kind\": \"quantifier\", \"antecedent_line\": 4},\n    {\"line\": 5, \"expression\": \"The object\", \"kind\": \"backward\", \"antecedent_line\": 3},\n    {\"line\": 5, \"expression\": \"remained\", \"kind\": \"contrast\", \"antecedent_line\": null},\n    {\"line\": 5, \"expression\": \"buoyed into physicality\", \"kind\": \"contrast\", \"antecedent_line\": null},\n    {\"line\": 5, \"expression\": \"its context\", \"kind\": \"backward\", \"antecedent_line\": 2},\n    {\"line\": 8, \"expression\": \"Yet, here we are\", \"kind\": \"contrast\", \"antecedent_line\": 7},\n    {\"line\": 9, \"expression\": \"He\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 9, \"expression\": \"to it\", \"kind\": \"backward\", \"antecedent_line\": 3},\n    {\"line\": 10, \"expression\": \"Every Cent\", \"kind\": \"quantifier\", \"antecedent_line\": null},\n    {\"line\": 11, \"expression\": \"In circulation\", \"kind\": \"contrast\", \"antecedent_line\": 10},\n    {\"line\": 12, \"expression\": \"Removed from circulation\", \"kind\": \"contrast\", \"antecedent_line\": 11},\n    {\"line\": 12, \"expression\": \"that assignment\", \"kind\": \"backward\", \"antecedent_line\": 11},\n    {\"line\": 13, \"expression\": \"what the image holds\", \"kind\": \"backward\", \"antecedent_line\": 13},\n    {\"line\": 14, \"expression\": \"its value\", \"kind\": \"backward\", \"antecedent_line\": 10},\n    {\"line\": 16, \"expression\": \"The assigned value\", \"kind\": \"backward\", \"antecedent_line\": 11},\n    {\"line\": 16, \"expression\": \"the object\", \"kind\": \"backward\", \"antecedent_line\": 5},\n    {\"line\": 17, \"expression\": \"Its value and meaning\", \"kind\": \"backward\", \"antecedent_line\": 16},\n    {\"line\": 18, \"expression\": \"an ongoing process of redefinition\", \"kind\": \"backward\", \"antecedent_line\": 17},\n    {\"line\": 19, \"expression\": \"Each object, initially identical\", \"kind\": \"quantifier\", \"antecedent_line\": null},\n    {\"line\": 19, \"expression\": \"the marks of touch and time\", \"kind\": \"backward\", \"antecedent_line\": null},\n    {\"line\": 20, \"expression\": \"its participants\", \"kind\": \"backward\", \"antecedent_line\": null}\n  ],\n  \"instances\": [\n    {\n      \"lines\": [5],\n      \"claim\": \"This tells me that the object had already been shown losing its physical existence, and that some force was pulling it out of physicality for its context to hold it in.\",\n      \"why\": \"\\\"Remained\\\" and \\\"buoyed into physicality\\\" both push against a prior state of threatened or lost materiality, and nothing in lines 1-4 establishes one: those lines give a value discrepancy, a readymade, and a production count. The only dematerialization in the draft (destruction, inscription on Bitcoin) arrives at lines 14-15, after the line that presupposes it.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"lines\": [10, 19, 20],\n      \"claim\": \"This tells me that Chang produced a fixed, countable set of cent objects and placed them in the hands of participants who hold and handle them.\",\n      \"why\": \"\\\"Every Cent\\\", \\\"Each object, initially identical\\\" and \\\"its participants\\\" all quantify over or point into a bounded collection of Chang's objects and its holders, but the only collection the draft introduces is the 500 billion circulating Lincoln cents of line 4 \u2014 which is not a set that gets photographed, destroyed and inscribed \u2014 and no participant other than Chang is ever named. One cut premise about an edition given to people leaves all three expressions pointing at nothing.\",\n      \"confidence\": \"high\"\n    }\n  ],\n  \"strongest\": 5\n}"
+}

@@ -1,0 +1,25 @@
+{
+ "relation": "synonym-repetition",
+ "case": "dangling-premise-set",
+ "version": "before",
+ "rep": 3,
+ "seconds": 36.1,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     17,
+     18
+    ],
+    "claim": "This tells me that the work's value is continually redefined \u2014 three times, in the same register, with the same word root.",
+    "why": "Line 16 already closes the five-transformation list with 'continually redefined by decentralized consensus'; 17 then states 'indeterminate and continually redefined' and 18 states 'an ongoing process of redefinition', and all three sit at the level of the work's value in the abstract \u2014 none moves to the object, the viewer, or the form. Line 20 does move (form: 'a becoming'; participants: 'actions of its participants'), so it is argument rather than padding, which leaves 17 and 18 as the restatements; I would keep 18, since naming Chang's initiation turns the list into an act and sets up 19\u201320.",
+    "confidence": "high"
+   }
+  ],
+  "strongest": 17
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [17, 18],\n      \"claim\": \"This tells me that the work's value is continually redefined \u2014 three times, in the same register, with the same word root.\",\n      \"why\": \"Line 16 already closes the five-transformation list with 'continually redefined by decentralized consensus'; 17 then states 'indeterminate and continually redefined' and 18 states 'an ongoing process of redefinition', and all three sit at the level of the work's value in the abstract \u2014 none moves to the object, the viewer, or the form. Line 20 does move (form: 'a becoming'; participants: 'actions of its participants'), so it is argument rather than padding, which leaves 17 and 18 as the restatements; I would keep 18, since naming Chang's initiation turns the list into an act and sets up 19\u201320.\",\n      \"confidence\": \"high\"\n    }\n  ],\n  \"strongest\": 17\n}"
+}

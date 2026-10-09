@@ -1,0 +1,15 @@
+{
+ "relation": "invented-motive",
+ "case": "clean-objecthood-bridge",
+ "version": "only",
+ "rep": 1,
+ "seconds": 23.0,
+ "exit": 0,
+ "verdict": {
+  "verdict": "NONE",
+  "instances": [],
+  "strongest": null
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"NONE\",\n  \"instances\": [],\n  \"strongest\": null\n}"
+}

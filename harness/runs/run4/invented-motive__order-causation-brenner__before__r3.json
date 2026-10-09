@@ -1,0 +1,25 @@
+{
+ "relation": "invented-motive",
+ "case": "order-causation-brenner",
+ "version": "before",
+ "rep": 3,
+ "seconds": 21.3,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     1,
+     2
+    ],
+    "claim": "This tells me that Rutherford Chang chose the penny because Brenner's Lincoln is the most reproduced artwork on Earth.",
+    "why": "Line 2 holds the decision expression ('chose', attributed to a person); line 1, immediately before it, states a property of the object (most reproduced artwork on Earth), and the deictic 'This is the readymade' binds the two so the property reads as the selection criterion. The draft states no reason, motive or origin for Chang's choice anywhere \u2014 lines 14\u201320 give an argument about commodification and objecthood for CENTS, not for his selection \u2014 so the sequence supplies the only motive on offer.",
+    "confidence": "high"
+   }
+  ],
+  "strongest": 2
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [1, 2],\n      \"claim\": \"This tells me that Rutherford Chang chose the penny because Brenner's Lincoln is the most reproduced artwork on Earth.\",\n      \"why\": \"Line 2 holds the decision expression ('chose', attributed to a person); line 1, immediately before it, states a property of the object (most reproduced artwork on Earth), and the deictic 'This is the readymade' binds the two so the property reads as the selection criterion. The draft states no reason, motive or origin for Chang's choice anywhere \u2014 lines 14\u201320 give an argument about commodification and objecthood for CENTS, not for his selection \u2014 so the sequence supplies the only motive on offer.\",\n      \"confidence\": \"high\"\n    }\n  ],\n  \"strongest\": 2\n}"
+}

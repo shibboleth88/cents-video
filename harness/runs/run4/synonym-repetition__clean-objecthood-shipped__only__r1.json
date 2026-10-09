@@ -1,0 +1,27 @@
+{
+ "relation": "synonym-repetition",
+ "case": "clean-objecthood-shipped",
+ "version": "only",
+ "rep": 1,
+ "seconds": 34.8,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     14,
+     15,
+     16,
+     17
+    ],
+    "claim": "This tells me that the cent's value has been made open-ended, undetermined and continually remade \u2014 the same point delivered four times.",
+    "why": "Lines 14 and 15 already establish the point in two distinct registers (object: the coin melted into an undefinable block; mechanism: value redefined by market consensus as the pieces trade), and 17 adds a third (form: what kind of thing CENTS is, a work that unfolds through its participants). Line 16's 'indeterminate value and emergent meaning' adds no fourth register \u2014 'indeterminate' is a synonym for 14's 'undefinable' and 'emergent' for 15's 'continually redefined' \u2014 so it reads as a restatement placed between two lines that already carry it. I would keep 17 as the closing statement and cut 16, salvaging only the 'cracks open the worthless one-cent coin' image if a bridge into 17 is needed.",
+    "confidence": "medium"
+   }
+  ],
+  "strongest": 16
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [14, 15, 16, 17],\n      \"claim\": \"This tells me that the cent's value has been made open-ended, undetermined and continually remade \u2014 the same point delivered four times.\",\n      \"why\": \"Lines 14 and 15 already establish the point in two distinct registers (object: the coin melted into an undefinable block; mechanism: value redefined by market consensus as the pieces trade), and 17 adds a third (form: what kind of thing CENTS is, a work that unfolds through its participants). Line 16's 'indeterminate value and emergent meaning' adds no fourth register \u2014 'indeterminate' is a synonym for 14's 'undefinable' and 'emergent' for 15's 'continually redefined' \u2014 so it reads as a restatement placed between two lines that already carry it. I would keep 17 as the closing statement and cut 16, salvaging only the 'cracks open the worthless one-cent coin' image if a bridge into 17 is needed.\",\n      \"confidence\": \"medium\"\n    }\n  ],\n  \"strongest\": 16\n}"
+}

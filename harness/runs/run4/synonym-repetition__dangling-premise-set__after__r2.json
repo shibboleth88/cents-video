@@ -1,0 +1,26 @@
+{
+ "relation": "synonym-repetition",
+ "case": "dangling-premise-set",
+ "version": "after",
+ "rep": 2,
+ "seconds": 44.4,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     17,
+     21,
+     22
+    ],
+    "claim": "This tells me that the work is never finished \u2014 its value and meaning keep being redefined \u2014 three times over, in one register each time.",
+    "why": "Line 17 states that Chang began an ongoing redefinition, line 21 states that value and meaning are continually redefined, and line 22 states that the work unfolds continually; all three make the claim at the same abstract level of the work's status, with the shared roots 'continually' and 'redefine' marking it, and none of them adds mechanism, object or audience beyond what line 16 already supplied with decentralized consensus. Keep 22, which at least names the form ('a becoming') and the participants; 21 is pure restatement of 17 and can go, and 17 is recoverable from the list at 11-16 that precedes it.",
+    "confidence": "high"
+   }
+  ],
+  "strongest": 21
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [17, 21, 22],\n      \"claim\": \"This tells me that the work is never finished \u2014 its value and meaning keep being redefined \u2014 three times over, in one register each time.\",\n      \"why\": \"Line 17 states that Chang began an ongoing redefinition, line 21 states that value and meaning are continually redefined, and line 22 states that the work unfolds continually; all three make the claim at the same abstract level of the work's status, with the shared roots 'continually' and 'redefine' marking it, and none of them adds mechanism, object or audience beyond what line 16 already supplied with decentralized consensus. Keep 22, which at least names the form ('a becoming') and the participants; 21 is pure restatement of 17 and can go, and 17 is recoverable from the list at 11-16 that precedes it.\",\n      \"confidence\": \"high\"\n    }\n  ],\n  \"strongest\": 21\n}"
+}

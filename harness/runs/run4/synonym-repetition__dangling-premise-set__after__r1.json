@@ -1,0 +1,26 @@
+{
+ "relation": "synonym-repetition",
+ "case": "dangling-premise-set",
+ "version": "after",
+ "rep": 1,
+ "seconds": 41.7,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     17,
+     21,
+     22
+    ],
+    "claim": "This tells me that the value and meaning of CENTS are never fixed but kept in continual redefinition \u2014 and then tells me the same thing twice more in different words.",
+    "why": "Line 17 opens the final section with the claim (an ongoing process of redefinition), line 21 closes it with the identical claim (indeterminate and continually redefined), and line 22 states it a third time as 'unfolds continually'; the shared roots ongoing/continually and redefinition/redefined mark the repetition, and line 16 has already supplied the one register that would justify a second pass (the mechanism \u2014 decentralized consensus). Of the three, only 22 adds a register of its own, naming the form of the work (a becoming) and its participants, so 17 and 21 are left restating it with no level of their own; keep 22.",
+    "confidence": "high"
+   }
+  ],
+  "strongest": 21
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [17, 21, 22],\n      \"claim\": \"This tells me that the value and meaning of CENTS are never fixed but kept in continual redefinition \u2014 and then tells me the same thing twice more in different words.\",\n      \"why\": \"Line 17 opens the final section with the claim (an ongoing process of redefinition), line 21 closes it with the identical claim (indeterminate and continually redefined), and line 22 states it a third time as 'unfolds continually'; the shared roots ongoing/continually and redefinition/redefined mark the repetition, and line 16 has already supplied the one register that would justify a second pass (the mechanism \u2014 decentralized consensus). Of the three, only 22 adds a register of its own, naming the form of the work (a becoming) and its participants, so 17 and 21 are left restating it with no level of their own; keep 22.\",\n      \"confidence\": \"high\"\n    }\n  ],\n  \"strongest\": 21\n}"
+}

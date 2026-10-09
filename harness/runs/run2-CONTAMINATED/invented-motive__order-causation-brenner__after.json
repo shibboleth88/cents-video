@@ -1,0 +1,25 @@
+{
+ "relation": "invented-motive",
+ "case": "order-causation-brenner",
+ "version": "after",
+ "seconds": 37.1,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     16,
+     17,
+     18
+    ],
+    "claim": "This tells me that Chang initiated the ongoing process of redefinition because the assigned value had become decoupled from the object and its meaning already indeterminate \u2014 that social indeterminacy was his motive.",
+    "why": "Line 18 holds the decision expression ('initiated'); lines 16 and 17 immediately before it state properties of the value and meaning of the work, so the sequence reads them as the condition he was responding to. The only reason the draft actually states for Chang's act is in line 1 \u2014 'a simple value discrepancy' between face value and copper \u2014 and the order here proposes a different and later motive, with the effect of the process (continual redefinition) standing in front of it as its cause.",
+    "confidence": "medium"
+   }
+  ],
+  "strongest": 18
+ },
+ "malformed": null,
+ "raw": "{\"verdict\":\"FOUND\",\"instances\":[{\"lines\":[16,17,18],\"claim\":\"This tells me that Chang initiated the ongoing process of redefinition because the assigned value had become decoupled from the object and its meaning already indeterminate \u2014 that social indeterminacy was his motive.\",\"why\":\"Line 18 holds the decision expression ('initiated'); lines 16 and 17 immediately before it state properties of the value and meaning of the work, so the sequence reads them as the condition he was responding to. The only reason the draft actually states for Chang's act is in line 1 \u2014 'a simple value discrepancy' between face value and copper \u2014 and the order here proposes a different and later motive, with the effect of the process (continual redefinition) standing in front of it as its cause.\",\"confidence\":\"medium\"}],\"strongest\":18}"
+}

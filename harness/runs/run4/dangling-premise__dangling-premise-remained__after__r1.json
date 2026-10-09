@@ -1,0 +1,186 @@
+{
+ "relation": "dangling-premise",
+ "case": "dangling-premise-remained",
+ "version": "after",
+ "rep": 1,
+ "seconds": 124.6,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     19,
+     11,
+     20
+    ],
+    "claim": "This tells me that the work consists of a bounded edition of objects, identical when made, which were given out to a known group of participants who have been handling them ever since.",
+    "why": "Line 11's capital-C \"Every Cent\" and line 19's \"Each object, initially identical\" are claims about a population with fixed membership, and line 20's \"its participants\" refers to a group as though already named; the only collection the draft ever bounds is line 6's five hundred billion coins struck by the state, which is not a set of works, was never described as distributed, and cannot be what \"initially identical\" and \"the marks of touch and time\" quantify over. Line 20 gestures at participants only after line 19 has already relied on them.",
+    "confidence": "high"
+   },
+   {
+    "lines": [
+     4
+    ],
+    "claim": "This tells me that a physical object has already been named, that its continued existence was in doubt, and that a context has been established which holds it in being.",
+    "why": "\"Yet\" and \"remained\" presuppose a prior state the object persisted against, \"the object\" is definite with no object named before it, and \"its context\" points at a context the draft has not introduced \u2014 lines 1\u20133 give a value discrepancy and an absence of transactions, not a thing, a threat to it, or a surrounding situation.",
+    "confidence": "medium"
+   }
+  ],
+  "strongest": 19,
+  "inventory": [
+   {
+    "line": 2,
+    "expression": "About two and a half as copper",
+    "kind": "backward",
+    "antecedent_line": 2
+   },
+   {
+    "line": 3,
+    "expression": "since before Chang was born",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 4,
+    "expression": "Yet",
+    "kind": "contrast",
+    "antecedent_line": null
+   },
+   {
+    "line": 4,
+    "expression": "the object",
+    "kind": "backward",
+    "antecedent_line": null
+   },
+   {
+    "line": 4,
+    "expression": "remained",
+    "kind": "contrast",
+    "antecedent_line": null
+   },
+   {
+    "line": 4,
+    "expression": "its context",
+    "kind": "backward",
+    "antecedent_line": null
+   },
+   {
+    "line": 5,
+    "expression": "The readymade he chose",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 5,
+    "expression": "he",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 6,
+    "expression": "each carrying Victor David Brenner's portrait",
+    "kind": "quantifier",
+    "antecedent_line": 6
+   },
+   {
+    "line": 7,
+    "expression": "should dissolve into worthlessness",
+    "kind": "backward",
+    "antecedent_line": 3
+   },
+   {
+    "line": 9,
+    "expression": "Yet",
+    "kind": "contrast",
+    "antecedent_line": 8
+   },
+   {
+    "line": 9,
+    "expression": "here we are",
+    "kind": "contrast",
+    "antecedent_line": 8
+   },
+   {
+    "line": 10,
+    "expression": "to it",
+    "kind": "backward",
+    "antecedent_line": 9
+   },
+   {
+    "line": 11,
+    "expression": "Every Cent",
+    "kind": "quantifier",
+    "antecedent_line": null
+   },
+   {
+    "line": 13,
+    "expression": "Removed from circulation",
+    "kind": "contrast",
+    "antecedent_line": 12
+   },
+   {
+    "line": 13,
+    "expression": "that assignment",
+    "kind": "backward",
+    "antecedent_line": 12
+   },
+   {
+    "line": 14,
+    "expression": "the image",
+    "kind": "backward",
+    "antecedent_line": 14
+   },
+   {
+    "line": 15,
+    "expression": "its value",
+    "kind": "backward",
+    "antecedent_line": 11
+   },
+   {
+    "line": 16,
+    "expression": "continually redefined",
+    "kind": "contrast",
+    "antecedent_line": 11
+   },
+   {
+    "line": 17,
+    "expression": "Its value and meaning",
+    "kind": "backward",
+    "antecedent_line": 11
+   },
+   {
+    "line": 18,
+    "expression": "an ongoing process of redefinition",
+    "kind": "backward",
+    "antecedent_line": 17
+   },
+   {
+    "line": 19,
+    "expression": "Each object",
+    "kind": "quantifier",
+    "antecedent_line": null
+   },
+   {
+    "line": 19,
+    "expression": "initially identical",
+    "kind": "quantifier",
+    "antecedent_line": null
+   },
+   {
+    "line": 20,
+    "expression": "its participants",
+    "kind": "backward",
+    "antecedent_line": null
+   },
+   {
+    "line": 20,
+    "expression": "continually",
+    "kind": "contrast",
+    "antecedent_line": 17
+   }
+  ]
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [19, 11, 20],\n      \"claim\": \"This tells me that the work consists of a bounded edition of objects, identical when made, which were given out to a known group of participants who have been handling them ever since.\",\n      \"why\": \"Line 11's capital-C \\\"Every Cent\\\" and line 19's \\\"Each object, initially identical\\\" are claims about a population with fixed membership, and line 20's \\\"its participants\\\" refers to a group as though already named; the only collection the draft ever bounds is line 6's five hundred billion coins struck by the state, which is not a set of works, was never described as distributed, and cannot be what \\\"initially identical\\\" and \\\"the marks of touch and time\\\" quantify over. Line 20 gestures at participants only after line 19 has already relied on them.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"lines\": [4],\n      \"claim\": \"This tells me that a physical object has already been named, that its continued existence was in doubt, and that a context has been established which holds it in being.\",\n      \"why\": \"\\\"Yet\\\" and \\\"remained\\\" presuppose a prior state the object persisted against, \\\"the object\\\" is definite with no object named before it, and \\\"its context\\\" points at a context the draft has not introduced \u2014 lines 1\u20133 give a value discrepancy and an absence of transactions, not a thing, a threat to it, or a surrounding situation.\",\n      \"confidence\": \"medium\"\n    }\n  ],\n  \"strongest\": 19,\n  \"inventory\": [\n    {\"line\": 2, \"expression\": \"About two and a half as copper\", \"kind\": \"backward\", \"antecedent_line\": 2},\n    {\"line\": 3, \"expression\": \"since before Chang was born\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 4, \"expression\": \"Yet\", \"kind\": \"contrast\", \"antecedent_line\": null},\n    {\"line\": 4, \"expression\": \"the object\", \"kind\": \"backward\", \"antecedent_line\": null},\n    {\"line\": 4, \"expression\": \"remained\", \"kind\": \"contrast\", \"antecedent_line\": null},\n    {\"line\": 4, \"expression\": \"its context\", \"kind\": \"backward\", \"antecedent_line\": null},\n    {\"line\": 5, \"expression\": \"The readymade he chose\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 5, \"expression\": \"he\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 6, \"expression\": \"each carrying Victor David Brenner's portrait\", \"kind\": \"quantifier\", \"antecedent_line\": 6},\n    {\"line\": 7, \"expression\": \"should dissolve into worthlessness\", \"kind\": \"backward\", \"antecedent_line\": 3},\n    {\"line\": 9, \"expression\": \"Yet\", \"kind\": \"contrast\", \"antecedent_line\": 8},\n    {\"line\": 9, \"expression\": \"here we are\", \"kind\": \"contrast\", \"antecedent_line\": 8},\n    {\"line\": 10, \"expression\": \"to it\", \"kind\": \"backward\", \"antecedent_line\": 9},\n    {\"line\": 11, \"expression\": \"Every Cent\", \"kind\": \"quantifier\", \"antecedent_line\": null},\n    {\"line\": 13, \"expression\": \"Removed from circulation\", \"kind\": \"contrast\", \"antecedent_line\": 12},\n    {\"line\": 13, \"expression\": \"that assignment\", \"kind\": \"backward\", \"antecedent_line\": 12},\n    {\"line\": 14, \"expression\": \"the image\", \"kind\": \"backward\", \"antecedent_line\": 14},\n    {\"line\": 15, \"expression\": \"its value\", \"kind\": \"backward\", \"antecedent_line\": 11},\n    {\"line\": 16, \"expression\": \"continually redefined\", \"kind\": \"contrast\", \"antecedent_line\": 11},\n    {\"line\": 17, \"expression\": \"Its value and meaning\", \"kind\": \"backward\", \"antecedent_line\": 11},\n    {\"line\": 18, \"expression\": \"an ongoing process of redefinition\", \"kind\": \"backward\", \"antecedent_line\": 17},\n    {\"line\": 19, \"expression\": \"Each object\", \"kind\": \"quantifier\", \"antecedent_line\": null},\n    {\"line\": 19, \"expression\": \"initially identical\", \"kind\": \"quantifier\", \"antecedent_line\": null},\n    {\"line\": 20, \"expression\": \"its participants\", \"kind\": \"backward\", \"antecedent_line\": null},\n    {\"line\": 20, \"expression\": \"continually\", \"kind\": \"contrast\", \"antecedent_line\": 17}\n  ]\n}"
+}

@@ -1,0 +1,189 @@
+{
+ "relation": "dangling-premise",
+ "case": "order-causation-brenner",
+ "version": "before",
+ "seconds": 65.3,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     8
+    ],
+    "claim": "This tells me that there is a defined, bounded set of things called Cents, with fixed membership, such that the same five-stage passage is true of each member.",
+    "why": "\"Every Cent\" quantifies over a collection, but the draft has introduced only a design (line 1, Brenner's Lincoln on the penny) and a single chosen readymade (lines 2\u20133, \"the object\" in line 7) \u2014 a kind and an instance, never a counted set of Cents. The capitalized term arrives as though already defined, and the only mention of CENTS as a body of work comes thirteen lines later at 21, so at line 8 \"every\" has nothing to range over.",
+    "confidence": "medium"
+   },
+   {
+    "lines": [
+     7
+    ],
+    "claim": "This tells me that the object had been losing its physical existence, or was at risk of doing so, and that its context had already been described as a force acting on it.",
+    "why": "\"Remained\" and \"buoyed into physicality\" both presuppose a prior pull away from physical existence, and \"its context\" is definite as though the context were already on the table; lines 4\u20136 establish only a collapse of monetary value, which is a different claim from dematerialization, and no earlier line names a context at all. The line parses and sounds conclusive precisely because the state it pushes against is missing rather than contradicted.",
+    "confidence": "medium"
+   }
+  ],
+  "strongest": 8,
+  "inventory": [
+   {
+    "line": 2,
+    "expression": "This is",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 2,
+    "expression": "the readymade",
+    "kind": "backward",
+    "antecedent_line": null
+   },
+   {
+    "line": 3,
+    "expression": "He",
+    "kind": "backward",
+    "antecedent_line": 2
+   },
+   {
+    "line": 3,
+    "expression": "to it",
+    "kind": "backward",
+    "antecedent_line": 2
+   },
+   {
+    "line": 6,
+    "expression": "Yet, here we are",
+    "kind": "contrast",
+    "antecedent_line": 5
+   },
+   {
+    "line": 7,
+    "expression": "The object",
+    "kind": "backward",
+    "antecedent_line": 2
+   },
+   {
+    "line": 7,
+    "expression": "remained",
+    "kind": "contrast",
+    "antecedent_line": null
+   },
+   {
+    "line": 7,
+    "expression": "buoyed into physicality",
+    "kind": "contrast",
+    "antecedent_line": null
+   },
+   {
+    "line": 7,
+    "expression": "its context",
+    "kind": "backward",
+    "antecedent_line": null
+   },
+   {
+    "line": 8,
+    "expression": "Every Cent",
+    "kind": "quantifier",
+    "antecedent_line": null
+   },
+   {
+    "line": 8,
+    "expression": "five transformations of value",
+    "kind": "quantifier",
+    "antecedent_line": 8
+   },
+   {
+    "line": 9,
+    "expression": "In circulation",
+    "kind": "backward",
+    "antecedent_line": 8
+   },
+   {
+    "line": 10,
+    "expression": "Removed from circulation",
+    "kind": "contrast",
+    "antecedent_line": 9
+   },
+   {
+    "line": 10,
+    "expression": "that assignment",
+    "kind": "backward",
+    "antecedent_line": 9
+   },
+   {
+    "line": 11,
+    "expression": "the image",
+    "kind": "backward",
+    "antecedent_line": 11
+   },
+   {
+    "line": 12,
+    "expression": "its value",
+    "kind": "backward",
+    "antecedent_line": 8
+   },
+   {
+    "line": 13,
+    "expression": "redefined",
+    "kind": "contrast",
+    "antecedent_line": 9
+   },
+   {
+    "line": 14,
+    "expression": "the art object",
+    "kind": "backward",
+    "antecedent_line": 7
+   },
+   {
+    "line": 16,
+    "expression": "widened it",
+    "kind": "backward",
+    "antecedent_line": 15
+   },
+   {
+    "line": 18,
+    "expression": "They lacked",
+    "kind": "backward",
+    "antecedent_line": 17
+   },
+   {
+    "line": 19,
+    "expression": "gave them",
+    "kind": "backward",
+    "antecedent_line": 17
+   },
+   {
+    "line": 20,
+    "expression": "this era's",
+    "kind": "backward",
+    "antecedent_line": 16
+   },
+   {
+    "line": 21,
+    "expression": "that arc",
+    "kind": "backward",
+    "antecedent_line": 14
+   },
+   {
+    "line": 22,
+    "expression": "Its medium",
+    "kind": "backward",
+    "antecedent_line": 21
+   },
+   {
+    "line": 22,
+    "expression": "its continual becoming",
+    "kind": "backward",
+    "antecedent_line": 21
+   },
+   {
+    "line": 23,
+    "expression": "Digital objects on blockchain",
+    "kind": "backward",
+    "antecedent_line": 19
+   }
+  ]
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [8],\n      \"claim\": \"This tells me that there is a defined, bounded set of things called Cents, with fixed membership, such that the same five-stage passage is true of each member.\",\n      \"why\": \"\\\"Every Cent\\\" quantifies over a collection, but the draft has introduced only a design (line 1, Brenner's Lincoln on the penny) and a single chosen readymade (lines 2\u20133, \\\"the object\\\" in line 7) \u2014 a kind and an instance, never a counted set of Cents. The capitalized term arrives as though already defined, and the only mention of CENTS as a body of work comes thirteen lines later at 21, so at line 8 \\\"every\\\" has nothing to range over.\",\n      \"confidence\": \"medium\"\n    },\n    {\n      \"lines\": [7],\n      \"claim\": \"This tells me that the object had been losing its physical existence, or was at risk of doing so, and that its context had already been described as a force acting on it.\",\n      \"why\": \"\\\"Remained\\\" and \\\"buoyed into physicality\\\" both presuppose a prior pull away from physical existence, and \\\"its context\\\" is definite as though the context were already on the table; lines 4\u20136 establish only a collapse of monetary value, which is a different claim from dematerialization, and no earlier line names a context at all. The line parses and sounds conclusive precisely because the state it pushes against is missing rather than contradicted.\",\n      \"confidence\": \"medium\"\n    }\n  ],\n  \"strongest\": 8,\n  \"inventory\": [\n    {\"line\": 2, \"expression\": \"This is\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 2, \"expression\": \"the readymade\", \"kind\": \"backward\", \"antecedent_line\": null},\n    {\"line\": 3, \"expression\": \"He\", \"kind\": \"backward\", \"antecedent_line\": 2},\n    {\"line\": 3, \"expression\": \"to it\", \"kind\": \"backward\", \"antecedent_line\": 2},\n    {\"line\": 6, \"expression\": \"Yet, here we are\", \"kind\": \"contrast\", \"antecedent_line\": 5},\n    {\"line\": 7, \"expression\": \"The object\", \"kind\": \"backward\", \"antecedent_line\": 2},\n    {\"line\": 7, \"expression\": \"remained\", \"kind\": \"contrast\", \"antecedent_line\": null},\n    {\"line\": 7, \"expression\": \"buoyed into physicality\", \"kind\": \"contrast\", \"antecedent_line\": null},\n    {\"line\": 7, \"expression\": \"its context\", \"kind\": \"backward\", \"antecedent_line\": null},\n    {\"line\": 8, \"expression\": \"Every Cent\", \"kind\": \"quantifier\", \"antecedent_line\": null},\n    {\"line\": 8, \"expression\": \"five transformations of value\", \"kind\": \"quantifier\", \"antecedent_line\": 8},\n    {\"line\": 9, \"expression\": \"In circulation\", \"kind\": \"backward\", \"antecedent_line\": 8},\n    {\"line\": 10, \"expression\": \"Removed from circulation\", \"kind\": \"contrast\", \"antecedent_line\": 9},\n    {\"line\": 10, \"expression\": \"that assignment\", \"kind\": \"backward\", \"antecedent_line\": 9},\n    {\"line\": 11, \"expression\": \"the image\", \"kind\": \"backward\", \"antecedent_line\": 11},\n    {\"line\": 12, \"expression\": \"its value\", \"kind\": \"backward\", \"antecedent_line\": 8},\n    {\"line\": 13, \"expression\": \"redefined\", \"kind\": \"contrast\", \"antecedent_line\": 9},\n    {\"line\": 14, \"expression\": \"the art object\", \"kind\": \"backward\", \"antecedent_line\": 7},\n    {\"line\": 16, \"expression\": \"widened it\", \"kind\": \"backward\", \"antecedent_line\": 15},\n    {\"line\": 18, \"expression\": \"They lacked\", \"kind\": \"backward\", \"antecedent_line\": 17},\n    {\"line\": 19, \"expression\": \"gave them\", \"kind\": \"backward\", \"antecedent_line\": 17},\n    {\"line\": 20, \"expression\": \"this era's\", \"kind\": \"backward\", \"antecedent_line\": 16},\n    {\"line\": 21, \"expression\": \"that arc\", \"kind\": \"backward\", \"antecedent_line\": 14},\n    {\"line\": 22, \"expression\": \"Its medium\", \"kind\": \"backward\", \"antecedent_line\": 21},\n    {\"line\": 22, \"expression\": \"its continual becoming\", \"kind\": \"backward\", \"antecedent_line\": 21},\n    {\"line\": 23, \"expression\": \"Digital objects on blockchain\", \"kind\": \"backward\", \"antecedent_line\": 19}\n  ]\n}"
+}

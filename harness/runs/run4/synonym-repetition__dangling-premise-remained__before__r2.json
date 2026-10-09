@@ -1,0 +1,26 @@
+{
+ "relation": "synonym-repetition",
+ "case": "dangling-premise-remained",
+ "version": "before",
+ "rep": 2,
+ "seconds": 25.7,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     16,
+     17,
+     18
+    ],
+    "claim": "This tells me that the value of each Cent is detached from the object and endlessly re-decided \u2014 stated three times in a row with no new level of operation.",
+    "why": "Line 16 makes the point at the level of mechanism (value decoupled from the object, held by consensus); 17 then says the same thing in abstract synonyms (\"indeterminate and continually redefined\"), and 18 says it once more as a process the artist started. Neither 17 nor 18 moves to the object, the viewer, or the form \u2014 and the \"continually redefined\" of 17 is already carried by 15, so the sequence 15-16-17-18 spends four lines on one register. Keep 16, which supplies the mechanism and the image; 20 then lands the form register without needing 17 or 18 to set it up.",
+    "confidence": "high"
+   }
+  ],
+  "strongest": 17
+ },
+ "malformed": null,
+ "raw": "{\"verdict\": \"FOUND\", \"instances\": [{\"lines\": [16, 17, 18], \"claim\": \"This tells me that the value of each Cent is detached from the object and endlessly re-decided \u2014 stated three times in a row with no new level of operation.\", \"why\": \"Line 16 makes the point at the level of mechanism (value decoupled from the object, held by consensus); 17 then says the same thing in abstract synonyms (\\\"indeterminate and continually redefined\\\"), and 18 says it once more as a process the artist started. Neither 17 nor 18 moves to the object, the viewer, or the form \u2014 and the \\\"continually redefined\\\" of 17 is already carried by 15, so the sequence 15-16-17-18 spends four lines on one register. Keep 16, which supplies the mechanism and the image; 20 then lands the form register without needing 17 or 18 to set it up.\", \"confidence\": \"high\"}], \"strongest\": 17}"
+}

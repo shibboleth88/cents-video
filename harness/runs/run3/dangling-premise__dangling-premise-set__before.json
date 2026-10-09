@@ -1,0 +1,160 @@
+{
+ "relation": "dangling-premise",
+ "case": "dangling-premise-set",
+ "version": "before",
+ "seconds": 87.0,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "inventory": [
+   {
+    "line": 2,
+    "expression": "One cent to the Treasury. About two and a half as copper.",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 3,
+    "expression": "since before Chang was born",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 4,
+    "expression": "Yet",
+    "kind": "contrast",
+    "antecedent_line": 3
+   },
+   {
+    "line": 4,
+    "expression": "the object",
+    "kind": "backward",
+    "antecedent_line": null
+   },
+   {
+    "line": 4,
+    "expression": "remained",
+    "kind": "contrast",
+    "antecedent_line": null
+   },
+   {
+    "line": 4,
+    "expression": "its context",
+    "kind": "backward",
+    "antecedent_line": null
+   },
+   {
+    "line": 5,
+    "expression": "The readymade he chose",
+    "kind": "backward",
+    "antecedent_line": 2
+   },
+   {
+    "line": 5,
+    "expression": "he",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 6,
+    "expression": "each carrying Victor David Brenner's portrait",
+    "kind": "quantifier",
+    "antecedent_line": 6
+   },
+   {
+    "line": 9,
+    "expression": "Yet, here we are",
+    "kind": "contrast",
+    "antecedent_line": 8
+   },
+   {
+    "line": 10,
+    "expression": "He",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 10,
+    "expression": "it",
+    "kind": "backward",
+    "antecedent_line": 5
+   },
+   {
+    "line": 11,
+    "expression": "Every Cent",
+    "kind": "quantifier",
+    "antecedent_line": null
+   },
+   {
+    "line": 13,
+    "expression": "Removed from circulation",
+    "kind": "contrast",
+    "antecedent_line": 12
+   },
+   {
+    "line": 13,
+    "expression": "that assignment",
+    "kind": "backward",
+    "antecedent_line": 12
+   },
+   {
+    "line": 15,
+    "expression": "its value",
+    "kind": "backward",
+    "antecedent_line": 11
+   },
+   {
+    "line": 16,
+    "expression": "continually redefined",
+    "kind": "contrast",
+    "antecedent_line": 11
+   },
+   {
+    "line": 17,
+    "expression": "Its value and meaning",
+    "kind": "backward",
+    "antecedent_line": 11
+   },
+   {
+    "line": 19,
+    "expression": "Each object",
+    "kind": "quantifier",
+    "antecedent_line": null
+   },
+   {
+    "line": 19,
+    "expression": "initially identical",
+    "kind": "quantifier",
+    "antecedent_line": null
+   },
+   {
+    "line": 20,
+    "expression": "its participants",
+    "kind": "backward",
+    "antecedent_line": null
+   }
+  ],
+  "instances": [
+   {
+    "lines": [
+     11,
+     19
+    ],
+    "claim": "This tells me that the draft has already introduced a bounded set of Chang's cent-objects \u2014 a fixed edition, made alike, dispersed to holders \u2014 so that 'every' and 'each ... initially identical' quantify over a population the film has counted.",
+    "why": "Both lines are claims about the membership of a collection, but the only collection the draft bounds is the five hundred billion circulating Lincoln cents of line 6, which plainly do not pass through archival photography, destruction and Bitcoin inscription. 'Initially identical' and 'bears the marks of touch and time' are population-level comparisons across a set whose existence, size and distribution are never stated, so the two lines lean on each other for a premise neither supplies.",
+    "confidence": "high"
+   },
+   {
+    "lines": [
+     4
+    ],
+    "claim": "This tells me that the draft has named a particular physical object and has said its objecthood was in doubt \u2014 held in existence only by the context around it.",
+    "why": "'The object' is the first appearance of any object in the piece: lines 1\u20133 give a value discrepancy, a metal price and a fact about purchasing power, none of which introduces a thing. 'Remained' and 'buoyed into physicality' both presuppose a prior claim that the thing's physical standing was precarious, and line 3's obsolescence is about what a cent can buy, not about whether it persists as an object.",
+    "confidence": "medium"
+   }
+  ],
+  "strongest": 19
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"inventory\": [\n    {\"line\": 2, \"expression\": \"One cent to the Treasury. About two and a half as copper.\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 3, \"expression\": \"since before Chang was born\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 4, \"expression\": \"Yet\", \"kind\": \"contrast\", \"antecedent_line\": 3},\n    {\"line\": 4, \"expression\": \"the object\", \"kind\": \"backward\", \"antecedent_line\": null},\n    {\"line\": 4, \"expression\": \"remained\", \"kind\": \"contrast\", \"antecedent_line\": null},\n    {\"line\": 4, \"expression\": \"its context\", \"kind\": \"backward\", \"antecedent_line\": null},\n    {\"line\": 5, \"expression\": \"The readymade he chose\", \"kind\": \"backward\", \"antecedent_line\": 2},\n    {\"line\": 5, \"expression\": \"he\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 6, \"expression\": \"each carrying Victor David Brenner's portrait\", \"kind\": \"quantifier\", \"antecedent_line\": 6},\n    {\"line\": 9, \"expression\": \"Yet, here we are\", \"kind\": \"contrast\", \"antecedent_line\": 8},\n    {\"line\": 10, \"expression\": \"He\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 10, \"expression\": \"it\", \"kind\": \"backward\", \"antecedent_line\": 5},\n    {\"line\": 11, \"expression\": \"Every Cent\", \"kind\": \"quantifier\", \"antecedent_line\": null},\n    {\"line\": 13, \"expression\": \"Removed from circulation\", \"kind\": \"contrast\", \"antecedent_line\": 12},\n    {\"line\": 13, \"expression\": \"that assignment\", \"kind\": \"backward\", \"antecedent_line\": 12},\n    {\"line\": 15, \"expression\": \"its value\", \"kind\": \"backward\", \"antecedent_line\": 11},\n    {\"line\": 16, \"expression\": \"continually redefined\", \"kind\": \"contrast\", \"antecedent_line\": 11},\n    {\"line\": 17, \"expression\": \"Its value and meaning\", \"kind\": \"backward\", \"antecedent_line\": 11},\n    {\"line\": 19, \"expression\": \"Each object\", \"kind\": \"quantifier\", \"antecedent_line\": null},\n    {\"line\": 19, \"expression\": \"initially identical\", \"kind\": \"quantifier\", \"antecedent_line\": null},\n    {\"line\": 20, \"expression\": \"its participants\", \"kind\": \"backward\", \"antecedent_line\": null}\n  ],\n  \"instances\": [\n    {\n      \"lines\": [11, 19],\n      \"claim\": \"This tells me that the draft has already introduced a bounded set of Chang's cent-objects \u2014 a fixed edition, made alike, dispersed to holders \u2014 so that 'every' and 'each ... initially identical' quantify over a population the film has counted.\",\n      \"why\": \"Both lines are claims about the membership of a collection, but the only collection the draft bounds is the five hundred billion circulating Lincoln cents of line 6, which plainly do not pass through archival photography, destruction and Bitcoin inscription. 'Initially identical' and 'bears the marks of touch and time' are population-level comparisons across a set whose existence, size and distribution are never stated, so the two lines lean on each other for a premise neither supplies.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"lines\": [4],\n      \"claim\": \"This tells me that the draft has named a particular physical object and has said its objecthood was in doubt \u2014 held in existence only by the context around it.\",\n      \"why\": \"'The object' is the first appearance of any object in the piece: lines 1\u20133 give a value discrepancy, a metal price and a fact about purchasing power, none of which introduces a thing. 'Remained' and 'buoyed into physicality' both presuppose a prior claim that the thing's physical standing was precarious, and line 3's obsolescence is about what a cent can buy, not about whether it persists as an object.\",\n      \"confidence\": \"medium\"\n    }\n  ],\n  \"strongest\": 19\n}"
+}

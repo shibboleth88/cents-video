@@ -1,0 +1,24 @@
+{
+ "relation": "invented-motive",
+ "case": "synonym-repetition-redefinition",
+ "version": "after",
+ "rep": 3,
+ "seconds": 48.0,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     18,
+     19
+    ],
+    "claim": "This tells me that collectors decide which Cents matter on the basis of their accumulated marks of touch and time.",
+    "why": "Line 19 holds the decision expression (\"deciding\", attributed to collectors); line 18 immediately before states a property of the objects (initially identical, now bearing marks of touch and time), and line 17 adds \"logics and rarities\". The draft states no reason anywhere for how collectors select, so the sequence supplies wear and rarity as the criterion \u2014 a property of the things converted by order alone into the grounds of a human choice."
+   }
+  ],
+  "strongest": 19
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [18, 19],\n      \"claim\": \"This tells me that collectors decide which Cents matter on the basis of their accumulated marks of touch and time.\",\n      \"why\": \"Line 19 holds the decision expression (\\\"deciding\\\", attributed to collectors); line 18 immediately before states a property of the objects (initially identical, now bearing marks of touch and time), and line 17 adds \\\"logics and rarities\\\". The draft states no reason anywhere for how collectors select, so the sequence supplies wear and rarity as the criterion \u2014 a property of the things converted by order alone into the grounds of a human choice.\"\n    }\n  ],\n  \"strongest\": 19\n}"
+}

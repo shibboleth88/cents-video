@@ -31,3 +31,6 @@ Reply with a single JSON object and nothing else. No preamble, no code fence.
 
 If verdict is "NONE", "instances" must be an empty list.
 Order instances strongest first. Report at most three.
+
+Some reviewers require additional top-level fields; where they do, their own
+section says so, and omitting them makes the review unusable rather than empty.

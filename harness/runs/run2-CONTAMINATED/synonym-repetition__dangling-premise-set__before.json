@@ -1,0 +1,25 @@
+{
+ "relation": "synonym-repetition",
+ "case": "dangling-premise-set",
+ "version": "before",
+ "seconds": 31.4,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     16,
+     17,
+     18
+    ],
+    "claim": "This tells me that the work's value is continually redefined and never settles \u2014 three times, in three sets of words, with nothing new added on the second or third pass.",
+    "why": "Line 16 already closes the five-transformation list with 'continually redefined'; line 17 states the same thing as an abstract property ('indeterminate and continually redefined'), and line 18 states it again with Chang as the grammatical subject ('an ongoing process of redefinition'). None of the three shifts register \u2014 no new mechanism, no physical change, no change in what the work means to a viewer, no claim about what kind of object it is \u2014 so 17 and 18 are the same point in fresh vocabulary rather than the point operating at another level. I would keep 18, which carries the agent and sets up line 19.",
+    "confidence": "high"
+   }
+  ],
+  "strongest": 17
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [16, 17, 18],\n      \"claim\": \"This tells me that the work's value is continually redefined and never settles \u2014 three times, in three sets of words, with nothing new added on the second or third pass.\",\n      \"why\": \"Line 16 already closes the five-transformation list with 'continually redefined'; line 17 states the same thing as an abstract property ('indeterminate and continually redefined'), and line 18 states it again with Chang as the grammatical subject ('an ongoing process of redefinition'). None of the three shifts register \u2014 no new mechanism, no physical change, no change in what the work means to a viewer, no claim about what kind of object it is \u2014 so 17 and 18 are the same point in fresh vocabulary rather than the point operating at another level. I would keep 18, which carries the agent and sets up line 19.\",\n      \"confidence\": \"high\"\n    }\n  ],\n  \"strongest\": 17\n}"
+}

@@ -1,0 +1,25 @@
+{
+ "relation": "synonym-repetition",
+ "case": "dangling-premise-remained",
+ "version": "before",
+ "seconds": 35.3,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     16,
+     17,
+     18
+    ],
+    "claim": "This tells me that the work's value is detached from the object and endlessly re-decided \u2014 and then tells me that again, and then once more with Chang's name attached.",
+    "why": "Line 16 makes the point with a mechanism (value decoupled from the object, carried by social consensus); 17 restates the same point in adjectives only (\"indeterminate and continually redefined\"), and 18 restates it a third time by moving the subject to Chang without adding a level at which it operates. The shared root \"redefined/redefinition\" across 15, 17 and 18 marks the overlap, and nothing about the object, the audience, or the form of the work enters in 17 or 18 that was not already in 16 \u2014 keep 16 and cut 17 and 18.",
+    "confidence": "high"
+   }
+  ],
+  "strongest": 17
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [16, 17, 18],\n      \"claim\": \"This tells me that the work's value is detached from the object and endlessly re-decided \u2014 and then tells me that again, and then once more with Chang's name attached.\",\n      \"why\": \"Line 16 makes the point with a mechanism (value decoupled from the object, carried by social consensus); 17 restates the same point in adjectives only (\\\"indeterminate and continually redefined\\\"), and 18 restates it a third time by moving the subject to Chang without adding a level at which it operates. The shared root \\\"redefined/redefinition\\\" across 15, 17 and 18 marks the overlap, and nothing about the object, the audience, or the form of the work enters in 17 or 18 that was not already in 16 \u2014 keep 16 and cut 17 and 18.\",\n      \"confidence\": \"high\"\n    }\n  ],\n  \"strongest\": 17\n}"
+}

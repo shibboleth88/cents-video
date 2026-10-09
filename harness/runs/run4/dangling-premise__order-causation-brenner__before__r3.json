@@ -1,0 +1,160 @@
+{
+ "relation": "dangling-premise",
+ "case": "order-causation-brenner",
+ "version": "before",
+ "rep": 3,
+ "seconds": 66.1,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     8
+    ],
+    "claim": "This tells me that there is a bounded, countable set of individual objects, each one called a Cent, and that the draft has already shown me what that set is and that its membership is fixed.",
+    "why": "\"Every Cent\" quantifies over a population whose existence and boundaries the draft never establishes: line 1 names \"the penny\" as a reproduced artwork, line 5 says \"a cent\" generically, and the title CENTS does not appear until line 21 \u2014 so at line 8 nothing has introduced a collection of discrete Cents for \"every\" to range over. Lines 9\u201313 then make claims about the life of a single member of that uncounted set, which only reads as coherent if the set had been introduced.",
+    "confidence": "high"
+   },
+   {
+    "lines": [
+     7
+    ],
+    "claim": "This tells me that the object had been destroyed, dematerialized, or otherwise stripped of physical existence, and that it persisted anyway.",
+    "why": "\"Remained\" and \"buoyed into physicality\" are continuation and recovery claims \u2014 both presuppose a prior state in which the object's survival or materiality was in doubt. Lines 4\u20136 put only monetary value in doubt, never the object's physical persistence, and the only destruction in the draft (line 12) comes five lines later, so at line 7 there is nothing for \"remained\" to have remained against.",
+    "confidence": "medium"
+   }
+  ],
+  "strongest": 8,
+  "inventory": [
+   {
+    "line": 2,
+    "expression": "This is the readymade",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 3,
+    "expression": "He",
+    "kind": "backward",
+    "antecedent_line": 2
+   },
+   {
+    "line": 3,
+    "expression": "to it",
+    "kind": "backward",
+    "antecedent_line": 2
+   },
+   {
+    "line": 6,
+    "expression": "Yet, here we are",
+    "kind": "contrast",
+    "antecedent_line": 5
+   },
+   {
+    "line": 7,
+    "expression": "The object",
+    "kind": "backward",
+    "antecedent_line": 2
+   },
+   {
+    "line": 7,
+    "expression": "remained",
+    "kind": "contrast",
+    "antecedent_line": null
+   },
+   {
+    "line": 7,
+    "expression": "buoyed into physicality",
+    "kind": "contrast",
+    "antecedent_line": null
+   },
+   {
+    "line": 7,
+    "expression": "its context",
+    "kind": "backward",
+    "antecedent_line": 2
+   },
+   {
+    "line": 8,
+    "expression": "Every Cent",
+    "kind": "quantifier",
+    "antecedent_line": null
+   },
+   {
+    "line": 8,
+    "expression": "five transformations of value",
+    "kind": "quantifier",
+    "antecedent_line": 8
+   },
+   {
+    "line": 10,
+    "expression": "that assignment",
+    "kind": "backward",
+    "antecedent_line": 9
+   },
+   {
+    "line": 11,
+    "expression": "what the image holds",
+    "kind": "backward",
+    "antecedent_line": 11
+   },
+   {
+    "line": 12,
+    "expression": "its value",
+    "kind": "backward",
+    "antecedent_line": 8
+   },
+   {
+    "line": 14,
+    "expression": "the art object",
+    "kind": "backward",
+    "antecedent_line": 7
+   },
+   {
+    "line": 16,
+    "expression": "widened it",
+    "kind": "backward",
+    "antecedent_line": 15
+   },
+   {
+    "line": 18,
+    "expression": "They",
+    "kind": "backward",
+    "antecedent_line": 17
+   },
+   {
+    "line": 19,
+    "expression": "gave them",
+    "kind": "backward",
+    "antecedent_line": 17
+   },
+   {
+    "line": 20,
+    "expression": "objecthood",
+    "kind": "backward",
+    "antecedent_line": 18
+   },
+   {
+    "line": 21,
+    "expression": "that arc",
+    "kind": "backward",
+    "antecedent_line": 14
+   },
+   {
+    "line": 22,
+    "expression": "Its medium",
+    "kind": "backward",
+    "antecedent_line": 21
+   },
+   {
+    "line": 22,
+    "expression": "the gesture",
+    "kind": "backward",
+    "antecedent_line": 21
+   }
+  ]
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [8],\n      \"claim\": \"This tells me that there is a bounded, countable set of individual objects, each one called a Cent, and that the draft has already shown me what that set is and that its membership is fixed.\",\n      \"why\": \"\\\"Every Cent\\\" quantifies over a population whose existence and boundaries the draft never establishes: line 1 names \\\"the penny\\\" as a reproduced artwork, line 5 says \\\"a cent\\\" generically, and the title CENTS does not appear until line 21 \u2014 so at line 8 nothing has introduced a collection of discrete Cents for \\\"every\\\" to range over. Lines 9\u201313 then make claims about the life of a single member of that uncounted set, which only reads as coherent if the set had been introduced.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"lines\": [7],\n      \"claim\": \"This tells me that the object had been destroyed, dematerialized, or otherwise stripped of physical existence, and that it persisted anyway.\",\n      \"why\": \"\\\"Remained\\\" and \\\"buoyed into physicality\\\" are continuation and recovery claims \u2014 both presuppose a prior state in which the object's survival or materiality was in doubt. Lines 4\u20136 put only monetary value in doubt, never the object's physical persistence, and the only destruction in the draft (line 12) comes five lines later, so at line 7 there is nothing for \\\"remained\\\" to have remained against.\",\n      \"confidence\": \"medium\"\n    }\n  ],\n  \"strongest\": 8,\n  \"inventory\": [\n    {\"line\": 2, \"expression\": \"This is the readymade\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 3, \"expression\": \"He\", \"kind\": \"backward\", \"antecedent_line\": 2},\n    {\"line\": 3, \"expression\": \"to it\", \"kind\": \"backward\", \"antecedent_line\": 2},\n    {\"line\": 6, \"expression\": \"Yet, here we are\", \"kind\": \"contrast\", \"antecedent_line\": 5},\n    {\"line\": 7, \"expression\": \"The object\", \"kind\": \"backward\", \"antecedent_line\": 2},\n    {\"line\": 7, \"expression\": \"remained\", \"kind\": \"contrast\", \"antecedent_line\": null},\n    {\"line\": 7, \"expression\": \"buoyed into physicality\", \"kind\": \"contrast\", \"antecedent_line\": null},\n    {\"line\": 7, \"expression\": \"its context\", \"kind\": \"backward\", \"antecedent_line\": 2},\n    {\"line\": 8, \"expression\": \"Every Cent\", \"kind\": \"quantifier\", \"antecedent_line\": null},\n    {\"line\": 8, \"expression\": \"five transformations of value\", \"kind\": \"quantifier\", \"antecedent_line\": 8},\n    {\"line\": 10, \"expression\": \"that assignment\", \"kind\": \"backward\", \"antecedent_line\": 9},\n    {\"line\": 11, \"expression\": \"what the image holds\", \"kind\": \"backward\", \"antecedent_line\": 11},\n    {\"line\": 12, \"expression\": \"its value\", \"kind\": \"backward\", \"antecedent_line\": 8},\n    {\"line\": 14, \"expression\": \"the art object\", \"kind\": \"backward\", \"antecedent_line\": 7},\n    {\"line\": 16, \"expression\": \"widened it\", \"kind\": \"backward\", \"antecedent_line\": 15},\n    {\"line\": 18, \"expression\": \"They\", \"kind\": \"backward\", \"antecedent_line\": 17},\n    {\"line\": 19, \"expression\": \"gave them\", \"kind\": \"backward\", \"antecedent_line\": 17},\n    {\"line\": 20, \"expression\": \"objecthood\", \"kind\": \"backward\", \"antecedent_line\": 18},\n    {\"line\": 21, \"expression\": \"that arc\", \"kind\": \"backward\", \"antecedent_line\": 14},\n    {\"line\": 22, \"expression\": \"Its medium\", \"kind\": \"backward\", \"antecedent_line\": 21},\n    {\"line\": 22, \"expression\": \"the gesture\", \"kind\": \"backward\", \"antecedent_line\": 21}\n  ]\n}"
+}

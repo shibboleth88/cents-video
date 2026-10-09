@@ -1,0 +1,25 @@
+{
+ "relation": "synonym-repetition",
+ "case": "synonym-repetition-redefinition",
+ "version": "before",
+ "rep": 1,
+ "seconds": 35.2,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     17,
+     22
+    ],
+    "claim": "This tells me that the work is subject to continual redefinition \u2014 twice, in the same register, with the same word root.",
+    "why": "Line 17 states the thesis of ongoing redefinition as an abstract fact about the work; line 22 states it again as an abstract fact about the work ('indeterminate and continually redefined'), adding no mechanism, no object, no named audience and no claim about form. The intervening lines 18-21 already supply the object and collector registers, and line 23 supplies the form register ('a becoming... through the actions of its participants'), so line 22 sits between two lines that each do more than it does while saying what line 17 already said.",
+    "confidence": "high"
+   }
+  ],
+  "strongest": 22
+ },
+ "malformed": null,
+ "raw": "{\"verdict\": \"FOUND\", \"instances\": [{\"lines\": [17, 22], \"claim\": \"This tells me that the work is subject to continual redefinition \u2014 twice, in the same register, with the same word root.\", \"why\": \"Line 17 states the thesis of ongoing redefinition as an abstract fact about the work; line 22 states it again as an abstract fact about the work ('indeterminate and continually redefined'), adding no mechanism, no object, no named audience and no claim about form. The intervening lines 18-21 already supply the object and collector registers, and line 23 supplies the form register ('a becoming... through the actions of its participants'), so line 22 sits between two lines that each do more than it does while saying what line 17 already said.\", \"confidence\": \"high\"}], \"strongest\": 22}"
+}

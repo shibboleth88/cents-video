@@ -1,0 +1,26 @@
+{
+ "relation": "synonym-repetition",
+ "case": "dangling-premise-set",
+ "version": "before",
+ "rep": 1,
+ "seconds": 32.8,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     16,
+     17,
+     18
+    ],
+    "claim": "This tells me that the work's value is continually redefined, and then tells me the same thing twice more in different words.",
+    "why": "Line 16 already closes the five-transformation list with \"continually redefined by decentralized consensus\"; line 17 restates that as \"indeterminate and continually redefined\" and line 18 restates it again as \"an ongoing process of redefinition\" \u2014 all three sit in the same register (the status of the object's value), with the word root literally repeated, so neither 17 nor 18 adds a mechanism, an object, a reader or a form. Line 20 does earn its place, because it shifts to what kind of thing the work is and to the participants who act on it; 17 is pure summary of the list just read, and cutting it loses nothing that 16 and 18 do not already carry.",
+    "confidence": "high"
+   }
+  ],
+  "strongest": 17
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [16, 17, 18],\n      \"claim\": \"This tells me that the work's value is continually redefined, and then tells me the same thing twice more in different words.\",\n      \"why\": \"Line 16 already closes the five-transformation list with \\\"continually redefined by decentralized consensus\\\"; line 17 restates that as \\\"indeterminate and continually redefined\\\" and line 18 restates it again as \\\"an ongoing process of redefinition\\\" \u2014 all three sit in the same register (the status of the object's value), with the word root literally repeated, so neither 17 nor 18 adds a mechanism, an object, a reader or a form. Line 20 does earn its place, because it shifts to what kind of thing the work is and to the participants who act on it; 17 is pure summary of the list just read, and cutting it loses nothing that 16 and 18 do not already carry.\",\n      \"confidence\": \"high\"\n    }\n  ],\n  \"strongest\": 17\n}"
+}

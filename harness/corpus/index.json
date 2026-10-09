@@ -4,25 +4,68 @@
    "id": "order-causation-brenner",
    "relation": "order-causation",
    "commit": "6ebc608",
+   "versions": [
+    "before",
+    "after"
+   ],
    "subject": "Revision 4: value is the frame, and the order no longer invents an intention"
   },
   {
    "id": "dangling-premise-remained",
    "relation": "dangling-premise",
    "commit": "6ccd148",
+   "versions": [
+    "before",
+    "after"
+   ],
    "subject": "Restore the antecedent the hinge line needs"
   },
   {
    "id": "dangling-premise-set",
    "relation": "dangling-premise",
    "commit": "7fdce22",
+   "versions": [
+    "before",
+    "after"
+   ],
    "subject": "Restore the premises the closing passage needs; extend to ~100s"
   },
   {
    "id": "synonym-repetition-redefinition",
    "relation": "synonym-repetition",
    "commit": "2f9c7cd",
+   "versions": [
+    "before",
+    "after"
+   ],
    "subject": "Cut repeated statements of continual redefinition; rewrite the canon pair"
+  },
+  {
+   "id": "clean-introduction",
+   "relation": null,
+   "commit": null,
+   "versions": [
+    "only"
+   ],
+   "subject": "The 3-minute introduction script, written after all three shapes were known."
+  },
+  {
+   "id": "clean-objecthood-shipped",
+   "relation": null,
+   "commit": null,
+   "versions": [
+    "only"
+   ],
+   "subject": "The script as recorded and released."
+  },
+  {
+   "id": "clean-objecthood-bridge",
+   "relation": null,
+   "commit": null,
+   "versions": [
+    "only"
+   ],
+   "subject": "The state after the collector-dynamics passage was replaced by the three-line bridge."
   }
  ],
  "relations": {

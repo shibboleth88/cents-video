@@ -1,0 +1,25 @@
+{
+ "relation": "synonym-repetition",
+ "case": "dangling-premise-remained",
+ "version": "after",
+ "seconds": 34.6,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     17,
+     18,
+     20
+    ],
+    "claim": "This tells me that the work is an open-ended process of continual redefinition \u2014 and then tells me again, and then once more.",
+    "why": "Line 16 has already delivered 'continually redefined' as the endpoint of the five-transformation sequence; 17 ('indeterminate and continually redefined'), 18 ('an ongoing process of redefinition') and 20 ('unfolds continually') each assert that same point without moving register \u2014 17 and 18 add no mechanism, no object, no audience and no change of form, and 20 already contains both of them while also doing the form work ('is a becoming') and the audience work ('actions of its participants'). Keep 20; the shared root 'redefin-' across 16, 17 and 18 marks the padding.",
+    "confidence": "high"
+   }
+  ],
+  "strongest": 17
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [17, 18, 20],\n      \"claim\": \"This tells me that the work is an open-ended process of continual redefinition \u2014 and then tells me again, and then once more.\",\n      \"why\": \"Line 16 has already delivered 'continually redefined' as the endpoint of the five-transformation sequence; 17 ('indeterminate and continually redefined'), 18 ('an ongoing process of redefinition') and 20 ('unfolds continually') each assert that same point without moving register \u2014 17 and 18 add no mechanism, no object, no audience and no change of form, and 20 already contains both of them while also doing the form work ('is a becoming') and the audience work ('actions of its participants'). Keep 20; the shared root 'redefin-' across 16, 17 and 18 marks the padding.\",\n      \"confidence\": \"high\"\n    }\n  ],\n  \"strongest\": 17\n}"
+}

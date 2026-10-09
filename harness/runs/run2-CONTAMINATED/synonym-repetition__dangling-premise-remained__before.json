@@ -1,0 +1,25 @@
+{
+ "relation": "synonym-repetition",
+ "case": "dangling-premise-remained",
+ "version": "before",
+ "seconds": 32.4,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     16,
+     17,
+     18
+    ],
+    "claim": "This tells me that the film's closing point is that the value never settles \u2014 and that it needs three consecutive lines to say it, because none of them says anything the previous one did not.",
+    "why": "Line 16 makes the point at the level of the object and its mechanism (value detached from the coin, carried instead by consensus); 17 then renders the same point as pure abstraction ('indeterminate and continually redefined'), and 18 renders it a third time as an attributed process ('an ongoing process of redefinition'), with 'continually redefined' lifted verbatim from 15. No new register enters: nothing physically changes, no audience is introduced, and the form claim does not arrive until 20. Keeping 16 and cutting 17 and 18 loses no content, and 20 still lands the form-and-participant register unaided.",
+    "confidence": "high"
+   }
+  ],
+  "strongest": 17
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [16, 17, 18],\n      \"claim\": \"This tells me that the film's closing point is that the value never settles \u2014 and that it needs three consecutive lines to say it, because none of them says anything the previous one did not.\",\n      \"why\": \"Line 16 makes the point at the level of the object and its mechanism (value detached from the coin, carried instead by consensus); 17 then renders the same point as pure abstraction ('indeterminate and continually redefined'), and 18 renders it a third time as an attributed process ('an ongoing process of redefinition'), with 'continually redefined' lifted verbatim from 15. No new register enters: nothing physically changes, no audience is introduced, and the form claim does not arrive until 20. Keeping 16 and cutting 17 and 18 loses no content, and 20 still lands the form-and-participant register unaided.\",\n      \"confidence\": \"high\"\n    }\n  ],\n  \"strongest\": 17\n}"
+}

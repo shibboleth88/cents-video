@@ -1,0 +1,26 @@
+{
+ "relation": "synonym-repetition",
+ "case": "order-causation-brenner",
+ "version": "after",
+ "rep": 2,
+ "seconds": 31.9,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     16,
+     17,
+     18
+    ],
+    "claim": "This tells me that the value is decoupled from the object, continually redefined by collective consensus \u2014 three times, in the same abstract register, with no new level of operation added.",
+    "why": "Line 16 states the point (value leaves the object and becomes a vessel for social consensus); 17 says the same thing with 'indeterminate and continually redefined' \u2014 a paraphrase that also repeats the 'continually redefined by decentralized consensus' already delivered in 15; 18 says it a third time as 'an ongoing process of redefinition.' All three sit at the level of the concept \u2014 none moves to the object, the viewer, or the form, which 19 and 20 then do. Keep 16, the only one that names the mechanism; 17 and 18 cost running time without adding a register.",
+    "confidence": "high"
+   }
+  ],
+  "strongest": 17
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [16, 17, 18],\n      \"claim\": \"This tells me that the value is decoupled from the object, continually redefined by collective consensus \u2014 three times, in the same abstract register, with no new level of operation added.\",\n      \"why\": \"Line 16 states the point (value leaves the object and becomes a vessel for social consensus); 17 says the same thing with 'indeterminate and continually redefined' \u2014 a paraphrase that also repeats the 'continually redefined by decentralized consensus' already delivered in 15; 18 says it a third time as 'an ongoing process of redefinition.' All three sit at the level of the concept \u2014 none moves to the object, the viewer, or the form, which 19 and 20 then do. Keep 16, the only one that names the mechanism; 17 and 18 cost running time without adding a register.\",\n      \"confidence\": \"high\"\n    }\n  ],\n  \"strongest\": 17\n}"
+}

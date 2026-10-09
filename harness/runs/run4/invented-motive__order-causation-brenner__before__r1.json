@@ -1,0 +1,25 @@
+{
+ "relation": "invented-motive",
+ "case": "order-causation-brenner",
+ "version": "before",
+ "rep": 1,
+ "seconds": 20.7,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     1,
+     2
+    ],
+    "claim": "This tells me that Rutherford Chang chose the penny because it is the most reproduced artwork on Earth.",
+    "why": "Line 2 holds the decision expression ('chose', attributed to Rutherford Chang) and line 1, immediately before it, states a property of the object (most reproduced artwork on Earth) that reads as the reason for the choice; the draft states no reason, motive or origin for Chang's selection anywhere \u2014 lines 3\u201324 describe the work's humor, its five transformations of value, and an argument about commodification and objecthood, none of it offered as his motive \u2014 so the sequence supplies the only motive present. Neither line alone claims anything about why he chose it: line 1 is a fact about the coin, line 2 a fact about his choice.",
+    "confidence": "high"
+   }
+  ],
+  "strongest": 2
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [1, 2],\n      \"claim\": \"This tells me that Rutherford Chang chose the penny because it is the most reproduced artwork on Earth.\",\n      \"why\": \"Line 2 holds the decision expression ('chose', attributed to Rutherford Chang) and line 1, immediately before it, states a property of the object (most reproduced artwork on Earth) that reads as the reason for the choice; the draft states no reason, motive or origin for Chang's selection anywhere \u2014 lines 3\u201324 describe the work's humor, its five transformations of value, and an argument about commodification and objecthood, none of it offered as his motive \u2014 so the sequence supplies the only motive present. Neither line alone claims anything about why he chose it: line 1 is a fact about the coin, line 2 a fact about his choice.\",\n      \"confidence\": \"high\"\n    }\n  ],\n  \"strongest\": 2\n}"
+}

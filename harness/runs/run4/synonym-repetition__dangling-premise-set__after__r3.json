@@ -1,0 +1,25 @@
+{
+ "relation": "synonym-repetition",
+ "case": "dangling-premise-set",
+ "version": "after",
+ "rep": 3,
+ "seconds": 30.9,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     17,
+     21
+    ],
+    "claim": "This tells me that the work's value is continually redefined, and then tells me again that the work's value is continually redefined.",
+    "why": "Both lines state the same abstract property of the work \u2014 that its meaning is subject to ongoing redefinition \u2014 in the same register, sharing the root 'redefin-'; neither names a mechanism, a physical change, or a change for a particular audience that the other does not. Line 16 already supplied the mechanism register and line 20 the collector register, so these two only re-word the conclusion they jointly reach. Keep 21, which at least adds 'indeterminate' and names value and meaning as the subject; cut or re-pitch 17.",
+    "confidence": "high"
+   }
+  ],
+  "strongest": 17
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [17, 21],\n      \"claim\": \"This tells me that the work's value is continually redefined, and then tells me again that the work's value is continually redefined.\",\n      \"why\": \"Both lines state the same abstract property of the work \u2014 that its meaning is subject to ongoing redefinition \u2014 in the same register, sharing the root 'redefin-'; neither names a mechanism, a physical change, or a change for a particular audience that the other does not. Line 16 already supplied the mechanism register and line 20 the collector register, so these two only re-word the conclusion they jointly reach. Keep 21, which at least adds 'indeterminate' and names value and meaning as the subject; cut or re-pitch 17.\",\n      \"confidence\": \"high\"\n    }\n  ],\n  \"strongest\": 17\n}"
+}

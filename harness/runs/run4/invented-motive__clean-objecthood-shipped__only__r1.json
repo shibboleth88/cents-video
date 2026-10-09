@@ -1,0 +1,15 @@
+{
+ "relation": "invented-motive",
+ "case": "clean-objecthood-shipped",
+ "version": "only",
+ "rep": 1,
+ "seconds": 23.6,
+ "exit": 0,
+ "verdict": {
+  "verdict": "NONE",
+  "instances": [],
+  "strongest": null
+ },
+ "malformed": null,
+ "raw": "{\"verdict\": \"NONE\", \"instances\": [], \"strongest\": null}"
+}

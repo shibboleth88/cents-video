@@ -1,0 +1,24 @@
+{
+ "relation": "synonym-repetition",
+ "case": "synonym-repetition-redefinition",
+ "version": "before",
+ "seconds": 32.9,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     17,
+     22
+    ],
+    "claim": "This tells me that the work's value and meaning are subject to continual redefinition \u2014 twice, in the same register, with the second telling me nothing the first did not.",
+    "why": "Both lines make the single point that redefinition is ongoing, sharing the root 'redefin-' and the adverbial 'ongoing/continually'; 17 attributes the process to Chang and 22 attributes it to the object's value, but neither names a mechanism, a physical change, or a change in meaning for anyone, so the second is only a repositioned restatement of the first. Line 23 then makes the same point a third time but earns its place by shifting register to form and to participants' actions, which is why it is not part of the group.",
+    "confidence": "high"
+   }
+  ],
+  "strongest": 22
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [17, 22],\n      \"claim\": \"This tells me that the work's value and meaning are subject to continual redefinition \u2014 twice, in the same register, with the second telling me nothing the first did not.\",\n      \"why\": \"Both lines make the single point that redefinition is ongoing, sharing the root 'redefin-' and the adverbial 'ongoing/continually'; 17 attributes the process to Chang and 22 attributes it to the object's value, but neither names a mechanism, a physical change, or a change in meaning for anyone, so the second is only a repositioned restatement of the first. Line 23 then makes the same point a third time but earns its place by shifting register to form and to participants' actions, which is why it is not part of the group.\",\n      \"confidence\": \"high\"\n    }\n  ],\n  \"strongest\": 22\n}"
+}

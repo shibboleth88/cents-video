@@ -1,0 +1,26 @@
+{
+ "relation": "synonym-repetition",
+ "case": "dangling-premise-remained",
+ "version": "before",
+ "rep": 3,
+ "seconds": 34.4,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     16,
+     17,
+     18
+    ],
+    "claim": "This tells me that the value of the work is detached from the object and perpetually re-decided \u2014 and then tells me so twice more without adding a level at which that happens.",
+    "why": "Line 16 makes the point at the level of mechanism (value decoupled from the object, held instead by social consensus); 17 restates the same proposition in abstract synonyms (\"indeterminate and continually redefined\"), and 18 restates it again with the artist as subject (\"an ongoing process of redefinition\") \u2014 shared roots redefined/redefinition/consensus mark the loop, and neither 17 nor 18 moves to the object, the audience, or the form. Keep 16, which carries the mechanism; 19 and 20 then supply the object and form registers, so cutting 17 and 18 loses no level.",
+    "confidence": "high"
+   }
+  ],
+  "strongest": 17
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [16, 17, 18],\n      \"claim\": \"This tells me that the value of the work is detached from the object and perpetually re-decided \u2014 and then tells me so twice more without adding a level at which that happens.\",\n      \"why\": \"Line 16 makes the point at the level of mechanism (value decoupled from the object, held instead by social consensus); 17 restates the same proposition in abstract synonyms (\\\"indeterminate and continually redefined\\\"), and 18 restates it again with the artist as subject (\\\"an ongoing process of redefinition\\\") \u2014 shared roots redefined/redefinition/consensus mark the loop, and neither 17 nor 18 moves to the object, the audience, or the form. Keep 16, which carries the mechanism; 19 and 20 then supply the object and form registers, so cutting 17 and 18 loses no level.\",\n      \"confidence\": \"high\"\n    }\n  ],\n  \"strongest\": 17\n}"
+}

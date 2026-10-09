@@ -1,0 +1,173 @@
+{
+ "relation": "dangling-premise",
+ "case": "dangling-premise-remained",
+ "version": "after",
+ "rep": 2,
+ "seconds": 93.5,
+ "exit": 0,
+ "verdict": {
+  "verdict": "NONE",
+  "instances": [],
+  "strongest": null,
+  "inventory": [
+   {
+    "line": 2,
+    "expression": "One cent to the Treasury. About two and a half as copper.",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 4,
+    "expression": "Yet",
+    "kind": "contrast",
+    "antecedent_line": 3
+   },
+   {
+    "line": 4,
+    "expression": "remained",
+    "kind": "contrast",
+    "antecedent_line": 3
+   },
+   {
+    "line": 4,
+    "expression": "the object",
+    "kind": "backward",
+    "antecedent_line": 3
+   },
+   {
+    "line": 4,
+    "expression": "its context",
+    "kind": "backward",
+    "antecedent_line": 4
+   },
+   {
+    "line": 5,
+    "expression": "he",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 5,
+    "expression": "The readymade he chose",
+    "kind": "backward",
+    "antecedent_line": 3
+   },
+   {
+    "line": 6,
+    "expression": "each carrying Victor David Brenner's portrait",
+    "kind": "quantifier",
+    "antecedent_line": 6
+   },
+   {
+    "line": 9,
+    "expression": "Yet, here we are",
+    "kind": "contrast",
+    "antecedent_line": 8
+   },
+   {
+    "line": 10,
+    "expression": "He",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 10,
+    "expression": "it",
+    "kind": "backward",
+    "antecedent_line": 5
+   },
+   {
+    "line": 11,
+    "expression": "Every Cent",
+    "kind": "quantifier",
+    "antecedent_line": 6
+   },
+   {
+    "line": 11,
+    "expression": "five transformations of value",
+    "kind": "quantifier",
+    "antecedent_line": 11
+   },
+   {
+    "line": 12,
+    "expression": "In circulation (elided subject: the Cent)",
+    "kind": "backward",
+    "antecedent_line": 11
+   },
+   {
+    "line": 13,
+    "expression": "that assignment",
+    "kind": "backward",
+    "antecedent_line": 12
+   },
+   {
+    "line": 13,
+    "expression": "Removed from circulation",
+    "kind": "contrast",
+    "antecedent_line": 12
+   },
+   {
+    "line": 14,
+    "expression": "Archivally photographed (elided subject)",
+    "kind": "backward",
+    "antecedent_line": 11
+   },
+   {
+    "line": 15,
+    "expression": "its value",
+    "kind": "backward",
+    "antecedent_line": 11
+   },
+   {
+    "line": 16,
+    "expression": "continually redefined",
+    "kind": "continuation",
+    "antecedent_line": 11
+   },
+   {
+    "line": 17,
+    "expression": "Its value and meaning",
+    "kind": "backward",
+    "antecedent_line": 11
+   },
+   {
+    "line": 17,
+    "expression": "continually redefined",
+    "kind": "continuation",
+    "antecedent_line": 16
+   },
+   {
+    "line": 18,
+    "expression": "an ongoing process of redefinition",
+    "kind": "backward",
+    "antecedent_line": 17
+   },
+   {
+    "line": 19,
+    "expression": "Each object",
+    "kind": "quantifier",
+    "antecedent_line": 6
+   },
+   {
+    "line": 19,
+    "expression": "initially identical",
+    "kind": "quantifier",
+    "antecedent_line": 6
+   },
+   {
+    "line": 20,
+    "expression": "its participants",
+    "kind": "backward",
+    "antecedent_line": 20
+   },
+   {
+    "line": 20,
+    "expression": "unfolds continually",
+    "kind": "continuation",
+    "antecedent_line": 18
+   }
+  ]
+ },
+ "malformed": null,
+ "raw": "{\"verdict\":\"NONE\",\"instances\":[],\"strongest\":null,\"inventory\":[{\"line\":2,\"expression\":\"One cent to the Treasury. About two and a half as copper.\",\"kind\":\"backward\",\"antecedent_line\":1},{\"line\":4,\"expression\":\"Yet\",\"kind\":\"contrast\",\"antecedent_line\":3},{\"line\":4,\"expression\":\"remained\",\"kind\":\"contrast\",\"antecedent_line\":3},{\"line\":4,\"expression\":\"the object\",\"kind\":\"backward\",\"antecedent_line\":3},{\"line\":4,\"expression\":\"its context\",\"kind\":\"backward\",\"antecedent_line\":4},{\"line\":5,\"expression\":\"he\",\"kind\":\"backward\",\"antecedent_line\":1},{\"line\":5,\"expression\":\"The readymade he chose\",\"kind\":\"backward\",\"antecedent_line\":3},{\"line\":6,\"expression\":\"each carrying Victor David Brenner's portrait\",\"kind\":\"quantifier\",\"antecedent_line\":6},{\"line\":9,\"expression\":\"Yet, here we are\",\"kind\":\"contrast\",\"antecedent_line\":8},{\"line\":10,\"expression\":\"He\",\"kind\":\"backward\",\"antecedent_line\":1},{\"line\":10,\"expression\":\"it\",\"kind\":\"backward\",\"antecedent_line\":5},{\"line\":11,\"expression\":\"Every Cent\",\"kind\":\"quantifier\",\"antecedent_line\":6},{\"line\":11,\"expression\":\"five transformations of value\",\"kind\":\"quantifier\",\"antecedent_line\":11},{\"line\":12,\"expression\":\"In circulation (elided subject: the Cent)\",\"kind\":\"backward\",\"antecedent_line\":11},{\"line\":13,\"expression\":\"that assignment\",\"kind\":\"backward\",\"antecedent_line\":12},{\"line\":13,\"expression\":\"Removed from circulation\",\"kind\":\"contrast\",\"antecedent_line\":12},{\"line\":14,\"expression\":\"Archivally photographed (elided subject)\",\"kind\":\"backward\",\"antecedent_line\":11},{\"line\":15,\"expression\":\"its value\",\"kind\":\"backward\",\"antecedent_line\":11},{\"line\":16,\"expression\":\"continually redefined\",\"kind\":\"continuation\",\"antecedent_line\":11},{\"line\":17,\"expression\":\"Its value and meaning\",\"kind\":\"backward\",\"antecedent_line\":11},{\"line\":17,\"expression\":\"continually redefined\",\"kind\":\"continuation\",\"antecedent_line\":16},{\"line\":18,\"expression\":\"an ongoing process of redefinition\",\"kind\":\"backward\",\"antecedent_line\":17},{\"line\":19,\"expression\":\"Each object\",\"kind\":\"quantifier\",\"antecedent_line\":6},{\"line\":19,\"expression\":\"initially identical\",\"kind\":\"quantifier\",\"antecedent_line\":6},{\"line\":20,\"expression\":\"its participants\",\"kind\":\"backward\",\"antecedent_line\":20},{\"line\":20,\"expression\":\"unfolds continually\",\"kind\":\"continuation\",\"antecedent_line\":18}]}"
+}

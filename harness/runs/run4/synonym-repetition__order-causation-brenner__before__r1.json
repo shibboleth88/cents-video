@@ -1,0 +1,15 @@
+{
+ "relation": "synonym-repetition",
+ "case": "order-causation-brenner",
+ "version": "before",
+ "rep": 1,
+ "seconds": 41.2,
+ "exit": 0,
+ "verdict": {
+  "verdict": "NONE",
+  "instances": [],
+  "strongest": null
+ },
+ "malformed": null,
+ "raw": "{\"verdict\": \"NONE\", \"instances\": [], \"strongest\": null}"
+}

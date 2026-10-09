@@ -1,0 +1,26 @@
+{
+ "relation": "invented-motive",
+ "case": "dangling-premise-remained",
+ "version": "before",
+ "rep": 3,
+ "seconds": 41.8,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     16,
+     17,
+     18
+    ],
+    "claim": "This tells me that Chang initiated the process of redefinition because value had become decoupled from the object and indeterminate \u2014 that the social contingency of value was the condition he was responding to.",
+    "why": "Line 18 holds the decision expression ('initiated'); lines 16 and 17 immediately before it state properties of value (decoupled from the object, a vessel for social consensus, indeterminate and continually redefined), so the sequence reads as condition-then-act. The draft does state an origin for his work \u2014 line 1, 'began with a simple value discrepancy', specified as copper versus face value in line 2 \u2014 but that is a different motive from the one this order supplies, and the indeterminacy in 16\u201317 is presented as a result of the five transformations the work performs, so the order makes an effect of the work into its reason.",
+    "confidence": "medium"
+   }
+  ],
+  "strongest": 18
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [16, 17, 18],\n      \"claim\": \"This tells me that Chang initiated the process of redefinition because value had become decoupled from the object and indeterminate \u2014 that the social contingency of value was the condition he was responding to.\",\n      \"why\": \"Line 18 holds the decision expression ('initiated'); lines 16 and 17 immediately before it state properties of value (decoupled from the object, a vessel for social consensus, indeterminate and continually redefined), so the sequence reads as condition-then-act. The draft does state an origin for his work \u2014 line 1, 'began with a simple value discrepancy', specified as copper versus face value in line 2 \u2014 but that is a different motive from the one this order supplies, and the indeterminacy in 16\u201317 is presented as a result of the five transformations the work performs, so the order makes an effect of the work into its reason.\",\n      \"confidence\": \"medium\"\n    }\n  ],\n  \"strongest\": 18\n}"
+}

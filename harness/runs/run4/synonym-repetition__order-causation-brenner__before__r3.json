@@ -1,0 +1,34 @@
+{
+ "relation": "synonym-repetition",
+ "case": "order-causation-brenner",
+ "version": "before",
+ "rep": 3,
+ "seconds": 51.7,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     21,
+     22
+    ],
+    "claim": "This tells me that CENTS is a single gesture whose substance is its own ongoing transformation \u2014 stated once in line 21 and again in line 22.",
+    "why": "Both lines make the same form-register claim about what kind of thing the work is, and they share the word 'gesture': 21 says the arc is held in one gesture, 22 says the medium is that gesture of becoming. Neither moves to mechanism, object or audience, and 'continual becoming' already arrived in line 13's 'continually redefined', so cutting 22 costs nothing the draft has not said.",
+    "confidence": "medium"
+   },
+   {
+    "lines": [
+     14,
+     15
+    ],
+    "claim": "This tells me that the art object's materiality came apart from its meaning \u2014 said once as hollowing, once as a split.",
+    "why": "Line 14's 'hollowed out the art object' and line 15's 'split opened between materiality and meaning' describe the same state in unrelated vocabulary, at the same level of abstraction; 15 earns partial keep only because line 16's 'it' needs an antecedent, which a rewritten 16 could supply.",
+    "confidence": "low"
+   }
+  ],
+  "strongest": 22
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [21, 22],\n      \"claim\": \"This tells me that CENTS is a single gesture whose substance is its own ongoing transformation \u2014 stated once in line 21 and again in line 22.\",\n      \"why\": \"Both lines make the same form-register claim about what kind of thing the work is, and they share the word 'gesture': 21 says the arc is held in one gesture, 22 says the medium is that gesture of becoming. Neither moves to mechanism, object or audience, and 'continual becoming' already arrived in line 13's 'continually redefined', so cutting 22 costs nothing the draft has not said.\",\n      \"confidence\": \"medium\"\n    },\n    {\n      \"lines\": [14, 15],\n      \"claim\": \"This tells me that the art object's materiality came apart from its meaning \u2014 said once as hollowing, once as a split.\",\n      \"why\": \"Line 14's 'hollowed out the art object' and line 15's 'split opened between materiality and meaning' describe the same state in unrelated vocabulary, at the same level of abstraction; 15 earns partial keep only because line 16's 'it' needs an antecedent, which a rewritten 16 could supply.\",\n      \"confidence\": \"low\"\n    }\n  ],\n  \"strongest\": 22\n}"
+}

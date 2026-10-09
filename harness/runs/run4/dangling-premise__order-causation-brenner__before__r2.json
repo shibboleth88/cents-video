@@ -1,0 +1,200 @@
+{
+ "relation": "dangling-premise",
+ "case": "order-causation-brenner",
+ "version": "before",
+ "rep": 2,
+ "seconds": 67.4,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     8
+    ],
+    "claim": "This tells me that there is a defined, bounded set of works called Cents, with fixed membership, whose members all share the same five-stage life.",
+    "why": "\"Every Cent\" is a quantifier over a collection, but nothing before it introduces one: line 1 names a coin design, line 5 names \"a cent\" generically, and the project name CENTS first appears at line 21, after the claim that depends on it. The capitalization signals that these are works in an edition, and the draft never establishes that edition or its extent, so the universal claim and the enumeration in 9\u201313 are predicated of a set the film never counted.",
+    "confidence": "high"
+   }
+  ],
+  "strongest": 8,
+  "inventory": [
+   {
+    "line": 2,
+    "expression": "This",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 2,
+    "expression": "the readymade",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 3,
+    "expression": "He",
+    "kind": "backward",
+    "antecedent_line": 2
+   },
+   {
+    "line": 3,
+    "expression": "to it",
+    "kind": "backward",
+    "antecedent_line": 2
+   },
+   {
+    "line": 6,
+    "expression": "Yet, here we are",
+    "kind": "contrast",
+    "antecedent_line": 5
+   },
+   {
+    "line": 7,
+    "expression": "The object",
+    "kind": "backward",
+    "antecedent_line": 2
+   },
+   {
+    "line": 7,
+    "expression": "remained",
+    "kind": "contrast",
+    "antecedent_line": 4
+   },
+   {
+    "line": 7,
+    "expression": "buoyed into physicality",
+    "kind": "contrast",
+    "antecedent_line": 12
+   },
+   {
+    "line": 7,
+    "expression": "its context",
+    "kind": "backward",
+    "antecedent_line": 5
+   },
+   {
+    "line": 8,
+    "expression": "Every Cent",
+    "kind": "quantifier",
+    "antecedent_line": null
+   },
+   {
+    "line": 8,
+    "expression": "five transformations of value",
+    "kind": "quantifier",
+    "antecedent_line": 9
+   },
+   {
+    "line": 10,
+    "expression": "Removed from circulation",
+    "kind": "contrast",
+    "antecedent_line": 9
+   },
+   {
+    "line": 10,
+    "expression": "that assignment",
+    "kind": "backward",
+    "antecedent_line": 9
+   },
+   {
+    "line": 11,
+    "expression": "the image",
+    "kind": "backward",
+    "antecedent_line": 11
+   },
+   {
+    "line": 12,
+    "expression": "its value",
+    "kind": "backward",
+    "antecedent_line": 8
+   },
+   {
+    "line": 13,
+    "expression": "continually redefined",
+    "kind": "contrast",
+    "antecedent_line": 9
+   },
+   {
+    "line": 14,
+    "expression": "the art object",
+    "kind": "backward",
+    "antecedent_line": 7
+   },
+   {
+    "line": 16,
+    "expression": "widened it",
+    "kind": "backward",
+    "antecedent_line": 15
+   },
+   {
+    "line": 17,
+    "expression": "Digital flows",
+    "kind": "backward",
+    "antecedent_line": 16
+   },
+   {
+    "line": 18,
+    "expression": "They",
+    "kind": "backward",
+    "antecedent_line": 17
+   },
+   {
+    "line": 19,
+    "expression": "gave them",
+    "kind": "backward",
+    "antecedent_line": 17
+   },
+   {
+    "line": 20,
+    "expression": "objecthood",
+    "kind": "backward",
+    "antecedent_line": 18
+   },
+   {
+    "line": 20,
+    "expression": "this era's",
+    "kind": "backward",
+    "antecedent_line": 16
+   },
+   {
+    "line": 21,
+    "expression": "that arc",
+    "kind": "backward",
+    "antecedent_line": 14
+   },
+   {
+    "line": 22,
+    "expression": "Its medium",
+    "kind": "backward",
+    "antecedent_line": 21
+   },
+   {
+    "line": 22,
+    "expression": "the gesture",
+    "kind": "backward",
+    "antecedent_line": 21
+   },
+   {
+    "line": 22,
+    "expression": "its continual becoming",
+    "kind": "backward",
+    "antecedent_line": 21
+   },
+   {
+    "line": 23,
+    "expression": "Digital objects on blockchain",
+    "kind": "backward",
+    "antecedent_line": 19
+   },
+   {
+    "line": 24,
+    "expression": "itself, not itself, an interpretation of itself",
+    "kind": "backward",
+    "antecedent_line": 24
+   }
+  ]
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [8],\n      \"claim\": \"This tells me that there is a defined, bounded set of works called Cents, with fixed membership, whose members all share the same five-stage life.\",\n      \"why\": \"\\\"Every Cent\\\" is a quantifier over a collection, but nothing before it introduces one: line 1 names a coin design, line 5 names \\\"a cent\\\" generically, and the project name CENTS first appears at line 21, after the claim that depends on it. The capitalization signals that these are works in an edition, and the draft never establishes that edition or its extent, so the universal claim and the enumeration in 9\u201313 are predicated of a set the film never counted.\",\n      \"confidence\": \"high\"\n    }\n  ],\n  \"strongest\": 8,\n  \"inventory\": [\n    {\"line\": 2, \"expression\": \"This\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 2, \"expression\": \"the readymade\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 3, \"expression\": \"He\", \"kind\": \"backward\", \"antecedent_line\": 2},\n    {\"line\": 3, \"expression\": \"to it\", \"kind\": \"backward\", \"antecedent_line\": 2},\n    {\"line\": 6, \"expression\": \"Yet, here we are\", \"kind\": \"contrast\", \"antecedent_line\": 5},\n    {\"line\": 7, \"expression\": \"The object\", \"kind\": \"backward\", \"antecedent_line\": 2},\n    {\"line\": 7, \"expression\": \"remained\", \"kind\": \"contrast\", \"antecedent_line\": 4},\n    {\"line\": 7, \"expression\": \"buoyed into physicality\", \"kind\": \"contrast\", \"antecedent_line\": 12},\n    {\"line\": 7, \"expression\": \"its context\", \"kind\": \"backward\", \"antecedent_line\": 5},\n    {\"line\": 8, \"expression\": \"Every Cent\", \"kind\": \"quantifier\", \"antecedent_line\": null},\n    {\"line\": 8, \"expression\": \"five transformations of value\", \"kind\": \"quantifier\", \"antecedent_line\": 9},\n    {\"line\": 10, \"expression\": \"Removed from circulation\", \"kind\": \"contrast\", \"antecedent_line\": 9},\n    {\"line\": 10, \"expression\": \"that assignment\", \"kind\": \"backward\", \"antecedent_line\": 9},\n    {\"line\": 11, \"expression\": \"the image\", \"kind\": \"backward\", \"antecedent_line\": 11},\n    {\"line\": 12, \"expression\": \"its value\", \"kind\": \"backward\", \"antecedent_line\": 8},\n    {\"line\": 13, \"expression\": \"continually redefined\", \"kind\": \"contrast\", \"antecedent_line\": 9},\n    {\"line\": 14, \"expression\": \"the art object\", \"kind\": \"backward\", \"antecedent_line\": 7},\n    {\"line\": 16, \"expression\": \"widened it\", \"kind\": \"backward\", \"antecedent_line\": 15},\n    {\"line\": 17, \"expression\": \"Digital flows\", \"kind\": \"backward\", \"antecedent_line\": 16},\n    {\"line\": 18, \"expression\": \"They\", \"kind\": \"backward\", \"antecedent_line\": 17},\n    {\"line\": 19, \"expression\": \"gave them\", \"kind\": \"backward\", \"antecedent_line\": 17},\n    {\"line\": 20, \"expression\": \"objecthood\", \"kind\": \"backward\", \"antecedent_line\": 18},\n    {\"line\": 20, \"expression\": \"this era's\", \"kind\": \"backward\", \"antecedent_line\": 16},\n    {\"line\": 21, \"expression\": \"that arc\", \"kind\": \"backward\", \"antecedent_line\": 14},\n    {\"line\": 22, \"expression\": \"Its medium\", \"kind\": \"backward\", \"antecedent_line\": 21},\n    {\"line\": 22, \"expression\": \"the gesture\", \"kind\": \"backward\", \"antecedent_line\": 21},\n    {\"line\": 22, \"expression\": \"its continual becoming\", \"kind\": \"backward\", \"antecedent_line\": 21},\n    {\"line\": 23, \"expression\": \"Digital objects on blockchain\", \"kind\": \"backward\", \"antecedent_line\": 19},\n    {\"line\": 24, \"expression\": \"itself, not itself, an interpretation of itself\", \"kind\": \"backward\", \"antecedent_line\": 24}\n  ]\n}"
+}

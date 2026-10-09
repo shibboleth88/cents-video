@@ -1,0 +1,191 @@
+{
+ "relation": "dangling-premise",
+ "case": "synonym-repetition-redefinition",
+ "version": "after",
+ "rep": 2,
+ "seconds": 94.5,
+ "exit": 0,
+ "verdict": {
+  "verdict": "NONE",
+  "instances": [],
+  "inventory": [
+   {
+    "line": 2,
+    "expression": "One cent to the Treasury. About two and a half as copper.",
+    "kind": "contrast",
+    "antecedent_line": 1
+   },
+   {
+    "line": 3,
+    "expression": "Chang",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 4,
+    "expression": "Yet",
+    "kind": "contrast",
+    "antecedent_line": 3
+   },
+   {
+    "line": 4,
+    "expression": "remained",
+    "kind": "contrast",
+    "antecedent_line": 3
+   },
+   {
+    "line": 4,
+    "expression": "the object",
+    "kind": "backward",
+    "antecedent_line": 2
+   },
+   {
+    "line": 4,
+    "expression": "its context",
+    "kind": "backward",
+    "antecedent_line": 2
+   },
+   {
+    "line": 5,
+    "expression": "he",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 5,
+    "expression": "The readymade he chose",
+    "kind": "backward",
+    "antecedent_line": 2
+   },
+   {
+    "line": 6,
+    "expression": "each carrying",
+    "kind": "quantifier",
+    "antecedent_line": 6
+   },
+   {
+    "line": 7,
+    "expression": "dissolve into worthlessness",
+    "kind": "contrast",
+    "antecedent_line": 3
+   },
+   {
+    "line": 8,
+    "expression": "a cent",
+    "kind": "backward",
+    "antecedent_line": 2
+   },
+   {
+    "line": 9,
+    "expression": "Yet, here we are",
+    "kind": "contrast",
+    "antecedent_line": 8
+   },
+   {
+    "line": 10,
+    "expression": "He",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 10,
+    "expression": "to it",
+    "kind": "backward",
+    "antecedent_line": 5
+   },
+   {
+    "line": 11,
+    "expression": "Every Cent",
+    "kind": "quantifier",
+    "antecedent_line": 5
+   },
+   {
+    "line": 12,
+    "expression": "In circulation",
+    "kind": "contrast",
+    "antecedent_line": 11
+   },
+   {
+    "line": 13,
+    "expression": "Removed from circulation",
+    "kind": "contrast",
+    "antecedent_line": 12
+   },
+   {
+    "line": 13,
+    "expression": "that assignment",
+    "kind": "backward",
+    "antecedent_line": 12
+   },
+   {
+    "line": 14,
+    "expression": "what the image holds",
+    "kind": "backward",
+    "antecedent_line": 14
+   },
+   {
+    "line": 15,
+    "expression": "its value",
+    "kind": "backward",
+    "antecedent_line": 11
+   },
+   {
+    "line": 16,
+    "expression": "continually redefined",
+    "kind": "contrast",
+    "antecedent_line": 12
+   },
+   {
+    "line": 17,
+    "expression": "A permanent set of ten thousand",
+    "kind": "quantifier",
+    "antecedent_line": 11
+   },
+   {
+    "line": 17,
+    "expression": "its own logics and rarities",
+    "kind": "backward",
+    "antecedent_line": 17
+   },
+   {
+    "line": 18,
+    "expression": "Each one",
+    "kind": "quantifier",
+    "antecedent_line": 17
+   },
+   {
+    "line": 18,
+    "expression": "now bearing the marks",
+    "kind": "contrast",
+    "antecedent_line": 18
+   },
+   {
+    "line": 19,
+    "expression": "the set",
+    "kind": "backward",
+    "antecedent_line": 17
+   },
+   {
+    "line": 19,
+    "expression": "which Cents matter",
+    "kind": "quantifier",
+    "antecedent_line": 17
+   },
+   {
+    "line": 20,
+    "expression": "the same way",
+    "kind": "contrast",
+    "antecedent_line": 19
+   },
+   {
+    "line": 21,
+    "expression": "its participants",
+    "kind": "backward",
+    "antecedent_line": 21
+   }
+  ],
+  "strongest": null
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"NONE\",\n  \"instances\": [],\n  \"inventory\": [\n    {\"line\": 2, \"expression\": \"One cent to the Treasury. About two and a half as copper.\", \"kind\": \"contrast\", \"antecedent_line\": 1},\n    {\"line\": 3, \"expression\": \"Chang\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 4, \"expression\": \"Yet\", \"kind\": \"contrast\", \"antecedent_line\": 3},\n    {\"line\": 4, \"expression\": \"remained\", \"kind\": \"contrast\", \"antecedent_line\": 3},\n    {\"line\": 4, \"expression\": \"the object\", \"kind\": \"backward\", \"antecedent_line\": 2},\n    {\"line\": 4, \"expression\": \"its context\", \"kind\": \"backward\", \"antecedent_line\": 2},\n    {\"line\": 5, \"expression\": \"he\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 5, \"expression\": \"The readymade he chose\", \"kind\": \"backward\", \"antecedent_line\": 2},\n    {\"line\": 6, \"expression\": \"each carrying\", \"kind\": \"quantifier\", \"antecedent_line\": 6},\n    {\"line\": 7, \"expression\": \"dissolve into worthlessness\", \"kind\": \"contrast\", \"antecedent_line\": 3},\n    {\"line\": 8, \"expression\": \"a cent\", \"kind\": \"backward\", \"antecedent_line\": 2},\n    {\"line\": 9, \"expression\": \"Yet, here we are\", \"kind\": \"contrast\", \"antecedent_line\": 8},\n    {\"line\": 10, \"expression\": \"He\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 10, \"expression\": \"to it\", \"kind\": \"backward\", \"antecedent_line\": 5},\n    {\"line\": 11, \"expression\": \"Every Cent\", \"kind\": \"quantifier\", \"antecedent_line\": 5},\n    {\"line\": 12, \"expression\": \"In circulation\", \"kind\": \"contrast\", \"antecedent_line\": 11},\n    {\"line\": 13, \"expression\": \"Removed from circulation\", \"kind\": \"contrast\", \"antecedent_line\": 12},\n    {\"line\": 13, \"expression\": \"that assignment\", \"kind\": \"backward\", \"antecedent_line\": 12},\n    {\"line\": 14, \"expression\": \"what the image holds\", \"kind\": \"backward\", \"antecedent_line\": 14},\n    {\"line\": 15, \"expression\": \"its value\", \"kind\": \"backward\", \"antecedent_line\": 11},\n    {\"line\": 16, \"expression\": \"continually redefined\", \"kind\": \"contrast\", \"antecedent_line\": 12},\n    {\"line\": 17, \"expression\": \"A permanent set of ten thousand\", \"kind\": \"quantifier\", \"antecedent_line\": 11},\n    {\"line\": 17, \"expression\": \"its own logics and rarities\", \"kind\": \"backward\", \"antecedent_line\": 17},\n    {\"line\": 18, \"expression\": \"Each one\", \"kind\": \"quantifier\", \"antecedent_line\": 17},\n    {\"line\": 18, \"expression\": \"now bearing the marks\", \"kind\": \"contrast\", \"antecedent_line\": 18},\n    {\"line\": 19, \"expression\": \"the set\", \"kind\": \"backward\", \"antecedent_line\": 17},\n    {\"line\": 19, \"expression\": \"which Cents matter\", \"kind\": \"quantifier\", \"antecedent_line\": 17},\n    {\"line\": 20, \"expression\": \"the same way\", \"kind\": \"contrast\", \"antecedent_line\": 19},\n    {\"line\": 21, \"expression\": \"its participants\", \"kind\": \"backward\", \"antecedent_line\": 21}\n  ],\n  \"strongest\": null\n}"
+}

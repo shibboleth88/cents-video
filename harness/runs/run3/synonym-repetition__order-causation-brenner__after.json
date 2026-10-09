@@ -1,0 +1,25 @@
+{
+ "relation": "synonym-repetition",
+ "case": "order-causation-brenner",
+ "version": "after",
+ "seconds": 30.3,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     16,
+     17,
+     18
+    ],
+    "claim": "This tells me that the value of a Cent is no longer fixed to the object and is instead endlessly re-decided \u2014 and then tells me so twice more in other words.",
+    "why": "Line 15 has already established redefinition by collective consensus; 16 states it as mechanism (value decoupled from object, carried by social consensus), but 17 only re-labels that same state as 'indeterminate and continually redefined' and 18 only re-attributes it as 'an ongoing process of redefinition'. Neither 17 nor 18 moves to the object, the audience, or the form \u2014 they are the same register and nearly the same vocabulary ('redefined', 'redefinition'), so cutting them loses no point; keep 16.",
+    "confidence": "high"
+   }
+  ],
+  "strongest": 17
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [16, 17, 18],\n      \"claim\": \"This tells me that the value of a Cent is no longer fixed to the object and is instead endlessly re-decided \u2014 and then tells me so twice more in other words.\",\n      \"why\": \"Line 15 has already established redefinition by collective consensus; 16 states it as mechanism (value decoupled from object, carried by social consensus), but 17 only re-labels that same state as 'indeterminate and continually redefined' and 18 only re-attributes it as 'an ongoing process of redefinition'. Neither 17 nor 18 moves to the object, the audience, or the form \u2014 they are the same register and nearly the same vocabulary ('redefined', 'redefinition'), so cutting them loses no point; keep 16.\",\n      \"confidence\": \"high\"\n    }\n  ],\n  \"strongest\": 17\n}"
+}

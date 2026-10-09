@@ -1,0 +1,15 @@
+{
+ "relation": "invented-motive",
+ "case": "clean-introduction",
+ "version": "only",
+ "rep": 2,
+ "seconds": 39.9,
+ "exit": 0,
+ "verdict": {
+  "verdict": "NONE",
+  "instances": [],
+  "strongest": null
+ },
+ "malformed": null,
+ "raw": "{\"verdict\": \"NONE\", \"instances\": [], \"strongest\": null}"
+}

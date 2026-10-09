@@ -1,0 +1,169 @@
+{
+ "relation": "dangling-premise",
+ "case": "clean-objecthood-bridge",
+ "version": "only",
+ "seconds": 84.6,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     4
+    ],
+    "claim": "This tells me that the cent had stopped being a thing \u2014 that its physical existence had come into question, and that something other than its substance was holding it in being.",
+    "why": "\"The object\" is a definite phrase with nothing before it that names an object: lines 1\u20133 give a price, a metal value, and a disappearance of purchasing power, all of which concern what a cent is worth, not whether it is a thing. \"Remained\" and \"buoyed into physicality\" then both push against a state the draft never establishes, so the line reads as the resolution of an argument about objecthood that is not in the piece.",
+    "confidence": "high"
+   }
+  ],
+  "inventory": [
+   {
+    "line": 2,
+    "expression": "About two and a half as copper",
+    "kind": "backward",
+    "antecedent_line": 2
+   },
+   {
+    "line": 3,
+    "expression": "before Chang was born",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 4,
+    "expression": "Yet",
+    "kind": "contrast",
+    "antecedent_line": 3
+   },
+   {
+    "line": 4,
+    "expression": "the object",
+    "kind": "backward",
+    "antecedent_line": null
+   },
+   {
+    "line": 4,
+    "expression": "remained",
+    "kind": "contrast",
+    "antecedent_line": null
+   },
+   {
+    "line": 4,
+    "expression": "buoyed into physicality",
+    "kind": "contrast",
+    "antecedent_line": null
+   },
+   {
+    "line": 4,
+    "expression": "its context",
+    "kind": "backward",
+    "antecedent_line": null
+   },
+   {
+    "line": 5,
+    "expression": "The readymade he chose",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 6,
+    "expression": "each carrying Victor David Brenner's portrait",
+    "kind": "quantifier",
+    "antecedent_line": 6
+   },
+   {
+    "line": 9,
+    "expression": "Yet, here we are",
+    "kind": "contrast",
+    "antecedent_line": 8
+   },
+   {
+    "line": 10,
+    "expression": "He",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 10,
+    "expression": "to it",
+    "kind": "backward",
+    "antecedent_line": 8
+   },
+   {
+    "line": 11,
+    "expression": "Every Cent",
+    "kind": "quantifier",
+    "antecedent_line": 17
+   },
+   {
+    "line": 12,
+    "expression": "value defined by the Treasury",
+    "kind": "backward",
+    "antecedent_line": 11
+   },
+   {
+    "line": 13,
+    "expression": "that assignment",
+    "kind": "backward",
+    "antecedent_line": 12
+   },
+   {
+    "line": 14,
+    "expression": "what the image holds",
+    "kind": "backward",
+    "antecedent_line": 14
+   },
+   {
+    "line": 15,
+    "expression": "its value",
+    "kind": "backward",
+    "antecedent_line": 11
+   },
+   {
+    "line": 16,
+    "expression": "continually redefined",
+    "kind": "backward",
+    "antecedent_line": 11
+   },
+   {
+    "line": 17,
+    "expression": "never any more",
+    "kind": "quantifier",
+    "antecedent_line": 17
+   },
+   {
+    "line": 18,
+    "expression": "a set this fixed",
+    "kind": "backward",
+    "antecedent_line": 17
+   },
+   {
+    "line": 18,
+    "expression": "each Cent",
+    "kind": "quantifier",
+    "antecedent_line": 17
+   },
+   {
+    "line": 19,
+    "expression": "The way words do",
+    "kind": "contrast",
+    "antecedent_line": 18
+   },
+   {
+    "line": 19,
+    "expression": "the scarce set of meanings we call canon",
+    "kind": "backward",
+    "antecedent_line": null
+   },
+   {
+    "line": 20,
+    "expression": "its participants",
+    "kind": "backward",
+    "antecedent_line": 20
+   }
+  ],
+  "strongest": 4
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [4],\n      \"claim\": \"This tells me that the cent had stopped being a thing \u2014 that its physical existence had come into question, and that something other than its substance was holding it in being.\",\n      \"why\": \"\\\"The object\\\" is a definite phrase with nothing before it that names an object: lines 1\u20133 give a price, a metal value, and a disappearance of purchasing power, all of which concern what a cent is worth, not whether it is a thing. \\\"Remained\\\" and \\\"buoyed into physicality\\\" then both push against a state the draft never establishes, so the line reads as the resolution of an argument about objecthood that is not in the piece.\",\n      \"confidence\": \"high\"\n    }\n  ],\n  \"inventory\": [\n    {\"line\": 2, \"expression\": \"About two and a half as copper\", \"kind\": \"backward\", \"antecedent_line\": 2},\n    {\"line\": 3, \"expression\": \"before Chang was born\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 4, \"expression\": \"Yet\", \"kind\": \"contrast\", \"antecedent_line\": 3},\n    {\"line\": 4, \"expression\": \"the object\", \"kind\": \"backward\", \"antecedent_line\": null},\n    {\"line\": 4, \"expression\": \"remained\", \"kind\": \"contrast\", \"antecedent_line\": null},\n    {\"line\": 4, \"expression\": \"buoyed into physicality\", \"kind\": \"contrast\", \"antecedent_line\": null},\n    {\"line\": 4, \"expression\": \"its context\", \"kind\": \"backward\", \"antecedent_line\": null},\n    {\"line\": 5, \"expression\": \"The readymade he chose\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 6, \"expression\": \"each carrying Victor David Brenner's portrait\", \"kind\": \"quantifier\", \"antecedent_line\": 6},\n    {\"line\": 9, \"expression\": \"Yet, here we are\", \"kind\": \"contrast\", \"antecedent_line\": 8},\n    {\"line\": 10, \"expression\": \"He\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 10, \"expression\": \"to it\", \"kind\": \"backward\", \"antecedent_line\": 8},\n    {\"line\": 11, \"expression\": \"Every Cent\", \"kind\": \"quantifier\", \"antecedent_line\": 17},\n    {\"line\": 12, \"expression\": \"value defined by the Treasury\", \"kind\": \"backward\", \"antecedent_line\": 11},\n    {\"line\": 13, \"expression\": \"that assignment\", \"kind\": \"backward\", \"antecedent_line\": 12},\n    {\"line\": 14, \"expression\": \"what the image holds\", \"kind\": \"backward\", \"antecedent_line\": 14},\n    {\"line\": 15, \"expression\": \"its value\", \"kind\": \"backward\", \"antecedent_line\": 11},\n    {\"line\": 16, \"expression\": \"continually redefined\", \"kind\": \"backward\", \"antecedent_line\": 11},\n    {\"line\": 17, \"expression\": \"never any more\", \"kind\": \"quantifier\", \"antecedent_line\": 17},\n    {\"line\": 18, \"expression\": \"a set this fixed\", \"kind\": \"backward\", \"antecedent_line\": 17},\n    {\"line\": 18, \"expression\": \"each Cent\", \"kind\": \"quantifier\", \"antecedent_line\": 17},\n    {\"line\": 19, \"expression\": \"The way words do\", \"kind\": \"contrast\", \"antecedent_line\": 18},\n    {\"line\": 19, \"expression\": \"the scarce set of meanings we call canon\", \"kind\": \"backward\", \"antecedent_line\": null},\n    {\"line\": 20, \"expression\": \"its participants\", \"kind\": \"backward\", \"antecedent_line\": 20}\n  ],\n  \"strongest\": 4\n}"
+}

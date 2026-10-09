@@ -1,0 +1,197 @@
+{
+ "relation": "dangling-premise",
+ "case": "order-causation-brenner",
+ "version": "after",
+ "rep": 3,
+ "seconds": 83.4,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     5
+    ],
+    "claim": "This tells me that something in the work had been pulling the cent out of physical existence \u2014 dissolving it into idea, image or pure value \u2014 and that the draft has already described that pull.",
+    "why": "\"Remained\" and \"buoyed into physicality\" are both contrastive: they presuppose a stated force working against the object's persistence as a thing. Lines 1\u20134 establish only a price gap and two superlatives about commonness and reproduction; nothing before line 5 puts the object's physical existence in question, so the sentence pushes against a state of affairs the draft never sets up.",
+    "confidence": "high"
+   },
+   {
+    "lines": [
+     10,
+     19
+    ],
+    "claim": "This tells me that CENTS consists of a defined, countable group of cent-objects, fixed in membership, which were all identical at the moment they entered the work.",
+    "why": "\"Every Cent\" and \"Each object, initially identical\" are claims about a bounded population, but the draft only ever names singulars and kinds \u2014 \"a simple value discrepancy\", \"the readymade he chose\", \"the object\". No line introduces an edition, a quantity, or a group whose members could be compared to one another, so both quantifiers range over a set the draft never constituted; line 19's \"initially identical\" in particular is a comparative claim with nothing to compare.",
+    "confidence": "medium"
+   }
+  ],
+  "inventory": [
+   {
+    "line": 2,
+    "expression": "One cent to the Treasury. About two and a half as copper.",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 3,
+    "expression": "he chose",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 3,
+    "expression": "The readymade he chose",
+    "kind": "backward",
+    "antecedent_line": 2
+   },
+   {
+    "line": 5,
+    "expression": "The object",
+    "kind": "backward",
+    "antecedent_line": 3
+   },
+   {
+    "line": 5,
+    "expression": "remained",
+    "kind": "contrast",
+    "antecedent_line": null
+   },
+   {
+    "line": 5,
+    "expression": "buoyed into physicality",
+    "kind": "contrast",
+    "antecedent_line": null
+   },
+   {
+    "line": 5,
+    "expression": "its context",
+    "kind": "backward",
+    "antecedent_line": 3
+   },
+   {
+    "line": 8,
+    "expression": "Yet, here we are",
+    "kind": "contrast",
+    "antecedent_line": 7
+   },
+   {
+    "line": 9,
+    "expression": "He",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 9,
+    "expression": "to it",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 10,
+    "expression": "Every Cent",
+    "kind": "quantifier",
+    "antecedent_line": null
+   },
+   {
+    "line": 10,
+    "expression": "five transformations of value",
+    "kind": "quantifier",
+    "antecedent_line": 10
+   },
+   {
+    "line": 11,
+    "expression": "In circulation",
+    "kind": "backward",
+    "antecedent_line": 10
+   },
+   {
+    "line": 12,
+    "expression": "Removed from circulation",
+    "kind": "contrast",
+    "antecedent_line": 11
+   },
+   {
+    "line": 12,
+    "expression": "that assignment",
+    "kind": "backward",
+    "antecedent_line": 11
+   },
+   {
+    "line": 13,
+    "expression": "the image",
+    "kind": "backward",
+    "antecedent_line": 13
+   },
+   {
+    "line": 14,
+    "expression": "its value",
+    "kind": "backward",
+    "antecedent_line": 10
+   },
+   {
+    "line": 15,
+    "expression": "redefined",
+    "kind": "contrast",
+    "antecedent_line": 11
+   },
+   {
+    "line": 16,
+    "expression": "The assigned value",
+    "kind": "backward",
+    "antecedent_line": 11
+   },
+   {
+    "line": 16,
+    "expression": "the object",
+    "kind": "backward",
+    "antecedent_line": 3
+   },
+   {
+    "line": 17,
+    "expression": "Its value and meaning",
+    "kind": "backward",
+    "antecedent_line": 10
+   },
+   {
+    "line": 17,
+    "expression": "continually redefined",
+    "kind": "contrast",
+    "antecedent_line": 15
+   },
+   {
+    "line": 18,
+    "expression": "an ongoing process of redefinition",
+    "kind": "backward",
+    "antecedent_line": 17
+   },
+   {
+    "line": 19,
+    "expression": "Each object",
+    "kind": "quantifier",
+    "antecedent_line": null
+   },
+   {
+    "line": 19,
+    "expression": "initially identical",
+    "kind": "quantifier",
+    "antecedent_line": null
+   },
+   {
+    "line": 20,
+    "expression": "unfolds continually",
+    "kind": "contrast",
+    "antecedent_line": 18
+   },
+   {
+    "line": 20,
+    "expression": "its participants",
+    "kind": "backward",
+    "antecedent_line": 19
+   }
+  ],
+  "strongest": 5
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [5],\n      \"claim\": \"This tells me that something in the work had been pulling the cent out of physical existence \u2014 dissolving it into idea, image or pure value \u2014 and that the draft has already described that pull.\",\n      \"why\": \"\\\"Remained\\\" and \\\"buoyed into physicality\\\" are both contrastive: they presuppose a stated force working against the object's persistence as a thing. Lines 1\u20134 establish only a price gap and two superlatives about commonness and reproduction; nothing before line 5 puts the object's physical existence in question, so the sentence pushes against a state of affairs the draft never sets up.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"lines\": [10, 19],\n      \"claim\": \"This tells me that CENTS consists of a defined, countable group of cent-objects, fixed in membership, which were all identical at the moment they entered the work.\",\n      \"why\": \"\\\"Every Cent\\\" and \\\"Each object, initially identical\\\" are claims about a bounded population, but the draft only ever names singulars and kinds \u2014 \\\"a simple value discrepancy\\\", \\\"the readymade he chose\\\", \\\"the object\\\". No line introduces an edition, a quantity, or a group whose members could be compared to one another, so both quantifiers range over a set the draft never constituted; line 19's \\\"initially identical\\\" in particular is a comparative claim with nothing to compare.\",\n      \"confidence\": \"medium\"\n    }\n  ],\n  \"inventory\": [\n    {\"line\": 2, \"expression\": \"One cent to the Treasury. About two and a half as copper.\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 3, \"expression\": \"he chose\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 3, \"expression\": \"The readymade he chose\", \"kind\": \"backward\", \"antecedent_line\": 2},\n    {\"line\": 5, \"expression\": \"The object\", \"kind\": \"backward\", \"antecedent_line\": 3},\n    {\"line\": 5, \"expression\": \"remained\", \"kind\": \"contrast\", \"antecedent_line\": null},\n    {\"line\": 5, \"expression\": \"buoyed into physicality\", \"kind\": \"contrast\", \"antecedent_line\": null},\n    {\"line\": 5, \"expression\": \"its context\", \"kind\": \"backward\", \"antecedent_line\": 3},\n    {\"line\": 8, \"expression\": \"Yet, here we are\", \"kind\": \"contrast\", \"antecedent_line\": 7},\n    {\"line\": 9, \"expression\": \"He\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 9, \"expression\": \"to it\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 10, \"expression\": \"Every Cent\", \"kind\": \"quantifier\", \"antecedent_line\": null},\n    {\"line\": 10, \"expression\": \"five transformations of value\", \"kind\": \"quantifier\", \"antecedent_line\": 10},\n    {\"line\": 11, \"expression\": \"In circulation\", \"kind\": \"backward\", \"antecedent_line\": 10},\n    {\"line\": 12, \"expression\": \"Removed from circulation\", \"kind\": \"contrast\", \"antecedent_line\": 11},\n    {\"line\": 12, \"expression\": \"that assignment\", \"kind\": \"backward\", \"antecedent_line\": 11},\n    {\"line\": 13, \"expression\": \"the image\", \"kind\": \"backward\", \"antecedent_line\": 13},\n    {\"line\": 14, \"expression\": \"its value\", \"kind\": \"backward\", \"antecedent_line\": 10},\n    {\"line\": 15, \"expression\": \"redefined\", \"kind\": \"contrast\", \"antecedent_line\": 11},\n    {\"line\": 16, \"expression\": \"The assigned value\", \"kind\": \"backward\", \"antecedent_line\": 11},\n    {\"line\": 16, \"expression\": \"the object\", \"kind\": \"backward\", \"antecedent_line\": 3},\n    {\"line\": 17, \"expression\": \"Its value and meaning\", \"kind\": \"backward\", \"antecedent_line\": 10},\n    {\"line\": 17, \"expression\": \"continually redefined\", \"kind\": \"contrast\", \"antecedent_line\": 15},\n    {\"line\": 18, \"expression\": \"an ongoing process of redefinition\", \"kind\": \"backward\", \"antecedent_line\": 17},\n    {\"line\": 19, \"expression\": \"Each object\", \"kind\": \"quantifier\", \"antecedent_line\": null},\n    {\"line\": 19, \"expression\": \"initially identical\", \"kind\": \"quantifier\", \"antecedent_line\": null},\n    {\"line\": 20, \"expression\": \"unfolds continually\", \"kind\": \"contrast\", \"antecedent_line\": 18},\n    {\"line\": 20, \"ex"
+}

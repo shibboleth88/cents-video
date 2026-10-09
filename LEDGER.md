@@ -1152,3 +1152,58 @@ Reported as one number they look like the same problem. They are not:
 An ARGUABLE verdict must therefore be a **first-class outcome of scoring**,
 excluded from both recall and precision. Folding it into either direction
 flatters or condemns the reviewer arbitrarily and destroys the distinction above.
+
+### Two runs writing to one directory are indistinguishable from one run
+
+A review run was launched twice: once with a shell `&` (which I believed had
+been killed) and once properly. Both wrote into `runs/run2`, where records are
+keyed by **cell** - relation, case, version - and not by run. So the later
+finisher silently overwrote the earlier one, the directory held exactly the
+expected 33 files, and nothing looked wrong.
+
+It surfaced only because **scoring the same directory twice gave two different
+answers** (1/7 then 3/7 recall). The confirming evidence was timestamps: the
+manifest, which the runner writes last, predated 20 of the records.
+
+Two floors, either of which would have caught it: the runner now refuses a tag
+whose directory already holds records, and takes a lock file for the duration.
+
+A second instrument failure sat on top of it: the liveness check
+`pgrep -f run_reviews.py` **matched its own command line**, since the monitoring
+loop contained that string. It reported "still running" about itself, forever,
+and I read that as evidence the job was alive.
+
+**The pairs:** *output keyed by subject is not output keyed by run.*
+*A process checking for a pattern is not outside the set it searches.*
+
+### Stability is a separate measurement from correctness, and it is the one that fails first
+
+Three reviewers were scored on recall and precision, and one came out clean:
+perfect recall, perfect precision, and 11/11 agreement across two independent
+samples. Repeating every cell three times instead of two showed that reviewer at
+**9/11** - the perfect stability figure was luck, and one extra sample per cell
+was enough to refute it.
+
+All three reviewers then failed on stability while two of them had acceptable
+recall and precision. A number computed once is not a measurement of a
+non-deterministic subject; it is one draw from a distribution nobody looked at.
+
+Corollaries worth keeping:
+
+- **Vote on the outcome, not the verdict.** A cell where three reps all answer
+  FOUND but two cite the wrong lines is a majority *wrong place*, not a hit.
+  Verdict-only voting scores it a hit, and a control was written for exactly
+  this case before any real data was scored.
+- **One rep is not unanimity.** A single-rep cell must report stability
+  UNMEASURED, never 1.00. Re-scoring an older single-rep run was the test.
+- **Pool the reps as well as voting them.** The majority said
+  `synonym-repetition` had perfect recall; pooling showed it hit **18 of 18**
+  reps and that both its flips were false positives on clean drafts. Same
+  reviewer, and the two readings imply different fixes - more reps, not a better
+  prompt.
+- **Report against the threshold you declared, do not move it.** 0.90-unanimous
+  at three reps is a hard bar and all three subjects failed it. The honest note
+  is that three reps cannot separate "flips rarely" from "flips often" - which
+  is an argument for more reps, not for a lower bar.
+
+**The pair:** *a score is not a measurement until it has been repeated.*

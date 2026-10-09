@@ -1,0 +1,191 @@
+{
+ "relation": "dangling-premise",
+ "case": "dangling-premise-set",
+ "version": "after",
+ "rep": 3,
+ "seconds": 74.1,
+ "exit": 0,
+ "verdict": {
+  "verdict": "NONE",
+  "instances": [],
+  "strongest": null,
+  "inventory": [
+   {
+    "line": 2,
+    "expression": "About two and a half",
+    "kind": "backward",
+    "antecedent_line": 2
+   },
+   {
+    "line": 4,
+    "expression": "Yet",
+    "kind": "contrast",
+    "antecedent_line": 3
+   },
+   {
+    "line": 4,
+    "expression": "the object",
+    "kind": "backward",
+    "antecedent_line": 2
+   },
+   {
+    "line": 4,
+    "expression": "remained",
+    "kind": "contrast",
+    "antecedent_line": 3
+   },
+   {
+    "line": 4,
+    "expression": "its context",
+    "kind": "backward",
+    "antecedent_line": 4
+   },
+   {
+    "line": 5,
+    "expression": "The readymade he chose",
+    "kind": "backward",
+    "antecedent_line": 2
+   },
+   {
+    "line": 5,
+    "expression": "he",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 6,
+    "expression": "each carrying",
+    "kind": "quantifier",
+    "antecedent_line": 6
+   },
+   {
+    "line": 9,
+    "expression": "Yet, here we are",
+    "kind": "contrast",
+    "antecedent_line": 8
+   },
+   {
+    "line": 10,
+    "expression": "He",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 10,
+    "expression": "to it",
+    "kind": "backward",
+    "antecedent_line": 5
+   },
+   {
+    "line": 10,
+    "expression": "emptiness",
+    "kind": "backward",
+    "antecedent_line": 7
+   },
+   {
+    "line": 11,
+    "expression": "Every Cent",
+    "kind": "quantifier",
+    "antecedent_line": 6
+   },
+   {
+    "line": 12,
+    "expression": "In circulation",
+    "kind": "backward",
+    "antecedent_line": 11
+   },
+   {
+    "line": 13,
+    "expression": "Removed from circulation",
+    "kind": "contrast",
+    "antecedent_line": 12
+   },
+   {
+    "line": 13,
+    "expression": "that assignment",
+    "kind": "backward",
+    "antecedent_line": 12
+   },
+   {
+    "line": 13,
+    "expression": "subverted",
+    "kind": "contrast",
+    "antecedent_line": 12
+   },
+   {
+    "line": 14,
+    "expression": "what the image holds",
+    "kind": "backward",
+    "antecedent_line": 14
+   },
+   {
+    "line": 15,
+    "expression": "its value",
+    "kind": "backward",
+    "antecedent_line": 11
+   },
+   {
+    "line": 16,
+    "expression": "continually redefined",
+    "kind": "continuation",
+    "antecedent_line": 13
+   },
+   {
+    "line": 18,
+    "expression": "A permanent set of ten thousand",
+    "kind": "quantifier",
+    "antecedent_line": 11
+   },
+   {
+    "line": 18,
+    "expression": "its own logics and rarities",
+    "kind": "backward",
+    "antecedent_line": 18
+   },
+   {
+    "line": 19,
+    "expression": "Each one",
+    "kind": "quantifier",
+    "antecedent_line": 18
+   },
+   {
+    "line": 19,
+    "expression": "initially identical",
+    "kind": "contrast",
+    "antecedent_line": 18
+   },
+   {
+    "line": 20,
+    "expression": "the set",
+    "kind": "backward",
+    "antecedent_line": 18
+   },
+   {
+    "line": 20,
+    "expression": "its internal dynamics",
+    "kind": "backward",
+    "antecedent_line": 18
+   },
+   {
+    "line": 21,
+    "expression": "Its value and meaning",
+    "kind": "backward",
+    "antecedent_line": 18
+   },
+   {
+    "line": 21,
+    "expression": "continually redefined",
+    "kind": "continuation",
+    "antecedent_line": 16
+   },
+   {
+    "line": 22,
+    "expression": "its participants",
+    "kind": "backward",
+    "antecedent_line": 22
+   }
+  ]
+ },
+ "malformed": null,
+ "raw": "{\"verdict\":\"NONE\",\"instances\":[],\"strongest\":null,\"inventory\":[{\"line\":2,\"expression\":\"About two and a half\",\"kind\":\"backward\",\"antecedent_line\":2},{\"line\":4,\"expression\":\"Yet\",\"kind\":\"contrast\",\"antecedent_line\":3},{\"line\":4,\"expression\":\"the object\",\"kind\":\"backward\",\"antecedent_line\":2},{\"line\":4,\"expression\":\"remained\",\"kind\":\"contrast\",\"antecedent_line\":3},{\"line\":4,\"expression\":\"its context\",\"kind\":\"backward\",\"antecedent_line\":4},{\"line\":5,\"expression\":\"The readymade he chose\",\"kind\":\"backward\",\"antecedent_line\":2},{\"line\":5,\"expression\":\"he\",\"kind\":\"backward\",\"antecedent_line\":1},{\"line\":6,\"expression\":\"each carrying\",\"kind\":\"quantifier\",\"antecedent_line\":6},{\"line\":9,\"expression\":\"Yet, here we are\",\"kind\":\"contrast\",\"antecedent_line\":8},{\"line\":10,\"expression\":\"He\",\"kind\":\"backward\",\"antecedent_line\":1},{\"line\":10,\"expression\":\"to it\",\"kind\":\"backward\",\"antecedent_line\":5},{\"line\":10,\"expression\":\"emptiness\",\"kind\":\"backward\",\"antecedent_line\":7},{\"line\":11,\"expression\":\"Every Cent\",\"kind\":\"quantifier\",\"antecedent_line\":6},{\"line\":12,\"expression\":\"In circulation\",\"kind\":\"backward\",\"antecedent_line\":11},{\"line\":13,\"expression\":\"Removed from circulation\",\"kind\":\"contrast\",\"antecedent_line\":12},{\"line\":13,\"expression\":\"that assignment\",\"kind\":\"backward\",\"antecedent_line\":12},{\"line\":13,\"expression\":\"subverted\",\"kind\":\"contrast\",\"antecedent_line\":12},{\"line\":14,\"expression\":\"what the image holds\",\"kind\":\"backward\",\"antecedent_line\":14},{\"line\":15,\"expression\":\"its value\",\"kind\":\"backward\",\"antecedent_line\":11},{\"line\":16,\"expression\":\"continually redefined\",\"kind\":\"continuation\",\"antecedent_line\":13},{\"line\":18,\"expression\":\"A permanent set of ten thousand\",\"kind\":\"quantifier\",\"antecedent_line\":11},{\"line\":18,\"expression\":\"its own logics and rarities\",\"kind\":\"backward\",\"antecedent_line\":18},{\"line\":19,\"expression\":\"Each one\",\"kind\":\"quantifier\",\"antecedent_line\":18},{\"line\":19,\"expression\":\"initially identical\",\"kind\":\"contrast\",\"antecedent_line\":18},{\"line\":20,\"expression\":\"the set\",\"kind\":\"backward\",\"antecedent_line\":18},{\"line\":20,\"expression\":\"its internal dynamics\",\"kind\":\"backward\",\"antecedent_line\":18},{\"line\":21,\"expression\":\"Its value and meaning\",\"kind\":\"backward\",\"antecedent_line\":18},{\"line\":21,\"expression\":\"continually redefined\",\"kind\":\"continuation\",\"antecedent_line\":16},{\"line\":22,\"expression\":\"its participants\",\"kind\":\"backward\",\"antecedent_line\":22}]}"
+}

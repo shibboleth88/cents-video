@@ -1,0 +1,24 @@
+{
+ "relation": "invented-motive",
+ "case": "order-causation-brenner",
+ "version": "before",
+ "seconds": 17.0,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     1,
+     2
+    ],
+    "claim": "This tells me that Rutherford Chang chose the penny because Brenner's Lincoln is the most reproduced artwork on Earth.",
+    "why": "Line 2 holds the decision expression ('chose'); line 1, immediately before it, states a property of the object (most reproduced artwork on Earth) and nothing else intervenes, so the sequence reads as the ground for the choice. The draft states no reason, motive or origin for Chang's selection anywhere \u2014 lines 3\u20137 describe the tone and condition of the resulting work, not why this readymade was taken up \u2014 so the order is the only thing supplying a motive.",
+    "confidence": "high"
+   }
+  ],
+  "strongest": 2
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [1, 2],\n      \"claim\": \"This tells me that Rutherford Chang chose the penny because Brenner's Lincoln is the most reproduced artwork on Earth.\",\n      \"why\": \"Line 2 holds the decision expression ('chose'); line 1, immediately before it, states a property of the object (most reproduced artwork on Earth) and nothing else intervenes, so the sequence reads as the ground for the choice. The draft states no reason, motive or origin for Chang's selection anywhere \u2014 lines 3\u20137 describe the tone and condition of the resulting work, not why this readymade was taken up \u2014 so the order is the only thing supplying a motive.\",\n      \"confidence\": \"high\"\n    }\n  ],\n  \"strongest\": 2\n}"
+}

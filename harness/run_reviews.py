@@ -30,7 +30,12 @@ def build_prompt(relation, script_text):
             f"## The draft to review\n\n```\n{numbered(script_text)}\n```\n\n"
             "Reply with the JSON object only.")
 
-def parse_verdict(out):
+# A reviewer whose prompt demands a sweep must show the sweep. An empty or
+# missing inventory means the enumeration never happened, and a review that
+# skipped the enumeration is not a clean draft - it is no data.
+REQUIRE_FIELDS = {"dangling-premise": ["inventory"]}
+
+def parse_verdict(out, relation=None):
     """Return (dict, None) or (None, reason). Unparseable is its own outcome -
     it is not a NONE, and counting it as one would quietly credit a broken
     reviewer with a correct silence."""
@@ -57,11 +62,16 @@ def parse_verdict(out):
                     return None, "verdict NONE with non-empty instances"
                 if d["verdict"] == "FOUND" and not d["instances"]:
                     return None, "verdict FOUND with no instances"
+                for f in REQUIRE_FIELDS.get(relation, []):
+                    if f not in d:
+                        return None, f"required field {f!r} missing - the sweep was not shown"
+                    if not isinstance(d[f], list) or not d[f]:
+                        return None, f"required field {f!r} is empty - the sweep collapsed"
                 return d, None
     return None, "unbalanced JSON object"
 
 def one(job):
-    relation, case_id, version, script_text, outdir, model = job
+    relation, case_id, version, script_text, outdir, model, rep = job
     prompt = build_prompt(relation, script_text)
     cmd = ["claude", "-p", prompt, "--disallowed-tools", NO_TOOLS, "--max-turns", "1"]
     if model: cmd += ["--model", model]
@@ -69,18 +79,25 @@ def one(job):
     r = subprocess.run(cmd, capture_output=True, text=True, timeout=300, stdin=subprocess.DEVNULL)
     dur = round(time.time() - t0, 1)
     verdict, err = (None, f"CLI exited {r.returncode}: {r.stderr.strip()[:200]}") \
-        if r.returncode != 0 else parse_verdict(r.stdout)
-    rec = {"relation": relation, "case": case_id, "version": version,
+        if r.returncode != 0 else parse_verdict(r.stdout, relation)
+    rec = {"relation": relation, "case": case_id, "version": version, "rep": rep,
            "seconds": dur, "exit": r.returncode, "verdict": verdict,
            "malformed": err, "raw": r.stdout.strip()[:4000]}
-    (outdir / f"{relation}__{case_id}__{version}.json").write_text(json.dumps(rec, indent=1) + "\n")
+    (outdir / f"{relation}__{case_id}__{version}__r{rep}.json").write_text(
+        json.dumps(rec, indent=1) + "\n")
     tag = err if err else verdict["verdict"]
-    print(f"  {relation:<19} {case_id:<32} {version:<7} {dur:>5}s  {tag}", flush=True)
+    print(f"  {relation:<19} {case_id:<32} {version:<7} r{rep} {dur:>5}s  {tag}", flush=True)
     return rec
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--parallel", type=int, default=6)
+    # Two independent samples of the same 33 cells agreed on only 27 of them.
+    # A single sample of a cell therefore cannot be compared with another single
+    # sample: the noise is the size of the effects. Repeat each cell an odd
+    # number of times and score the majority, so a flip is measured rather than
+    # mistaken for a change.
+    ap.add_argument("--reps", type=int, default=3)
     ap.add_argument("--model", default=None)
     ap.add_argument("--tag", default=time.strftime("%Y%m%d-%H%M%S"))
     a = ap.parse_args()
@@ -92,13 +109,27 @@ def main():
     assert cases, "corpus index lists no cases"
 
     outdir = H / "runs" / a.tag
+    # Records are keyed by cell, not by run, so two runners sharing a tag
+    # overwrite each other and the directory still looks like one coherent run -
+    # scoring it twice gave two different answers. Refuse a non-empty tag.
+    if outdir.exists() and any(outdir.glob("*.json")):
+        sys.exit(f"FATAL: {outdir} already holds records. Use a fresh --tag; a shared "
+                 f"tag silently interleaves two runs into one directory.")
     outdir.mkdir(parents=True, exist_ok=True)
-    jobs = [(rel, c["id"], v, (CORPUS / c["id"] / f"{v}.txt").read_text(), outdir, a.model)
-            for rel in relations for c in cases for v in ("before", "after")]
-    expected = len(relations) * len(cases) * 2
+    lock = H / "runs" / ".running"
+    if lock.exists():
+        sys.exit(f"FATAL: {lock} exists - another run is in progress (or died; remove it).")
+    lock.write_text(a.tag)
+    assert a.reps >= 1, "--reps must be at least 1"
+    assert a.reps % 2 == 1, f"--reps must be odd so a majority exists; got {a.reps}"
+    jobs = [(rel, c["id"], v, (CORPUS / c["id"] / f"{v}.txt").read_text(), outdir, a.model, i)
+            for rel in relations for c in cases for v in c["versions"]
+            for i in range(1, a.reps + 1)]
+    expected = len(relations) * sum(len(c["versions"]) for c in cases) * a.reps
     assert len(jobs) == expected, f"built {len(jobs)} jobs, expected {expected}"
-    print(f"{len(jobs)} reviews: {len(relations)} reviewers x {len(cases)} cases x 2 versions"
-          f"  (parallel={a.parallel})\n")
+    n_scripts = sum(len(c["versions"]) for c in cases)
+    print(f"{len(jobs)} reviews: {len(relations)} reviewers x {n_scripts} scripts "
+          f"x {a.reps} reps ({len(cases)} cases)  (parallel={a.parallel})\n", flush=True)
 
     with cf.ThreadPoolExecutor(max_workers=a.parallel) as ex:
         recs = list(ex.map(one, jobs))
@@ -111,9 +142,10 @@ def main():
     if len(bad) == len(recs):
         sys.exit("FATAL: every review was malformed - the reviewers produced no data at all")
     (outdir / "manifest.json").write_text(json.dumps(
-        {"tag": a.tag, "relations": relations, "cases": [c["id"] for c in cases],
+        {"tag": a.tag, "relations": relations, "cases": [c["id"] for c in cases], "reps": a.reps,
          "runs": len(recs), "malformed": len(bad),
          "model": a.model or "default", "disallowed_tools": NO_TOOLS}, indent=1) + "\n")
+    lock.unlink(missing_ok=True)
     print(f"-> {outdir}")
     return 1 if len(bad) > len(recs) // 4 else 0
 

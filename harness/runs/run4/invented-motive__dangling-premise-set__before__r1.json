@@ -1,0 +1,15 @@
+{
+ "relation": "invented-motive",
+ "case": "dangling-premise-set",
+ "version": "before",
+ "rep": 1,
+ "seconds": 30.0,
+ "exit": 0,
+ "verdict": {
+  "verdict": "NONE",
+  "instances": [],
+  "strongest": null
+ },
+ "malformed": null,
+ "raw": "{\"verdict\": \"NONE\", \"instances\": [], \"strongest\": null}"
+}

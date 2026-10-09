@@ -1,0 +1,15 @@
+{
+ "id": "clean-objecthood-shipped",
+ "source": {
+  "worktree": "films/objecthood/script/voiceover.txt"
+ },
+ "note": "The script as recorded and released.",
+ "absent": {
+  "invented-motive": "Line 1 states the origin and contains it ('began CENTS with a simple value discrepancy'). Line 4 is the single-line form ('The readymade he chose is also perhaps the most reproduced...'), which is one claim, not a property-then-decision order.",
+  "dangling-premise": "'yet the object remained' at 3 carries its premise in the same sentence. 'each with the portrait' at 5 is anchored in its own line. 'every cent' at 10 is a universal over a kind inside the clause that introduces the system, not a claim about a bounded population - there is no 'initially identical' style assertion requiring fixed membership.",
+  "synonym-repetition": "15, 16 and 17 touch indeterminacy in three different registers - mechanism (redefined by consensus), object (a vessel of indeterminate value), form (CENTS is a becoming). Three registers, not three synonyms."
+ },
+ "origin": "worktree:films/objecthood/script/voiceover.txt",
+ "lines": 17,
+ "kind": "clean"
+}

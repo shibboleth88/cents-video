@@ -1,0 +1,25 @@
+{
+ "relation": "invented-motive",
+ "case": "synonym-repetition-redefinition",
+ "version": "after",
+ "rep": 1,
+ "seconds": 41.4,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     18,
+     19
+    ],
+    "claim": "This tells me that collectors judge some Cents to matter more than others because of the marks of touch and time each one has accumulated.",
+    "why": "Line 19 holds the decision expression \u2014 'deciding which Cents matter', a deliberate act attributed to people \u2014 and line 18 immediately before it states a property of the objects ('now bearing the marks of touch and time'), reinforced by the rarities in line 17. The draft states no reason anywhere for how or why collectors single out particular Cents, so the adjacency supplies one: the marks become the criterion, a motive no line asserts.",
+    "confidence": "medium"
+   }
+  ],
+  "strongest": 19
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [18, 19],\n      \"claim\": \"This tells me that collectors judge some Cents to matter more than others because of the marks of touch and time each one has accumulated.\",\n      \"why\": \"Line 19 holds the decision expression \u2014 'deciding which Cents matter', a deliberate act attributed to people \u2014 and line 18 immediately before it states a property of the objects ('now bearing the marks of touch and time'), reinforced by the rarities in line 17. The draft states no reason anywhere for how or why collectors single out particular Cents, so the adjacency supplies one: the marks become the criterion, a motive no line asserts.\",\n      \"confidence\": \"medium\"\n    }\n  ],\n  \"strongest\": 19\n}"
+}

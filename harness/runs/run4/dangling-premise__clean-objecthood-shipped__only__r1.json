@@ -1,0 +1,221 @@
+{
+ "relation": "dangling-premise",
+ "case": "clean-objecthood-shipped",
+ "version": "only",
+ "rep": 1,
+ "seconds": 101.9,
+ "exit": 0,
+ "verdict": {
+  "verdict": "NONE",
+  "instances": [],
+  "strongest": null,
+  "inventory": [
+   {
+    "line": 2,
+    "expression": "What was one cent to the US Treasury",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 2,
+    "expression": "he",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 2,
+    "expression": "the piece",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 3,
+    "expression": "yet",
+    "kind": "contrast",
+    "antecedent_line": 3
+   },
+   {
+    "line": 3,
+    "expression": "the object",
+    "kind": "backward",
+    "antecedent_line": 2
+   },
+   {
+    "line": 3,
+    "expression": "remained",
+    "kind": "contrast",
+    "antecedent_line": 2
+   },
+   {
+    "line": 3,
+    "expression": "its context",
+    "kind": "backward",
+    "antecedent_line": 3
+   },
+   {
+    "line": 4,
+    "expression": "The readymade he chose",
+    "kind": "backward",
+    "antecedent_line": 2
+   },
+   {
+    "line": 4,
+    "expression": "is also",
+    "kind": "contrast",
+    "antecedent_line": 3
+   },
+   {
+    "line": 5,
+    "expression": "each",
+    "kind": "quantifier",
+    "antecedent_line": 5
+   },
+   {
+    "line": 5,
+    "expression": "the portrait of Lincoln",
+    "kind": "backward",
+    "antecedent_line": 5
+   },
+   {
+    "line": 8,
+    "expression": "Yet here we are",
+    "kind": "contrast",
+    "antecedent_line": 7
+   },
+   {
+    "line": 9,
+    "expression": "this absurdity",
+    "kind": "backward",
+    "antecedent_line": 7
+   },
+   {
+    "line": 9,
+    "expression": "his work",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 10,
+    "expression": "the system Chang created",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 10,
+    "expression": "every cent",
+    "kind": "quantifier",
+    "antecedent_line": 10
+   },
+   {
+    "line": 11,
+    "expression": "One,",
+    "kind": "contrast",
+    "antecedent_line": 10
+   },
+   {
+    "line": 11,
+    "expression": "its value",
+    "kind": "backward",
+    "antecedent_line": 10
+   },
+   {
+    "line": 11,
+    "expression": "the Treasury",
+    "kind": "backward",
+    "antecedent_line": 2
+   },
+   {
+    "line": 12,
+    "expression": "Two,",
+    "kind": "contrast",
+    "antecedent_line": 10
+   },
+   {
+    "line": 12,
+    "expression": "removed from circulation",
+    "kind": "contrast",
+    "antecedent_line": 11
+   },
+   {
+    "line": 12,
+    "expression": "that value assignment",
+    "kind": "backward",
+    "antecedent_line": 11
+   },
+   {
+    "line": 13,
+    "expression": "Three,",
+    "kind": "contrast",
+    "antecedent_line": 10
+   },
+   {
+    "line": 13,
+    "expression": "the image",
+    "kind": "backward",
+    "antecedent_line": 13
+   },
+   {
+    "line": 14,
+    "expression": "Four,",
+    "kind": "contrast",
+    "antecedent_line": 10
+   },
+   {
+    "line": 14,
+    "expression": "its value",
+    "kind": "backward",
+    "antecedent_line": 10
+   },
+   {
+    "line": 15,
+    "expression": "Five,",
+    "kind": "contrast",
+    "antecedent_line": 10
+   },
+   {
+    "line": 15,
+    "expression": "its value",
+    "kind": "backward",
+    "antecedent_line": 10
+   },
+   {
+    "line": 15,
+    "expression": "continually redefined",
+    "kind": "contrast",
+    "antecedent_line": 14
+   },
+   {
+    "line": 15,
+    "expression": "the objects",
+    "kind": "backward",
+    "antecedent_line": 10
+   },
+   {
+    "line": 16,
+    "expression": "the worthless one-cent coin",
+    "kind": "backward",
+    "antecedent_line": 6
+   },
+   {
+    "line": 16,
+    "expression": "it",
+    "kind": "backward",
+    "antecedent_line": 16
+   },
+   {
+    "line": 17,
+    "expression": "unfolds continually",
+    "kind": "contrast",
+    "antecedent_line": 15
+   },
+   {
+    "line": 17,
+    "expression": "its participants",
+    "kind": "backward",
+    "antecedent_line": 15
+   }
+  ]
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"NONE\",\n  \"instances\": [],\n  \"strongest\": null,\n  \"inventory\": [\n    {\"line\": 2, \"expression\": \"What was one cent to the US Treasury\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 2, \"expression\": \"he\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 2, \"expression\": \"the piece\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 3, \"expression\": \"yet\", \"kind\": \"contrast\", \"antecedent_line\": 3},\n    {\"line\": 3, \"expression\": \"the object\", \"kind\": \"backward\", \"antecedent_line\": 2},\n    {\"line\": 3, \"expression\": \"remained\", \"kind\": \"contrast\", \"antecedent_line\": 2},\n    {\"line\": 3, \"expression\": \"its context\", \"kind\": \"backward\", \"antecedent_line\": 3},\n    {\"line\": 4, \"expression\": \"The readymade he chose\", \"kind\": \"backward\", \"antecedent_line\": 2},\n    {\"line\": 4, \"expression\": \"is also\", \"kind\": \"contrast\", \"antecedent_line\": 3},\n    {\"line\": 5, \"expression\": \"each\", \"kind\": \"quantifier\", \"antecedent_line\": 5},\n    {\"line\": 5, \"expression\": \"the portrait of Lincoln\", \"kind\": \"backward\", \"antecedent_line\": 5},\n    {\"line\": 8, \"expression\": \"Yet here we are\", \"kind\": \"contrast\", \"antecedent_line\": 7},\n    {\"line\": 9, \"expression\": \"this absurdity\", \"kind\": \"backward\", \"antecedent_line\": 7},\n    {\"line\": 9, \"expression\": \"his work\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 10, \"expression\": \"the system Chang created\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 10, \"expression\": \"every cent\", \"kind\": \"quantifier\", \"antecedent_line\": 10},\n    {\"line\": 11, \"expression\": \"One,\", \"kind\": \"contrast\", \"antecedent_line\": 10},\n    {\"line\": 11, \"expression\": \"its value\", \"kind\": \"backward\", \"antecedent_line\": 10},\n    {\"line\": 11, \"expression\": \"the Treasury\", \"kind\": \"backward\", \"antecedent_line\": 2},\n    {\"line\": 12, \"expression\": \"Two,\", \"kind\": \"contrast\", \"antecedent_line\": 10},\n    {\"line\": 12, \"expression\": \"removed from circulation\", \"kind\": \"contrast\", \"antecedent_line\": 11},\n    {\"line\": 12, \"expression\": \"that value assignment\", \"kind\": \"backward\", \"antecedent_line\": 11},\n    {\"line\": 13, \"expression\": \"Three,\", \"kind\": \"contrast\", \"antecedent_line\": 10},\n    {\"line\": 13, \"expression\": \"the image\", \"kind\": \"backward\", \"antecedent_line\": 13},\n    {\"line\": 14, \"expression\": \"Four,\", \"kind\": \"contrast\", \"antecedent_line\": 10},\n    {\"line\": 14, \"expression\": \"its value\", \"kind\": \"backward\", \"antecedent_line\": 10},\n    {\"line\": 15, \"expression\": \"Five,\", \"kind\": \"contrast\", \"antecedent_line\": 10},\n    {\"line\": 15, \"expression\": \"its value\", \"kind\": \"backward\", \"antecedent_line\": 10},\n    {\"line\": 15, \"expression\": \"continually redefined\", \"kind\": \"contrast\", \"antecedent_line\": 14},\n    {\"line\": 15, \"expression\": \"the objects\", \"kind\": \"backward\", \"antecedent_line\": 10},\n    {\"line\": 16, \"expression\": \"the worthless one-cent coin\", \"kind\": \"backward\", \"antecedent_line\": 6},\n    {\"line\": 16, \"expression\": \"it\", \"kind\": \"backward\", \"antecedent_line\": 16},\n    {\"line\": 17, \"expression\": \"unfolds continually\", \"kind\": \"contrast\", \"antecedent_line\": 15},\n    {\"line\": 17, \"expression\": \"its participants\", \"kind\": \"backward\", \"antecedent_line\": 15}\n  ]\n}"
+}

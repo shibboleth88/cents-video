@@ -1,0 +1,25 @@
+{
+ "relation": "invented-motive",
+ "case": "dangling-premise-remained",
+ "version": "before",
+ "seconds": 32.2,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     16,
+     17,
+     18
+    ],
+    "claim": "This tells me that Chang initiated the ongoing process of redefinition because value had become decoupled from the object and indeterminate \u2014 that the indeterminacy of value was his reason for starting.",
+    "why": "Line 18 holds the decision expression (\"initiated\"); lines 16 and 17 immediately before it state properties of the work \u2014 that assigned value is decoupled from the object and that its meaning is continually redefined. The draft does state a reason for Chang's act, but at line 1 (\"began with a simple value discrepancy\"), so the order here proposes a different motive, and one that inverts the logic: the indeterminacy is a product of the process at 10\u201315, not a condition he responded to.",
+    "confidence": "medium"
+   }
+  ],
+  "strongest": 18
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [16, 17, 18],\n      \"claim\": \"This tells me that Chang initiated the ongoing process of redefinition because value had become decoupled from the object and indeterminate \u2014 that the indeterminacy of value was his reason for starting.\",\n      \"why\": \"Line 18 holds the decision expression (\\\"initiated\\\"); lines 16 and 17 immediately before it state properties of the work \u2014 that assigned value is decoupled from the object and that its meaning is continually redefined. The draft does state a reason for Chang's act, but at line 1 (\\\"began with a simple value discrepancy\\\"), so the order here proposes a different motive, and one that inverts the logic: the indeterminacy is a product of the process at 10\u201315, not a condition he responded to.\",\n      \"confidence\": \"medium\"\n    }\n  ],\n  \"strongest\": 18\n}"
+}

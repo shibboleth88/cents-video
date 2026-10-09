@@ -1,0 +1,25 @@
+{
+ "relation": "synonym-repetition",
+ "case": "order-causation-brenner",
+ "version": "after",
+ "seconds": 35.2,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     16,
+     17,
+     18
+    ],
+    "claim": "This tells me that the value of each Cent is no longer fixed to the object and is instead permanently open to redefinition \u2014 three times, in three vocabularies.",
+    "why": "Line 16 already makes the point with a mechanism attached (value decoupled from the object, carried instead by social consensus); 17 repeats only its second half in abstract synonyms ('indeterminate and continually redefined') and 18 repeats it again with Chang as grammatical subject, adding an agent but no new level \u2014 not how it works, not what physically changes, not what shifts for a viewer, not what kind of thing the work is. Line 15's 'continually redefined by decentralized consensus' has already supplied the concrete form of the same claim, so 17 and 18 are the fourth and fifth passes. Keep 16; cut 17, and if the attribution to Chang matters, fold it into 16 rather than giving it its own line.",
+    "confidence": "high"
+   }
+  ],
+  "strongest": 17
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [16, 17, 18],\n      \"claim\": \"This tells me that the value of each Cent is no longer fixed to the object and is instead permanently open to redefinition \u2014 three times, in three vocabularies.\",\n      \"why\": \"Line 16 already makes the point with a mechanism attached (value decoupled from the object, carried instead by social consensus); 17 repeats only its second half in abstract synonyms ('indeterminate and continually redefined') and 18 repeats it again with Chang as grammatical subject, adding an agent but no new level \u2014 not how it works, not what physically changes, not what shifts for a viewer, not what kind of thing the work is. Line 15's 'continually redefined by decentralized consensus' has already supplied the concrete form of the same claim, so 17 and 18 are the fourth and fifth passes. Keep 16; cut 17, and if the attribution to Chang matters, fold it into 16 rather than giving it its own line.\",\n      \"confidence\": \"high\"\n    }\n  ],\n  \"strongest\": 17\n}"
+}

@@ -1,0 +1,199 @@
+{
+ "relation": "dangling-premise",
+ "case": "dangling-premise-set",
+ "version": "after",
+ "seconds": 109.7,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     11
+    ],
+    "claim": "This tells me that the Cents are a fixed, countable body of works whose membership the film has already established, so that a claim about every one of them is a claim I can check.",
+    "why": "Line 11 quantifies universally over \"Cent\" as a unit of the work, but the only bounded collection named before it is line 6's five hundred billion Lincoln cents \u2014 the coin type, not the series \u2014 and those plainly cannot each be destroyed and inscribed on Bitcoin. The set whose fixed membership makes \"every\" meaningful arrives only at line 18 (\"a permanent set of ten thousand\"), seven lines after the quantifier that depends on it.",
+    "confidence": "medium"
+   }
+  ],
+  "strongest": 11,
+  "inventory": [
+   {
+    "line": 2,
+    "expression": "One cent to the Treasury",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 2,
+    "expression": "About two and a half as copper",
+    "kind": "backward",
+    "antecedent_line": 2
+   },
+   {
+    "line": 3,
+    "expression": "since before Chang was born",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 4,
+    "expression": "Yet",
+    "kind": "contrast",
+    "antecedent_line": 3
+   },
+   {
+    "line": 4,
+    "expression": "the object",
+    "kind": "backward",
+    "antecedent_line": 2
+   },
+   {
+    "line": 4,
+    "expression": "remained",
+    "kind": "contrast",
+    "antecedent_line": 3
+   },
+   {
+    "line": 4,
+    "expression": "its context",
+    "kind": "backward",
+    "antecedent_line": 4
+   },
+   {
+    "line": 5,
+    "expression": "he",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 5,
+    "expression": "The readymade he chose",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 6,
+    "expression": "each carrying Victor David Brenner's portrait",
+    "kind": "quantifier",
+    "antecedent_line": 6
+   },
+   {
+    "line": 9,
+    "expression": "Yet, here we are",
+    "kind": "contrast",
+    "antecedent_line": 8
+   },
+   {
+    "line": 10,
+    "expression": "He",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 10,
+    "expression": "to it",
+    "kind": "backward",
+    "antecedent_line": 5
+   },
+   {
+    "line": 11,
+    "expression": "Every Cent",
+    "kind": "quantifier",
+    "antecedent_line": null
+   },
+   {
+    "line": 12,
+    "expression": "In circulation, value defined by the Treasury",
+    "kind": "backward",
+    "antecedent_line": 11
+   },
+   {
+    "line": 13,
+    "expression": "Removed from circulation",
+    "kind": "contrast",
+    "antecedent_line": 12
+   },
+   {
+    "line": 13,
+    "expression": "that assignment",
+    "kind": "backward",
+    "antecedent_line": 12
+   },
+   {
+    "line": 14,
+    "expression": "the image",
+    "kind": "backward",
+    "antecedent_line": 14
+   },
+   {
+    "line": 15,
+    "expression": "its value",
+    "kind": "backward",
+    "antecedent_line": 11
+   },
+   {
+    "line": 16,
+    "expression": "continually redefined",
+    "kind": "backward",
+    "antecedent_line": 11
+   },
+   {
+    "line": 17,
+    "expression": "an ongoing process of redefinition",
+    "kind": "backward",
+    "antecedent_line": 16
+   },
+   {
+    "line": 18,
+    "expression": "A permanent set of ten thousand",
+    "kind": "quantifier",
+    "antecedent_line": 11
+   },
+   {
+    "line": 18,
+    "expression": "its own logics and rarities",
+    "kind": "backward",
+    "antecedent_line": 18
+   },
+   {
+    "line": 19,
+    "expression": "Each one initially identical",
+    "kind": "quantifier",
+    "antecedent_line": 18
+   },
+   {
+    "line": 19,
+    "expression": "each bearing the marks of touch and time",
+    "kind": "quantifier",
+    "antecedent_line": 18
+   },
+   {
+    "line": 20,
+    "expression": "the set",
+    "kind": "backward",
+    "antecedent_line": 18
+   },
+   {
+    "line": 20,
+    "expression": "its internal dynamics",
+    "kind": "backward",
+    "antecedent_line": 18
+   },
+   {
+    "line": 21,
+    "expression": "Its value and meaning",
+    "kind": "backward",
+    "antecedent_line": 18
+   },
+   {
+    "line": 22,
+    "expression": "its participants",
+    "kind": "backward",
+    "antecedent_line": 22
+   }
+  ]
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [11],\n      \"claim\": \"This tells me that the Cents are a fixed, countable body of works whose membership the film has already established, so that a claim about every one of them is a claim I can check.\",\n      \"why\": \"Line 11 quantifies universally over \\\"Cent\\\" as a unit of the work, but the only bounded collection named before it is line 6's five hundred billion Lincoln cents \u2014 the coin type, not the series \u2014 and those plainly cannot each be destroyed and inscribed on Bitcoin. The set whose fixed membership makes \\\"every\\\" meaningful arrives only at line 18 (\\\"a permanent set of ten thousand\\\"), seven lines after the quantifier that depends on it.\",\n      \"confidence\": \"medium\"\n    }\n  ],\n  \"strongest\": 11,\n  \"inventory\": [\n    {\"line\": 2, \"expression\": \"One cent to the Treasury\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 2, \"expression\": \"About two and a half as copper\", \"kind\": \"backward\", \"antecedent_line\": 2},\n    {\"line\": 3, \"expression\": \"since before Chang was born\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 4, \"expression\": \"Yet\", \"kind\": \"contrast\", \"antecedent_line\": 3},\n    {\"line\": 4, \"expression\": \"the object\", \"kind\": \"backward\", \"antecedent_line\": 2},\n    {\"line\": 4, \"expression\": \"remained\", \"kind\": \"contrast\", \"antecedent_line\": 3},\n    {\"line\": 4, \"expression\": \"its context\", \"kind\": \"backward\", \"antecedent_line\": 4},\n    {\"line\": 5, \"expression\": \"he\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 5, \"expression\": \"The readymade he chose\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 6, \"expression\": \"each carrying Victor David Brenner's portrait\", \"kind\": \"quantifier\", \"antecedent_line\": 6},\n    {\"line\": 9, \"expression\": \"Yet, here we are\", \"kind\": \"contrast\", \"antecedent_line\": 8},\n    {\"line\": 10, \"expression\": \"He\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 10, \"expression\": \"to it\", \"kind\": \"backward\", \"antecedent_line\": 5},\n    {\"line\": 11, \"expression\": \"Every Cent\", \"kind\": \"quantifier\", \"antecedent_line\": null},\n    {\"line\": 12, \"expression\": \"In circulation, value defined by the Treasury\", \"kind\": \"backward\", \"antecedent_line\": 11},\n    {\"line\": 13, \"expression\": \"Removed from circulation\", \"kind\": \"contrast\", \"antecedent_line\": 12},\n    {\"line\": 13, \"expression\": \"that assignment\", \"kind\": \"backward\", \"antecedent_line\": 12},\n    {\"line\": 14, \"expression\": \"the image\", \"kind\": \"backward\", \"antecedent_line\": 14},\n    {\"line\": 15, \"expression\": \"its value\", \"kind\": \"backward\", \"antecedent_line\": 11},\n    {\"line\": 16, \"expression\": \"continually redefined\", \"kind\": \"backward\", \"antecedent_line\": 11},\n    {\"line\": 17, \"expression\": \"an ongoing process of redefinition\", \"kind\": \"backward\", \"antecedent_line\": 16},\n    {\"line\": 18, \"expression\": \"A permanent set of ten thousand\", \"kind\": \"quantifier\", \"antecedent_line\": 11},\n    {\"line\": 18, \"expression\": \"its own logics and rarities\", \"kind\": \"backward\", \"antecedent_line\": 18},\n    {\"line\": 19, \"expression\": \"Each one initially identical\", \"kind\": \"quantifier\", \"antecedent_line\": 18},\n    {\"line\": 19, \"expression\": \"each bearing the marks of touch and time\", \"kind\": \"quantifier\", \"antecedent_line\": 18},\n    {\"line\": 20, \"expression\": \"the set\", \"kind\": \"backward\", \"antecedent_line\": 18},\n    {\"line\": 20, \"expression\": \"its internal dynamics\", \"kind\": \"backward\", \"antecedent_line\": 18},\n    {\"line\": 21, \"expression\": \"Its value and meaning\", \"kind\": \"backward\", \"antecedent_line\": 18},\n    {\"line\": 22, \"expression\": \"its participants\", \"kind\": \"backward\", \"antecedent_line\": 22}\n  ]\n}"
+}

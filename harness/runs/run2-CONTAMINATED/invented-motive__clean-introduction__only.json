@@ -1,0 +1,14 @@
+{
+ "relation": "invented-motive",
+ "case": "clean-introduction",
+ "version": "only",
+ "seconds": 44.0,
+ "exit": 0,
+ "verdict": {
+  "verdict": "NONE",
+  "instances": [],
+  "strongest": null
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"NONE\",\n  \"instances\": [],\n  \"strongest\": null\n}"
+}

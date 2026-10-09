@@ -1,0 +1,26 @@
+{
+ "relation": "synonym-repetition",
+ "case": "dangling-premise-remained",
+ "version": "after",
+ "rep": 1,
+ "seconds": 31.3,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     16,
+     17,
+     18
+    ],
+    "claim": "This tells me that the work's value is never fixed but kept in continual redefinition \u2014 and then tells me the same thing twice more.",
+    "why": "Line 16 already closes the five-transformation list with \"continually redefined by decentralized consensus\"; 17 restates that as \"indeterminate and continually redefined\" and 18 restates it again as \"an ongoing process of redefinition,\" all at the level of the object's value status, sharing the root \"redefin-\" three times in three consecutive lines. None of the three adds a new register \u2014 16 earns its place as the last item of the list, and 18 at least attaches the process to Chang's act of initiating it, so 17 is pure interval between them.",
+    "confidence": "high"
+   }
+  ],
+  "strongest": 17
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [16, 17, 18],\n      \"claim\": \"This tells me that the work's value is never fixed but kept in continual redefinition \u2014 and then tells me the same thing twice more.\",\n      \"why\": \"Line 16 already closes the five-transformation list with \\\"continually redefined by decentralized consensus\\\"; 17 restates that as \\\"indeterminate and continually redefined\\\" and 18 restates it again as \\\"an ongoing process of redefinition,\\\" all at the level of the object's value status, sharing the root \\\"redefin-\\\" three times in three consecutive lines. None of the three adds a new register \u2014 16 earns its place as the last item of the list, and 18 at least attaches the process to Chang's act of initiating it, so 17 is pure interval between them.\",\n      \"confidence\": \"high\"\n    }\n  ],\n  \"strongest\": 17\n}"
+}

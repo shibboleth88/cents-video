@@ -1,0 +1,163 @@
+{
+ "relation": "dangling-premise",
+ "case": "dangling-premise-remained",
+ "version": "after",
+ "seconds": 84.7,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     19
+    ],
+    "claim": "This tells me that Chang made a bounded set of physical objects, all identical when they were made, and that the draft has already shown me that set.",
+    "why": "\"Each object\" and \"initially identical\" are claims about a population with fixed membership, but the only collections the draft introduces are the 500 billion Lincoln cents of line 6 \u2014 a mint-wide population Chang did not make and that was never identical \u2014 and the single readymade of line 5. The set whose members could start identical and then diverge under touch is never established anywhere in the draft, so line 19 parses and sounds finished while pointing at nothing in the piece.",
+    "confidence": "high"
+   }
+  ],
+  "strongest": 19,
+  "inventory": [
+   {
+    "line": 2,
+    "expression": "About two and a half as copper",
+    "kind": "contrast",
+    "antecedent_line": 2
+   },
+   {
+    "line": 4,
+    "expression": "Yet",
+    "kind": "contrast",
+    "antecedent_line": 3
+   },
+   {
+    "line": 4,
+    "expression": "remained",
+    "kind": "contrast",
+    "antecedent_line": 3
+   },
+   {
+    "line": 4,
+    "expression": "the object",
+    "kind": "backward",
+    "antecedent_line": 2
+   },
+   {
+    "line": 4,
+    "expression": "its context",
+    "kind": "backward",
+    "antecedent_line": 2
+   },
+   {
+    "line": 5,
+    "expression": "The readymade he chose",
+    "kind": "backward",
+    "antecedent_line": 2
+   },
+   {
+    "line": 6,
+    "expression": "each carrying Victor David Brenner's portrait",
+    "kind": "quantifier",
+    "antecedent_line": 6
+   },
+   {
+    "line": 9,
+    "expression": "Yet, here we are",
+    "kind": "contrast",
+    "antecedent_line": 8
+   },
+   {
+    "line": 10,
+    "expression": "He brings ... to it",
+    "kind": "backward",
+    "antecedent_line": 5
+   },
+   {
+    "line": 11,
+    "expression": "Every Cent",
+    "kind": "quantifier",
+    "antecedent_line": 6
+   },
+   {
+    "line": 11,
+    "expression": "five transformations of value",
+    "kind": "quantifier",
+    "antecedent_line": 11
+   },
+   {
+    "line": 13,
+    "expression": "Removed from circulation",
+    "kind": "contrast",
+    "antecedent_line": 12
+   },
+   {
+    "line": 13,
+    "expression": "that assignment",
+    "kind": "backward",
+    "antecedent_line": 12
+   },
+   {
+    "line": 14,
+    "expression": "Archivally photographed",
+    "kind": "contrast",
+    "antecedent_line": 11
+   },
+   {
+    "line": 15,
+    "expression": "Destroyed, its value",
+    "kind": "backward",
+    "antecedent_line": 11
+   },
+   {
+    "line": 16,
+    "expression": "Inscribed on Bitcoin",
+    "kind": "contrast",
+    "antecedent_line": 11
+   },
+   {
+    "line": 17,
+    "expression": "Its value and meaning",
+    "kind": "backward",
+    "antecedent_line": 11
+   },
+   {
+    "line": 17,
+    "expression": "continually redefined",
+    "kind": "contrast",
+    "antecedent_line": 16
+   },
+   {
+    "line": 18,
+    "expression": "an ongoing process of redefinition",
+    "kind": "backward",
+    "antecedent_line": 17
+   },
+   {
+    "line": 19,
+    "expression": "Each object",
+    "kind": "quantifier",
+    "antecedent_line": null
+   },
+   {
+    "line": 19,
+    "expression": "initially identical",
+    "kind": "quantifier",
+    "antecedent_line": null
+   },
+   {
+    "line": 20,
+    "expression": "its participants",
+    "kind": "backward",
+    "antecedent_line": 19
+   },
+   {
+    "line": 20,
+    "expression": "unfolds continually",
+    "kind": "contrast",
+    "antecedent_line": 18
+   }
+  ]
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [19],\n      \"claim\": \"This tells me that Chang made a bounded set of physical objects, all identical when they were made, and that the draft has already shown me that set.\",\n      \"why\": \"\\\"Each object\\\" and \\\"initially identical\\\" are claims about a population with fixed membership, but the only collections the draft introduces are the 500 billion Lincoln cents of line 6 \u2014 a mint-wide population Chang did not make and that was never identical \u2014 and the single readymade of line 5. The set whose members could start identical and then diverge under touch is never established anywhere in the draft, so line 19 parses and sounds finished while pointing at nothing in the piece.\",\n      \"confidence\": \"high\"\n    }\n  ],\n  \"strongest\": 19,\n  \"inventory\": [\n    {\"line\": 2, \"expression\": \"About two and a half as copper\", \"kind\": \"contrast\", \"antecedent_line\": 2},\n    {\"line\": 4, \"expression\": \"Yet\", \"kind\": \"contrast\", \"antecedent_line\": 3},\n    {\"line\": 4, \"expression\": \"remained\", \"kind\": \"contrast\", \"antecedent_line\": 3},\n    {\"line\": 4, \"expression\": \"the object\", \"kind\": \"backward\", \"antecedent_line\": 2},\n    {\"line\": 4, \"expression\": \"its context\", \"kind\": \"backward\", \"antecedent_line\": 2},\n    {\"line\": 5, \"expression\": \"The readymade he chose\", \"kind\": \"backward\", \"antecedent_line\": 2},\n    {\"line\": 6, \"expression\": \"each carrying Victor David Brenner's portrait\", \"kind\": \"quantifier\", \"antecedent_line\": 6},\n    {\"line\": 9, \"expression\": \"Yet, here we are\", \"kind\": \"contrast\", \"antecedent_line\": 8},\n    {\"line\": 10, \"expression\": \"He brings ... to it\", \"kind\": \"backward\", \"antecedent_line\": 5},\n    {\"line\": 11, \"expression\": \"Every Cent\", \"kind\": \"quantifier\", \"antecedent_line\": 6},\n    {\"line\": 11, \"expression\": \"five transformations of value\", \"kind\": \"quantifier\", \"antecedent_line\": 11},\n    {\"line\": 13, \"expression\": \"Removed from circulation\", \"kind\": \"contrast\", \"antecedent_line\": 12},\n    {\"line\": 13, \"expression\": \"that assignment\", \"kind\": \"backward\", \"antecedent_line\": 12},\n    {\"line\": 14, \"expression\": \"Archivally photographed\", \"kind\": \"contrast\", \"antecedent_line\": 11},\n    {\"line\": 15, \"expression\": \"Destroyed, its value\", \"kind\": \"backward\", \"antecedent_line\": 11},\n    {\"line\": 16, \"expression\": \"Inscribed on Bitcoin\", \"kind\": \"contrast\", \"antecedent_line\": 11},\n    {\"line\": 17, \"expression\": \"Its value and meaning\", \"kind\": \"backward\", \"antecedent_line\": 11},\n    {\"line\": 17, \"expression\": \"continually redefined\", \"kind\": \"contrast\", \"antecedent_line\": 16},\n    {\"line\": 18, \"expression\": \"an ongoing process of redefinition\", \"kind\": \"backward\", \"antecedent_line\": 17},\n    {\"line\": 19, \"expression\": \"Each object\", \"kind\": \"quantifier\", \"antecedent_line\": null},\n    {\"line\": 19, \"expression\": \"initially identical\", \"kind\": \"quantifier\", \"antecedent_line\": null},\n    {\"line\": 20, \"expression\": \"its participants\", \"kind\": \"backward\", \"antecedent_line\": 19},\n    {\"line\": 20, \"expression\": \"unfolds continually\", \"kind\": \"contrast\", \"antecedent_line\": 18}\n  ]\n}"
+}

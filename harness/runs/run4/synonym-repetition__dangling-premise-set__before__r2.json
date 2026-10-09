@@ -1,0 +1,25 @@
+{
+ "relation": "synonym-repetition",
+ "case": "dangling-premise-set",
+ "version": "before",
+ "rep": 2,
+ "seconds": 30.6,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     17,
+     18
+    ],
+    "claim": "This tells me that the value of a Cent is unfixed and continually redefined \u2014 stated once in the abstract, once again as the artist's doing, after the list has already shown it and before the closing line says it in the register of form.",
+    "why": "Line 16 has just established redefinition concretely (decentralized consensus), and line 20 makes the same point in a different register \u2014 what kind of thing the work is, and that participants drive it. Lines 17 and 18 sit between them adding no register: 17 is a summary of the list in the list's own words ('continually redefined' repeated verbatim), and 18 recasts the identical claim with the artist as subject ('ongoing process of redefinition'). Cutting both loses nothing; keep 20, which carries the form and participant registers, and let 16 and 19 carry mechanism and object.",
+    "confidence": "high"
+   }
+  ],
+  "strongest": 17
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [17, 18],\n      \"claim\": \"This tells me that the value of a Cent is unfixed and continually redefined \u2014 stated once in the abstract, once again as the artist's doing, after the list has already shown it and before the closing line says it in the register of form.\",\n      \"why\": \"Line 16 has just established redefinition concretely (decentralized consensus), and line 20 makes the same point in a different register \u2014 what kind of thing the work is, and that participants drive it. Lines 17 and 18 sit between them adding no register: 17 is a summary of the list in the list's own words ('continually redefined' repeated verbatim), and 18 recasts the identical claim with the artist as subject ('ongoing process of redefinition'). Cutting both loses nothing; keep 20, which carries the form and participant registers, and let 16 and 19 carry mechanism and object.\",\n      \"confidence\": \"high\"\n    }\n  ],\n  \"strongest\": 17\n}"
+}

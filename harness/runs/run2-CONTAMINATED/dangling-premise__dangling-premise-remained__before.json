@@ -1,0 +1,191 @@
+{
+ "relation": "dangling-premise",
+ "case": "dangling-premise-remained",
+ "version": "before",
+ "seconds": 113.3,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "inventory": [
+   {
+    "line": 2,
+    "expression": "One cent to the Treasury",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 2,
+    "expression": "About two and a half as copper",
+    "kind": "backward",
+    "antecedent_line": 2
+   },
+   {
+    "line": 3,
+    "expression": "he",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 3,
+    "expression": "The readymade he chose",
+    "kind": "backward",
+    "antecedent_line": 2
+   },
+   {
+    "line": 4,
+    "expression": "each carrying Victor David Brenner's portrait",
+    "kind": "quantifier",
+    "antecedent_line": 4
+   },
+   {
+    "line": 5,
+    "expression": "The object",
+    "kind": "backward",
+    "antecedent_line": 3
+   },
+   {
+    "line": 5,
+    "expression": "remained",
+    "kind": "contrast",
+    "antecedent_line": null
+   },
+   {
+    "line": 5,
+    "expression": "its context",
+    "kind": "backward",
+    "antecedent_line": null
+   },
+   {
+    "line": 8,
+    "expression": "Yet, here we are",
+    "kind": "contrast",
+    "antecedent_line": 7
+   },
+   {
+    "line": 9,
+    "expression": "He",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 9,
+    "expression": "to it",
+    "kind": "backward",
+    "antecedent_line": 3
+   },
+   {
+    "line": 10,
+    "expression": "Every Cent",
+    "kind": "quantifier",
+    "antecedent_line": null
+   },
+   {
+    "line": 11,
+    "expression": "In circulation [the Cent]",
+    "kind": "backward",
+    "antecedent_line": 10
+   },
+   {
+    "line": 12,
+    "expression": "Removed from circulation",
+    "kind": "contrast",
+    "antecedent_line": 11
+   },
+   {
+    "line": 12,
+    "expression": "that assignment",
+    "kind": "backward",
+    "antecedent_line": 11
+   },
+   {
+    "line": 13,
+    "expression": "what the image holds",
+    "kind": "backward",
+    "antecedent_line": 13
+   },
+   {
+    "line": 14,
+    "expression": "its value",
+    "kind": "backward",
+    "antecedent_line": 10
+   },
+   {
+    "line": 15,
+    "expression": "Inscribed on Bitcoin [it]",
+    "kind": "backward",
+    "antecedent_line": 10
+   },
+   {
+    "line": 16,
+    "expression": "The assigned value",
+    "kind": "backward",
+    "antecedent_line": 11
+   },
+   {
+    "line": 16,
+    "expression": "the object",
+    "kind": "backward",
+    "antecedent_line": 5
+   },
+   {
+    "line": 17,
+    "expression": "Its value and meaning",
+    "kind": "backward",
+    "antecedent_line": 16
+   },
+   {
+    "line": 17,
+    "expression": "continually redefined",
+    "kind": "contrast",
+    "antecedent_line": 15
+   },
+   {
+    "line": 18,
+    "expression": "an ongoing process of redefinition",
+    "kind": "backward",
+    "antecedent_line": 17
+   },
+   {
+    "line": 19,
+    "expression": "Each object, initially identical",
+    "kind": "quantifier",
+    "antecedent_line": null
+   },
+   {
+    "line": 20,
+    "expression": "its participants",
+    "kind": "backward",
+    "antecedent_line": null
+   },
+   {
+    "line": 20,
+    "expression": "unfolds continually",
+    "kind": "contrast",
+    "antecedent_line": 18
+   }
+  ],
+  "instances": [
+   {
+    "lines": [
+     5
+    ],
+    "claim": "This tells me that the object was under some pressure to stop existing as a physical thing, and that a context named earlier is what held it in existence.",
+    "why": "\"remained\" and \"buoyed into physicality\" both push against a state of affairs the draft never puts on screen \u2014 nothing before line 5 says the object was dissolving, being withdrawn, or at risk of becoming immaterial \u2014 and \"its context\" is a definite phrase for a force no earlier line identifies. Lines 1\u20134 establish only a price discrepancy and a mass-produced coin, neither of which is a threat to the object's physicality.",
+    "confidence": "high"
+   },
+   {
+    "lines": [
+     19,
+     10,
+     20
+    ],
+    "claim": "This tells me that CENTS is a fixed, countable set of individual cents, identical at the outset, each one held and handled by a participant.",
+    "why": "\"Every Cent\", \"Each object, initially identical\" and \"its participants\" are claims about a bounded collection and its membership, but the only collection the draft ever counts is the five hundred billion circulating Lincoln cents in line 4 \u2014 not the set that is removed from circulation, photographed, destroyed, inscribed and marked by touch. The set those quantifiers range over, and the people acting on it, are never introduced.",
+    "confidence": "high"
+   }
+  ],
+  "strongest": 5
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"inventory\": [\n    {\"line\": 2, \"expression\": \"One cent to the Treasury\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 2, \"expression\": \"About two and a half as copper\", \"kind\": \"backward\", \"antecedent_line\": 2},\n    {\"line\": 3, \"expression\": \"he\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 3, \"expression\": \"The readymade he chose\", \"kind\": \"backward\", \"antecedent_line\": 2},\n    {\"line\": 4, \"expression\": \"each carrying Victor David Brenner's portrait\", \"kind\": \"quantifier\", \"antecedent_line\": 4},\n    {\"line\": 5, \"expression\": \"The object\", \"kind\": \"backward\", \"antecedent_line\": 3},\n    {\"line\": 5, \"expression\": \"remained\", \"kind\": \"contrast\", \"antecedent_line\": null},\n    {\"line\": 5, \"expression\": \"its context\", \"kind\": \"backward\", \"antecedent_line\": null},\n    {\"line\": 8, \"expression\": \"Yet, here we are\", \"kind\": \"contrast\", \"antecedent_line\": 7},\n    {\"line\": 9, \"expression\": \"He\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 9, \"expression\": \"to it\", \"kind\": \"backward\", \"antecedent_line\": 3},\n    {\"line\": 10, \"expression\": \"Every Cent\", \"kind\": \"quantifier\", \"antecedent_line\": null},\n    {\"line\": 11, \"expression\": \"In circulation [the Cent]\", \"kind\": \"backward\", \"antecedent_line\": 10},\n    {\"line\": 12, \"expression\": \"Removed from circulation\", \"kind\": \"contrast\", \"antecedent_line\": 11},\n    {\"line\": 12, \"expression\": \"that assignment\", \"kind\": \"backward\", \"antecedent_line\": 11},\n    {\"line\": 13, \"expression\": \"what the image holds\", \"kind\": \"backward\", \"antecedent_line\": 13},\n    {\"line\": 14, \"expression\": \"its value\", \"kind\": \"backward\", \"antecedent_line\": 10},\n    {\"line\": 15, \"expression\": \"Inscribed on Bitcoin [it]\", \"kind\": \"backward\", \"antecedent_line\": 10},\n    {\"line\": 16, \"expression\": \"The assigned value\", \"kind\": \"backward\", \"antecedent_line\": 11},\n    {\"line\": 16, \"expression\": \"the object\", \"kind\": \"backward\", \"antecedent_line\": 5},\n    {\"line\": 17, \"expression\": \"Its value and meaning\", \"kind\": \"backward\", \"antecedent_line\": 16},\n    {\"line\": 17, \"expression\": \"continually redefined\", \"kind\": \"contrast\", \"antecedent_line\": 15},\n    {\"line\": 18, \"expression\": \"an ongoing process of redefinition\", \"kind\": \"backward\", \"antecedent_line\": 17},\n    {\"line\": 19, \"expression\": \"Each object, initially identical\", \"kind\": \"quantifier\", \"antecedent_line\": null},\n    {\"line\": 20, \"expression\": \"its participants\", \"kind\": \"backward\", \"antecedent_line\": null},\n    {\"line\": 20, \"expression\": \"unfolds continually\", \"kind\": \"contrast\", \"antecedent_line\": 18}\n  ],\n  \"instances\": [\n    {\n      \"lines\": [5],\n      \"claim\": \"This tells me that the object was under some pressure to stop existing as a physical thing, and that a context named earlier is what held it in existence.\",\n      \"why\": \"\\\"remained\\\" and \\\"buoyed into physicality\\\" both push against a state of affairs the draft never puts on screen \u2014 nothing before line 5 says the object was dissolving, being withdrawn, or at risk of becoming immaterial \u2014 and \\\"its context\\\" is a definite phrase for a force no earlier line identifies. Lines 1\u20134 establish only a price discrepancy and a mass-produced coin, neither of which is a threat to the object's physicality.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"lines\": [19, 10, 20],\n      \"claim\": \"This tells me that CENTS is a fixed, countable set of individual cents, identical at the outset, each one held and handled by a participant.\",\n      \"why\": \"\\\"Every Cent\\\", \\\"Each object, initially identical\\\" and \\\"its participants\\\" are claims about a bounded collection and its membership, but the only collection the draft ever counts is the five hundred billion circulating Lincoln cents in line 4 \u2014 not the set that is removed from circulation, photographed, destroyed, inscribed and marked by touch. The set those quantifiers range over, and the people acting on it, are never introduced.\",\n      \"confidence\": \"high\"\n    }\n  ],\n  \"strongest\": 5\n}"
+}

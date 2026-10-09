@@ -1,0 +1,16 @@
+{
+ "id": "clean-objecthood-bridge",
+ "source": {
+  "ref": "5ae2a21",
+  "path": "script/voiceover.txt"
+ },
+ "note": "The state after the collector-dynamics passage was replaced by the three-line bridge.",
+ "absent": {
+  "invented-motive": "Decisions at 1 (reason in the line) and 5 (single-line form). No property-then-decision pair.",
+  "dangling-premise": "'Yet the object remained' at 4 is anchored by 3. 'each Cent' at 18 is anchored by 'Ten thousand inscriptions, and never any more' at 17. 'The way words do' at 19 is a grammatical continuation of 18.",
+  "synonym-repetition": "Continual redefinition occurs at 16 (mechanism) and 20 (form). Two registers, no restatement."
+ },
+ "origin": "5ae2a21:script/voiceover.txt",
+ "lines": 20,
+ "kind": "clean"
+}

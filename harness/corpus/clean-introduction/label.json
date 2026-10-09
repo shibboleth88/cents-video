@@ -1,0 +1,15 @@
+{
+ "id": "clean-introduction",
+ "source": {
+  "worktree": "films/introduction/script/voiceover.txt"
+ },
+ "note": "The 3-minute introduction script, written after all three shapes were known.",
+ "absent": {
+  "invented-motive": "Every decision line is preceded by an explicit temporal marker ('Then he destroyed them', 'Each photograph he inscribed'), and the origin is stated outright at 1-5 ('Recognising those discrepancies'). The adjacency I considered hardest is 18->19 (indestructible ingot, then release at one sat each); 'He released' follows a property, but no motive is proposed and the stated origin precedes it.",
+  "dangling-premise": "The set of ten thousand is introduced at 5, before every quantifier over it ('More than half the set' at 14, 'all ten thousand' at 19). 'The project had described this as coming' at 23 is resolved by the colon in its own line.",
+  "synonym-repetition": "'redefined' occurs once, at 24. Continual redefinition is carried structurally (closed set -> arbitrary edges -> value still moving) rather than by restatement."
+ },
+ "origin": "worktree:films/introduction/script/voiceover.txt",
+ "lines": 24,
+ "kind": "clean"
+}

@@ -1,0 +1,22 @@
+{
+ "tag": "run4",
+ "relations": [
+  "dangling-premise",
+  "invented-motive",
+  "synonym-repetition"
+ ],
+ "cases": [
+  "order-causation-brenner",
+  "dangling-premise-remained",
+  "dangling-premise-set",
+  "synonym-repetition-redefinition",
+  "clean-introduction",
+  "clean-objecthood-shipped",
+  "clean-objecthood-bridge"
+ ],
+ "reps": 3,
+ "runs": 99,
+ "malformed": 0,
+ "model": "default",
+ "disallowed_tools": "Bash,Read,Write,Edit,Grep,Glob,WebFetch,WebSearch,Task,Agent,NotebookEdit,TodoWrite,Skill,SlashCommand"
+}

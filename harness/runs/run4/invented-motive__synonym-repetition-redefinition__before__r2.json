@@ -1,0 +1,15 @@
+{
+ "relation": "invented-motive",
+ "case": "synonym-repetition-redefinition",
+ "version": "before",
+ "rep": 2,
+ "seconds": 29.8,
+ "exit": 0,
+ "verdict": {
+  "verdict": "NONE",
+  "instances": [],
+  "strongest": null
+ },
+ "malformed": null,
+ "raw": "{\"verdict\": \"NONE\", \"instances\": [], \"strongest\": null}"
+}

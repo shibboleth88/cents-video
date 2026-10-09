@@ -1,0 +1,217 @@
+{
+ "relation": "dangling-premise",
+ "case": "order-causation-brenner",
+ "version": "after",
+ "rep": 1,
+ "seconds": 116.2,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     5
+    ],
+    "claim": "This tells me that the object had been threatened with disappearance or had lost its physical existence, and that it persisted anyway.",
+    "why": "\"Remained\" and \"buoyed into physicality\" both presuppose a prior state the object survived \u2014 dematerialization, destruction, loss of its body \u2014 and nothing before line 5 puts the object at risk; lines 1\u20134 establish only a value discrepancy and a ubiquity claim. Destruction is not mentioned until line 14, nine lines later, so at line 5 the contrast pushes against nothing in the draft.",
+    "confidence": "high"
+   },
+   {
+    "lines": [
+     10,
+     19
+    ],
+    "claim": "This tells me that there is a bounded, fixed-membership collection of Cent objects, made identical to one another at the start, which the film has already introduced and counted.",
+    "why": "\"Every Cent\" and \"Each object, initially identical\" are claims about a population, but the draft has only ever named a singular readymade (line 3, \"the readymade he chose\") and a kind of coin \u2014 never a set, an edition, a quantity, or an act of making many. \"Initially identical\" additionally asserts a shared starting condition across members of a set whose existence is nowhere established.",
+    "confidence": "high"
+   },
+   {
+    "lines": [
+     20
+    ],
+    "claim": "This tells me that the Cents were dispersed to a group of people who hold and act on them, and that this group has been introduced.",
+    "why": "\"Its participants\" is a definite phrase standing in for a group the draft never names: no distribution, no handlers, no one but Chang appears in lines 1\u201319. Line 19's \"marks of touch\" quietly leans on the same absent group, so the closing line reads as a summary of something the piece has not contained.",
+    "confidence": "medium"
+   }
+  ],
+  "strongest": 5,
+  "inventory": [
+   {
+    "line": 2,
+    "expression": "About two and a half as copper",
+    "kind": "backward",
+    "antecedent_line": 2
+   },
+   {
+    "line": 3,
+    "expression": "he",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 3,
+    "expression": "The readymade he chose",
+    "kind": "backward",
+    "antecedent_line": 2
+   },
+   {
+    "line": 4,
+    "expression": "Brenner's Lincoln",
+    "kind": "backward",
+    "antecedent_line": 3
+   },
+   {
+    "line": 5,
+    "expression": "The object",
+    "kind": "backward",
+    "antecedent_line": 3
+   },
+   {
+    "line": 5,
+    "expression": "remained",
+    "kind": "contrast",
+    "antecedent_line": null
+   },
+   {
+    "line": 5,
+    "expression": "buoyed into physicality",
+    "kind": "contrast",
+    "antecedent_line": null
+   },
+   {
+    "line": 5,
+    "expression": "its context",
+    "kind": "backward",
+    "antecedent_line": 3
+   },
+   {
+    "line": 8,
+    "expression": "Yet, here we are",
+    "kind": "contrast",
+    "antecedent_line": 7
+   },
+   {
+    "line": 9,
+    "expression": "He",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 9,
+    "expression": "to it",
+    "kind": "backward",
+    "antecedent_line": 8
+   },
+   {
+    "line": 10,
+    "expression": "Every Cent",
+    "kind": "quantifier",
+    "antecedent_line": null
+   },
+   {
+    "line": 11,
+    "expression": "In circulation",
+    "kind": "contrast",
+    "antecedent_line": 10
+   },
+   {
+    "line": 12,
+    "expression": "Removed from circulation",
+    "kind": "contrast",
+    "antecedent_line": 11
+   },
+   {
+    "line": 12,
+    "expression": "that assignment",
+    "kind": "backward",
+    "antecedent_line": 11
+   },
+   {
+    "line": 13,
+    "expression": "the image",
+    "kind": "backward",
+    "antecedent_line": 13
+   },
+   {
+    "line": 14,
+    "expression": "its value",
+    "kind": "backward",
+    "antecedent_line": 10
+   },
+   {
+    "line": 15,
+    "expression": "continually redefined",
+    "kind": "backward",
+    "antecedent_line": 10
+   },
+   {
+    "line": 16,
+    "expression": "The assigned value",
+    "kind": "backward",
+    "antecedent_line": 11
+   },
+   {
+    "line": 16,
+    "expression": "the object",
+    "kind": "backward",
+    "antecedent_line": 5
+   },
+   {
+    "line": 17,
+    "expression": "Its value and meaning",
+    "kind": "backward",
+    "antecedent_line": 16
+   },
+   {
+    "line": 17,
+    "expression": "continually redefined",
+    "kind": "backward",
+    "antecedent_line": 15
+   },
+   {
+    "line": 18,
+    "expression": "an ongoing process of redefinition",
+    "kind": "backward",
+    "antecedent_line": 17
+   },
+   {
+    "line": 19,
+    "expression": "Each object",
+    "kind": "quantifier",
+    "antecedent_line": null
+   },
+   {
+    "line": 19,
+    "expression": "initially identical",
+    "kind": "quantifier",
+    "antecedent_line": null
+   },
+   {
+    "line": 19,
+    "expression": "the marks of touch and time",
+    "kind": "backward",
+    "antecedent_line": null
+   },
+   {
+    "line": 20,
+    "expression": "CENTS",
+    "kind": "backward",
+    "antecedent_line": 10
+   },
+   {
+    "line": 20,
+    "expression": "its participants",
+    "kind": "backward",
+    "antecedent_line": null
+   },
+   {
+    "line": 20,
+    "expression": "unfolds continually",
+    "kind": "continuation",
+    "antecedent_line": 18
+   }
+  ]
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [5],\n      \"claim\": \"This tells me that the object had been threatened with disappearance or had lost its physical existence, and that it persisted anyway.\",\n      \"why\": \"\\\"Remained\\\" and \\\"buoyed into physicality\\\" both presuppose a prior state the object survived \u2014 dematerialization, destruction, loss of its body \u2014 and nothing before line 5 puts the object at risk; lines 1\u20134 establish only a value discrepancy and a ubiquity claim. Destruction is not mentioned until line 14, nine lines later, so at line 5 the contrast pushes against nothing in the draft.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"lines\": [10, 19],\n      \"claim\": \"This tells me that there is a bounded, fixed-membership collection of Cent objects, made identical to one another at the start, which the film has already introduced and counted.\",\n      \"why\": \"\\\"Every Cent\\\" and \\\"Each object, initially identical\\\" are claims about a population, but the draft has only ever named a singular readymade (line 3, \\\"the readymade he chose\\\") and a kind of coin \u2014 never a set, an edition, a quantity, or an act of making many. \\\"Initially identical\\\" additionally asserts a shared starting condition across members of a set whose existence is nowhere established.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"lines\": [20],\n      \"claim\": \"This tells me that the Cents were dispersed to a group of people who hold and act on them, and that this group has been introduced.\",\n      \"why\": \"\\\"Its participants\\\" is a definite phrase standing in for a group the draft never names: no distribution, no handlers, no one but Chang appears in lines 1\u201319. Line 19's \\\"marks of touch\\\" quietly leans on the same absent group, so the closing line reads as a summary of something the piece has not contained.\",\n      \"confidence\": \"medium\"\n    }\n  ],\n  \"strongest\": 5,\n  \"inventory\": [\n    {\"line\": 2, \"expression\": \"About two and a half as copper\", \"kind\": \"backward\", \"antecedent_line\": 2},\n    {\"line\": 3, \"expression\": \"he\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 3, \"expression\": \"The readymade he chose\", \"kind\": \"backward\", \"antecedent_line\": 2},\n    {\"line\": 4, \"expression\": \"Brenner's Lincoln\", \"kind\": \"backward\", \"antecedent_line\": 3},\n    {\"line\": 5, \"expression\": \"The object\", \"kind\": \"backward\", \"antecedent_line\": 3},\n    {\"line\": 5, \"expression\": \"remained\", \"kind\": \"contrast\", \"antecedent_line\": null},\n    {\"line\": 5, \"expression\": \"buoyed into physicality\", \"kind\": \"contrast\", \"antecedent_line\": null},\n    {\"line\": 5, \"expression\": \"its context\", \"kind\": \"backward\", \"antecedent_line\": 3},\n    {\"line\": 8, \"expression\": \"Yet, here we are\", \"kind\": \"contrast\", \"antecedent_line\": 7},\n    {\"line\": 9, \"expression\": \"He\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 9, \"expression\": \"to it\", \"kind\": \"backward\", \"antecedent_line\": 8},\n    {\"line\": 10, \"expression\": \"Every Cent\", \"kind\": \"quantifier\", \"antecedent_line\": null},\n    {\"line\": 11, \"expression\": \"In circulation\", \"kind\": \"contrast\", \"antecedent_line\": 10},\n    {\"line\": 12, \"expression\": \"Removed from circulation\", \"kind\": \"contrast\", \"antecedent_line\": 11},\n    {\"line\": 12, \"expression\": \"that assignment\", \"kind\": \"backward\", \"antecedent_line\": 11},\n    {\"line\": 13, \"expression\": \"the image\", \"kind\": \"backward\", \"antecedent_line\": 13},\n    {\"line\": 14, \"expression\": \"its value\", \"kind\": \"backward\", \"antecedent_line\": 10},\n    {\"line\": 15, \"expression\": \"continually redefined\", \"kind\": \"backward\", \"antecedent_line\": 10},\n    {\"line\": 16, \"expression\": \"The assigned value\", \"kind\": \"backward\", \"antecedent_line\": 11},\n    {\"line\": 16, \"expression\": \"the object\", \"kind\": \"backward\", \"antecedent_line\": 5},\n    {\"line\": 17, \"expression\": \"Its value and meaning\", \"kind\": \"backward\", \"antecedent_line\": 16},\n    {\"line\": 17, \"expression\": \"continually redefined\", \"kind\": \"backward\", \"antecedent_line\": 15},\n    {\"line\": 18, \"expression\": \"an ongoin"
+}

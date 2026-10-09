@@ -1,0 +1,14 @@
+{
+ "relation": "synonym-repetition",
+ "case": "dangling-premise-set",
+ "version": "before",
+ "rep": 2,
+ "seconds": 1,
+ "exit": 0,
+ "verdict": {
+  "verdict": "NONE",
+  "instances": []
+ },
+ "malformed": null,
+ "raw": ""
+}

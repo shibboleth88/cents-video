@@ -1,0 +1,26 @@
+{
+ "relation": "invented-motive",
+ "case": "order-causation-brenner",
+ "version": "after",
+ "rep": 1,
+ "seconds": 35.1,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     16,
+     17,
+     18
+    ],
+    "claim": "This tells me that Chang initiated the process of redefinition because the assigned value had become decoupled from the object and indeterminate \u2014 that the indeterminacy of value was his reason for acting.",
+    "why": "Line 18 holds the decision expression ('Chang initiated'), attributing a deliberate act to a named person; lines 16 and 17 immediately precede it and state properties of the work's value (decoupled, a vessel for social consensus, indeterminate and continually redefined). Each line alone is innocent \u2014 16 and 17 describe outcomes of the five transformations just listed \u2014 but placing them directly before the decision inverts the relation, so an effect of the process reads as the motive for starting it. On clause 3: the only reason the draft states anywhere for Chang's act is line 1, 'a simple value discrepancy' (one cent to the Treasury, two and a half as copper); that is a different reason from the one the order proposes, so this is an instance rather than an order consistent with a stated motive.",
+    "confidence": "medium"
+   }
+  ],
+  "strongest": 18
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [16, 17, 18],\n      \"claim\": \"This tells me that Chang initiated the process of redefinition because the assigned value had become decoupled from the object and indeterminate \u2014 that the indeterminacy of value was his reason for acting.\",\n      \"why\": \"Line 18 holds the decision expression ('Chang initiated'), attributing a deliberate act to a named person; lines 16 and 17 immediately precede it and state properties of the work's value (decoupled, a vessel for social consensus, indeterminate and continually redefined). Each line alone is innocent \u2014 16 and 17 describe outcomes of the five transformations just listed \u2014 but placing them directly before the decision inverts the relation, so an effect of the process reads as the motive for starting it. On clause 3: the only reason the draft states anywhere for Chang's act is line 1, 'a simple value discrepancy' (one cent to the Treasury, two and a half as copper); that is a different reason from the one the order proposes, so this is an instance rather than an order consistent with a stated motive.\",\n      \"confidence\": \"medium\"\n    }\n  ],\n  \"strongest\": 18\n}"
+}

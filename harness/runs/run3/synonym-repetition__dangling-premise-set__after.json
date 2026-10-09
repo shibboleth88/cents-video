@@ -1,0 +1,24 @@
+{
+ "relation": "synonym-repetition",
+ "case": "dangling-premise-set",
+ "version": "after",
+ "seconds": 35.5,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     17,
+     21
+    ],
+    "claim": "This tells me that the work's value is continually redefined, and then tells me again that the work's value is continually redefined.",
+    "why": "Line 17 says Chang began an ongoing process of redefinition and line 21 says the value and meaning are continually redefined \u2014 the same point, sharing the word root 'redefine', with neither line adding a register the other lacks (no mechanism, no physical change, no named audience). Line 22 already closes the passage with the form-and-participants version ('a becoming... through the actions of its participants'), and line 16 already gave the mechanism version ('redefined by decentralized consensus'), so line 21 has no register left to occupy; keep 17 as the opener and cut 21.",
+    "confidence": "high"
+   }
+  ],
+  "strongest": 21
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [17, 21],\n      \"claim\": \"This tells me that the work's value is continually redefined, and then tells me again that the work's value is continually redefined.\",\n      \"why\": \"Line 17 says Chang began an ongoing process of redefinition and line 21 says the value and meaning are continually redefined \u2014 the same point, sharing the word root 'redefine', with neither line adding a register the other lacks (no mechanism, no physical change, no named audience). Line 22 already closes the passage with the form-and-participants version ('a becoming... through the actions of its participants'), and line 16 already gave the mechanism version ('redefined by decentralized consensus'), so line 21 has no register left to occupy; keep 17 as the opener and cut 21.\",\n      \"confidence\": \"high\"\n    }\n  ],\n  \"strongest\": 21\n}"
+}

@@ -1,0 +1,202 @@
+{
+ "relation": "dangling-premise",
+ "case": "order-causation-brenner",
+ "version": "after",
+ "seconds": 101.8,
+ "exit": 0,
+ "verdict": {
+  "verdict": "FOUND",
+  "instances": [
+   {
+    "lines": [
+     10,
+     19
+    ],
+    "claim": "This tells me that the film has already introduced a bounded set of Cent objects \u2014 more than one, with fixed membership, all alike when they started \u2014 that these quantifiers can range over.",
+    "why": "Lines 1\u20135 introduce only a singular object: 'One cent', 'The readymade he chose', 'The object'. Nothing establishes a collection, so 'Every Cent' and then 'Each object, initially identical' \u2014 a claim about a population's starting state \u2014 both quantify over a set the draft never brought into being; the two lines float on the same absent premise.",
+    "confidence": "high"
+   },
+   {
+    "lines": [
+     5
+    ],
+    "claim": "This tells me that the object had been destroyed, dematerialized, or otherwise lost its physical existence before this point, and that it persisted anyway.",
+    "why": "'Remained' and 'buoyed into physicality' both presuppose a prior threat to the object's physical existence, but nothing before line 5 mentions destruction, loss, or an image standing in for the thing \u2014 the only destruction in the draft arrives nine lines later, at 14, so the push-against state is not in the piece when the line is read.",
+    "confidence": "high"
+   }
+  ],
+  "strongest": 10,
+  "inventory": [
+   {
+    "line": 2,
+    "expression": "One cent to the Treasury",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 2,
+    "expression": "About two and a half as copper",
+    "kind": "contrast",
+    "antecedent_line": 2
+   },
+   {
+    "line": 3,
+    "expression": "he",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 3,
+    "expression": "The readymade he chose",
+    "kind": "backward",
+    "antecedent_line": 2
+   },
+   {
+    "line": 4,
+    "expression": "Brenner's Lincoln",
+    "kind": "backward",
+    "antecedent_line": 2
+   },
+   {
+    "line": 5,
+    "expression": "The object",
+    "kind": "backward",
+    "antecedent_line": 3
+   },
+   {
+    "line": 5,
+    "expression": "remained, buoyed into physicality",
+    "kind": "contrast",
+    "antecedent_line": null
+   },
+   {
+    "line": 5,
+    "expression": "its context",
+    "kind": "backward",
+    "antecedent_line": 2
+   },
+   {
+    "line": 8,
+    "expression": "Yet, here we are",
+    "kind": "contrast",
+    "antecedent_line": 7
+   },
+   {
+    "line": 9,
+    "expression": "He",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 9,
+    "expression": "to it",
+    "kind": "backward",
+    "antecedent_line": 7
+   },
+   {
+    "line": 10,
+    "expression": "Every Cent",
+    "kind": "quantifier",
+    "antecedent_line": null
+   },
+   {
+    "line": 10,
+    "expression": "five transformations of value",
+    "kind": "quantifier",
+    "antecedent_line": 10
+   },
+   {
+    "line": 11,
+    "expression": "In circulation, value defined by the Treasury",
+    "kind": "backward",
+    "antecedent_line": 10
+   },
+   {
+    "line": 12,
+    "expression": "Removed from circulation",
+    "kind": "contrast",
+    "antecedent_line": 11
+   },
+   {
+    "line": 12,
+    "expression": "that assignment",
+    "kind": "backward",
+    "antecedent_line": 11
+   },
+   {
+    "line": 13,
+    "expression": "what the image holds",
+    "kind": "backward",
+    "antecedent_line": 13
+   },
+   {
+    "line": 14,
+    "expression": "its value",
+    "kind": "backward",
+    "antecedent_line": 10
+   },
+   {
+    "line": 15,
+    "expression": "continually redefined by decentralized consensus",
+    "kind": "backward",
+    "antecedent_line": 10
+   },
+   {
+    "line": 16,
+    "expression": "The assigned value",
+    "kind": "backward",
+    "antecedent_line": 11
+   },
+   {
+    "line": 16,
+    "expression": "the object",
+    "kind": "backward",
+    "antecedent_line": 5
+   },
+   {
+    "line": 17,
+    "expression": "Its value and meaning",
+    "kind": "backward",
+    "antecedent_line": 16
+   },
+   {
+    "line": 17,
+    "expression": "continually redefined",
+    "kind": "contrast",
+    "antecedent_line": 15
+   },
+   {
+    "line": 18,
+    "expression": "an ongoing process of redefinition",
+    "kind": "backward",
+    "antecedent_line": 17
+   },
+   {
+    "line": 19,
+    "expression": "Each object",
+    "kind": "quantifier",
+    "antecedent_line": null
+   },
+   {
+    "line": 19,
+    "expression": "initially identical",
+    "kind": "quantifier",
+    "antecedent_line": null
+   },
+   {
+    "line": 20,
+    "expression": "its participants",
+    "kind": "backward",
+    "antecedent_line": 19
+   },
+   {
+    "line": 20,
+    "expression": "unfolds continually",
+    "kind": "contrast",
+    "antecedent_line": 18
+   }
+  ]
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"FOUND\",\n  \"instances\": [\n    {\n      \"lines\": [10, 19],\n      \"claim\": \"This tells me that the film has already introduced a bounded set of Cent objects \u2014 more than one, with fixed membership, all alike when they started \u2014 that these quantifiers can range over.\",\n      \"why\": \"Lines 1\u20135 introduce only a singular object: 'One cent', 'The readymade he chose', 'The object'. Nothing establishes a collection, so 'Every Cent' and then 'Each object, initially identical' \u2014 a claim about a population's starting state \u2014 both quantify over a set the draft never brought into being; the two lines float on the same absent premise.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"lines\": [5],\n      \"claim\": \"This tells me that the object had been destroyed, dematerialized, or otherwise lost its physical existence before this point, and that it persisted anyway.\",\n      \"why\": \"'Remained' and 'buoyed into physicality' both presuppose a prior threat to the object's physical existence, but nothing before line 5 mentions destruction, loss, or an image standing in for the thing \u2014 the only destruction in the draft arrives nine lines later, at 14, so the push-against state is not in the piece when the line is read.\",\n      \"confidence\": \"high\"\n    }\n  ],\n  \"strongest\": 10,\n  \"inventory\": [\n    {\"line\": 2, \"expression\": \"One cent to the Treasury\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 2, \"expression\": \"About two and a half as copper\", \"kind\": \"contrast\", \"antecedent_line\": 2},\n    {\"line\": 3, \"expression\": \"he\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 3, \"expression\": \"The readymade he chose\", \"kind\": \"backward\", \"antecedent_line\": 2},\n    {\"line\": 4, \"expression\": \"Brenner's Lincoln\", \"kind\": \"backward\", \"antecedent_line\": 2},\n    {\"line\": 5, \"expression\": \"The object\", \"kind\": \"backward\", \"antecedent_line\": 3},\n    {\"line\": 5, \"expression\": \"remained, buoyed into physicality\", \"kind\": \"contrast\", \"antecedent_line\": null},\n    {\"line\": 5, \"expression\": \"its context\", \"kind\": \"backward\", \"antecedent_line\": 2},\n    {\"line\": 8, \"expression\": \"Yet, here we are\", \"kind\": \"contrast\", \"antecedent_line\": 7},\n    {\"line\": 9, \"expression\": \"He\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 9, \"expression\": \"to it\", \"kind\": \"backward\", \"antecedent_line\": 7},\n    {\"line\": 10, \"expression\": \"Every Cent\", \"kind\": \"quantifier\", \"antecedent_line\": null},\n    {\"line\": 10, \"expression\": \"five transformations of value\", \"kind\": \"quantifier\", \"antecedent_line\": 10},\n    {\"line\": 11, \"expression\": \"In circulation, value defined by the Treasury\", \"kind\": \"backward\", \"antecedent_line\": 10},\n    {\"line\": 12, \"expression\": \"Removed from circulation\", \"kind\": \"contrast\", \"antecedent_line\": 11},\n    {\"line\": 12, \"expression\": \"that assignment\", \"kind\": \"backward\", \"antecedent_line\": 11},\n    {\"line\": 13, \"expression\": \"what the image holds\", \"kind\": \"backward\", \"antecedent_line\": 13},\n    {\"line\": 14, \"expression\": \"its value\", \"kind\": \"backward\", \"antecedent_line\": 10},\n    {\"line\": 15, \"expression\": \"continually redefined by decentralized consensus\", \"kind\": \"backward\", \"antecedent_line\": 10},\n    {\"line\": 16, \"expression\": \"The assigned value\", \"kind\": \"backward\", \"antecedent_line\": 11},\n    {\"line\": 16, \"expression\": \"the object\", \"kind\": \"backward\", \"antecedent_line\": 5},\n    {\"line\": 17, \"expression\": \"Its value and meaning\", \"kind\": \"backward\", \"antecedent_line\": 16},\n    {\"line\": 17, \"expression\": \"continually redefined\", \"kind\": \"contrast\", \"antecedent_line\": 15},\n    {\"line\": 18, \"expression\": \"an ongoing process of redefinition\", \"kind\": \"backward\", \"antecedent_line\": 17},\n    {\"line\": 19, \"expression\": \"Each object\", \"kind\": \"quantifier\", \"antecedent_line\": null},\n    {\"line\": 19, \"expression\": \"initially identical\", \"kind\": \"quantifier\", \"antecedent_line\": null},\n    {\"line\": 20, \"expression\": \"its participants\", \"kind\": \"backward\", \"antecedent_line\": 19},\n    {\"line\": 20, \"expression\": \"unfolds contin"
+}

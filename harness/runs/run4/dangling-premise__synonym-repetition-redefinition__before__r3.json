@@ -1,0 +1,179 @@
+{
+ "relation": "dangling-premise",
+ "case": "synonym-repetition-redefinition",
+ "version": "before",
+ "rep": 3,
+ "seconds": 72.8,
+ "exit": 0,
+ "verdict": {
+  "verdict": "NONE",
+  "instances": [],
+  "strongest": null,
+  "inventory": [
+   {
+    "line": 2,
+    "expression": "One cent to the Treasury. About two and a half as copper.",
+    "kind": "contrast",
+    "antecedent_line": 1
+   },
+   {
+    "line": 4,
+    "expression": "Yet",
+    "kind": "contrast",
+    "antecedent_line": 3
+   },
+   {
+    "line": 4,
+    "expression": "the object",
+    "kind": "backward",
+    "antecedent_line": 2
+   },
+   {
+    "line": 4,
+    "expression": "its context",
+    "kind": "backward",
+    "antecedent_line": 4
+   },
+   {
+    "line": 5,
+    "expression": "The readymade he chose",
+    "kind": "backward",
+    "antecedent_line": 2
+   },
+   {
+    "line": 5,
+    "expression": "he",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 6,
+    "expression": "each carrying Victor David Brenner's portrait",
+    "kind": "quantifier",
+    "antecedent_line": 6
+   },
+   {
+    "line": 9,
+    "expression": "Yet, here we are",
+    "kind": "contrast",
+    "antecedent_line": 8
+   },
+   {
+    "line": 10,
+    "expression": "He",
+    "kind": "backward",
+    "antecedent_line": 1
+   },
+   {
+    "line": 10,
+    "expression": "to it",
+    "kind": "backward",
+    "antecedent_line": 5
+   },
+   {
+    "line": 11,
+    "expression": "Every Cent",
+    "kind": "quantifier",
+    "antecedent_line": 18
+   },
+   {
+    "line": 12,
+    "expression": "In circulation, value defined by the Treasury",
+    "kind": "contrast",
+    "antecedent_line": 11
+   },
+   {
+    "line": 12,
+    "expression": "the Treasury",
+    "kind": "backward",
+    "antecedent_line": 2
+   },
+   {
+    "line": 13,
+    "expression": "that assignment",
+    "kind": "backward",
+    "antecedent_line": 12
+   },
+   {
+    "line": 13,
+    "expression": "Removed from circulation",
+    "kind": "contrast",
+    "antecedent_line": 12
+   },
+   {
+    "line": 14,
+    "expression": "what the image holds",
+    "kind": "backward",
+    "antecedent_line": 14
+   },
+   {
+    "line": 15,
+    "expression": "its value",
+    "kind": "backward",
+    "antecedent_line": 11
+   },
+   {
+    "line": 16,
+    "expression": "continually redefined",
+    "kind": "contrast",
+    "antecedent_line": 15
+   },
+   {
+    "line": 18,
+    "expression": "A permanent set of ten thousand",
+    "kind": "quantifier",
+    "antecedent_line": 11
+   },
+   {
+    "line": 18,
+    "expression": "its own logics and rarities",
+    "kind": "backward",
+    "antecedent_line": 18
+   },
+   {
+    "line": 19,
+    "expression": "Each one initially identical",
+    "kind": "quantifier",
+    "antecedent_line": 18
+   },
+   {
+    "line": 19,
+    "expression": "now bearing the marks of touch and time",
+    "kind": "contrast",
+    "antecedent_line": 19
+   },
+   {
+    "line": 20,
+    "expression": "the set",
+    "kind": "backward",
+    "antecedent_line": 18
+   },
+   {
+    "line": 20,
+    "expression": "its internal dynamics",
+    "kind": "backward",
+    "antecedent_line": 18
+   },
+   {
+    "line": 21,
+    "expression": "Like words that accrue significance",
+    "kind": "contrast",
+    "antecedent_line": 20
+   },
+   {
+    "line": 22,
+    "expression": "Its value and meaning",
+    "kind": "backward",
+    "antecedent_line": 18
+   },
+   {
+    "line": 23,
+    "expression": "its participants",
+    "kind": "backward",
+    "antecedent_line": 23
+   }
+  ]
+ },
+ "malformed": null,
+ "raw": "{\n  \"verdict\": \"NONE\",\n  \"instances\": [],\n  \"strongest\": null,\n  \"inventory\": [\n    {\"line\": 2, \"expression\": \"One cent to the Treasury. About two and a half as copper.\", \"kind\": \"contrast\", \"antecedent_line\": 1},\n    {\"line\": 4, \"expression\": \"Yet\", \"kind\": \"contrast\", \"antecedent_line\": 3},\n    {\"line\": 4, \"expression\": \"the object\", \"kind\": \"backward\", \"antecedent_line\": 2},\n    {\"line\": 4, \"expression\": \"its context\", \"kind\": \"backward\", \"antecedent_line\": 4},\n    {\"line\": 5, \"expression\": \"The readymade he chose\", \"kind\": \"backward\", \"antecedent_line\": 2},\n    {\"line\": 5, \"expression\": \"he\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 6, \"expression\": \"each carrying Victor David Brenner's portrait\", \"kind\": \"quantifier\", \"antecedent_line\": 6},\n    {\"line\": 9, \"expression\": \"Yet, here we are\", \"kind\": \"contrast\", \"antecedent_line\": 8},\n    {\"line\": 10, \"expression\": \"He\", \"kind\": \"backward\", \"antecedent_line\": 1},\n    {\"line\": 10, \"expression\": \"to it\", \"kind\": \"backward\", \"antecedent_line\": 5},\n    {\"line\": 11, \"expression\": \"Every Cent\", \"kind\": \"quantifier\", \"antecedent_line\": 18},\n    {\"line\": 12, \"expression\": \"In circulation, value defined by the Treasury\", \"kind\": \"contrast\", \"antecedent_line\": 11},\n    {\"line\": 12, \"expression\": \"the Treasury\", \"kind\": \"backward\", \"antecedent_line\": 2},\n    {\"line\": 13, \"expression\": \"that assignment\", \"kind\": \"backward\", \"antecedent_line\": 12},\n    {\"line\": 13, \"expression\": \"Removed from circulation\", \"kind\": \"contrast\", \"antecedent_line\": 12},\n    {\"line\": 14, \"expression\": \"what the image holds\", \"kind\": \"backward\", \"antecedent_line\": 14},\n    {\"line\": 15, \"expression\": \"its value\", \"kind\": \"backward\", \"antecedent_line\": 11},\n    {\"line\": 16, \"expression\": \"continually redefined\", \"kind\": \"contrast\", \"antecedent_line\": 15},\n    {\"line\": 18, \"expression\": \"A permanent set of ten thousand\", \"kind\": \"quantifier\", \"antecedent_line\": 11},\n    {\"line\": 18, \"expression\": \"its own logics and rarities\", \"kind\": \"backward\", \"antecedent_line\": 18},\n    {\"line\": 19, \"expression\": \"Each one initially identical\", \"kind\": \"quantifier\", \"antecedent_line\": 18},\n    {\"line\": 19, \"expression\": \"now bearing the marks of touch and time\", \"kind\": \"contrast\", \"antecedent_line\": 19},\n    {\"line\": 20, \"expression\": \"the set\", \"kind\": \"backward\", \"antecedent_line\": 18},\n    {\"line\": 20, \"expression\": \"its internal dynamics\", \"kind\": \"backward\", \"antecedent_line\": 18},\n    {\"line\": 21, \"expression\": \"Like words that accrue significance\", \"kind\": \"contrast\", \"antecedent_line\": 20},\n    {\"line\": 22, \"expression\": \"Its value and meaning\", \"kind\": \"backward\", \"antecedent_line\": 18},\n    {\"line\": 23, \"expression\": \"its participants\", \"kind\": \"backward\", \"antecedent_line\": 23}\n  ]\n}"
+}
