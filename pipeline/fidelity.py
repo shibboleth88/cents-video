@@ -104,6 +104,53 @@ def g_equations(vo: str, gl: dict) -> str:
     if bad: raise Fail("; ".join(bad))
     return f"{len(gl['must_not_equate'])} distinctions checked for explicit collapse"
 
+# A source's deictic points at the SOURCE'S date, not the film's. The script
+# once read "288 billion still in existence" against a span dated March 2024 -
+# "still" was added by the narration and asserted a 2026 measurement nobody
+# made. Nothing caught it, because every per-claim check looked only at whether
+# the span existed, never at when it was written.
+DEICTICS = r"\b(now|currently|still|today|nowadays|at present|these days|to date|so far|at the moment)\b"
+TIMEVARY = [
+    (r"\b(18|19|20)\d\d\b",                      "names a year"),
+    (r"\b(billion|million|trillion)\b",           "states a population"),
+    (r"\bcents?\b|\u00a2",                           "states a money value"),
+    (r"\bsats?\b|\bsatoshis?\b",                    "states a price in satoshis"),
+    (r"\bkilograms?\b|\bkg\b|\bpounds?\b",          "states a mass"),
+    (r"\b(worth|valued|asking|listed|price[sd]?)\b", "states a valuation"),
+    (r"\b(most|least|largest|smallest|biggest|only|first|last)\b", "makes a superlative or uniqueness claim"),
+]
+
+def g_epochs(cl: dict) -> str:
+    """Every time-varying claim must say which moment it describes (epoch) and
+    when its source was written or measured (as_of). Mechanical and therefore
+    partial: it detects years, populations, money, mass and superlatives."""
+    bad, n_tv = [], 0
+    for i, c in enumerate(cl["claims"]):
+        say, span = c.get("say", ""), str(c.get("span", ""))
+        d = re.search(DEICTICS, say, re.I)
+        if d:
+            bad.append(f"claim {i} narration contains the deictic '{d.group(0)}' - convert it to the "
+                       f"source's absolute date: {say[:60]!r}")
+        why = [w for pat, w in TIMEVARY if re.search(pat, say + " " + span, re.I)]
+        if not why:
+            continue
+        n_tv += 1
+        for field in ("epoch", "as_of"):
+            if not str(c.get(field, "")).strip():
+                bad.append(f"claim {i} {why[0]} but declares no {field}: {say[:60]!r}")
+    # Floors. A ledger whose claims happen to contain no years, no money and no
+    # superlatives has almost certainly not been read by this gate at all, and a
+    # pass would then mean "found nothing to check" - which renders identically
+    # to "everything is dated".
+    if not cl["claims"]:
+        raise Fail("the ledger holds no claims - the gate has nothing to measure")
+    if n_tv == 0:
+        raise Fail(f"no time-varying claim found among {len(cl['claims'])} claims - "
+                   f"the detector is broken, not the script")
+    if bad:
+        raise Fail(f"{len(bad)} epoch problem(s): " + "; ".join(bad[:3]))
+    return f"{n_tv}/{len(cl['claims'])} claims are time-varying; each declares epoch and as_of"
+
 def g_distinctions_reviewed(cl: dict) -> str:
     """The semantic half. A machine cannot settle it, so it must be ANSWERED,
     with the answer recorded and attributable — not left blank and assumed."""
@@ -241,6 +288,29 @@ def self_test() -> int:
                 f"timeline has {len(shots)} shots with props - nothing to put bad {prop} on")
         targets[min(1, len(targets) - 1)]["props"][prop] = value
 
+    def corrupt_undated():
+        # Must strip the epoch from a claim the gate actually INSPECTS. The first
+        # version took the first claim carrying an epoch, which was line 1 - not
+        # time-varying by the detector, so removing its epoch changed nothing and
+        # the control read green. Select with the gate's own detector instead.
+        c = json.loads(json.dumps(cl))
+        def timevary(x):
+            blob = x.get("say", "") + " " + str(x.get("span", ""))
+            return any(re.search(pat, blob, re.I) for pat, _ in TIMEVARY)
+        i = next((j for j, x in enumerate(c["claims"])
+                  if timevary(x) and str(x.get("epoch", "")).strip()), None)
+        if i is None:
+            raise Unbuildable("no time-varying claim declares an epoch - nothing to strip")
+        c["claims"][i].pop("epoch", None)
+        return lambda: g_epochs(c)
+    def corrupt_deictic():
+        c = json.loads(json.dumps(cl))
+        i = next((j for j, x in enumerate(c["claims"])
+                  if re.search(r"\b(18|19|20)\d\d\b", x.get("say", ""))), None)
+        if i is None:
+            raise Unbuildable("no claim names a year - nothing to re-deicticise")
+        c["claims"][i]["say"] = c["claims"][i]["say"] + " It is still true now."
+        return lambda: g_epochs(c)
     def corrupt_onscreen():
         t = json.loads(json.dumps(tl))
         _shot_for_control(t, "quote", "CENTS is finally about the fragility of money.")
@@ -261,6 +331,8 @@ def self_test() -> int:
         ("collapsed distinction",      corrupt_equation),
         ("unconfirmed distinction",    corrupt_distinction),
         ("missing thesis",             corrupt_thesis),
+        ("undated time-varying claim", corrupt_undated),
+        ("uncoverted source deictic",  corrupt_deictic),
     ]
     print("CONTROLS \u2014 each corrupts the script in a way a production actually shipped.\n")
     bad = 0; unbuilt = []
@@ -300,7 +372,8 @@ def main() -> int:
               ("additions approved", lambda: g_additions(cl)),
               ("terminology", lambda: g_terminology(vo, gl)),
               ("distinctions not collapsed", lambda: g_equations(vo, gl)),
-              ("distinctions reviewed", lambda: g_distinctions_reviewed(cl))]
+              ("distinctions reviewed", lambda: g_distinctions_reviewed(cl)),
+              ("epochs declared", lambda: g_epochs(cl))]
     fails = 0
     for n, fn in checks:
         try: print(f"  \033[32mPASS\033[0m {n:<28} {fn()}")

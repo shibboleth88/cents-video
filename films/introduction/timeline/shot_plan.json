@@ -1,0 +1,274 @@
+{
+ "_what": "Line-keyed shot plan for the introduction film. Reviewable BEFORE recording: anchors cannot be resolved until word-level alignment exists, so shots are keyed to script line numbers, not timecodes.",
+ "_pair_claims": "Every shot states the claim the image and the words make TOGETHER, as one sentence beginning 'This is telling me that'. That pairing is what no per-sentence gate can check, and it is how the Block-under-'inscribed-on-Bitcoin' error shipped in the last film.",
+ "script_lines": 24,
+ "shots": [
+  {
+   "line": 1,
+   "visual": "a03_motion.mp4",
+   "fit": "cover",
+   "role": "backdrop",
+   "pair_claim": "This is telling me that an ordinary penny, worn by a century of handling, is the object in question.",
+   "support": "supported",
+   "note": "Crop note permits cover-fit. No Chang context yet, so no act is implied.",
+   "narration": "For more than a century the penny has circulated, considered a worthless nuisance."
+  },
+  {
+   "line": 2,
+   "visual": "PLATE:figure",
+   "figure": "ONE CENT \u2014 the Treasury's valuation, fixed, whatever the year",
+   "role": "plate",
+   "pair_claim": "This is telling me that the Treasury's figure is a single fixed number.",
+   "support": "supported",
+   "note": "Typographic. No object image, so nothing asserts WHICH cent.",
+   "narration": "To the Treasury it is worth exactly one cent, whatever year it was struck, and always will be."
+  },
+  {
+   "line": 3,
+   "visual": "PLATE:figure",
+   "figure": "pre-1983: copper \u2014 \u2248 3\u00a2 of metal, March 2024",
+   "role": "plate",
+   "pair_claim": "This is telling me that the metal in a pre-1983 cent was worth about three times its face value in 2024.",
+   "support": "supported",
+   "note": "Epoch stated on screen; the essay's epoch note requires the year be visible.",
+   "narration": "Those struck before 1983 are copper, and in March 2024 that copper was worth about three cents."
+  },
+  {
+   "line": 4,
+   "visual": "PLATE:figure+a01.png",
+   "figure": "1\u00a2 \u00b7 3\u00a2 \u00b7 0\u00a2 \u2014 one object",
+   "role": "plate",
+   "pair_claim": "This is telling me that three different valuations attach to one and the same coin.",
+   "support": "supported",
+   "note": "a01 as the centred object. DELIBERATELY NOT a02: a02's five stacked states are TRANSFORMATIONS, and using it here would assert the three valuations are those five states.",
+   "narration": "Three valuations of one small object, and no two of them agree."
+  },
+  {
+   "line": 5,
+   "visual": "a15.jpeg",
+   "fit": "contain",
+   "role": "plate",
+   "pair_claim": "This is telling me that Chang removed cents from circulation by hand, sorting them in bulk.",
+   "support": "supported",
+   "note": "The culling in progress \u2014 the act named by the line, not its result.",
+   "narration": "Recognising those discrepancies, Rutherford Chang removed ten thousand copper cents from circulation and called the work CENTS."
+  },
+  {
+   "line": 6,
+   "visual": "a16.jpeg",
+   "fit": "contain",
+   "role": "plate",
+   "pair_claim": "This is telling me that he accumulated and catalogued ordinary objects over time.",
+   "support": "supported",
+   "note": "Hand-marked biro bands carry the 'time made them singular' sense without a second claim.",
+   "narration": "He had spent his working life collecting ordinary things until time made them singular."
+  },
+  {
+   "line": 7,
+   "visual": "PLATE:figure",
+   "figure": "3,400+ copies of the same record \u2014 no two worn alike",
+   "role": "plate",
+   "pair_claim": "This is telling me that he collected over three thousand copies of one record and that each had worn differently.",
+   "support": "missing_asset",
+   "note": "NO ASSET for the Beatles work. Typographic fallback. A penny image here would assert the records ARE pennies \u2014 do not reach for one.",
+   "narration": "More than three and a half thousand copies of the same Beatles record, no two worn alike."
+  },
+  {
+   "line": 8,
+   "visual": "PLATE:figure",
+   "figure": "New Museum, New York \u00b7 Akademie der K\u00fcnste, Berlin \u00b7 Kunsthal Rotterdam",
+   "role": "plate",
+   "pair_claim": "This is telling me that the work was exhibited at these three institutions over twenty years.",
+   "support": "missing_asset",
+   "note": "NO installation photography in inventory. Venue names only. The UCCA retrospective is deliberately absent: it ran Jan-Apr 2026, after his death, so naming it here would invert the chronology.",
+   "narration": "Shown for two decades \u2014 the New Museum in New York, the Akademie der K\u00fcnste in Berlin, Kunsthal Rotterdam."
+  },
+  {
+   "line": 9,
+   "visual": "PLATE:date",
+   "figure": "February 2025",
+   "role": "plate",
+   "pair_claim": "This is telling me that Chang died in February 2025, the same day the order came.",
+   "support": "flagged",
+   "note": "RELATION 5 RISK. A plain date card deliberately. Pairing this with a penny or the block would make the coincidence read as the work ENDING \u2014 the one thing this film must not say. No portrait of Chang in inventory.",
+   "narration": "He died in February 2025, at forty-five, on the day the President ordered the Treasury to stop making pennies."
+  },
+  {
+   "line": 10,
+   "visual": "a17.jpeg",
+   "fit": "contain",
+   "role": "plate",
+   "pair_claim": "This is telling me that each coin was individually photographed on a copy stand, and the capture catalogued.",
+   "support": "supported",
+   "note": "THE ACT, not the result. This is the relation-4 pair the last film got wrong: a finished photograph stood in for the verb 'photographed'. Crop note: keep camera AND laptop.",
+   "narration": "Every one of the ten thousand was photographed first."
+  },
+  {
+   "line": 11,
+   "visual": "a06.jpg",
+   "fit": "contain",
+   "role": "plate",
+   "sentence": 1,
+   "pair_claim": "This is telling me that the portrait on the cent is Brenner's, and that it is the most reproduced artwork on Earth.",
+   "support": "flagged",
+   "note": "SUPERLATIVE. Sourced to the project's own text (essay l.15), not independently verified, and it is a claim about a set nobody can count. Inventory previously marked a06 unused for this reason. Faithful to the source of record; your call whether to keep the superlative.",
+   "narration": "The portrait on them, Victor David Brenner's Lincoln, is the most reproduced artwork on Earth. Two hundred and eighty-eight billion of them in existence, by the project's count in 2024."
+  },
+  {
+   "line": 11,
+   "visual": "PLATE:figure",
+   "figure": "288,000,000,000 in existence \u2014 the project's count, 2024",
+   "role": "plate",
+   "sentence": 2,
+   "pair_claim": "This is telling me that the project counted 288 billion Lincoln cents in existence in 2024.",
+   "support": "supported",
+   "note": "Epoch now ON SCREEN. The figure is March 2024 and the script no longer says 'still'. DO NOT use a13 here - its grid is 198 listings and would assert the grid IS the 288 billion.",
+   "narration": "The portrait on them, Victor David Brenner's Lincoln, is the most reproduced artwork on Earth. Two hundred and eighty-eight billion of them in existence, by the project's count in 2024."
+  },
+  {
+   "line": 12,
+   "visual": "a03.jpg",
+   "fit": "contain",
+   "role": "plate",
+   "pair_claim": "This is telling me that circulation left verdigris and wear on the coin's surface.",
+   "support": "supported",
+   "note": "Verdigris is named in the line and visible in the asset. Keep the date edge visible per crop note.",
+   "narration": "Circulation made the marks: verdigris, abrasion, a fingerprint, the way each one left."
+  },
+  {
+   "line": 13,
+   "visual": "a07.png",
+   "fit": "band",
+   "role": "plate",
+   "pair_claim": "This is telling me that human collectors named the traits by voting, in rounds, not an algorithm.",
+   "support": "supported",
+   "note": "Now in scope \u2014 the inventory's 'not used' note described the objecthood script. Crop note: full-width band only, never scaled down.",
+   "narration": "No algorithm assigned any of it. The names came afterwards, from the collectors, over two years of voting."
+  },
+  {
+   "line": 14,
+   "visual": "PLATE:figure",
+   "figure": "more than half the set: no mark at all",
+   "role": "plate",
+   "pair_claim": "This is telling me that over half the ten thousand carry no trait, which is what gives the marked ones meaning.",
+   "support": "supported",
+   "note": "Typographic. NOT a13: showing a grid of 198 listings under 'more than half the set' would assert the grid is the set.",
+   "narration": "More than half the set carries no mark at all, which is what makes the rest mean anything."
+  },
+  {
+   "line": 15,
+   "visual": "a14.mp4",
+   "fit": "inset",
+   "max_w": 560,
+   "role": "plate",
+   "pair_claim": "This is telling me that the coins were melted and poured into a mould to make one block.",
+   "support": "supported",
+   "note": "THE ACT. Crop note: never crop to the stream alone \u2014 the mould is what the copper is becoming. Max ~560px; do not full-bleed.",
+   "narration": "Then he destroyed them, smelted into one block of thirty-one kilograms."
+  },
+  {
+   "line": 16,
+   "visual": "PLATE:figure",
+   "figure": "1 photograph \u2192 1 satoshi   \u00d7 10,000",
+   "role": "plate",
+   "pair_claim": "This is telling me that each of the ten thousand photographs was inscribed on its own satoshi.",
+   "support": "supported",
+   "note": "THE CORRECTION. This is the exact pairing the last film got wrong by showing the copper Block here. Nothing depicting the block may appear on this line.",
+   "narration": "Each photograph he inscribed on a satoshi, the smallest unit of Bitcoin."
+  },
+  {
+   "line": 17,
+   "visual": "a05.gif",
+   "fit": "inset",
+   "max_w": 700,
+   "role": "plate",
+   "sentence": 1,
+   "pair_claim": "This is telling me that a 3D model of the block was made \u2014 a digital object, not the physical ingot.",
+   "support": "supported",
+   "note": "a05 is explicitly the DIGITAL model. Crop note: inset \u2264700px, never full-bleed.",
+   "narration": "The block he had scanned, and inscribed as the whole of Bitcoin block 839969."
+  },
+  {
+   "line": 17,
+   "visual": "a04.jpg",
+   "fit": "contain-full-width",
+   "role": "plate",
+   "sentence": 2,
+   "pair_claim": "This is telling me that the model's inscription filled Bitcoin block 839969 by itself.",
+   "support": "supported",
+   "note": "no_crop: the two panels ARE the content. Near full width or it is illegible.",
+   "narration": "The block he had scanned, and inscribed as the whole of Bitcoin block 839969."
+  },
+  {
+   "line": 18,
+   "visual": "PLATE:figure",
+   "figure": "31 kg of copper \u00b7 indestructible",
+   "role": "plate",
+   "pair_claim": "This is telling me that the physical ingot is dense and cannot be destroyed.",
+   "support": "missing_asset",
+   "note": "NO PHOTOGRAPH of the finished physical block in inventory. a05 must NOT be used here \u2014 it is the digital model, and pairing it would equate the model with the ingot, the exact distinction the glossary forbids.",
+   "narration": "An ingot so dense it cannot be destroyed."
+  },
+  {
+   "line": 19,
+   "visual": "a13.png",
+   "fit": "contain",
+   "role": "plate",
+   "pair_claim": "This is telling me that the ten thousand were released at one satoshi each and that by October 2026 the ones listed for sale were asking around 360,000 satoshis.",
+   "support": "supported",
+   "note": "Now carries the film's only present-moment measurement. a13 is verified 2026-10-06, which IS the epoch of the second sentence - asset and claim share a date. Crop note: keep coin, id AND price; the prices are the content. Caption must say LISTED, not sold: 198 open listings, not recorded sales.",
+   "narration": "He released all ten thousand at one sat each. By October 2026 the ones listed for sale were asking around three hundred and sixty thousand sats."
+  },
+  {
+   "line": 20,
+   "visual": "PLATE:figure",
+   "figure": "\u20261979  1980  1981  1982 \u2502 1983 \u2192 zinc",
+   "role": "plate",
+   "pair_claim": "This is telling me that the set stops at 1982 because the cent stopped being copper in 1983.",
+   "support": "supported",
+   "note": "The year histogram, if built, belongs across lines 20\u201322.",
+   "narration": "The set is closed. It stops at 1982, because in 1983 the penny stopped being copper."
+  },
+  {
+   "line": 21,
+   "visual": "PLATE:figure",
+   "figure": "1943 \u2014 copper to the war; the cent struck in steel",
+   "role": "plate",
+   "pair_claim": "This is telling me that 1943 is absent because that year's cent was steel, not copper.",
+   "support": "missing_asset",
+   "note": "No 1943 steel cent in inventory. Typographic. Counted claim \u2014 'only one of the years it misses means anything' is a claim about a set and was verified by counting.",
+   "narration": "Only one of the years it misses means anything. In 1943 the copper went to the war, and the cent was struck in steel."
+  },
+  {
+   "line": 22,
+   "visual": "g01.png",
+   "fit": "contain",
+   "role": "plate",
+   "pair_claim": "This is telling me that the set's boundaries came from the material, not from a choice.",
+   "support": "flagged",
+   "note": "WEAKEST PAIRING in the plan. g01 is copper dust; it does not depict edges. Candidate for the year histogram instead. Review this one first.",
+   "narration": "A set with edges nobody chose."
+  },
+  {
+   "line": 23,
+   "visual": "PLATE:date",
+   "figure": "November 2025 \u2014 the last penny struck",
+   "role": "plate",
+   "pair_claim": "This is telling me that the final cent was struck in November 2025, as the project had anticipated.",
+   "support": "supported",
+   "note": "Quotation-tagged claim in the ledger; keep the wording exact.",
+   "narration": "The project had described this as coming: the last penny was struck in November 2025."
+  },
+  {
+   "line": 24,
+   "visual": "a02.jpg",
+   "fit": "contain-no-crop",
+   "role": "plate",
+   "pair_claim": "This is telling me that the coin's states \u2014 coin, inscription, copper, block \u2014 are one continuing transformation whose value is still being decided.",
+   "support": "supported",
+   "note": "THE CLOSER. a02's stacked states are literally 'their transformation'. no_crop=True: full frame, no crop, or the sequence is lost. Ends on continuation, not on an ending.",
+   "narration": "Its value can continue to be redefined through this digitally scarce set of ten thousand, and the block that encapsulates their transformation."
+  }
+ ],
+ "_epoch": "Shot captions carry the epoch of any time-varying figure they show. a13 is the only asset whose own verification date (2026-10-06) is load-bearing for a claim, and it is paired with the line whose epoch matches."
+}

@@ -1,14 +1,14 @@
-After a century in circulation, the penny is considered a worthless nuisance.
-The Treasury says it is worth exactly one cent, and always will be, whatever year it was struck.
-Those made before 1983 are copper, and in 2024 that copper was worth about three cents.
-Three valuations of the same small object, and none of them agree.
+For more than a century the penny has circulated, considered a worthless nuisance.
+To the Treasury it is worth exactly one cent, whatever year it was struck, and always will be.
+Those struck before 1983 are copper, and in March 2024 that copper was worth about three cents.
+Three valuations of one small object, and no two of them agree.
 Recognising those discrepancies, Rutherford Chang removed ten thousand copper cents from circulation and called the work CENTS.
 He had spent his working life collecting ordinary things until time made them singular.
 More than three and a half thousand copies of the same Beatles record, no two worn alike.
-Shown for two decades, from the ICA in London to the Art Gallery of Ontario.
+Shown for two decades — the New Museum in New York, the Akademie der Künste in Berlin, Kunsthal Rotterdam.
 He died in February 2025, at forty-five, on the day the President ordered the Treasury to stop making pennies.
 Every one of the ten thousand was photographed first.
-The portrait on them, Victor David Brenner's Lincoln, is the most reproduced artwork on Earth. Two hundred and eighty-eight billion still in existence.
+The portrait on them, Victor David Brenner's Lincoln, is the most reproduced artwork on Earth. Two hundred and eighty-eight billion of them in existence, by the project's count in 2024.
 Circulation made the marks: verdigris, abrasion, a fingerprint, the way each one left.
 No algorithm assigned any of it. The names came afterwards, from the collectors, over two years of voting.
 More than half the set carries no mark at all, which is what makes the rest mean anything.
@@ -16,7 +16,7 @@ Then he destroyed them, smelted into one block of thirty-one kilograms.
 Each photograph he inscribed on a satoshi, the smallest unit of Bitcoin.
 The block he had scanned, and inscribed as the whole of Bitcoin block 839969.
 An ingot so dense it cannot be destroyed.
-He released all ten thousand at one sat each.
+He released all ten thousand at one sat each. By October 2026 the ones listed for sale were asking around three hundred and sixty thousand sats.
 The set is closed. It stops at 1982, because in 1983 the penny stopped being copper.
 Only one of the years it misses means anything. In 1943 the copper went to the war, and the cent was struck in steel.
 A set with edges nobody chose.

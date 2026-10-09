@@ -221,3 +221,42 @@ description, dated March 2024 and contemporaneous with the work, gives 3.1
 cents and 288 billion in existence. Where they differ, this film uses the
 project description, and says which population it means.
 
+
+================================================================
+[9] THE MARKET — observed 2026-10-06
+================================================================
+Source of record: the CENTS Lab Market interface, captured 2026-10-06 and held
+in the asset inventory as a13.png with that verification date.
+With the filters Hits: 198 and On Sale set, the listed members of the set show
+prices in bitcoin of 0.00366 and 0.00367 BTC. At 100,000,000 satoshis to the
+bitcoin that is approximately 366,000 satoshis each.
+The release price was one satoshi each. So the listed asking prices observed in
+October 2026 are around three hundred and sixty thousand satoshis each, about
+five orders of magnitude above the release price.
+What this does and does not support: 198 of the 10,000 were listed for sale at
+that moment. These are ASKING prices on open listings, not recorded sales, and
+not a valuation of the whole set. Any claim must say "listed" and must carry
+the October 2026 date.
+
+================================================================
+[10] EPOCH CONVENTION FOR THIS FILM
+================================================================
+The film speaks from its own present. The sources do not: each was written or
+measured at its own moment and several use bare deictics - "now", "currently",
+"still", "today" - which resolve to the SOURCE'S date, never to the film's.
+
+The rule: a source deictic must be converted to an absolute date on the way
+into narration. The project description is dated March 2024 and is
+contemporaneous with the work, so its "now have a metal value of approximately
+3.1 cents" becomes "in March 2024 that copper was worth about three cents".
+
+Three moments the narration must keep distinct:
+  THEN  2017-2024, the condition Chang acted in. The March 2024 project
+        description governs here: 3.1 cents of copper, 288 billion in existence.
+  SINCE February 2025 (the order, and Chang's death) to November 2025 (the last
+        cent struck).
+  NOW   2026. The catalogue as measured 2026-10-08; the market as observed
+        2026-10-06; the UCCA retrospective, 17 January - 12 April 2026.
+
+A figure from one moment must not be given the tense of another. Adding "still"
+to a 2024 count asserts a 2026 measurement that nobody made.
