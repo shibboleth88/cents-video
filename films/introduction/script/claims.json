@@ -1,234 +1,345 @@
 {
  "_what": "Every narration sentence maps to a span of script/essay.txt, the assembled sources of record for this film.",
- "essay_version": "corpus 2026-10-08",
+ "essay_version": "C / five-minute cut, wired 2026-10-09",
  "thesis": "Three valuations of one ordinary object disagree; Chang took the disagreement as the material, destroyed the coins into a block and inscribed them, and the value of what remains goes on being redefined after the coin itself has stopped being made.",
- "script_target": "About 3 minutes. 24 lines, 357 words, 28 sentences; 188-165s of speech at 114-130 wpm, plus 4s for credits.",
+ "script_target": "5:00; 541 words measures 4:54 at 1.84 w/s",
+ "epoch_convention": "The film speaks from its own present (2026). A source deictic - now, currently, still, today - resolves to the SOURCE'S date and must be converted to an absolute date on the way into narration. Three moments kept distinct: THEN 2017-2024 (March 2024 project description governs), SINCE Feb-Nov 2025, NOW 2026.",
  "claims": [
   {
-   "say": "For more than a century the penny has circulated, considered a worthless nuisance.",
+   "say": "A copper cent, struck in 1972, green with verdigris, its date legible through the corrosion.",
    "kind": "paraphrase",
-   "span": "so commonplace that it is considered a worthless nuisance",
-   "epoch": "the circulating era, 1909 onward",
-   "as_of": "project description, March 2024",
-   "epoch_note": "Source states it in the present. Still true in 2026: production ended November 2025 but the coins remain legal tender and circulate, so the present perfect is accurate rather than inherited."
+   "span": "one cent at close range, its copper face almost covered by heavy green verdigris, the 1972 date and LIBERTY legend readable through it",
+   "epoch": "1972 mint year; asset verified 2026-10-03",
+   "as_of": "asset inventory a03, 2026-10-03",
+   "epoch_note": "Description of a rights-cleared asset, not of a claim in the written sources."
   },
   {
-   "say": "To the Treasury it is worth exactly one cent, whatever year it was struck, and always will be.",
+   "say": "One of ten thousand that Rutherford Chang took out of circulation, photographed, and numbered.",
+   "kind": "paraphrase",
+   "span": "CENTS is made from 10,000 American pennies minted before 1982 and valued for their copper content",
+   "epoch": "2017-2024",
+   "as_of": "UCCA exhibition page, 2026",
+   "epoch_note": "'numbered' rests on the catalogue: 10,000 records, contiguous and without duplicates."
+  },
+  {
+   "say": "To the Treasury a penny is worth one cent, whatever year it was struck, and always will be.",
    "kind": "paraphrase",
    "span": "a penny from any given year will always be worth exactly 1\u00a2, according to the United States Treasury",
    "epoch": "standing, not time-varying",
    "as_of": "project description, March 2024",
-   "epoch_note": "The span says 'will always be worth exactly 1 cent', so 'always will be' is supported and not an extrapolation."
+   "epoch_note": "The span supports 'always'."
   },
   {
    "say": "Those struck before 1983 are copper, and in March 2024 that copper was worth about three cents.",
    "kind": "paraphrase",
    "span": "those minted in 1982 and before were struck in copper and now have a metal value of approximately 3.1\u00a2",
-   "note": "EPOCH: 'in 2024' is stated because this is a moving figure. The source is the project description, dated 2024-03-26 and contemporaneous with the work. The Medium essay's later 2.5\u00a2 is noted in block [8] and not used.",
    "epoch": "2024-03",
    "as_of": "2024-03",
-   "epoch_note": "THE MODEL CASE. The span reads 'now have a metal value of approximately 3.1 cents'. That 'now' is March 2024 and is converted to an absolute date in narration."
+   "epoch_note": "THE MODEL CASE. The source's 'now' is March 2024 and is converted to an absolute date."
   },
   {
-   "say": "Three valuations of one small object, and no two of them agree.",
+   "say": "In fiscal 2024 the Mint reported that making one cost nearly four.",
+   "kind": "paraphrase",
+   "span": "The US Mint reported that each penny cost nearly four cents to produce in fiscal 2024",
+   "epoch": "fiscal 2024",
+   "as_of": "US Mint, fiscal 2024",
+   "epoch_note": "The fourth valuation, and the one no earlier cut used."
+  },
+  {
+   "say": "And for more than a century it has circulated, considered a worthless nuisance.",
+   "kind": "paraphrase",
+   "span": "the lowly denomination has become so commonplace that it is considered a worthless nuisance",
+   "epoch": "the circulating era",
+   "as_of": "project description, March 2024",
+   "epoch_note": "Production ended November 2025; the coins remain legal tender and circulate, so the present perfect is accurate."
+  },
+  {
+   "say": "Four valuations of one small object, and no two of them agree.",
    "kind": "paraphrase",
    "span": "Recognizing these discrepancies in value",
-   "note": "The three valuations are lines 1-3: treated as worthless, fixed at 1\u00a2 by the Treasury, about 3\u00a2 as copper. The source's word is 'discrepancies', plural.",
-   "epoch": "standing claim; the copper figure it rests on is epoched at line 3",
-   "as_of": "2024-03",
-   "epoch_note": "The structural claim (the valuations disagree) does not expire; only the figure does, and the figure carries its own date one line earlier."
-  },
-  {
-   "say": "Recognising those discrepancies, Rutherford Chang removed ten thousand copper cents from circulation and called the work CENTS.",
-   "kind": "paraphrase",
-   "span": "Recognizing these discrepancies in value, Rutherford Chang removed 10,000 copper cents from circulation and archivally documented them",
-   "epoch": "2017-2024",
+   "epoch": "standing claim; the figures it rests on are dated in the four preceding lines",
    "as_of": "project description, March 2024",
-   "epoch_note": "The period of collecting and removal, per the work's own dates CENTS #1-10,000, 2017-2024."
+   "epoch_note": "COUNTED: four figures are named in the four preceding sentences - 1 cent, about 3 cents, nearly 4 cents, worthless."
   },
   {
-   "say": "He had spent his working life collecting ordinary things until time made them singular.",
+   "say": "Chang spent twenty years collecting ordinary things until time made them singular.",
    "kind": "paraphrase",
-   "span": "An artist of accumulation, repetition and the slow revaluation of ordinary things"
+   "span": "in line with the late artist's lifelong practice of obsessive collecting",
+   "epoch": "2002-2024",
+   "as_of": "Tinari, On NFTs, Taschen",
+   "epoch_note": "Twenty years from the exhibition record, 2002-2024."
   },
   {
-   "say": "More than three and a half thousand copies of the same Beatles record, no two worn alike.",
+   "say": "Three and a half thousand copies of one Beatles record, no two worn alike.",
    "kind": "paraphrase",
-   "span": "The materials list for the UCCA retrospective (2026) gives 3,555 records and a neon sign",
-   "note": "CURRENT FIGURE. The NYT obituary (Feb 2025) gives more than 3,400; the collection grew until he died, so 3,555 supersedes it. 'More than three and a half thousand' is true of 3,555 and not of the superseded count.",
-   "epoch": "2006-2025 for the collection; the count is the 2026 figure",
-   "as_of": "UCCA retrospective materials list, 2026",
-   "epoch_note": "Two figures exist: the NYT obituary (Feb 2025) gives more than 3,400, the UCCA materials list (2026) gives 3,555. 'More than three and a half thousand' uses the later and current figure deliberately."
+   "span": "The materials list for the UCCA retrospective (2026) gives 3,555 records and a neon sign \u2014 the later and current figure",
+   "epoch": "collection 2006-2025; count is the 2026 figure",
+   "as_of": "UCCA materials list, 2026",
+   "epoch_note": "Two figures exist; this uses the later one. The NYT obituary (Feb 2025) gives more than 3,400."
   },
   {
    "say": "Shown for two decades \u2014 the New Museum in New York, the Akademie der K\u00fcnste in Berlin, Kunsthal Rotterdam.",
    "kind": "paraphrase",
-   "span": "NOTHINGTOSEENESS, Akademie der Kuenste, Berlin, 2021; Kunsthal Rotterdam, 2020; Deichtorhallen, Hamburg, 2019; Rhizome and the New Museum, New York, 2016",
-   "note": "Two anchors spanning the record rather than a list. 'Two decades' is the 2002-2024 span of the artist's own exhibition list.",
+   "span": "Akademie der Kuenste, Berlin, 2021; Kunsthal Rotterdam, 2020; Deichtorhallen, Hamburg, 2019; Rhizome and the New Museum, New York, 2016",
    "epoch": "2002-2024",
    "as_of": "artist's own list at rutherfordchang.com",
-   "epoch_note": "Replaced ICA London 2005 and the Art Gallery of Ontario group show with three heavier institutions from the same record. The UCCA retrospective is deliberately NOT here: it ran Jan-Apr 2026, after his death in February 2025, so naming it before line 9 would invert the chronology."
+   "epoch_note": "Three institutions from the same record. The UCCA retrospective is deliberately not here: it ran after his death."
   },
   {
-   "say": "He died in February 2025, at forty-five, on the day the President ordered the Treasury to stop making pennies.",
+   "say": "Recognising those discrepancies in value, he removed ten thousand copper cents from circulation and called the work CENTS.",
    "kind": "paraphrase",
-   "span": "He died in February 2025, at the age of 45",
-   "note": "The same-day coincidence is block [6]: the order was given on the ninth of February 2025, and the obituary ran that day. Stated in the past tense per the corpus house guidance, with no speculation.",
-   "epoch": "2025-02-09",
-   "as_of": "NYT obituary 9 Feb 2025; penny facts of record",
-   "epoch_note": "Both events are same-day: the order was announced the evening of 9 February 2025."
-  },
-  {
-   "say": "Every one of the ten thousand was photographed first.",
-   "kind": "paraphrase",
-   "span": "Chang photographed each coin to record its particular wear and patina",
+   "span": "Recognizing these discrepancies in value, Rutherford Chang removed 10,000 copper cents from circulation",
    "epoch": "2017-2024",
    "as_of": "project description, March 2024",
-   "epoch_note": "DETECTOR FALSE POSITIVE: 'first' here is sequential - photographed before being destroyed - not a superlative. Dated anyway because the act has a period."
+   "epoch_note": "States the motive BEFORE the Brenner property that follows, so the order cannot invent one."
   },
   {
-   "say": "The portrait on them, Victor David Brenner's Lincoln, is the most reproduced artwork on Earth.",
+   "say": "Every one of the ten thousand was photographed first, one at a time, on a copy stand.",
+   "kind": "paraphrase",
+   "span": "Each coin was photographed one at a time, on a copy stand",
+   "epoch": "2017-2024",
+   "as_of": "asset inventory a17, 2026-10-07",
+   "epoch_note": "THE ACT. 'photographed first' is sequential, not a superlative."
+  },
+  {
+   "say": "The portrait on them is Victor David Brenner's Lincoln \u2014 by the project's count the most reproduced artwork on Earth, carried on 288 billion cents in existence in 2024.",
    "kind": "paraphrase",
    "span": "the portrait of Abraham Lincoln on the cent's obverse is the most reproduced piece of art on Earth",
-   "note": "Brenner is named from the Medium essay; the project description does not name him. He appears here as a property of the object, after the origin has been given \u2014 not as a reason for choosing it.",
    "epoch": "standing claim in the source; not independently verified",
    "as_of": "2024-03",
-   "epoch_note": "A superlative about a set nobody can count. Faithful to the source of record, which is the project's own text. Flagged for the author's decision, not resolved here."
+   "epoch_note": "A superlative about a set nobody can count. Attributed in narration to the project's count and dated. Flagged for the author."
   },
   {
-   "say": "Two hundred and eighty-eight billion of them in existence, by the project's count in 2024.",
+   "say": "Circulation made the marks.",
    "kind": "paraphrase",
-   "span": "With approximately 288 billion Lincoln pennies in existence",
-   "note": "POPULATION NAMED. 'Still in existence' is said aloud because 288 billion surviving and 500+ billion struck are different quantities.",
-   "epoch": "2024-03",
-   "as_of": "2024-03",
-   "epoch_note": "WAS WRONG. The script read 'still in existence'. The source says 'in existence' and is dated March 2024; 'still' is a deictic the narration ADDED, asserting a 2026 measurement nobody made. Now attributed and dated."
+   "span": "The course of history has endowed each of these metal discs with unique characteristics",
+   "epoch": "historical",
+   "as_of": "project description, March 2024",
+   "epoch_note": "Circulation made the marks. The NAMES are a separate claim four sentences later."
   },
   {
-   "say": "Circulation made the marks: verdigris, abrasion, a fingerprint, the way each one left.",
+   "say": "Verdigris and obsidian and desert.",
    "kind": "paraphrase",
-   "span": "Patina: verdigris, obsidian, desert, red, gold, orange, corroded, iridescent. Wear: abraded, faceless, lustrous, striated. Motif: assassin, fingerprint, ghost, wheat",
-   "note": "The three named are drawn from the catalogued trait list. 'Circulation made the marks' is the project description's 'The course of history has endowed each of these metal discs with unique characteristics'."
+   "span": "Patina: verdigris, obsidian, desert, red, gold, orange, corroded, iridescent",
+   "epoch": "2022-2024 cataloguing",
+   "as_of": "trait codebook, measured 2026-10-08",
+   "epoch_note": "Trait names, spoken. Patina family."
   },
   {
-   "say": "No algorithm assigned any of it.",
+   "say": "Abraded, faceless, striated.",
    "kind": "paraphrase",
-   "span": "Unlike generative 10K collections with algorithmically assigned traits, CENTS traits are derived from real-world physicality",
-   "epoch": "2022-2024",
-   "as_of": "trait documentation, sovrn.art",
-   "epoch_note": "The cataloguing period - two years of community voting. Matched on its span, not its wording."
+   "span": "Wear: abraded, faceless, lustrous, striated",
+   "epoch": "2022-2024 cataloguing",
+   "as_of": "trait codebook, measured 2026-10-08",
+   "epoch_note": "Wear family."
   },
   {
-   "say": "The names came afterwards, from the collectors, over two years of voting.",
+   "say": "A fingerprint.",
+   "kind": "paraphrase",
+   "span": "Motif: assassin, fingerprint, ghost, wheat",
+   "epoch": "2022-2024 cataloguing",
+   "as_of": "trait codebook, measured 2026-10-08",
+   "epoch_note": "Motif family - fingerprint."
+  },
+  {
+   "say": "A ghost.",
+   "kind": "paraphrase",
+   "span": "Motif: assassin, fingerprint, ghost, wheat",
+   "epoch": "2022-2024 cataloguing",
+   "as_of": "trait codebook, measured 2026-10-08",
+   "epoch_note": "Motif family - ghost."
+  },
+  {
+   "say": "Wheat.",
+   "kind": "paraphrase",
+   "span": "Motif: assassin, fingerprint, ghost, wheat",
+   "epoch": "2022-2024 cataloguing",
+   "as_of": "trait codebook, measured 2026-10-08",
+   "epoch_note": "Motif family - wheat."
+  },
+  {
+   "say": "Nineteen traits in five families, and no algorithm assigned any of them.",
+   "kind": "paraphrase",
+   "span": "The trait codebook holds 19 traits in five families",
+   "epoch": "2026-10-08, measured",
+   "as_of": "metadata.json measured 2026-10-08",
+   "epoch_note": "'No algorithm assigned any of them' holds the marks apart from the naming."
+  },
+  {
+   "say": "The names came afterwards, from the collectors, over two years of voting on the full set.",
    "kind": "paraphrase",
    "span": "a community-led initiative carried out over the course of 2 years through multiple reviews of the full 10k set, numerous voting rounds",
-   "note": "The source writes '2 years'; the line says 'two years'. The marks were made by circulation and the NAMES by the Trait Council \u2014 the distinction the glossary holds apart."
+   "epoch": "2022-2024",
+   "as_of": "trait documentation, sovrn.art",
+   "epoch_note": "The naming was human and came after the marks."
   },
   {
-   "say": "More than half the set carries no mark at all, which is what makes the rest mean anything.",
+   "say": "Five thousand three hundred and six carry no mark at all \u2014 more than half \u2014 which is what makes the rest mean anything.",
    "kind": "paraphrase",
    "span": "5,306 cents \u2014 53.06 per cent \u2014 carry no catalogued visual trait at all",
    "epoch": "2026-10-08, measured",
    "as_of": "metadata.json measured 2026-10-08",
-   "epoch_note": "NOW. 5,306 of 10,000 - 53.06 per cent - carry no catalogued trait. A present-moment measurement of a closed set, so it does not expire."
+   "epoch_note": "A measurement of a closed set, so it does not expire."
   },
   {
    "say": "Then he destroyed them, smelted into one block of thirty-one kilograms.",
    "kind": "paraphrase",
    "span": "the physical coins are smelted and cast into a solid 68.56-pound copper block",
-   "note": "Said as thirty-one kilograms, which is the UCCA figure for the same block; 68.56 lb = 31.1 kg.",
    "epoch": "2024",
    "as_of": "project description, March 2024",
-   "epoch_note": "31 kg from the project description's 68.56 pounds."
+   "epoch_note": "68.56 pounds is 31 kilograms."
   },
   {
    "say": "Each photograph he inscribed on a satoshi, the smallest unit of Bitcoin.",
    "kind": "paraphrase",
    "span": "Images of these 10,000 individuals are inscribed as ordinals on 10,000 satoshis, the smallest units of Bitcoin",
    "epoch": "2024",
-   "as_of": "essay 01, sovrn.art/cents/makes-cents",
-   "epoch_note": "The inscriptions were made in 2024; 'smallest unit of Bitcoin' is definitional."
+   "as_of": "project description, March 2024",
+   "epoch_note": "TEN THOUSAND SATOSHIS, one per image - not the block. The distinction the last film's imagery collapsed."
   },
   {
-   "say": "The block he had scanned, and inscribed as the whole of Bitcoin block 839969.",
+   "say": "Ten thousand images, ten thousand satoshis.",
    "kind": "paraphrase",
-   "span": "This metal block is rendered as a three-dimensional digital model and in turn inscribed as a 4-megabyte ordinal, comprising the entirety of Bitcoin block #839969"
+   "span": "Images of these 10,000 individuals are inscribed as ordinals on 10,000 satoshis, the smallest units of Bitcoin",
+   "epoch": "2024",
+   "as_of": "project description, March 2024",
+   "epoch_note": "Restates the one-to-one mapping so no shot can imply the block was the thing inscribed."
   },
   {
-   "say": "An ingot so dense it cannot be destroyed.",
+   "say": "The block itself he had scanned, and inscribed the model as the whole of Bitcoin block 839969.",
    "kind": "paraphrase",
-   "span": "Equivalent to casting a copper ingot so heavy and dense that it is indestructible"
-  },
-  {
-   "say": "He released all ten thousand at one sat each.",
-   "kind": "paraphrase",
-   "span": "he released the 10,000 cent inscriptions for the price of one sat each",
+   "span": "He then inscribed a 3D model of the block on a block of the blockchain (what is known as a full-block inscription)",
    "epoch": "2024",
    "as_of": "essay 01, sovrn.art/cents/makes-cents",
-   "epoch_note": "The release price. What happened since is a separate claim with its own epoch."
+   "epoch_note": "The MODEL of the block, inscribed as a whole block. A separate act from the 10,000."
   },
   {
-   "say": "By October 2026 the ones listed for sale were asking around three hundred and sixty thousand sats.",
+   "say": "Where a block ordinarily carries thousands of transactions, that one carries a single object.",
    "kind": "paraphrase",
-   "span": "the listed asking prices observed in October 2026 are around three hundred and sixty thousand satoshis each",
-   "epoch": "2026-10",
-   "as_of": "2026-10-06",
-   "epoch_note": "NOW. Observed in the CENTS Lab Market interface, asset a13.png, verified 2026-10-06. Says 'listed' and not 'sold': these are asking prices on 198 open listings, not recorded sales and not a valuation of the whole set. This is the only hard present-moment evidence for the film's thesis that the value goes on being redefined."
+   "span": "Where a block ordinarily carries thousands of transactions, that one carries a single object",
+   "epoch": "2024",
+   "as_of": "asset inventory a04, 2026-10-03",
+   "epoch_note": "Explains the full-block inscription rather than asserting a block number."
+  },
+  {
+   "say": "He released all ten thousand at one satoshi each, into permissionless exchange and continual revaluation.",
+   "kind": "paraphrase",
+   "span": "he released the 10,000 cent inscriptions for the price of one sat each (apx. $ 0.0001), placing them into a system of permissionless exchange and indeterminate, continual revaluation",
+   "epoch": "2024",
+   "as_of": "essay 01, sovrn.art/cents/makes-cents",
+   "epoch_note": "The release, and the source's own language for the thesis."
+  },
+  {
+   "say": "Chang died in February 2025, at forty-five, on the day the President ordered the Treasury to stop making pennies.",
+   "kind": "paraphrase",
+   "span": "On the ninth of February 2025 the President of the United States ordered the Treasury to stop making pennies",
+   "epoch": "2025-02-09",
+   "as_of": "NYT obituary 9 Feb 2025; penny facts of record",
+   "epoch_note": "Same-day: the order was announced the evening of 9 February 2025."
+  },
+  {
+   "say": "The last was struck that November.",
+   "kind": "paraphrase",
+   "span": "The United States Mint struck the last cent in November 2025 and permanently suspended penny production",
+   "epoch": "2025-11",
+   "as_of": "penny facts of record",
+   "epoch_note": "The hinge, not the ending: four more sentences follow it."
   },
   {
    "say": "The set is closed.",
    "kind": "paraphrase",
-   "span": "this digitally scarce set of 10,000"
+   "span": "The collection holds 10,000 records exactly, contiguous and without duplicates",
+   "epoch": "2026-10-08, measured",
+   "as_of": "metadata.json measured 2026-10-08",
+   "epoch_note": "Closed because no later cent is copper."
   },
   {
    "say": "It stops at 1982, because in 1983 the penny stopped being copper.",
    "kind": "paraphrase",
    "span": "Cents minted in 1982 and earlier were struck in copper; from 1983 the cent was made of zinc",
-   "note": "867 cents are dated 1982 and none later, so the ceiling IS the metallurgical cutoff.",
    "epoch": "1982-1983 mint composition",
-   "as_of": "penny facts of record; catalogue measured 2026-10-08",
+   "as_of": "penny facts of record",
    "epoch_note": "Historical and fixed."
   },
   {
-   "say": "Only one of the years it misses means anything.",
+   "say": "Eight hundred and sixty-seven of them are dated 1982, and none later.",
    "kind": "paraphrase",
-   "span": "Only the absence of 1943 is anomalous",
-   "note": "A claim about a set: fifteen years are absent and only one absence is anomalous. Counted before it was said.",
+   "span": "867 cents are dated 1982 and none later",
    "epoch": "2026-10-08, measured",
    "as_of": "metadata.json measured 2026-10-08",
-   "epoch_note": "THE COUNTED CLAIM. Fifteen years are absent; only 1943's absence is anomalous, P(zero by chance) 2.75e-05. A claim about a set, established by counting the set, not by one member."
+   "epoch_note": "Concretises the edge the next sentences argue about."
   },
   {
-   "say": "In 1943 the copper went to the war, and the cent was struck in steel.",
+   "say": "Fifteen years are missing from it, and only one of those absences means anything: in 1943 the copper went to the war, and the cent was struck in steel.",
    "kind": "paraphrase",
-   "span": "In 1943 the United States struck the cent in zinc-coated steel to save copper for the war",
-   "epoch": "1943",
-   "as_of": "catalogue block",
-   "epoch_note": "Historical and fixed."
+   "span": "Fifteen years between 1910 and 1982 are absent from the collection. Only the absence of 1943 is anomalous",
+   "epoch": "2026-10-08, measured",
+   "as_of": "metadata.json measured 2026-10-08",
+   "epoch_note": "THE COUNTED CLAIM. Established by counting the set, not from one member. P(zero by chance) 2.75e-05."
   },
   {
    "say": "A set with edges nobody chose.",
    "kind": "paraphrase",
-   "span": "Fifteen years between 1910 and 1982 are absent from the collection",
-   "note": "Summation of 23-25: a ceiling set by metallurgy and a hole cut by a war, neither curated.",
+   "span": "Cents minted in 1982 and earlier were struck in copper; from 1983 the cent was made of zinc",
    "epoch": "standing consequence of the 1982/1983 boundary",
    "as_of": "catalogue measured 2026-10-08",
    "epoch_note": "Follows from the material change, not from a choice."
   },
   {
-   "say": "The project had described this as coming: the last penny was struck in November 2025.",
+   "say": "Philip Tinari, who directs UCCA in Beijing, had written on the work for Taschen's On NFTs.",
    "kind": "paraphrase",
-   "span": "As the traditional penny fades into irrelevance and its production is ultimately terminated",
-   "note": "The project description is dated 2024-03-26 \u2014 a year before the order. 'Which the project had described as coming' refers to that sentence, not to a prediction by the artist.",
-   "epoch": "2025-11",
-   "as_of": "penny facts of record",
-   "epoch_note": "Past perfect 'had described this as coming' is correct: the project text predates the event."
+   "span": "PHILIP TINARI on CENTS \u2014 in On NFTs, ed. Robert Alice, Taschen",
+   "epoch": "2021-2024",
+   "as_of": "Taschen, On NFTs",
+   "epoch_note": "Critical standing, placed with the retrospective rather than in the biography."
   },
   {
-   "say": "Its value can continue to be redefined through this digitally scarce set of ten thousand, and the block that encapsulates their transformation.",
-   "kind": "quotation",
-   "span": "its value can continue to be redefined through this digitally scarce set of 10,000 and the block that encapsulates their transformation",
-   "note": "The work's own closing sentence, quoted. '10,000' is spoken as 'ten thousand'. The source's bridge clause ('as the traditional penny fades into irrelevance') is dropped because keeping it put the line below the quotation threshold \u2014 measured, not guessed \u2014 so line 27 was reordered to end on the penny, which is what gives 'Its value' its referent."
+   "say": "In 2026, a year after his death, UCCA gave Chang his first institutional retrospective, co-curated by Tinari, Aki Sasamoto and Danielle Chang.",
+   "kind": "paraphrase",
+   "span": "CENTS was exhibited in Hundreds and Thousands at UCCA Beijing, the first institutional and most comprehensive solo exhibition of Rutherford Chang's work",
+   "epoch": "2026-01 to 2026-04",
+   "as_of": "UCCA exhibition page",
+   "epoch_note": "POSTHUMOUS, and placed after the death deliberately: the work goes on being shown. Three curators per the live page."
+  },
+  {
+   "say": "CENTS was in it \u2014 the ten thousand on touchscreens, and the block among the materials.",
+   "kind": "paraphrase",
+   "span": "At UCCA the collection could be explored on touchscreens or in a book, decades of circulation legible in the abrasions and discolouration of individual coins",
+   "epoch": "2026-01 to 2026-04",
+   "as_of": "UCCA exhibition page",
+   "epoch_note": "CENTS Block 839969 appears in the exhibition materials list."
+  },
+  {
+   "say": "Released at one satoshi.",
+   "kind": "paraphrase",
+   "span": "he released the 10,000 cent inscriptions for the price of one sat each",
+   "epoch": "2024",
+   "as_of": "essay 01",
+   "epoch_note": "Restated to set the comparison the next sentence makes."
+  },
+  {
+   "say": "By October 2026 a hundred and ninety-eight of them were listed for sale, asking around three hundred and sixty thousand satoshis each.",
+   "kind": "paraphrase",
+   "span": "the listed asking prices observed in October 2026 are around three hundred and sixty thousand satoshis each",
+   "epoch": "2026-10",
+   "as_of": "2026-10-06",
+   "epoch_note": "NOW. 198 open listings, ASKING prices, not sales and not a valuation of the whole set."
+  },
+  {
+   "say": "The cent from 1972 no longer exists.",
+   "kind": "paraphrase",
+   "span": "the physical coins are smelted and cast into a solid 68.56-pound copper block",
+   "epoch": "2024",
+   "as_of": "project description, March 2024",
+   "epoch_note": "The object was destroyed. What persists is the inscription."
+  },
+  {
+   "say": "Its image does, and what that is worth goes on being decided.",
+   "kind": "paraphrase",
+   "span": "placing them into a system of permissionless exchange and indeterminate, continual revaluation",
+   "epoch": "standing; the thesis",
+   "as_of": "essay 01",
+   "epoch_note": "Closes on the image and on the value still moving, not on an ending."
   }
  ],
  "onscreen": [
@@ -282,6 +393,5 @@
    "verdict": "kept",
    "by": "user"
   }
- ],
- "epoch_convention": "The film speaks from its own present (2026). A source deictic - now, currently, still, today - resolves to the SOURCE'S date and must be converted to an absolute date on the way into narration. Three moments kept distinct: THEN 2017-2024 (March 2024 project description governs), SINCE Feb-Nov 2025, NOW 2026."
+ ]
 }

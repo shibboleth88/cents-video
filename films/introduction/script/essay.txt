@@ -260,3 +260,24 @@ Three moments the narration must keep distinct:
 
 A figure from one moment must not be given the tense of another. Adding "still"
 to a 2024 count asserts a 2026 measurement that nobody made.
+
+================================================================
+[11] FROM THE ASSET INVENTORY — verified 2026-10-03 to 2026-10-07
+================================================================
+These are observations of the rights-cleared assets themselves, held in
+shared/assets.json with the verification date of each. They are sources of
+record for what the film can show, and for three descriptions the narration
+makes that appear nowhere in the written sources.
+
+a03 / a03_motion: one cent at close range, its copper face almost covered by
+heavy green verdigris, the 1972 date and LIBERTY legend readable through it.
+Captioned CENT #3981.
+
+a17: a DSLR on a vertical copy stand aimed down at a lit tracing pad with a
+single cent placed at its centre, a laptop beside it showing the captured coin.
+Each coin was photographed one at a time, on a copy stand.
+
+a04: a block explorer view of Block 839969 showing Expected Block as a mosaic
+of many small transactions beside Actual Block as one solid rectangle filling
+the whole space. Where a block ordinarily carries thousands of transactions,
+that one carries a single object.

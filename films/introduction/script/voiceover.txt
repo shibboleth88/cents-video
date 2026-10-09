@@ -1,24 +1,31 @@
-For more than a century the penny has circulated, considered a worthless nuisance.
-To the Treasury it is worth exactly one cent, whatever year it was struck, and always will be.
+A copper cent, struck in 1972, green with verdigris, its date legible through the corrosion.
+One of ten thousand that Rutherford Chang took out of circulation, photographed, and numbered.
+To the Treasury a penny is worth one cent, whatever year it was struck, and always will be.
 Those struck before 1983 are copper, and in March 2024 that copper was worth about three cents.
-Three valuations of one small object, and no two of them agree.
-Recognising those discrepancies, Rutherford Chang removed ten thousand copper cents from circulation and called the work CENTS.
-He had spent his working life collecting ordinary things until time made them singular.
-More than three and a half thousand copies of the same Beatles record, no two worn alike.
+In fiscal 2024 the Mint reported that making one cost nearly four.
+And for more than a century it has circulated, considered a worthless nuisance.
+Four valuations of one small object, and no two of them agree.
+Chang spent twenty years collecting ordinary things until time made them singular.
+Three and a half thousand copies of one Beatles record, no two worn alike.
 Shown for two decades — the New Museum in New York, the Akademie der Künste in Berlin, Kunsthal Rotterdam.
-He died in February 2025, at forty-five, on the day the President ordered the Treasury to stop making pennies.
-Every one of the ten thousand was photographed first.
-The portrait on them, Victor David Brenner's Lincoln, is the most reproduced artwork on Earth. Two hundred and eighty-eight billion of them in existence, by the project's count in 2024.
-Circulation made the marks: verdigris, abrasion, a fingerprint, the way each one left.
-No algorithm assigned any of it. The names came afterwards, from the collectors, over two years of voting.
-More than half the set carries no mark at all, which is what makes the rest mean anything.
+Recognising those discrepancies in value, he removed ten thousand copper cents from circulation and called the work CENTS.
+Every one of the ten thousand was photographed first, one at a time, on a copy stand.
+The portrait on them is Victor David Brenner's Lincoln — by the project's count the most reproduced artwork on Earth, carried on 288 billion cents in existence in 2024.
+Circulation made the marks. Verdigris and obsidian and desert. Abraded, faceless, striated. A fingerprint. A ghost. Wheat.
+Nineteen traits in five families, and no algorithm assigned any of them.
+The names came afterwards, from the collectors, over two years of voting on the full set.
+Five thousand three hundred and six carry no mark at all — more than half — which is what makes the rest mean anything.
 Then he destroyed them, smelted into one block of thirty-one kilograms.
-Each photograph he inscribed on a satoshi, the smallest unit of Bitcoin.
-The block he had scanned, and inscribed as the whole of Bitcoin block 839969.
-An ingot so dense it cannot be destroyed.
-He released all ten thousand at one sat each. By October 2026 the ones listed for sale were asking around three hundred and sixty thousand sats.
+Each photograph he inscribed on a satoshi, the smallest unit of Bitcoin. Ten thousand images, ten thousand satoshis.
+The block itself he had scanned, and inscribed the model as the whole of Bitcoin block 839969.
+Where a block ordinarily carries thousands of transactions, that one carries a single object.
+He released all ten thousand at one satoshi each, into permissionless exchange and continual revaluation.
+Chang died in February 2025, at forty-five, on the day the President ordered the Treasury to stop making pennies. The last was struck that November.
 The set is closed. It stops at 1982, because in 1983 the penny stopped being copper.
-Only one of the years it misses means anything. In 1943 the copper went to the war, and the cent was struck in steel.
+Eight hundred and sixty-seven of them are dated 1982, and none later.
+Fifteen years are missing from it, and only one of those absences means anything: in 1943 the copper went to the war, and the cent was struck in steel.
 A set with edges nobody chose.
-The project had described this as coming: the last penny was struck in November 2025.
-Its value can continue to be redefined through this digitally scarce set of ten thousand, and the block that encapsulates their transformation.
+Philip Tinari, who directs UCCA in Beijing, had written on the work for Taschen's On NFTs.
+In 2026, a year after his death, UCCA gave Chang his first institutional retrospective, co-curated by Tinari, Aki Sasamoto and Danielle Chang. CENTS was in it — the ten thousand on touchscreens, and the block among the materials.
+Released at one satoshi. By October 2026 a hundred and ninety-eight of them were listed for sale, asking around three hundred and sixty thousand satoshis each.
+The cent from 1972 no longer exists. Its image does, and what that is worth goes on being decided.

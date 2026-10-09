@@ -270,5 +270,6 @@
    "narration": "Its value can continue to be redefined through this digitally scarce set of ten thousand, and the block that encapsulates their transformation."
   }
  ],
- "_epoch": "Shot captions carry the epoch of any time-varying figure they show. a13 is the only asset whose own verification date (2026-10-06) is load-bearing for a claim, and it is paired with the line whose epoch matches."
+ "_epoch": "Shot captions carry the epoch of any time-varying figure they show. a13 is the only asset whose own verification date (2026-10-06) is load-bearing for a claim, and it is paired with the line whose epoch matches.",
+ "_STALE": "Keyed to draft A (24 lines). The active script is now C (31 lines, 42 sentences), so every line number here is wrong. Rebuild before use. Kept because the asset choices, crop compliance and pair-claims remain valid and are worth porting."
 }
