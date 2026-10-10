@@ -270,8 +270,17 @@ non-zero rather than picking a winner.
 
 ## Status
 
-The scaffold runs end to end against a **synthetic fixture** (`pipeline/make_fixture.py`)
-with invented word times and silent audio. `verify.py` refuses to pass a film
-built on it. The component library currently holds TitleCard, PullQuote,
-StatReveal, AssetShot, Credits and CaptionLayer — enough to prove the mechanism,
-not yet enough to make a good film. Diagrams and real asset handling come next.
+Both films are past the scaffold. **objecthood** is shipped: 18 shots, 140.69 s,
+rendered from real rights-cleared assets to `films/objecthood/exports/`.
+**introduction** is at script stage — draft C, 541 words, 4:54, 9/11 gates, not
+yet recorded.
+
+The previous text here claimed the pipeline only ran against the synthetic
+fixture (`pipeline/make_fixture.py`) and that "diagrams and real asset handling
+come next". That was true when it was written and had been false since the
+objecthood film rendered. It is left recorded in this paragraph rather than
+deleted, because a stale status line is the failure worth remembering: nothing
+checks a README.
+
+Current state, what is next, and the known open items live in
+[HANDOFF.md](HANDOFF.md).
