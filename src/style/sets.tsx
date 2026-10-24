@@ -262,11 +262,15 @@ export const FieldTitle: React.FC<Anchored & { title: string; subtitle?: string 
 };
 
 /**
- * Higher-resolution photographs of a few Cents (pipeline/stage_cents.py --hi),
- * about 860px across against the on-chain 246. Only these may be zoomed into:
+ * Higher-resolution photographs (pipeline/stage_cents.py --hi): ten from the
+ * user's folder and the rest from cents.vision's own pics/frontswebp/<n>.webp
+ * (1050px), each identity-checked against the on-chain image. About 860px of
+ * coin against the on-chain 246. Only these may be zoomed into:
  * a zoom on the 300px image would enlarge pixels, not the trait.
  */
-export const HI_RES = new Set([111, 608, 2956, 3981, 4788, 6059, 6492, 7823, 9172, 9533]);
+export const HI_RES = new Set([
+  25, 91, 111, 121, 215, 312, 322, 337, 412, 608, 794, 809, 990, 1079, 1170, 1264, 1510, 1771, 2332, 2359, 2568, 2583, 2735, 2785, 2881, 2900, 2956, 3398, 3861, 3950, 3981, 4273, 4554, 4668, 4679, 4788, 4825, 4884, 5144, 5346, 5581, 6055, 6059, 6078, 6107, 6223, 6492, 6495, 6980, 7799, 7823, 7926, 8185, 8353, 8382, 9172, 9533, 9786, 9992,
+]);
 const HI_MAX_PX = 1150;
 
 type Segment = {
@@ -372,9 +376,14 @@ export const TraitBurst: React.FC<Anchored & { title?: string; segments: Segment
       const z = 1 + ((seg.zoom ?? 1) - 1) * t;
       if (size * z > HI_MAX_PX) throw new Error(`TraitBurst: #${seg.hero} at ${Math.round(size * z)}px is past the ${HI_MAX_PX}px its photograph holds`);
       const [fx, fy] = seg.focus ?? [0.5, 0.5];
-      // Move the focus toward the window's centre as the zoom grows.
-      const dx = (0.5 - fx) * size * t;
-      const dy = (0.5 - fy) * size * t;
+      // Move the focus toward the window's centre as the zoom grows, but never
+      // so far that the coin's own rim enters the window: the photograph is
+      // cropped to the coin, so its centre may sit at most (z-1)*size/2 off.
+      const wantX = (0.5 - fx) * size * (z - 1 + t), wantY = (0.5 - fy) * size * (z - 1 + t);
+      const off = Math.hypot(wantX, wantY), lim = (z - 1) * size / 2 * 0.97;
+      const k = off > lim ? lim / off : 1;
+      const dx = wantX * k - (0.5 - fx) * size * (z - 1);
+      const dy = wantY * k - (0.5 - fy) * size * (z - 1);
       coin = (
         <div style={{ position: "absolute", left: (BOX - size) / 2, top: (BOX - size) / 2, width: size, height: size,
                       transform: `translate(${dx}px, ${dy}px) scale(${z * enter})`, transformOrigin: `${fx * 100}% ${fy * 100}%` }}>

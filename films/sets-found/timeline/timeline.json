@@ -121,7 +121,12 @@
       "count": 5,
       "hero": 412,
       "caption": "notable verdigris",
-      "patina": "verdigris"
+      "patina": "verdigris",
+      "focus": [
+       0.88,
+       0.55
+      ],
+      "zoom": 1.5
      },
      {
       "at_phrase": "obsidian, desert and",
@@ -129,7 +134,12 @@
       "count": 5,
       "hero": 4679,
       "caption": "notable obsidian",
-      "patina": "obsidian"
+      "patina": "obsidian",
+      "focus": [
+       0.62,
+       0.6
+      ],
+      "zoom": 1.5
      },
      {
       "at_phrase": "desert and red are",
@@ -137,7 +147,12 @@
       "count": 5,
       "hero": 215,
       "caption": "notable desert",
-      "patina": "desert"
+      "patina": "desert",
+      "focus": [
+       0.25,
+       0.2
+      ],
+      "zoom": 1.5
      },
      {
       "at_phrase": "red are the base",
@@ -145,7 +160,12 @@
       "count": 5,
       "hero": 3398,
       "caption": "notable red",
-      "patina": "red"
+      "patina": "red",
+      "focus": [
+       0.5,
+       0.5
+      ],
+      "zoom": 1.5
      }
     ]
    }
@@ -249,7 +269,12 @@
       "count": 5,
       "hero": 7799,
       "caption": "orange",
-      "patina": "orange"
+      "patina": "orange",
+      "focus": [
+       0.75,
+       0.8
+      ],
+      "zoom": 1.5
      }
     ]
    }
@@ -527,28 +552,48 @@
       "pool": "contaminated:Alien Secretion",
       "count": 3,
       "hero": 2583,
-      "caption": "alien secretion"
+      "caption": "alien secretion",
+      "focus": [
+       0.3,
+       0.8
+      ],
+      "zoom": 1.5
      },
      {
       "at_phrase": "paint obscure",
       "pool": "contaminated:Paint",
       "count": 3,
       "hero": 2735,
-      "caption": "paint"
+      "caption": "paint",
+      "focus": [
+       0.82,
+       0.45
+      ],
+      "zoom": 1.5
      },
      {
       "at_phrase": "obscure adhesive dark",
       "pool": "contaminated:Obscure Adhesive",
       "count": 3,
       "hero": 1510,
-      "caption": "obscure adhesive"
+      "caption": "obscure adhesive",
+      "focus": [
+       0.5,
+       0.65
+      ],
+      "zoom": 1.5
      },
      {
       "at_phrase": "dark grime sea",
       "pool": "contaminated:Dark Grime",
       "count": 3,
       "hero": 4668,
-      "caption": "dark grime"
+      "caption": "dark grime",
+      "focus": [
+       0.4,
+       0.72
+      ],
+      "zoom": 1.5
      },
      {
       "at_phrase": "sea salt blood",
@@ -562,28 +607,48 @@
       "pool": "contaminated:Blood",
       "count": 3,
       "hero": 2359,
-      "caption": "blood"
+      "caption": "blood",
+      "focus": [
+       0.6,
+       0.35
+      ],
+      "zoom": 1.5
      },
      {
       "at_phrase": "speckles unknown",
       "pool": "contaminated:Speckles",
       "count": 3,
       "hero": 2900,
-      "caption": "speckles"
+      "caption": "speckles",
+      "focus": [
+       0.4,
+       0.45
+      ],
+      "zoom": 1.5
      },
      {
       "at_phrase": "unknown liquid and special",
       "pool": "contaminated:Unknown Liquid",
       "count": 3,
       "hero": 4825,
-      "caption": "unknown liquid"
+      "caption": "unknown liquid",
+      "focus": [
+       0.4,
+       0.5
+      ],
+      "zoom": 1.5
      },
      {
       "at_phrase": "special oddities",
       "pool": "contaminated:Special Oddities",
       "count": 3,
       "hero": 6107,
-      "caption": "special oddities"
+      "caption": "special oddities",
+      "focus": [
+       0.5,
+       0.5
+      ],
+      "zoom": 1.5
      }
     ]
    }
@@ -782,10 +847,10 @@
       "count": 5,
       "hero": 6492,
       "focus": [
-       0.6,
-       0.33
+       0.83,
+       0.66
       ],
-      "zoom": 1.5,
+      "zoom": 1.6,
       "caption": "1971: US currency became fiat"
      },
      {
@@ -793,14 +858,24 @@
       "pool": "year:1979",
       "count": 5,
       "hero": 1170,
-      "caption": "1979: Rutherford Chang's birth year"
+      "caption": "1979: Rutherford Chang's birth year",
+      "focus": [
+       0.85,
+       0.65
+      ],
+      "zoom": 1.6
      },
      {
       "at_phrase": "1982 the last year",
       "pool": "year:1982",
       "count": 5,
       "hero": 25,
-      "caption": "1982: the last year struck in copper"
+      "caption": "1982: the last year struck in copper",
+      "focus": [
+       0.86,
+       0.62
+      ],
+      "zoom": 1.6
      }
     ]
    }
@@ -851,21 +926,36 @@
       "pool": "mint:S",
       "count": 4,
       "hero": 2332,
-      "caption": "S: San Francisco"
+      "caption": "S: San Francisco",
+      "focus": [
+       0.82,
+       0.74
+      ],
+      "zoom": 1.7
      },
      {
       "at_phrase": "a D for Denver",
       "pool": "mint:D",
       "count": 4,
       "hero": 91,
-      "caption": "D: Denver"
+      "caption": "D: Denver",
+      "focus": [
+       0.8,
+       0.77
+      ],
+      "zoom": 1.7
      },
      {
       "at_phrase": "and no mint mark",
       "pool": "mint:none",
       "count": 4,
       "hero": 121,
-      "caption": "no mint mark: usually Philadelphia"
+      "caption": "no mint mark: usually Philadelphia",
+      "focus": [
+       0.82,
+       0.74
+      ],
+      "zoom": 1.7
      }
     ]
    }
