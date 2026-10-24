@@ -1,0 +1,19 @@
+{
+ "essay": {
+  "title": "CENTS",
+  "subtitle": "the Sets",
+  "author": "shibboleth",
+  "source": "https://cents.vision/sets.html",
+  "version": "film A draft 1, 2026-10-24"
+ },
+ "_status": "STUB. Not recorded, so there are no anchors to cut to. Carries the credits only, so the on-screen gates have something real to measure.",
+ "shots": [],
+ "credits": {
+  "lines": [
+   "Artwork: CENTS, by Rutherford Chang",
+   "Rutherford Chang, 1979-2025",
+   "Sets and trait names: the CENTS Trait Council"
+  ],
+  "url": "cents.gallery"
+ }
+}
