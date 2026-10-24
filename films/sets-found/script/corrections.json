@@ -1,0 +1,7 @@
+{
+ "_why": "The TTS text respelled two terms so they would be spoken correctly (audio/tts_text.txt). Captions show the written form.",
+ "corrections": [
+  {"heard": "three-D black,", "say": "3D-black,", "by": "respelling for TTS, 2026-10-24"},
+  {"heard": "cents dot vision,", "say": "cents.vision,", "by": "respelling for TTS, 2026-10-24"}
+ ]
+}

@@ -7,3 +7,8 @@ public/vo.wav
 # never commit credentials
 .env
 .env.local
+public/cents/
+__pycache__/
+public/cents_field.webp
+public/cents_hi/
+public/vision/

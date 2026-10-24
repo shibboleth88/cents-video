@@ -52,8 +52,10 @@ export const Video: React.FC<Props> = ({ timeline, alignment, assets, cues, mode
             ...s.props,
             ...(isPlate && asset ? { asset } : {}),
             // Diagrams resolve their own states against the recording, so they
-            // need the alignment and where this shot begins.
+            // need the alignment and where this shot begins. So does any
+            // component that declares it reveals on a phrase.
             ...(isDiagram ? { alignment, shotStartFrame: s.fromFrame, seed: s.shot_id } : {}),
+            ...(!isDiagram && (C as any).wantsAlignment ? { alignment, shotStartFrame: s.fromFrame } : {}),
           };
           return (
             <Sequence key={s.shot_id} from={s.fromFrame} durationInFrames={s.durationInFrames} name={s.shot_id}>

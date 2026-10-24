@@ -1,0 +1,227 @@
+1
+00:00:00,000 --> 00:00:02,480
+Let's explore CENTS Sets and the traits
+
+2
+00:00:02,560 --> 00:00:03,600
+that constitute them.
+
+3
+00:00:04,160 --> 00:00:06,719
+Every difference to the canvas of the Lincoln cent
+
+4
+00:00:06,879 --> 00:00:09,679
+is made by the marks of touch and time.
+
+5
+00:00:09,919 --> 00:00:11,359
+The cataloging of these marks
+
+6
+00:00:11,439 --> 00:00:13,839
+is the result of two years of voting.
+
+7
+00:00:14,240 --> 00:00:16,960
+Out of this catalog, Sets were identified.
+
+8
+00:00:17,359 --> 00:00:19,120
+Let's look at them in order of rarity.
+
+9
+00:00:19,679 --> 00:00:23,079
+Verdigris, obsidian,
+
+10
+00:00:24,600 --> 00:00:28,839
+desert and red are the base patinas:
+
+11
+00:00:29,760 --> 00:00:31,160
+one notable trait from each
+
+12
+00:00:31,239 --> 00:00:33,560
+base patina makes a Patina Set.
+
+13
+00:00:33,799 --> 00:00:35,399
+One significant trait from each
+
+14
+00:00:35,479 --> 00:00:37,759
+base patina makes a Sig Set.
+
+15
+00:00:39,640 --> 00:00:42,439
+Gold and orange are the noble patinas:
+
+16
+00:00:42,479 --> 00:00:44,200
+a Patina Set that also includes
+
+17
+00:00:44,240 --> 00:00:47,240
+a gold and an orange is a Spectrum Set.
+
+18
+00:00:47,479 --> 00:00:50,039
+One full trait from each of the base patinas
+
+19
+00:00:50,119 --> 00:00:51,479
+makes a Fulls Set.
+
+20
+00:00:51,799 --> 00:00:53,719
+Only 15 can exist,
+
+21
+00:00:53,799 --> 00:00:56,679
+as there are only 15 Full Verdigris Cents.
+
+22
+00:00:57,159 --> 00:00:59,240
+One full from each base patina,
+
+23
+00:00:59,399 --> 00:01:01,399
+plus a full gold and an orange,
+
+24
+00:01:01,520 --> 00:01:03,079
+makes a Full Spectrum Set.
+
+25
+00:01:03,399 --> 00:01:05,560
+Only 9 such Sets can exist,
+
+26
+00:01:05,640 --> 00:01:08,280
+as there are only 9 Full Gold Cents.
+
+27
+00:01:08,519 --> 00:01:11,159
+Contaminations are intricately cataloged,
+
+28
+00:01:11,200 --> 00:01:16,000
+in 12 types: glue, scotch tape,
+
+29
+00:01:17,519 --> 00:01:23,640
+3D-black, alien secretion, paint,
+
+30
+00:01:25,159 --> 00:01:29,319
+obscure adhesive, dark grime,
+
+31
+00:01:30,840 --> 00:01:36,400
+sea salt, blood, speckles,
+
+32
+00:01:37,879 --> 00:01:41,879
+unknown liquid and special oddities.
+
+33
+00:01:43,079 --> 00:01:46,760
+A Contamination Set covers any 3 of the 12 types,
+
+34
+00:01:46,799 --> 00:01:49,319
+and a Contamination Hoard covers 6.
+
+35
+00:01:49,640 --> 00:01:51,400
+A Set that includes all 12
+
+36
+00:01:51,480 --> 00:01:53,959
+types is a Full Contamination Set,
+
+37
+00:01:54,040 --> 00:01:55,799
+and only 7 can exist,
+
+38
+00:01:55,879 --> 00:01:58,840
+as scotch tape is present on only 7 Cents.
+
+39
+00:02:00,280 --> 00:02:02,439
+The Chronicle Set consists of years
+
+40
+00:02:02,560 --> 00:02:04,920
+whose meaning is essential to the project.
+
+41
+00:02:05,159 --> 00:02:09,080
+1971: the year US currency became fiat.
+
+42
+00:02:09,479 --> 00:02:13,560
+1979: the year the artist Rutherford Chang was born.
+
+43
+00:02:13,960 --> 00:02:16,759
+1982: the last year that pennies
+
+44
+00:02:16,840 --> 00:02:18,120
+were struck in copper,
+
+45
+00:02:18,280 --> 00:02:19,960
+and the last year of the collection.
+
+46
+00:02:20,360 --> 00:02:23,400
+The Full Mint Set is determined by mint marks.
+
+47
+00:02:23,560 --> 00:02:25,479
+An S for San Francisco,
+
+48
+00:02:26,560 --> 00:02:30,319
+a D for Denver and no mint mark,
+
+49
+00:02:30,479 --> 00:02:33,879
+usually Philadelphia, make a Full Mint Set,
+
+50
+00:02:33,960 --> 00:02:36,439
+and only sixty Cents carry the S.
+
+51
+00:02:36,680 --> 00:02:39,319
+Decades Sets consist of every year of the given
+
+52
+00:02:39,400 --> 00:02:42,159
+decade or decades that the collection holds.
+
+53
+00:02:42,360 --> 00:02:45,000
+On cents.vision, you can find a Trait Atlas
+
+54
+00:02:45,080 --> 00:02:46,680
+that defines each trait,
+
+55
+00:02:48,159 --> 00:02:49,840
+as well as Collector Walls that show
+
+56
+00:02:49,919 --> 00:02:53,159
+completed Sets, and many more
+
+57
+00:02:53,240 --> 00:02:55,159
+features to explore the project.
