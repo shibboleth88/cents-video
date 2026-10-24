@@ -18,6 +18,11 @@ MAX_CHARS = 52      # ~2 lines in the caption region at 48px
 MIN_WORDS = 2
 MIN_DUR = 0.70
 BREAK_AFTER = (",", ";", ":", "—", "-")
+# A line that ends on one of these strands its phrase across two cues
+# ("That year copper went to the / war"). Never break after them.
+WEAK = {"a", "an", "the", "to", "of", "in", "into", "on", "at", "by", "for", "from", "with",
+        "and", "or", "but", "as", "is", "be", "can", "its", "their", "his", "her", "when", "that",
+        "what", "which", "who"}
 
 Word = dict  # {"word": str, "start": float, "end": float}
 
@@ -48,7 +53,8 @@ def _split_balanced(ws: list[Word]) -> list[list[Word]]:
         cur_len = len(_text(cur))
         # Close the chunk at the target, or earlier on punctuation, but never so
         # early that a later chunk would be left with fewer than MIN_WORDS.
-        at_target = cur_len >= target * 0.82
+        weak = w["word"].lower().strip("\"'") in WEAK or w.get("nobreak", False)
+        at_target = cur_len >= target * 0.82 and not weak
         on_punct = w["word"].endswith(BREAK_AFTER) and cur_len >= target * 0.55
         enough_left = remaining_words >= remaining_chunks * MIN_WORDS
         if remaining_chunks > 0 and (at_target or on_punct) and enough_left and len(cur) >= MIN_WORDS:
@@ -56,21 +62,32 @@ def _split_balanced(ws: list[Word]) -> list[list[Word]]:
     if cur: chunks.append(cur)
     return [c for c in chunks if c]
 
-def _merge_short(cues: list[list[Word]]) -> list[list[Word]]:
+def _seg(w: Word, boundaries: list[float]) -> int:
+    """Which picture segment a word is spoken in: the number of cuts at or before it."""
+    return sum(1 for b in boundaries if w["start"] >= b - 1e-6)
+
+def _merge_short(cues: list[list[Word]], boundaries: list[float] = ()) -> list[list[Word]]:
     """Fold any cue that is too short, or too brief to read, into the neighbour
-    it fits best with. Runs to a fixed point."""
+    it fits best with. Runs to a fixed point.
+
+    Never across a picture cut. A one-word year sentence ("1979.") was folded
+    into the PREVIOUS sentence because that neighbour was shorter, so the year
+    was read out under the previous year's picture. Same-segment neighbours
+    only; an orphan with none stays, and audit() reports it."""
+    boundaries = list(boundaries)
     changed = True
     while changed and len(cues) > 1:
         changed = False
         for i, c in enumerate(cues):
             dur = c[-1]["end"] - c[0]["start"]
             if len(c) >= MIN_WORDS and dur >= MIN_DUR: continue
-            prev = cues[i-1] if i > 0 else None
-            nxt = cues[i+1] if i < len(cues)-1 else None
+            seg = _seg(c[0], boundaries)
+            prev = cues[i-1] if i > 0 and _seg(cues[i-1][-1], boundaries) == seg else None
+            nxt = cues[i+1] if i < len(cues)-1 and _seg(cues[i+1][0], boundaries) == seg else None
             cand = []
             if prev is not None: cand.append((len(_text(prev)), i-1, "prev"))
             if nxt is not None: cand.append((len(_text(nxt)), i+1, "next"))
-            if not cand: break
+            if not cand: continue
             # Merge into the shorter neighbour, but never into one that would
             # then be over-long: a fix for an orphan must not create a wall.
             cand.sort()
@@ -96,21 +113,41 @@ def _split_until_fits(ws: list[Word], depth: int = 0) -> list[list[Word]]:
         out.extend(_split_until_fits(p, depth + 1) if len(_text(p)) > MAX_CHARS and len(p) > MIN_WORDS else [p])
     return out
 
-def build(words: list[Word]) -> list[dict]:
+def _cut_at(sentences: list[list[Word]], boundaries: list[float]) -> list[list[Word]]:
+    """Also split wherever a picture cut falls inside a sentence."""
+    out = []
+    for s in sentences:
+        buf = []
+        for w in s:
+            if buf and _seg(w, boundaries) != _seg(buf[0], boundaries):
+                out.append(buf); buf = []
+            buf.append(w)
+        if buf: out.append(buf)
+    return out
+
+def build(words: list[Word], boundaries: list[float] = ()) -> list[dict]:
+    """`boundaries`: picture-cut times (s). A cue never spans one."""
+    boundaries = sorted(boundaries)
     chunks: list[list[Word]] = []
-    for s in _sentences(words):
+    for s in _cut_at(_sentences(words), boundaries):
         chunks.extend(_split_until_fits(s))
-    chunks = _merge_short(chunks)
+    chunks = _merge_short(chunks, boundaries)
     return [{"start": c[0]["start"], "end": c[-1]["end"], "text": _text(c)} for c in chunks]
 
-def audit(cues: list[dict]) -> list[str]:
+def audit(cues: list[dict], boundaries: list[float] = ()) -> list[str]:
     """Problems a numeric gate cannot see. Returned, not printed, so callers can
     fail on them."""
     bad = []
     for c in cues:
+        for b in boundaries:
+            if c["start"] < b - 0.05 and c["end"] > b + 0.05:
+                bad.append(f"cue spans the picture cut at {b:.2f}s: {c['text']!r}")
+    for c in cues:
         n = len(c["text"].split()); dur = c["end"] - c["start"]
         if n < MIN_WORDS: bad.append(f"orphan cue ({n} word) at {c['start']:.2f}s: {c['text']!r}")
         if dur < MIN_DUR: bad.append(f"cue too brief ({dur:.2f}s) at {c['start']:.2f}s: {c['text']!r}")
+        last = c["text"].split()[-1].lower() if c["text"].split() else ""
+        if last in WEAK: bad.append(f"cue ends on a weak word ({last!r}) at {c['start']:.2f}s: {c['text']!r}")
         if len(c["text"]) > MAX_CHARS + 8: bad.append(f"cue too long ({len(c['text'])} chars) at {c['start']:.2f}s")
     for a, b in zip(cues, cues[1:]):
         if b["start"] < a["end"] - 1e-6: bad.append(f"cues overlap at {b['start']:.2f}s")

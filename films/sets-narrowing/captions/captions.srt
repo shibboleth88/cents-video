@@ -3,57 +3,53 @@
 Ten thousand Cents.
 
 2
-00:00:02,484 --> 00:00:05,248
-The number of Sets that can exist at any given
+00:00:02,484 --> 00:00:05,700
+The number of Sets that can exist at any given time
 
 3
-00:00:05,306 --> 00:00:07,349
-time is capped by the scarcest
+00:00:05,746 --> 00:00:09,323
+is capped by the scarcest Cent the Set requires.
 
 4
-00:00:07,407 --> 00:00:09,323
-Cent the Set requires.
+00:00:10,627 --> 00:00:13,343
+A Patina Set needs a notable desert,
 
 5
-00:00:10,627 --> 00:00:12,715
-A Patina Set needs a notable
+00:00:13,378 --> 00:00:16,373
+and 598 Cents carry one.
 
 6
-00:00:12,785 --> 00:00:16,373
-desert, and 598 Cents carry one.
-
-7
 00:00:17,283 --> 00:00:21,138
 A Sig Set needs a significant desert: 150.
 
-8
+7
 00:00:21,864 --> 00:00:24,963
 A Spectrum Set needs a gold: 69.
 
-9
+8
 00:00:25,689 --> 00:00:29,056
 A Fulls Set needs a full verdigris: 15.
 
-10
+9
 00:00:29,699 --> 00:00:33,170
 A Full Spectrum Set needs a full gold: 9.
 
-11
+10
 00:00:33,954 --> 00:00:37,670
 A Full Contamination Set needs scotch tape: 7.
 
-12
+11
 00:00:38,621 --> 00:00:44,216
 And the 1940s Set needs the only Cent dated 1949: 1.
 
-13
+12
 00:00:45,658 --> 00:00:48,165
 One Cent, and one collector at a time.
 
-14
+13
 00:00:49,348 --> 00:00:51,508
 Every time a Cent changes hands,
 
-15
+14
 00:00:51,636 --> 00:00:54,479
 it can complete one Set and break another.

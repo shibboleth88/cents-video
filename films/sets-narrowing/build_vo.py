@@ -23,6 +23,7 @@ FILM = pathlib.Path(__file__).resolve().parent
 ROOT = FILM.parent.parent
 sys.path.insert(0, str(ROOT / "pipeline"))
 import cues as C  # noqa: E402
+from anchors import shot_times  # noqa: E402
 from align import srt  # noqa: E402
 
 SR = 48000
@@ -119,14 +120,30 @@ def main() -> int:
     for w, s in zip(words, script):
         w["word"] = s
 
+    # Phrases a caption must not split ("the scarcest / Cent").
+    for ph in json.loads((FILM / "captions/keep_together.json").read_text())["phrases"]:
+        want = [norm(t) for t in ph.split()]
+        toks = [norm(w["word"]) for w in words]
+        hits = [k for k in range(len(toks) - len(want) + 1) if toks[k:k + len(want)] == want]
+        if len(hits) != 1: sys.exit(f"keep_together {ph!r} matched {len(hits)} times, expected 1")
+        for w in words[hits[0]:hits[0] + len(want) - 1]: w["nobreak"] = True
+
     noise = C.audit_transcript(words)
     if noise: sys.exit("malformed tokens:\n  " + "\n  ".join(noise))
-    cues = C.build(words)
-    bad = C.audit(cues)
+    # Captions follow the picture: no cue spans a cut (the shared rule from
+    # pipeline/cues.py). Cuts are this film's shot starts, resolved from the
+    # timeline the same way the renderer resolves them.
+    tl = json.loads((FILM / "timeline/timeline.json").read_text())
+    cuts_at = [s["t0"] for s in shot_times(tl, {"words": words, "duration": dur})][1:]
+    if len(cuts_at) < 5:
+        sys.exit(f"FLOOR: only {len(cuts_at)} picture cuts resolved; captions would ignore the edit")
+    cues = C.build(words, cuts_at)
+    bad = C.audit(cues, cuts_at)
     if bad: sys.exit("caption chunking produced unusable cues:\n  " + "\n  ".join(bad))
     if words[-1]["end"] > dur - tail + 0.05:
         sys.exit("FLOOR: last word ends inside the credits tail; timings did not shift with the audio")
 
+    for w in words: w.pop("nobreak", None)
     (FILM / "script/alignment.json").write_text(json.dumps(
         {"words": words, "duration": round(dur, 3), "source_audio": f"films/sets-narrowing/audio/vo.wav",
          "model": f"ElevenLabs {take['model']} voice {take['voice']} ({take['voice_id']}), timings from ElevenLabs",

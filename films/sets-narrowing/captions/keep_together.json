@@ -1,0 +1,4 @@
+{
+ "_what": "Phrases a caption must not break inside. cues.py honours a word's nobreak flag; build_vo.py sets it on every word of each phrase but the last. Each phrase must match exactly once.",
+ "phrases": ["at any given time", "the scarcest Cent", "a notable desert", "a significant desert", "the only Cent dated 1949"]
+}
