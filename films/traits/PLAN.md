@@ -18,11 +18,15 @@ Supersedes the series recommendation in treatment v0.1
 
 ## Runtime (estimate, not measured)
 
-Draft 1 is 49 lines, 599 words. At the eo pace measured on Sets film A
-(take B: 365 words in 142.1 s), narration alone is about 3:53. Each of the 31
-trait beats (19 traits + 12 contamination types) is held at least 8 s
-(hero 4 s + wall 4 s), plus 3 s of pan for walls of 30 or more. With those
-holds the film estimates at about **5:53**. Measure after the voice take.
+Draft 2 (user, 2026-10-24: short intro on the cataloguing process only,
+matter-of-fact throughout, end without fanfare on the untraited half) is 48
+lines, about 495 words. At the eo pace measured on Sets film A (take B: 365
+words in 142.1 s) narration alone is about 3:15. With every trait beat held at
+least 8 s (hero 4 s + wall 4 s) the film estimates at about **5:10**, before
+pans on the larger walls. Measure after the voice take.
+
+Draft 1 (`script/voiceover_draft1.txt`, 599 words, est. 5:53) is kept: its
+intro restated the project and its close was rhetorical; both were cut.
 
 ## Every beat: hero, then wall
 
@@ -44,6 +48,6 @@ sample of the 208.
 
 ## Open
 
-- Special Oddities has no definition on the atlas page. "Forty-four that fit
-  no other type" is my reading of the name and needs the user's check.
+- Special Oddities has no definition on the atlas page, so draft 2 names it
+  and gives the count only.
 - "Two years of voting" and "as of September 2026" carry the epoch rule.
