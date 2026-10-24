@@ -1,0 +1,134 @@
+SOURCES OF RECORD — CENTS, Still becoming
+Assembled 2026-10-24. Every narration claim is checked against a span of this
+file. Each block names where it came from and, where the fact moves over time,
+when it was true.
+
+================================================================
+[1] SHIBBOLETH, "CENTS & digital objecthood" (published as "CENTS & digital
+    conceptual art"), Medium, 30 October 2025. Verbatim copy from
+    films/objecthood/script/essay.txt. The film's governing source.
+================================================================
+CENTS & digital objecthood
+an introduction to the primary concepts of CENTS by Rutherford Chang
+shibboleth — Medium, 30 October 2025
+Source: https://medium.com/@shibboleth88/cents-digital-conceptual-art-258b836a16a1
+
+CENTS is a becoming, a gesture that unfolds continually through the actions of its participants in time.
+Rutherford Chang began this project with a simple value discrepancy: the difference between the value of ¢1 ascribed to copper pennies by the US Treasury versus the metal value of apx. ¢2.5. The penny, once able to get one a newspaper, a ride on a streetcar, a postage stamp, had long since begun to hover between an abstraction and a symbol of worthlessness. By the time the artist was born in 1979, there was no longer anything sold for a single cent, and by 2006, shortly after he graduated from university, it had become more expensive to produce one cent than one cent. Yet the object remained, buoyed into physicality by the force of its context.
+Chang became fascinated with the subculture of copper scavengers, people who took advantage of the discrepancy to harvest the metal value of the raw copper. The affinity makes sense for an artist who had long been working with collecting-as-a-practice in pieces like WE BUY WHITE ALBUMS, Boom Propaganda, and The Class of 2008. He followed these fellow hoarders through their often hilariously absurd pursuit (considering the amount of effort required) as they subverted State value ascription through an act of recontextualization: taking copper pennies out of circulation and melting them down.
+Chang recognized the parallels between these copper hoarders, conceptual art, and Bitcoin. Conceptual art emerged as a movement in the 1960s as a reaction against object-based, market-driven modernism. The art object, once a vital vessel for aura and authorship, had become hollowed out by hyper-commodification, first through the introduction of mechanical reproduction in the late 19th century, then in the post-WWII period through the rapid expansion of the gallery–collector market and the proliferation of mass industry and mass media. A shift occurred in the relationship between human and object, a split between materiality and meaning. By the 1990s, digitization had begun to envelop the world, and the presence of media, knowledge, and money increasingly became digital flows rather than physical things. Digitization became thoroughly integrated at all levels of society, but the digital lacked the continuity of identity, singularity, provenance and ownability of the physical. In short, it lacked objecthood. In response, blockchain architecture was created to allow digital flows to exist as discrete units with verifiable histories that could be uniquely possessed and exchanged. In 2009, the first public blockchain protocol was launched with Bitcoin’s genesis block, establishing a shared ledger for uniquely identifiable digital units. One way of conceiving of this is as a means of using cryptography to give digital flows the kind of discrete boundaries that define physical objects. If the current era can be characterized as “the digital era,” “the Internet era,” or the “post-truth era,” then blockchain constitutes this era’s objecthood. With CENTS, Rutherford Chang encapsulates this century-long transformational arc of objecthood and value in a work of digital conceptual art.
+
+To make CENTS, Chang culled 10,000 pre-1982 copper pennies over the course of several years from about 100,000 pennies that he found, received as change, or exchanged at banks. He then archivally photographed them and cataloged each of their dates and mintages. Next, he removed them from circulation by melting them down into a solid copper block. Once destroyed, he inscribed each of the pennies as Bitcoin ordinals, storing the image data of each cent on a “sat” (a satoshi, the smallest divisible unit of Bitcoin). He then inscribed a 3D model of the block on a block of the blockchain (what is known as a full-block inscription). Finally, he released the 10,000 cent inscriptions for the price of one sat each (apx. $ 0.0001), placing them into a system of permissionless exchange and indeterminate, continual revaluation.
+[IMAGE]
+
+CENTS uses this series of transformations to question the value assignment and objecthood of currency, work, history, and aesthetics. Each of Chang’s Cents has 5 distinct natures. It is all of these things and none of them:
+	•	a unit of currency
+	•	a quantity of copper
+	•	a melted element of a sculpture
+	•	a photograph
+	•	a Bitcoin inscription
+Each of the objects also goes through 5 transformations of value:
+	•	being in circulation (value defined by US treasury)
+	•	being removed from circulation (centralized value assignment subverted)
+	•	being archivally photographed (value defined by visual/conceptual/historical quality)
+	•	being destroyed (value made undefinable)
+	•	being inscribed on Bitcoin (value continually redefined by decentralized consensus)
+Recontextualizing the pennies as art objects creates a discrepancy between their functional value and their aesthetic value. Recontextualizing them again as cryptographic entities creates another breech between their value as physical objects and their value as digital registers. Overall, the original assigned value is decoupled from the object and transformed into a vessel for social-consensus based value defined by decentralized participants, creating a situation where their value and meaning is indeterminate and continually redefined.
+[IMAGE]
+
+CENT #3981
+The act of making the “worthless” one-cent coin into a valuable object is an intrinsic part of the artwork. Chang initiated an ongoing process of redefinition. This is in itself not unique, it’s something tokens do at a fundamental level I think, but CENTS integrates this quality holistically in its form and execution — its medium is the gesture of its continual becoming, rather than any of its visible manifestations. This is amplified by Rutherford’s act of destroying the physical cents, smelting them into a block and inscribing it as a digital object on a full Bitcoin block. Block 839969 serves as the master object of the project, and perfects the prism that CENTS holds up to the nature of contemporary objecthood.
+[IMAGE]
+
+CENTS Block 839969
+All of Rutherford Chang’s work has a prismatic quality. He works with readymade objects and databases, and transforms them by rigorously applying strict rule sets over long periods of time. In this case, the readymade he’s using is one of the most common objects in existence. The image of Lincoln on the face of the penny, created by Victor David Brenner, is the most reproduced artwork on planet Earth due to its presence on the 500+ billion Lincoln cents that have been struck.
+
+The structure of Chang’s engagement with these readymades holds a prism to the multivalent implications of the underlying materials. I love this about his work. And he brings what I call a “black hole humor” to the process — the kind of laughter that resonates within emptiness. With CENTS, he turns his eye to the absurdity of value ascription in particular. It is absurd that a nation’s currency should dissolve into worthlessness. It is absurd that a cent should be valued at hundreds/thousands of dollars. Yet, here we are.
+The digital scarcity of CENTS, its existence as a permanent set of 10,000, transforms this collection of pennies into a system with its own unique logics and rarities. Similarly to We Buy White Albums, the visual presence of the piece exists as time-based generative art. Each of these objects, initially identical, bear the marks of touch and time. I’ve witnessed collectors intricately dissect this set to determine its internal dynamics, and it reminds me of the way that individual words and phrases in texts accrue significance when they enter the scarce set of meanings referred to as “canon”.
+[IMAGE]
+
+Overall, CENTS performs a conceptual gesture that is uniquely relevant to its historical moment and to its medium. Digital objects on blockchain pose a novel form of contemporary conceptual art, as the nature of their medium inherently introduces a multivalent objecthood where a thing is simultaneously itself, not itself and an interpretation of itself. CENTS offers a living quintessence of the ways in which value is transformed by technology and time. Its meanings continue to emerge as participants co-create the intersubjective reality of its presence.
+
+3
+
+3
+
+================================================================
+[2] THE VOID — cents.vision/void-cents.json, fetched 2026-10-24
+    updatedAt 2026-10-24T04:34:49Z. Epoch: 24 October 2026. Changes weekly.
+================================================================
+count: 31
+states: {'voided': 29, 'consumed': 1, 'escaped': 1}
+intro: These CENTS still exist on-chain but are out of circulation: each is bundled inside a large UTXO held by a wallet that does not track inscriptions (an exchange, or a large private holder). They cannot be listed, traded, or moved on their own. The earliest has been held this way since 2024. They are not lost but voided, and are monitored here in case one leaves that state.
+legend voided: Voided: bundled in a large shared UTXO and unable to be listed or traded.
+legend escaped: Escaped: out of the large custodial UTXOs and below the 0.01 BTC threshold, whether moved to a sat-aware wallet or simply consolidated into a smaller one.
+legend consumed: Consumed. The holding wallet spent the UTXO, and the inscribed satoshi fell into the transaction fee, which is paid to the block's miner. The inscription is not destroyed: the satoshi persists and the image remains on it. It now sits in a mining-pool payout, held by a party with no reason to identify or isolate it. Recovery is possible in principle but highly unlikely.
+#8360 note: Settled, not recovered. #8360 left its large custodial UTXOs through an accidental service consolidation (a 112-output batch payout) and has been unmoved since 2026-10-07 in a 660,210-sat UTXO at a non-taproot wallet, with the inscription about 269,000 sats into the output (output #42). It is below the 0.01 BTC threshold but not in a collector's control: still bundled with other BTC and not tradeable as a collectible. It could be re-consolidated in a future spend.
+Derived: 31 Cents have entered the Void; none has been recovered (the
+one "escaped" Cent is recorded as "Settled, not recovered"; the consumed one as
+"Recovery is possible in principle but highly unlikely").
+
+================================================================
+[3] SETS — cents.vision/sets.html, fetched 2026-10-24
+================================================================
+The Traits Council has defined a number of Sets. Each set below lists its requirement and an example of qualifying Cents.
+(18 Sets listed on 2026-10-24, counting the three Contamination Sets and five Decades Sets separately. The knowledge brief's "14" is out of date; the film states no count.)
+
+================================================================
+[4] UCCA BEIJING — Rutherford Chang: Hundreds and Thousands
+    17 January – 12 April 2026. Live page: sovrn.art/exhibitions/ucca
+    (the retrieved corpus copy of this page is stale on curators; the live
+    page and data/museums.json give three: Philip Tinari, Aki Sasamoto and
+    Danielle Chang)
+================================================================
+UCCA Center for Contemporary Art · Beijing
+Rutherford Chang: Hundreds and Thousands
+17 January – 12 April 2026
+CENTS was exhibited in Hundreds and Thousands at UCCA Beijing, the first institutional and most comprehensive solo exhibition of Rutherford Chang’s work. Surveying two decades of practice, the retrospective was co-curated by UCCA Director Philip Tinari and the artist Aki Sasamoto, and presented in collaboration with the Estate of Rutherford Chang.
+Rutherford Chang, CENTS , 2017–2024, installation view Artist Rutherford Chang , 1979–2025 Work CENTS #1–10,000, 2017–2024; CENTS Block 839969, 2024; CENTS book Curators Philip Tinari and Aki Sasamoto Presented with The Estate of Rutherford Chang CENTS at UCCA
+CENTS is made from 10,000 American pennies minted before 1982 and valued for their copper content. Chang photographed each coin to record its particular wear and patina, then had the collection pressed into a single 31-kilogram copper cube. The images were inscribed on the Bitcoin blockchain, tying digital renderings of physical currency to virtual systems of value.
+At UCCA the collection could be explored on touchscreens or in a book, decades of circulation legible in the abrasions and discolouration of individual coins. With the U.S. Mint having permanently suspended penny production in November 2025, the copper block reads as a monument to the coin and to an economy in transition.
+The exhibition set CENTS alongside We Buy White Albums (2006–2025), Game Boy Tetris (2013–2018), Class of 2008 (2008–2012), NBC Nightly News (2004), The Epic (2004–2005) and Portraits by Tone (2005). Together they trace a practice built on accumulation, repetition and the slow revaluation of ordinary things.
+CENTS in the exhibition
+The exhibition
+Installation views, UCCA Center for Contemporary Art, Beijing, 2026. Photography Sun Shi. Courtesy UCCA and the Estate of Rutherford Chang.
+Press
+Trait Explorer ↗ Artist obituary ↗
+Rutherford Chang, CENTS , 2017–2024. Rutherford Chang: Hundreds and Thousands , 17 January – 12 April 2026, UCCA Center for Contemporary Art, Beijing. Co-curated by Philip Tinari and Aki Sasamoto, in collaboration with the Estate of Rutherford Chang, established in 2025.
+
+================================================================
+[5] END OF PENNY PRODUCTION — en.wikipedia.org/wiki/Penny_(United_States_coin),
+    read 2026-10-24; corroborated by AP via ABC7, "US Mint in Philadelphia
+    presses final pennies as the 1-cent coin gets canceled"
+================================================================
+The last penny produced for general circulation was minted at the U.S. Mint in Philadelphia on November 12, 2025.
+
+================================================================
+[6] TRAIT COUNCIL — house wording approved by the user (knowledge brief §4;
+    cents-bot knowledge/). Epoch: naming spanned roughly 2024-2026; the
+    cataloguing is described as operationally complete.
+================================================================
+The names came afterwards, from the collectors themselves, over two years of voting.
+Circulation made the marks; the Trait Council named them.
+Trait names include verdigris, obsidian, desert, ghost, fingerprints.
+
+================================================================
+[7] RELEASE — CENTS project description (2024-03-26) and mint metadata
+    (inscriptions dated 26 March 2024). The day is 25 or 26 March across
+    sources, so narration gives the month only.
+================================================================
+Released in March 2024 at one sat each.
+
+================================================================
+[8] ARTIST DATES — settled with the user 2026-10-24
+================================================================
+Rutherford Chang died on 24 January 2025. 9 February 2025 is the date of the New York Times obituary, not of his death.
+
+================================================================
+[9] EPOCH CONVENTION
+================================================================
+The film speaks from 24 October 2026. A source deictic (now, still, currently,
+today) resolves to the SOURCE'S date and is converted to an absolute date in
+narration. Three moments: THEN (2017 to March 2024, the making and release),
+SINCE (2024 to 2025: naming, the artist's death, the end of the penny), NOW
+(2026: UCCA, the Void tally, dated on screen).

@@ -1,0 +1,193 @@
+{
+ "_what": "Every narration sentence maps to a span of script/essay.txt, the sources of record for this film.",
+ "essay_version": "draft 1, 2026-10-24",
+ "thesis": "CENTS is unfinished because its medium is the continual redefinition of value and meaning, carried out by its participants in time; the marks of circulation, the Council's names and Sets, the artist's death, the end of the penny, a museum show and the Void are each one more redefinition, and none closes the work.",
+ "script_target": "2:00-3:00",
+ "epoch_convention": "See essay [9]. Film speaks from 24 October 2026.",
+ "claims": [
+  {
+   "say": "Ten thousand copper cents, photographed, melted into a block, and inscribed on Bitcoin.",
+   "kind": "paraphrase",
+   "span": "He then archivally photographed them and cataloged each of their dates and mintages. Next, he removed them from circulation by melting them down into a solid copper block. Once destroyed, he inscribed each of the pennies as Bitcoin ordinals",
+   "epoch": "2017-2024, the making",
+   "as_of": "essay [1], Medium 2025-10-30"
+  },
+  {
+   "say": "So where is the work?",
+   "kind": "addition",
+   "approved": true,
+   "note": "A rhetorical question that sets up the essay's claim about medium; asserts nothing."
+  },
+  {
+   "say": "Not in the coins, which were melted, nor in any one image, nor in the block.",
+   "kind": "paraphrase",
+   "span": "its medium is the gesture of its continual becoming, rather than any of its visible manifestations",
+   "epoch": "2017-2024",
+   "as_of": "essay [1], Medium 2025-10-30"
+  },
+  {
+   "say": "Its medium is the gesture of its continual becoming, rather than any of its visible manifestations.",
+   "kind": "quotation",
+   "span": "its medium is the gesture of its continual becoming, rather than any of its visible manifestations"
+  },
+  {
+   "say": "A becoming does not arrive finished.",
+   "kind": "paraphrase",
+   "span": "CENTS is a becoming, a gesture that unfolds continually through the actions of its participants in time.",
+   "epoch": "not time-varying: a statement of the concept",
+   "as_of": "essay [1], Medium 2025-10-30",
+   "epoch_note": "Flagged only because the span contains the project name CENTS, which the money detector reads as \"cents\"."
+  },
+  {
+   "say": "It unfolds continually, through the actions of its participants, in time.",
+   "kind": "paraphrase",
+   "span": "a gesture that unfolds continually through the actions of its participants in time",
+   "note": "Adapted (subject \"It\", added commas), so not tagged as a quotation."
+  },
+  {
+   "say": "The cents left the mint identical, and decades of hands, pockets and air marked each one differently.",
+   "kind": "paraphrase",
+   "span": "Each of these objects, initially identical, bear the marks of touch and time.",
+   "epoch": "1910-1982 mint years and the decades of circulation after",
+   "as_of": "essay [1], Medium 2025-10-30"
+  },
+  {
+   "say": "So the piece is a kind of time-based generative art.",
+   "kind": "paraphrase",
+   "span": "the visual presence of the piece exists as time-based generative art"
+  },
+  {
+   "say": "In March 2024, Chang released the ten thousand inscriptions at one sat each, into indeterminate, continual revaluation.",
+   "kind": "paraphrase",
+   "span": "indeterminate, continual revaluation",
+   "epoch": "March 2024 (release)",
+   "as_of": "essay [1] 2025-10-30; release month from [7], project description 2024-03-26"
+  },
+  {
+   "say": "Then the participants began to read the set.",
+   "kind": "paraphrase",
+   "span": "I've witnessed collectors intricately dissect this set to determine its internal dynamics",
+   "epoch": "2024 onward",
+   "as_of": "essay [1], Medium 2025-10-30"
+  },
+  {
+   "say": "Over two years of voting, the Trait Council named what circulation had made: verdigris, obsidian, desert, ghost, fingerprints.",
+   "kind": "paraphrase",
+   "span": "The names came afterwards, from the collectors themselves, over two years of voting.",
+   "epoch": "roughly 2024-2026",
+   "as_of": "house wording [6], approved by the user; knowledge brief 2026-10-24"
+  },
+  {
+   "say": "It defined Sets, ways of seeing the ten thousand as one structure.",
+   "kind": "paraphrase",
+   "span": "The Traits Council has defined a number of Sets.",
+   "epoch": "Sets as listed 2026-10-24",
+   "as_of": "cents.vision/sets.html, fetched 2026-10-24"
+  },
+  {
+   "say": "This is how a canon forms: words and phrases accrue significance as readers return to them.",
+   "kind": "paraphrase",
+   "span": "the way that individual words and phrases in texts accrue significance when they enter the scarce set of meanings referred to as “canon”"
+  },
+  {
+   "say": "Each reading redefines what a Cent is, and what it is worth.",
+   "kind": "paraphrase",
+   "span": "creating a situation where their value and meaning is indeterminate and continually redefined",
+   "epoch": "March 2024 onward, continuing",
+   "as_of": "essay [1], Medium 2025-10-30"
+  },
+  {
+   "say": "Rutherford Chang died in January 2025.",
+   "kind": "paraphrase",
+   "span": "Rutherford Chang died on 24 January 2025.",
+   "epoch": "24 January 2025",
+   "as_of": "settled with the user 2026-10-24 [8]"
+  },
+  {
+   "say": "That November, the last penny for general circulation was struck.",
+   "kind": "paraphrase",
+   "span": "The last penny produced for general circulation was minted at the U.S. Mint in Philadelphia on November 12, 2025.",
+   "epoch": "12 November 2025",
+   "as_of": "Wikipedia, read 2026-10-24 [5]"
+  },
+  {
+   "say": "The work went on.",
+   "kind": "addition",
+   "approved": true,
+   "note": "Bridge sentence; the next sentence (UCCA, January 2026) is its evidence."
+  },
+  {
+   "say": "In January 2026, CENTS was shown at UCCA Beijing, in the first institutional solo exhibition of Chang's work.",
+   "kind": "paraphrase",
+   "span": "the first institutional and most comprehensive solo exhibition of Rutherford Chang’s work",
+   "epoch": "17 January - 12 April 2026",
+   "as_of": "UCCA page via cents.gallery/ucca [4]"
+  },
+  {
+   "say": "Even loss is not an ending here.",
+   "kind": "paraphrase",
+   "span": "They are not lost but voided, and are monitored here in case one leaves that state."
+  },
+  {
+   "say": "Some Cents have been swept, by wallets that do not track inscriptions, into vast shared holdings of bitcoin.",
+   "kind": "paraphrase",
+   "span": "each is bundled inside a large UTXO held by a wallet that does not track inscriptions",
+   "epoch": "2024 to 24 October 2026",
+   "as_of": "void-cents.json updatedAt 2026-10-24 [2]"
+  },
+  {
+   "say": "They cannot be traded, but they are not destroyed.",
+   "kind": "paraphrase",
+   "span": "They cannot be listed, traded, or moved on their own.",
+   "epoch": "24 October 2026",
+   "as_of": "void-cents.json updatedAt 2026-10-24 [2]"
+  },
+  {
+   "say": "As of 24 October 2026, thirty-one have entered the Void, and none has been recovered.",
+   "kind": "paraphrase",
+   "span": "Derived: 31 Cents have entered the Void; none has been recovered",
+   "epoch": "24 October 2026",
+   "as_of": "void-cents.json updatedAt 2026-10-24T04:34:49Z [2]"
+  },
+  {
+   "say": "Each Cent is simultaneously itself, not itself, and an interpretation of itself.",
+   "kind": "paraphrase",
+   "span": "a thing is simultaneously itself, not itself and an interpretation of itself",
+   "epoch": "not time-varying: a statement of the concept",
+   "as_of": "essay [1], Medium 2025-10-30",
+   "epoch_note": "Flagged only because \"Cent\" (the artwork) reads to the money detector as \"cent\"."
+  },
+  {
+   "say": "Its meanings continue to emerge as participants co-create the intersubjective reality of its presence.",
+   "kind": "quotation",
+   "span": "Its meanings continue to emerge as participants co-create the intersubjective reality of its presence."
+  }
+ ],
+ "distinctions_kept": [
+  {
+   "distinction": "the marks on a cent (circulation) vs the names of its traits (Trait Council)",
+   "verdict": "kept",
+   "where": "'named what circulation had made'"
+  },
+  {
+   "distinction": "Chang's acts (making, release) vs what participants did after (naming, Sets, the Void)",
+   "verdict": "kept",
+   "where": "Chang is the subject only of the release sentence; naming and Sets are the Council's. No sentence gives Chang a motive for what followed."
+  },
+  {
+   "distinction": "the end of the penny / the artist's death vs the end of CENTS",
+   "verdict": "kept",
+   "where": "hinge followed by 'The work went on' and UCCA; neither is the last beat"
+  },
+  {
+   "distinction": "voided vs lost or destroyed",
+   "verdict": "kept",
+   "where": "'cannot be traded, but they are not destroyed'"
+  },
+  {
+   "distinction": "satoshi vs inscription vs image vs penny",
+   "verdict": "kept",
+   "where": "'released the ten thousand inscriptions at one sat each'; the block line does not claim the block holds the images"
+  }
+ ]
+}

@@ -22,7 +22,8 @@ twice. Breaking them is the most likely way to waste a session.
 - **CENTS has no ending.** Present it as a continual process, becoming, a
   system. Do not close on the artist's death or the penny's discontinuation;
   both are facts that belong early or at a hinge, never last.
-- **Past tense for Chang.** He died 9 February 2025. Never "Chang is/believes/
+- **Past tense for Chang.** He died 24 January 2025. (Corrected 2026-10-24: this line said 9 February
+  2025, which is the date of the NYT obituary, not of his death.) Never "Chang is/believes/
   thinks/wants" — the glossary enforces this.
 - **Narration speaks ideas directly.** No "the essay argues", "the author
   writes". Attribution belongs in credits.

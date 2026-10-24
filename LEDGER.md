@@ -20,6 +20,14 @@ row moves to `LEDGER_ARCHIVE.md` verbatim in the same edit that supersedes it.
 
 ## Candidates — bitten once
 
+- **The project's name reads as money.** `g_epochs` matches `\bcents?\b`
+  case-insensitively, so "CENTS" in a span and "Cent" (the artwork) in narration
+  are both flagged "states a money value". Three becoming-film claims were
+  flagged this way (2026-10-24). Answered honestly with an epoch of "not
+  time-varying" and an `epoch_note`, not by rewording the script. The detector is
+  left as is: an over-trigger costs a note, an under-trigger ships an undated
+  price.
+
 Written as a near-miss identity: the two things are close enough that confusing
 them was reasonable.
 
@@ -248,6 +256,12 @@ control goes RED on each, against each one's own first pair.
 
 **The pair:** *a control written for a subject is not a control derived from it.*
 Written twice now, so it is a rule.
+
+*Third instance, 2026-10-24, becoming film.* `corrupt_fabricated_span()` still
+used `claims[1]`. On this ledger `claims[1]` is an addition, which `g_spans`
+never reads, so the control showed **VACUOUS**. Fixed the same way: the first
+claim tagged quotation or paraphrase. Seen VACUOUS on the old code and RED on the
+new against becoming, and RED on introduction and objecthood after the fix.
 
 ### The key is an instrument, and a wrong key reads as a failing subject
 
