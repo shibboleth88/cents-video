@@ -69,7 +69,32 @@ const Readout: React.FC<{ readout?: string; caption?: string; from?: number; k?:
   );
 };
 
-type Hero = { n: number; caption?: string; at_phrase?: string };
+/**
+ * Patina dot colours, sampled from the media-library Set diagrams
+ * (patina_sets_diagram.png in the user's cents-graphics folder), so the films
+ * use the same key the community already reads.
+ */
+export const PATINA_DOT = {
+  verdigris: "rgb(124,179,66)",
+  obsidian: "rgb(66,66,66)",
+  desert: "rgb(224,224,224)",
+  red: "rgb(244,67,54)",
+  gold: "rgb(255,204,50)",
+  orange: "rgb(255,152,0)",
+} as const;
+export type Patina = keyof typeof PATINA_DOT;
+
+type Hero = { n: number; caption?: string; at_phrase?: string; patina?: Patina };
+
+/** The key dot under a Cent. Obsidian gets a light rim, or it vanishes into the background. */
+const Dot: React.FC<{ patina: Patina; d: number }> = ({ patina, d }) => {
+  const c = PATINA_DOT[patina];
+  if (!c) throw new Error(`no dot colour for patina "${patina}"`);
+  return (
+    <div style={{ width: d, height: d, borderRadius: "50%", background: c,
+                  boxShadow: `inset 0 -${d * 0.12}px ${d * 0.2}px rgba(0,0,0,0.25), 0 0 0 2px rgba(255,255,255,${patina === "obsidian" ? 0.35 : 0.08})` }} />
+  );
+};
 
 /**
  * A handful of named Cents: the example Cents of a Set, or one per type as the
@@ -88,7 +113,8 @@ export const CentRow: React.FC<Anchored & {
   const at = useAt(props);
   if (cents.length === 0) throw new Error("CentRow: no Cents");
   const W = STAGE.x1 - STAGE.x0, H = STAGE.y1 - STAGE.y0;
-  const labelH = labelsUnder ? 64 : 0;
+  const dots = cents.some((c) => c.patina);
+  const labelH = labelsUnder ? 64 : dots ? 52 : 0;
   // Fit cells that include the label band, then take the coin out of the cell.
   // `cols` fixes the arrangement (three in a row reads as a set of three).
   const lay = cols
@@ -122,6 +148,11 @@ export const CentRow: React.FC<Anchored & {
                                     opacity: t * lit, transform: `scale(${0.7 + 0.3 * t})`,
                                     filter: "drop-shadow(0 10px 18px rgba(0,0,0,0.5))" }}>
               <CentImage n={c.n} size={size} />
+              {c.patina ? (
+                <div style={{ display: "flex", justifyContent: "center", marginTop: 14 }}>
+                  <Dot patina={c.patina} d={Math.round(Math.max(24, Math.min(40, size * 0.14)))} />
+                </div>
+              ) : null}
             </div>
           );
         })}

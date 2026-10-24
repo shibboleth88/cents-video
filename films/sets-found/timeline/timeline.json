@@ -108,22 +108,26 @@
      {
       "n": 412,
       "caption": "notable verdigris",
-      "at_phrase": "Verdigris, obsidian, desert"
+      "at_phrase": "Verdigris, obsidian, desert",
+      "patina": "verdigris"
      },
      {
       "n": 4679,
       "caption": "notable obsidian",
-      "at_phrase": "obsidian, desert and"
+      "at_phrase": "obsidian, desert and",
+      "patina": "obsidian"
      },
      {
       "n": 215,
       "caption": "notable desert",
-      "at_phrase": "desert and red are"
+      "at_phrase": "desert and red are",
+      "patina": "desert"
      },
      {
       "n": 3398,
       "caption": "notable red",
-      "at_phrase": "red are the base"
+      "at_phrase": "red are the base",
+      "patina": "red"
      }
     ]
    }
@@ -144,16 +148,20 @@
     "subtitle": "significant or more",
     "cents": [
      {
-      "n": 2956
+      "n": 2956,
+      "patina": "verdigris"
      },
      {
-      "n": 6059
+      "n": 6059,
+      "patina": "obsidian"
      },
      {
-      "n": 8353
+      "n": 8353,
+      "patina": "desert"
      },
      {
-      "n": 337
+      "n": 337,
+      "patina": "red"
      }
     ]
    }
@@ -173,22 +181,28 @@
     "title": "Spectrum Set",
     "cents": [
      {
-      "n": 6078
+      "n": 6078,
+      "patina": "verdigris"
      },
      {
-      "n": 2568
+      "n": 2568,
+      "patina": "obsidian"
      },
      {
-      "n": 4554
+      "n": 4554,
+      "patina": "desert"
      },
      {
-      "n": 6223
+      "n": 6223,
+      "patina": "red"
      },
      {
-      "n": 4788
+      "n": 4788,
+      "patina": "gold"
      },
      {
-      "n": 7799
+      "n": 7799,
+      "patina": "orange"
      }
     ],
     "caption": "4 base patinas, plus gold and orange"
@@ -209,16 +223,20 @@
     "title": "Fulls Set",
     "cents": [
      {
-      "n": 3981
+      "n": 3981,
+      "patina": "verdigris"
      },
      {
-      "n": 7823
+      "n": 7823,
+      "patina": "obsidian"
      },
      {
-      "n": 9533
+      "n": 9533,
+      "patina": "desert"
      },
      {
-      "n": 1771
+      "n": 1771,
+      "patina": "red"
      }
     ]
    }
@@ -256,22 +274,28 @@
     "title": "Full Spectrum Set",
     "cents": [
      {
-      "n": 9786
+      "n": 9786,
+      "patina": "verdigris"
      },
      {
-      "n": 3861
+      "n": 3861,
+      "patina": "obsidian"
      },
      {
-      "n": 1079
+      "n": 1079,
+      "patina": "desert"
      },
      {
-      "n": 8185
+      "n": 8185,
+      "patina": "red"
      },
      {
-      "n": 4273
+      "n": 4273,
+      "patina": "gold"
      },
      {
-      "n": 2785
+      "n": 2785,
+      "patina": "orange"
      }
     ]
    }
