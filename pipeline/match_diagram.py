@@ -1,13 +1,17 @@
 import sys, json, numpy as np
+"""Identify which Cents a diagram shows: match each coin blob against all 10,000
+on-chain images. Trust a match only with a clear margin over the runner-up, and
+check it against metadata.json. Usage: CENTS_SRC=<sovrn-onchain>/cents python3 -I pipeline/match_diagram.py <png>..."""
 from PIL import Image, ImageFilter
 from scipy import ndimage
-SRC='/home/claude/shibboleth88/sovrn-onchain/cents/%d.webp'
+import os
+SRC=os.environ.get('CENTS_SRC','../sovrn-onchain/cents')+'/%d.webp'  # sovrn-onchain/cents
 R=32
 def vec(im):
     a=np.asarray(im.convert('RGB').resize((R,R),Image.LANCZOS),dtype=np.float32)
     yy,xx=np.mgrid[:R,:R]; m=((yy-R/2+.5)**2+(xx-R/2+.5)**2)<(R/2-1.5)**2
     v=a[m]; v=v-v.mean(0); return (v/ (np.linalg.norm(v)+1e-6)).ravel()
-cache='/tmp/claude-0/-home-claude-cents-video/0e17492a-9ca4-5528-bc7c-8d2071044c38/scratchpad/lib32.npy'
+cache=os.environ.get('MATCH_CACHE','/tmp/lib32.npy')  # 32px vectors of all 10,000; ~2 min to build
 try: LIB=np.load(cache)
 except FileNotFoundError:
     vs=[]
