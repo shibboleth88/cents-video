@@ -31,7 +31,8 @@ const SCENES: { id: string; from: string | null; to: string | null }[] = [
   { id: "y1943", from: "1943 is missing", to: "1944 At Bretton" },
   { id: "y1944", from: "1944 At Bretton", to: "1964 The silver" },
   { id: "y1964", from: "1964 The silver", to: "1971 The dollar" },
-  { id: "y1971", from: "1971 The dollar", to: "1979 Inflation" },
+  { id: "y1971", from: "1971 The dollar", to: "Material is detached" },
+  { id: "y1971b", from: "Material is detached", to: "1979 Inflation" },
   { id: "y1979", from: "1979 Inflation", to: "1982 Copper has" },
   { id: "y1982", from: "1982 Copper has", to: "In the Block" },
   { id: "block", from: "In the Block", to: "As inscriptions" },
@@ -132,6 +133,15 @@ const Scene: React.FC<{ id: string }> = ({ id }) => {
     case "y1944": return <Hero year="1944" story="Bretton Woods conference, July 1944 (archival)" />;
     case "y1964": return <Hero year="1964" story="1964 coin shortage; silver dime beside a clad dime" extra={`1965: ${chart.columns["1965"]!.count}`} />;
     case "y1971": return <Hero year="1971" story="Nixon address, 15 August 1971 (your clip)" />;
+    case "y1971b": {
+      // The Cent alone, the chart gone: the object without the system that priced it.
+      const t = interpolate(f, [0, 30], [0, 1], { extrapolateRight: "clamp" });
+      return (<AbsoluteFill>
+        <div style={{ position: "absolute", left: 540 - 240, top: 560, opacity: t }}>
+          <CentImage n={picks.heroes["1971"]!} size={480} />
+        </div>
+      </AbsoluteFill>);
+    }
     case "y1979": return <Hero year="1979" story="no archival image; the line stays quiet" />;
     case "y1982": return <Hero year="1982" story="1982: copper to copper-plated zinc" />;
     case "block":
@@ -156,7 +166,7 @@ export const Animatic: React.FC = () => {
   const end = Math.ceil(al.duration * FPS);
   return (
     <AbsoluteFill style={{ background: COLOR.bg }}>
-      <Audio src={staticFile("secret-history/vo_take_a.mp3")} />
+      <Audio src={staticFile("secret-history/vo.mp3")} />
       {SCENES.map((s) => {
         const from = s.from ? at(s.from) : 0;
         const to = s.to ? at(s.to) : end + FPS;

@@ -10,8 +10,9 @@
    "why": "Habitual distancing phrase."
   },
   {
-   "pattern": "(?i)\\bChang (is|believes|thinks|wants)\\b",
-   "why": "He died on 24 January 2025. The house guidance is past tense throughout. (Correction 2026-10-24: the introduction glossary says February 2025, the date of the NYT obituary.)"
+   "pattern": "(?i)\\bChang (is(?! born\\b)|believes|thinks|wants)\\b",
+   "why": "He died on 24 January 2025. The house guidance is past tense throughout. (Correction 2026-10-24: the introduction glossary says February 2025, the date of the NYT obituary.)",
+   "exception": "'Chang is born' is allowed in the historical-present year lines: approved by the user 2026-10-24 ('Present tense for \"rutherford chang is born\" makes sense there'). Every other 'Chang is' still fails."
   },
   {
    "pattern": "(?i)\\b(all|every) (collector|holder)s?\\b",

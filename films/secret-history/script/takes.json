@@ -17,5 +17,22 @@
    "generation_id": "tuYTscrcKJkFzlEjtcux"
   }
  ],
- "chosen": null
+ "chosen": {
+  "id": "B",
+  "by": "user 2026-10-24",
+  "why": "articulation and clarity are superior"
+ },
+ "splice": {
+  "file": "audio/vo_v2_takeB_spliced.wav",
+  "base": "B",
+  "insert": {
+   "file": "audio/ins_1.mp3",
+   "generation_id": "zmAyCg9XuwwCYOJYPHIG",
+   "from_s": 7.25,
+   "alt": "audio/ins_2.mp3 (ZOEqeNjxiF6yK4hcjhvG)"
+  },
+  "cut_at_s": 56.84,
+  "why_here": "Take B's silence after 'fiat.' runs 56.54-57.64 s; the insert's silence before 'Material' runs 7.04-7.52 s. Both cuts sit inside measured silence (silencedetect -40 dB), with 40 ms fades. Loudness: take B -26.6 dB mean, insert -26.8 dB.",
+  "duration_s": 102.03
+ }
 }

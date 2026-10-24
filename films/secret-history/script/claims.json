@@ -1,6 +1,6 @@
 {
  "_what": "Every narration sentence maps to a span of script/essay.txt, the assembled sources of record for this film.",
- "essay_version": "v2 locked 2026-10-24",
+ "essay_version": "v3 locked 2026-10-24 (v2 plus the user's second 1971 line)",
  "thesis": "Each mint year in CENTS marks a moment when what money meant was being changed; melted, the dates vanish into one mass, and inscribed, the value and meaning of each year are continually redefined by participants.",
  "script_target": "about 90 s; take A 90.9 s, take B 93.2 s",
  "epoch_convention": "Historical present: each year line describes its own year. The film's present is 2026; see essay block [11].",
@@ -98,6 +98,14 @@
    "span": "the year US currency became fiat",
    "epoch": "1971",
    "as_of": "the user's Chronicle caption, 5 Sep 2026"
+  },
+  {
+   "say": "Material is detached from value, and the effects reach far beyond currency alone into humanity's fundamental relationship to objects.",
+   "kind": "addition",
+   "approved": "user, in thread 2026-10-24 13:44",
+   "epoch": "from August 15, 1971",
+   "as_of": "2026-10-24",
+   "note": "The user's own line, interpretation; spoken as a reading of 1971, not attributed to Chang."
   },
   {
    "say": "1979.",
