@@ -1792,26 +1792,26 @@
   },
   {
    "word": "to",
-   "start": 173.72,
-   "end": 173.8
+   "start": 175.32,
+   "end": 175.4
   },
   {
    "word": "explore",
-   "start": 173.92,
-   "end": 174.2
+   "start": 175.52,
+   "end": 175.8
   },
   {
    "word": "the",
-   "start": 174.24,
-   "end": 174.28
+   "start": 175.84,
+   "end": 175.88
   },
   {
    "word": "project.",
-   "start": 174.36,
-   "end": 175.16
+   "start": 175.96,
+   "end": 176.76
   }
  ],
- "duration": 179.08,
+ "duration": 185.68,
  "source_audio": "public/vo.wav",
  "model": "precomputed:films/sets-found/audio/vo_words.json",
  "divergences": [

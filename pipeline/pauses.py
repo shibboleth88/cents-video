@@ -60,6 +60,7 @@ def quietest(audio: np.ndarray, t0: float, t1: float) -> int:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("audio"); ap.add_argument("words"); ap.add_argument("pauses")
+    ap.add_argument("--tail", type=float, default=TAIL, help="trailing silence for credits and end graphics")
     ap.add_argument("--out-wav", required=True); ap.add_argument("--out-words", required=True)
     a = ap.parse_args()
     audio = decode(pathlib.Path(a.audio))
@@ -93,7 +94,7 @@ def main() -> int:
         parts += [seg, np.zeros(int(round(sec * SR)), np.float32)]
         prev = s
     last = audio[prev:].copy(); last[:fade] *= np.linspace(0, 1, fade, dtype=np.float32)
-    parts += [last, np.zeros(int(TAIL * SR), np.float32)]
+    parts += [last, np.zeros(int(a.tail * SR), np.float32)]
     out = np.concatenate(parts)
 
     shifted = []
@@ -104,7 +105,7 @@ def main() -> int:
     # Floor: the output must be exactly the input plus every pause plus the tail,
     # and no word may have moved by anything but whole pauses.
     added = sum(round(sec * SR) for _, sec, _, _ in cuts)
-    if len(out) != len(audio) + added + int(TAIL * SR):
+    if len(out) != len(audio) + added + int(a.tail * SR):
         sys.exit("output length is not input + pauses + tail; refusing to write")
     total = round(added / SR, 3)
     if abs((shifted[-1]["start"] - words[-1]["start"]) - total) > 1e-3:

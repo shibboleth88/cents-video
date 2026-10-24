@@ -1030,7 +1030,7 @@
     "at_phrase": "On cents.vision"
    },
    "end": {
-    "after_phrase": "explore the project"
+    "at_phrase": "and many more features"
    },
    "purpose": "Where to go next, shown as the site itself: the Traits Lab, the Traits Atlas, claimed Collector Walls with their Set badges, the Sets page. The film hands on rather than closing.",
    "visual_kind": "code",
@@ -1081,21 +1081,71 @@
        1080
       ],
       "caption": "Collector Walls"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s21b_more",
+   "start": {
+    "at_phrase": "and many more features"
+   },
+   "end": {
+    "after_phrase": "explore the project"
+   },
+   "purpose": "The rest of what cents.vision tracks, briefly, from the user's own captures: holders and the floor, sales volume, the Void. Wallet rows on the Void cards are cut away.",
+   "visual_kind": "code",
+   "component": "ScreenTour",
+   "props": {
+    "title": "cents.vision",
+    "screens": [
+     {
+      "src": "holders_floor.jpg",
+      "caption": "Holders",
+      "aspect": 0.42,
+      "from": [
+       0,
+       170,
+       700
+      ],
+      "to": [
+       380,
+       170,
+       700
+      ]
      },
      {
-      "at_phrase": "and many more features",
-      "src": "03_sets_viewport.jpg",
+      "after_phrase": "many more features",
+      "delay": 0.4,
+      "src": "sales_volume.jpg",
+      "caption": "Sales",
+      "aspect": 0.42,
       "from": [
        0,
        0,
-       1080
+       700
       ],
       "to": [
+       380,
+       10,
+       700
+      ]
+     },
+     {
+      "at_phrase": "to explore the project",
+      "src": "void.jpg",
+      "caption": "The Void",
+      "aspect": 0.42,
+      "from": [
        0,
-       250,
-       1080
+       0,
+       760
       ],
-      "caption": "Sets"
+      "to": [
+       320,
+       110,
+       760
+      ]
      }
     ]
    }
@@ -1108,9 +1158,9 @@
    "end": {
     "at_end": true
    },
-   "purpose": "Credit the artwork and the Council, in the silence left for them.",
+   "purpose": "Credits in the silence after the narration, then a wall of Cents as the final graphic: the collection continuing, not a closing card.",
    "visual_kind": "code",
-   "component": "Credits",
+   "component": "EndWall",
    "props": {
     "lines": [
      "Artwork: CENTS, by Rutherford Chang",
@@ -1118,7 +1168,8 @@
      "Sets and trait names: the CENTS Trait Council",
      "Script: shibboleth"
     ],
-    "url": "cents.gallery"
+    "url": "cents.gallery",
+    "wall_after": 4.2
    }
   }
  ],

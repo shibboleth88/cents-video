@@ -215,13 +215,9 @@ On cents.vision, you can find a Trait Atlas
 that defines each trait,
 
 55
-00:02:48,159 --> 00:02:49,840
-as well as Collector Walls that show
+00:02:48,159 --> 00:02:51,039
+as well as Collector Walls that show completed Sets,
 
 56
-00:02:49,919 --> 00:02:53,159
-completed Sets, and many more
-
-57
-00:02:53,240 --> 00:02:55,159
-features to explore the project.
+00:02:52,560 --> 00:02:56,759
+and many more features to explore the project.
