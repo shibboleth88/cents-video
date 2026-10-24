@@ -219,5 +219,13 @@ that defines each trait,
 as well as Collector Walls that show completed Sets,
 
 56
-00:02:52,560 --> 00:02:56,759
+00:02:52,560 --> 00:02:55,159
 and many more features to explore the project.
+
+57
+00:02:56,580 --> 00:02:58,419
+The CENTSbot also lives there
+
+58
+00:02:58,740 --> 00:03:00,979
+to answer any questions you might have.

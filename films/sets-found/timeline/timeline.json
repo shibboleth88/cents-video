@@ -1039,17 +1039,18 @@
     "title": "cents.vision",
     "screens": [
      {
-      "src": "01_home_lab_viewport.jpg",
+      "src": "traits_lab_filters.jpg",
       "from": [
        0,
        0,
-       1080
+       560
       ],
       "to": [
-       0,
-       300,
-       760
+       420,
+       40,
+       560
       ],
+      "aspect": 0.42,
       "caption": "Traits Lab"
      },
      {
@@ -1091,7 +1092,7 @@
     "at_phrase": "and many more features"
    },
    "end": {
-    "after_phrase": "explore the project"
+    "at_phrase": "The CENTSbot also"
    },
    "purpose": "The rest of what cents.vision tracks, briefly, from the user's own captures: holders and the floor, sales volume, the Void. Wallet rows on the Void cards are cut away.",
    "visual_kind": "code",
@@ -1115,11 +1116,8 @@
       ]
      },
      {
-      "after_phrase": "many more features",
-      "delay": 0.4,
+      "at_phrase": "to explore the project",
       "src": "sales_volume.jpg",
-      "caption": "Sales",
-      "aspect": 0.42,
       "from": [
        0,
        0,
@@ -1129,13 +1127,13 @@
        380,
        10,
        700
-      ]
+      ],
+      "aspect": 0.42,
+      "caption": "Sales"
      },
      {
-      "at_phrase": "to explore the project",
+      "after_phrase": "explore the project",
       "src": "void.jpg",
-      "caption": "The Void",
-      "aspect": 0.42,
       "from": [
        0,
        0,
@@ -1145,7 +1143,40 @@
        320,
        110,
        760
-      ]
+      ],
+      "aspect": 0.42,
+      "caption": "The Void"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s21c_bot",
+   "start": {
+    "at_phrase": "The CENTSbot also"
+   },
+   "end": {
+    "after_phrase": "questions you might have"
+   },
+   "purpose": "The CENTSbot on cents.vision, from the user's own capture: where a viewer can take a question next.",
+   "visual_kind": "code",
+   "component": "ScreenTour",
+   "props": {
+    "title": "cents.vision",
+    "screens": [
+     {
+      "src": "centsbot.jpg",
+      "from": [
+       60,
+       0,
+       960
+      ],
+      "to": [
+       60,
+       850,
+       960
+      ],
+      "caption": "CENTSbot"
      }
     ]
    }
@@ -1153,7 +1184,7 @@
   {
    "shot_id": "s22_credits",
    "start": {
-    "after_phrase": "explore the project"
+    "after_phrase": "questions you might have"
    },
    "end": {
     "at_end": true

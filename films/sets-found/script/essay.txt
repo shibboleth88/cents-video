@@ -122,3 +122,11 @@ absolute date in narration. Three moments are kept apart:
 | Traits Atlas | https://cents.vision/traits-atlas.html | The codebook: how every trait is defined. |
 | Collectors | https://cents.vision/collectors.html | "Collector Walls" — a card per wallet, with clubs, sets, and badges. |
 - **Mint mark:** none (Philadelphia), S (San Francisco), D (Denver).
+
+[10] CENTS BOT ON CENTS.VISION — shibboleth88/cents-bot CLAUDE.md and
+    EMBED_HANDOFF.md, read 2026-10-24; and the user's screenshot of the chat
+    panel on cents.vision, 24 Oct 2026. Verbatim lines.
+================================================================
+### Web chat widget
+Embedded on cents.vision.
+cents.vision's `cents-bot-widget.js` [...] frame[s] the root URL with no query string

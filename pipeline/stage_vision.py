@@ -22,7 +22,7 @@ STRIP = range(2, 6)
 # screen shares one coordinate system. The Void cards list the holding wallet
 # under each Cent; everything from that row down is cut away (ADDRESS_CUT, in
 # the capture's own pixels), so no address reaches the screen.
-USER = {"holders_floor": None, "sales_volume": None, "void": 1204}
+USER = {"holders_floor": None, "sales_volume": None, "void": 1204, "traits_lab_filters": None, "centsbot": None}
 STEP = 1536
 
 def main() -> int:

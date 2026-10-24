@@ -2168,25 +2168,103 @@
  {
   "text": "to",
   "type": "word",
-  "start": 175.32,
-  "end": 175.4
+  "start": 173.72,
+  "end": 173.8
  },
  {
   "text": "explore",
   "type": "word",
-  "start": 175.52,
-  "end": 175.8
+  "start": 173.92,
+  "end": 174.2
  },
  {
   "text": "the",
   "type": "word",
-  "start": 175.84,
-  "end": 175.88
+  "start": 174.24,
+  "end": 174.28
  },
  {
   "text": "project.",
   "type": "word",
-  "start": 175.96,
-  "end": 176.76
+  "start": 174.36,
+  "end": 175.16
+ },
+ {
+  "text": "The",
+  "type": "word",
+  "start": 176.58,
+  "end": 176.74
+ },
+ {
+  "text": "CENTS",
+  "type": "word",
+  "start": 176.9,
+  "end": 177.1
+ },
+ {
+  "text": "bot",
+  "type": "word",
+  "start": 177.14,
+  "end": 177.38
+ },
+ {
+  "text": "also",
+  "type": "word",
+  "start": 177.54,
+  "end": 177.78
+ },
+ {
+  "text": "lives",
+  "type": "word",
+  "start": 177.86,
+  "end": 178.1
+ },
+ {
+  "text": "there",
+  "type": "word",
+  "start": 178.18,
+  "end": 178.42
+ },
+ {
+  "text": "to",
+  "type": "word",
+  "start": 178.74,
+  "end": 178.82
+ },
+ {
+  "text": "answer",
+  "type": "word",
+  "start": 178.9,
+  "end": 179.14
+ },
+ {
+  "text": "any",
+  "type": "word",
+  "start": 179.3,
+  "end": 179.46
+ },
+ {
+  "text": "questions",
+  "type": "word",
+  "start": 179.54,
+  "end": 179.94
+ },
+ {
+  "text": "you",
+  "type": "word",
+  "start": 180.02,
+  "end": 180.1
+ },
+ {
+  "text": "might",
+  "type": "word",
+  "start": 180.18,
+  "end": 180.26
+ },
+ {
+  "text": "have.",
+  "type": "word",
+  "start": 180.34,
+  "end": 180.98
  }
 ]

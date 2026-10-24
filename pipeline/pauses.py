@@ -14,8 +14,10 @@ pauses.json: [{"after": "<phrase ending at the cut>", "seconds": 1.4}, ...]
 Each phrase must match the transcript exactly once. The cut goes at the
 quietest 10 ms near the gap after the phrase's last word. Word timings from
 a recogniser run a little late, so the search starts up to 0.3 s before the
-word's reported end. A cut louder than QUIET_DB (relative to the take's RMS)
-would split a sound, and is refused rather than written.
+word's reported end. A cut is refused unless the LOUDEST 10 ms within 25 ms of
+it is below QUIET_DB (relative to the take's RMS): a single quiet 10 ms window
+can sit inside a word (the "features to" join measured -32 dB there and was
+heard as a glitch), while a real gap stays quiet on both sides.
 """
 from __future__ import annotations
 import argparse, json, pathlib, re, subprocess, sys
@@ -23,7 +25,8 @@ import numpy as np
 
 SR = 48000
 TAIL = 4.0   # trailing silence, as the unpaused vo.wav had
-QUIET_DB = -25.0
+QUIET_DB = -35.0
+GAP = 0.015   # half-width of the stretch that must stay quiet around a cut
 
 def norm(s: str) -> str:
     return re.sub(r"\s+", " ", s.lower().replace("'", "").replace("’", "")
@@ -45,29 +48,42 @@ def find_end(words: list[dict], phrase: str) -> int:
     return idx[hits[0] + len(n) - 1]
 
 def level_db(audio: np.ndarray, at: int, ref: float) -> float:
-    w = audio[max(0, at - 240):at + 240]
-    return 20 * np.log10(float(np.sqrt(np.mean(w ** 2))) / ref + 1e-9)
+    half, step = int(GAP * SR), 240
+    lv = [float(np.sqrt(np.mean(audio[s:s + 480] ** 2))) for s in range(max(0, at - half), at + half - 480 + 1, step)]
+    return 20 * np.log10(max(lv) / ref + 1e-9)
 
-def quietest(audio: np.ndarray, t0: float, t1: float) -> int:
+def quietest(audio: np.ndarray, t0: float, t1: float, ref: float) -> int:
+    """The point in [t0, t1] whose surrounding stretch is quietest, by the same
+    measure the refusal uses."""
     a, b = int(t0 * SR), max(int(t0 * SR) + 1, int(t1 * SR))
-    win = int(0.010 * SR)
-    best, at = None, (a + b) // 2
-    for s in range(a, max(a + 1, b - win + 1), win // 2):
-        e = float(np.sqrt(np.mean(audio[s:s + win] ** 2))) if s + win <= len(audio) else 0.0
-        if best is None or e < best: best, at = e, s + win // 2
-    return at
+    cands = range(a, b + 1, 240)
+    return min(cands, key=lambda s: level_db(audio, s, ref))
 
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("audio"); ap.add_argument("words"); ap.add_argument("pauses")
     ap.add_argument("--tail", type=float, default=TAIL, help="trailing silence for credits and end graphics")
+    ap.add_argument("--append", nargs=2, action="append", default=[], metavar=("AUDIO", "WORDS"),
+                    help="a later pickup line (same voice) to join after the take, before pauses are opened")
+    ap.add_argument("--join", type=float, default=0.3, help="silence between the take and each pickup")
     ap.add_argument("--out-wav", required=True); ap.add_argument("--out-words", required=True)
     a = ap.parse_args()
+    load = lambda p: [w for w in json.loads(pathlib.Path(p).read_text()) if w.get("type", "word") == "word"]
     audio = decode(pathlib.Path(a.audio))
-    raw = json.loads(pathlib.Path(a.words).read_text())
-    words = [w for w in raw if w.get("type", "word") == "word"]
+    words = load(a.words)
+    main_ref = float(np.sqrt(np.mean(audio ** 2)))
+    for pa, pw in a.append:
+        pick = decode(pathlib.Path(pa))
+        # Match loudness to the take, so the pickup does not jump out.
+        pick *= main_ref / float(np.sqrt(np.mean(pick ** 2)))
+        off = len(audio) / SR + a.join
+        audio = np.concatenate([audio, np.zeros(int(a.join * SR), np.float32), pick])
+        more = load(pw)
+        if not more: sys.exit(f"{pw} has no words")
+        words += [{**w, "start": round(w["start"] + off, 3), "end": round(w["end"] + off, 3)} for w in more]
+        print(f"  appended {pathlib.Path(pa).name} at {off:.2f}s ({len(more)} words)")
     spec = json.loads(pathlib.Path(a.pauses).read_text())
-    ref = float(np.sqrt(np.mean(audio ** 2)))
+    ref = main_ref
     if not spec: sys.exit("no pauses given; nothing to do is not a result")
 
     cuts = []
@@ -76,7 +92,7 @@ def main() -> int:
         if i + 1 >= len(words): sys.exit(f"pause after {p['after']!r} falls after the last word")
         lo = max(words[i]["start"] + 0.05, words[i]["end"] - 0.3)
         hi = min(words[i + 1]["end"] - 0.05, words[i + 1]["start"] + 0.1)
-        at = quietest(audio, lo, hi)
+        at = quietest(audio, lo, hi, ref)
         db = level_db(audio, at, ref)
         if db > QUIET_DB:
             sys.exit(f"pause after {p['after']!r}: the quietest point near it is {db:.0f} dB, "

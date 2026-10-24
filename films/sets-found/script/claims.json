@@ -192,6 +192,14 @@
    "epoch": "feature set as of 2026-06-20",
    "as_of": "cents-vision-guide.md",
    "epoch_note": "User's close. Ends on an open invitation; no ending."
+  },
+  {
+   "say": "The CENTSbot also lives there to answer any questions you might have.",
+   "kind": "paraphrase",
+   "span": "Embedded on cents.vision.",
+   "epoch": "feature set as of 2026-10-24",
+   "as_of": "cents-bot CLAUDE.md; user's screenshot 2026-10-24",
+   "epoch_note": "User's added line (2026-10-24). 'there' = cents.vision, named in the sentence before."
   }
  ],
  "onscreen": [
@@ -626,6 +634,14 @@
    "approved": false,
    "by": null,
    "why": "names a cents.vision page as the page itself names it, captioning its screenshot",
+   "note": "awaiting the user's review (2026-10-24)"
+  },
+  {
+   "text": "CENTSbot",
+   "kind": "addition",
+   "approved": false,
+   "by": null,
+   "why": "names the chat assistant on cents.vision as the user wrote it, captioning its screenshot",
    "note": "awaiting the user's review (2026-10-24)"
   }
  ],

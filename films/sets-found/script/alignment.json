@@ -1792,26 +1792,86 @@
   },
   {
    "word": "to",
-   "start": 175.32,
-   "end": 175.4
+   "start": 173.72,
+   "end": 173.8
   },
   {
    "word": "explore",
-   "start": 175.52,
-   "end": 175.8
+   "start": 173.92,
+   "end": 174.2
   },
   {
    "word": "the",
-   "start": 175.84,
-   "end": 175.88
+   "start": 174.24,
+   "end": 174.28
   },
   {
    "word": "project.",
-   "start": 175.96,
-   "end": 176.76
+   "start": 174.36,
+   "end": 175.16
+  },
+  {
+   "word": "The",
+   "start": 176.58,
+   "end": 176.74
+  },
+  {
+   "word": "CENTSbot",
+   "start": 176.9,
+   "end": 177.38
+  },
+  {
+   "word": "also",
+   "start": 177.54,
+   "end": 177.78
+  },
+  {
+   "word": "lives",
+   "start": 177.86,
+   "end": 178.1
+  },
+  {
+   "word": "there",
+   "start": 178.18,
+   "end": 178.42
+  },
+  {
+   "word": "to",
+   "start": 178.74,
+   "end": 178.82
+  },
+  {
+   "word": "answer",
+   "start": 178.9,
+   "end": 179.14
+  },
+  {
+   "word": "any",
+   "start": 179.3,
+   "end": 179.46
+  },
+  {
+   "word": "questions",
+   "start": 179.54,
+   "end": 179.94
+  },
+  {
+   "word": "you",
+   "start": 180.02,
+   "end": 180.1
+  },
+  {
+   "word": "might",
+   "start": 180.18,
+   "end": 180.26
+  },
+  {
+   "word": "have.",
+   "start": 180.34,
+   "end": 180.98
   }
  ],
- "duration": 185.68,
+ "duration": 189.9,
  "source_audio": "public/vo.wav",
  "model": "precomputed:films/sets-found/audio/vo_words.json",
  "divergences": [
@@ -1826,6 +1886,12 @@
    "heard": "cents dot vision,",
    "script": "cents.vision,",
    "at": 162.6
+  },
+  {
+   "kind": "spoken_differs",
+   "heard": "CENTS bot",
+   "script": "CENTSbot",
+   "at": 176.9
   }
  ]
 }
