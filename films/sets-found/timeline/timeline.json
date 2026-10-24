@@ -118,7 +118,7 @@
      {
       "at_phrase": "Verdigris, obsidian, desert",
       "pool": "verdigris:notable+",
-      "count": 5,
+      "count": 4,
       "hero": 412,
       "caption": "notable verdigris",
       "patina": "verdigris",
@@ -131,7 +131,7 @@
      {
       "at_phrase": "obsidian, desert and",
       "pool": "obsidian:notable+",
-      "count": 5,
+      "count": 4,
       "hero": 4679,
       "caption": "notable obsidian",
       "patina": "obsidian",
@@ -144,7 +144,7 @@
      {
       "at_phrase": "desert and red are",
       "pool": "desert:notable+",
-      "count": 5,
+      "count": 4,
       "hero": 215,
       "caption": "notable desert",
       "patina": "desert",
@@ -157,7 +157,7 @@
      {
       "at_phrase": "red are the base",
       "pool": "red:notable+",
-      "count": 5,
+      "count": 4,
       "hero": 3398,
       "caption": "notable red",
       "patina": "red",
@@ -167,7 +167,8 @@
       ],
       "zoom": 1.5
      }
-    ]
+    ],
+    "flash": 6
    }
   },
   {
@@ -209,7 +210,7 @@
     "at_phrase": "One significant trait"
    },
    "end": {
-    "at_phrase": "Gold and orange are the noble"
+    "after_phrase": "makes a Sig Set."
    },
    "purpose": "The Sig Set's example Cents: the same four patinas, stronger.",
    "visual_kind": "code",
@@ -240,7 +241,7 @@
   {
    "shot_id": "s07_nobles",
    "start": {
-    "at_phrase": "Gold and orange are the noble"
+    "after_phrase": "makes a Sig Set."
    },
    "end": {
     "at_phrase": "a Patina Set that also includes"
@@ -251,9 +252,8 @@
    "props": {
     "segments": [
      {
-      "at_phrase": "Gold and orange are the noble",
       "pool": "gold:any",
-      "count": 5,
+      "count": 4,
       "hero": 4788,
       "focus": [
        0.68,
@@ -266,7 +266,7 @@
      {
       "at_phrase": "orange are the noble",
       "pool": "orange",
-      "count": 5,
+      "count": 4,
       "hero": 7799,
       "caption": "orange",
       "patina": "orange",
@@ -276,7 +276,8 @@
       ],
       "zoom": 1.5
      }
-    ]
+    ],
+    "flash": 6
    }
   },
   {
@@ -650,7 +651,8 @@
       ],
       "zoom": 1.5
      }
-    ]
+    ],
+    "flash": 6
    }
   },
   {
@@ -778,26 +780,14 @@
    "end": {
     "at_phrase": "The Chronicle Set consists"
    },
-   "purpose": "All seven Cents with scotch tape, then the tape itself, close.",
+   "purpose": "All seven Cents with scotch tape, together: the whole of the trait at once.",
    "visual_kind": "code",
-   "component": "TraitBurst",
+   "component": "PoolWall",
    "props": {
-    "segments": [
-     {
-      "at_phrase": "as scotch tape is present",
-      "pool": "contaminated:Scotch Tape",
-      "count": 7,
-      "hero": 111,
-      "focus": [
-       0.3,
-       0.45
-      ],
-      "zoom": 1.6,
-      "readout": "7",
-      "caption": "Cents with scotch tape"
-     }
-    ],
-    "flash": 4
+    "pool": "contaminated:Scotch Tape",
+    "title": "Scotch tape",
+    "caption": "Cents with scotch tape",
+    "readout": "7"
    }
   },
   {
@@ -957,7 +947,8 @@
       ],
       "zoom": 1.7
      }
-    ]
+    ],
+    "flash": 6
    }
   },
   {

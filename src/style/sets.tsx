@@ -274,7 +274,8 @@ export const HI_RES = new Set([
 const HI_MAX_PX = 1150;
 
 type Segment = {
-  at_phrase: string;
+  /** Optional on the first segment only: absent, it starts with the shot. */
+  at_phrase?: string;
   /** Pool key(s) from films/sets/data/pools.json, or "*" for the whole collection. */
   pool: string | string[];
   /** How many Cents flash past before the hero. 0 = straight to the hero. */
@@ -326,7 +327,8 @@ export const TraitBurst: React.FC<Anchored & { title?: string; segments: Segment
   const fade = useShotFade();
   const at = useAt(props);
   if (segments.length === 0) throw new Error("TraitBurst: no segments");
-  const starts = segments.map((s) => at(s.at_phrase));
+  segments.forEach((s, k) => { if (k > 0 && !s.at_phrase) throw new Error(`TraitBurst: segment ${k + 1} has no at_phrase`); });
+  const starts = segments.map((s) => (s.at_phrase ? at(s.at_phrase) : 0));
   if (starts[0] !== 0 && starts[0]! > 2) throw new Error(`TraitBurst: first segment starts ${starts[0]} frames in; the shot would open empty`);
   for (let i = 1; i < starts.length; i++)
     if (starts[i]! <= starts[i - 1]!) throw new Error(`TraitBurst: "${segments[i]!.at_phrase}" is not after "${segments[i - 1]!.at_phrase}"`);
@@ -346,7 +348,7 @@ export const TraitBurst: React.FC<Anchored & { title?: string; segments: Segment
   // The flashes may take at most 60% of the segment, so the hero always lands.
   const wanted = seg.count ?? 6;
   const step = Math.max(2, Math.min(flash, Math.floor((len * (seg.hero ? 0.6 : 1)) / Math.max(1, wanted))));
-  const flashes = sample(ns, Math.min(wanted, Math.floor((len * (seg.hero ? 0.6 : 1)) / step)), `${seg.at_phrase}`, seg.hero);
+  const flashes = sample(ns, Math.min(wanted, Math.floor((len * (seg.hero ? 0.6 : 1)) / step)), `${seg.at_phrase ?? "shot start"}`, seg.hero);
   const local = frame - s0;
   const inFlash = local < flashes.length * step;
   const hi = seg.hero !== undefined && HI_RES.has(seg.hero);
