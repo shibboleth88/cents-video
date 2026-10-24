@@ -1,0 +1,21 @@
+{
+ "_what": "Narration v1 for script v2 (locked 2026-10-24). Two ElevenLabs takes in the user's cloned voice 'eo'; the user picks one.",
+ "_instrument_warning": "The ElevenLabs transcripts (eleven_scribe_v1) came back word-for-word identical to the prompt, including [pause] tags that are not spoken. Treat them as forced alignment of the script, not as an independent hearing: they cannot detect a misread or skipped word. Their timings were checked against signal energy (median in-word RMS ~1500 vs ~5 in gaps; take A 3 of 185 words under 300, take B 2). Wording is verified only by the user listening.",
+ "takes": [
+  {
+   "id": "A",
+   "file": "audio/take_a.mp3",
+   "words": "audio/take_a.words.json",
+   "seconds": 90.91,
+   "generation_id": "Nn1c7wr3uMYdok0H3q6M"
+  },
+  {
+   "id": "B",
+   "file": "audio/take_b.mp3",
+   "words": "audio/take_b.words.json",
+   "seconds": 93.15,
+   "generation_id": "tuYTscrcKJkFzlEjtcux"
+  }
+ ],
+ "chosen": null
+}

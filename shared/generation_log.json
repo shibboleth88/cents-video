@@ -50,6 +50,34 @@
    "prompt": "Abstract macro: fine copper-coloured dust drifting slowly upward from the lower frame and dispersing into scattered cold points of light against near-black. Continuous gentle rising motion, particles separating and thinning as they climb. Shallow depth of field, slow drifting bokeh, single continuous shot, no cuts.",
    "source_asset": "g02",
    "new_asset": "g02m"
+  },
+  {
+   "at": "2026-10-24T13:09:50",
+   "film": "secret-history",
+   "shot": "vo_v1_take_A",
+   "model": "eleven_v4",
+   "endpoint": "ElevenLabs creative_generate_speech (connector)",
+   "voice": "eo (G9J6fFeGgUrIramcuC3q), the user's own clone",
+   "seconds": 90.91,
+   "credits": 1151,
+   "est_usd": 0.23,
+   "generation_id": "Nn1c7wr3uMYdok0H3q6M",
+   "flow_id": "zt6E5A0VlBKiRh96bAkU",
+   "prompt": "films/secret-history/script/voiceover.txt with [pause] tags before each year"
+  },
+  {
+   "at": "2026-10-24T13:09:50",
+   "film": "secret-history",
+   "shot": "vo_v1_take_B",
+   "model": "eleven_v4",
+   "endpoint": "ElevenLabs creative_generate_speech (connector)",
+   "voice": "eo (G9J6fFeGgUrIramcuC3q), the user's own clone",
+   "seconds": 93.15,
+   "credits": 1151,
+   "est_usd": 0.23,
+   "generation_id": "tuYTscrcKJkFzlEjtcux",
+   "flow_id": "zt6E5A0VlBKiRh96bAkU",
+   "prompt": "films/secret-history/script/voiceover.txt with [pause] tags before each year"
   }
  ]
 }

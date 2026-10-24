@@ -1,0 +1,200 @@
+{
+ "_what": "Every narration sentence maps to a span of script/essay.txt, the assembled sources of record for this film.",
+ "essay_version": "v2 locked 2026-10-24",
+ "thesis": "Each mint year in CENTS marks a moment when what money meant was being changed; melted, the dates vanish into one mass, and inscribed, the value and meaning of each year are continually redefined by participants.",
+ "script_target": "about 90 s; take A 90.9 s, take B 93.2 s",
+ "epoch_convention": "Historical present: each year line describes its own year. The film's present is 2026; see essay block [11].",
+ "claims": [
+  {
+   "say": "Let's explore the stories behind the mint years in CENTS by Rutherford Chang.",
+   "kind": "addition",
+   "approved": "user, in thread 2026-10-24",
+   "epoch": "the collection as it stands, 2026",
+   "as_of": "2026-10-24",
+   "note": "The user's own opening line."
+  },
+  {
+   "say": "Each date marks a moment when what money meant was being changed.",
+   "kind": "addition",
+   "approved": "user, in thread 2026-10-24",
+   "epoch": "1943-1982, the years the film visits",
+   "as_of": "2026-10-24",
+   "note": "The film's thesis, interpretation; approved with script v1."
+  },
+  {
+   "say": "1943 is missing.",
+   "kind": "paraphrase",
+   "span": "1943: 0",
+   "epoch": "1943 mint year; catalogue measured 2026-10-24",
+   "as_of": "Sep 2026 trait export, measured 2026-10-24"
+  },
+  {
+   "say": "That year copper went to the war, and the cent was struck in steel.",
+   "kind": "paraphrase",
+   "span": "Because of wartime demand for copper, the 1943 cent was struck in zinc-coated steel.",
+   "epoch": "1943",
+   "as_of": "Wikipedia, read 2026-10-24"
+  },
+  {
+   "say": "1944.",
+   "kind": "paraphrase",
+   "span": "1944: 22",
+   "epoch": "1944 mint year",
+   "as_of": "Sep 2026 trait export, measured 2026-10-24"
+  },
+  {
+   "say": "At Bretton Woods, forty-four nations tie their currencies to the dollar, and the dollar to gold, at thirty-five dollars an ounce.",
+   "kind": "paraphrase",
+   "span": "Member currencies were pegged to the dollar, and the dollar was fixed to gold at $35 an ounce.",
+   "epoch": "July 1944",
+   "as_of": "Federal Reserve History, read 2026-10-24"
+  },
+  {
+   "say": "1964.",
+   "kind": "paraphrase",
+   "span": "1964: 356",
+   "epoch": "1964 mint year",
+   "as_of": "Sep 2026 trait export, measured 2026-10-24"
+  },
+  {
+   "say": "The silver in a dime or a quarter is worth nearly its face value.",
+   "kind": "paraphrase",
+   "span": "in 1964 its silver was worth about 93% of its face value",
+   "epoch": "1964",
+   "as_of": "USGS DS140 silver (2023-09-01); arithmetic 2026-10-24",
+   "correction": "v1 said 'Silver is worth more than the dimes and quarters made of it.' False for 1964: about 93% of face; it passed face value in 1967."
+  },
+  {
+   "say": "People hoard change, coins run short, and the Mint keeps stamping 1964 into the next year.",
+   "kind": "paraphrase",
+   "span": "Congress allowed the Mint to continue to strike 1964-dated pieces into 1965.",
+   "epoch": "1964-1965",
+   "as_of": "Wikipedia citing 1964-65 House reports; CoinWeek; read 2026-10-24"
+  },
+  {
+   "say": "Then dimes and quarters lose their silver.",
+   "kind": "paraphrase",
+   "span": "eliminated silver from the circulating dime and quarter",
+   "epoch": "July 23, 1965",
+   "as_of": "Wikipedia, read 2026-10-24"
+  },
+  {
+   "say": "1971.",
+   "kind": "paraphrase",
+   "span": "1971: 362",
+   "epoch": "1971 mint year",
+   "as_of": "Sep 2026 trait export, measured 2026-10-24"
+  },
+  {
+   "say": "The dollar can no longer be exchanged for gold.",
+   "kind": "paraphrase",
+   "span": "the United States suspended the convertibility of the dollar into gold",
+   "epoch": "August 15, 1971",
+   "as_of": "Wikipedia, read 2026-10-24"
+  },
+  {
+   "say": "US currency becomes fiat.",
+   "kind": "paraphrase",
+   "span": "the year US currency became fiat",
+   "epoch": "1971",
+   "as_of": "the user's Chronicle caption, 5 Sep 2026"
+  },
+  {
+   "say": "1979.",
+   "kind": "paraphrase",
+   "span": "1979: 640",
+   "epoch": "1979 mint year",
+   "as_of": "Sep 2026 trait export, measured 2026-10-24"
+  },
+  {
+   "say": "Inflation runs in double digits.",
+   "kind": "paraphrase",
+   "span": "Consumer prices rose 11.3% in 1979.",
+   "epoch": "1979",
+   "as_of": "BLS, read 2026-10-24"
+  },
+  {
+   "say": "Rutherford Chang is born.",
+   "kind": "paraphrase",
+   "span": "Rutherford Chang was born December 27, 1979",
+   "epoch": "December 27, 1979",
+   "as_of": "Wikipedia, read 2026-10-24",
+   "note": "Placed beside the inflation line; the adjacency asserts no link and no motive."
+  },
+  {
+   "say": "1982.",
+   "kind": "paraphrase",
+   "span": "1982: 867",
+   "epoch": "1982 mint year",
+   "as_of": "Sep 2026 trait export, measured 2026-10-24"
+  },
+  {
+   "say": "Copper has grown too costly for the cent, and partway through the year the Mint switches to zinc.",
+   "kind": "paraphrase",
+   "span": "Coining of the zinc cents commenced on January 7, 1982",
+   "epoch": "1982",
+   "as_of": "NGC; USGS DS140 copper (2017); read 2026-10-24",
+   "correction": "v1 said 'The copper in a cent is worth more than a cent.' False for 1982: about 0.48 cents of copper at the USGS 1982 value."
+  },
+  {
+   "say": "The collection stops there.",
+   "kind": "paraphrase",
+   "span": "No Cent is dated later than 1982.",
+   "epoch": "the collection, Sep 2026 export",
+   "as_of": "measured 2026-10-24",
+   "note": "Says where the dates stop, not that CENTS ends; the close follows."
+  },
+  {
+   "say": "In the Block, the dates are gone: 1910 and 1982 are the same indeterminate mass.",
+   "kind": "paraphrase",
+   "span": "the physical coins are smelted and cast into a solid 68.56-pound copper block",
+   "epoch": "the smelting of the 10,000 coins",
+   "as_of": "project description dated 2024-03-26",
+   "note": "The user's own line. 'The Block' here is CENTS Block Copper, the physical block, not CENTS Block 839969."
+  },
+  {
+   "say": "As inscriptions, the value and the meaning of individual years become indeterminate, continually redefined by the perceptions and consensus of participants.",
+   "kind": "paraphrase",
+   "span": "the value of his digital CENTS became permanently indeterminate",
+   "epoch": "the inscriptions, ongoing",
+   "as_of": "Tinari, On NFTs (Taschen); the line itself is the user's own",
+   "note": "The user's own closing line, unattributed in narration; 'becomes' made 'become' for agreement, flagged to the user."
+  }
+ ],
+ "onscreen": [],
+ "attributions": [],
+ "distinctions_kept": [
+  {
+   "distinction": "metal value vs face value, dated (1964 silver about 93% of face; 1982 copper about half a cent)",
+   "where": "lines 8 and 18",
+   "verdict": "kept",
+   "by": "claude",
+   "note": "Both v1 lines collapsed this and were corrected 2026-10-24."
+  },
+  {
+   "distinction": "CENTS Block Copper (physical) vs CENTS Block 839969 (inscription of its model)",
+   "where": "line 20 names the physical block",
+   "verdict": "kept",
+   "by": "claude"
+  },
+  {
+   "distinction": "the inscription vs the image vs the satoshi vs the penny",
+   "where": "line 21 says 'as inscriptions' only",
+   "verdict": "kept",
+   "by": "claude"
+  },
+  {
+   "distinction": "a fact placed beside Chang's birth vs a motive",
+   "where": "line 16 follows inflation in 1979",
+   "verdict": "kept",
+   "by": "claude",
+   "note": "No 'so', 'because' or 'into' linking them; the user should still judge how it reads."
+  },
+  {
+   "distinction": "where the dates stop vs CENTS ending",
+   "where": "line 19 is followed by two lines on the Block and the inscriptions",
+   "verdict": "kept",
+   "by": "claude"
+  }
+ ]
+}
