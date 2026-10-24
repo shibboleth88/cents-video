@@ -4,7 +4,7 @@
   "subtitle": "blacktongue",
   "author": "shibboleth",
   "source": "https://cents.vision/collectors.html",
-  "version": "pilot v2, script draft 3 (2026-10-24), eo v2 take 1"
+  "version": "pilot v3, script draft 4 (2026-10-24)"
  },
  "_what": "Collector Wall episode 1. Every coin is a real Cent by number; every figure comes from data/wall.json (cents.vision, 24 Oct 2026). No wallet address appears.",
  "shots": [
@@ -431,7 +431,7 @@
     "at_phrase": "which makes a Contamination"
    },
    "end": {
-    "at_phrase": "An extraordinary Collector"
+    "at_phrase": "Find all of the Collector"
    },
    "purpose": "Zoom onto the Wall's Contamination Set badge (4/12).",
    "visual_kind": "screenshot",
@@ -455,28 +455,47 @@
    }
   },
   {
-   "shot_id": "w10_wall",
+   "shot_id": "w10_collectors",
    "start": {
-    "at_phrase": "An extraordinary Collector"
+    "at_phrase": "Find all of the Collector"
    },
    "end": {
     "at_end": true
    },
-   "purpose": "The whole Wall again to close.",
+   "purpose": "Where to find every Wall: the cents.vision Traits Lab (user's screenshot), zooming onto Collectors in the menu.",
    "visual_kind": "screenshot",
    "component": "WallShot",
    "props": {
-    "src": "vision/wall-blacktongue_card.png",
-    "width": 1080,
-    "height": 1340,
+    "src": "vision/traits_lab.png",
+    "width": 2964,
+    "height": 1654,
     "moves": [
      {
       "box": [
-       20,
-       60,
-       1060,
-       1330
+       0,
+       0,
+       2964,
+       1654
       ]
+     },
+     {
+      "at_phrase": "on cents dot vision",
+      "box": [
+       700,
+       1440,
+       2100,
+       1654
+      ]
+     },
+     {
+      "at_phrase": "under Collectors",
+      "box": [
+       1185,
+       1575,
+       1358,
+       1635
+      ],
+      "mark": true
      }
     ]
    }
@@ -484,7 +503,7 @@
  ],
  "credits": {
   "lines": [
-   "Data and Wall screenshot: cents.vision Collector Walls, 24 October 2026",
+   "Data and screenshots: cents.vision, 24 October 2026",
    "Images: the CENTS inscriptions"
   ],
   "url": "cents.vision/collectors.html"
