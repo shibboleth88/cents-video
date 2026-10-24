@@ -20,6 +20,14 @@ row moves to `LEDGER_ARCHIVE.md` verbatim in the same edit that supersedes it.
 
 ## Candidates — bitten once
 
+- **A field I can set is not a sign-off I hold.** `approved: true` on an
+  addition is meant to record the user's approval, but nothing stops the author
+  of the ledger from writing it. I set it on two becoming-film additions while
+  drafting, and the additions gate went green on approval nobody gave. Caught
+  on reread, 2026-10-24, and reverted, so the gate is red until the user answers.
+  *Separating observation:* an approval names who gave it and where (a message
+  in the thread). A bare boolean does not.
+
 - **The project's name reads as money.** `g_epochs` matches `\bcents?\b`
   case-insensitively, so "CENTS" in a span and "Cent" (the artwork) in narration
   are both flagged "states a money value". Three becoming-film claims were
