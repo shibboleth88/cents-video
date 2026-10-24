@@ -2,7 +2,7 @@
 """Build the year chart: every Cent, one cell each, stacked in its year's column.
 
 One cell is one Cent, so the chart's area is the collection's count; nothing is
-scaled or binned. At 4 px a Cent is texture, never evidence of a trait.
+scaled or binned. At 3 px a Cent is texture, never evidence of a trait.
 
     python3 films/secret-history/build/year_chart.py --src <sovrn-onchain>/cents
 Writes public/secret-history/year_chart.png and films/secret-history/build/year_chart.json.
@@ -15,9 +15,11 @@ from PIL import Image, ImageDraw
 ROOT = Path(__file__).resolve().parents[3]
 DATA = Path("/mnt/project-files/knowledge/data/cents_traits.csv")
 Y0, Y1 = 1910, 1982
-CELL, PER_ROW = 4, 3              # px per Cent, Cents per row in a column
-COL_W = CELL * PER_ROW            # 12 px; 73 columns = 876 px
-X0, BASE = (1080 - (Y1 - Y0 + 1) * COL_W) // 2, 1400
+CELL, PER_ROW = 3, 3              # px per Cent, Cents per row in a column
+COL_W = CELL * PER_ROW + 1        # 10 px with a 1 px gutter; 73 columns = 730 px
+# Centred in the essential region (x 80-860), not the canvas: the right-hand
+# platform rail would otherwise sit over 1975-1982, the years the film is about.
+X0, BASE = 80 + (780 - (Y1 - Y0 + 1) * COL_W) // 2, 1290
 
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--src", required=True); a = ap.parse_args()

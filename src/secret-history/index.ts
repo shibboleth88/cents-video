@@ -1,14 +1,18 @@
 import React from "react";
 import { Composition, registerRoot } from "remotion";
 import { CANVAS } from "../style/tokens";
-import { Animatic, DURATION } from "./Animatic";
+import { Animatic, DURATION as ANIMATIC_DURATION } from "./Animatic";
+import { FilmCaptioned, FilmClean, DURATION } from "./Film";
 
-/** Secret History of a Penny, rough animatic. Its own root, so it never touches
- *  the shared film root or the top-level symlinks.
- *    npx remotion render src/secret-history/index.ts Animatic out.mp4 */
+/** Secret History of a Penny. Its own root, so it never touches the shared film
+ *  root or the top-level symlinks.
+ *    npx remotion render src/secret-history/index.ts Film out.mp4
+ *    npx remotion render src/secret-history/index.ts FilmCaptioned out.mp4 */
+const base = { width: CANVAS.width, height: CANVAS.height, fps: CANVAS.fps };
 const Root: React.FC = () =>
-  React.createElement(Composition, {
-    id: "Animatic", component: Animatic, width: CANVAS.width, height: CANVAS.height,
-    fps: CANVAS.fps, durationInFrames: DURATION,
-  });
+  React.createElement(React.Fragment, null,
+    React.createElement(Composition, { ...base, id: "Animatic", component: Animatic, durationInFrames: ANIMATIC_DURATION }),
+    React.createElement(Composition, { ...base, id: "Film", component: FilmClean, durationInFrames: DURATION }),
+    React.createElement(Composition, { ...base, id: "FilmCaptioned", component: FilmCaptioned, durationInFrames: DURATION }),
+  );
 registerRoot(Root);

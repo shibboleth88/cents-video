@@ -169,7 +169,99 @@
    "note": "The user's own closing line, unattributed in narration; 'becomes' made 'become' for agreement, flagged to the user."
   }
  ],
- "onscreen": [],
+ "onscreen": [
+  {
+   "text": "The mint years\nin CENTS",
+   "kind": "label",
+   "source": "work"
+  },
+  {
+   "text": "10,000 Cents, one cell each,\nstacked by the year on their face",
+   "kind": "label",
+   "source": "essay [1] catalogue"
+  },
+  {
+   "text": "1940 to 1946, every Cent",
+   "kind": "label",
+   "source": "essay [1] catalogue"
+  },
+  {
+   "text": "1943: no Cents",
+   "kind": "fact",
+   "source": "essay [1]: no 1943 in the catalogue; essay [2]"
+  },
+  {
+   "text": "44 currencies -> $ -> gold; $35 = 1 troy ounce; Bretton Woods, July 1944",
+   "kind": "diagram",
+   "source": "essay [3] Federal Reserve History"
+  },
+  {
+   "text": "Silver value of a 1964 dime: ≈ 93% of face",
+   "kind": "diagram",
+   "source": "essay [5] USGS DS140 arithmetic"
+  },
+  {
+   "text": "Silver in a 1965 dime: none (clad)",
+   "kind": "diagram",
+   "source": "essay [4] Coinage Act of 1965"
+  },
+  {
+   "text": "1963 149 · 1964 356 · 1965 90 Cents",
+   "kind": "readout",
+   "source": "build/year_chart.json from the trait CSV"
+  },
+  {
+   "text": "Televised address, 15 August 1971",
+   "kind": "caption",
+   "source": "essay [6]"
+  },
+  {
+   "text": "The New York Times,\n16 August 1971",
+   "kind": "caption",
+   "source": "masthead of the page itself: NEW YORK, MONDAY, AUGUST 16, 1971"
+  },
+  {
+   "text": "CENT #6492 over the Block's 3D model",
+   "kind": "caption",
+   "source": "media catalogue C002 '1971 penny over rotating Block'"
+  },
+  {
+   "text": "95% copper / 97.5% zinc, copper-plated",
+   "kind": "diagram",
+   "source": "essay [8] NGC"
+  },
+  {
+   "text": "No Cent is dated\nlater than 1982",
+   "kind": "fact",
+   "source": "essay [1]: years span 1910-1982"
+  },
+  {
+   "text": "Casting CENTS Block Copper",
+   "kind": "caption",
+   "source": "media catalogue C029 'creation of the CENTS Block, outdoor molten-metal pour'"
+  },
+  {
+   "text": "3D model of the Block",
+   "kind": "caption",
+   "source": "media catalogue C012 'Rotating digital Block model'"
+  },
+  {
+   "text": "CENT #n / inscription N",
+   "kind": "readout",
+   "source": "picks.json inscription_numbers from the trait CSV"
+  },
+  {
+   "text": "<count> Cents / CENT #<hero> per year",
+   "kind": "readout",
+   "source": "year_chart.json + picks.heroes verified against CSV"
+  },
+  {
+   "text": "CENTS / by Rutherford Chang / Written and narrated by shibboleth / cents.gallery",
+   "kind": "credit",
+   "source": "end card",
+   "approved": true
+  }
+ ],
  "attributions": [],
  "distinctions_kept": [
   {
@@ -204,5 +296,6 @@
    "verdict": "kept",
    "by": "claude"
   }
- ]
+ ],
+ "onscreen_note": "Film.tsx (visual pass 1) holds these strings in code, not in timeline.json, so g_onscreen_covered cannot see them yet. This list is the hand ledger; moving the strings into props the gate walks is open work."
 }
