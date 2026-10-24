@@ -4,10 +4,203 @@
   "subtitle": "the narrowing",
   "author": "shibboleth",
   "source": "https://cents.vision/sets.html",
-  "version": "film B draft 1, 2026-10-24"
+  "version": "film B draft 2, 2026-10-24"
  },
- "_status": "STUB. Not recorded, so there are no anchors to cut to. Carries the credits only, so the on-screen gates have something real to measure.",
- "shots": [],
+ "shots": [
+  {
+   "shot_id": "s01_field",
+   "start": {
+    "at_start": true
+   },
+   "end": {
+    "at_phrase": "The number of Sets"
+   },
+   "purpose": "The whole collection as a field: how many, before any narrowing. Texture, not evidence of a trait.",
+   "visual_kind": "code",
+   "component": "NarrowField",
+   "props": {
+    "readout": "10,000",
+    "reveal_phrase": "Ten thousand Cents"
+   }
+  },
+  {
+   "shot_id": "s02_cap",
+   "start": {
+    "at_phrase": "The number of Sets"
+   },
+   "end": {
+    "at_phrase": "A Patina Set needs"
+   },
+   "purpose": "Hold the field while the one idea is stated; nothing on screen competes with it.",
+   "visual_kind": "code",
+   "component": "NarrowField",
+   "props": {}
+  },
+  {
+   "shot_id": "s03_patina",
+   "start": {
+    "at_phrase": "A Patina Set needs"
+   },
+   "end": {
+    "at_phrase": "A Sig Set needs"
+   },
+   "purpose": "The first narrowing, shown inside the whole: 598 of 10,000 lit. At 8px this is a count, not a picture of desert patina.",
+   "visual_kind": "code",
+   "component": "NarrowField",
+   "props": {
+    "pool": "desert:notable+",
+    "lit_phrase": "notable desert",
+    "readout": "598",
+    "caption": "Patina: notable desert",
+    "reveal_phrase": "598 Cents carry one"
+   }
+  },
+  {
+   "shot_id": "s04_sig",
+   "start": {
+    "at_phrase": "A Sig Set needs"
+   },
+   "end": {
+    "at_phrase": "A Spectrum Set needs"
+   },
+   "purpose": "Every Cent that can fill the scarcest slot of this Set, large enough to see the trait. The wall is the count: 150.",
+   "visual_kind": "code",
+   "component": "NarrowWall",
+   "props": {
+    "pool": "desert:significant+",
+    "readout": "150",
+    "caption": "Sig: significant desert",
+    "reveal_phrase": "desert: 150"
+   }
+  },
+  {
+   "shot_id": "s05_spectrum",
+   "start": {
+    "at_phrase": "A Spectrum Set needs"
+   },
+   "end": {
+    "at_phrase": "A Fulls Set needs"
+   },
+   "purpose": "Every Cent that can fill the scarcest slot of this Set, large enough to see the trait. The wall is the count: 69.",
+   "visual_kind": "code",
+   "component": "NarrowWall",
+   "props": {
+    "pool": "gold:any",
+    "readout": "69",
+    "caption": "Spectrum: gold",
+    "reveal_phrase": "gold: 69"
+   }
+  },
+  {
+   "shot_id": "s06_fulls",
+   "start": {
+    "at_phrase": "A Fulls Set needs"
+   },
+   "end": {
+    "at_phrase": "A Full Spectrum Set"
+   },
+   "purpose": "Every Cent that can fill the scarcest slot of this Set, large enough to see the trait. The wall is the count: 15.",
+   "visual_kind": "code",
+   "component": "NarrowWall",
+   "props": {
+    "pool": "verdigris:full",
+    "readout": "15",
+    "caption": "Fulls: full verdigris",
+    "reveal_phrase": "verdigris: 15"
+   }
+  },
+  {
+   "shot_id": "s07_fullspectrum",
+   "start": {
+    "at_phrase": "A Full Spectrum Set"
+   },
+   "end": {
+    "at_phrase": "A Full Contamination Set"
+   },
+   "purpose": "Every Cent that can fill the scarcest slot of this Set, large enough to see the trait. The wall is the count: 9.",
+   "visual_kind": "code",
+   "component": "NarrowWall",
+   "props": {
+    "pool": "gold:full",
+    "readout": "9",
+    "caption": "Full Spectrum: full gold",
+    "reveal_phrase": "full gold: 9"
+   }
+  },
+  {
+   "shot_id": "s08_fullcontam",
+   "start": {
+    "at_phrase": "A Full Contamination Set"
+   },
+   "end": {
+    "at_phrase": "And the 1940s Set"
+   },
+   "purpose": "Every Cent that can fill the scarcest slot of this Set, large enough to see the trait. The wall is the count: 7.",
+   "visual_kind": "code",
+   "component": "NarrowWall",
+   "props": {
+    "pool": "contaminated:Scotch Tape",
+    "readout": "7",
+    "caption": "Full Contamination: scotch tape",
+    "reveal_phrase": "scotch tape: 7"
+   }
+  },
+  {
+   "shot_id": "s09_one",
+   "start": {
+    "at_phrase": "And the 1940s Set"
+   },
+   "end": {
+    "at_phrase": "Every time a Cent"
+   },
+   "purpose": "The end of the narrowing: the only Cent dated 1949, turning, while the line says what one means for holders.",
+   "visual_kind": "code",
+   "component": "NarrowOne",
+   "props": {
+    "n": 6980,
+    "readout": "1",
+    "caption": "1940s: the only Cent dated 1949",
+    "reveal_phrase": "1949: 1"
+   }
+  },
+  {
+   "shot_id": "s10_swap",
+   "start": {
+    "at_phrase": "Every time a Cent"
+   },
+   "end": {
+    "after_phrase": "and break another"
+   },
+   "purpose": "The structure does not settle: the one Cent moves between two collections' 1940s Sets, completing one and breaking the other. Shows a process, not an ending.",
+   "visual_kind": "code",
+   "component": "NarrowSwap",
+   "props": {
+    "move_phrase": "changes hands",
+    "complete_phrase": "complete one Set",
+    "break_phrase": "break another"
+   }
+  },
+  {
+   "shot_id": "s11_credits",
+   "start": {
+    "after_phrase": "and break another"
+   },
+   "end": {
+    "at_end": true
+   },
+   "purpose": "Attribution belongs in credits.",
+   "visual_kind": "code",
+   "component": "Credits",
+   "props": {
+    "lines": [
+     "Artwork: CENTS, by Rutherford Chang",
+     "Rutherford Chang, 1979-2025",
+     "Sets and trait names: the CENTS Trait Council"
+    ],
+    "url": "cents.gallery"
+   }
+  }
+ ],
  "credits": {
   "lines": [
    "Artwork: CENTS, by Rutherford Chang",
@@ -15,5 +208,6 @@
    "Sets and trait names: the CENTS Trait Council"
   ],
   "url": "cents.gallery"
- }
+ },
+ "_what": "Animatic v1, 2026-10-24, cut against the eo voiceover (take 1, paced). Every anchor is a phrase of the recording; every Cent drawn is a real on-chain image from a measured pool."
 }

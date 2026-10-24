@@ -1,0 +1,13 @@
+{
+ "_what": "Spoken form -> script form. The synthesis prompt spelled numbers out so the voice would read them reliably; captions and on-screen text use the script's numerals. Each must match exactly once (build_vo.py fails otherwise).",
+ "corrections": [
+  {"heard": "five hundred ninety-eight", "say": "598", "by": "script", "at": "2026-10-24"},
+  {"heard": "one hundred fifty", "say": "150", "by": "script", "at": "2026-10-24"},
+  {"heard": "sixty-nine", "say": "69", "by": "script", "at": "2026-10-24"},
+  {"heard": "fifteen", "say": "15", "by": "script", "at": "2026-10-24"},
+  {"heard": "gold nine", "say": "gold: 9", "by": "script", "at": "2026-10-24"},
+  {"heard": "tape seven", "say": "tape: 7", "by": "script", "at": "2026-10-24"},
+  {"heard": "nineteen-forties", "say": "1940s", "by": "script", "at": "2026-10-24"},
+  {"heard": "nineteen forty-nine one", "say": "1949: 1.", "by": "script", "at": "2026-10-24"}
+ ]
+}
