@@ -1,8 +1,8 @@
 {
  "_what": "Every narration sentence maps to a span of script/essay.txt, the sources of record for this film.",
- "essay_version": "film B draft 1, 2026-10-24",
+ "essay_version": "film B draft 2, 2026-10-24 (user's lines 2 and 11)",
  "thesis": "Each Set can be held only as many times at once as its scarcest required Cent allows, so the structures the Council identified narrow from hundreds of possible holders to one, and every transfer can complete one Set and break another.",
- "script_target": "~60 s; 102 words measures 55 s at 1.84 w/s, but nine spoken numbers will run longer",
+ "script_target": "~60 s; 108 words measures 59 s at 1.84 w/s, but nine spoken numbers will run longer",
  "epoch_convention": "See essay block [7]. All counts are the September 2026 catalogue, measured 2026-10-24; no holder counts are said.",
  "claims": [
   {
@@ -14,12 +14,13 @@
    "epoch_note": "The whole collection as a field."
   },
   {
-   "say": "How many of each Set can be held at once is capped by the scarcest Cent it needs.",
+   "say": "The number of Sets that can exist at any given time is capped by the scarcest Cent the Set requires.",
    "kind": "addition",
    "epoch": "standing, not time-varying",
    "as_of": "derived, block [5]",
-   "approved": false,
-   "why": "The film's one idea, stated once. Derived from the requirements in block [4] and the counts in block [5]."
+   "approved": true,
+   "by": "user, thread message 2026-10-24 13:46",
+   "why": "USER'S LINE (2026-10-24 13:46), replacing draft 1's. The film's one idea, derived from block [4] and block [5]."
   },
   {
    "say": "A Patina Set needs a notable desert, and 598 Cents carry one.",
@@ -86,12 +87,13 @@
    "epoch_note": ""
   },
   {
-   "say": "Each sale can complete one collection's Set and break another's.",
+   "say": "Every time a Cent changes hands, it can complete one Set and break another.",
    "kind": "addition",
    "epoch": "standing, not time-varying",
    "as_of": "derived from the requirements",
-   "approved": false,
-   "why": "The close: an open, continuing condition, not an ending. Needs the user's sign-off."
+   "approved": true,
+   "by": "user, thread message 2026-10-24 13:46",
+   "why": "USER'S LINE (2026-10-24 13:46), replacing draft 1's. The close: a continuing condition, not an ending."
   }
  ],
  "onscreen": [],

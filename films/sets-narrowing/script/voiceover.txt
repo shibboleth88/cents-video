@@ -1,5 +1,5 @@
 Ten thousand Cents.
-How many of each Set can be held at once is capped by the scarcest Cent it needs.
+The number of Sets that can exist at any given time is capped by the scarcest Cent the Set requires.
 A Patina Set needs a notable desert, and 598 Cents carry one.
 A Sig Set needs a significant desert: 150.
 A Spectrum Set needs a gold: 69.
@@ -8,4 +8,4 @@ A Full Spectrum Set needs a full gold: 9.
 A Full Contamination Set needs scotch tape: 7.
 And the 1940s Set needs the only Cent dated 1949: 1.
 One Cent, and one collector at a time.
-Each sale can complete one collection's Set and break another's.
+Every time a Cent changes hands, it can complete one Set and break another.
