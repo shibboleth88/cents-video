@@ -194,7 +194,388 @@
    "epoch_note": "User's close. Ends on an open invitation; no ending."
   }
  ],
- "onscreen": [],
+ "onscreen": [
+  {
+   "text": "CENTS Sets",
+   "kind": "paraphrase",
+   "span": "The Trait Council has defined a number of **Sets**"
+  },
+  {
+   "text": "the traits that constitute them",
+   "kind": "addition",
+   "approved": false,
+   "by": null,
+   "why": "the user's own line 1, restated as the title card subtitle",
+   "note": "awaiting the user's review of the shot plan (2026-10-24)"
+  },
+  {
+   "text": "Cent #8353",
+   "kind": "addition",
+   "approved": false,
+   "by": null,
+   "why": "identifies the Cent on screen by its number; metadata.json",
+   "note": "awaiting the user's review of the shot plan (2026-10-24)"
+  },
+  {
+   "text": "Trait Council",
+   "kind": "paraphrase",
+   "span": "The cataloging of emergent traits in the CENTS collection is a community-led initiative"
+  },
+  {
+   "text": "two years of voting",
+   "kind": "paraphrase",
+   "span": "carried out over the course of 2 years through multiple reviews of the full 10k set, numerous voting rounds"
+  },
+  {
+   "text": "The Sets",
+   "kind": "paraphrase",
+   "span": "The Trait Council has defined a number of **Sets**"
+  },
+  {
+   "text": "Patina Set",
+   "kind": "paraphrase",
+   "span": "**Patina Set** — at least one **Notable+** of each of the 4 base patinas. Examples: #412, #4679, #215, #3398."
+  },
+  {
+   "text": "notable verdigris",
+   "kind": "paraphrase",
+   "span": "Notable or more: verdigris 1,884"
+  },
+  {
+   "text": "notable obsidian",
+   "kind": "paraphrase",
+   "span": "obsidian 1,757"
+  },
+  {
+   "text": "notable desert",
+   "kind": "paraphrase",
+   "span": "desert 598"
+  },
+  {
+   "text": "notable red",
+   "kind": "paraphrase",
+   "span": "red 670"
+  },
+  {
+   "text": "Sig Set",
+   "kind": "paraphrase",
+   "span": "**Sig Set** — at least one **Significant+** of all 4 base patinas. Examples: #2956, #6059, #8353, #337."
+  },
+  {
+   "text": "significant or more",
+   "kind": "paraphrase",
+   "span": "at least one **Significant+** of all 4 base patinas"
+  },
+  {
+   "text": "Spectrum Set",
+   "kind": "paraphrase",
+   "span": "**Spectrum Set** — **Notable+** of all 4 base patinas *plus* Gold and Orange. Examples: #6078, #2568, #4554, #6223, #4788, #7799."
+  },
+  {
+   "text": "4 base patinas, plus gold and orange",
+   "kind": "paraphrase",
+   "span": "**Notable+** of all 4 base patinas *plus* Gold and Orange"
+  },
+  {
+   "text": "Fulls Set",
+   "kind": "paraphrase",
+   "span": "**Fulls Set** — one **Full** of each of the 4 base patinas. Examples: #3981, #7823, #9533, #1771."
+  },
+  {
+   "text": "Full Verdigris",
+   "kind": "paraphrase",
+   "span": "Of the 10,000, 15 are full verdigris"
+  },
+  {
+   "text": "Full Verdigris Cents",
+   "kind": "paraphrase",
+   "span": "Of the 10,000, 15 are full verdigris"
+  },
+  {
+   "text": "15",
+   "kind": "paraphrase",
+   "span": "Of the 10,000, 15 are full verdigris"
+  },
+  {
+   "text": "Full Spectrum Set",
+   "kind": "paraphrase",
+   "span": "**Full Spectrum Set** — one **Full** of all 4 base patinas *plus* Full Gold and Orange. Examples: #9786, #3861, #1079, #8185, #4273, #2785."
+  },
+  {
+   "text": "Full Gold",
+   "kind": "paraphrase",
+   "span": "Exactly 9 Cents are full gold."
+  },
+  {
+   "text": "Full Gold Cents",
+   "kind": "paraphrase",
+   "span": "Exactly 9 Cents are full gold."
+  },
+  {
+   "text": "9",
+   "kind": "paraphrase",
+   "span": "Exactly 9 Cents are full gold."
+  },
+  {
+   "text": "Contamination",
+   "kind": "paraphrase",
+   "span": "Contamination is recorded in 12 types."
+  },
+  {
+   "text": "12 types",
+   "kind": "paraphrase",
+   "span": "Contamination is recorded in 12 types."
+  },
+  {
+   "text": "glue",
+   "kind": "paraphrase",
+   "span": "(Glue, Scotch Tape, 3D-black, Alien Secretion, Paint, Obscure Adhesive, Dark Grime, Sea Salt, Blood, Speckles, Unknown Liquid, Special Oddities)"
+  },
+  {
+   "text": "scotch tape",
+   "kind": "paraphrase",
+   "span": "(Glue, Scotch Tape, 3D-black, Alien Secretion, Paint, Obscure Adhesive, Dark Grime, Sea Salt, Blood, Speckles, Unknown Liquid, Special Oddities)"
+  },
+  {
+   "text": "3D-black",
+   "kind": "paraphrase",
+   "span": "(Glue, Scotch Tape, 3D-black, Alien Secretion, Paint, Obscure Adhesive, Dark Grime, Sea Salt, Blood, Speckles, Unknown Liquid, Special Oddities)"
+  },
+  {
+   "text": "alien secretion",
+   "kind": "paraphrase",
+   "span": "(Glue, Scotch Tape, 3D-black, Alien Secretion, Paint, Obscure Adhesive, Dark Grime, Sea Salt, Blood, Speckles, Unknown Liquid, Special Oddities)"
+  },
+  {
+   "text": "paint",
+   "kind": "paraphrase",
+   "span": "(Glue, Scotch Tape, 3D-black, Alien Secretion, Paint, Obscure Adhesive, Dark Grime, Sea Salt, Blood, Speckles, Unknown Liquid, Special Oddities)"
+  },
+  {
+   "text": "obscure adhesive",
+   "kind": "paraphrase",
+   "span": "(Glue, Scotch Tape, 3D-black, Alien Secretion, Paint, Obscure Adhesive, Dark Grime, Sea Salt, Blood, Speckles, Unknown Liquid, Special Oddities)"
+  },
+  {
+   "text": "dark grime",
+   "kind": "paraphrase",
+   "span": "(Glue, Scotch Tape, 3D-black, Alien Secretion, Paint, Obscure Adhesive, Dark Grime, Sea Salt, Blood, Speckles, Unknown Liquid, Special Oddities)"
+  },
+  {
+   "text": "sea salt",
+   "kind": "paraphrase",
+   "span": "(Glue, Scotch Tape, 3D-black, Alien Secretion, Paint, Obscure Adhesive, Dark Grime, Sea Salt, Blood, Speckles, Unknown Liquid, Special Oddities)"
+  },
+  {
+   "text": "blood",
+   "kind": "paraphrase",
+   "span": "(Glue, Scotch Tape, 3D-black, Alien Secretion, Paint, Obscure Adhesive, Dark Grime, Sea Salt, Blood, Speckles, Unknown Liquid, Special Oddities)"
+  },
+  {
+   "text": "speckles",
+   "kind": "paraphrase",
+   "span": "(Glue, Scotch Tape, 3D-black, Alien Secretion, Paint, Obscure Adhesive, Dark Grime, Sea Salt, Blood, Speckles, Unknown Liquid, Special Oddities)"
+  },
+  {
+   "text": "unknown liquid",
+   "kind": "paraphrase",
+   "span": "(Glue, Scotch Tape, 3D-black, Alien Secretion, Paint, Obscure Adhesive, Dark Grime, Sea Salt, Blood, Speckles, Unknown Liquid, Special Oddities)"
+  },
+  {
+   "text": "special oddities",
+   "kind": "paraphrase",
+   "span": "(Glue, Scotch Tape, 3D-black, Alien Secretion, Paint, Obscure Adhesive, Dark Grime, Sea Salt, Blood, Speckles, Unknown Liquid, Special Oddities)"
+  },
+  {
+   "text": "Contamination Set",
+   "kind": "paraphrase",
+   "span": "**Contamination Set** — covers at least **3** of the 12."
+  },
+  {
+   "text": "any 3 of the 12 types",
+   "kind": "paraphrase",
+   "span": "**Contamination Set** — covers at least **3** of the 12."
+  },
+  {
+   "text": "Contamination Hoard",
+   "kind": "paraphrase",
+   "span": "**Contamination Hoard** — covers at least **6** of the 12."
+  },
+  {
+   "text": "6 of the 12 types",
+   "kind": "paraphrase",
+   "span": "**Contamination Hoard** — covers at least **6** of the 12."
+  },
+  {
+   "text": "Full Contamination",
+   "kind": "paraphrase",
+   "span": "**Full Contamination** — covers **all 12**."
+  },
+  {
+   "text": "Scotch Tape",
+   "kind": "paraphrase",
+   "span": "Scotch Tape 7."
+  },
+  {
+   "text": "Cents with scotch tape",
+   "kind": "paraphrase",
+   "span": "Scotch Tape 7."
+  },
+  {
+   "text": "7",
+   "kind": "paraphrase",
+   "span": "Scotch Tape 7."
+  },
+  {
+   "text": "Chronicle Set",
+   "kind": "paraphrase",
+   "span": "**Chronicle Set** — holds at least one Cent minted in **each of 1971, 1979 and 1982**."
+  },
+  {
+   "text": "1971: US currency became fiat",
+   "kind": "paraphrase",
+   "span": "1971 — \"the year US currency became fiat\""
+  },
+  {
+   "text": "1979: Rutherford Chang's birth year",
+   "kind": "paraphrase",
+   "span": "1979 — \"the artist Rutherford Chang's birth year\""
+  },
+  {
+   "text": "1982: the last year struck in copper",
+   "kind": "paraphrase",
+   "span": "1982 — \"the last year cents were struck in copper\""
+  },
+  {
+   "text": "Full Mint Set",
+   "kind": "paraphrase",
+   "span": "**Full Mint Set** — holds at least one **S-mint**, one **D-mint**, and one Cent with **no mint"
+  },
+  {
+   "text": "S: San Francisco",
+   "kind": "paraphrase",
+   "span": "S (San Francisco)"
+  },
+  {
+   "text": "D: Denver",
+   "kind": "paraphrase",
+   "span": "D (Denver)"
+  },
+  {
+   "text": "no mint mark: usually Philadelphia",
+   "kind": "paraphrase",
+   "span": "none (Philadelphia)"
+  },
+  {
+   "text": "S mint mark",
+   "kind": "paraphrase",
+   "span": "Mint marks: no mark 8,343, D 1,597, S 60."
+  },
+  {
+   "text": "Cents with the S mint mark",
+   "kind": "paraphrase",
+   "span": "Mint marks: no mark 8,343, D 1,597, S 60."
+  },
+  {
+   "text": "60",
+   "kind": "paraphrase",
+   "span": "Mint marks: no mark 8,343, D 1,597, S 60."
+  },
+  {
+   "text": "1940s Set",
+   "kind": "paraphrase",
+   "span": "a 1940s, 1950s, 1960s, 1970s, and 1980s Set"
+  },
+  {
+   "text": "every year the collection holds",
+   "kind": "paraphrase",
+   "span": "every mint year of that decade present in the collection"
+  },
+  {
+   "text": "1940",
+   "kind": "paraphrase",
+   "span": "Mint years in the 1940s: 1940, 1941, 1942, 1944, 1945, 1946, 1947, 1948 and 1949."
+  },
+  {
+   "text": "1941",
+   "kind": "paraphrase",
+   "span": "Mint years in the 1940s: 1940, 1941, 1942, 1944, 1945, 1946, 1947, 1948 and 1949."
+  },
+  {
+   "text": "1942",
+   "kind": "paraphrase",
+   "span": "Mint years in the 1940s: 1940, 1941, 1942, 1944, 1945, 1946, 1947, 1948 and 1949."
+  },
+  {
+   "text": "1944",
+   "kind": "paraphrase",
+   "span": "Mint years in the 1940s: 1940, 1941, 1942, 1944, 1945, 1946, 1947, 1948 and 1949."
+  },
+  {
+   "text": "1945",
+   "kind": "paraphrase",
+   "span": "Mint years in the 1940s: 1940, 1941, 1942, 1944, 1945, 1946, 1947, 1948 and 1949."
+  },
+  {
+   "text": "1946",
+   "kind": "paraphrase",
+   "span": "Mint years in the 1940s: 1940, 1941, 1942, 1944, 1945, 1946, 1947, 1948 and 1949."
+  },
+  {
+   "text": "1947",
+   "kind": "paraphrase",
+   "span": "Mint years in the 1940s: 1940, 1941, 1942, 1944, 1945, 1946, 1947, 1948 and 1949."
+  },
+  {
+   "text": "1948",
+   "kind": "paraphrase",
+   "span": "Mint years in the 1940s: 1940, 1941, 1942, 1944, 1945, 1946, 1947, 1948 and 1949."
+  },
+  {
+   "text": "1949",
+   "kind": "paraphrase",
+   "span": "Mint years in the 1940s: 1940, 1941, 1942, 1944, 1945, 1946, 1947, 1948 and 1949."
+  },
+  {
+   "text": "cents.vision",
+   "kind": "paraphrase",
+   "span": "| Traits Atlas | https://cents.vision/traits-atlas.html |"
+  },
+  {
+   "text": "Trait Atlas · Collector Walls",
+   "kind": "paraphrase",
+   "span": "\"Collector Walls\" — a card per wallet, with clubs, sets, and badges."
+  },
+  {
+   "text": "Artwork: CENTS, by Rutherford Chang",
+   "kind": "addition",
+   "approved": false,
+   "by": null,
+   "why": "credit",
+   "note": "awaiting the user's review of the shot plan (2026-10-24)"
+  },
+  {
+   "text": "Rutherford Chang, 1979-2025",
+   "kind": "addition",
+   "approved": false,
+   "by": null,
+   "why": "credit; birth year in essay [8], death year 2025 per the series",
+   "note": "awaiting the user's review of the shot plan (2026-10-24)"
+  },
+  {
+   "text": "Sets and trait names: the CENTS Trait Council",
+   "kind": "paraphrase",
+   "span": "The Trait Council has defined a number of **Sets**"
+  },
+  {
+   "text": "Script: shibboleth",
+   "kind": "addition",
+   "approved": false,
+   "by": null,
+   "why": "credit; the user wrote the script",
+   "note": "awaiting the user's review of the shot plan (2026-10-24)"
+  }
+ ],
  "attributions": [],
  "distinctions_kept": [
   {

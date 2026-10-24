@@ -7,6 +7,11 @@ re-recording the voiceover re-cuts the film without anyone re-timing anything.
 
   python3 pipeline/align.py public/vo.wav
   python3 pipeline/align.py public/vo.wav --script script/voiceover.txt
+  python3 pipeline/align.py public/vo.wav --script script/voiceover.txt --words <scribe.json>
+
+--words takes word timings already produced elsewhere (ElevenLabs Scribe's
+`words` list, or this script's own format) instead of running mlx-whisper,
+which needs Apple silicon. Every floor below still applies to them.
 
 Passing --script supplies correct spellings (Cents vs cents, UTXO, Schrodinger,
 the Block number) as an initial prompt. It never replaces the recorded wording:
@@ -44,6 +49,18 @@ def transcribe(p: pathlib.Path, prompt: str | None, model: str) -> list[dict]:
     words = [w for seg in res["segments"] for w in seg.get("words", [])]
     return [{"word": w["word"].strip(), "start": round(w["start"],3), "end": round(w["end"],3)}
             for w in words if w["word"].strip()]
+
+def load_words(p: pathlib.Path) -> list[dict]:
+    """Scribe emits {text, start, end, type} with spacing as separate entries;
+    keep the words. Our own format ({word, start, end}) passes through."""
+    raw = json.loads(p.read_text())
+    if isinstance(raw, dict): raw = raw.get("words", [])
+    out = []
+    for w in raw:
+        if w.get("type", "word") != "word": continue
+        t = (w.get("word") or w.get("text") or "").strip()
+        if t: out.append({"word": t, "start": round(float(w["start"]), 3), "end": round(float(w["end"]), 3)})
+    return out
 
 def apply_corrections(words: list[dict], path: pathlib.Path) -> list[dict]:
     """Apply the speaker's rulings on what was said. See script/corrections.json.
@@ -118,6 +135,7 @@ def main() -> int:
     ap.add_argument("audio"); ap.add_argument("--script")
     ap.add_argument("--model", default="mlx-community/whisper-large-v3-turbo",
                     help="use whisper-small-mlx for fast scratch passes")
+    ap.add_argument("--words", help="pre-computed word timings; skips transcription")
     a = ap.parse_args()
     p = pathlib.Path(a.audio)
     if not p.exists(): sys.exit(f"{p} does not exist")
@@ -125,7 +143,10 @@ def main() -> int:
     prompt = spelling_prompt(pathlib.Path(a.script).read_text()) if a.script else None
     sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 
-    words = transcribe(p, prompt, a.model)
+    if a.words:
+        words = load_words(pathlib.Path(a.words)); a.model = f"precomputed:{a.words}"
+    else:
+        words = transcribe(p, prompt, a.model)
 
     # FLOORS. An aligner that returns nothing, or times that do not span the
     # recording, must read as RED — not as a short film.

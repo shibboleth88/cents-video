@@ -4,16 +4,703 @@
   "subtitle": "the Sets",
   "author": "shibboleth",
   "source": "https://cents.vision/sets.html",
-  "version": "film A draft 1, 2026-10-24"
+  "version": "film A draft 2 (locked 2026-10-24), eo take 1"
  },
- "_status": "STUB. Not recorded, so there are no anchors to cut to. Carries the credits only, so the on-screen gates have something real to measure.",
- "shots": [],
+ "_what": "Film A, 'Found, not made'. Every coin is a real Cent by number. Example Cents for each Set are the ones cents.vision/sets.html lists (essay [4]); the contamination, Chronicle and Full Mint examples are the ones in the media-library Set diagrams (films/sets-found/data/heroes.json).",
+ "shots": [
+  {
+   "shot_id": "s01_title",
+   "start": {
+    "at_start": true
+   },
+   "end": {
+    "at_phrase": "Every difference to the canvas"
+   },
+   "purpose": "Name the subject over the whole collection, as texture: ten thousand Cents before any one is singled out.",
+   "visual_kind": "code",
+   "component": "FieldTitle",
+   "props": {
+    "title": "CENTS Sets",
+    "subtitle": "the traits that constitute them"
+   }
+  },
+  {
+   "shot_id": "s02_marks",
+   "start": {
+    "at_phrase": "Every difference to the canvas"
+   },
+   "end": {
+    "at_phrase": "The cataloging of these marks"
+   },
+   "purpose": "One Cent close and turning, so 'marks of touch and time' is seen on a real coin before it is catalogued.",
+   "visual_kind": "code",
+   "component": "CentHero",
+   "props": {
+    "n": 8353,
+    "caption": "Cent #8353"
+   }
+  },
+  {
+   "shot_id": "s03_council",
+   "start": {
+    "at_phrase": "The cataloging of these marks"
+   },
+   "end": {
+    "at_phrase": "Out of this catalog"
+   },
+   "purpose": "Who catalogued the marks and how long it took, over the collection the catalogue covers.",
+   "visual_kind": "code",
+   "component": "FieldTitle",
+   "props": {
+    "title": "Trait Council",
+    "subtitle": "two years of voting"
+   }
+  },
+  {
+   "shot_id": "s04_sets",
+   "start": {
+    "at_phrase": "Out of this catalog"
+   },
+   "end": {
+    "at_phrase": "Verdigris, obsidian, desert"
+   },
+   "purpose": "A first look across the Sets about to be walked through: one Cent from several of them.",
+   "visual_kind": "code",
+   "component": "CentRow",
+   "props": {
+    "title": "The Sets",
+    "cents": [
+     {
+      "n": 1771
+     },
+     {
+      "n": 4273
+     },
+     {
+      "n": 111
+     },
+     {
+      "n": 25
+     },
+     {
+      "n": 2332
+     },
+     {
+      "n": 6980
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s05_patina",
+   "start": {
+    "at_phrase": "Verdigris, obsidian, desert"
+   },
+   "end": {
+    "at_phrase": "One significant trait"
+   },
+   "purpose": "The four base patinas arrive as they are named, using the Patina Set's own example Cents.",
+   "visual_kind": "code",
+   "component": "CentRow",
+   "props": {
+    "title": "Patina Set",
+    "cents": [
+     {
+      "n": 412,
+      "caption": "notable verdigris",
+      "at_phrase": "Verdigris, obsidian, desert"
+     },
+     {
+      "n": 4679,
+      "caption": "notable obsidian",
+      "at_phrase": "obsidian, desert and"
+     },
+     {
+      "n": 215,
+      "caption": "notable desert",
+      "at_phrase": "desert and red are"
+     },
+     {
+      "n": 3398,
+      "caption": "notable red",
+      "at_phrase": "red are the base"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s06_sig",
+   "start": {
+    "at_phrase": "One significant trait"
+   },
+   "end": {
+    "at_phrase": "Gold and orange are the noble"
+   },
+   "purpose": "The Sig Set's example Cents: the same four patinas, stronger.",
+   "visual_kind": "code",
+   "component": "CentRow",
+   "props": {
+    "title": "Sig Set",
+    "subtitle": "significant or more",
+    "cents": [
+     {
+      "n": 2956
+     },
+     {
+      "n": 6059
+     },
+     {
+      "n": 8353
+     },
+     {
+      "n": 337
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s07_spectrum",
+   "start": {
+    "at_phrase": "Gold and orange are the noble"
+   },
+   "end": {
+    "at_phrase": "One full trait from each"
+   },
+   "purpose": "The Spectrum Set's example Cents: four base patinas plus the two noble ones.",
+   "visual_kind": "code",
+   "component": "CentRow",
+   "props": {
+    "title": "Spectrum Set",
+    "cents": [
+     {
+      "n": 6078
+     },
+     {
+      "n": 2568
+     },
+     {
+      "n": 4554
+     },
+     {
+      "n": 6223
+     },
+     {
+      "n": 4788
+     },
+     {
+      "n": 7799
+     }
+    ],
+    "caption": "4 base patinas, plus gold and orange"
+   }
+  },
+  {
+   "shot_id": "s08_fulls",
+   "start": {
+    "at_phrase": "One full trait from each"
+   },
+   "end": {
+    "at_phrase": "Only 15 can exist"
+   },
+   "purpose": "The Fulls Set's example Cents.",
+   "visual_kind": "code",
+   "component": "CentRow",
+   "props": {
+    "title": "Fulls Set",
+    "cents": [
+     {
+      "n": 3981
+     },
+     {
+      "n": 7823
+     },
+     {
+      "n": 9533
+     },
+     {
+      "n": 1771
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s09_fv_wall",
+   "start": {
+    "at_phrase": "Only 15 can exist"
+   },
+   "end": {
+    "at_phrase": "One full from each base"
+   },
+   "purpose": "The cap made visible: every Full Verdigris Cent there is, counted by the wall itself.",
+   "visual_kind": "code",
+   "component": "PoolWall",
+   "props": {
+    "pool": "verdigris:full",
+    "title": "Full Verdigris",
+    "caption": "Full Verdigris Cents",
+    "readout": "15"
+   }
+  },
+  {
+   "shot_id": "s10_full_spectrum",
+   "start": {
+    "at_phrase": "One full from each base"
+   },
+   "end": {
+    "at_phrase": "Only 9 such Sets"
+   },
+   "purpose": "The Full Spectrum Set's example Cents.",
+   "visual_kind": "code",
+   "component": "CentRow",
+   "props": {
+    "title": "Full Spectrum Set",
+    "cents": [
+     {
+      "n": 9786
+     },
+     {
+      "n": 3861
+     },
+     {
+      "n": 1079
+     },
+     {
+      "n": 8185
+     },
+     {
+      "n": 4273
+     },
+     {
+      "n": 2785
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s11_fg_wall",
+   "start": {
+    "at_phrase": "Only 9 such Sets"
+   },
+   "end": {
+    "at_phrase": "Contaminations are intricately"
+   },
+   "purpose": "Every Full Gold Cent there is.",
+   "visual_kind": "code",
+   "component": "PoolWall",
+   "props": {
+    "pool": "gold:full",
+    "title": "Full Gold",
+    "caption": "Full Gold Cents",
+    "readout": "9"
+   }
+  },
+  {
+   "shot_id": "s12_types",
+   "start": {
+    "at_phrase": "Contaminations are intricately"
+   },
+   "end": {
+    "at_phrase": "A Contamination Set covers"
+   },
+   "purpose": "One clear example of each contamination type, arriving as it is named.",
+   "visual_kind": "code",
+   "component": "CentRow",
+   "props": {
+    "title": "Contamination",
+    "subtitle": "12 types",
+    "cents": [
+     {
+      "n": 5346,
+      "caption": "glue",
+      "at_phrase": "glue scotch"
+     },
+     {
+      "n": 111,
+      "caption": "scotch tape",
+      "at_phrase": "tape 3D black"
+     },
+     {
+      "n": 5144,
+      "caption": "3D-black",
+      "at_phrase": "3D black alien"
+     },
+     {
+      "n": 2583,
+      "caption": "alien secretion",
+      "at_phrase": "alien secretion paint"
+     },
+     {
+      "n": 2735,
+      "caption": "paint",
+      "at_phrase": "paint obscure"
+     },
+     {
+      "n": 1510,
+      "caption": "obscure adhesive",
+      "at_phrase": "obscure adhesive dark"
+     },
+     {
+      "n": 4668,
+      "caption": "dark grime",
+      "at_phrase": "dark grime sea"
+     },
+     {
+      "n": 2956,
+      "caption": "sea salt",
+      "at_phrase": "sea salt blood"
+     },
+     {
+      "n": 2359,
+      "caption": "blood",
+      "at_phrase": "blood speckles"
+     },
+     {
+      "n": 2900,
+      "caption": "speckles",
+      "at_phrase": "speckles unknown"
+     },
+     {
+      "n": 4825,
+      "caption": "unknown liquid",
+      "at_phrase": "unknown liquid and special"
+     },
+     {
+      "n": 6107,
+      "caption": "special oddities",
+      "at_phrase": "special oddities"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s13_set",
+   "start": {
+    "at_phrase": "A Contamination Set covers"
+   },
+   "end": {
+    "at_phrase": "and a Contamination Hoard"
+   },
+   "purpose": "Three Cents, three types.",
+   "visual_kind": "code",
+   "component": "CentRow",
+   "props": {
+    "title": "Contamination Set",
+    "cents": [
+     {
+      "n": 9172
+     },
+     {
+      "n": 3950
+     },
+     {
+      "n": 7926
+     }
+    ],
+    "caption": "any 3 of the 12 types",
+    "cols": 3
+   }
+  },
+  {
+   "shot_id": "s14_hoard",
+   "start": {
+    "at_phrase": "and a Contamination Hoard"
+   },
+   "end": {
+    "at_phrase": "A Set that includes all 12"
+   },
+   "purpose": "Six Cents, six types.",
+   "visual_kind": "code",
+   "component": "CentRow",
+   "props": {
+    "title": "Contamination Hoard",
+    "cents": [
+     {
+      "n": 6495
+     },
+     {
+      "n": 8382
+     },
+     {
+      "n": 608
+     },
+     {
+      "n": 1264
+     },
+     {
+      "n": 9992
+     },
+     {
+      "n": 5581
+     }
+    ],
+    "caption": "6 of the 12 types"
+   }
+  },
+  {
+   "shot_id": "s15_full_contamination",
+   "start": {
+    "at_phrase": "A Set that includes all 12"
+   },
+   "end": {
+    "at_phrase": "as scotch tape is present"
+   },
+   "purpose": "All twelve types together, as one Set.",
+   "visual_kind": "code",
+   "component": "CentRow",
+   "props": {
+    "title": "Full Contamination",
+    "cents": [
+     {
+      "n": 5346
+     },
+     {
+      "n": 111
+     },
+     {
+      "n": 5144
+     },
+     {
+      "n": 2583
+     },
+     {
+      "n": 2735
+     },
+     {
+      "n": 1510
+     },
+     {
+      "n": 4668
+     },
+     {
+      "n": 2956
+     },
+     {
+      "n": 2359
+     },
+     {
+      "n": 2900
+     },
+     {
+      "n": 4825
+     },
+     {
+      "n": 6107
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s16_tape_wall",
+   "start": {
+    "at_phrase": "as scotch tape is present"
+   },
+   "end": {
+    "at_phrase": "The Chronicle Set consists"
+   },
+   "purpose": "Every Cent with scotch tape: the narrowest ingredient, and so the cap.",
+   "visual_kind": "code",
+   "component": "PoolWall",
+   "props": {
+    "pool": "contaminated:Scotch Tape",
+    "title": "Scotch Tape",
+    "caption": "Cents with scotch tape",
+    "readout": "7"
+   }
+  },
+  {
+   "shot_id": "s17_chronicle",
+   "start": {
+    "at_phrase": "The Chronicle Set consists"
+   },
+   "end": {
+    "at_phrase": "The Full Mint Set is"
+   },
+   "purpose": "The three years arrive as each is said, on the example Cents from the Chronicle diagram.",
+   "visual_kind": "code",
+   "component": "CentRow",
+   "props": {
+    "title": "Chronicle Set",
+    "cents": [
+     {
+      "n": 6492,
+      "caption": "1971: US currency became fiat",
+      "at_phrase": "1971 the year"
+     },
+     {
+      "n": 1170,
+      "caption": "1979: Rutherford Chang's birth year",
+      "at_phrase": "1979 the year"
+     },
+     {
+      "n": 25,
+      "caption": "1982: the last year struck in copper",
+      "at_phrase": "1982 the last year"
+     }
+    ],
+    "cols": 3
+   }
+  },
+  {
+   "shot_id": "s18_full_mint",
+   "start": {
+    "at_phrase": "The Full Mint Set is"
+   },
+   "end": {
+    "at_phrase": "and only sixty Cents"
+   },
+   "purpose": "The three mint marks, as each is named.",
+   "visual_kind": "code",
+   "component": "CentRow",
+   "props": {
+    "title": "Full Mint Set",
+    "cents": [
+     {
+      "n": 2332,
+      "caption": "S: San Francisco",
+      "at_phrase": "An S for San"
+     },
+     {
+      "n": 91,
+      "caption": "D: Denver",
+      "at_phrase": "a D for Denver"
+     },
+     {
+      "n": 121,
+      "caption": "no mint mark: usually Philadelphia",
+      "at_phrase": "and no mint mark"
+     }
+    ],
+    "cols": 3
+   }
+  },
+  {
+   "shot_id": "s19_s_wall",
+   "start": {
+    "at_phrase": "and only sixty Cents"
+   },
+   "end": {
+    "at_phrase": "Decades Sets consist"
+   },
+   "purpose": "Every S-mint Cent: what makes the Full Mint Set scarce.",
+   "visual_kind": "code",
+   "component": "PoolWall",
+   "props": {
+    "pool": "mint:S",
+    "title": "S mint mark",
+    "caption": "Cents with the S mint mark",
+    "readout": "60"
+   }
+  },
+  {
+   "shot_id": "s20_decades",
+   "start": {
+    "at_phrase": "Decades Sets consist"
+   },
+   "end": {
+    "at_phrase": "On cents.vision"
+   },
+   "purpose": "One decade as the example: a Cent for each 1940s year the collection holds. 1943 is absent from the collection, so the row has nine.",
+   "visual_kind": "code",
+   "component": "CentRow",
+   "props": {
+    "title": "1940s Set",
+    "subtitle": "every year the collection holds",
+    "labelsUnder": true,
+    "cents": [
+     {
+      "n": 794,
+      "caption": "1940"
+     },
+     {
+      "n": 809,
+      "caption": "1941"
+     },
+     {
+      "n": 6055,
+      "caption": "1942"
+     },
+     {
+      "n": 322,
+      "caption": "1944"
+     },
+     {
+      "n": 312,
+      "caption": "1945"
+     },
+     {
+      "n": 990,
+      "caption": "1946"
+     },
+     {
+      "n": 2881,
+      "caption": "1947"
+     },
+     {
+      "n": 4884,
+      "caption": "1948"
+     },
+     {
+      "n": 6980,
+      "caption": "1949"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s21_vision",
+   "start": {
+    "at_phrase": "On cents.vision"
+   },
+   "end": {
+    "after_phrase": "explore the project"
+   },
+   "purpose": "Where to go next, over the whole collection: the film hands on to the place the Sets are tracked, rather than closing.",
+   "visual_kind": "code",
+   "component": "FieldTitle",
+   "props": {
+    "title": "cents.vision",
+    "subtitle": "Trait Atlas · Collector Walls"
+   }
+  },
+  {
+   "shot_id": "s22_credits",
+   "start": {
+    "after_phrase": "explore the project"
+   },
+   "end": {
+    "at_end": true
+   },
+   "purpose": "Credit the artwork and the Council, in the silence left for them.",
+   "visual_kind": "code",
+   "component": "Credits",
+   "props": {
+    "lines": [
+     "Artwork: CENTS, by Rutherford Chang",
+     "Rutherford Chang, 1979-2025",
+     "Sets and trait names: the CENTS Trait Council",
+     "Script: shibboleth"
+    ],
+    "url": "cents.gallery"
+   }
+  }
+ ],
  "credits": {
   "lines": [
    "Artwork: CENTS, by Rutherford Chang",
    "Rutherford Chang, 1979-2025",
-   "Sets and trait names: the CENTS Trait Council"
+   "Sets and trait names: the CENTS Trait Council",
+   "Script: shibboleth"
   ],
   "url": "cents.gallery"
- }
+ },
+ "caption_keep": [
+  "Full Contamination Set",
+  "Trait Atlas",
+  "Lincoln cent",
+  "of the base patinas",
+  "no mint mark",
+  "struck in copper",
+  "one notable trait",
+  "Collector Walls that"
+ ]
 }

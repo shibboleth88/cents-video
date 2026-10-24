@@ -1,0 +1,223 @@
+1
+00:00:00,000 --> 00:00:02,480
+Let's explore CENTS Sets and the traits
+
+2
+00:00:02,560 --> 00:00:03,600
+that constitute them.
+
+3
+00:00:04,160 --> 00:00:06,719
+Every difference to the canvas of the Lincoln cent
+
+4
+00:00:06,879 --> 00:00:09,679
+is made by the marks of touch and time.
+
+5
+00:00:09,919 --> 00:00:11,359
+The cataloging of these marks
+
+6
+00:00:11,439 --> 00:00:13,839
+is the result of two years of voting.
+
+7
+00:00:14,240 --> 00:00:16,960
+Out of this catalog, Sets were identified.
+
+8
+00:00:17,359 --> 00:00:19,120
+Let's look at them in order of rarity.
+
+9
+00:00:19,679 --> 00:00:22,800
+Verdigris, obsidian, desert and red
+
+10
+00:00:22,960 --> 00:00:25,679
+are the base patinas: one notable trait
+
+11
+00:00:25,760 --> 00:00:28,559
+from each base patina makes a Patina Set.
+
+12
+00:00:28,800 --> 00:00:30,399
+One significant trait from each
+
+13
+00:00:30,480 --> 00:00:32,759
+base patina makes a Sig Set.
+
+14
+00:00:33,039 --> 00:00:35,840
+Gold and orange are the noble patinas:
+
+15
+00:00:35,880 --> 00:00:37,600
+a Patina Set that also includes
+
+16
+00:00:37,640 --> 00:00:40,640
+a gold and an orange is a Spectrum Set.
+
+17
+00:00:40,880 --> 00:00:43,439
+One full trait from each of the base patinas
+
+18
+00:00:43,520 --> 00:00:44,880
+makes a Fulls Set.
+
+19
+00:00:45,200 --> 00:00:47,119
+Only 15 can exist,
+
+20
+00:00:47,200 --> 00:00:50,079
+as there are only 15 Full Verdigris Cents.
+
+21
+00:00:50,560 --> 00:00:52,640
+One full from each base patina,
+
+22
+00:00:52,799 --> 00:00:54,799
+plus a full gold and an orange,
+
+23
+00:00:54,920 --> 00:00:56,479
+makes a Full Spectrum Set.
+
+24
+00:00:56,799 --> 00:00:58,960
+Only 9 such Sets can exist,
+
+25
+00:00:59,039 --> 00:01:01,679
+as there are only 9 Full Gold Cents.
+
+26
+00:01:01,920 --> 00:01:04,560
+Contaminations are intricately cataloged,
+
+27
+00:01:04,599 --> 00:01:08,000
+in 12 types: glue, scotch tape,
+
+28
+00:01:08,120 --> 00:01:11,439
+3D-black, alien secretion, paint,
+
+29
+00:01:11,560 --> 00:01:14,319
+obscure adhesive, dark grime,
+
+30
+00:01:14,439 --> 00:01:17,200
+sea salt, blood, speckles,
+
+31
+00:01:17,280 --> 00:01:19,879
+unknown liquid and special oddities.
+
+32
+00:01:20,079 --> 00:01:23,760
+A Contamination Set covers any 3 of the 12 types,
+
+33
+00:01:23,799 --> 00:01:26,319
+and a Contamination Hoard covers 6.
+
+34
+00:01:26,640 --> 00:01:28,400
+A Set that includes all 12
+
+35
+00:01:28,480 --> 00:01:30,959
+types is a Full Contamination Set,
+
+36
+00:01:31,040 --> 00:01:32,799
+and only 7 can exist,
+
+37
+00:01:32,879 --> 00:01:35,840
+as scotch tape is present on only 7 Cents.
+
+38
+00:01:36,079 --> 00:01:38,239
+The Chronicle Set consists of years
+
+39
+00:01:38,359 --> 00:01:40,719
+whose meaning is essential to the project.
+
+40
+00:01:40,959 --> 00:01:44,879
+1971: the year US currency became fiat.
+
+41
+00:01:45,280 --> 00:01:49,359
+1979: the year the artist Rutherford Chang was born.
+
+42
+00:01:49,760 --> 00:01:52,560
+1982: the last year that pennies
+
+43
+00:01:52,640 --> 00:01:53,920
+were struck in copper,
+
+44
+00:01:54,079 --> 00:01:55,760
+and the last year of the collection.
+
+45
+00:01:56,159 --> 00:01:59,200
+The Full Mint Set is determined by mint marks.
+
+46
+00:01:59,359 --> 00:02:01,280
+An S for San Francisco,
+
+47
+00:02:01,359 --> 00:02:03,920
+a D for Denver and no mint mark,
+
+48
+00:02:04,079 --> 00:02:06,879
+usually Philadelphia, make a Full Mint Set,
+
+49
+00:02:06,959 --> 00:02:09,439
+and only sixty Cents carry the S.
+
+50
+00:02:09,680 --> 00:02:12,319
+Decades Sets consist of every year of the given
+
+51
+00:02:12,400 --> 00:02:15,159
+decade or decades that the collection holds.
+
+52
+00:02:15,360 --> 00:02:18,000
+On cents.vision, you can find a Trait Atlas
+
+53
+00:02:18,080 --> 00:02:19,680
+that defines each trait,
+
+54
+00:02:19,759 --> 00:02:21,439
+as well as Collector Walls that show
+
+55
+00:02:21,520 --> 00:02:23,360
+completed Sets, and many more
+
+56
+00:02:23,439 --> 00:02:25,360
+features to explore the project.
