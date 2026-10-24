@@ -17,3 +17,16 @@ ffmpeg -v error -y -i "$V/BLOCK loop.mp4" -f lavfi -i "color=c=0x0b0a0a:s=1080x1
 ffmpeg -v error -y -i "$V/copper pour clip.mov" -an -c:v libx264 -crf 18 -pix_fmt yuv420p "$OUT/pour.mp4"
 ffmpeg -v error -y -i "$V/1971 face covered with block copy.mp4" -an -c:v libx264 -crf 18 -pix_fmt yuv420p "$OUT/face1971.mp4"
 echo "footage rebuilt in $OUT"
+# Archival (public domain; see /mnt/project-files/secret-history/archival/manifest.json).
+A=/mnt/project-files/secret-history/archival
+[ -d "$A" ] && python3 - "$A" "$OUT" <<'PY'
+import sys; from PIL import Image, ImageDraw; import numpy as np
+A, OUT = sys.argv[1], sys.argv[2]
+im = Image.open(f"{A}/nnc_1943_lincoln_cent_steel_3840px.jpg").convert("RGB")
+a = np.asarray(im).astype(int); ys, xs = np.where(a[:, :a.shape[1]//2].min(axis=2) < 235)
+d = max(xs.max()-xs.min(), ys.max()-ys.min()) + 1; cx, cy = (xs.min()+xs.max())//2, (ys.min()+ys.max())//2
+c = im.crop((cx-d//2, cy-d//2, cx-d//2+d, cy-d//2+d)).resize((640, 640), Image.LANCZOS)
+m = Image.new("L", (2560, 2560), 0); ImageDraw.Draw(m).ellipse((8, 8, 2551, 2551), fill=255)
+c.putalpha(m.resize((640, 640), Image.LANCZOS)); c.save(f"{OUT}/steel1943.png")
+Image.open(f"{A}/morgenthau_bretton_woods_opening_1944.jpg").save(f"{OUT}/bw_morgenthau.jpg", quality=95)
+PY

@@ -261,6 +261,22 @@
    "kind": "credit",
    "source": "end card",
    "approved": true
+  },
+  {
+   "text": "Steel cent, 1943\nNational Numismatic\nCollection",
+   "kind": "caption",
+   "source": "archival/manifest.json: NNC, NMAH, public domain (Commons file page re-read 2026-10-24)"
+  },
+  {
+   "text": "Henry Morgenthau Jr. opens the\nconference, July 1944",
+   "kind": "caption",
+   "source": "archival/manifest.json: Commons 'Morgenthau_Bretton_Woods_opening_1944', OWI via NARA RG 208, PD-USGov"
+  },
+  {
+   "text": "Archival: US National Archives;\nNational Numismatic Collection,\nSmithsonian",
+   "kind": "credit",
+   "source": "archival/manifest.json credit lines",
+   "approved": true
   }
  ],
  "attributions": [],

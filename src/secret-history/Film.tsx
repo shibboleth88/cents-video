@@ -195,8 +195,15 @@ const Scene: React.FC<{ id: string }> = ({ id }) => {
             );
           })}
         </div>
-        <Text y={1010} size={46} color={COLOR.accent} opacity={ease(f, local("y1943", "That year copper"), local("y1943", "That year copper") + 12)}>
+        <Text x={384} y={1040} w={452} size={46} color={COLOR.accent} opacity={ease(f, local("y1943", "That year copper"), local("y1943", "That year copper") + 12)}>
           1943: no Cents
+        </Text>
+        {/* The coin CENTS does not hold: a 1943 steel cent, NNC (public domain). */}
+        <div style={{ position: "absolute", left: 104, top: 1030, opacity: ease(f, local("y1943", "struck in steel"), local("y1943", "struck in steel") + 12) }}>
+          <Img src={staticFile("secret-history/ftg/steel1943.png")} style={{ width: 250, height: 250 }} />
+        </div>
+        <Text x={384} y={1110} w={452} size={42} color={COLOR.inkDim} opacity={ease(f, local("y1943", "struck in steel"), local("y1943", "struck in steel") + 12)}>
+          {"Steel cent, 1943\nNational Numismatic\nCollection"}
         </Text>
       </AbsoluteFill>);
     }
@@ -205,14 +212,22 @@ const Scene: React.FC<{ id: string }> = ({ id }) => {
       return (<AbsoluteFill>
         <Chart lit={[1944]} dim={0.9} />
         <YearHead year="1944" sub={`${chart.columns["1944"]!.count} Cents\nCENT #${picks.heroes["1944"]}`} />
-        <Hero year="1944" size={360} top={390} />
-        <Box x={104} y={820} w={210} h={130} label="44 currencies" on={ease(f, a - 6, a + 6)} />
-        <Arrow x={320} y={885} w={90} on={ease(f, a + 4, a + 16)} />
-        <Box x={416} y={820} w={130} h={130} label="$" on={ease(f, a + 10, a + 20)} accent />
-        <Arrow x={552} y={885} w={90} on={ease(f, b, b + 12)} />
-        <Box x={648} y={820} w={188} h={130} label="gold" on={ease(f, b + 6, b + 16)} />
+        {/* Archival first, then the mechanism. Photo: OWI via NARA RG 208, public domain. */}
+        <div style={{ position: "absolute", left: 104, top: 400, width: 732, height: 593, overflow: "hidden", opacity: 1 - ease(f, a - 12, a - 2) }}>
+          <Img src={staticFile("secret-history/ftg/bw_morgenthau.jpg")} style={{ width: "100%", height: "100%", objectFit: "cover",
+            transform: `scale(${1.0 + 0.06 * ease(f, 0, a)})` }} />
+        </div>
+        <Text y={1010} size={42} color={COLOR.inkDim} opacity={1 - ease(f, a - 12, a - 2)}>
+          {"Henry Morgenthau Jr. opens the\nconference, July 1944"}
+        </Text>
+        <div style={{ opacity: ease(f, a - 8, a + 4) }}><Hero year="1944" size={360} top={390} /></div>
+        <Box x={104} y={820} w={240} h={130} label="44 currencies" on={ease(f, a - 6, a + 6)} />
+        <Arrow x={350} y={885} w={60} on={ease(f, a + 4, a + 16)} />
+        <Box x={416} y={820} w={110} h={130} label="$" on={ease(f, a + 10, a + 20)} accent />
+        <Arrow x={532} y={885} w={88} on={ease(f, b, b + 12)} />
+        <Box x={626} y={820} w={210} h={130} label="gold" on={ease(f, b + 6, b + 16)} />
         <Text y={970} size={46} mono color={COLOR.accent} opacity={ease(f, c, c + 10)}>$35 = 1 troy ounce</Text>
-        <Text y={1036} size={42} color={COLOR.inkDim} opacity={ease(f, 0, 15)}>Bretton Woods, July 1944</Text>
+        <Text y={1036} size={42} color={COLOR.inkDim} opacity={ease(f, a, a + 15)}>Bretton Woods, July 1944</Text>
       </AbsoluteFill>);
     }
     case "y1964": {
@@ -346,6 +361,7 @@ const EndCard: React.FC = () => {
     <Text y={790} size={46} color={COLOR.inkDim} opacity={o}>by Rutherford Chang</Text>
     <Text y={930} size={42} color={COLOR.inkDim} opacity={o}>Written and narrated by shibboleth</Text>
     <Text y={1000} size={42} color={COLOR.inkDim} opacity={o}>cents.gallery</Text>
+    <Text y={1120} size={42} color={COLOR.inkDim} opacity={o}>{"Archival: US National Archives;\nNational Numismatic Collection,\nSmithsonian"}</Text>
   </AbsoluteFill>);
 };
 
