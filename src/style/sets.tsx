@@ -431,6 +431,53 @@ export const TraitBurst: React.FC<Anchored & { title?: string; segments: Segment
 };
 
 // Video.tsx passes {alignment, shotStartFrame} to components that ask for it.
-for (const C of [CentRow, PoolWall, CentHero, FieldTitle, TraitBurst]) (C as any).wantsAlignment = true;
 
-export const SETS = { CentRow, PoolWall, CentHero, FieldTitle, TraitBurst } as const;
+/**
+ * Screens from cents.vision, as captured (see pipeline/stage_vision.py). Each
+ * segment pans a window across one capture, from one crop to another, so the
+ * page can be read rather than shown as a thumbnail. Crops are [x, y, width]
+ * in the capture's own pixels; the height follows the window's shape.
+ */
+type Screen = { at_phrase?: string; src: string; from: [number, number, number]; to?: [number, number, number]; caption?: string };
+export const ScreenTour: React.FC<Anchored & { title?: string; subtitle?: string; screens: Screen[] }> = (props) => {
+  const { title, subtitle, screens } = props;
+  const frame = useCurrentFrame();
+  const { durationInFrames } = useVideoConfig();
+  const fade = useShotFade();
+  const at = useAt(props);
+  if (screens.length === 0) throw new Error("ScreenTour: no screens");
+  screens.forEach((s, k) => { if (k > 0 && !s.at_phrase) throw new Error(`ScreenTour: screen ${k + 1} has no at_phrase`); });
+  const starts = screens.map((s) => (s.at_phrase ? at(s.at_phrase) : 0));
+  if (starts[0]! > 2) throw new Error("ScreenTour: the first screen starts late; the shot would open empty");
+  for (let k = 1; k < starts.length; k++)
+    if (starts[k]! <= starts[k - 1]!) throw new Error(`ScreenTour: "${screens[k]!.at_phrase}" is not after the screen before it`);
+  let i = 0;
+  for (let k = 0; k < starts.length; k++) if (frame >= starts[k]!) i = k;
+  const sc = screens[i]!;
+  const s0 = starts[i]!, s1 = i + 1 < starts.length ? starts[i + 1]! : durationInFrames;
+  const W = STAGE.x1 - STAGE.x0, H = STAGE.y1 - STAGE.y0;
+  const t = interpolate(frame, [s0, s1], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: EASE.inOut });
+  const to = sc.to ?? sc.from;
+  const [x, y, w] = [0, 1, 2].map((k) => sc.from[k]! + (to[k]! - sc.from[k]!) * t) as [number, number, number];
+  if (w > 1080 || x < 0 || x + w > 1080) throw new Error(`ScreenTour ${sc.src}: crop leaves the 1080 px capture`);
+  const k = W / w;
+  const cut = interpolate(frame, [s0, s0 + 6], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  return (
+    <div style={{ position: "absolute", inset: 0, opacity: fade }}>
+      <Title title={title} subtitle={subtitle} />
+      <Imagery>
+        <div style={{ position: "absolute", left: STAGE.x0, top: STAGE.y0, width: W, height: H, overflow: "hidden",
+                      borderRadius: 28, background: "#fff", opacity: i === 0 ? 1 : cut,
+                      boxShadow: "0 18px 40px rgba(0,0,0,0.55)" }}>
+          <Img src={staticFile(`vision/${sc.src}`)}
+               style={{ position: "absolute", left: -x * k, top: -y * k, width: 1080 * k, display: "block" }} />
+        </div>
+      </Imagery>
+      <Readout caption={sc.caption} from={s0} k={i} />
+    </div>
+  );
+};
+
+for (const C of [CentRow, PoolWall, CentHero, FieldTitle, TraitBurst, ScreenTour]) (C as any).wantsAlignment = true;
+
+export const SETS = { CentRow, PoolWall, CentHero, FieldTitle, TraitBurst, ScreenTour } as const;

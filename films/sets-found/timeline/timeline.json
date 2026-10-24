@@ -1032,12 +1032,72 @@
    "end": {
     "after_phrase": "explore the project"
    },
-   "purpose": "Where to go next, over the whole collection: the film hands on to the place the Sets are tracked, rather than closing.",
+   "purpose": "Where to go next, shown as the site itself: the Traits Lab, the Traits Atlas, claimed Collector Walls with their Set badges, the Sets page. The film hands on rather than closing.",
    "visual_kind": "code",
-   "component": "FieldTitle",
+   "component": "ScreenTour",
    "props": {
     "title": "cents.vision",
-    "subtitle": "Trait Atlas · Collector Walls"
+    "screens": [
+     {
+      "src": "01_home_lab_viewport.jpg",
+      "from": [
+       0,
+       0,
+       1080
+      ],
+      "to": [
+       0,
+       300,
+       760
+      ],
+      "caption": "Traits Lab"
+     },
+     {
+      "at_phrase": "a Trait Atlas that defines",
+      "src": "02_trait_atlas_verdigris_full.jpg",
+      "from": [
+       0,
+       0,
+       1080
+      ],
+      "to": [
+       60,
+       700,
+       960
+      ],
+      "caption": "Verdigris, in the Traits Atlas"
+     },
+     {
+      "at_phrase": "Collector Walls that show",
+      "src": "collectors_strip.jpg",
+      "from": [
+       0,
+       1150,
+       1080
+      ],
+      "to": [
+       0,
+       2950,
+       1080
+      ],
+      "caption": "Collector Walls"
+     },
+     {
+      "at_phrase": "and many more features",
+      "src": "03_sets_viewport.jpg",
+      "from": [
+       0,
+       0,
+       1080
+      ],
+      "to": [
+       0,
+       250,
+       1080
+      ],
+      "caption": "Sets"
+     }
+    ]
    }
   },
   {
