@@ -1,6 +1,6 @@
 {
  "_what": "Every narration sentence maps to a span of script/essay.txt, the sources of record for this film.",
- "essay_version": "draft 1, 2026-10-24",
+ "essay_version": "draft 1.1, 2026-10-24 (the 'itself, not itself' line ceded to the objecthood-transformations film, which closes on it)",
  "thesis": "CENTS is unfinished because its medium is the continual redefinition of value and meaning, carried out by its participants in time; the marks of circulation, the Council's names and Sets, the artist's death, the end of the penny, a museum show and the Void are each one more redefinition, and none closes the work.",
  "script_target": "2:00-3:00",
  "epoch_convention": "See essay [9]. Film speaks from 24 October 2026.",
@@ -148,14 +148,6 @@
    "span": "Derived: 31 Cents have entered the Void; none has been recovered",
    "epoch": "24 October 2026",
    "as_of": "void-cents.json updatedAt 2026-10-24T04:34:49Z [2]"
-  },
-  {
-   "say": "Each Cent is simultaneously itself, not itself, and an interpretation of itself.",
-   "kind": "paraphrase",
-   "span": "a thing is simultaneously itself, not itself and an interpretation of itself",
-   "epoch": "not time-varying: a statement of the concept",
-   "as_of": "essay [1], Medium 2025-10-30",
-   "epoch_note": "Flagged only because \"Cent\" (the artwork) reads to the money detector as \"cent\"."
   },
   {
    "say": "Its meanings continue to emerge as participants co-create the intersubjective reality of its presence.",
