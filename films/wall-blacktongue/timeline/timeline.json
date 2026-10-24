@@ -4,14 +4,41 @@
   "subtitle": "blacktongue",
   "author": "shibboleth",
   "source": "https://cents.vision/collectors.html",
-  "version": "pilot, script draft 2 (locked 2026-10-24), eo take A"
+  "version": "pilot v2, script draft 3 (2026-10-24), eo v2 take 1"
  },
  "_what": "Collector Wall episode 1. Every coin is a real Cent by number; every figure comes from data/wall.json (cents.vision, 24 Oct 2026). No wallet address appears.",
  "shots": [
   {
-   "shot_id": "w01_card",
+   "shot_id": "w00_wall",
    "start": {
     "at_start": true
+   },
+   "end": {
+    "at_phrase": "Its signature Cent"
+   },
+   "purpose": "blacktongue's Wall as it appears on cents.vision (Claimed filter, 24 Oct 2026, wallet line hidden).",
+   "visual_kind": "screenshot",
+   "component": "WallShot",
+   "props": {
+    "src": "vision/wall-blacktongue_card.png",
+    "width": 1080,
+    "height": 1340,
+    "moves": [
+     {
+      "box": [
+       20,
+       60,
+       1060,
+       1330
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "w01_card",
+   "start": {
+    "at_phrase": "Its signature Cent"
    },
    "end": {
     "at_phrase": "The Wall holds twenty-four"
@@ -227,9 +254,46 @@
    }
   },
   {
-   "shot_id": "w06_spectrum",
+   "shot_id": "w05b_badge",
    "start": {
     "at_phrase": "That gold, with five"
+   },
+   "end": {
+    "at_phrase": "a full verdigris"
+   },
+   "purpose": "Back to the Wall: zoom onto its Full Spectrum badge as the Set is named.",
+   "visual_kind": "screenshot",
+   "component": "WallShot",
+   "props": {
+    "src": "vision/wall-blacktongue_card.png",
+    "width": 1080,
+    "height": 1340,
+    "moves": [
+     {
+      "box": [
+       230,
+       880,
+       960,
+       1120
+      ]
+     },
+     {
+      "at_phrase": "completes a Full Spectrum",
+      "box": [
+       240,
+       895,
+       495,
+       960
+      ],
+      "mark": true
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "w06_spectrum",
+   "start": {
+    "at_phrase": "a full verdigris"
    },
    "end": {
     "at_phrase": "Only nine Full Spectrum Sets"
@@ -287,7 +351,7 @@
     "at_phrase": "Only nine Full Spectrum Sets"
    },
    "end": {
-    "at_phrase": "On the twenty-fourth of October"
+    "at_phrase": "As of October twenty"
    },
    "purpose": "All nine Full Gold Cents: why at most nine Full Spectrum Sets can exist.",
    "visual_kind": "code",
@@ -303,29 +367,24 @@
   {
    "shot_id": "w08_holders",
    "start": {
-    "at_phrase": "On the twenty-fourth of October"
+    "at_phrase": "As of October twenty"
    },
    "end": {
     "at_phrase": "Across its Cents"
    },
-   "purpose": "The two Walls that held Full Spectrum on 24 Oct 2026, by their signature Cents.",
+   "purpose": "Full Spectrum among collectors on 24 Oct 2026: set-counts.php gives 2 holders, one being the artist wallet, so blacktongue is the only collector.",
    "visual_kind": "code",
    "component": "WallList",
    "props": {
     "title": "Full Spectrum Set",
-    "subtitle": "held on 24 October 2026",
-    "readout": "2 Walls",
-    "readout_at": "two Walls held one",
+    "subtitle": "held by collectors, October 2026",
+    "readout": "1 collector",
+    "readout_at": "the only collector",
     "rows": [
      {
       "n": 5185,
       "label": "blacktongue",
-      "at_phrase": "this Wall, and the"
-     },
-     {
-      "n": 1924,
-      "label": "the artist wallet",
-      "at_phrase": "the wallet of the artist"
+      "at_phrase": "blacktongue is the only"
      }
     ]
    }
@@ -336,7 +395,7 @@
     "at_phrase": "Across its Cents"
    },
    "end": {
-    "at_end": true
+    "at_phrase": "which makes a Contamination"
    },
    "purpose": "The four contamination types on the Wall, one Cent each.",
    "visual_kind": "code",
@@ -365,11 +424,67 @@
      }
     ]
    }
+  },
+  {
+   "shot_id": "w09b_badge",
+   "start": {
+    "at_phrase": "which makes a Contamination"
+   },
+   "end": {
+    "at_phrase": "An extraordinary Collector"
+   },
+   "purpose": "Zoom onto the Wall's Contamination Set badge (4/12).",
+   "visual_kind": "screenshot",
+   "component": "WallShot",
+   "props": {
+    "src": "vision/wall-blacktongue_card.png",
+    "width": 1080,
+    "height": 1340,
+    "moves": [
+     {
+      "at_phrase": "which makes a Contamination",
+      "box": [
+       490,
+       895,
+       825,
+       960
+      ],
+      "mark": true
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "w10_wall",
+   "start": {
+    "at_phrase": "An extraordinary Collector"
+   },
+   "end": {
+    "at_end": true
+   },
+   "purpose": "The whole Wall again to close.",
+   "visual_kind": "screenshot",
+   "component": "WallShot",
+   "props": {
+    "src": "vision/wall-blacktongue_card.png",
+    "width": 1080,
+    "height": 1340,
+    "moves": [
+     {
+      "box": [
+       20,
+       60,
+       1060,
+       1330
+      ]
+     }
+    ]
+   }
   }
  ],
  "credits": {
   "lines": [
-   "Data: cents.vision Collector Walls, 24 October 2026",
+   "Data and Wall screenshot: cents.vision Collector Walls, 24 October 2026",
    "Images: the CENTS inscriptions"
   ],
   "url": "cents.vision/collectors.html"

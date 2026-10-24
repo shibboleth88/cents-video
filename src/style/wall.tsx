@@ -1,5 +1,5 @@
 import React from "react";
-import { interpolate, useCurrentFrame, useVideoConfig } from "remotion";
+import { Img, interpolate, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import { CentGrid, CentImage, CentTurn, fitGrid } from "./grids";
 import { useEntrance, useShotFade, EASE } from "./motion";
 import { COLOR, SAFE, TYPE } from "./tokens";
@@ -75,7 +75,7 @@ export const WallCard: React.FC<Anchored & { title: string; signature: number; c
         </div>
       </div>
       <Imagery>
-        <CentTurn n={signature} size={size} from={6}
+        <CentTurn n={signature} size={size} from={6} maxTilt={0}
                   style={{ position: "absolute", left: (1080 - size) / 2, top: 560 }} />
       </Imagery>
       <div style={{ position: "absolute", left: X0, top: BAND.y0 - 40, width: X1 - X0, opacity: fadeIn(frame, 24),
@@ -190,7 +190,7 @@ export const WallStandout: React.FC<Anchored & { title: string; n: number; reado
     <div style={{ position: "absolute", inset: 0, opacity: fade }}>
       <NameBand title={title} subtitle={`CENT #${n}`} />
       <Imagery>
-        <CentTurn n={n} size={size} style={{ position: "absolute", left: (1080 - size) / 2,
+        <CentTurn n={n} size={size} maxTilt={0} style={{ position: "absolute", left: (1080 - size) / 2,
                                              top: STAGE.y0 + (STAGE.y1 - STAGE.y0 - size) / 2 }} />
       </Imagery>
       <div style={{ position: "absolute", left: X0, top: BAND.y0, width: X1 - X0, opacity: fadeIn(frame, 10) }}>
@@ -246,5 +246,65 @@ export const WallList: React.FC<Anchored & {
   );
 };
 
-export const WALL = { WallCard, WallGrid, WallYears, WallStandout, WallList } as const;
+/**
+ * The Wall itself, as cents.vision renders it: a screenshot of the claimed
+ * card (captured with the wallet line hidden), with the camera moving to
+ * named regions of it as the narration reaches them. Boxes are in the
+ * screenshot's own pixels. A real capture, never a mock-up.
+ */
+export const WallShot: React.FC<Anchored & {
+  src: string; width: number; height: number;
+  moves?: { at_phrase?: string; box: [number, number, number, number]; mark?: boolean }[];
+}> = (props) => {
+  const { src, width, height, moves = [] } = props;
+  const frame = useCurrentFrame();
+  const fade = useShotFade();
+  const at = useAt(props);
+  // Ends where the other shots' content ends, so captions never sit on the white screenshot.
+  const AREA = { x0: 40, x1: 1040, y0: E.y0, y1: BAND.y1 };
+  const AW = AREA.x1 - AREA.x0, AH = AREA.y1 - AREA.y0;
+  const cam = (b: [number, number, number, number]) => {
+    const [x0, y0, x1, y1] = b;
+    if (x0 < 0 || y0 < 0 || x1 > width || y1 > height || x1 <= x0 || y1 <= y0)
+      throw new Error(`WallShot: box ${b} is outside the ${width}x${height} screenshot`);
+    const k = Math.min(AW / (x1 - x0), AH / (y1 - y0), 2.6);
+    return { k, cx: (x0 + x1) / 2, cy: (y0 + y1) / 2 };
+  };
+  const keys = [{ f: 0, box: null as null | number[], mark: false, ...cam([0, 0, width, height]) },
+                ...moves.map((m, i) => ({ f: m.at_phrase ? at(m.at_phrase) : 20 + i * 30, box: m.box as number[],
+                                          mark: !!m.mark, ...cam(m.box) }))];
+  for (let i = 1; i < keys.length; i++)
+    if (keys[i]!.f < keys[i - 1]!.f) throw new Error("WallShot: moves are out of spoken order");
+  // Hold each framing until the next move's phrase, then ease to it over 18 frames.
+  let c = keys[0]!;
+  let mark: null | { box: number[]; t: number } = null;
+  for (let i = 1; i < keys.length; i++) {
+    const a = c, b = keys[i]!;
+    if (frame < b.f) break;
+    const t = interpolate(frame, [b.f, b.f + 18], [0, 1], { extrapolateRight: "clamp", easing: EASE.inOut });
+    c = { ...b, k: a.k + (b.k - a.k) * t, cx: a.cx + (b.cx - a.cx) * t, cy: a.cy + (b.cy - a.cy) * t };
+    // A marked move outlines its box once the camera has arrived, so the eye lands on that badge.
+    mark = b.mark ? { box: b.box!, t: interpolate(frame, [b.f + 14, b.f + 26], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }) } : null;
+  }
+  const left = AREA.x0 + AW / 2 - c.cx * c.k, top = AREA.y0 + AH / 2 - c.cy * c.k;
+  return (
+    <div style={{ position: "absolute", inset: 0, opacity: fade }}>
+      <Imagery>
+        <div style={{ position: "absolute", left: AREA.x0, top: AREA.y0, width: AW, height: AH, overflow: "hidden",
+                      borderRadius: 18 }}>
+          <Img src={staticFile(src)} style={{ position: "absolute", left: left - AREA.x0, top: top - AREA.y0,
+                                              width: width * c.k, height: height * c.k }} />
+          {mark ? (
+            <div style={{ position: "absolute", left: left - AREA.x0 + mark.box[0]! * c.k - 10,
+                          top: top - AREA.y0 + mark.box[1]! * c.k - 10,
+                          width: (mark.box[2]! - mark.box[0]!) * c.k + 20, height: (mark.box[3]! - mark.box[1]!) * c.k + 20,
+                          border: `5px solid ${COLOR.accent}`, borderRadius: 14, opacity: mark.t }} />
+          ) : null}
+        </div>
+      </Imagery>
+    </div>
+  );
+};
+
+export const WALL = { WallCard, WallGrid, WallYears, WallStandout, WallList, WallShot } as const;
 for (const C of Object.values(WALL)) (C as any).wantsAlignment = true;

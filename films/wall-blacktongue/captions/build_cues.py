@@ -16,7 +16,7 @@ norm = lambda s: re.sub(r"[^a-z0-9 ]", " ", s.lower().replace("-", " ")).split()
 # Spoken run -> written form, merged into one timed word.
 WRITTEN = [("fifty-one eighty-five,", "5185,"), ("nineteen sixty-eight,", "1968,"),
            ("nineteen thirty-eight", "1938"), ("nineteen thirty-eight.", "1938."), ("nineteen eighty.", "1980."),
-           ("the twenty-fourth of October, twenty twenty-six,", "24 October 2026,")]
+           ("October twenty twenty-six,", "October 2026,")]
 words = [dict(w) for w in al["words"]]
 out, i = [], 0
 while i < len(words):
