@@ -269,7 +269,7 @@ export const FieldTitle: React.FC<Anchored & { title: string; subtitle?: string 
  * a zoom on the 300px image would enlarge pixels, not the trait.
  */
 export const HI_RES = new Set([
-  25, 91, 111, 121, 215, 312, 322, 337, 412, 608, 794, 809, 990, 1079, 1170, 1264, 1510, 1771, 2332, 2359, 2568, 2583, 2735, 2785, 2881, 2900, 2956, 3398, 3861, 3950, 3981, 4273, 4554, 4668, 4679, 4788, 4825, 4884, 5144, 5346, 5581, 6055, 6059, 6078, 6107, 6223, 6492, 6495, 6980, 7799, 7823, 7926, 8185, 8353, 8382, 9172, 9533, 9786, 9992,
+  25, 70, 91, 111, 121, 215, 312, 322, 337, 412, 608, 794, 809, 990, 1079, 1170, 1264, 1510, 1771, 2332, 2359, 2568, 2583, 2735, 2785, 2881, 2900, 2956, 3398, 3861, 3950, 3981, 4273, 4554, 4668, 4679, 4788, 4825, 4884, 5144, 5346, 5581, 6055, 6059, 6078, 6107, 6223, 6492, 6495, 6980, 7799, 7823, 7926, 8185, 8353, 8382, 9172, 9533, 9786, 9992,
 ]);
 const HI_MAX_PX = 1150;
 
@@ -507,34 +507,35 @@ export const ScreenTour: React.FC<Anchored & { title?: string; subtitle?: string
  * Cents filling the frame. A deterministic sample, so every render is the same
  * wall; ordered by number, as the collection is.
  */
-export const EndWall: React.FC<Anchored & { lines: string[]; url?: string; wall_after: number; cols?: number }> = (props) => {
-  const { lines, url, wall_after, cols = 9 } = props;
+export const EndWall: React.FC<Anchored & { lines: string[]; url?: string; text_after: number; cols?: number }> = (props) => {
+  const { lines, url, text_after, cols = 9 } = props;
   const frame = useCurrentFrame();
   const { fps, durationInFrames } = useVideoConfig();
   const fade = useShotFade();
-  const w0 = Math.round(wall_after * fps);
-  if (w0 <= 0 || w0 >= durationInFrames - fps) throw new Error(`EndWall: the wall at ${wall_after}s leaves no time for credits or for the wall`);
+  const t0 = Math.round(text_after * fps);
+  if (t0 <= 0 || t0 >= durationInFrames - 2 * fps) throw new Error(`EndWall: text at ${text_after}s leaves under 2 s to read it`);
   const gap = 10, size = Math.floor((1080 - gap * (cols + 1)) / cols);
   const rows = Math.ceil((1920 - gap) / (size + gap));
   const ns = sample(poolOf("*"), cols * rows, "end wall").sort((a, b) => a - b);
-  const credits = interpolate(frame, [0, 10, w0 - 10, w0], [0, 1, 1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
-  const drift = interpolate(frame, [w0, durationInFrames], [1.0, 1.05], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  const text = interpolate(frame, [t0, t0 + 14], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: EASE.out });
+  const drift = interpolate(frame, [0, durationInFrames], [1.0, 1.05], { extrapolateRight: "clamp" });
   return (
     <div style={{ position: "absolute", inset: 0, opacity: fade }}>
-      {frame < w0 ? (
-        <div style={{ position: "absolute", left: STAGE.x0, width: STAGE.x1 - STAGE.x0, top: STAGE.y0, height: READOUT.y1 - STAGE.y0,
-                      display: "flex", flexDirection: "column", justifyContent: "center", gap: 18, opacity: credits }}>
-          {lines.map((l, i) => <SafeText key={i} role="body" fontSize={48} maxLines={2}>{l}</SafeText>)}
-          {url ? <SafeText role="body" fontSize={48} maxLines={1} color={COLOR.accent}>{url}</SafeText> : null}
+      <div style={{ position: "absolute", inset: 0, overflow: "hidden" }}>
+        <div style={{ position: "absolute", inset: 0, transform: `scale(${drift})` }}>
+          <CentGrid ns={ns} layout={{ cols, size, gap }} from={0} enterFrames={Math.min(45, t0 - 6)}
+                    style={{ position: "absolute", left: gap, top: gap }} />
         </div>
-      ) : (
-        <div style={{ position: "absolute", inset: 0, overflow: "hidden" }}>
-          <div style={{ position: "absolute", inset: 0, transform: `scale(${drift})` }}>
-            <CentGrid ns={ns} layout={{ cols, size, gap }} from={w0} enterFrames={36}
-                      style={{ position: "absolute", left: gap, top: gap }} />
-          </div>
-        </div>
-      )}
+        {/* A scrim under the text only: the wall stays the picture, the words stay readable. */}
+        <div style={{ position: "absolute", inset: 0, opacity: text,
+                      background: "radial-gradient(ellipse 80% 34% at 50% 47%, rgba(10,10,10,0.94), rgba(10,10,10,0.82) 60%, rgba(10,10,10,0.45))" }} />
+      </div>
+      <div style={{ position: "absolute", left: STAGE.x0, width: STAGE.x1 - STAGE.x0, top: STAGE.y0, height: READOUT.y1 - STAGE.y0,
+                    display: "flex", flexDirection: "column", justifyContent: "center", gap: 18, opacity: text,
+                    transform: `translateY(${(1 - text) * 14}px)` }}>
+        {lines.map((l, i) => <SafeText key={i} role="body" fontSize={48} maxLines={2}>{l}</SafeText>)}
+        {url ? <SafeText role="body" fontSize={48} maxLines={1} color={COLOR.accent}>{url}</SafeText> : null}
+      </div>
     </div>
   );
 };

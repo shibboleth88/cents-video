@@ -643,6 +643,30 @@
    "by": null,
    "why": "names the chat assistant on cents.vision as the user wrote it, captioning its screenshot",
    "note": "awaiting the user's review (2026-10-24)"
+  },
+  {
+   "text": "no visual trait",
+   "kind": "addition",
+   "approved": false,
+   "by": null,
+   "why": "the catalogue category of a Cent with no trait flagged (cents_by_trait no_visual_trait), standing for the script's \"canvas\"",
+   "note": "awaiting the user's review (2026-10-24)"
+  },
+  {
+   "text": "heavily abraded",
+   "kind": "addition",
+   "approved": false,
+   "by": null,
+   "why": "the trait name in the cents.vision Lab filters (abraded: heavily)",
+   "note": "awaiting the user's review (2026-10-24)"
+  },
+  {
+   "text": "full verdigris",
+   "kind": "addition",
+   "approved": false,
+   "by": null,
+   "why": "the trait grade name on cents.vision",
+   "note": "awaiting the user's review (2026-10-24)"
   }
  ],
  "attributions": [],

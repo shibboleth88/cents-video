@@ -32,23 +32,45 @@
    "end": {
     "at_phrase": "The cataloging of these marks"
    },
-   "purpose": "Many Cents in quick succession, then one held and pushed in on: the marks of touch and time seen on the coin itself.",
+   "purpose": "The sentence, shot by shot: the canvas (a Cent with no visual trait), the marks of touch (heavy abrasion, close), the marks of time (patina, close).",
    "visual_kind": "code",
    "component": "TraitBurst",
    "props": {
     "segments": [
      {
       "at_phrase": "Every difference to the canvas",
-      "pool": "*",
-      "count": 10,
+      "pool": "no_visual_trait",
+      "count": 6,
+      "hero": 8950,
+      "caption": "no visual trait"
+     },
+     {
+      "at_phrase": "the marks of touch",
+      "pool": "abraded:heavily",
+      "count": 4,
+      "hero": 70,
+      "focus": [
+       0.42,
+       0.45
+      ],
+      "zoom": 1.6,
+      "caption": "heavily abraded"
+     },
+     {
+      "at_phrase": "and time",
+      "pool": "verdigris:full",
+      "count": 4,
       "hero": 3981,
       "focus": [
        0.55,
        0.42
       ],
-      "zoom": 1.6
+      "zoom": 1.6,
+      "caption": "full verdigris",
+      "patina": "verdigris"
      }
-    ]
+    ],
+    "flash": 6
    }
   },
   {
@@ -271,10 +293,10 @@
       "caption": "orange",
       "patina": "orange",
       "focus": [
-       0.75,
-       0.8
+       0.58,
+       0.36
       ],
-      "zoom": 1.5
+      "zoom": 1.8
      }
     ],
     "flash": 6
@@ -1189,7 +1211,7 @@
    "end": {
     "at_end": true
    },
-   "purpose": "Credits in the silence after the narration, then a wall of Cents as the final graphic: the collection continuing, not a closing card.",
+   "purpose": "The final graphic: a wall of Cents unfolds in the silence after the narration, and the credits appear on it. That is the end.",
    "visual_kind": "code",
    "component": "EndWall",
    "props": {
@@ -1200,7 +1222,7 @@
      "Script: shibboleth"
     ],
     "url": "cents.gallery",
-    "wall_after": 4.2
+    "text_after": 2.0
    }
   }
  ],
