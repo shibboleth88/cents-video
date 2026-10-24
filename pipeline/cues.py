@@ -153,6 +153,10 @@ def audit(cues: list[dict], boundaries: list[float] = ()) -> list[str]:
         if b["start"] < a["end"] - 1e-6: bad.append(f"cues overlap at {b['start']:.2f}s")
     return bad
 
+# Real tokens that look like a merge: a domain's dot has no space after it. An
+# exact list, not a pattern, so a genuine seam like 'cents.Rutherford' is still caught.
+DOMAINS = {"cents.vision", "cents.gallery", "rutherfordchang.com"}
+
 MERGE_RE = __import__("re").compile(
     r"(^[.,;:!?])"          # leading punctuation glued to a word
     r"|([.,;:][A-Za-z])"    # punctuation with no space after it, inside a token
@@ -170,6 +174,7 @@ def audit_transcript(words: list[Word]) -> list[str]:
     bad = []
     for w in words:
         t = w["word"]
+        if t.rstrip(",;:.!?") in DOMAINS: continue
         if MERGE_RE.search(t): bad.append(f"malformed token {t!r} at {w['start']:.2f}s")
         elif len(t) > 20: bad.append(f"suspiciously long token {t!r} at {w['start']:.2f}s")
     return bad
@@ -189,7 +194,9 @@ def _old_chunker(words: list[Word]) -> list[dict]:
 
 def self_test() -> int:
     import json, pathlib
-    p = pathlib.Path(__file__).resolve().parent.parent / "script" / "alignment.json"
+    # Any film's alignment can be named; the default is the active film's.
+    args = [a for a in sys.argv[1:] if not a.startswith("--")]
+    p = pathlib.Path(args[0]) if args else pathlib.Path(__file__).resolve().parent.parent / "script" / "alignment.json"
     words = json.loads(p.read_text())["words"]
     assert len(words) > 20, f"FLOOR: only {len(words)} words to test with"
 
