@@ -1,0 +1,377 @@
+{
+ "essay": {
+  "title": "Collector Wall",
+  "subtitle": "blacktongue",
+  "author": "shibboleth",
+  "source": "https://cents.vision/collectors.html",
+  "version": "pilot, script draft 2 (locked 2026-10-24), eo take A"
+ },
+ "_what": "Collector Wall episode 1. Every coin is a real Cent by number; every figure comes from data/wall.json (cents.vision, 24 Oct 2026). No wallet address appears.",
+ "shots": [
+  {
+   "shot_id": "w01_card",
+   "start": {
+    "at_start": true
+   },
+   "end": {
+    "at_phrase": "The Wall holds twenty-four"
+   },
+   "purpose": "Name the Wall and show its signature Cent, as the card does.",
+   "visual_kind": "code",
+   "component": "WallCard",
+   "props": {
+    "title": "blacktongue",
+    "signature": 5185,
+    "caption": "Signature Cent #5185 \u00b7 1968"
+   }
+  },
+  {
+   "shot_id": "w02_grid",
+   "start": {
+    "at_phrase": "The Wall holds twenty-four"
+   },
+   "end": {
+    "at_phrase": "from nineteen thirty-eight to"
+   },
+   "purpose": "Every Cent on the Wall, with the count and the badges the card shows.",
+   "visual_kind": "code",
+   "component": "WallGrid",
+   "props": {
+    "title": "blacktongue",
+    "cents": [
+     8626,
+     7863,
+     189,
+     555,
+     4674,
+     5755,
+     7449,
+     8185,
+     9840,
+     9991,
+     1055,
+     2489,
+     3231,
+     3317,
+     5185,
+     7395,
+     3217,
+     7906,
+     6054,
+     1757,
+     1935,
+     8059,
+     9064,
+     9684
+    ],
+    "readout": "24",
+    "readout_at": "twenty-four Cents",
+    "badges": [
+     {
+      "text": "Dime Club"
+     },
+     {
+      "text": "Diamond Hands"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "w03_years",
+   "start": {
+    "at_phrase": "from nineteen thirty-eight to"
+   },
+   "end": {
+    "at_phrase": "Among them is one"
+   },
+   "purpose": "The same Cents by year: the span 1938 to 1980 and the years held.",
+   "visual_kind": "code",
+   "component": "WallYears",
+   "props": {
+    "title": "blacktongue",
+    "cents": [
+     {
+      "n": 189,
+      "year": 1960
+     },
+     {
+      "n": 555,
+      "year": 1962
+     },
+     {
+      "n": 1055,
+      "year": 1968
+     },
+     {
+      "n": 1757,
+      "year": 1975
+     },
+     {
+      "n": 1935,
+      "year": 1975
+     },
+     {
+      "n": 2489,
+      "year": 1968
+     },
+     {
+      "n": 3217,
+      "year": 1970
+     },
+     {
+      "n": 3231,
+      "year": 1968
+     },
+     {
+      "n": 3317,
+      "year": 1968
+     },
+     {
+      "n": 4674,
+      "year": 1964
+     },
+     {
+      "n": 5185,
+      "year": 1968
+     },
+     {
+      "n": 5755,
+      "year": 1964
+     },
+     {
+      "n": 6054,
+      "year": 1974
+     },
+     {
+      "n": 7395,
+      "year": 1968
+     },
+     {
+      "n": 7449,
+      "year": 1964
+     },
+     {
+      "n": 7863,
+      "year": 1958
+     },
+     {
+      "n": 7906,
+      "year": 1972
+     },
+     {
+      "n": 8059,
+      "year": 1975
+     },
+     {
+      "n": 8185,
+      "year": 1964
+     },
+     {
+      "n": 8626,
+      "year": 1938
+     },
+     {
+      "n": 9064,
+      "year": 1975
+     },
+     {
+      "n": 9684,
+      "year": 1980
+     },
+     {
+      "n": 9840,
+      "year": 1967
+     },
+     {
+      "n": 9991,
+      "year": 1967
+     }
+    ],
+    "caption": "Years 1938\u20131980"
+   }
+  },
+  {
+   "shot_id": "w04_1938",
+   "start": {
+    "at_phrase": "Among them is one"
+   },
+   "end": {
+    "at_phrase": "And one of nine with"
+   },
+   "purpose": "Standout: one of the two 1938 Cents in CENTS.",
+   "visual_kind": "code",
+   "component": "WallStandout",
+   "props": {
+    "title": "blacktongue",
+    "n": 8626,
+    "readout": "1 of 2",
+    "caption": "Cents from 1938"
+   }
+  },
+  {
+   "shot_id": "w05_gold",
+   "start": {
+    "at_phrase": "And one of nine with"
+   },
+   "end": {
+    "at_phrase": "That gold, with five"
+   },
+   "purpose": "Standout: one of the nine Full Gold Cents.",
+   "visual_kind": "code",
+   "component": "WallStandout",
+   "props": {
+    "title": "blacktongue",
+    "n": 3231,
+    "readout": "1 of 9",
+    "caption": "Cents with a full gold patina"
+   }
+  },
+  {
+   "shot_id": "w06_spectrum",
+   "start": {
+    "at_phrase": "That gold, with five"
+   },
+   "end": {
+    "at_phrase": "Only nine Full Spectrum Sets"
+   },
+   "purpose": "The six Cents on this Wall that complete Full Spectrum, each arriving as it is named.",
+   "visual_kind": "code",
+   "component": "CentRow",
+   "props": {
+    "title": "blacktongue",
+    "subtitle": "Full Spectrum Set",
+    "cols": 3,
+    "cents": [
+     {
+      "n": 6054,
+      "patina": "verdigris",
+      "caption": "Full Verdigris \u00b7 #6054",
+      "at_phrase": "a full verdigris"
+     },
+     {
+      "n": 555,
+      "patina": "obsidian",
+      "caption": "Full Obsidian \u00b7 #555",
+      "at_phrase": "a full obsidian"
+     },
+     {
+      "n": 189,
+      "patina": "red",
+      "caption": "Full Red \u00b7 #189",
+      "at_phrase": "a full red, a full"
+     },
+     {
+      "n": 5185,
+      "patina": "desert",
+      "caption": "Full Desert \u00b7 #5185",
+      "at_phrase": "full desert, a full gold"
+     },
+     {
+      "n": 3231,
+      "patina": "gold",
+      "caption": "Full Gold \u00b7 #3231",
+      "at_phrase": "full gold and an"
+     },
+     {
+      "n": 1757,
+      "patina": "orange",
+      "caption": "Orange \u00b7 #1757",
+      "at_phrase": "and an orange"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "w07_ceiling",
+   "start": {
+    "at_phrase": "Only nine Full Spectrum Sets"
+   },
+   "end": {
+    "at_phrase": "On the twenty-fourth of October"
+   },
+   "purpose": "All nine Full Gold Cents: why at most nine Full Spectrum Sets can exist.",
+   "visual_kind": "code",
+   "component": "PoolWall",
+   "props": {
+    "pool": "gold:full",
+    "readout": "9",
+    "title": "Full Gold Cents",
+    "caption": "at most 9 Full Spectrum Sets",
+    "readout_at": "only nine Full Gold"
+   }
+  },
+  {
+   "shot_id": "w08_holders",
+   "start": {
+    "at_phrase": "On the twenty-fourth of October"
+   },
+   "end": {
+    "at_phrase": "Across its Cents"
+   },
+   "purpose": "The two Walls that held Full Spectrum on 24 Oct 2026, by their signature Cents.",
+   "visual_kind": "code",
+   "component": "WallList",
+   "props": {
+    "title": "Full Spectrum Set",
+    "subtitle": "held on 24 October 2026",
+    "readout": "2 Walls",
+    "readout_at": "two Walls held one",
+    "rows": [
+     {
+      "n": 5185,
+      "label": "blacktongue",
+      "at_phrase": "this Wall, and the"
+     },
+     {
+      "n": 1924,
+      "label": "the artist wallet",
+      "at_phrase": "the wallet of the artist"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "w09_contamination",
+   "start": {
+    "at_phrase": "Across its Cents"
+   },
+   "end": {
+    "at_end": true
+   },
+   "purpose": "The four contamination types on the Wall, one Cent each.",
+   "visual_kind": "code",
+   "component": "WallList",
+   "props": {
+    "title": "blacktongue",
+    "subtitle": "Contamination Set",
+    "readout": "4 of 12",
+    "readout_at": "four of the twelve",
+    "rows": [
+     {
+      "n": 5755,
+      "label": "Alien Secretion"
+     },
+     {
+      "n": 6054,
+      "label": "Obscure Adhesive"
+     },
+     {
+      "n": 8185,
+      "label": "Special Oddities"
+     },
+     {
+      "n": 9840,
+      "label": "Dark Grime"
+     }
+    ]
+   }
+  }
+ ],
+ "credits": {
+  "lines": [
+   "Data: cents.vision Collector Walls, 24 October 2026",
+   "Images: the CENTS inscriptions"
+  ],
+  "url": "cents.vision/collectors.html"
+ }
+}
