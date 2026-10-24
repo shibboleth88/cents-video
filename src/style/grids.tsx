@@ -116,3 +116,43 @@ export const CentGrid: React.FC<{
     </div>
   );
 };
+
+/**
+ * One Cent, turning slowly, for showing what a trait looks like.
+ *
+ * The turn is a rotation in the plane plus a small tilt in depth. It never
+ * turns past ±maxTilt degrees, because only the obverse was photographed and
+ * inscribed: a turn that reached the back would have to invent one. No light
+ * or colour is laid over the coin, so the patina on screen is the photograph's.
+ */
+export const CentTurn: React.FC<{
+  n: number;
+  size: number;
+  /** Degrees of in-plane rotation per second. */
+  spin?: number;
+  /** Largest tilt in depth, degrees. Kept well short of edge-on. */
+  maxTilt?: number;
+  /** Seconds per tilt cycle. */
+  tiltPeriod?: number;
+  from?: number;
+  style?: React.CSSProperties;
+}> = ({ n, size, spin = 9, maxTilt = 16, tiltPeriod = 7, from = 0, style }) => {
+  const frame = useCurrentFrame();
+  if (maxTilt > 35) throw new Error(`CentTurn: a ${maxTilt}° tilt foreshortens the face too far; keep it at 35° or under`);
+  const t = (frame - from) / 30;
+  const enter = interpolate(frame, [from, from + 18], [0, 1],
+    { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: EASE.out });
+  const tiltX = maxTilt * Math.sin((2 * Math.PI * t) / tiltPeriod);
+  const tiltY = maxTilt * 0.6 * Math.cos((2 * Math.PI * t) / (tiltPeriod * 1.3));
+  return (
+    <div style={{ width: size, height: size, perspective: size * 3, ...style }}>
+      <div style={{
+        width: size, height: size, opacity: enter,
+        transform: `scale(${0.85 + 0.15 * enter}) rotateX(${tiltX}deg) rotateY(${tiltY}deg) rotateZ(${spin * t}deg)`,
+        filter: `drop-shadow(0 ${size * 0.04}px ${size * 0.06}px rgba(0,0,0,0.55))`,
+      }}>
+        <CentImage n={n} size={size} />
+      </div>
+    </div>
+  );
+};

@@ -1,0 +1,167 @@
+{
+ "_what": "Every narration sentence maps to a span of script/essay.txt, the sources of record for this film.",
+ "essay_version": "film A draft 1, 2026-10-24",
+ "thesis": "Circulation made the marks and the collectors named them; the Sets are structures the Trait Council identified in what was named, and each one redefines a single Cent as the piece some collection completes or lacks, a valuation that goes on being made as Cents change hands.",
+ "script_target": "target ~100 s; 194 words measures 105 s at 1.84 w/s (rate measured on the user's recordings)",
+ "epoch_convention": "See essay block [7]. CATALOGUE = Sep 2026 export measured 2026-10-24; HOLDERS = 9 Sep 2026 snapshot, said with its date; SETS = cents.vision/sets.html.",
+ "claims": [
+  {
+   "say": "Rutherford Chang photographed each of ten thousand copper cents, to record its wear and patina.",
+   "kind": "paraphrase",
+   "span": "Chang photographed each coin to record its particular wear and patina",
+   "epoch": "2017-2024",
+   "as_of": "UCCA exhibition page, 2026",
+   "epoch_note": "Opens on the work and Chang's act, in the past tense. Says nothing about traits or Sets, so it gives him no motive for them."
+  },
+  {
+   "say": "Circulation made the marks.",
+   "kind": "addition",
+   "approved": false,
+   "why": "The framing the user approved for the bot: 'Circulation made the marks; the Trait Council named them.' Not in the written sources of record."
+  },
+  {
+   "say": "The names came afterwards, from the collectors, over two years of voting.",
+   "kind": "paraphrase",
+   "span": "a community-led initiative carried out over the course of 2 years through multiple reviews of the full 10k set, numerous voting rounds",
+   "epoch": "2022-2024",
+   "as_of": "trait documentation, sovrn.art",
+   "epoch_note": "User-approved wording; replaces 'nobody assigned the traits'."
+  },
+  {
+   "say": "Out of the names, the Trait Council identified the Sets.",
+   "kind": "paraphrase",
+   "span": "emergent structures identified within the collection's internal dynamics",
+   "epoch": "standing",
+   "as_of": "cents.vision/sets.html via guide, 2026-06-20",
+   "epoch_note": "Never 'collecting goals'."
+  },
+  {
+   "say": "Verdigris, obsidian, desert, red: one of each makes a Patina Set.",
+   "kind": "paraphrase",
+   "span": "at least one **Notable+** of each of the 4 base patinas",
+   "epoch": "standing",
+   "as_of": "cents.vision/sets.html via guide, 2026-06-20",
+   "epoch_note": "'One of each' simplifies Notable+; the on-screen requirement card gives the threshold."
+  },
+  {
+   "say": "One full of each makes the Fulls, and only fifteen are full verdigris.",
+   "kind": "paraphrase",
+   "span": "Of the 10,000, 15 are full verdigris",
+   "epoch": "September 2026 catalogue",
+   "as_of": "September 2026 trait export, measured 2026-10-24",
+   "epoch_note": "A Council count; it can move if an adjudication is revised."
+  },
+  {
+   "say": "Add a full gold, one of nine, and an orange, for the Full Spectrum.",
+   "kind": "paraphrase",
+   "span": "one **Full** of all 4 base patinas *plus* Full Gold and Orange",
+   "epoch": "September 2026 catalogue",
+   "as_of": "September 2026 trait export, measured 2026-10-24",
+   "epoch_note": "Nine from block [5]: 'Exactly 9 Cents are full gold.'"
+  },
+  {
+   "say": "Full Contamination needs all twelve kinds, and scotch tape is on just seven Cents.",
+   "kind": "paraphrase",
+   "span": "Blood 17, Scotch Tape 7",
+   "epoch": "September 2026 catalogue",
+   "as_of": "September 2026 trait export, measured 2026-10-24",
+   "epoch_note": "Requirement from block [4]: covers all 12. There is no Corroded Set."
+  },
+  {
+   "say": "1971, 1979 and 1982 make the Chronicle.",
+   "kind": "paraphrase",
+   "span": "holds at least one Cent minted in **each of 1971, 1979 and 1982**",
+   "epoch": "standing",
+   "as_of": "cents.vision/sets.html via guide, 2026-06-20",
+   "epoch_note": "The film does not say why these years. Their meanings (fiat, Chang's birth, last copper) would risk reading as the Council's or Chang's intent."
+  },
+  {
+   "say": "An S, a D and no mint mark make the Full Mint, and only sixty carry the S.",
+   "kind": "paraphrase",
+   "span": "Mint marks: no mark 8,343, D 1,597, S 60",
+   "epoch": "mint marks, fixed",
+   "as_of": "September 2026 trait export, measured 2026-10-24",
+   "epoch_note": "Mint marks do not change."
+  },
+  {
+   "say": "A Decades Set needs every year of the decade that the collection holds.",
+   "kind": "paraphrase",
+   "span": "hold at least one Cent from **every mint year of that decade present in the collection**",
+   "epoch": "standing",
+   "as_of": "cents.vision/sets.html via guide, 2026-06-20",
+   "epoch_note": ""
+  },
+  {
+   "say": "Only one Cent is dated 1949, and only one 1954.",
+   "kind": "paraphrase",
+   "span": "1949 has exactly one Cent. 1954 has exactly one Cent",
+   "epoch": "mint years, fixed",
+   "as_of": "September 2026 trait export, measured 2026-10-24",
+   "epoch_note": "Mint years do not change."
+  },
+  {
+   "say": "So the 1940s Set and the 1950s Set can each be held by one collector at a time.",
+   "kind": "paraphrase",
+   "span": "so each can be held by at most one collector at a time",
+   "epoch": "standing while the requirement holds",
+   "as_of": "September 2026 trait export, measured 2026-10-24",
+   "epoch_note": "Derived in block [5] from the requirement and the two counts."
+  },
+  {
+   "say": "Full Decades needs both, and on 9 September 2026 no one held it.",
+   "kind": "paraphrase",
+   "span": "fullDecades 0",
+   "epoch": "2026-09-09",
+   "as_of": "set-counts.php snapshot, 2026-09-09",
+   "epoch_note": "MUST be re-read before recording. If someone holds it by then, the line changes to the new fact with its date."
+  },
+  {
+   "say": "To the Treasury, each of these is worth a cent.",
+   "kind": "paraphrase",
+   "span": "a penny from any given year will always be worth exactly 1¢, according to the United States Treasury",
+   "epoch": "standing",
+   "as_of": "project description, March 2024",
+   "epoch_note": "The value frame. 'Always' in the source supports the unqualified present."
+  },
+  {
+   "say": "In the Sets, each is also the piece another collection is missing.",
+   "kind": "addition",
+   "approved": false,
+   "why": "The close. Interpretation in the value frame, ending on an open condition: Sets are completed and broken as Cents change hands. Not a price claim."
+  }
+ ],
+ "onscreen": [],
+ "attributions": [],
+ "distinctions_kept": [
+  {
+   "distinction": "the MARKS on a cent (made by circulation) vs the NAMES of its traits (given by the Trait Council)",
+   "where": "lines 2-3",
+   "verdict": "kept",
+   "by": "claude"
+  },
+  {
+   "distinction": "the Sets as IDENTIFIED structures vs collecting goals",
+   "where": "line 4 says the Council identified the Sets",
+   "verdict": "kept",
+   "by": "claude"
+  },
+  {
+   "distinction": "Chang's ACT (photographing each coin for its wear and patina) vs any intention about traits or Sets",
+   "where": "line 1 is the only Chang line; it stops at the photograph, and the Sets arrive only after the Council",
+   "verdict": "kept",
+   "by": "claude"
+  },
+  {
+   "distinction": "a CATALOGUE count (Council adjudication, Sep 2026) vs a HOLDER count (9 Sep 2026 snapshot)",
+   "where": "line 14 is the only holder figure and carries its date aloud",
+   "verdict": "kept",
+   "by": "claude"
+  },
+  {
+   "distinction": "Full Contamination vs a 'Corroded Set' (which does not exist)",
+   "where": "line 8 says Full Contamination and twelve kinds; corroded is never said",
+   "verdict": "kept",
+   "by": "claude"
+  }
+ ]
+}

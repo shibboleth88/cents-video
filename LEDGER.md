@@ -249,6 +249,18 @@ control goes RED on each, against each one's own first pair.
 **The pair:** *a control written for a subject is not a control derived from it.*
 Written twice now, so it is a rule.
 
+**Third instance, 2026-10-24, on the Sets film (`sets-found`).** The rule above
+was written and still did not stop it, because nobody audited the controls the
+rule didn't name. `corrupt_fabricated_span()` planted its fake span on
+`claims[1]`. That claim was a paraphrase on both earlier films. On the Sets film
+it is an addition ("Circulation made the marks."), and `g_spans` doesn't inspect
+additions, so the control read **VACUOUS**. Fixed the same way: target the first
+quotation or paraphrase, with an `Unbuildable` floor. After the fix it goes RED
+on all three films (10/10 buildable on each). The rest of `self_test()` was
+audited for fixed indexes. `distinctions_kept[0]` remains, and it's sound,
+because `g_distinctions_reviewed` inspects every entry. *Knowing a shape by name
+did not prevent it; running the controls against a new subject did.*
+
 ### The key is an instrument, and a wrong key reads as a failing subject
 
 Three reviewer agents were scored against a key built from commit messages. The

@@ -1,7 +1,7 @@
 import React from "react";
 import { AbsoluteFill, Composition } from "remotion";
 import { CANVAS, COLOR, REGIONS } from "../style/tokens";
-import { CentGrid, fitGrid } from "../style/grids";
+import { CentGrid, CentTurn, fitGrid } from "../style/grids";
 import poolsJson from "../../films/sets/data/pools.json";
 
 /**
@@ -57,10 +57,18 @@ const Field: React.FC<{ pool: string }> = ({ pool: k }) => {
   );
 };
 
+/** One Cent turning: Full Verdigris, CENT #3981, the Fulls example on the Sets page. */
+const Turn: React.FC<{ n: number }> = ({ n }) => (
+  <AbsoluteFill style={{ background: COLOR.bg, alignItems: "center", justifyContent: "center" }}>
+    <CentTurn n={n} size={500} />
+  </AbsoluteFill>
+);
+
 const base = { width: CANVAS.width, height: CANVAS.height, fps: CANVAS.fps, durationInFrames: 120 };
 export const LabRoot: React.FC = () => (
   <>
     <Composition id="FullsWall" component={FullsWall} {...base} />
+    <Composition id="TurnFullVerdigris" component={Turn} {...base} durationInFrames={210} defaultProps={{ n: 3981 }} />
     <Composition id="FieldFullRed" component={Field} {...base} defaultProps={{ pool: "red:full" }} />
   </>
 );
