@@ -12,5 +12,5 @@ sequence, circulation to inscription. This one starts after the fifth and uses
 the participant material (Trait Council, Sets, UCCA, the Void). Neither closes
 on the objecthood film's "CENTS is a becoming" line.
 
-State 2026-10-24: script draft 1.1, 278 words, 23 sentences. Gates 10/11 (the
+State 2026-10-24: script draft 1.1, 278 words, 23 sentences. Gates 9/11: two additions await the user's sign-off, and the
 on-screen gate has no timeline to measure). Controls 10/10 buildable red.

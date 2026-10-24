@@ -15,7 +15,7 @@
   {
    "say": "So where is the work?",
    "kind": "addition",
-   "approved": true,
+   "approved": false,
    "note": "A rhetorical question that sets up the essay's claim about medium; asserts nothing."
   },
   {
@@ -113,7 +113,7 @@
   {
    "say": "The work went on.",
    "kind": "addition",
-   "approved": true,
+   "approved": false,
    "note": "Bridge sentence; the next sentence (UCCA, January 2026) is its evidence."
   },
   {
