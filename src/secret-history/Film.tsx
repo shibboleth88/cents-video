@@ -11,6 +11,7 @@ import alignmentJson from "../../films/secret-history/script/alignment.json";
 import chartJson from "../../films/secret-history/build/year_chart.json";
 import picksJson from "../../films/secret-history/build/picks.json";
 import cuesJson from "../../films/secret-history/captions/cues.json";
+import scenesJson from "../../films/secret-history/build/scenes.json";
 
 /**
  * Secret History of a Penny, visual pass 1.
@@ -42,19 +43,7 @@ export const DURATION = END + TAIL;
 const clamp = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
 const ease = (f: number, a: number, b: number) => interpolate(f, [a, b], [0, 1], clamp);
 
-const SCENES: { id: string; from: string | null; to: string | null }[] = [
-  { id: "open", from: null, to: "Each date marks" },
-  { id: "thesis", from: "Each date marks", to: "1943 is missing" },
-  { id: "y1943", from: "1943 is missing", to: "1944 At Bretton" },
-  { id: "y1944", from: "1944 At Bretton", to: "1964 The silver" },
-  { id: "y1964", from: "1964 The silver", to: "1971 The dollar" },
-  { id: "y1971", from: "1971 The dollar", to: "Material is detached" },
-  { id: "y1971b", from: "Material is detached", to: "1979 Inflation" },
-  { id: "y1979", from: "1979 Inflation", to: "1982 Copper has" },
-  { id: "y1982", from: "1982 Copper has", to: "In the Block" },
-  { id: "block", from: "In the Block", to: "As inscriptions" },
-  { id: "close", from: "As inscriptions", to: null },
-];
+const SCENES = (scenesJson as unknown as { scenes: { id: string; from: string | null; to: string | null }[] }).scenes;
 const sceneStart: Record<string, number> = Object.fromEntries(SCENES.map((s) => [s.id, s.from ? at(s.from) : 0]));
 /** Frame of a phrase, relative to the start of the scene it falls in. */
 const local = (scene: string, phrase: string) => at(phrase) - sceneStart[scene]!;
