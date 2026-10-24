@@ -276,7 +276,7 @@ const Scene: React.FC<{ id: string }> = ({ id }) => {
     case "y1971b":
       return (<AbsoluteFill>
         <Footage src="secret-history/ftg/face1971.mp4" x={0} y={420} w={1080} h={1080} zoom={0.06} />
-        <Text y={300} size={42} color={COLOR.inkDim} opacity={ease(f, 0, 15)}>{`CENT #${picks.heroes["1971"]} over the Block's 3D model`}</Text>
+        <Text y={300} size={42} color={COLOR.inkDim} opacity={ease(f, 0, 15)}>{`CENT #${picks.heroes["1971"]} over CENTS Block 839969`}</Text>
       </AbsoluteFill>);
     case "y1979":
       return (<AbsoluteFill>
@@ -320,7 +320,7 @@ const Scene: React.FC<{ id: string }> = ({ id }) => {
         <Sequence from={turn}>
           {/* The rotating model, white keyed to the film's ground (build: block_dark.mp4). */}
           <Footage src="secret-history/ftg/block_dark.mp4" x={0} y={260} w={1080} h={1080} start={3} zoom={0.04} />
-          <Text y={290} size={42} color={COLOR.inkDim}>3D model of the Block</Text>
+          <Text y={290} size={42} color={COLOR.inkDim}>CENTS Block 839969</Text>
         </Sequence>
       </AbsoluteFill>);
     }

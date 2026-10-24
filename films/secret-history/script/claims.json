@@ -218,12 +218,13 @@
   {
    "text": "The New York Times,\n16 August 1971",
    "kind": "caption",
-   "source": "masthead of the page itself: NEW YORK, MONDAY, AUGUST 16, 1971"
+   "source": "masthead of the page itself: NEW YORK, MONDAY, AUGUST 16, 1971; user cleared use 2026-10-24",
+   "approved": true
   },
   {
-   "text": "CENT #6492 over the Block's 3D model",
+   "text": "CENT #6492 over CENTS Block 839969",
    "kind": "caption",
-   "source": "media catalogue C002 '1971 penny over rotating Block'"
+   "source": "media catalogue C002 '1971 penny over rotating Block'; user 2026-10-24: the digital Block is CENTS Block 839969"
   },
   {
    "text": "95% copper / 97.5% zinc, copper-plated",
@@ -238,12 +239,12 @@
   {
    "text": "Casting CENTS Block Copper",
    "kind": "caption",
-   "source": "media catalogue C029 'creation of the CENTS Block, outdoor molten-metal pour'"
+   "source": "media catalogue C029 'creation of the CENTS Block, outdoor molten-metal pour'; user confirmed label 2026-10-24"
   },
   {
-   "text": "3D model of the Block",
+   "text": "CENTS Block 839969",
    "kind": "caption",
-   "source": "media catalogue C012 'Rotating digital Block model'"
+   "source": "media catalogue C012 'Rotating digital Block model'; user 2026-10-24: the digital Block is CENTS Block 839969"
   },
   {
    "text": "CENT #n / inscription N",
