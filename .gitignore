@@ -9,3 +9,4 @@ public/vo.wav
 .env.local
 public/cents/
 __pycache__/
+public/secret-history/
