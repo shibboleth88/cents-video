@@ -261,7 +261,165 @@ export const FieldTitle: React.FC<Anchored & { title: string; subtitle?: string 
   );
 };
 
-// Video.tsx passes {alignment, shotStartFrame} to components that ask for it.
-for (const C of [CentRow, PoolWall, CentHero, FieldTitle]) (C as any).wantsAlignment = true;
+/**
+ * Higher-resolution photographs of a few Cents (pipeline/stage_cents.py --hi),
+ * about 860px across against the on-chain 246. Only these may be zoomed into:
+ * a zoom on the 300px image would enlarge pixels, not the trait.
+ */
+export const HI_RES = new Set([111, 608, 2956, 3981, 4788, 6059, 6492, 7823, 9172, 9533]);
+const HI_MAX_PX = 1150;
 
-export const SETS = { CentRow, PoolWall, CentHero, FieldTitle } as const;
+type Segment = {
+  at_phrase: string;
+  /** Pool key(s) from films/sets/data/pools.json, or "*" for the whole collection. */
+  pool: string | string[];
+  /** How many Cents flash past before the hero. 0 = straight to the hero. */
+  count?: number;
+  hero?: number;
+  /** Where the trait is on the hero, as fractions of its width and height. */
+  focus?: [number, number];
+  /** How far to push in on the focus. Only on a high-resolution hero. */
+  zoom?: number;
+  caption?: string;
+  patina?: Patina;
+  /** A count shown with the caption; checked against the pool's size. */
+  readout?: string;
+};
+
+/** Deterministic sample, so a re-render shows the same Cents. */
+const sample = (ns: number[], k: number, seed: string, avoid?: number): number[] => {
+  let h = 2166136261;
+  for (let i = 0; i < seed.length; i++) h = Math.imul(h ^ seed.charCodeAt(i), 16777619) >>> 0;
+  const pool = ns.filter((n) => n !== avoid);
+  if (k >= pool.length) return pool;
+  const out: number[] = [];
+  const used = new Set<number>();
+  while (out.length < k) {
+    h = Math.imul(h ^ (h >>> 13), 0x5bd1e995) >>> 0;
+    const n = pool[h % pool.length]!;
+    if (!used.has(n)) { used.add(n); out.push(n); }
+  }
+  return out;
+};
+
+const ALL = Array.from({ length: 10000 }, (_, i) => i + 1);
+const poolOf = (p: string | string[]): number[] => {
+  if (p === "*") return ALL;
+  const keys = Array.isArray(p) ? p : [p];
+  return Array.from(new Set(keys.flatMap((k) => pool(k)))).sort((a, b) => a - b);
+};
+
+/**
+ * Many Cents for one trait, in quick succession, then one held large. Each
+ * segment starts on the phrase that names its trait. Where the hero exists in
+ * high resolution the hold pushes in on the part of the coin that bears the
+ * trait (`focus`); otherwise it turns slowly at the size its source allows.
+ */
+export const TraitBurst: React.FC<Anchored & { title?: string; segments: Segment[]; flash?: number }> = (props) => {
+  const { title, segments, flash = 4 } = props;
+  const frame = useCurrentFrame();
+  const { durationInFrames } = useVideoConfig();
+  const fade = useShotFade();
+  const at = useAt(props);
+  if (segments.length === 0) throw new Error("TraitBurst: no segments");
+  const starts = segments.map((s) => at(s.at_phrase));
+  if (starts[0] !== 0 && starts[0]! > 2) throw new Error(`TraitBurst: first segment starts ${starts[0]} frames in; the shot would open empty`);
+  for (let i = 1; i < starts.length; i++)
+    if (starts[i]! <= starts[i - 1]!) throw new Error(`TraitBurst: "${segments[i]!.at_phrase}" is not after "${segments[i - 1]!.at_phrase}"`);
+  let i = 0;
+  for (let k = 0; k < starts.length; k++) if (frame >= starts[k]!) i = k;
+  const seg = segments[i]!;
+  const s0 = Math.max(0, starts[i]!);
+  const s1 = i + 1 < starts.length ? starts[i + 1]! : durationInFrames;
+  const ns = poolOf(seg.pool);
+  if (seg.readout !== undefined && seg.readout !== ns.length.toLocaleString("en-US"))
+    throw new Error(`TraitBurst ${JSON.stringify(seg.pool)}: readout says ${seg.readout} but the pool holds ${ns.length}`);
+  if (seg.hero !== undefined && !ns.includes(seg.hero))
+    throw new Error(`TraitBurst: hero #${seg.hero} is not in pool ${JSON.stringify(seg.pool)}`);
+  if (seg.zoom && seg.zoom > 1 && (seg.hero === undefined || !HI_RES.has(seg.hero)))
+    throw new Error(`TraitBurst: zoom on #${seg.hero} needs a high-resolution photograph; the 300px image cannot hold it`);
+  const len = s1 - s0;
+  // The flashes may take at most 60% of the segment, so the hero always lands.
+  const wanted = seg.count ?? 6;
+  const step = Math.max(2, Math.min(flash, Math.floor((len * (seg.hero ? 0.6 : 1)) / Math.max(1, wanted))));
+  const flashes = sample(ns, Math.min(wanted, Math.floor((len * (seg.hero ? 0.6 : 1)) / step)), `${seg.at_phrase}`, seg.hero);
+  const local = frame - s0;
+  const inFlash = local < flashes.length * step;
+  const hi = seg.hero !== undefined && HI_RES.has(seg.hero);
+
+  // A round window the size of the held coin: at rest it is the coin's own
+  // edge, and a push-in fills it with the trait instead of spilling past it.
+  const BOX = 640;
+  const cx = 540, cy = STAGE.y0 + (STAGE.y1 - STAGE.y0) / 2;
+  const left = cx - BOX / 2, top = cy - BOX / 2;
+  let coin: React.ReactNode = null;
+  if (inFlash || seg.hero === undefined) {
+    const n = flashes[Math.min(flashes.length - 1, Math.floor(local / step))];
+    const size = MAX_CENT_PX;
+    if (n !== undefined)
+      coin = (
+        <div style={{ position: "absolute", left: (BOX - size) / 2, top: (BOX - size) / 2 }}>
+          <CentImage n={n} size={size} />
+        </div>
+      );
+  } else {
+    const hold = local - flashes.length * step;
+    const holdLen = Math.max(1, len - flashes.length * step);
+    const t = interpolate(hold, [0, holdLen], [0, 1], { extrapolateRight: "clamp", easing: EASE.inOut });
+    const enter = interpolate(hold, [0, 8], [0.92, 1], { extrapolateRight: "clamp", easing: EASE.out });
+    if (hi) {
+      const size = BOX;
+      const z = 1 + ((seg.zoom ?? 1) - 1) * t;
+      if (size * z > HI_MAX_PX) throw new Error(`TraitBurst: #${seg.hero} at ${Math.round(size * z)}px is past the ${HI_MAX_PX}px its photograph holds`);
+      const [fx, fy] = seg.focus ?? [0.5, 0.5];
+      // Move the focus toward the window's centre as the zoom grows.
+      const dx = (0.5 - fx) * size * t;
+      const dy = (0.5 - fy) * size * t;
+      coin = (
+        <div style={{ position: "absolute", left: (BOX - size) / 2, top: (BOX - size) / 2, width: size, height: size,
+                      transform: `translate(${dx}px, ${dy}px) scale(${z * enter})`, transformOrigin: `${fx * 100}% ${fy * 100}%` }}>
+          <Img src={staticFile(`cents_hi/${seg.hero}.webp`)} style={{ width: size, height: size, display: "block" }} />
+        </div>
+      );
+    } else {
+      const size = MAX_CENT_PX;
+      coin = (
+        <div style={{ position: "absolute", left: (BOX - size) / 2, top: (BOX - size) / 2, transform: `scale(${enter})` }}>
+          <CentTurn n={seg.hero!} size={size} from={s0 + flashes.length * step} spin={4} maxTilt={10} />
+        </div>
+      );
+    }
+  }
+  const capT = interpolate(local, [0, 6], [0, 1], { extrapolateRight: "clamp" });
+  return (
+    <div style={{ position: "absolute", inset: 0, opacity: fade }}>
+      <Title title={title} />
+      <Imagery>
+        <div style={{ position: "absolute", left, top, width: BOX, height: BOX, overflow: "hidden", borderRadius: "50%",
+                      filter: "drop-shadow(0 14px 26px rgba(0,0,0,0.55))" }}>
+          {coin}
+        </div>
+      </Imagery>
+      {seg.caption || seg.readout ? (
+        <div key={i} style={{ position: "absolute", left: STAGE.x0, top: READOUT.y0, width: STAGE.x1 - STAGE.x0,
+                              height: READOUT.y1 - READOUT.y0, display: "flex", flexDirection: "column", justifyContent: "center", opacity: capT }}>
+          {seg.readout ? (
+            <SafeText role="display" fontSize={84} maxLines={1} color={COLOR.accent}
+                      style={{ fontFamily: TYPE.mono, fontWeight: 700 }}>{seg.readout}</SafeText>
+          ) : null}
+          {seg.caption ? (
+            <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
+              {seg.patina ? <Imagery><Dot patina={seg.patina} d={34} /></Imagery> : null}
+              <SafeText role="body" fontSize={52} maxLines={2}>{seg.caption}</SafeText>
+            </div>
+          ) : null}
+        </div>
+      ) : null}
+    </div>
+  );
+};
+
+// Video.tsx passes {alignment, shotStartFrame} to components that ask for it.
+for (const C of [CentRow, PoolWall, CentHero, FieldTitle, TraitBurst]) (C as any).wantsAlignment = true;
+
+export const SETS = { CentRow, PoolWall, CentHero, FieldTitle, TraitBurst } as const;

@@ -209,14 +209,6 @@
    "note": "awaiting the user's review of the shot plan (2026-10-24)"
   },
   {
-   "text": "Cent #8353",
-   "kind": "addition",
-   "approved": false,
-   "by": null,
-   "why": "identifies the Cent on screen by its number; metadata.json",
-   "note": "awaiting the user's review of the shot plan (2026-10-24)"
-  },
-  {
    "text": "Trait Council",
    "kind": "paraphrase",
    "span": "The cataloging of emergent traits in the CENTS collection is a community-led initiative"
@@ -318,11 +310,6 @@
   },
   {
    "text": "Contamination",
-   "kind": "paraphrase",
-   "span": "Contamination is recorded in 12 types."
-  },
-  {
-   "text": "12 types",
    "kind": "paraphrase",
    "span": "Contamination is recorded in 12 types."
   },
@@ -574,6 +561,16 @@
    "by": null,
    "why": "credit; the user wrote the script",
    "note": "awaiting the user's review of the shot plan (2026-10-24)"
+  },
+  {
+   "text": "gold",
+   "kind": "paraphrase",
+   "span": "Gold 69, orange 141."
+  },
+  {
+   "text": "orange",
+   "kind": "paraphrase",
+   "span": "Gold 69, orange 141."
   }
  ],
  "attributions": [],

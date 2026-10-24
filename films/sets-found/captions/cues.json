@@ -41,18 +41,23 @@
  },
  {
   "start": 19.68,
-  "end": 22.8,
-  "text": "Verdigris, obsidian, desert and red"
+  "end": 21.68,
+  "text": "Verdigris, obsidian,"
  },
  {
-  "start": 22.96,
-  "end": 25.68,
-  "text": "are the base patinas: one notable trait"
+  "start": 21.8,
+  "end": 24.64,
+  "text": "desert and red are the base patinas:"
  },
  {
-  "start": 25.76,
+  "start": 24.76,
+  "end": 26.16,
+  "text": "one notable trait from each"
+ },
+ {
+  "start": 26.24,
   "end": 28.56,
-  "text": "from each base patina makes a Patina Set."
+  "text": "base patina makes a Patina Set."
  },
  {
   "start": 28.8,

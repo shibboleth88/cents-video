@@ -54,6 +54,16 @@ def cutout(src: Path) -> Image.Image:
     return out
 
 
+def stage_hi(files: list[Path], out: Path) -> int:
+    """Higher-resolution photographs, named by Cent number in `out`. The caller
+    supplies `<n>=<file>` pairs: these files are not keyed by number, and their
+    identity must be established (pipeline/match_diagram.py) before staging."""
+    out.mkdir(parents=True, exist_ok=True)
+    for n, f in files:
+        cutout(f).save(out / f"{n}.webp", lossless=False, quality=94)
+    return len(files)
+
+
 def stage(src_dir: Path, numbers: list[int]) -> int:
     OUT.mkdir(parents=True, exist_ok=True)
     done = 0
@@ -103,10 +113,16 @@ def main():
     ap.add_argument("--src", type=Path, help="sovrn-onchain/cents directory")
     ap.add_argument("--from-json", type=Path, help="JSON file with a list of Cent numbers, or {'cents': [...]}")
     ap.add_argument("--self-test", action="store_true")
+    ap.add_argument("--hi", nargs="*", default=[], metavar="N=FILE",
+                    help="stage higher-resolution photographs to public/cents_hi/<n>.webp")
     ap.add_argument("numbers", nargs="*", type=int)
     a = ap.parse_args()
     if a.self_test:
         sys.exit(1 if self_test() else 0)
+    if a.hi:
+        pairs = [(int(x.split("=", 1)[0]), Path(x.split("=", 1)[1])) for x in a.hi]
+        print(f"staged {stage_hi(pairs, OUT.parent / 'cents_hi')} high-resolution Cents to public/cents_hi/")
+        return
     nums = list(a.numbers)
     if a.from_json:
         j = json.loads(a.from_json.read_text())

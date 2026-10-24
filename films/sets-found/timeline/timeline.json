@@ -32,12 +32,23 @@
    "end": {
     "at_phrase": "The cataloging of these marks"
    },
-   "purpose": "One Cent close and turning, so 'marks of touch and time' is seen on a real coin before it is catalogued.",
+   "purpose": "Many Cents in quick succession, then one held and pushed in on: the marks of touch and time seen on the coin itself.",
    "visual_kind": "code",
-   "component": "CentHero",
+   "component": "TraitBurst",
    "props": {
-    "n": 8353,
-    "caption": "Cent #8353"
+    "segments": [
+     {
+      "at_phrase": "Every difference to the canvas",
+      "pool": "*",
+      "count": 10,
+      "hero": 3981,
+      "focus": [
+       0.55,
+       0.42
+      ],
+      "zoom": 1.6
+     }
+    ]
    }
   },
   {
@@ -92,14 +103,62 @@
    }
   },
   {
-   "shot_id": "s05_patina",
+   "shot_id": "s05_patinas",
    "start": {
     "at_phrase": "Verdigris, obsidian, desert"
    },
    "end": {
+    "at_phrase": "one notable trait"
+   },
+   "purpose": "Each base patina as it is named: Cents that carry it at notable or more, then the Patina Set's own example.",
+   "visual_kind": "code",
+   "component": "TraitBurst",
+   "props": {
+    "segments": [
+     {
+      "at_phrase": "Verdigris, obsidian, desert",
+      "pool": "verdigris:notable+",
+      "count": 5,
+      "hero": 412,
+      "caption": "notable verdigris",
+      "patina": "verdigris"
+     },
+     {
+      "at_phrase": "obsidian, desert and",
+      "pool": "obsidian:notable+",
+      "count": 5,
+      "hero": 4679,
+      "caption": "notable obsidian",
+      "patina": "obsidian"
+     },
+     {
+      "at_phrase": "desert and red are",
+      "pool": "desert:notable+",
+      "count": 5,
+      "hero": 215,
+      "caption": "notable desert",
+      "patina": "desert"
+     },
+     {
+      "at_phrase": "red are the base",
+      "pool": "red:notable+",
+      "count": 5,
+      "hero": 3398,
+      "caption": "notable red",
+      "patina": "red"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s05_patina",
+   "start": {
+    "at_phrase": "one notable trait"
+   },
+   "end": {
     "at_phrase": "One significant trait"
    },
-   "purpose": "The four base patinas arrive as they are named, using the Patina Set's own example Cents.",
+   "purpose": "The Patina Set's example Cents together, each keyed by its patina.",
    "visual_kind": "code",
    "component": "CentRow",
    "props": {
@@ -107,26 +166,18 @@
     "cents": [
      {
       "n": 412,
-      "caption": "notable verdigris",
-      "at_phrase": "Verdigris, obsidian, desert",
       "patina": "verdigris"
      },
      {
       "n": 4679,
-      "caption": "notable obsidian",
-      "at_phrase": "obsidian, desert and",
       "patina": "obsidian"
      },
      {
       "n": 215,
-      "caption": "notable desert",
-      "at_phrase": "desert and red are",
       "patina": "desert"
      },
      {
       "n": 3398,
-      "caption": "notable red",
-      "at_phrase": "red are the base",
       "patina": "red"
      }
     ]
@@ -167,9 +218,46 @@
    }
   },
   {
-   "shot_id": "s07_spectrum",
+   "shot_id": "s07_nobles",
    "start": {
     "at_phrase": "Gold and orange are the noble"
+   },
+   "end": {
+    "at_phrase": "a Patina Set that also includes"
+   },
+   "purpose": "The two noble patinas as they are named.",
+   "visual_kind": "code",
+   "component": "TraitBurst",
+   "props": {
+    "segments": [
+     {
+      "at_phrase": "Gold and orange are the noble",
+      "pool": "gold:any",
+      "count": 5,
+      "hero": 4788,
+      "focus": [
+       0.68,
+       0.68
+      ],
+      "zoom": 1.6,
+      "caption": "gold",
+      "patina": "gold"
+     },
+     {
+      "at_phrase": "orange are the noble",
+      "pool": "orange",
+      "count": 5,
+      "hero": 7799,
+      "caption": "orange",
+      "patina": "orange"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s07_spectrum",
+   "start": {
+    "at_phrase": "a Patina Set that also includes"
    },
    "end": {
     "at_phrase": "One full trait from each"
@@ -242,9 +330,33 @@
    }
   },
   {
-   "shot_id": "s09_fv_wall",
+   "shot_id": "s09a_fv_all",
    "start": {
     "at_phrase": "Only 15 can exist"
+   },
+   "end": {
+    "at_phrase": "as there are only 15"
+   },
+   "purpose": "All fifteen Full Verdigris Cents, one after another.",
+   "visual_kind": "code",
+   "component": "TraitBurst",
+   "props": {
+    "segments": [
+     {
+      "at_phrase": "Only 15 can exist",
+      "pool": "verdigris:full",
+      "count": 15,
+      "caption": "Full Verdigris",
+      "patina": "verdigris"
+     }
+    ],
+    "flash": 4
+   }
+  },
+  {
+   "shot_id": "s09_fv_wall",
+   "start": {
+    "at_phrase": "as there are only 15"
    },
    "end": {
     "at_phrase": "One full from each base"
@@ -301,9 +413,33 @@
    }
   },
   {
-   "shot_id": "s11_fg_wall",
+   "shot_id": "s11a_fg_all",
    "start": {
     "at_phrase": "Only 9 such Sets"
+   },
+   "end": {
+    "at_phrase": "as there are only 9"
+   },
+   "purpose": "All nine Full Gold Cents, one after another.",
+   "visual_kind": "code",
+   "component": "TraitBurst",
+   "props": {
+    "segments": [
+     {
+      "at_phrase": "Only 9 such Sets",
+      "pool": "gold:full",
+      "count": 9,
+      "caption": "Full Gold",
+      "patina": "gold"
+     }
+    ],
+    "flash": 5
+   }
+  },
+  {
+   "shot_id": "s11_fg_wall",
+   "start": {
+    "at_phrase": "as there are only 9"
    },
    "end": {
     "at_phrase": "Contaminations are intricately"
@@ -326,72 +462,128 @@
    "end": {
     "at_phrase": "A Contamination Set covers"
    },
-   "purpose": "One clear example of each contamination type, arriving as it is named.",
+   "purpose": "Each contamination type as it is named: a few Cents that carry it, then one held.",
    "visual_kind": "code",
-   "component": "CentRow",
+   "component": "TraitBurst",
    "props": {
     "title": "Contamination",
-    "subtitle": "12 types",
-    "cents": [
+    "segments": [
      {
-      "n": 5346,
+      "at_phrase": "Contaminations are intricately",
+      "pool": [
+       "contaminated:Glue",
+       "contaminated:Scotch Tape",
+       "contaminated:3D-black",
+       "contaminated:Alien Secretion",
+       "contaminated:Paint",
+       "contaminated:Obscure Adhesive",
+       "contaminated:Dark Grime",
+       "contaminated:Sea Salt",
+       "contaminated:Blood",
+       "contaminated:Speckles",
+       "contaminated:Unknown Liquid",
+       "contaminated:Special Oddities"
+      ],
+      "count": 10
+     },
+     {
+      "at_phrase": "glue scotch",
+      "pool": "contaminated:Glue",
+      "count": 3,
+      "hero": 608,
       "caption": "glue",
-      "at_phrase": "glue scotch"
+      "focus": [
+       0.4,
+       0.55
+      ],
+      "zoom": 1.6
      },
      {
-      "n": 111,
+      "at_phrase": "tape 3D black",
+      "pool": "contaminated:Scotch Tape",
+      "count": 3,
+      "hero": 111,
       "caption": "scotch tape",
-      "at_phrase": "tape 3D black"
+      "focus": [
+       0.3,
+       0.45
+      ],
+      "zoom": 1.6
      },
      {
-      "n": 5144,
+      "at_phrase": "3D black alien",
+      "pool": "contaminated:3D-black",
+      "count": 3,
+      "hero": 9172,
       "caption": "3D-black",
-      "at_phrase": "3D black alien"
+      "focus": [
+       0.3,
+       0.5
+      ],
+      "zoom": 1.6
      },
      {
-      "n": 2583,
-      "caption": "alien secretion",
-      "at_phrase": "alien secretion paint"
+      "at_phrase": "alien secretion paint",
+      "pool": "contaminated:Alien Secretion",
+      "count": 3,
+      "hero": 2583,
+      "caption": "alien secretion"
      },
      {
-      "n": 2735,
-      "caption": "paint",
-      "at_phrase": "paint obscure"
+      "at_phrase": "paint obscure",
+      "pool": "contaminated:Paint",
+      "count": 3,
+      "hero": 2735,
+      "caption": "paint"
      },
      {
-      "n": 1510,
-      "caption": "obscure adhesive",
-      "at_phrase": "obscure adhesive dark"
+      "at_phrase": "obscure adhesive dark",
+      "pool": "contaminated:Obscure Adhesive",
+      "count": 3,
+      "hero": 1510,
+      "caption": "obscure adhesive"
      },
      {
-      "n": 4668,
-      "caption": "dark grime",
-      "at_phrase": "dark grime sea"
+      "at_phrase": "dark grime sea",
+      "pool": "contaminated:Dark Grime",
+      "count": 3,
+      "hero": 4668,
+      "caption": "dark grime"
      },
      {
-      "n": 2956,
-      "caption": "sea salt",
-      "at_phrase": "sea salt blood"
+      "at_phrase": "sea salt blood",
+      "pool": "contaminated:Sea Salt",
+      "count": 3,
+      "hero": 2956,
+      "caption": "sea salt"
      },
      {
-      "n": 2359,
-      "caption": "blood",
-      "at_phrase": "blood speckles"
+      "at_phrase": "blood speckles",
+      "pool": "contaminated:Blood",
+      "count": 3,
+      "hero": 2359,
+      "caption": "blood"
      },
      {
-      "n": 2900,
-      "caption": "speckles",
-      "at_phrase": "speckles unknown"
+      "at_phrase": "speckles unknown",
+      "pool": "contaminated:Speckles",
+      "count": 3,
+      "hero": 2900,
+      "caption": "speckles"
      },
      {
-      "n": 4825,
-      "caption": "unknown liquid",
-      "at_phrase": "unknown liquid and special"
+      "at_phrase": "unknown liquid and special",
+      "pool": "contaminated:Unknown Liquid",
+      "count": 3,
+      "hero": 4825,
+      "caption": "unknown liquid"
      },
      {
-      "n": 6107,
-      "caption": "special oddities",
-      "at_phrase": "special oddities"
+      "at_phrase": "special oddities",
+      "pool": "contaminated:Special Oddities",
+      "count": 3,
+      "hero": 6107,
+      "caption": "special oddities"
      }
     ]
    }
@@ -514,21 +706,33 @@
    }
   },
   {
-   "shot_id": "s16_tape_wall",
+   "shot_id": "s16_tape",
    "start": {
     "at_phrase": "as scotch tape is present"
    },
    "end": {
     "at_phrase": "The Chronicle Set consists"
    },
-   "purpose": "Every Cent with scotch tape: the narrowest ingredient, and so the cap.",
+   "purpose": "All seven Cents with scotch tape, then the tape itself, close.",
    "visual_kind": "code",
-   "component": "PoolWall",
+   "component": "TraitBurst",
    "props": {
-    "pool": "contaminated:Scotch Tape",
-    "title": "Scotch Tape",
-    "caption": "Cents with scotch tape",
-    "readout": "7"
+    "segments": [
+     {
+      "at_phrase": "as scotch tape is present",
+      "pool": "contaminated:Scotch Tape",
+      "count": 7,
+      "hero": 111,
+      "focus": [
+       0.3,
+       0.45
+      ],
+      "zoom": 1.6,
+      "readout": "7",
+      "caption": "Cents with scotch tape"
+     }
+    ],
+    "flash": 4
    }
   },
   {
@@ -537,31 +741,68 @@
     "at_phrase": "The Chronicle Set consists"
    },
    "end": {
-    "at_phrase": "The Full Mint Set is"
+    "at_phrase": "1971 the year"
    },
-   "purpose": "The three years arrive as each is said, on the example Cents from the Chronicle diagram.",
+   "purpose": "The three Chronicle years together, before each is taken in turn.",
    "visual_kind": "code",
    "component": "CentRow",
    "props": {
     "title": "Chronicle Set",
     "cents": [
      {
-      "n": 6492,
-      "caption": "1971: US currency became fiat",
-      "at_phrase": "1971 the year"
+      "n": 6492
      },
      {
-      "n": 1170,
-      "caption": "1979: Rutherford Chang's birth year",
-      "at_phrase": "1979 the year"
+      "n": 1170
      },
      {
-      "n": 25,
-      "caption": "1982: the last year struck in copper",
-      "at_phrase": "1982 the last year"
+      "n": 25
      }
     ],
     "cols": 3
+   }
+  },
+  {
+   "shot_id": "s17b_years",
+   "start": {
+    "at_phrase": "1971 the year"
+   },
+   "end": {
+    "at_phrase": "The Full Mint Set is"
+   },
+   "purpose": "Each year as it is said: Cents struck that year, then the Chronicle example.",
+   "visual_kind": "code",
+   "component": "TraitBurst",
+   "props": {
+    "title": "Chronicle Set",
+    "segments": [
+     {
+      "at_phrase": "1971 the year",
+      "pool": "year:1971",
+      "count": 5,
+      "hero": 6492,
+      "focus": [
+       0.6,
+       0.33
+      ],
+      "zoom": 1.5,
+      "caption": "1971: US currency became fiat"
+     },
+     {
+      "at_phrase": "1979 the year",
+      "pool": "year:1979",
+      "count": 5,
+      "hero": 1170,
+      "caption": "1979: Rutherford Chang's birth year"
+     },
+     {
+      "at_phrase": "1982 the last year",
+      "pool": "year:1982",
+      "count": 5,
+      "hero": 25,
+      "caption": "1982: the last year struck in copper"
+     }
+    ]
    }
   },
   {
@@ -570,7 +811,7 @@
     "at_phrase": "The Full Mint Set is"
    },
    "end": {
-    "at_phrase": "and only sixty Cents"
+    "at_phrase": "An S for San"
    },
    "purpose": "The three mint marks, as each is named.",
    "visual_kind": "code",
@@ -579,22 +820,54 @@
     "title": "Full Mint Set",
     "cents": [
      {
-      "n": 2332,
-      "caption": "S: San Francisco",
-      "at_phrase": "An S for San"
+      "n": 2332
      },
      {
-      "n": 91,
-      "caption": "D: Denver",
-      "at_phrase": "a D for Denver"
+      "n": 91
      },
      {
-      "n": 121,
-      "caption": "no mint mark: usually Philadelphia",
-      "at_phrase": "and no mint mark"
+      "n": 121
      }
     ],
     "cols": 3
+   }
+  },
+  {
+   "shot_id": "s18b_marks",
+   "start": {
+    "at_phrase": "An S for San"
+   },
+   "end": {
+    "at_phrase": "and only sixty Cents"
+   },
+   "purpose": "Each mint mark as it is named.",
+   "visual_kind": "code",
+   "component": "TraitBurst",
+   "props": {
+    "title": "Full Mint Set",
+    "segments": [
+     {
+      "at_phrase": "An S for San",
+      "pool": "mint:S",
+      "count": 4,
+      "hero": 2332,
+      "caption": "S: San Francisco"
+     },
+     {
+      "at_phrase": "a D for Denver",
+      "pool": "mint:D",
+      "count": 4,
+      "hero": 91,
+      "caption": "D: Denver"
+     },
+     {
+      "at_phrase": "and no mint mark",
+      "pool": "mint:none",
+      "count": 4,
+      "hero": 121,
+      "caption": "no mint mark: usually Philadelphia"
+     }
+    ]
    }
   },
   {
