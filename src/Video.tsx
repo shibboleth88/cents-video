@@ -6,6 +6,7 @@ import { REGISTRY, CaptionLayer, type ComponentName } from "./style/components";
 import { DIAGRAMS, type DiagramName } from "./style/diagrams";
 import { Backdrop, Plate, type Asset } from "./style/plates";
 import { Atmosphere } from "./style/atmosphere";
+import { OpeningShotCtx } from "./style/motion";
 import { resolveShots, type Alignment, type Timeline } from "./lib/timeline";
 
 export type Props = {
@@ -59,9 +60,11 @@ export const Video: React.FC<Props> = ({ timeline, alignment, assets, cues, mode
           };
           return (
             <Sequence key={s.shot_id} from={s.fromFrame} durationInFrames={s.durationInFrames} name={s.shot_id}>
-              {bdAsset ? <Backdrop asset={bdAsset} focus={(s.props as any)?.backdropFocus} dim={(s.props as any)?.backdropDim} seed={s.shot_id} /> : null}
-              {/* @ts-expect-error props are validated against the schema, not the type system */}
-              <C {...props} />
+              <OpeningShotCtx.Provider value={s.fromFrame === 0}>
+                {bdAsset ? <Backdrop asset={bdAsset} focus={(s.props as any)?.backdropFocus} dim={(s.props as any)?.backdropDim} seed={s.shot_id} /> : null}
+                {/* @ts-expect-error props are validated against the schema, not the type system */}
+                <C {...props} />
+              </OpeningShotCtx.Provider>
             </Sequence>
           );
         })}

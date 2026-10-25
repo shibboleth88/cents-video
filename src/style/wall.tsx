@@ -182,17 +182,55 @@ export const WallYears: React.FC<Anchored & {
 };
 
 /** One Cent close, turning, with the fact that makes it stand out. */
-export const WallStandout: React.FC<Anchored & { title: string; n: number; readout: string; caption: string }> = ({ title, n, readout, caption }) => {
+export const WallStandout: React.FC<Anchored & {
+  title: string; n: number; readout: string; caption: string;
+  /** A high-res front (public path) for zooming; the 300px inscription image is too soft past ~500px. */
+  src?: string;
+  /** Zoom onto the part of the face that bears the trait, as fractions of the image: [x0, y0, x1, y1]. */
+  zoom?: { at_phrase: string; box: [number, number, number, number]; mark?: boolean };
+}> = (props) => {
+  const { title, n, readout, caption, src, zoom } = props;
   const fade = useShotFade();
   const frame = useCurrentFrame();
+  const at = useAt(props);
   const size = 500;
+  const left = (1080 - size) / 2, top = STAGE.y0 + (STAGE.y1 - STAGE.y0 - size) / 2;
+  let coin: React.ReactNode;
+  if (!zoom) {
+    coin = <CentTurn n={n} size={size} maxTilt={0} style={{ position: "absolute", left, top }} />;
+  } else {
+    if (!src) throw new Error(`WallStandout #${n}: a zoom needs a high-res src`);
+    const [x0, y0, x1, y1] = zoom.box;
+    if (!(0 <= x0 && x0 < x1 && x1 <= 1 && 0 <= y0 && y0 < y1 && y1 <= 1))
+      throw new Error(`WallStandout #${n}: zoom box ${zoom.box} is not inside the coin`);
+    const zf = at(zoom.at_phrase);
+    const t = interpolate(frame, [zf, zf + 18], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: EASE.inOut });
+    // Turns flat in 2D until the zoom, then settles upright so the feature reads as struck.
+    const angle = (9 * Math.min(frame, zf) / 30) * (1 - t);
+    const enter = interpolate(frame, [0, 18], [0, 1], { extrapolateRight: "clamp", easing: EASE.out });
+    const W = X1 - X0, H = STAGE.y1 - STAGE.y0;
+    const k = Math.min(W / ((x1 - x0) * size), H / ((y1 - y0) * size), 3.2);
+    const sc = 1 + (k - 1) * t;
+    const cx = size / 2 + ((x0 + x1) / 2 * size - size / 2) * t, cy = size / 2 + ((y0 + y1) / 2 * size - size / 2) * t;
+    const ox = (1080 / 2) - cx * sc, oy = (STAGE.y0 + H / 2) - cy * sc;
+    const markT = zoom.mark ? interpolate(frame, [zf + 14, zf + 26], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }) : 0;
+    coin = (
+      <div style={{ position: "absolute", left: 0, top: STAGE.y0, width: 1080, height: H, overflow: "hidden", opacity: enter }}>
+        <Img src={staticFile(src)} style={{ position: "absolute", left: ox, top: oy - STAGE.y0, width: size * sc, height: size * sc,
+                                            transform: `rotate(${angle}deg)`,
+                                            filter: `drop-shadow(0 ${size * 0.04}px ${size * 0.06}px rgba(0,0,0,0.55))` }} />
+        {markT > 0 ? (
+          <div style={{ position: "absolute", left: ox + x0 * size * sc - 12, top: oy - STAGE.y0 + y0 * size * sc - 12,
+                        width: (x1 - x0) * size * sc + 24, height: (y1 - y0) * size * sc + 24,
+                        border: `5px solid ${COLOR.accent}`, borderRadius: 18, opacity: markT }} />
+        ) : null}
+      </div>
+    );
+  }
   return (
     <div style={{ position: "absolute", inset: 0, opacity: fade }}>
+      <Imagery>{coin}</Imagery>
       <NameBand title={title} subtitle={`CENT #${n}`} />
-      <Imagery>
-        <CentTurn n={n} size={size} maxTilt={0} style={{ position: "absolute", left: (1080 - size) / 2,
-                                             top: STAGE.y0 + (STAGE.y1 - STAGE.y0 - size) / 2 }} />
-      </Imagery>
       <div style={{ position: "absolute", left: X0, top: BAND.y0, width: X1 - X0, opacity: fadeIn(frame, 10) }}>
         <SafeText role="display" fontSize={84} maxLines={1} color={COLOR.accent}
                   style={{ fontFamily: TYPE.mono, fontWeight: 700 }}>{readout}</SafeText>
