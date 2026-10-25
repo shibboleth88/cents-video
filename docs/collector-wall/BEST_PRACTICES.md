@@ -65,8 +65,11 @@ Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the D
 - **Cents do not rotate.** Show each Cent still, the signature Cent included. `WallCard` and `WallStandout` now default to `spin: 0`. Never use a 3D tilt. (User, 2026-10-25 13:56Z. The earlier rule allowed a flat 2D spin; blacktongue v4 and Daidatep v3 were made under it and are accepted as they are.)
   - Exception: the wheat flip (`CentFlip`) is a separate move and is still used.
   - **Exception: the signature Cent can rotate in a 3DCENTS render.** The user approved this on 2026-10-25 14:13Z. 3DCENTS is sinvalli's tool, not Chang's. sinvalli is happy for the tool and its renders to be used and shared.
-    - **Credit** "sinvalli / 3DCENTS" on screen or in the credits.
-    - **Files:** the user exports the spins from the site and saves them to the Mac folder "cents shortlist" as `3dcents-<n>.mp4`. Daidatep's #9908 comes first. Ask the user for the export if it isn't there; don't screen-record the site.
+    - **Credit:** the wording is waiting on the user's OK. The proposal is "3D render: 3DCENTS by sinvalli", on screen and in the end credits.
+    - **Files:** the user exports the spins by hand into "/Users/moobook/Pictures/cents shortlist", using the site's own file names: `cent-<n>-360-1080x1920-25fps-reel` (Daidatep's #9908 came first).
+      - Each episode thread copies its file into `/mnt/project-files/collector-wall/3dcents/`.
+      - The exports are 25 fps. Convert them to 30 fps for the 30 fps timeline.
+      - Ask the user for the export if it isn't there. Don't screen-record the site.
     - **Facts:** the render makes one full turn about the vertical axis every 6 s. The export offers IG Reel 1080x1920 framing at 720p to 4K. It is rebuilt from the 1050px cents.vision photos, so it carries no more detail than they do, and it is darker and lower in contrast than the photo.
     - **Zoom:** for a trait zoom, still use the high-res photo in `WallStandout`.
     - **Test frames:** in `/mnt/project-files/collector-wall/3dcents-test/`. Project memory `cents-3dcents` has the notes.
