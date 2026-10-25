@@ -58,7 +58,8 @@ const Chip: React.FC<{ text: string; opacity: number; accent?: boolean }> = ({ t
 );
 
 /** Opening card: COLLECTOR WALL, the name, and the signature Cent turning. */
-export const WallCard: React.FC<Anchored & { title: string; signature: number; caption: string }> = ({ title, signature, caption }) => {
+/** spin: degrees per second. 0 (still) since 2026-10-25: the user asked that Cents no longer turn. */
+export const WallCard: React.FC<Anchored & { title: string; signature: number; caption: string; spin?: number }> = ({ title, signature, caption, spin = 0 }) => {
   const fade = useShotFade();
   const frame = useCurrentFrame();
   const e0 = useEntrance("rise", 0), e1 = useEntrance("rise", 1);
@@ -75,7 +76,7 @@ export const WallCard: React.FC<Anchored & { title: string; signature: number; c
         </div>
       </div>
       <Imagery>
-        <CentTurn n={signature} size={size} from={6} maxTilt={0}
+        <CentTurn n={signature} size={size} from={6} maxTilt={0} spin={spin}
                   style={{ position: "absolute", left: (1080 - size) / 2, top: 560 }} />
       </Imagery>
       <div style={{ position: "absolute", left: X0, top: BAND.y0 - 40, width: X1 - X0, opacity: fadeIn(frame, 24),
@@ -184,12 +185,14 @@ export const WallYears: React.FC<Anchored & {
 /** One Cent close, turning, with the fact that makes it stand out. */
 export const WallStandout: React.FC<Anchored & {
   title: string; n: number; readout: string; caption: string;
+  /** Degrees per second of flat 2D turn. 0 (still) since 2026-10-25, at the user's request. */
+  spin?: number;
   /** A high-res front (public path) for zooming; the 300px inscription image is too soft past ~500px. */
   src?: string;
   /** Zoom onto the part of the face that bears the trait, as fractions of the image: [x0, y0, x1, y1]. */
   zoom?: { at_phrase: string; box: [number, number, number, number]; mark?: boolean };
 }> = (props) => {
-  const { title, n, readout, caption, src, zoom } = props;
+  const { title, n, readout, caption, src, zoom, spin = 0 } = props;
   const fade = useShotFade();
   const frame = useCurrentFrame();
   const at = useAt(props);
@@ -197,7 +200,7 @@ export const WallStandout: React.FC<Anchored & {
   const left = (1080 - size) / 2, top = STAGE.y0 + (STAGE.y1 - STAGE.y0 - size) / 2;
   let coin: React.ReactNode;
   if (!zoom) {
-    coin = <CentTurn n={n} size={size} maxTilt={0} style={{ position: "absolute", left, top }} />;
+    coin = <CentTurn n={n} size={size} maxTilt={0} spin={spin} style={{ position: "absolute", left, top }} />;
   } else {
     if (!src) throw new Error(`WallStandout #${n}: a zoom needs a high-res src`);
     const [x0, y0, x1, y1] = zoom.box;
@@ -206,7 +209,7 @@ export const WallStandout: React.FC<Anchored & {
     const zf = at(zoom.at_phrase);
     const t = interpolate(frame, [zf, zf + 18], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: EASE.inOut });
     // Turns flat in 2D until the zoom, then settles upright so the feature reads as struck.
-    const angle = (9 * Math.min(frame, zf) / 30) * (1 - t);
+    const angle = (spin * Math.min(frame, zf) / 30) * (1 - t);
     const enter = interpolate(frame, [0, 18], [0, 1], { extrapolateRight: "clamp", easing: EASE.out });
     const W = X1 - X0, H = STAGE.y1 - STAGE.y0;
     // The cents.vision fronts put the coin in a circle of radius 0.40 on white
