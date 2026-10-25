@@ -68,7 +68,19 @@ Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the D
     - **Credit:** the wording is waiting on the user's OK. The proposal is "3D render: 3DCENTS by sinvalli", on screen and in the end credits.
     - **Files:** the user exports the spins by hand into "/Users/moobook/Pictures/cents shortlist", using the site's own file names: `cent-<n>-360-1080x1920-25fps-reel` (Daidatep's #9908 came first).
       - Each episode thread copies its file into `/mnt/project-files/collector-wall/3dcents/`.
-      - The exports are 25 fps. Convert them to 30 fps for the 30 fps timeline.
+      - The exports are 25 fps. Retime them frame for frame to 30 fps:
+        `ffmpeg -i <in> -vf setpts=N/30/TB -r 30 <out>`
+        - This keeps all 150 frames with none duplicated: each frame matches its source at 55 dB PSNR, against 31.8 dB when compared one frame off.
+        - The spin becomes 5 s instead of 6.
+        - A plain `fps=30` filter duplicates 30 frames and judders.
+      - Copy the retimed file to `public/3dcents/` (gitignored).
+      - **Shot:** `WallStandout` with `clip: {src, width, height, frames, coin: {cx, cy, d}, credit}`. It arrives with Daidatep v5 (commit a044ca3, PR #8).
+        - The clip loops and is scaled so the coin's diameter `d` matches the standard 500px coin.
+        - Measure `cx`, `cy` and `d` on frame 0. For the reel export: 539.5, 959.5, 776.
+        - The clip's black background drops out with a lighten blend onto a group filled with `COLOR.bg`. Keep that fill: any opacity above it isolates the blend, and the black rectangle shows.
+        - It throws with `zoom` or `spin`, or with an empty `credit`.
+        - The credit sits under the coin in the body font (mono doesn't fit one line at the 42px floor).
+      - **The reverse shows upside down mid-turn.** US cents are struck in coin alignment, so this is correct and not a render bug.
       - Ask the user for the export if it isn't there. Don't screen-record the site.
     - **Facts:** the render makes one full turn about the vertical axis every 6 s. The export offers IG Reel 1080x1920 framing at 720p to 4K. It is rebuilt from the 1050px cents.vision photos, so it carries no more detail than they do, and it is darker and lower in contrast than the photo.
     - **Zoom:** for a trait zoom, still use the high-res photo in `WallStandout`.
