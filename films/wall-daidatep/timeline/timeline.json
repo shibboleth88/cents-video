@@ -4,7 +4,7 @@
   "subtitle": "Daidatep",
   "author": "shibboleth",
   "source": "https://cents.vision/collectors.html",
-  "version": "v4, script draft 2 (2026-10-25)"
+  "version": "v5, script draft 2 (2026-10-25)"
  },
  "_what": "Collector Wall: Daidatep. Every coin is a real Cent by number; every figure comes from data/wall_board.json (cents.vision, 25 Oct 2026). No wallet address appears.",
  "shots": [
@@ -42,7 +42,7 @@
    "end": {
     "at_phrase": "The Wall holds a hundred"
    },
-   "purpose": "The signature Cent on its own. Its traits cover the whole face, so no zoom.",
+   "purpose": "The signature Cent on its own, turning: the 3DCENTS render by sinvalli (user's export, 25 fps retimed frame-for-frame to 30). Its traits cover the whole face, so no zoom.",
    "visual_kind": "code",
    "component": "WallStandout",
    "props": {
@@ -50,7 +50,18 @@
     "n": 9908,
     "readout": "1956",
     "caption": "Full Desert \u00b7 Faceless",
-    "src": "hires/9908.webp"
+    "clip": {
+     "src": "3dcents/9908-360-30fps.mp4",
+     "width": 1080,
+     "height": 1920,
+     "frames": 150,
+     "coin": {
+      "cx": 539.5,
+      "cy": 959.5,
+      "d": 776
+     },
+     "credit": "3D render: 3DCENTS by sinvalli"
+    }
    }
   },
   {

@@ -38,3 +38,10 @@ Every figure was checked against `snapshots/2026-10-25/raw/merged-new2.json` and
 - No Cent rotates: the signature Cent is now still (spin defaults to 0, from the series branch).
 - Full Contamination: each Cent is shown large from its 1050px cents.vision front (`Hero.src` in CentRow solo mode, full stage height), then the smaller grid.
 - The signature caption is shortened to "Full Desert · Faceless", so it no longer wraps under the captions. Special Oddities is still spoken.
+
+## v5 (user request, 14:2xZ)
+
+- The signature Cent turns again, but now as the 3DCENTS render by sinvalli (cleared for use), not an animation of our own. Source: the user's export `cent-9908-360-1080x1920-25fps-reel.mp4` (one full turn, 150 frames at 25 fps, kept in `/mnt/project-files/collector-wall/3dcents/`).
+- Retimed to 30 fps frame for frame (`setpts=N/30/TB`): 150 frames still, each output frame matches its source frame (PSNR 55 dB, against 31.8 dB for the same comparison offset by one frame), no duplicated frames (a plain `fps=30` would have duplicated 30, which judders). The turn is 20% faster: 5 s instead of 6 s, looped across the shot.
+- `WallStandout clip`: the clip is scaled so its coin (measured on frame 0: centre 539.5, 959.5, diameter 776 px) matches the 500 px coin of the other shots, and its black background is dropped with a lighten blend on a stage-coloured group. A small credit, "3D render: 3DCENTS by sinvalli", sits under the coin for the whole shot. This film has no end credits, so the on-screen credit is the only one.
+- The reverse shows upside down as the coin turns about its vertical axis. That is how a US cent is struck (coin alignment), not a render error.
