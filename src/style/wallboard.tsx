@@ -43,6 +43,7 @@ export type Target =
 
 export type Move = { at_phrase?: string; target: Target; until_phrase?: string; mark?: boolean; zoom?: number };
 export type Highlight = { at_phrase: string; until_phrase?: string; cents?: number[]; group?: string };
+export type Show = "all" | "card" | "grid";
 export type Readout = { at_phrase: string; text?: string; count?: { from: number; to: number; until_phrase: string; suffix?: string } };
 
 // ---------- layout (board units; the board is 1000 wide) ----------
@@ -156,14 +157,17 @@ type Anchored = { alignment: Alignment; shotStartFrame: number };
 
 export const WallBoard: React.FC<Anchored & {
   wall: string; moves?: Move[]; highlights?: Highlight[]; readout?: Readout;
+  /** "card": the Wall card alone, as collectors.html shows it closed. "grid": only the opened
+   *  "View collection" rows, for singling out Cents. Default "all" draws both. */
+  show?: Show;
 }> = (props) => {
   const b = useBoard(props.wall);
   if (!b) return null;
   return <WallBoardInner {...props} board={b} />;
 };
 
-const WallBoardInner: React.FC<Anchored & { board: Board; moves?: Move[]; highlights?: Highlight[]; readout?: Readout }> = (props) => {
-  const { board: b, moves = [], highlights = [], readout, alignment, shotStartFrame } = props;
+const WallBoardInner: React.FC<Anchored & { board: Board; moves?: Move[]; highlights?: Highlight[]; readout?: Readout; show?: Show }> = (props) => {
+  const { board: b, moves = [], highlights = [], readout, alignment, shotStartFrame, show = "all" } = props;
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const fade = useShotFade();
@@ -201,8 +205,8 @@ const WallBoardInner: React.FC<Anchored & { board: Board; moves?: Move[]; highli
     return { k, cx: (x0 + x1) / 2, cy: (y0 + y1) / 2 };
   };
 
-  // Camera: hold the top of the card, then each move eases (or, with until_phrase, pans linearly) to its target.
-  let c = cam([0, 0, BW, VH], 1);
+  // Camera: hold the top of the card (or of the rows), then each move eases (or, with until_phrase, pans linearly) to its target.
+  let c = show === "grid" ? cam(resolve({ grid_start: true }).box, 1) : cam([0, 0, BW, VH], 1);
   let mark: { box: Box; t: number } | null = null;
   let last = -1;
   for (const [i, m] of moves.entries()) {
@@ -238,6 +242,9 @@ const WallBoardInner: React.FC<Anchored & { board: Board; moves?: Move[]; highli
                     f1 === Infinity ? 1 : interpolate(frame, [f1 - 8, f1], [1, 0], { extrapolateLeft: "clamp" }));
   }
 
+  // The card ends at cardEnd; the opened collection rows sit below it.
+  const sheetY0 = show === "grid" ? L.cardEnd : 0, sheetY1 = show === "card" ? L.cardEnd : L.height;
+  const inPart = (bx: Box) => show === "all" || (show === "card" ? bx[1] < L.cardEnd : bx[1] >= L.cardEnd);
   const vis = (bx: Box) => {          // cull what the camera cannot see
     const x0 = ox + S(bx[0]), y0 = oy + S(bx[1]), x1 = ox + S(bx[2]), y1 = oy + S(bx[3]);
     return x1 > -50 && x0 < VW + 50 && y1 > -50 && y0 < VH + 50;
@@ -247,10 +254,10 @@ const WallBoardInner: React.FC<Anchored & { board: Board; moves?: Move[]; highli
     <div style={{ position: "absolute", inset: 0, opacity: fade }}>
       <Imagery>
         <div style={{ position: "absolute", left: VIEW.x0, top: VIEW.y0, width: VW, height: VH, overflow: "hidden", borderRadius: 18, background: "#ececec" }}>
-          <div style={{ position: "absolute", left: ox, top: oy, width: S(BW), height: S(L.height), background: "white",
+          <div style={{ position: "absolute", left: ox, top: oy + S(sheetY0), width: S(BW), height: S(sheetY1 - sheetY0), background: "white",
                         border: `${Math.max(1, S(1.5))}px solid #d7d7d7`, boxSizing: "border-box" }} />
           {L.items.map((it, i) => {
-            if (!vis(it.box)) return null;
+            if (!vis(it.box) || !inPart(it.box)) return null;
             const [x0, y0, x1, y1] = it.box;
             const st: React.CSSProperties = { position: "absolute", left: ox + S(x0), top: oy + S(y0), width: S(x1 - x0), height: S(y1 - y0) };
             if (it.kind === "cent") {

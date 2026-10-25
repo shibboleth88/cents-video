@@ -19,7 +19,7 @@ norm = lambda s: re.sub(r"[^a-z0-9 ]", " ", s.lower().replace("-", " ")).split()
 SPOKEN = {"9908": "ninety-nine oh eight", "3640": "thirty-six forty", "845": "eight forty-five",
           "132": "a hundred and thirty-two", "1/1": "one of one", "2026": "twenty twenty-six",
           "1960s": "nineteen sixties", "1970s": "nineteen seventies", "1980s": "nineteen eighties",
-          "cents.vision": "cents dot vision"}
+          "cents.vision": "cents dot vision", "3D": "three D"}
 for y, s in {"1944": "forty-four", "1945": "forty-five", "1955": "fifty-five", "1956": "fifty-six", "1958": "fifty-eight",
              "1969": "sixty-nine", "1971": "seventy-one", "1979": "seventy-nine", "1982": "eighty-two"}.items():
     SPOKEN[y] = "nineteen " + s
