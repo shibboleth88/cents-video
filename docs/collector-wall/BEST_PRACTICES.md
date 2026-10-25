@@ -46,7 +46,7 @@ Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the D
 6. **Sets and Fulls.** Zoom onto each Set badge as the Set is named. Then show the Cents that complete it as a Cent row (`CentRow`), each Cent arriving as it is named, the way blacktongue shows its Full Spectrum.
    - The Fulls work the same way.
    - Never show a Set or the Fulls as highlights on the collection rows. (User, 2026-10-25.)
-   - **Individuals first, then together.** For a Set named Cent by Cent, show each Cent on its own, large, as it is named. Then gather them into the row. In `CentRow`, set `solo_until: "<phrase>"`: before that phrase each anchored Cent shows alone with its caption, and at the phrase they gather into the row with the readout. The user asked for this for the Full Contamination Set, and it applies to any Set named Cent by Cent. (User, 2026-10-25 13:39Z; added on PR #8.)
+   - **Individuals first, then together.** For a Set named Cent by Cent, show each Cent on its own, large, as it is named. Then gather them into the row. In `CentRow`, set `solo_until: "<phrase>"`: before that phrase each anchored Cent shows alone with its caption, and at the phrase they gather into the row with the readout. The user asked for this for the Full Contamination Set, and it applies to any Set named Cent by Cent. (User, 2026-10-25 13:39Z; added on PR #8.) The solo Cents are large, then the row is smaller. Give each Cent in a `solo_until` row `src: "hires/<n>.webp"` so that solo mode draws it at full stage height, clipped to the coin. Fetch those fronts first. (User, Daidatep v4; PR #8 commit aca40d5.)
    - Explain a Set's ceiling when it is the point, for example "Only nine Full Spectrum Sets can exist, as there are only nine Full Gold Cents."
 7. **Remaining trait tags** (Ghost x N, Vandalized x N, …). Show the Cents, and use the tag's own text as the subtitle.
 8. **Behaviour badges:** Diamond Hands and Mint Keeper. Zoom onto the badge and give its meaning in plain words (see §6).
@@ -179,6 +179,7 @@ For a trait you must see on the coin itself (a date, a mint mark), cut from the 
 - **CentRow layout:**
   - For 6 or more Cents, leave `cols` unset so `fitGrid` sizes them. A fixed `cols` with many Cents renders them small.
   - With `labelsUnder` and around 20 or more Cents, set `cols: 6`, or the top row runs into the title.
+- **WallStandout captions stay on one line.** A caption that wraps to two lines runs under the burned-in captions.
 - **Readouts:** the 84 px readout fits about 8 characters, so SafeText refuses "1 of 2 collectors". Keep the number in the readout ("1 of 2") and put the words in the caption line beneath it.
 
 ## 6. Badge meanings (as cents.vision words them)
