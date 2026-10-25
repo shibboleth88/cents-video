@@ -42,7 +42,10 @@ Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the D
 3. **Count and span:** "The Wall holds N Cents, from YEAR to YEAR." Then the size club, zooming onto the club badge, with the club's range ("…which puts it in the Dime Club, for ten to twenty-four Cents").
 4. **Standout Cents.** For each one, say what makes it rare, as "one of only N" with a measured N. Where the trait sits in one place on the coin, zoom into it (see §4).
 5. **Mint-year badges:** Wheat, 1971 Club, 1969 Club, 1/1 Year, 1/1 Mint, 1/1 Trait Combo. Zoom onto the badge, then show the Cents behind it.
-6. **Sets.** Zoom onto each Set badge on the screenshot as the Set is named, then show the Cents that complete it as each one is named.
+   - **Wheat:** flip one wheat Cent to its back with `CentFlip` in wall.tsx, so viewers see what "wheat" means. The flip is a flat 2D flip from front to back, using cents.vision `pics/backswebp/<n>.webp`. (User, 2026-10-25.)
+6. **Sets and Fulls.** Zoom onto each Set badge as the Set is named. Then show the Cents that complete it as a Cent row (`CentRow`), each Cent arriving as it is named, the way blacktongue shows its Full Spectrum.
+   - The Fulls work the same way.
+   - Never show a Set or the Fulls as highlights on the collection rows. (User, 2026-10-25.)
    - Explain a Set's ceiling when it is the point, for example "Only nine Full Spectrum Sets can exist, as there are only nine Full Gold Cents."
 7. **Remaining trait tags** (Ghost x N, Vandalized x N, …). Show the Cents, and use the tag's own text as the subtitle.
 8. **Behaviour badges:** Diamond Hands and Mint Keeper. Zoom onto the badge and give its meaning in plain words (see §6).
@@ -122,6 +125,8 @@ python3 pipeline/stage_cents.py --src <sovrn-onchain>/cents <every Cent number o
 - `mark: true` outlines the target in copper.
 - `zoom` caps the magnification. The default is 2.6.
 
+**What the board shows:** `show: "card"` draws the card alone. The user wants this for the Wall itself: the card should not carry the "N CENTS in this wall" collection rows. `show: "grid"` draws the collection rows alone, which are for singling out Cents (the wheat pennies, a 1955-D). The default "all" draws both and is only kept for older episodes. (User, 2026-10-25; added on PR #8.)
+
 **Highlights:**
 - A highlight dims everything else and rings the chosen Cents.
 - Use `group` for any key in the board's `groups`: `wheat`, `y1971`, `y1969`, `one_of_one_year`, `one_of_one_mint`, `trait_combo`, `mint_keeper`, `full_mint`, `full_<patina>`, `full_any`, `contamination_one_each`. Use `cents` for an explicit list.
@@ -159,7 +164,7 @@ For a trait you must see on the coin itself (a date, a mint mark), cut from the 
   - Never push to main without asking.
   - Restore the root symlinks after `film.py switch` with `git checkout -- captions exports review script timeline`.
 
-### Practical notes from episodes (Daidatep v1, 2026-10-25)
+### Practical notes from episodes (Daidatep v1 and v2, 2026-10-25)
 
 - **Fresh container setup:** run `npm ci` in the repo root before the first `npx remotion`.
 - **Alignment duration:** `script/alignment.json` must have a `duration` key, set to the length of `vo.wav` (the take plus 2.5 s of padding). Without it, the anchors and caption cutting throw a KeyError.
@@ -169,6 +174,9 @@ For a trait you must see on the coin itself (a date, a mint mark), cut from the 
   - It refuses on any mismatch.
   - Copy it into new episodes and extend the table.
 - **Quick stills:** before a full render, use a small Node script that bundles once and calls `renderStill` per timestamp. It is much faster than one CLI call per frame, and the CLI's `--frames` needs a range and a directory.
+- **CentRow layout:**
+  - For 6 or more Cents, leave `cols` unset so `fitGrid` sizes them. A fixed `cols` with many Cents renders them small.
+  - With `labelsUnder` and around 20 or more Cents, set `cols: 6`, or the top row runs into the title.
 - **Readouts:** the 84 px readout fits about 8 characters, so SafeText refuses "1 of 2 collectors". Keep the number in the readout ("1 of 2") and put the words in the caption line beneath it.
 
 ## 6. Badge meanings (as cents.vision words them)
