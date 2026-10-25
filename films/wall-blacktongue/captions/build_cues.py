@@ -16,7 +16,8 @@ norm = lambda s: re.sub(r"[^a-z0-9 ]", " ", s.lower().replace("-", " ")).split()
 # Spoken run -> written form, merged into one timed word.
 WRITTEN = [("fifty-one eighty-five,", "5185,"), ("nineteen sixty-eight,", "1968,"),
            ("nineteen thirty-eight", "1938"), ("nineteen thirty-eight.", "1938."), ("nineteen eighty.", "1980."),
-           ("October twenty twenty-six,", "October 2026,"), ("cents dot vision", "cents.vision")]
+           ("October twenty twenty-six,", "October 2026,"), ("cents dot vision", "cents.vision"),
+           ("nineteen eighty,", "1980,"), ("nineteen fifty-eight.", "1958.")]
 words = [dict(w) for w in al["words"]]
 out, i = [], 0
 while i < len(words):
@@ -26,6 +27,10 @@ while i < len(words):
             out.append({"word": written, "start": words[i]["start"], "end": words[i + n - 1]["end"]}); i += n; break
     else:
         out.append(words[i]); i += 1
+
+# Keep a noun phrase ending in "Cent(s)" on one cue ("Ghost / Cents" read as two ideas).
+for a, b in zip(out, out[1:]):
+    if b["word"].startswith("Cent"): a["nobreak"] = True
 
 flat = [(t, k) for k, w in enumerate(al["words"]) for t in norm(w["word"])]
 def start_of(ph):

@@ -209,19 +209,23 @@ export const WallStandout: React.FC<Anchored & {
     const angle = (9 * Math.min(frame, zf) / 30) * (1 - t);
     const enter = interpolate(frame, [0, 18], [0, 1], { extrapolateRight: "clamp", easing: EASE.out });
     const W = X1 - X0, H = STAGE.y1 - STAGE.y0;
-    const k = Math.min(W / ((x1 - x0) * size), H / ((y1 - y0) * size), 3.2);
+    // The cents.vision fronts put the coin in a circle of radius 0.40 on white
+    // (measured on five fronts, 0.401-0.402). Draw the image larger so the coin
+    // matches the other shots, and clip to the coin so no white square shows.
+    const S = size * (0.5 / 0.402);
+    const k = Math.min(W / ((x1 - x0) * S), H / ((y1 - y0) * S), 3.2);
     const sc = 1 + (k - 1) * t;
-    const cx = size / 2 + ((x0 + x1) / 2 * size - size / 2) * t, cy = size / 2 + ((y0 + y1) / 2 * size - size / 2) * t;
+    const cx = S / 2 + ((x0 + x1) / 2 * S - S / 2) * t, cy = S / 2 + ((y0 + y1) / 2 * S - S / 2) * t;
     const ox = (1080 / 2) - cx * sc, oy = (STAGE.y0 + H / 2) - cy * sc;
     const markT = zoom.mark ? interpolate(frame, [zf + 14, zf + 26], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }) : 0;
     coin = (
       <div style={{ position: "absolute", left: 0, top: STAGE.y0, width: 1080, height: H, overflow: "hidden", opacity: enter }}>
-        <Img src={staticFile(src)} style={{ position: "absolute", left: ox, top: oy - STAGE.y0, width: size * sc, height: size * sc,
-                                            transform: `rotate(${angle}deg)`,
+        <Img src={staticFile(src)} style={{ position: "absolute", left: ox, top: oy - STAGE.y0, width: S * sc, height: S * sc,
+                                            transform: `rotate(${angle}deg)`, clipPath: "circle(40.5% at 50% 50%)",
                                             filter: `drop-shadow(0 ${size * 0.04}px ${size * 0.06}px rgba(0,0,0,0.55))` }} />
         {markT > 0 ? (
-          <div style={{ position: "absolute", left: ox + x0 * size * sc - 12, top: oy - STAGE.y0 + y0 * size * sc - 12,
-                        width: (x1 - x0) * size * sc + 24, height: (y1 - y0) * size * sc + 24,
+          <div style={{ position: "absolute", left: ox + x0 * S * sc - 12, top: oy - STAGE.y0 + y0 * S * sc - 12,
+                        width: (x1 - x0) * S * sc + 24, height: (y1 - y0) * S * sc + 24,
                         border: `5px solid ${COLOR.accent}`, borderRadius: 18, opacity: markT }} />
         ) : null}
       </div>

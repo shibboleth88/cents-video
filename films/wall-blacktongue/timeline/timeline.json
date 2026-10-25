@@ -4,7 +4,7 @@
   "subtitle": "blacktongue",
   "author": "shibboleth",
   "source": "https://cents.vision/collectors.html",
-  "version": "pilot v3, script draft 4 (2026-10-24)"
+  "version": "pilot v4, script draft 5 (2026-10-25)"
  },
  "_what": "Collector Wall episode 1. Every coin is a real Cent by number; every figure comes from data/wall.json (cents.vision, 24 Oct 2026). No wallet address appears.",
  "shots": [
@@ -14,9 +14,9 @@
     "at_start": true
    },
    "end": {
-    "at_phrase": "Its signature Cent"
+    "at_phrase": "number fifty-one eighty-five"
    },
-   "purpose": "blacktongue's Wall as it appears on cents.vision (Claimed filter, 24 Oct 2026, wallet line hidden).",
+   "purpose": "The Wall as cents.vision shows it; after the first sentence, zoom onto its signature Cent.",
    "visual_kind": "screenshot",
    "component": "WallShot",
    "props": {
@@ -25,11 +25,12 @@
     "height": 1340,
     "moves": [
      {
+      "at_phrase": "Its signature Cent",
       "box": [
-       20,
-       60,
-       1060,
-       1330
+       40,
+       85,
+       230,
+       345
       ]
      }
     ]
@@ -38,7 +39,7 @@
   {
    "shot_id": "w01_card",
    "start": {
-    "at_phrase": "Its signature Cent"
+    "at_phrase": "number fifty-one eighty-five"
    },
    "end": {
     "at_phrase": "The Wall holds twenty-four"
@@ -92,7 +93,7 @@
      9684
     ],
     "readout": "24",
-    "readout_at": "twenty-four Cents",
+    "readout_at": "holds twenty-four Cents",
     "badges": [
      {
       "text": "Dime Club"
@@ -109,7 +110,7 @@
     "at_phrase": "from nineteen thirty-eight to"
    },
    "end": {
-    "at_phrase": "Among them is one"
+    "at_phrase": "which puts it in the Dime"
    },
    "purpose": "The same Cents by year: the span 1938 to 1980 and the years held.",
    "visual_kind": "code",
@@ -218,27 +219,123 @@
    }
   },
   {
+   "shot_id": "w03b_dime",
+   "start": {
+    "at_phrase": "which puts it in the Dime"
+   },
+   "end": {
+    "at_phrase": "Among them is one"
+   },
+   "purpose": "Zoom onto the Dime Club badge.",
+   "visual_kind": "screenshot",
+   "component": "WallShot",
+   "props": {
+    "src": "vision/wall-blacktongue_card.png",
+    "width": 1080,
+    "height": 1340,
+    "moves": [
+     {
+      "at_phrase": "which puts it in the Dime",
+      "box": [
+       465,
+       1070,
+       605,
+       1118
+      ],
+      "mark": true
+     }
+    ]
+   }
+  },
+  {
    "shot_id": "w04_1938",
    "start": {
     "at_phrase": "Among them is one"
    },
    "end": {
-    "at_phrase": "And one of nine with"
+    "at_phrase": "It is one of two wheat"
    },
-   "purpose": "Standout: one of the two 1938 Cents in CENTS.",
+   "purpose": "Standout: one of the two 1938 Cents; zoom onto the date it bears.",
    "visual_kind": "code",
    "component": "WallStandout",
    "props": {
     "title": "blacktongue",
     "n": 8626,
     "readout": "1 of 2",
-    "caption": "Cents from 1938"
+    "caption": "Cents from 1938",
+    "src": "hires/8626.webp",
+    "zoom": {
+     "at_phrase": "two Cents from nineteen",
+     "box": [
+      0.635,
+      0.6,
+      0.85,
+      0.7
+     ],
+     "mark": true
+    }
+   }
+  },
+  {
+   "shot_id": "w04b_wheat",
+   "start": {
+    "at_phrase": "It is one of two wheat"
+   },
+   "end": {
+    "at_phrase": "with a Cent from nineteen"
+   },
+   "purpose": "Zoom onto the Wheat 2 badge.",
+   "visual_kind": "screenshot",
+   "component": "WallShot",
+   "props": {
+    "src": "vision/wall-blacktongue_card.png",
+    "width": 1080,
+    "height": 1340,
+    "moves": [
+     {
+      "at_phrase": "It is one of two wheat",
+      "box": [
+       242,
+       1120,
+       358,
+       1162
+      ],
+      "mark": true
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "w04c_wheat_cents",
+   "start": {
+    "at_phrase": "with a Cent from nineteen"
+   },
+   "end": {
+    "at_phrase": "The Wall also holds one"
+   },
+   "purpose": "The two wheat pennies on the Wall (minted 1958 or earlier).",
+   "visual_kind": "code",
+   "component": "WallList",
+   "props": {
+    "title": "blacktongue",
+    "subtitle": "Wheat 2",
+    "rows": [
+     {
+      "n": 8626,
+      "label": "1938"
+     },
+     {
+      "n": 7863,
+      "label": "1958",
+      "at_phrase": "nineteen fifty-eight"
+     }
+    ]
    }
   },
   {
    "shot_id": "w05_gold",
    "start": {
-    "at_phrase": "And one of nine with"
+    "at_phrase": "The Wall also holds one"
    },
    "end": {
     "at_phrase": "That gold, with five"
@@ -431,7 +528,7 @@
     "at_phrase": "which makes a Contamination"
    },
    "end": {
-    "at_phrase": "Find all of the Collector"
+    "at_phrase": "Two of its Cents are Ghost"
    },
    "purpose": "Zoom onto the Wall's Contamination Set badge (4/12).",
    "visual_kind": "screenshot",
@@ -455,6 +552,66 @@
    }
   },
   {
+   "shot_id": "w11_ghost_vandal",
+   "start": {
+    "at_phrase": "Two of its Cents are Ghost"
+   },
+   "end": {
+    "at_phrase": "And the Wall carries Diamond"
+   },
+   "purpose": "The trait tags Ghost x 2 and Vandalized x 1, by their Cents.",
+   "visual_kind": "code",
+   "component": "WallList",
+   "props": {
+    "title": "blacktongue",
+    "subtitle": "Ghost x 2 \u00b7 Vandalized x 1",
+    "rows": [
+     {
+      "n": 5185,
+      "label": "Ghost"
+     },
+     {
+      "n": 9684,
+      "label": "Ghost"
+     },
+     {
+      "n": 7395,
+      "label": "Vandalized",
+      "at_phrase": "one is Vandalized"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "w12_diamond",
+   "start": {
+    "at_phrase": "And the Wall carries Diamond"
+   },
+   "end": {
+    "at_phrase": "Find all of the Collector"
+   },
+   "purpose": "Zoom onto the Diamond Hands badge.",
+   "visual_kind": "screenshot",
+   "component": "WallShot",
+   "props": {
+    "src": "vision/wall-blacktongue_card.png",
+    "width": 1080,
+    "height": 1340,
+    "moves": [
+     {
+      "at_phrase": "carries Diamond Hands",
+      "box": [
+       250,
+       1070,
+       465,
+       1118
+      ],
+      "mark": true
+     }
+    ]
+   }
+  },
+  {
    "shot_id": "w10_collectors",
    "start": {
     "at_phrase": "Find all of the Collector"
@@ -470,23 +627,6 @@
     "width": 2964,
     "height": 1654,
     "moves": [
-     {
-      "box": [
-       0,
-       0,
-       2964,
-       1654
-      ]
-     },
-     {
-      "at_phrase": "on cents dot vision",
-      "box": [
-       700,
-       1440,
-       2100,
-       1654
-      ]
-     },
      {
       "at_phrase": "under Collectors",
       "box": [
