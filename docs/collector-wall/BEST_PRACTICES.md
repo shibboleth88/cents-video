@@ -4,7 +4,7 @@ This is the one source for the format of every Collector Wall episode. Read it b
 
 The reference episode is **blacktongue** (`films/wall-blacktongue/` on branch `claude/project-thread-nkzn17`, PR #5). Copy its folder layout, timeline shape and caption builder.
 
-Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4.
+Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the Daidatep thread's first findings.
 
 ## 1. What an episode is
 
@@ -37,7 +37,7 @@ Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4.
 
 ## 3. Structure (the order that worked)
 
-1. **Open on the Wall.** "This is the Wall of NAME." It sits over a cents.vision screenshot of that Wall's card.
+1. **Open on the Wall.** "This is the Wall of NAME." Use a cents.vision screenshot of that Wall's card if one exists. Otherwise use `WallBoard` at `{top: true}`. Either way, frame 0 shows the Wall.
 2. **Zoom to the signature Cent on the screenshot.** Once that sentence ends, the camera zooms onto the signature Cent on the card. Only then does the film cut to the individual view of that Cent: its number, year, and its traits ("…and is a Ghost Cent").
 3. **Count and span:** "The Wall holds N Cents, from YEAR to YEAR." Then the size club, zooming onto the club badge, with the club's range ("…which puts it in the Dime Club, for ten to twenty-four Cents").
 4. **Standout Cents.** For each one, say what makes it rare, as "one of only N" with a measured N. Where the trait sits in one place on the coin, zoom into it (see §4).
@@ -69,6 +69,66 @@ Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4.
   - Make one move per idea. A move with no reason (for example, the menu bar before "Collectors") confuses.
 - **The zoom must be readable.** The 300px inscription images go soft past about 500px on screen. For any zoom on a Cent, use the 1050px front: `https://cents.vision/pics/frontswebp/<n>.webp`, kept in `/mnt/project-files/*/highres/`. If your container can't reach cents.vision, ask the coordinator for a helper fetch.
 - Screenshots never sit under captions. `WallShot` ends its area at y=1330.
+
+## 4a. WallBoard: rebuild the Wall instead of screenshotting it
+
+Use `WallBoard` (`src/style/wallboard.tsx`) for every shot that moves around a Wall: zooms to the signature Cent, to a badge, to a Cent in the collection, and scrolls through the whole collection. It redraws the card from data the way collectors.html lays it out, with the "View collection" grid opened beneath it. That makes every zoom sharp, it needs no measured boxes, and it handles a Wall of any length.
+
+**Why not a screenshot for these shots:**
+- A screenshot goes soft when the camera zooms into it.
+- It only holds one screen of the page.
+- Live capture of collectors.html now times out in the cloud container: gstatic is refused, and the `window.firebase` stub no longer lets `state.collectors` load (Daidatep thread, 2026-10-25).
+
+A real cents.vision screenshot is still welcome for the first second, if one exists.
+
+**1. Snapshot the Wall's data.** The command writes `films/wall-<slug>/data/wall_board.json` (committed) and `public/walls/<slug>.json` (what the component fetches):
+
+```
+cd /home/claude/cents-video
+python3 pipeline/wall_board.py --name "<name as claimed>" --slug <slug>
+python3 pipeline/wall_board.py --self-test      # all claimed Walls build; two controls go red
+python3 pipeline/stage_cents.py --src <sovrn-onchain>/cents <every Cent number on the Wall>
+```
+
+- It refuses if a badge count disagrees with the Cents behind it, or if anything wallet-like would be written.
+- Run `--self-test` after changing the script.
+- Stage every Cent on the Wall. The collection grid shows them all.
+
+**2. Write the shot.** Props: `wall` (slug), `moves`, `highlights`, and `readout` (optional).
+
+```json
+{"component": "WallBoard", "props": {"wall": "daidatep",
+  "moves": [
+    {"at_phrase": "Its signature Cent", "target": {"cent": 9908, "in": "signature"}},
+    {"at_phrase": "The Wall holds", "target": {"grid_start": true}},
+    {"at_phrase": "a hundred and thirty-two", "until_phrase": "Among them", "target": {"grid_end": true}},
+    {"at_phrase": "only one-nine-fifty-five-D", "target": {"cent": 3640}, "mark": true},
+    {"at_phrase": "Wheat", "target": {"badge": "Wheat"}, "mark": true}],
+  "highlights": [{"at_phrase": "ten wheat pennies", "until_phrase": "Among them", "group": "wheat"}],
+  "readout": {"at_phrase": "The Wall holds", "count": {"from": 0, "to": 132, "until_phrase": "Among them", "suffix": " Cents"}}}}
+```
+
+**Targets:**
+- `{top: true}` is the card at 1:1. It is also the frame before the first move.
+- `{card: true}` fits the whole card.
+- `{cent: n, in: "signature" | "mosaic" | "grid"}` frames one Cent. The default is the grid.
+- `{badge: "<text it starts with>"}` frames one badge. It must match exactly one badge.
+- `{grid_start: true}` and `{grid_end: true}` show the first or last rows of the collection.
+- `{box: [x0, y0, x1, y1]}` is in board units (1000 wide).
+
+**Moves:**
+- A move eases over 18 frames.
+- With `until_phrase`, the move pans linearly until that phrase. That is how to scroll.
+- `mark: true` outlines the target in copper.
+- `zoom` caps the magnification. The default is 2.6.
+
+**Highlights:**
+- A highlight dims everything else and rings the chosen Cents.
+- Use `group` for any key in the board's `groups`: `wheat`, `y1971`, `y1969`, `one_of_one_year`, `one_of_one_mint`, `trait_combo`, `mint_keeper`, `full_mint`, `full_<patina>`, `full_any`, `contamination_one_each`. Use `cents` for an explicit list.
+
+**Readout:** `text`, or a `count` that runs from one number to another during a scroll. It sits below the board.
+
+For a trait you must see on the coin itself (a date, a mint mark), cut from the board to `WallStandout` with a high-res zoom (§4). The board's Cent images are the 300px inscriptions.
 
 ## 5. Narration, captions, delivery
 
