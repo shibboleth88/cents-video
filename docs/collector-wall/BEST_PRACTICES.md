@@ -64,6 +64,13 @@ Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the D
 - **Never open on black.** Many platforms use the first frame as the preview. The opening shot is fully visible at frame 0: `OpeningShotCtx` in `src/style/motion.ts` turns off the fade-in for the shot at frame 0. After rendering, check that frame 0 of the MP4 is not dark.
 - **Cents do not rotate.** Show each Cent still, the signature Cent included. `WallCard` and `WallStandout` now default to `spin: 0`. Never use a 3D tilt. (User, 2026-10-25 13:56Z. The earlier rule allowed a flat 2D spin; blacktongue v4 and Daidatep v3 were made under it and are accepted as they are.)
   - Exception: the wheat flip (`CentFlip`) is a separate move and is still used.
+  - **Exception: the signature Cent can rotate in a 3DCENTS render.** The user approved this on 2026-10-25 14:13Z. 3DCENTS is sinvalli's tool, not Chang's. sinvalli is happy for the tool and its renders to be used and shared.
+    - **Credit** "sinvalli / 3DCENTS" on screen or in the credits.
+    - **Files:** the user exports the spins from the site and saves them to the Mac folder "cents shortlist" as `3dcents-<n>.mp4`. Daidatep's #9908 comes first. Ask the user for the export if it isn't there; don't screen-record the site.
+    - **Facts:** the render makes one full turn about the vertical axis every 6 s. The export offers IG Reel 1080x1920 framing at 720p to 4K. It is rebuilt from the 1050px cents.vision photos, so it carries no more detail than they do, and it is darker and lower in contrast than the photo.
+    - **Zoom:** for a trait zoom, still use the high-res photo in `WallStandout`.
+    - **Test frames:** in `/mnt/project-files/collector-wall/3dcents-test/`. Project memory `cents-3dcents` has the notes.
+    - **Scope:** the "no rotation" rule still applies to our own animations.
 - **Zoom to show the trait.** When narration names a trait that sits in one place on the coin (a date, a mint mark, a contamination spot, a die feature), zoom onto that part of the coin.
   - Use `WallStandout` with `src: "hires/<n>.webp"` and `zoom: {at_phrase, box: [x0,y0,x1,y1] as fractions of the image, mark: true}`.
   - Measure the box on the image; don't guess it.
