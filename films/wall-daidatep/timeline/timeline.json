@@ -4,7 +4,7 @@
   "subtitle": "Daidatep",
   "author": "shibboleth",
   "source": "https://cents.vision/collectors.html",
-  "version": "v2, script draft 2 (2026-10-25)"
+  "version": "v3, script draft 2 (2026-10-25)"
  },
  "_what": "Collector Wall: Daidatep. Every coin is a real Cent by number; every figure comes from data/wall_board.json (cents.vision, 25 Oct 2026). No wallet address appears.",
  "shots": [
@@ -910,9 +910,9 @@
     "at_phrase": "all twelve contamination types"
    },
    "end": {
-    "at_phrase": "As of October twenty"
+    "at_phrase": "The Wall carries Diamond"
    },
-   "purpose": "One Cent for each of the 12 contamination types, arriving as named.",
+   "purpose": "Each contamination Cent alone as its type is named, then all twelve together; '1 of 2' collectors (artist wallet excluded per the brief).",
    "visual_kind": "code",
    "component": "CentRow",
    "props": {
@@ -979,32 +979,11 @@
       "caption": "Special Oddities \u00b7 #9908",
       "at_phrase": "and special oddities"
      }
-    ]
-   }
-  },
-  {
-   "shot_id": "d12_holders",
-   "start": {
-    "at_phrase": "As of October twenty"
-   },
-   "end": {
-    "at_phrase": "The Wall carries Diamond"
-   },
-   "purpose": "Full Contamination holders, artist wallet excluded per the brief.",
-   "visual_kind": "code",
-   "component": "WallList",
-   "props": {
-    "title": "Full Contamination Set",
-    "subtitle": "held by collectors, October 2026",
+    ],
+    "solo_until": "As of October twenty",
     "readout": "1 of 2",
-    "readout_at": "one of only two collectors",
-    "rows": [
-     {
-      "n": 9908,
-      "label": "Daidatep",
-      "at_phrase": "Daidatep is one of only"
-     }
-    ]
+    "caption": "collectors with this Set",
+    "readout_at": "one of only two collectors"
    }
   },
   {

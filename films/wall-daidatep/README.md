@@ -28,3 +28,7 @@ Every figure was checked against `snapshots/2026-10-25/raw/merged-new2.json` and
 - Wheat: #4028 turns over (`CentFlip`, a flat 2D flip) to show the wheat reverse, from the cents.vision back image `pics/backswebp/4028.webp`.
 - The Fulls and all five Sets are shown as `CentRow`s, the way blacktongue showed its Full Spectrum Set, with each Cent arriving as it is named. The script now names each Spectrum patina and all twelve contamination types.
 - Picks: Spectrum 3867 / 1511 / 1186 / 9908 / 7957 / 857 · Chronicle 7671 / 2755 / 1430 · Full Mint 3474 (1945-S) / 3640 (1955-D) / 4028 (no mark) · Three Decades: the lowest-numbered Cent of each year, 1960 to 1982 · Contamination: one Cent per type, each checked against merged-new2.json.
+
+## v3 (user note, 13:39Z)
+
+- Full Contamination: each Cent appears alone as its type is named (`CentRow solo_until`), then all twelve gather into one row for the holders line, with "1 of 2". This replaces the separate holders shot.
