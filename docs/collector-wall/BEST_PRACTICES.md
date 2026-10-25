@@ -62,7 +62,8 @@ Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the D
 ## 4. Camera and motion
 
 - **Never open on black.** Many platforms use the first frame as the preview. The opening shot is fully visible at frame 0: `OpeningShotCtx` in `src/style/motion.ts` turns off the fade-in for the shot at frame 0. After rendering, check that frame 0 of the MP4 is not dark.
-- **Spin Cents flat in 2D only.** Use `CentTurn maxTilt={0}`. Never use a 3D tilt.
+- **Cents do not rotate.** Show each Cent still, the signature Cent included. `WallCard` and `WallStandout` now default to `spin: 0`. Never use a 3D tilt. (User, 2026-10-25 13:56Z. The earlier rule allowed a flat 2D spin; blacktongue v4 and Daidatep v3 were made under it and are accepted as they are.)
+  - Exception: the wheat flip (`CentFlip`) is a separate move and is still used.
 - **Zoom to show the trait.** When narration names a trait that sits in one place on the coin (a date, a mint mark, a contamination spot, a die feature), zoom onto that part of the coin.
   - Use `WallStandout` with `src: "hires/<n>.webp"` and `zoom: {at_phrase, box: [x0,y0,x1,y1] as fractions of the image, mark: true}`.
   - Measure the box on the image; don't guess it.
