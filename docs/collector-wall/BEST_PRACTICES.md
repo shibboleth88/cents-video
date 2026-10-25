@@ -159,6 +159,18 @@ For a trait you must see on the coin itself (a date, a mint mark), cut from the 
   - Never push to main without asking.
   - Restore the root symlinks after `film.py switch` with `git checkout -- captions exports review script timeline`.
 
+### Practical notes from episodes (Daidatep v1, 2026-10-25)
+
+- **Fresh container setup:** run `npm ci` in the repo root before the first `npx remotion`.
+- **Alignment duration:** `script/alignment.json` must have a `duration` key, set to the length of `vo.wav` (the take plus 2.5 s of padding). Without it, the anchors and caption cutting throw a KeyError.
+- **Caption builder:** prefer the generic builder in `films/wall-daidatep/captions/build_cues.py` over the per-episode WRITTEN lists.
+  - A table maps each written token (5185, 1968, cents.vision) to its spoken form.
+  - Each script word takes the timing of its spoken words.
+  - It refuses on any mismatch.
+  - Copy it into new episodes and extend the table.
+- **Quick stills:** before a full render, use a small Node script that bundles once and calls `renderStill` per timestamp. It is much faster than one CLI call per frame, and the CLI's `--frames` needs a range and a directory.
+- **Readouts:** the 84 px readout fits about 8 characters, so SafeText refuses "1 of 2 collectors". Keep the number in the readout ("1 of 2") and put the words in the caption line beneath it.
+
 ## 6. Badge meanings (as cents.vision words them)
 
 These come from `/mnt/project-files/collectors/README.md`.
@@ -175,6 +187,7 @@ These come from `/mnt/project-files/collectors/README.md`.
 
 ## 7. Data and checks
 
+- **Re-fetch first.** Take a dated snapshot under `/mnt/project-files/collectors/snapshots/YYYY-MM-DD/`. It holds the raw files, a `fetch_log`, and `replay.json` from `replay.js`; Daidatep's is the example. The episode's figures and its "As of" date come from that snapshot.
 - **Source:** the per-Wall data is in `/mnt/project-files/collectors/claimed_walls.json` (39 Walls). Snapshot the episode's Wall into `films/wall-<name>/data/wall.json` with no wallet address.
 - **Verify every figure** before it goes in the script: every "one of only N" and every Set ceiling, checked against `raw/merged-new2.json` and `raw/set-counts.php`.
 - **Screenshot:** capture the Wall card at 1080 px wide with the wallet line hidden. `cents-vision-capture` in project memory has the Playwright recipe. Measure every box you zoom to.
