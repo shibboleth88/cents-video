@@ -4,7 +4,7 @@
   "subtitle": "Daidatep",
   "author": "shibboleth",
   "source": "https://cents.vision/collectors.html",
-  "version": "v3, script draft 2 (2026-10-25)"
+  "version": "v4, script draft 2 (2026-10-25)"
  },
  "_what": "Collector Wall: Daidatep. Every coin is a real Cent by number; every figure comes from data/wall_board.json (cents.vision, 25 Oct 2026). No wallet address appears.",
  "shots": [
@@ -922,62 +922,74 @@
      {
       "n": 375,
       "caption": "Paint \u00b7 #375",
-      "at_phrase": "paint"
+      "at_phrase": "paint",
+      "src": "hires/375.webp"
      },
      {
       "n": 1277,
       "caption": "Glue \u00b7 #1277",
-      "at_phrase": "glue"
+      "at_phrase": "glue",
+      "src": "hires/1277.webp"
      },
      {
       "n": 1333,
       "caption": "Sea Salt \u00b7 #1333",
-      "at_phrase": "sea salt"
+      "at_phrase": "sea salt",
+      "src": "hires/1333.webp"
      },
      {
       "n": 1576,
       "caption": "Scotch Tape \u00b7 #1576",
-      "at_phrase": "scotch tape"
+      "at_phrase": "scotch tape",
+      "src": "hires/1576.webp"
      },
      {
       "n": 2165,
       "caption": "Dark Grime \u00b7 #2165",
-      "at_phrase": "dark grime"
+      "at_phrase": "dark grime",
+      "src": "hires/2165.webp"
      },
      {
       "n": 2490,
       "caption": "Obscure Adhesive \u00b7 #2490",
-      "at_phrase": "obscure adhesive"
+      "at_phrase": "obscure adhesive",
+      "src": "hires/2490.webp"
      },
      {
       "n": 2755,
       "caption": "Blood \u00b7 #2755",
-      "at_phrase": "blood, unknown"
+      "at_phrase": "blood, unknown",
+      "src": "hires/2755.webp"
      },
      {
       "n": 3668,
       "caption": "Unknown Liquid \u00b7 #3668",
-      "at_phrase": "unknown liquid"
+      "at_phrase": "unknown liquid",
+      "src": "hires/3668.webp"
      },
      {
       "n": 3884,
       "caption": "3D Black \u00b7 #3884",
-      "at_phrase": "three D black"
+      "at_phrase": "three D black",
+      "src": "hires/3884.webp"
      },
      {
       "n": 5441,
       "caption": "Speckles \u00b7 #5441",
-      "at_phrase": "speckles"
+      "at_phrase": "speckles",
+      "src": "hires/5441.webp"
      },
      {
       "n": 1186,
       "caption": "Alien Secretion \u00b7 #1186",
-      "at_phrase": "alien secretion"
+      "at_phrase": "alien secretion",
+      "src": "hires/1186.webp"
      },
      {
       "n": 9908,
       "caption": "Special Oddities \u00b7 #9908",
-      "at_phrase": "and special oddities"
+      "at_phrase": "and special oddities",
+      "src": "hires/9908.webp"
      }
     ],
     "solo_until": "As of October twenty",

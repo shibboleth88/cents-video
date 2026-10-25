@@ -32,3 +32,9 @@ Every figure was checked against `snapshots/2026-10-25/raw/merged-new2.json` and
 ## v3 (user note, 13:39Z)
 
 - Full Contamination: each Cent appears alone as its type is named (`CentRow solo_until`), then all twelve gather into one row for the holders line, with "1 of 2". This replaces the separate holders shot.
+
+## v4 (user notes, 13:56-13:57Z)
+
+- No Cent rotates: the signature Cent is now still (spin defaults to 0, from the series branch).
+- Full Contamination: each Cent is shown large from its 1050px cents.vision front (`Hero.src` in CentRow solo mode, full stage height), then the smaller grid.
+- The signature caption is shortened to "Full Desert · Faceless", so it no longer wraps under the captions. Special Oddities is still spoken.
