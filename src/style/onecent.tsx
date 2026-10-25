@@ -4,6 +4,7 @@ import { EASE, OpeningShotCtx, useEntrance, useShotFade } from "./motion";
 import { COLOR, SAFE, TYPE } from "./tokens";
 import { Imagery, SafeText } from "./Safe";
 import { findPhrase, type Alignment } from "../lib/timeline";
+import { CentImage, fitGrid } from "./grids";
 
 /**
  * Shots for the One Cent series: one Cent per episode, looked at closely, with
@@ -45,10 +46,11 @@ type Concept = { at_phrase: string; label: string };
 type Quote = { at_phrase: string; text: string; credit: string };
 
 export const CentLook: React.FC<Anchored & {
-  title: string; n: number; front: string; back?: string;
+  /** The inscription number, shown under the Cent's name (from the trait export). */
+  inscription: number; n: number; front: string; back?: string;
   moves?: Move[]; flip_at?: string; reads?: Read[]; concept?: Concept; quote?: Quote;
 }> = (props) => {
-  const { title, n, front, back, moves = [], flip_at, reads = [], concept, quote } = props;
+  const { inscription, n, front, back, moves = [], flip_at, reads = [], concept, quote } = props;
   const frame = useCurrentFrame();
   const fade = useShotFade();
   const opening = React.useContext(OpeningShotCtx);
@@ -121,7 +123,7 @@ export const CentLook: React.FC<Anchored & {
           ) : null}
         </div>
       </Imagery>
-      <NameBand title={title} subtitle={`CENT #${n}`} />
+      <NameBand title={`Cent #${n}`} subtitle={`Inscription #${inscription}`} />
       {concept && cT > 0 ? (
         <div style={{ position: "absolute", left: X0, top: STAGE.y0 + 10, width: W, opacity: cT,
                       transform: `translateY(${(1 - cT) * 14}px)` }}>
@@ -155,17 +157,109 @@ export const CentLook: React.FC<Anchored & {
   );
 };
 
+/** The Cent's name is the largest text on screen; the inscription number sits under it. */
 const NameBand: React.FC<{ title: string; subtitle?: string }> = ({ title, subtitle }) => {
   const e = useEntrance("rise", 0);
   const opening = React.useContext(OpeningShotCtx);
   return (
     <div style={{ position: "absolute", left: X0, top: TITLE.y0, width: X1 - X0,
                   opacity: opening ? 1 : e.opacity, transform: `translateY(${opening ? 0 : e.y}px)` }}>
-      <SafeText role="display" fontSize={68} maxLines={1} style={{ fontWeight: 700, letterSpacing: -1 }}>{title}</SafeText>
+      <SafeText role="display" fontSize={84} maxLines={1} style={{ fontWeight: 700, letterSpacing: -1 }}>{title}</SafeText>
       {subtitle ? <SafeText role="body" fontSize={46} maxLines={1} color={COLOR.inkDim}>{subtitle}</SafeText> : null}
     </div>
   );
 };
 
-export const ONECENT = { CentLook } as const;
-(CentLook as any).wantsAlignment = true;
+/**
+ * Two Cents side by side, whole, from their 1050px fronts: the Cent of the
+ * episode and a reference Cent (e.g. a lustrous 1982 with the portrait intact).
+ * The second arrives on its phrase.
+ */
+export const CentCompare: React.FC<Anchored & {
+  inscription: number; n: number; front: string; label: string; trait: string;
+  other: { n: number; front: string; label: string; trait: string; at_phrase: string };
+}> = (props) => {
+  const { inscription, n, front, label, trait, other } = props;
+  const frame = useCurrentFrame();
+  const fade = useShotFade();
+  const at = useAt(props);
+  const H = STAGE.y1 - STAGE.y0;
+  const D = 360;                         // two coins side by side inside the essential area
+  const S = D * (0.5 / R);
+  const t2 = ramp(frame, at(other.at_phrase), 16);
+  // The episode's Cent starts centred and makes room for the reference Cent.
+  const L = 470 - 200 * t2, Rx = 670;
+  const cy = STAGE.y0 + H / 2 - 60;
+  const coin = (src: string, cx: number, o: number) => (
+    <div style={{ position: "absolute", left: cx - S / 2, top: cy - S / 2, width: S, height: S, opacity: o,
+                  transform: `scale(${0.92 + 0.08 * o})`, filter: "drop-shadow(0 18px 26px rgba(0,0,0,0.55))" }}>
+      <Img src={staticFile(src)} style={{ width: S, height: S, clipPath: "circle(40.5% at 50% 50%)" }} />
+    </div>
+  );
+  const lab = (a: string, b: string, cx: number, o: number) => (
+    <div style={{ position: "absolute", left: cx - 170, top: cy + D / 2 + 24, width: 340, opacity: o, textAlign: "center" }}>
+      <SafeText role="label" fontSize={42} maxLines={1} color={COLOR.ink}>{a}</SafeText>
+      <SafeText role="label" fontSize={42} maxLines={1} color={COLOR.accent} style={{ fontFamily: TYPE.mono }}>{b}</SafeText>
+    </div>
+  );
+  return (
+    <div style={{ position: "absolute", inset: 0, opacity: fade }}>
+      <Imagery>
+        {coin(front, L, 1)}
+        {coin(other.front, Rx + 40 * (1 - t2), t2)}
+      </Imagery>
+      {lab(label, trait, L, 1)}
+      {t2 > 0 ? lab(other.label, other.trait, Rx, t2) : null}
+      <NameBand title={`Cent #${n}`} subtitle={`Inscription #${inscription}`} />
+    </div>
+  );
+};
+
+/**
+ * Every Cent that carries a trait, all at once, with the episode's Cent ringed.
+ * The count is declared as `readout` and checked against the list it is handed.
+ */
+export const CentField: React.FC<Anchored & {
+  title: string; ns: number[]; mark: number; readout: string; caption: string;
+}> = (props) => {
+  const { title, ns, mark, readout, caption } = props;
+  const frame = useCurrentFrame();
+  const fade = useShotFade();
+  if (readout !== ns.length.toLocaleString("en-US"))
+    throw new Error(`CentField: readout says ${readout} but the list holds ${ns.length}`);
+  if (!ns.includes(mark)) throw new Error(`CentField: #${mark} is not in the list`);
+  const W = X1 - X0, H = STAGE.y1 - STAGE.y0;
+  const lay = fitGrid(ns.length, W, H, 0.1);
+  const step = lay.size + lay.gap;
+  const rows = Math.ceil(ns.length / lay.cols);
+  const left = X0 + (W - (lay.cols * step - lay.gap)) / 2;
+  const top = STAGE.y0 + (H - (rows * step - lay.gap)) / 2;
+  const ringT = ramp(frame, 30, 12);
+  const rT = ramp(frame, 6, 8);
+  return (
+    <div style={{ position: "absolute", inset: 0, opacity: fade }}>
+      <Imagery>
+        {ns.map((n, i) => {
+          const t = ramp(frame, Math.floor(i * 24 / ns.length), 8);
+          const col = i % lay.cols, row = Math.floor(i / lay.cols);
+          return (
+            <div key={n} style={{ position: "absolute", left: left + col * step, top: top + row * step, opacity: t * (n === mark ? 1 : 1 - 0.35 * ringT) }}>
+              <CentImage n={n} size={lay.size} />
+              {n === mark ? <div style={{ position: "absolute", inset: -6, border: `4px solid ${COLOR.accent}`, borderRadius: 8, opacity: ringT }} /> : null}
+            </div>
+          );
+        })}
+      </Imagery>
+      <div style={{ position: "absolute", left: X0, top: TITLE.y0, width: W }}>
+        <SafeText role="display" fontSize={68} maxLines={1} style={{ fontWeight: 700, letterSpacing: -1 }}>{title}</SafeText>
+      </div>
+      <div style={{ position: "absolute", left: X0, top: BAND.y0, width: W, opacity: rT }}>
+        <SafeText role="display" fontSize={84} maxLines={1} color={COLOR.accent} style={{ fontFamily: TYPE.mono, fontWeight: 700 }}>{readout}</SafeText>
+        <SafeText role="body" fontSize={48} maxLines={1}>{caption}</SafeText>
+      </div>
+    </div>
+  );
+};
+
+export const ONECENT = { CentLook, CentCompare, CentField } as const;
+for (const C of [CentLook, CentCompare, CentField]) (C as any).wantsAlignment = true;

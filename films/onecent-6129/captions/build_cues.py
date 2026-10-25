@@ -1,4 +1,4 @@
-"""Captions for One Cent #6129 (copied from the Daidatep builder): cut-aware cues on eo v1 take 1, with each
+"""Captions for One Cent #6129 (copied from the Daidatep builder): cut-aware cues on eo v2 take 2, with each
 spoken number written back the way the script writes it. Each script word is
 paired with its spoken words by a table of how many words it takes to say, so
 the written form inherits their exact timing. Refuses unless the cue text
@@ -16,7 +16,8 @@ tl = json.load(open(F / "timeline/timeline.json"))
 norm = lambda s: re.sub(r"[^a-z0-9 ]", " ", s.lower().replace("-", " ")).split()
 
 # Written token (punctuation stripped) -> its spoken form, as in audio/tts_text.txt.
-SPOKEN = {"#6129": "number sixty-one twenty-nine", "1979": "nineteen seventy-nine", "85": "eighty-five", "10,000": "ten thousand"}
+SPOKEN = {"#6129": "number sixty-one twenty-nine", "1979": "nineteen seventy-nine", "85": "eighty-five", "10,000": "ten thousand",
+          "#25": "number twenty-five", "1982": "nineteen eighty-two"}
 
 script = open(F / "script/voiceover.txt").read().split()
 words, out, i = al["words"], [], 0
@@ -30,12 +31,15 @@ for tok in script:
 if i != len(words): sys.exit(f"REFUSING: {len(words) - i} spoken words left over")
 
 flat = [(t, k) for k, w in enumerate(words) for t in norm(w["word"])]
-def start_of(ph):
+def start_of(ph, end=False):
     n = norm(ph)
     hits = [flat[k][1] for k in range(len(flat) - len(n) + 1) if [x[0] for x in flat[k:k + len(n)]] == n]
     if len(hits) != 1: sys.exit(f"anchor {ph!r} found {len(hits)} times")
-    return words[hits[0]]["start"]
-bounds = [start_of(s["start"]["at_phrase"]) for s in tl["shots"] if "at_phrase" in s["start"]]
+    if not end: return words[hits[0]]["start"]
+    k = next(j for j in range(len(flat)) if flat[j][1] == hits[0])
+    return words[flat[k + len(n) - 1][1]]["end"]
+bounds = [start_of(s["start"]["at_phrase"]) if "at_phrase" in s["start"] else start_of(s["start"]["after_phrase"], True)
+          for s in tl["shots"] if "at_phrase" in s["start"] or "after_phrase" in s["start"]]
 
 cues = C.build(out, bounds)
 problems = C.audit(cues, bounds)
