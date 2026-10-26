@@ -192,6 +192,14 @@
    "epoch": "feature set as of 2026-06-20",
    "as_of": "cents-vision-guide.md",
    "epoch_note": "User's close. Ends on an open invitation; no ending."
+  },
+  {
+   "say": "The CENTSbot also lives there to answer any questions you might have.",
+   "kind": "paraphrase",
+   "span": "Embedded on cents.vision.",
+   "epoch": "feature set as of 2026-10-24",
+   "as_of": "cents-bot CLAUDE.md; user's screenshot 2026-10-24",
+   "epoch_note": "User's added line (2026-10-24). 'there' = cents.vision, named in the sentence before."
   }
  ],
  "onscreen": [
@@ -206,14 +214,6 @@
    "approved": false,
    "by": null,
    "why": "the user's own line 1, restated as the title card subtitle",
-   "note": "awaiting the user's review of the shot plan (2026-10-24)"
-  },
-  {
-   "text": "Cent #8353",
-   "kind": "addition",
-   "approved": false,
-   "by": null,
-   "why": "identifies the Cent on screen by its number; metadata.json",
    "note": "awaiting the user's review of the shot plan (2026-10-24)"
   },
   {
@@ -318,11 +318,6 @@
   },
   {
    "text": "Contamination",
-   "kind": "paraphrase",
-   "span": "Contamination is recorded in 12 types."
-  },
-  {
-   "text": "12 types",
    "kind": "paraphrase",
    "span": "Contamination is recorded in 12 types."
   },
@@ -574,6 +569,104 @@
    "by": null,
    "why": "credit; the user wrote the script",
    "note": "awaiting the user's review of the shot plan (2026-10-24)"
+  },
+  {
+   "text": "gold",
+   "kind": "paraphrase",
+   "span": "Gold 69, orange 141."
+  },
+  {
+   "text": "orange",
+   "kind": "paraphrase",
+   "span": "Gold 69, orange 141."
+  },
+  {
+   "text": "Traits Lab",
+   "kind": "addition",
+   "approved": false,
+   "by": null,
+   "why": "names a cents.vision page as the page itself names it, captioning its screenshot",
+   "note": "awaiting the user's review (2026-10-24)"
+  },
+  {
+   "text": "Verdigris, in the Traits Atlas",
+   "kind": "addition",
+   "approved": false,
+   "by": null,
+   "why": "names a cents.vision page as the page itself names it, captioning its screenshot",
+   "note": "awaiting the user's review (2026-10-24)"
+  },
+  {
+   "text": "Collector Walls",
+   "kind": "addition",
+   "approved": false,
+   "by": null,
+   "why": "names a cents.vision page as the page itself names it, captioning its screenshot",
+   "note": "awaiting the user's review (2026-10-24)"
+  },
+  {
+   "text": "Sets",
+   "kind": "addition",
+   "approved": false,
+   "by": null,
+   "why": "names a cents.vision page as the page itself names it, captioning its screenshot",
+   "note": "awaiting the user's review (2026-10-24)"
+  },
+  {
+   "text": "Holders",
+   "kind": "addition",
+   "approved": false,
+   "by": null,
+   "why": "names a cents.vision page as the page itself names it, captioning its screenshot",
+   "note": "awaiting the user's review (2026-10-24)"
+  },
+  {
+   "text": "Sales",
+   "kind": "addition",
+   "approved": false,
+   "by": null,
+   "why": "names a cents.vision page as the page itself names it, captioning its screenshot",
+   "note": "awaiting the user's review (2026-10-24)"
+  },
+  {
+   "text": "The Void",
+   "kind": "addition",
+   "approved": false,
+   "by": null,
+   "why": "names a cents.vision page as the page itself names it, captioning its screenshot",
+   "note": "awaiting the user's review (2026-10-24)"
+  },
+  {
+   "text": "CENTSbot",
+   "kind": "addition",
+   "approved": false,
+   "by": null,
+   "why": "names the chat assistant on cents.vision as the user wrote it, captioning its screenshot",
+   "note": "awaiting the user's review (2026-10-24)"
+  },
+  {
+   "text": "no visual trait",
+   "kind": "addition",
+   "approved": false,
+   "by": null,
+   "why": "the catalogue category of a Cent with no trait flagged (cents_by_trait no_visual_trait), standing for the script's \"canvas\"",
+   "note": "awaiting the user's review (2026-10-24)"
+  },
+  {
+   "text": "heavily abraded",
+   "kind": "addition",
+   "approved": false,
+   "by": null,
+   "why": "the trait name in the cents.vision Lab filters (abraded: heavily)",
+   "note": "awaiting the user's review (2026-10-24)"
+  },
+  {
+   "text": "full verdigris",
+   "kind": "addition",
+   "approved": false,
+   "by": null,
+   "why": "the trait grade name on cents.vision",
+   "note": "awaiting the user's review (2026-10-24)"
   }
  ],
  "attributions": [],
