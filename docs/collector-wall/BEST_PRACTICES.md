@@ -4,7 +4,7 @@ This is the one source for the format of every Collector Wall episode. Read it b
 
 The reference episode is **blacktongue** (`films/wall-blacktongue/` on branch `claude/project-thread-nkzn17`, PR #5). Copy its folder layout, timeline shape and caption builder.
 
-Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the Daidatep thread's first findings.
+Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the Daidatep thread's first findings. 2026-10-26: §5 "Delivery check" added from the GPT WBWA reel handover.
 
 ## 1. What an episode is
 
@@ -187,6 +187,27 @@ For a trait you must see on the coin itself (a date, a mint mark), cut from the 
   - Work on the episode branch and open a draft PR.
   - Never push to main without asking.
   - Restore the root symlinks after `film.py switch` with `git checkout -- captions exports review script timeline`.
+
+### Delivery check (added 2026-10-26, from the GPT WBWA reel handover)
+
+Run on each delivered MP4 before reporting it. Tested on One Cent #6129 v3.1; each check went red on a control (1 s of black prepended; a file cut at 3 MB).
+
+```bash
+f=/mnt/project-files/<series>/<file>.mp4
+# 1. format: h264, 1080x1920, 30/1, frame count, duration
+ffprobe -v error -select_streams v:0 -count_frames -show_entries stream=codec_name,width,height,r_frame_rate,nb_read_frames -show_entries format=duration -of compact=p=0 "$f"
+# 2. decodes end to end: must print nothing
+ffmpeg -v error -i "$f" -f null -
+# 3. first frame not black: YMAX well above 16 (the control gave 16)
+ffmpeg -hide_banner -i "$f" -vf "select=eq(n\,0),signalstats,metadata=print:key=lavfi.signalstats.YMAX" -frames:v 1 -an -f null - 2>&1 | grep -o "YMAX=[0-9.]*"
+# 4. black and frozen intervals: a list to LOOK AT, not a pass/fail
+ffmpeg -hide_banner -i "$f" -vf "blackdetect=d=0.1:pix_th=0.10,freezedetect=n=0.001:d=2" -an -f null - 2>&1 | grep -oE "black_start:[0-9.]+ black_end:[0-9.]+|freeze_start: [0-9.]+"
+```
+
+- **Black on our stage is often by design.** The approved #6129 v3.1 has seven dips of 0.2–0.6 s between shots and a dark credits card, all flagged by step 4. A zero count is therefore not the target. Look at a frame inside each interval and fail only a black frame 0, a black run that is not a transition, or a black tail.
+- **Also:** look at the last frame; confirm each change the user asked for in the export, not the timeline; on a visual-only revision, keep the audio and compare it with the previous version.
+- **Report it as "exported and verified"**, saying which checks ran. Only the user approves.
+- More from that handover (repeats, asset usage counts, portraits, press marks, footage labels): `docs/gpt-handover.md` in the repo.
 
 ### Practical notes from episodes (Daidatep v1 and v2, 2026-10-25)
 
