@@ -72,8 +72,11 @@ export const CentLook: React.FC<Anchored & {
   /** The inscription number, shown under the Cent's name (from the trait export). */
   inscription: number; n: number; front: string; back?: string;
   moves?: Move[]; flip_at?: string; reads?: Read[]; concept?: Concept; quote?: Quote;
+  /** Open on the 3DCENTS turn of this Cent, played once (front, back, front), then
+   *  settle on the photo at the same size and place, so the zooms follow without a cut. */
+  spin?: Clip;
 }> = (props) => {
-  const { inscription, n, front, back, moves = [], flip_at, reads = [], concept, quote } = props;
+  const { inscription, n, front, back, moves = [], flip_at, reads = [], concept, quote, spin } = props;
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const fade = useShotFade();
@@ -94,6 +97,9 @@ export const CentLook: React.FC<Anchored & {
   }
   if (flip_at && !back) throw new Error(`CentLook #${n}: a flip needs the back image`);
   if (quote && !quote.credit) throw new Error(`CentLook #${n}: a quote must carry its credit`);
+  if (spin && !spin.credit) throw new Error(`CentLook #${n}: a 3DCENTS clip must carry its credit`);
+  if (spin && moves.length && at(moves[0]!.at_phrase) < spin.frames)
+    throw new Error(`CentLook #${n}: the camera moves before the turn has settled on the front`);
 
   // Camera: each move eases from the state before it. A state is the point of
   // the image at the stage centre and the scale; null is the whole coin.
@@ -119,6 +125,9 @@ export const CentLook: React.FC<Anchored & {
   }
   const sc = cam.k;
   const ox = 540 - cam.cx * S * sc, oy = H / 2 - cam.cy * S * sc;
+  // The turn hands over to the photo over its last frames, when the front faces us again.
+  const settle = spin ? ramp(frame, spin.frames - 10, 10) : 1;
+  const COIN_D = 0.815 * S;              // the coin's measured width in the 1050px photo
 
   const fFlip = flip_at ? at(flip_at) : Infinity;
   const ft = flip_at ? ramp(frame, fFlip, 20) : 0;
@@ -144,7 +153,16 @@ export const CentLook: React.FC<Anchored & {
   return (
     <div style={{ position: "absolute", inset: 0, opacity: fade }}>
       <Imagery>
-        <div style={{ position: "absolute", left: 0, top: STAGE.y0, width: 1080, height: H, overflow: "hidden", opacity: enter * dim }}>
+        {spin && settle < 1 ? (
+          // Lighten blend drops the clip's black onto the stage colour (as in WallStandout).
+          <div style={{ position: "absolute", left: 0, top: STAGE.y0, width: 1080, height: H, overflow: "hidden",
+                        background: COLOR.bg, isolation: "isolate" }}>
+            <OffthreadVideo src={staticFile(spin.src)} muted
+              style={{ position: "absolute", left: 540 - spin.coin.cx * (COIN_D / spin.coin.d), top: H / 2 - spin.coin.cy * (COIN_D / spin.coin.d),
+                       width: spin.width * (COIN_D / spin.coin.d), height: spin.height * (COIN_D / spin.coin.d), mixBlendMode: "lighten" }} />
+          </div>
+        ) : null}
+        <div style={{ position: "absolute", left: 0, top: STAGE.y0, width: 1080, height: H, overflow: "hidden", opacity: enter * dim * settle }}>
           <div style={{ position: "absolute", left: ox, top: oy, width: S * sc, height: S * sc, transform: `scaleX(${sx})` }}>
             <Img src={staticFile(src)} style={{ width: S * sc, height: S * sc, clipPath: "circle(40.5% at 50% 50%)",
                                                 filter: `drop-shadow(0 ${SIZE * 0.04}px ${SIZE * 0.06}px rgba(0,0,0,0.55))` }} />
@@ -158,6 +176,11 @@ export const CentLook: React.FC<Anchored & {
         </div>
       </Imagery>
       <NameBand title={`Cent #${n}`} subtitle={`Inscription #${inscription}`} />
+      {spin && settle < 1 ? (
+        <div style={{ position: "absolute", left: X0, top: STAGE.y1 - 46, width: X1 - X0, opacity: 0.8 * (1 - settle) }}>
+          <SafeText role="label" fontSize={42} maxLines={1} color={COLOR.inkDim} style={{ fontFamily: TYPE.body, textAlign: "center" }}>{spin.credit}</SafeText>
+        </div>
+      ) : null}
       {concept && cT > 0 ? (
         <div style={{ position: "absolute", left: X0, top: STAGE.y0 + 10, width: W, opacity: cT,
                       transform: `translateY(${(1 - cT) * 14}px)` }}>

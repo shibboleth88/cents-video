@@ -9,49 +9,14 @@
  "_what": "Cent #6129. Concepts C24 (primary) and C26 (value tie). Every count from the Sep 2026 trait export. Traits are read from the front only.",
  "shots": [
   {
-   "shot_id": "s01_card",
+   "shot_id": "s01_open",
    "start": {
     "at_start": true
    },
    "end": {
-    "at_phrase": "made to carry one image"
-   },
-   "purpose": "The Cent's card: name, inscription number, the user's 3DCENTS turn of #6129 (looped). 1979 appears as it is spoken.",
-   "visual_kind": "code",
-   "component": "CentSpin",
-   "props": {
-    "inscription": 65998562,
-    "n": 6129,
-    "clip": {
-     "src": "3dcents/6129-360-30fps.mp4",
-     "width": 1080,
-     "height": 1920,
-     "frames": 150,
-     "coin": {
-      "cx": 539.5,
-      "cy": 959.5,
-      "d": 775
-     },
-     "credit": "3D render: 3DCENTS.vercel.app"
-    },
-    "size": 560,
-    "reads": [
-     {
-      "at_phrase": "struck in nineteen seventy-nine",
-      "readout": "1979"
-     }
-    ]
-   }
-  },
-  {
-   "shot_id": "s02_profile",
-   "start": {
-    "at_phrase": "made to carry one image"
-   },
-   "end": {
     "at_phrase": "Compare Cent number sixteen"
    },
-   "purpose": "Close-up: to the top of the head on 'Lincoln', a slow pan down the portrait on 'Look for him', then the surviving edge (the ridge at the back of the head), then the worn face.",
+   "purpose": "Opening (user, 2026-10-26): the 3DCENTS turn of #6129 plays once (front, back, front), then settles on the 1050px photo at the same size and place (coin matched by measured width: clip 775px, photo 0.815 of the image), so the zooms follow with no cut. 1979 appears as spoken. Then: top of the head on 'Lincoln', a slow pan down on 'Look for him', the surviving edge, the worn face.",
    "visual_kind": "code",
    "component": "CentLook",
    "props": {
@@ -100,6 +65,24 @@
        0.667
       ],
       "dur": 0.8
+     }
+    ],
+    "spin": {
+     "src": "3dcents/6129-360-30fps.mp4",
+     "width": 1080,
+     "height": 1920,
+     "frames": 150,
+     "coin": {
+      "cx": 539.5,
+      "cy": 959.5,
+      "d": 775
+     },
+     "credit": "3D render: 3DCENTS.vercel.app"
+    },
+    "reads": [
+     {
+      "at_phrase": "struck in nineteen seventy-nine",
+      "readout": "1979"
      }
     ]
    }
