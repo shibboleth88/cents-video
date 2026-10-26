@@ -1,0 +1,513 @@
+{
+ "essay": {
+  "title": "Cent #6129",
+  "subtitle": "Inscription #65998562",
+  "author": "shibboleth",
+  "source": "/mnt/project-files/single-cent-series/6129/6129_proposal_v0.5.md",
+  "version": "v3, script v0.5 (2026-10-26)"
+ },
+ "_what": "Cent #6129. Concepts C24 (primary) and C26 (value tie). Every count from the Sep 2026 trait export. Traits are read from the front only.",
+ "shots": [
+  {
+   "shot_id": "s01_open",
+   "start": {
+    "at_start": true
+   },
+   "end": {
+    "at_phrase": "Compare Cent number sixteen"
+   },
+   "purpose": "Opening (user, 2026-10-26): the 3DCENTS turn of #6129 plays once (front, back, front), then settles on the 1050px photo at the same size and place (coin matched by measured width: clip 775px, photo 0.815 of the image), so the zooms follow with no cut. 1979 appears as spoken. Then: top of the head on 'Lincoln', a slow pan down on 'Look for him', the surviving edge, the worn face.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65998562,
+    "n": 6129,
+    "front": "hires/6129.webp",
+    "moves": [
+     {
+      "at_phrase": "one image Lincoln",
+      "box": [
+       0.3,
+       0.14,
+       0.72,
+       0.42
+      ],
+      "dur": 0.8
+     },
+     {
+      "at_phrase": "Look for him",
+      "box": [
+       0.3,
+       0.52,
+       0.72,
+       0.8
+      ],
+      "dur": 1.9
+     },
+     {
+      "at_phrase": "The edge of the profile",
+      "box": [
+       0.3,
+       0.22,
+       0.46,
+       0.5
+      ],
+      "mark": true,
+      "max": 4,
+      "dur": 0.7
+     },
+     {
+      "at_phrase": "The features have worn",
+      "box": [
+       0.314,
+       0.19,
+       0.667,
+       0.667
+      ],
+      "dur": 0.8
+     }
+    ],
+    "spin": {
+     "src": "3dcents/6129-360-30fps.mp4",
+     "width": 1080,
+     "height": 1920,
+     "frames": 150,
+     "coin": {
+      "cx": 539.5,
+      "cy": 959.5,
+      "d": 775
+     },
+     "credit": "3D render: 3DCENTS.vercel.app"
+    },
+    "reads": [
+     {
+      "at_phrase": "struck in nineteen seventy-nine",
+      "readout": "1979"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s03_compare",
+   "start": {
+    "at_phrase": "Compare Cent number sixteen"
+   },
+   "end": {
+    "at_phrase": "Eighty-five of the ten"
+   },
+   "purpose": "Template comparison, chosen by the user: #1605, also 1979, whose only trait is Lustrous (inscription 66001324). Dissolves 1605, 6129, 1605, 6129.",
+   "visual_kind": "code",
+   "component": "CentDissolve",
+   "props": {
+    "first": "b",
+    "a": {
+     "n": 6129,
+     "inscription": 65998562,
+     "front": "hires/6129.webp",
+     "readout": "1979",
+     "caption": "Faceless"
+    },
+    "b": {
+     "n": 1605,
+     "inscription": 66001324,
+     "front": "hires/1605.webp",
+     "readout": "1979",
+     "caption": "Lustrous"
+    },
+    "swaps": [
+     {
+      "at_phrase": "also from nineteen seventy-nine",
+      "to": "a"
+     },
+     {
+      "at_phrase": "which kept its mint lustre",
+      "to": "b"
+     },
+     {
+      "at_phrase": "This trait is called Faceless",
+      "to": "a"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s04_faceless",
+   "start": {
+    "at_phrase": "Eighty-five of the ten"
+   },
+   "end": {
+    "at_phrase": "Where Liberty was struck"
+   },
+   "purpose": "Close-up quick scroll of all 85 Faceless Cents (cents_by_trait.json index.faceless), on black, #6129 ringed.",
+   "visual_kind": "code",
+   "component": "CentScroll",
+   "props": {
+    "title": "Faceless",
+    "ns": [
+     70,
+     116,
+     328,
+     592,
+     712,
+     994,
+     1138,
+     1268,
+     1767,
+     1780,
+     1808,
+     1864,
+     1905,
+     1935,
+     1965,
+     2016,
+     2113,
+     2122,
+     2299,
+     2426,
+     2516,
+     2658,
+     2989,
+     3109,
+     3163,
+     3257,
+     3260,
+     3334,
+     3392,
+     3602,
+     3794,
+     3981,
+     4167,
+     4344,
+     4413,
+     4604,
+     5056,
+     5127,
+     5320,
+     5346,
+     5435,
+     5521,
+     5532,
+     5575,
+     6107,
+     6129,
+     6415,
+     6523,
+     6542,
+     6544,
+     6991,
+     7033,
+     7195,
+     7259,
+     7307,
+     7406,
+     7452,
+     7717,
+     7734,
+     7905,
+     7906,
+     7986,
+     8027,
+     8232,
+     8292,
+     8353,
+     8427,
+     8576,
+     8584,
+     8641,
+     8731,
+     9168,
+     9344,
+     9378,
+     9466,
+     9514,
+     9524,
+     9526,
+     9597,
+     9692,
+     9714,
+     9769,
+     9791,
+     9908,
+     9991
+    ],
+    "mark": 6129,
+    "readout": "85",
+    "caption": "of 10,000 Cents",
+    "until": "Where Liberty was struck",
+    "cols": 3
+   }
+  },
+  {
+   "shot_id": "s05_surface",
+   "start": {
+    "at_phrase": "Where Liberty was struck"
+   },
+   "end": {
+    "at_phrase": "The mark as index"
+   },
+   "purpose": "Front only (traits are read from the front). Areas as circled by the user on 2026-10-26: adhesive over LIBERTY and over the D of GOD; gold between them; obsidian (2 areas); verdigris (3 areas).",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65998562,
+    "n": 6129,
+    "front": "hires/6129.webp",
+    "moves": [
+     {
+      "at_phrase": "Where Liberty was struck",
+      "box": [
+       0.097,
+       0.299,
+       0.37,
+       0.657
+      ],
+      "mark": true,
+      "max": 4
+     },
+     {
+      "at_phrase": "More of it covers",
+      "box": [
+       0.31,
+       0.11,
+       0.48,
+       0.26
+      ],
+      "mark": true,
+      "max": 4
+     },
+     {
+      "at_phrase": "Between the two the copper",
+      "box": [
+       0.2,
+       0.2,
+       0.4,
+       0.36
+      ],
+      "mark": true,
+      "max": 4
+     },
+     {
+      "at_phrase": "In patches it has",
+      "box": [
+       0.344,
+       0.198,
+       0.567,
+       0.69
+      ],
+      "marks": [
+       [
+        0.384,
+        0.228,
+        0.537,
+        0.357
+       ],
+       [
+        0.374,
+        0.595,
+        0.438,
+        0.66
+       ]
+      ]
+     },
+     {
+      "at_phrase": "in others it has bloomed",
+      "box": [
+       0.425,
+       0.407,
+       0.931,
+       0.88
+      ],
+      "marks": [
+       [
+        0.771,
+        0.437,
+        0.901,
+        0.59
+       ],
+       [
+        0.455,
+        0.584,
+        0.511,
+        0.655
+       ],
+       [
+        0.544,
+        0.727,
+        0.654,
+        0.85
+       ]
+      ]
+     }
+    ],
+    "reads": [
+     {
+      "at_phrase": "an Obscure Adhesive contamination",
+      "caption": "Obscure Adhesive"
+     },
+     {
+      "at_phrase": "Between the two the copper",
+      "caption": "Notable Gold"
+     },
+     {
+      "at_phrase": "In patches it has",
+      "caption": "Significant Obsidian"
+     },
+     {
+      "at_phrase": "in others it has bloomed",
+      "caption": "Notable Verdigris"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s06_index",
+   "start": {
+    "at_phrase": "The mark as index"
+   },
+   "end": {
+    "at_phrase": "Only seven Cents"
+   },
+   "purpose": "Concept C24 named on screen; Reiss quote attributed in the voiceover, credited on the card, words lit as spoken. check_quotes.py: FOUND.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65998562,
+    "n": 6129,
+    "front": "hires/6129.webp",
+    "moves": [
+     {
+      "at_phrase": "The mark as index",
+      "box": [
+       0.314,
+       0.19,
+       0.667,
+       0.667
+      ]
+     }
+    ],
+    "concept": {
+     "at_phrase": "The mark as index",
+     "label": "The mark as index"
+    },
+    "quote": {
+     "at_phrase": "The official icon",
+     "text": "The official icon (Lincoln’s head) fades; what matters are the unplanned indices. The penny shifts from being an image to being a time-stamp. Its patina says: I have been around.",
+     "credit": "Steven Reiss, Materiality and Signification"
+    }
+   }
+  },
+  {
+   "shot_id": "s07_seven",
+   "start": {
+    "at_phrase": "Only seven Cents"
+   },
+   "end": {
+    "at_phrase": "A coin collector would"
+   },
+   "purpose": "Every Cent both Faceless and gold (notable or full) in the Sep 2026 export, on black.",
+   "visual_kind": "code",
+   "component": "CentSet",
+   "props": {
+    "title": "Faceless and gold",
+    "ns": [
+     1864,
+     2016,
+     3109,
+     3260,
+     4413,
+     6129,
+     9344
+    ],
+    "readout": "7",
+    "caption": "of 10,000 Cents",
+    "cols": 4
+   }
+  },
+  {
+   "shot_id": "s08_value",
+   "start": {
+    "at_phrase": "A coin collector would"
+   },
+   "end": {
+    "after_phrase": "more value we give it",
+    "plus": 0.8
+   },
+   "purpose": "Value tie, concept C26: the same damage, valued. Rees quote attributed in the voiceover, MAKES CENTS interview on the card. check_quotes.py: FOUND.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65998562,
+    "n": 6129,
+    "front": "hires/6129.webp",
+    "concept": {
+     "at_phrase": "In CENTS the damage",
+     "label": "Coin collecting, turned over"
+    },
+    "quote": {
+     "at_phrase": "The more imperfect",
+     "text": "The more imperfect the coin, the more history you can see, the more value we give it.",
+     "credit": "David Rees, collector · MAKES CENTS interview"
+    }
+   }
+  },
+  {
+   "shot_id": "s09_card",
+   "start": {
+    "after_phrase": "more value we give it",
+    "plus": 0.8
+   },
+   "end": {
+    "after_phrase": "more value we give it",
+    "plus": 5.8
+   },
+   "purpose": "The opening card again, no voiceover, held for one full turn (150 frames: front, back, front).",
+   "visual_kind": "code",
+   "component": "CentSpin",
+   "props": {
+    "inscription": 65998562,
+    "n": 6129,
+    "clip": {
+     "src": "3dcents/6129-360-30fps.mp4",
+     "width": 1080,
+     "height": 1920,
+     "frames": 150,
+     "coin": {
+      "cx": 539.5,
+      "cy": 959.5,
+      "d": 775
+     },
+     "credit": "3D render: 3DCENTS.vercel.app"
+    },
+    "size": 560,
+    "reads": [
+     {
+      "readout": "1979"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s10_credits",
+   "start": {
+    "after_phrase": "more value we give it",
+    "plus": 5.8
+   },
+   "end": {
+    "at_end": true
+   },
+   "purpose": "End credits.",
+   "visual_kind": "code",
+   "component": "Credits",
+   "props": {
+    "lines": [
+     "Images: Rutherford Chang via cents.vision (site by Dr. Martin Lehnen)",
+     "3D Cent render from 3DCENTS.vercel.app (site by sinvalli)",
+     "Trait names: the CENTS Trait Council",
+     "Quote: Steven Reiss, “Materiality and Signification: Rutherford Chang’s CENTS and Semiotics”",
+     "Quote: David Rees, in shibboleth, “MAKES CENTS” collector interviews"
+    ],
+    "url": "cents.gallery"
+   }
+  }
+ ]
+}

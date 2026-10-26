@@ -31,7 +31,7 @@ def shot_times(tl, al) -> list[dict]:
         if a.get("at_start"): return 0.0
         if a.get("at_end"): return al["duration"]
         if "at_phrase" in a: return al["words"][find(a["at_phrase"])[0]]["start"]
-        return al["words"][find(a["after_phrase"])[1]]["end"]
+        return al["words"][find(a["after_phrase"])[1]]["end"] + a.get("plus", 0)
     out = []
     for s in tl["shots"]:
         t0, t1 = t_of(s["start"]), t_of(s["end"])

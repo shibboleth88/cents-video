@@ -82,6 +82,8 @@ Mint marks: no mark 8,343, D 1,597, S 60.
 Mint years: 1971 has 362 Cents, 1979 has 640, 1982 has 867.
 1949 has exactly one Cent. 1954 has exactly one Cent. They are the only years from 1940 to 1959 with a single Cent; 1940 and 1942 have two each.
 Because a Decades Set requires every mint year of the decade present in the collection, the 1940s Set requires the one 1949 Cent and the 1950s Set requires the one 1954 Cent, so each can be held by at most one collector at a time. Full Decades requires both.
+Mint years in the 1940s: 1940, 1941, 1942, 1944, 1945, 1946, 1947, 1948 and 1949. No Cent in the collection is dated 1943.
+Caps on complete Sets held at any one time, each set by its narrowest ingredient: Fulls 15 (full verdigris), Full Spectrum 9 (full gold), Full Contamination 7 (Scotch Tape).
 
 ================================================================
 [6] SET HOLDERS, SNAPSHOT — cents.vision/set-counts.php, read 9 Sep 2026 by the
@@ -103,3 +105,28 @@ absolute date in narration. Three moments are kept apart:
              said with its date. Re-read before recording.
   SETS       the requirements as published on cents.vision/sets.html (guide as
              of 2026-06-20; checked 4 Sep 2026).
+
+================================================================
+[8] CHRONICLE YEARS — the user's wording for the Chronicle Set captions,
+    5 Sep 2026 (knowledge/session-notes/bots_main.md, wording rules), restated
+    by the user for this film on 2026-10-24.
+================================================================
+1971 — "the year US currency became fiat"
+1979 — "the artist Rutherford Chang's birth year"
+1982 — "the last year cents were struck in copper"
+
+================================================================
+[9] CENTS.VISION — shibboleth88/cents-bot knowledge/cents-vision-guide.md
+    (feature set as of 2026-06-20). Verbatim lines.
+================================================================
+| Traits Atlas | https://cents.vision/traits-atlas.html | The codebook: how every trait is defined. |
+| Collectors | https://cents.vision/collectors.html | "Collector Walls" — a card per wallet, with clubs, sets, and badges. |
+- **Mint mark:** none (Philadelphia), S (San Francisco), D (Denver).
+
+[10] CENTS BOT ON CENTS.VISION — shibboleth88/cents-bot CLAUDE.md and
+    EMBED_HANDOFF.md, read 2026-10-24; and the user's screenshot of the chat
+    panel on cents.vision, 24 Oct 2026. Verbatim lines.
+================================================================
+### Web chat widget
+Embedded on cents.vision.
+cents.vision's `cents-bot-widget.js` [...] frame[s] the root URL with no query string

@@ -1,0 +1,124 @@
+SOURCES OF RECORD — CENTS: the Sets (film B, "The narrowing"; the same sources as film A)
+Assembled 2026-10-24. Every narration claim is checked against a span of this
+file. Each block names where it came from and, where the fact moves over time,
+when it was true.
+
+================================================================
+[1] UCCA BEIJING — Rutherford Chang: Hundreds and Thousands, exhibition page, 2026
+    (copied from films/introduction/script/essay.txt block [3])
+================================================================
+CENTS is made from 10,000 American pennies minted before 1982 and valued for their copper content. Chang photographed each coin to record its particular wear and patina, then had the collection pressed into a single 31-kilogram copper cube. The images were inscribed on the Bitcoin blockchain, tying digital renderings of physical currency to virtual systems of value.
+
+================================================================
+[2] TRAIT COUNCIL — trait documentation, sovrn.art/cents/trait-council
+    (copied from films/introduction/script/essay.txt block [4])
+================================================================
+The cataloging of emergent traits in the CENTS collection is a community-led initiative carried out over the course of 2 years through multiple reviews of the full 10k set, numerous voting rounds, and in-depth discussions threshold cases.
+
+================================================================
+[3] PROJECT DESCRIPTION — sovrn.art/cents/project-description, dated 2024-03-26
+    (copied from films/introduction/script/essay.txt block [1])
+================================================================
+Yet a penny from any given year will always be worth exactly 1¢, according to the United States Treasury.
+
+================================================================
+[4] THE SETS — cents.vision/sets.html, as transcribed in shibboleth88/cents-bot
+    knowledge/cents-vision-guide.md (feature set as of 2026-06-20; the Corroded
+    note checked against /sets.html on 4 Sep 2026). Verbatim.
+================================================================
+## Sets (`/sets.html`)
+The Trait Council has defined a number of **Sets** — **emergent structures identified within the collection's internal dynamics** (describe them this way, not as "collecting goals"). Each has a requirement and example qualifying Cents; the **Collectors** page shows the **Sets leaderboards** (who holds / is closest to each). The 4 **base patinas** are Verdigris, Obsidian, Desert, Red; the 2 **noble patinas** are Gold and Orange.
+
+- **Patina Set** — at least one **Notable+** of each of the 4 base patinas. Examples: #412, #4679, #215, #3398.
+- **Sig Set** — at least one **Significant+** of all 4 base patinas. Examples: #2956, #6059, #8353, #337.
+- **Spectrum Set** — **Notable+** of all 4 base patinas *plus* Gold and Orange. Examples: #6078, #2568, #4554, #6223, #4788, #7799.
+- **Fulls Set** — one **Full** of each of the 4 base patinas. Examples: #3981, #7823, #9533, #1771.
+- **Full Spectrum Set** — one **Full** of all 4 base patinas *plus* Full Gold and Orange. Examples: #9786, #3861, #1079, #8185, #4273, #2785.
+- **Contamination Sets** — the only Sets built on **contamination** rather than patina, scored by how many of the **12 contamination types** a collection covers across its Cents (Glue, Scotch Tape, 3D-black, Alien Secretion, Paint, Obscure Adhesive, Dark Grime, Sea Salt, Blood, Speckles, Unknown Liquid, Special Oddities):
+  - **Contamination Set** — covers at least **3** of the 12.
+  - **Contamination Hoard** — covers at least **6** of the 12.
+  - **Full Contamination** — covers **all 12**.
+- **Chronicle Set** — holds at least one Cent minted in **each of 1971, 1979 and 1982**.
+- **Full Mint Set** — holds at least one **S-mint**, one **D-mint**, and one Cent with **no mint
+  mark**. The S-mint is the hard part: the collection contains **60** S cents against 1,597 D
+  and 8,343 with no mark, so this is one of the scarcer Sets despite sounding simple.
+- **Decades Sets (1940s–1980s)** — hold at least one Cent from **every mint year of that decade present in the collection** (a 1940s, 1950s, 1960s, 1970s, and 1980s Set; the collection's years don't form full decades before the 1940s).
+- **Three Decades Set** — a complete decade set for the **1960s, 1970s and 1980s** (1960–1982).
+- **Full Decades Set** — a complete decade set for **every** decade present (all five, 1940s–1980s).
+- **All Decades** — at least one Cent from **every decade present in the collection**, any mint
+  year. "Every decade present" means **all eight** — 1910s, 1920s, 1930s and 1940s–1980s — not
+  just the five that form complete decade Sets. It asks for one Cent per decade instead of
+  every year, but it reaches back into decades the other Decades Sets ignore, and the
+  collection holds only 5 cents from the 1910s, 9 from the 1920s and 12 from the 1930s. So do
+  **not** describe it as the easy one: it is weaker per decade and much harder in reach.
+
+> ⚠️ **There is no Corroded Set.** Corroded is a trait, and on the Lab it sits
+> beside the Contaminated dropdown, so it is easy to assume a Set exists for it.
+> Checked against `/sets.html` on 4 Sep 2026: the word doesn't appear there. If
+> someone asks about "the Corroded sets," they most likely mean the
+> **Contamination Sets** above.
+>
+> ⚠️ **It is the "Full Mint Set", not a "Mint Mark Set".** The Set is about holding all
+> three mint marks; "Mint Mark Set" is a natural way to say that and is not what the site
+> calls it.
+
+
+The glossary entry (cents-bot knowledge/glossary.md), verbatim:
+
+**Sets** — Emergent structures identified within the collection's internal dynamics by the Trait Council, tracked on cents.vision. Three families plus two standalones: the **patina** Sets (Patina, Sig, Spectrum, Fulls, Full Spectrum), the **Contamination** Sets (Contamination Set, Contamination Hoard, Full Contamination), the **Decades** Sets (one per decade 1940s–1980s, Three Decades, Full Decades, All Decades), and the **Chronicle** and **Full Mint** Sets. (Refer to them this way — not as "collecting goals.") There is no Corroded Set, and the mint-mark one is the *Full Mint* Set. See cents-vision-guide.md for each requirement and examples.
+
+================================================================
+[5] THE CATALOGUE, MEASURED — 2026-10-24, from the September 2026 cents.vision
+    trait export (cents_traits_sep2026.json via cents_by_trait.json; see
+    /mnt/project-files/knowledge/data/README.md). Trait assignments are Trait
+    Council adjudications as of September 2026. Mint years and mint marks do
+    not change.
+================================================================
+Of the 10,000, 15 are full verdigris, 38 full obsidian, 21 full desert and 71 full red.
+Notable or more: verdigris 1,884, obsidian 1,757, desert 598, red 670. Gold 69, orange 141.
+Exactly 9 Cents are full gold.
+Contamination is recorded in 12 types. By count: Obscure Adhesive 150, Paint 145, Dark Grime 127, Unknown Liquid 109, Speckles 95, Alien Secretion 79, Glue 51, Sea Salt 49, Special Oddities 44, 3D-black 35, Blood 17, Scotch Tape 7.
+Mint marks: no mark 8,343, D 1,597, S 60.
+Mint years: 1971 has 362 Cents, 1979 has 640, 1982 has 867.
+1949 has exactly one Cent. 1954 has exactly one Cent. They are the only years from 1940 to 1959 with a single Cent; 1940 and 1942 have two each.
+Because a Decades Set requires every mint year of the decade present in the collection, the 1940s Set requires the one 1949 Cent and the 1950s Set requires the one 1954 Cent, so each can be held by at most one collector at a time. Full Decades requires both.
+Narrowest ingredient of each base-patina requirement: Notable+ desert 598 (verdigris 1,884, obsidian 1,757, red 670); Significant+ desert 150 (verdigris 391, obsidian 258, red 254). Of gold and orange, gold is narrower: 69 against 141.
+Caps on complete Sets held at any one time, each set by its narrowest ingredient: Fulls 15 (full verdigris), Full Spectrum 9 (full gold), Full Contamination 7 (Scotch Tape).
+
+================================================================
+[6] SET HOLDERS, SNAPSHOT — cents.vision/set-counts.php, read 9 Sep 2026 by the
+    CENTS bots session (knowledge/session-notes/bots_main.md). Upstream truth,
+    computed by the cents.vision evaluator, matched 18/18 by a local computation.
+    A SNAPSHOT: it must be re-read before narration and the date said aloud.
+================================================================
+2,092 collectors. patina 114, sig 29, fulls 2, spectrum 16, fullSpectrum 2, chronicle 54, fullMint 29, contaminationSet 59, contaminationHoard 12, contaminationFull 3, threeDecades 5, fullDecades 0, allDecades 2, decade1980 111.
+
+================================================================
+[7] EPOCH CONVENTION FOR THIS FILM
+================================================================
+The film speaks from its own present (late October 2026). A source deictic -
+now, currently, still, today - resolves to the SOURCE'S date and must become an
+absolute date in narration. Three moments are kept apart:
+  CATALOGUE  the September 2026 trait export, measured 2026-10-24. Trait counts
+             can move if the Council revises an adjudication; mint years cannot.
+  HOLDERS    the 9 September 2026 set-counts snapshot. Every holder figure is
+             said with its date. Re-read before recording.
+  SETS       the requirements as published on cents.vision/sets.html (guide as
+             of 2026-06-20; checked 4 Sep 2026).
+
+================================================================
+[8] CHRONICLE YEARS — the user's wording for the Chronicle Set captions,
+    5 Sep 2026 (knowledge/session-notes/bots_main.md, wording rules), restated
+    by the user for this film on 2026-10-24.
+================================================================
+1971 — "the year US currency became fiat"
+1979 — "the artist Rutherford Chang's birth year"
+1982 — "the last year cents were struck in copper"
+
+================================================================
+[9] CENTS.VISION — shibboleth88/cents-bot knowledge/cents-vision-guide.md
+    (feature set as of 2026-06-20). Verbatim lines.
+================================================================
+| Traits Atlas | https://cents.vision/traits-atlas.html | The codebook: how every trait is defined. |
+| Collectors | https://cents.vision/collectors.html | "Collector Walls" — a card per wallet, with clubs, sets, and badges. |
+- **Mint mark:** none (Philadelphia), S (San Francisco), D (Denver).

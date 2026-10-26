@@ -1,3 +1,4 @@
+import React from "react";
 import { spring, interpolate, Easing, useCurrentFrame, useVideoConfig } from "remotion";
 
 /**
@@ -53,14 +54,22 @@ export function useEntrance(role: MotionRole = "rise", index = 0, from = 0): Ent
   };
 }
 
+/**
+ * True for the shot that starts at frame 0. Platforms use the first frame as
+ * the preview, so the film must never open on black: the opening shot is
+ * already fully in at frame 0.
+ */
+export const OpeningShotCtx = React.createContext(false);
+
 /** Opacity for a whole shot: in at the start, out at the end. */
 export function useShotFade(): number {
   const frame = useCurrentFrame();
   const { durationInFrames } = useVideoConfig();
+  const opening = React.useContext(OpeningShotCtx);
   return interpolate(
     frame,
     [0, TIMING.shotIn, durationInFrames - TIMING.shotOut, durationInFrames],
-    [0, 1, 1, 0],
+    [opening ? 1 : 0, 1, 1, 0],
     { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: EASE.out }
   );
 }

@@ -1,0 +1,265 @@
+{
+ "_source": "cents.vision collectors.html replay, fetched 2026-10-24 14:37-14:39 UTC; /mnt/project-files/collectors/ (see its README). Wallet address deliberately omitted.",
+ "as_of": "2026-10-24",
+ "name": "blacktongue",
+ "signature": 5185,
+ "signature_source": "chosen by collector",
+ "count": 24,
+ "club": "Dime Club",
+ "years": [
+  1938,
+  1980
+ ],
+ "cent_ids": [
+  189,
+  555,
+  1055,
+  1757,
+  1935,
+  2489,
+  3217,
+  3231,
+  3317,
+  4674,
+  5185,
+  5755,
+  6054,
+  7395,
+  7449,
+  7863,
+  7906,
+  8059,
+  8185,
+  8626,
+  9064,
+  9684,
+  9840,
+  9991
+ ],
+ "rendered": {
+  "set_badges": [
+   "Full Spectrum",
+   "Contamination Set (4/12)"
+  ],
+  "meta_badges": [
+   "Diamond Hands",
+   "Dime Club",
+   "Years 1938-1980",
+   "Patina 39",
+   "Wheat 2"
+  ],
+  "trait_tags": [
+   "Full x 6",
+   "Contaminated Alien Secretion x 1",
+   "Contaminated Special Oddities x 1",
+   "Ghost x 2",
+   "Vandalized x 1"
+  ]
+ },
+ "diamond_hands": true,
+ "full_spectrum_cents": {
+  "full_verdigris": 6054,
+  "full_obsidian": 555,
+  "full_red": [
+   189,
+   8185
+  ],
+  "full_desert": 5185,
+  "full_gold": 3231,
+  "orange": 1757
+ },
+ "measured": {
+  "cents_from_1938": 2,
+  "full_gold_cents": 9,
+  "full_spectrum_holders_set_counts_php": 2,
+  "contamination_types_on_wall": 4
+ },
+ "cents": {
+  "189": {
+   "unique_id": "1960d 051",
+   "year": 1960,
+   "mint_mark": "D",
+   "notable_desert": true,
+   "full_red": true
+  },
+  "555": {
+   "unique_id": "1962 021",
+   "year": 1962,
+   "mint_mark": null,
+   "notable_desert": true,
+   "full_obsidian": true
+  },
+  "1055": {
+   "unique_id": "1968 076",
+   "year": 1968,
+   "mint_mark": null,
+   "notable_obsidian": true,
+   "corroded": true,
+   "significant_desert": true
+  },
+  "1757": {
+   "unique_id": "1975d 017",
+   "year": 1975,
+   "mint_mark": "D",
+   "orange": true
+  },
+  "1935": {
+   "unique_id": "1975d 037",
+   "year": 1975,
+   "mint_mark": "D",
+   "faceless": true,
+   "corroded": true,
+   "significant_obsidian": true,
+   "significant_red": true
+  },
+  "2489": {
+   "unique_id": "1968 041",
+   "year": 1968,
+   "mint_mark": null,
+   "lustrous": true
+  },
+  "3217": {
+   "unique_id": "1970d 005",
+   "year": 1970,
+   "mint_mark": "D",
+   "notable_red": true,
+   "notable_obsidian": true,
+   "notable_verdigris": true,
+   "significant_desert": true
+  },
+  "3231": {
+   "unique_id": "1968d 054",
+   "year": 1968,
+   "mint_mark": "D",
+   "full_gold": true
+  },
+  "3317": {
+   "unique_id": "1968d 042",
+   "year": 1968,
+   "mint_mark": "D",
+   "notable_verdigris": true,
+   "notable_desert": true,
+   "significant_red": true
+  },
+  "4674": {
+   "unique_id": "1964 017",
+   "year": 1964,
+   "mint_mark": null,
+   "lustrous": true
+  },
+  "5185": {
+   "unique_id": "1968 072",
+   "year": 1968,
+   "mint_mark": null,
+   "ghost": true,
+   "full_desert": true,
+   "notable_verdigris": true,
+   "significant_obsidian": true
+  },
+  "5755": {
+   "unique_id": "1964 235",
+   "year": 1964,
+   "mint_mark": null,
+   "contaminated": [
+    "Alien Secretion"
+   ],
+   "notable_verdigris": true,
+   "notable_obsidian": true
+  },
+  "6054": {
+   "unique_id": "1974d 043",
+   "year": 1974,
+   "mint_mark": "D",
+   "full_verdigris": true,
+   "contaminated": [
+    "Obscure Adhesive"
+   ]
+  },
+  "7395": {
+   "unique_id": "1968 120",
+   "year": 1968,
+   "mint_mark": null,
+   "vandalized": true,
+   "notable_obsidian": true
+  },
+  "7449": {
+   "unique_id": "1964 146",
+   "year": 1964,
+   "mint_mark": null,
+   "notable_obsidian": true,
+   "notable_gold": true,
+   "corroded": true,
+   "significant_red": true
+  },
+  "7863": {
+   "unique_id": "1958 001",
+   "year": 1958,
+   "mint_mark": null
+  },
+  "7906": {
+   "unique_id": "1972 117",
+   "year": 1972,
+   "mint_mark": null,
+   "faceless": true,
+   "corroded": true,
+   "significant_obsidian": true,
+   "significant_desert": true
+  },
+  "8059": {
+   "unique_id": "1975 254",
+   "year": 1975,
+   "mint_mark": null,
+   "notable_verdigris": true,
+   "significant_desert": true,
+   "significant_red": true
+  },
+  "8185": {
+   "unique_id": "1964d 037",
+   "year": 1964,
+   "mint_mark": "D",
+   "notable_verdigris": true,
+   "contaminated": [
+    "Special Oddities"
+   ],
+   "notable_abraded": true,
+   "full_red": true
+  },
+  "8626": {
+   "unique_id": "1938 000",
+   "year": 1938,
+   "mint_mark": null
+  },
+  "9064": {
+   "unique_id": "1975 536",
+   "year": 1975,
+   "mint_mark": null,
+   "heavily_abraded": true
+  },
+  "9684": {
+   "unique_id": "1980 336",
+   "year": 1980,
+   "mint_mark": null,
+   "ghost": true,
+   "notable_obsidian": true,
+   "significant_red": true,
+   "significant_verdigris": true
+  },
+  "9840": {
+   "unique_id": "1967 041",
+   "year": 1967,
+   "mint_mark": null,
+   "contaminated": [
+    "Dark Grime"
+   ],
+   "notable_verdigris": true
+  },
+  "9991": {
+   "unique_id": "1967 000",
+   "year": 1967,
+   "mint_mark": null,
+   "faceless": true,
+   "notable_verdigris": true,
+   "heavily_abraded": true
+  }
+ }
+}

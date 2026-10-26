@@ -8,7 +8,7 @@ export type VisualKind = "code" | "real" | "stock" | "generated";
  */
 export type Anchor =
   | { at_phrase: string }      // cut on the first word of this phrase
-  | { after_phrase: string }   // cut on the end of this phrase
+  | { after_phrase: string; plus?: number }   // cut on the end of this phrase; `plus` seconds later for a wordless hold
   | { at_start: true }
   | { at_end: true };
 
@@ -129,7 +129,7 @@ export function resolveAnchor(al: Alignment, a: Anchor): number {
   if ("at_start" in a) return 0;
   if ("at_end" in a) return al.duration;
   if ("at_phrase" in a) return findPhrase(al, a.at_phrase).start;
-  return findPhrase(al, a.after_phrase).end;
+  return findPhrase(al, a.after_phrase).end + (a.plus ?? 0);
 }
 
 export type ResolvedShot = Shot & { fromFrame: number; durationInFrames: number };

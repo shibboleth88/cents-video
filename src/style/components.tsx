@@ -4,6 +4,11 @@ import { useEntrance, useShotFade, wordProgress } from "./motion";
 import type { Alignment } from "../lib/timeline";
 import { COLOR, MOTION, REGIONS, TYPE } from "./tokens";
 import { Imagery, Region, SafeText } from "./Safe";
+import { SETS } from "./sets";
+import { NARROWING } from "../narrowing/shots";
+import { WALL } from "./wall";
+import { ONECENT } from "./onecent";
+import { WallBoard } from "./wallboard";
 
 const useFade = useShotFade;
 
@@ -181,5 +186,5 @@ export const CaptionLayer: React.FC<{
   );
 };
 
-export const REGISTRY = { TitleCard, PullQuote, StatReveal, AssetShot, Credits } as const;
+export const REGISTRY = { TitleCard, PullQuote, StatReveal, AssetShot, Credits, ...SETS, ...NARROWING, ...WALL, WallBoard, ...ONECENT } as const;
 export type ComponentName = keyof typeof REGISTRY;

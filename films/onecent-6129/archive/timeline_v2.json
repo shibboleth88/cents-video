@@ -1,0 +1,440 @@
+{
+ "essay": {
+  "title": "Cent #6129",
+  "subtitle": "Inscription #65998562",
+  "author": "shibboleth",
+  "source": "/mnt/project-files/single-cent-series/6129/6129_proposal_v0.4.md",
+  "version": "v2, script v0.4 (2026-10-25)"
+ },
+ "_what": "Cent #6129. Concepts C24 (primary) and C26 (value tie). Every count from the Sep 2026 trait export.",
+ "shots": [
+  {
+   "shot_id": "s01_look",
+   "start": {
+    "at_start": true
+   },
+   "end": {
+    "at_phrase": "Compare Cent number twenty-five"
+   },
+   "purpose": "#6129 whole at frame 0, name largest, inscription number under it. 1979 appears as it is spoken; zoom to the worn face (Faceless).",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65998562,
+    "n": 6129,
+    "front": "hires/6129.webp",
+    "moves": [
+     {
+      "at_phrase": "Look for him",
+      "box": [
+       0.314,
+       0.19,
+       0.667,
+       0.667
+      ],
+      "mark": true
+     }
+    ],
+    "reads": [
+     {
+      "at_phrase": "struck in nineteen seventy-nine",
+      "readout": "1979",
+      "caption": "Year struck"
+     },
+     {
+      "at_phrase": "The features have worn",
+      "readout": "1979",
+      "caption": "The portrait worn away"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s02_compare",
+   "start": {
+    "at_phrase": "Compare Cent number twenty-five"
+   },
+   "end": {
+    "at_phrase": "The Trait Council calls"
+   },
+   "purpose": "Template comparison: #25, a 1982 whose only trait is Lustrous (inscription 65972732), beside #6129.",
+   "visual_kind": "code",
+   "component": "CentCompare",
+   "props": {
+    "inscription": 65998562,
+    "n": 6129,
+    "front": "hires/6129.webp",
+    "label": "#6129 · 1979",
+    "trait": "Faceless",
+    "other": {
+     "n": 25,
+     "front": "hires/25.webp",
+     "label": "#25 · 1982",
+     "trait": "Lustrous",
+     "at_phrase": "number twenty-five from"
+    }
+   }
+  },
+  {
+   "shot_id": "s03_faceless",
+   "start": {
+    "at_phrase": "The Trait Council calls"
+   },
+   "end": {
+    "at_phrase": "Where Liberty was struck"
+   },
+   "purpose": "All 85 Faceless Cents (cents_by_trait.json index.faceless), #6129 ringed.",
+   "visual_kind": "code",
+   "component": "CentField",
+   "props": {
+    "title": "Faceless",
+    "ns": [
+     70,
+     116,
+     328,
+     592,
+     712,
+     994,
+     1138,
+     1268,
+     1767,
+     1780,
+     1808,
+     1864,
+     1905,
+     1935,
+     1965,
+     2016,
+     2113,
+     2122,
+     2299,
+     2426,
+     2516,
+     2658,
+     2989,
+     3109,
+     3163,
+     3257,
+     3260,
+     3334,
+     3392,
+     3602,
+     3794,
+     3981,
+     4167,
+     4344,
+     4413,
+     4604,
+     5056,
+     5127,
+     5320,
+     5346,
+     5435,
+     5521,
+     5532,
+     5575,
+     6107,
+     6129,
+     6415,
+     6523,
+     6542,
+     6544,
+     6991,
+     7033,
+     7195,
+     7259,
+     7307,
+     7406,
+     7452,
+     7717,
+     7734,
+     7905,
+     7906,
+     7986,
+     8027,
+     8232,
+     8292,
+     8353,
+     8427,
+     8576,
+     8584,
+     8641,
+     8731,
+     9168,
+     9344,
+     9378,
+     9466,
+     9514,
+     9524,
+     9526,
+     9597,
+     9692,
+     9714,
+     9769,
+     9791,
+     9908,
+     9991
+    ],
+    "mark": 6129,
+    "readout": "85",
+    "caption": "of 10,000 Cents"
+   }
+  },
+  {
+   "shot_id": "s04_surface",
+   "start": {
+    "at_phrase": "Where Liberty was struck"
+   },
+   "end": {
+    "at_phrase": "The mark as index"
+   },
+   "purpose": "Trait-area zooms. Adhesive box confirmed by the user (17:09Z). Gold, obsidian and verdigris boxes are Claude's reading of the photographs, to be confirmed.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65998562,
+    "n": 6129,
+    "front": "hires/6129.webp",
+    "back": "hires/6129_back.webp",
+    "flip_at": "On the back it has",
+    "moves": [
+     {
+      "at_phrase": "Where Liberty was struck",
+      "box": [
+       0.105,
+       0.305,
+       0.4,
+       0.629
+      ],
+      "mark": true
+     },
+     {
+      "at_phrase": "copper has warmed to gold",
+      "box": [
+       0.38,
+       0.36,
+       0.64,
+       0.62
+      ],
+      "mark": true
+     },
+     {
+      "at_phrase": "On the back it has",
+      "box": null
+     },
+     {
+      "at_phrase": "darkened to obsidian",
+      "box": [
+       0.3,
+       0.2,
+       0.62,
+       0.4
+      ],
+      "mark": true
+     },
+     {
+      "at_phrase": "bloomed with verdigris",
+      "box": [
+       0.66,
+       0.16,
+       0.88,
+       0.42
+      ],
+      "mark": true
+     }
+    ],
+    "reads": [
+     {
+      "at_phrase": "letters Obscure Adhesive",
+      "caption": "Obscure Adhesive"
+     },
+     {
+      "at_phrase": "copper has warmed to gold",
+      "caption": "Notable Gold"
+     },
+     {
+      "at_phrase": "darkened to obsidian",
+      "caption": "Significant Obsidian"
+     },
+     {
+      "at_phrase": "bloomed with verdigris",
+      "caption": "Notable Verdigris"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s05_index",
+   "start": {
+    "at_phrase": "The mark as index"
+   },
+   "end": {
+    "at_phrase": "Only seven Cents"
+   },
+   "purpose": "Concept C24 named on screen; Reiss quote attributed in the voiceover and on the card. check_quotes.py: FOUND.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65998562,
+    "n": 6129,
+    "front": "hires/6129.webp",
+    "moves": [
+     {
+      "at_phrase": "The mark as index",
+      "box": [
+       0.314,
+       0.19,
+       0.667,
+       0.667
+      ]
+     }
+    ],
+    "concept": {
+     "at_phrase": "The mark as index",
+     "label": "The mark as index"
+    },
+    "quote": {
+     "at_phrase": "The official icon",
+     "text": "The official icon (Lincoln’s head) fades; what matters are the unplanned indices. The penny shifts from being an image to being a time-stamp. Its patina says: I have been around.",
+     "credit": "Steven Reiss, Materiality and Signification"
+    }
+   }
+  },
+  {
+   "shot_id": "s06_seven",
+   "start": {
+    "at_phrase": "Only seven Cents"
+   },
+   "end": {
+    "at_phrase": "A coin collector would"
+   },
+   "purpose": "Every Cent both Faceless and gold (notable or full) in the Sep 2026 export.",
+   "visual_kind": "code",
+   "component": "CentRow",
+   "props": {
+    "title": "Faceless and gold",
+    "readout": "7",
+    "caption": "of 10,000 Cents",
+    "labelsUnder": true,
+    "cols": 3,
+    "cents": [
+     {
+      "n": 1864,
+      "caption": "#1864"
+     },
+     {
+      "n": 2016,
+      "caption": "#2016"
+     },
+     {
+      "n": 3109,
+      "caption": "#3109"
+     },
+     {
+      "n": 3260,
+      "caption": "#3260"
+     },
+     {
+      "n": 4413,
+      "caption": "#4413"
+     },
+     {
+      "n": 6129,
+      "caption": "#6129"
+     },
+     {
+      "n": 9344,
+      "caption": "#9344"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s07_turn",
+   "start": {
+    "at_phrase": "A coin collector would"
+   },
+   "end": {
+    "after_phrase": "more value we give it"
+   },
+   "purpose": "Value tie, concept C26: the coin turns over as it is named; Rees quote attributed in the voiceover and on the card. check_quotes.py: FOUND.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65998562,
+    "n": 6129,
+    "front": "hires/6129.webp",
+    "back": "hires/6129_back.webp",
+    "flip_at": "In CENTS it runs",
+    "concept": {
+     "at_phrase": "In CENTS it runs",
+     "label": "Coin collecting, turned over"
+    },
+    "quote": {
+     "at_phrase": "The more imperfect",
+     "text": "The more imperfect the coin, the more history you can see, the more value we give it.",
+     "credit": "David Rees, collector, in MAKES CENTS (2024)"
+    }
+   }
+  },
+  {
+   "shot_id": "s08_recap",
+   "start": {
+    "after_phrase": "more value we give it"
+   },
+   "end": {
+    "after_phrase": "gold obsidian and verdigris"
+   },
+   "purpose": "Recap of this Cent, its traits named as they are spoken.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65998562,
+    "n": 6129,
+    "front": "hires/6129.webp",
+    "reads": [
+     {
+      "at_phrase": "a nineteen seventy-nine penny",
+      "readout": "1979"
+     },
+     {
+      "at_phrase": "penny Faceless with",
+      "readout": "1979",
+      "caption": "Faceless"
+     },
+     {
+      "at_phrase": "with Obscure Adhesive gold",
+      "readout": "1979",
+      "caption": "Faceless · Obscure Adhesive"
+     },
+     {
+      "at_phrase": "Adhesive gold obsidian",
+      "readout": "1979",
+      "caption": "Gold · Obsidian · Verdigris"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s09_credits",
+   "start": {
+    "after_phrase": "gold obsidian and verdigris"
+   },
+   "end": {
+    "at_end": true
+   },
+   "purpose": "End credits.",
+   "visual_kind": "code",
+   "component": "Credits",
+   "props": {
+    "lines": [
+     "Images: cents.vision (Martin Lehnen)",
+     "Trait names: the CENTS Trait Council",
+     "Quote: Steven Reiss, “Materiality and Signification: Rutherford Chang’s CENTS and Semiotics”",
+     "Quote: David Rees, in shibboleth, “MAKES CENTS” collector interviews (Medium, 17 Oct 2024)"
+    ],
+    "url": "cents.gallery"
+   }
+  }
+ ]
+}

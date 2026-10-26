@@ -153,6 +153,10 @@ def audit(cues: list[dict], boundaries: list[float] = ()) -> list[str]:
         if b["start"] < a["end"] - 1e-6: bad.append(f"cues overlap at {b['start']:.2f}s")
     return bad
 
+# Real tokens that look like a merge: a domain's dot has no space after it. An
+# exact list, not a pattern, so a genuine seam like 'cents.Rutherford' is still caught.
+DOMAINS = {"cents.vision", "cents.gallery", "rutherfordchang.com"}
+
 MERGE_RE = __import__("re").compile(
     r"(^[.,;:!?])"          # leading punctuation glued to a word
     r"|([.,;:][A-Za-z])"    # punctuation with no space after it, inside a token
@@ -170,6 +174,7 @@ def audit_transcript(words: list[Word]) -> list[str]:
     bad = []
     for w in words:
         t = w["word"]
+        if t.rstrip(",;:.!?") in DOMAINS: continue
         if MERGE_RE.search(t): bad.append(f"malformed token {t!r} at {w['start']:.2f}s")
         elif len(t) > 20: bad.append(f"suspiciously long token {t!r} at {w['start']:.2f}s")
     return bad

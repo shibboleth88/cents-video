@@ -1,0 +1,245 @@
+{
+ "essay": {
+  "title": "One Cent",
+  "subtitle": "#6129",
+  "author": "shibboleth",
+  "source": "/mnt/project-files/single-cent-series/6129/6129_proposal_v0.3.md",
+  "version": "v1, script v0.3 (2026-10-25)"
+ },
+ "_what": "One Cent #6129. Concepts C24 (primary) and C26 (value tie). Every count from the Sep 2026 trait export.",
+ "shots": [
+  {
+   "shot_id": "s01_look",
+   "start": {
+    "at_start": true
+   },
+   "end": {
+    "at_phrase": "The mark as index"
+   },
+   "purpose": "#6129 whole at frame 0 (1050px cents.vision front). Zoom to the worn face (Faceless), then to the glossy residue over LIBERTY (Obscure Adhesive, confirmed by the user 17:09Z), then back to the whole coin for the patinas. Boxes measured on 6129_zoom_plan.jpg.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "title": "One Cent",
+    "n": 6129,
+    "front": "hires/6129.webp",
+    "moves": [
+     {
+      "at_phrase": "Look for him",
+      "box": [
+       0.314,
+       0.19,
+       0.667,
+       0.667
+      ],
+      "mark": true
+     },
+     {
+      "at_phrase": "Where Liberty was struck",
+      "box": [
+       0.105,
+       0.305,
+       0.4,
+       0.629
+      ],
+      "mark": true
+     },
+     {
+      "at_phrase": "Around it obsidian",
+      "box": null
+     }
+    ],
+    "reads": [
+     {
+      "readout": "1979",
+      "caption": "Lincoln cent"
+     },
+     {
+      "at_phrase": "The Trait Council calls",
+      "readout": "85",
+      "caption": "Faceless, of 10,000 Cents"
+     },
+     {
+      "at_phrase": "letters Obscure Adhesive",
+      "caption": "Obscure Adhesive"
+     },
+     {
+      "at_phrase": "Around it obsidian",
+      "caption": "Obsidian · Verdigris · Gold"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s02_index",
+   "start": {
+    "at_phrase": "The mark as index"
+   },
+   "end": {
+    "at_phrase": "Only seven Cents"
+   },
+   "purpose": "Concept C24 named on screen, then the Reiss quote over the dimmed face. Card text checked with check_quotes.py: FOUND in reiss__materiality-and-signification.md.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "title": "One Cent",
+    "n": 6129,
+    "front": "hires/6129.webp",
+    "moves": [
+     {
+      "at_phrase": "The mark as index",
+      "box": [
+       0.314,
+       0.19,
+       0.667,
+       0.667
+      ]
+     }
+    ],
+    "concept": {
+     "at_phrase": "The mark as index",
+     "label": "The mark as index"
+    },
+    "quote": {
+     "at_phrase": "The official icon",
+     "text": "The official icon (Lincoln’s head) fades; what matters are the unplanned indices. The penny shifts from being an image to being a time-stamp. Its patina says: I have been around.",
+     "credit": "Steven Reiss, Materiality and Signification"
+    }
+   }
+  },
+  {
+   "shot_id": "s03_seven",
+   "start": {
+    "at_phrase": "Only seven Cents"
+   },
+   "end": {
+    "at_phrase": "A coin collector would"
+   },
+   "purpose": "Every Cent that is both Faceless and gold (notable or full) in the Sep 2026 trait export: 1864, 2016, 3109, 3260, 4413, 6129, 9344.",
+   "visual_kind": "code",
+   "component": "CentRow",
+   "props": {
+    "title": "Faceless and gold",
+    "readout": "7",
+    "caption": "of 10,000 Cents",
+    "labelsUnder": true,
+    "cents": [
+     {
+      "n": 1864,
+      "caption": "#1864"
+     },
+     {
+      "n": 2016,
+      "caption": "#2016"
+     },
+     {
+      "n": 3109,
+      "caption": "#3109"
+     },
+     {
+      "n": 3260,
+      "caption": "#3260"
+     },
+     {
+      "n": 4413,
+      "caption": "#4413"
+     },
+     {
+      "n": 6129,
+      "caption": "#6129"
+     },
+     {
+      "n": 9344,
+      "caption": "#9344"
+     }
+    ],
+    "cols": 3
+   }
+  },
+  {
+   "shot_id": "s04_turn",
+   "start": {
+    "at_phrase": "A coin collector would"
+   },
+   "end": {
+    "at_phrase": "One cent by law"
+   },
+   "purpose": "Value tie, concept C26. The coin turns over (flat 2D flip) as the concept is named; the Rees quote over the back. Card text checked with check_quotes.py: FOUND in shibboleth__makes-cents.md.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "title": "One Cent",
+    "n": 6129,
+    "front": "hires/6129.webp",
+    "back": "hires/6129_back.webp",
+    "flip_at": "In CENTS it runs",
+    "concept": {
+     "at_phrase": "In CENTS it runs",
+     "label": "Coin collecting, turned over"
+    },
+    "quote": {
+     "at_phrase": "The more imperfect",
+     "text": "The more imperfect the coin, the more history you can see, the more value we give it.",
+     "credit": "David Rees, collector, in MAKES CENTS (2024)"
+    }
+   }
+  },
+  {
+   "shot_id": "s05_face_value",
+   "start": {
+    "at_phrase": "One cent by law"
+   },
+   "end": {
+    "after_phrase": "still being decided"
+   },
+   "purpose": "ONE CENT on the reverse, under the patina. Open close: value still being decided.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "title": "One Cent",
+    "n": 6129,
+    "front": "hires/6129_back.webp",
+    "moves": [
+     {
+      "at_phrase": "One cent by law",
+      "box": [
+       0.19,
+       0.657,
+       0.819,
+       0.838
+      ],
+      "mark": true
+     }
+    ],
+    "reads": [
+     {
+      "at_phrase": "One cent by law",
+      "readout": "1¢",
+      "caption": "Face value"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s06_credits",
+   "start": {
+    "after_phrase": "still being decided"
+   },
+   "end": {
+    "at_end": true
+   },
+   "purpose": "End credits, as the series brief sets them.",
+   "visual_kind": "code",
+   "component": "Credits",
+   "props": {
+    "lines": [
+     "Images: cents.vision (Martin Lehnen)",
+     "Trait names: the CENTS Trait Council",
+     "Quote: Steven Reiss, “Materiality and Signification: Rutherford Chang’s CENTS and Semiotics”",
+     "Quote: David Rees, in shibboleth, “MAKES CENTS” collector interviews (Medium, 17 Oct 2024)"
+    ],
+    "url": "cents.gallery"
+   }
+  }
+ ]
+}
