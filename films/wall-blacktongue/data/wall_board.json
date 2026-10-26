@@ -1,0 +1,166 @@
+{
+ "_source": "claimed_walls.json + raw/merged-new2.json via pipeline/wall_board.py; as of 2026-10-24",
+ "as_of": "2026-10-24",
+ "name": "blacktongue",
+ "signature": 5185,
+ "count": 24,
+ "mosaic": [
+  5185,
+  7906,
+  1935,
+  8185,
+  9684,
+  9991,
+  6054,
+  7449,
+  1055,
+  5755,
+  7395,
+  189
+ ],
+ "cents": [
+  189,
+  555,
+  1055,
+  1757,
+  1935,
+  2489,
+  3217,
+  3231,
+  3317,
+  4674,
+  5185,
+  5755,
+  6054,
+  7395,
+  7449,
+  7863,
+  7906,
+  8059,
+  8185,
+  8626,
+  9064,
+  9684,
+  9840,
+  9991
+ ],
+ "years": {
+  "189": 1960,
+  "555": 1962,
+  "1055": 1968,
+  "1757": 1975,
+  "1935": 1975,
+  "2489": 1968,
+  "3217": 1970,
+  "3231": 1968,
+  "3317": 1968,
+  "4674": 1964,
+  "5185": 1968,
+  "5755": 1964,
+  "6054": 1974,
+  "7395": 1968,
+  "7449": 1964,
+  "7863": 1958,
+  "7906": 1972,
+  "8059": 1975,
+  "8185": 1964,
+  "8626": 1938,
+  "9064": 1975,
+  "9684": 1980,
+  "9840": 1967,
+  "9991": 1967
+ },
+ "badges": {
+  "tags": [
+   "Full x 6",
+   "Contaminated Alien Secretion x 1",
+   "Contaminated Special Oddities x 1",
+   "Ghost x 2",
+   "Vandalized x 1"
+  ],
+  "sets": [
+   "Full Spectrum",
+   "Contamination Set (4/12)"
+  ],
+  "fulls": [
+   "Full Verdigris x 1",
+   "Full Obsidian x 1",
+   "Full Red x 2",
+   "Full Desert x 1",
+   "Full Gold x 1"
+  ],
+  "meta": [
+   "Diamond Hands",
+   "Dime Club",
+   "Years 1938-1980",
+   "Patina 39",
+   "Wheat 2"
+  ]
+ },
+ "groups": {
+  "wheat": [
+   7863,
+   8626
+  ],
+  "y1971": [],
+  "y1969": [],
+  "one_of_one_year": [],
+  "one_of_one_mint": [],
+  "trait_combo": [],
+  "mint_keeper": [],
+  "full_mint": [
+   189,
+   1757,
+   1935,
+   3217,
+   3231,
+   3317,
+   6054,
+   8185
+  ],
+  "full_verdigris": [
+   6054
+  ],
+  "full_obsidian": [
+   555
+  ],
+  "full_red": [
+   189,
+   8185
+  ],
+  "full_desert": [
+   5185
+  ],
+  "full_gold": [
+   3231
+  ],
+  "full_any": [
+   189,
+   555,
+   3231,
+   5185,
+   6054,
+   8185
+  ],
+  "contamination": {
+   "Alien Secretion": [
+    5755
+   ],
+   "Obscure Adhesive": [
+    6054
+   ],
+   "Special Oddities": [
+    8185
+   ],
+   "Dark Grime": [
+    9840
+   ]
+  },
+  "contamination_one_each": [
+   5755,
+   9840,
+   6054,
+   8185
+  ]
+ }
+}

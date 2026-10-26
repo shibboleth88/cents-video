@@ -1,0 +1,651 @@
+{
+ "essay": {
+  "title": "Collector Wall",
+  "subtitle": "blacktongue",
+  "author": "shibboleth",
+  "source": "https://cents.vision/collectors.html",
+  "version": "pilot v4, script draft 5 (2026-10-25)"
+ },
+ "_what": "Collector Wall episode 1. Every coin is a real Cent by number; every figure comes from data/wall.json (cents.vision, 24 Oct 2026). No wallet address appears.",
+ "shots": [
+  {
+   "shot_id": "w00_wall",
+   "start": {
+    "at_start": true
+   },
+   "end": {
+    "at_phrase": "number fifty-one eighty-five"
+   },
+   "purpose": "The Wall as cents.vision shows it; after the first sentence, zoom onto its signature Cent.",
+   "visual_kind": "screenshot",
+   "component": "WallShot",
+   "props": {
+    "src": "vision/wall-blacktongue_card.png",
+    "width": 1080,
+    "height": 1340,
+    "moves": [
+     {
+      "at_phrase": "Its signature Cent",
+      "box": [
+       40,
+       85,
+       230,
+       345
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "w01_card",
+   "start": {
+    "at_phrase": "number fifty-one eighty-five"
+   },
+   "end": {
+    "at_phrase": "The Wall holds twenty-four"
+   },
+   "purpose": "Name the Wall and show its signature Cent, as the card does.",
+   "visual_kind": "code",
+   "component": "WallCard",
+   "props": {
+    "title": "blacktongue",
+    "signature": 5185,
+    "caption": "Signature Cent #5185 \u00b7 1968"
+   }
+  },
+  {
+   "shot_id": "w02_grid",
+   "start": {
+    "at_phrase": "The Wall holds twenty-four"
+   },
+   "end": {
+    "at_phrase": "from nineteen thirty-eight to"
+   },
+   "purpose": "Every Cent on the Wall, with the count and the badges the card shows.",
+   "visual_kind": "code",
+   "component": "WallGrid",
+   "props": {
+    "title": "blacktongue",
+    "cents": [
+     8626,
+     7863,
+     189,
+     555,
+     4674,
+     5755,
+     7449,
+     8185,
+     9840,
+     9991,
+     1055,
+     2489,
+     3231,
+     3317,
+     5185,
+     7395,
+     3217,
+     7906,
+     6054,
+     1757,
+     1935,
+     8059,
+     9064,
+     9684
+    ],
+    "readout": "24",
+    "readout_at": "holds twenty-four Cents",
+    "badges": [
+     {
+      "text": "Dime Club"
+     },
+     {
+      "text": "Diamond Hands"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "w03_years",
+   "start": {
+    "at_phrase": "from nineteen thirty-eight to"
+   },
+   "end": {
+    "at_phrase": "which puts it in the Dime"
+   },
+   "purpose": "The same Cents by year: the span 1938 to 1980 and the years held.",
+   "visual_kind": "code",
+   "component": "WallYears",
+   "props": {
+    "title": "blacktongue",
+    "cents": [
+     {
+      "n": 189,
+      "year": 1960
+     },
+     {
+      "n": 555,
+      "year": 1962
+     },
+     {
+      "n": 1055,
+      "year": 1968
+     },
+     {
+      "n": 1757,
+      "year": 1975
+     },
+     {
+      "n": 1935,
+      "year": 1975
+     },
+     {
+      "n": 2489,
+      "year": 1968
+     },
+     {
+      "n": 3217,
+      "year": 1970
+     },
+     {
+      "n": 3231,
+      "year": 1968
+     },
+     {
+      "n": 3317,
+      "year": 1968
+     },
+     {
+      "n": 4674,
+      "year": 1964
+     },
+     {
+      "n": 5185,
+      "year": 1968
+     },
+     {
+      "n": 5755,
+      "year": 1964
+     },
+     {
+      "n": 6054,
+      "year": 1974
+     },
+     {
+      "n": 7395,
+      "year": 1968
+     },
+     {
+      "n": 7449,
+      "year": 1964
+     },
+     {
+      "n": 7863,
+      "year": 1958
+     },
+     {
+      "n": 7906,
+      "year": 1972
+     },
+     {
+      "n": 8059,
+      "year": 1975
+     },
+     {
+      "n": 8185,
+      "year": 1964
+     },
+     {
+      "n": 8626,
+      "year": 1938
+     },
+     {
+      "n": 9064,
+      "year": 1975
+     },
+     {
+      "n": 9684,
+      "year": 1980
+     },
+     {
+      "n": 9840,
+      "year": 1967
+     },
+     {
+      "n": 9991,
+      "year": 1967
+     }
+    ],
+    "caption": "Years 1938\u20131980"
+   }
+  },
+  {
+   "shot_id": "w03b_dime",
+   "start": {
+    "at_phrase": "which puts it in the Dime"
+   },
+   "end": {
+    "at_phrase": "Among them is one"
+   },
+   "purpose": "Zoom onto the Dime Club badge.",
+   "visual_kind": "screenshot",
+   "component": "WallShot",
+   "props": {
+    "src": "vision/wall-blacktongue_card.png",
+    "width": 1080,
+    "height": 1340,
+    "moves": [
+     {
+      "at_phrase": "which puts it in the Dime",
+      "box": [
+       465,
+       1070,
+       605,
+       1118
+      ],
+      "mark": true
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "w04_1938",
+   "start": {
+    "at_phrase": "Among them is one"
+   },
+   "end": {
+    "at_phrase": "It is one of two wheat"
+   },
+   "purpose": "Standout: one of the two 1938 Cents; zoom onto the date it bears.",
+   "visual_kind": "code",
+   "component": "WallStandout",
+   "props": {
+    "title": "blacktongue",
+    "n": 8626,
+    "readout": "1 of 2",
+    "caption": "Cents from 1938",
+    "src": "hires/8626.webp",
+    "zoom": {
+     "at_phrase": "two Cents from nineteen",
+     "box": [
+      0.635,
+      0.6,
+      0.85,
+      0.7
+     ],
+     "mark": true
+    }
+   }
+  },
+  {
+   "shot_id": "w04b_wheat",
+   "start": {
+    "at_phrase": "It is one of two wheat"
+   },
+   "end": {
+    "at_phrase": "with a Cent from nineteen"
+   },
+   "purpose": "Zoom onto the Wheat 2 badge.",
+   "visual_kind": "screenshot",
+   "component": "WallShot",
+   "props": {
+    "src": "vision/wall-blacktongue_card.png",
+    "width": 1080,
+    "height": 1340,
+    "moves": [
+     {
+      "at_phrase": "It is one of two wheat",
+      "box": [
+       242,
+       1120,
+       358,
+       1162
+      ],
+      "mark": true
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "w04c_wheat_cents",
+   "start": {
+    "at_phrase": "with a Cent from nineteen"
+   },
+   "end": {
+    "at_phrase": "The Wall also holds one"
+   },
+   "purpose": "The two wheat pennies on the Wall (minted 1958 or earlier).",
+   "visual_kind": "code",
+   "component": "WallList",
+   "props": {
+    "title": "blacktongue",
+    "subtitle": "Wheat 2",
+    "rows": [
+     {
+      "n": 8626,
+      "label": "1938"
+     },
+     {
+      "n": 7863,
+      "label": "1958",
+      "at_phrase": "nineteen fifty-eight"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "w05_gold",
+   "start": {
+    "at_phrase": "The Wall also holds one"
+   },
+   "end": {
+    "at_phrase": "That gold, with five"
+   },
+   "purpose": "Standout: one of the nine Full Gold Cents.",
+   "visual_kind": "code",
+   "component": "WallStandout",
+   "props": {
+    "title": "blacktongue",
+    "n": 3231,
+    "readout": "1 of 9",
+    "caption": "Cents with a full gold patina"
+   }
+  },
+  {
+   "shot_id": "w05b_badge",
+   "start": {
+    "at_phrase": "That gold, with five"
+   },
+   "end": {
+    "at_phrase": "a full verdigris"
+   },
+   "purpose": "Back to the Wall: zoom onto its Full Spectrum badge as the Set is named.",
+   "visual_kind": "screenshot",
+   "component": "WallShot",
+   "props": {
+    "src": "vision/wall-blacktongue_card.png",
+    "width": 1080,
+    "height": 1340,
+    "moves": [
+     {
+      "box": [
+       230,
+       880,
+       960,
+       1120
+      ]
+     },
+     {
+      "at_phrase": "completes a Full Spectrum",
+      "box": [
+       240,
+       895,
+       495,
+       960
+      ],
+      "mark": true
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "w06_spectrum",
+   "start": {
+    "at_phrase": "a full verdigris"
+   },
+   "end": {
+    "at_phrase": "Only nine Full Spectrum Sets"
+   },
+   "purpose": "The six Cents on this Wall that complete Full Spectrum, each arriving as it is named.",
+   "visual_kind": "code",
+   "component": "CentRow",
+   "props": {
+    "title": "blacktongue",
+    "subtitle": "Full Spectrum Set",
+    "cols": 3,
+    "cents": [
+     {
+      "n": 6054,
+      "patina": "verdigris",
+      "caption": "Full Verdigris \u00b7 #6054",
+      "at_phrase": "a full verdigris"
+     },
+     {
+      "n": 555,
+      "patina": "obsidian",
+      "caption": "Full Obsidian \u00b7 #555",
+      "at_phrase": "a full obsidian"
+     },
+     {
+      "n": 189,
+      "patina": "red",
+      "caption": "Full Red \u00b7 #189",
+      "at_phrase": "a full red, a full"
+     },
+     {
+      "n": 5185,
+      "patina": "desert",
+      "caption": "Full Desert \u00b7 #5185",
+      "at_phrase": "full desert, a full gold"
+     },
+     {
+      "n": 3231,
+      "patina": "gold",
+      "caption": "Full Gold \u00b7 #3231",
+      "at_phrase": "full gold and an"
+     },
+     {
+      "n": 1757,
+      "patina": "orange",
+      "caption": "Orange \u00b7 #1757",
+      "at_phrase": "and an orange"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "w07_ceiling",
+   "start": {
+    "at_phrase": "Only nine Full Spectrum Sets"
+   },
+   "end": {
+    "at_phrase": "As of October twenty"
+   },
+   "purpose": "All nine Full Gold Cents: why at most nine Full Spectrum Sets can exist.",
+   "visual_kind": "code",
+   "component": "PoolWall",
+   "props": {
+    "pool": "gold:full",
+    "readout": "9",
+    "title": "Full Gold Cents",
+    "caption": "at most 9 Full Spectrum Sets",
+    "readout_at": "only nine Full Gold"
+   }
+  },
+  {
+   "shot_id": "w08_holders",
+   "start": {
+    "at_phrase": "As of October twenty"
+   },
+   "end": {
+    "at_phrase": "Across its Cents"
+   },
+   "purpose": "Full Spectrum among collectors on 24 Oct 2026: set-counts.php gives 2 holders, one being the artist wallet, so blacktongue is the only collector.",
+   "visual_kind": "code",
+   "component": "WallList",
+   "props": {
+    "title": "Full Spectrum Set",
+    "subtitle": "held by collectors, October 2026",
+    "readout": "1 collector",
+    "readout_at": "the only collector",
+    "rows": [
+     {
+      "n": 5185,
+      "label": "blacktongue",
+      "at_phrase": "blacktongue is the only"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "w09_contamination",
+   "start": {
+    "at_phrase": "Across its Cents"
+   },
+   "end": {
+    "at_phrase": "which makes a Contamination"
+   },
+   "purpose": "The four contamination types on the Wall, one Cent each.",
+   "visual_kind": "code",
+   "component": "WallList",
+   "props": {
+    "title": "blacktongue",
+    "subtitle": "Contamination Set",
+    "readout": "4 of 12",
+    "readout_at": "four of the twelve",
+    "rows": [
+     {
+      "n": 5755,
+      "label": "Alien Secretion"
+     },
+     {
+      "n": 6054,
+      "label": "Obscure Adhesive"
+     },
+     {
+      "n": 8185,
+      "label": "Special Oddities"
+     },
+     {
+      "n": 9840,
+      "label": "Dark Grime"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "w09b_badge",
+   "start": {
+    "at_phrase": "which makes a Contamination"
+   },
+   "end": {
+    "at_phrase": "Two of its Cents are Ghost"
+   },
+   "purpose": "Zoom onto the Wall's Contamination Set badge (4/12).",
+   "visual_kind": "screenshot",
+   "component": "WallShot",
+   "props": {
+    "src": "vision/wall-blacktongue_card.png",
+    "width": 1080,
+    "height": 1340,
+    "moves": [
+     {
+      "at_phrase": "which makes a Contamination",
+      "box": [
+       490,
+       895,
+       825,
+       960
+      ],
+      "mark": true
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "w11_ghost_vandal",
+   "start": {
+    "at_phrase": "Two of its Cents are Ghost"
+   },
+   "end": {
+    "at_phrase": "And the Wall carries Diamond"
+   },
+   "purpose": "The trait tags Ghost x 2 and Vandalized x 1, by their Cents.",
+   "visual_kind": "code",
+   "component": "WallList",
+   "props": {
+    "title": "blacktongue",
+    "subtitle": "Ghost x 2 \u00b7 Vandalized x 1",
+    "rows": [
+     {
+      "n": 5185,
+      "label": "Ghost"
+     },
+     {
+      "n": 9684,
+      "label": "Ghost"
+     },
+     {
+      "n": 7395,
+      "label": "Vandalized",
+      "at_phrase": "one is Vandalized"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "w12_diamond",
+   "start": {
+    "at_phrase": "And the Wall carries Diamond"
+   },
+   "end": {
+    "at_phrase": "Find all of the Collector"
+   },
+   "purpose": "Zoom onto the Diamond Hands badge.",
+   "visual_kind": "screenshot",
+   "component": "WallShot",
+   "props": {
+    "src": "vision/wall-blacktongue_card.png",
+    "width": 1080,
+    "height": 1340,
+    "moves": [
+     {
+      "at_phrase": "carries Diamond Hands",
+      "box": [
+       250,
+       1070,
+       465,
+       1118
+      ],
+      "mark": true
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "w10_collectors",
+   "start": {
+    "at_phrase": "Find all of the Collector"
+   },
+   "end": {
+    "at_end": true
+   },
+   "purpose": "Where to find every Wall: the cents.vision Traits Lab (user's screenshot), zooming onto Collectors in the menu.",
+   "visual_kind": "screenshot",
+   "component": "WallShot",
+   "props": {
+    "src": "vision/traits_lab.png",
+    "width": 2964,
+    "height": 1654,
+    "moves": [
+     {
+      "at_phrase": "under Collectors",
+      "box": [
+       1185,
+       1575,
+       1358,
+       1635
+      ],
+      "mark": true
+     }
+    ]
+   }
+  }
+ ],
+ "credits": {
+  "lines": [
+   "Data and screenshots: cents.vision, 24 October 2026",
+   "Images: the CENTS inscriptions"
+  ],
+  "url": "cents.vision/collectors.html"
+ }
+}

@@ -1,0 +1,121 @@
+{
+ "_what": "Every narration sentence maps to a span of script/essay.txt, the sources of record for this film.",
+ "essay_version": "film B draft 2, 2026-10-24 (user's lines 2 and 11)",
+ "thesis": "Each Set can be held only as many times at once as its scarcest required Cent allows, so the structures the Council identified narrow from hundreds of possible holders to one, and every transfer can complete one Set and break another.",
+ "script_target": "~60 s; 108 words measures 59 s at 1.84 w/s, but nine spoken numbers will run longer",
+ "epoch_convention": "See essay block [7]. All counts are the September 2026 catalogue, measured 2026-10-24; no holder counts are said.",
+ "claims": [
+  {
+   "say": "Ten thousand Cents.",
+   "kind": "paraphrase",
+   "epoch": "fixed",
+   "as_of": "September 2026 trait export, measured 2026-10-24",
+   "span": "Of the 10,000",
+   "epoch_note": "The whole collection as a field."
+  },
+  {
+   "say": "The number of Sets that can exist at any given time is capped by the scarcest Cent the Set requires.",
+   "kind": "addition",
+   "epoch": "standing, not time-varying",
+   "as_of": "derived, block [5]",
+   "approved": true,
+   "by": "user, thread message 2026-10-24 13:46",
+   "why": "USER'S LINE (2026-10-24 13:46), replacing draft 1's. The film's one idea, derived from block [4] and block [5]."
+  },
+  {
+   "say": "A Patina Set needs a notable desert, and 598 Cents carry one.",
+   "kind": "paraphrase",
+   "epoch": "September 2026 catalogue",
+   "as_of": "September 2026 trait export, measured 2026-10-24",
+   "span": "Notable+ desert 598",
+   "epoch_note": "Desert is the narrowest base patina at Notable+."
+  },
+  {
+   "say": "A Sig Set needs a significant desert: 150.",
+   "kind": "paraphrase",
+   "epoch": "September 2026 catalogue",
+   "as_of": "September 2026 trait export, measured 2026-10-24",
+   "span": "Significant+ desert 150",
+   "epoch_note": ""
+  },
+  {
+   "say": "A Spectrum Set needs a gold: 69.",
+   "kind": "paraphrase",
+   "epoch": "September 2026 catalogue",
+   "as_of": "September 2026 trait export, measured 2026-10-24",
+   "span": "gold is narrower: 69 against 141",
+   "epoch_note": ""
+  },
+  {
+   "say": "A Fulls Set needs a full verdigris: 15.",
+   "kind": "paraphrase",
+   "epoch": "September 2026 catalogue",
+   "as_of": "September 2026 trait export, measured 2026-10-24",
+   "span": "Fulls 15 (full verdigris)",
+   "epoch_note": ""
+  },
+  {
+   "say": "A Full Spectrum Set needs a full gold: 9.",
+   "kind": "paraphrase",
+   "epoch": "September 2026 catalogue",
+   "as_of": "September 2026 trait export, measured 2026-10-24",
+   "span": "Full Spectrum 9 (full gold)",
+   "epoch_note": ""
+  },
+  {
+   "say": "A Full Contamination Set needs scotch tape: 7.",
+   "kind": "paraphrase",
+   "epoch": "September 2026 catalogue",
+   "as_of": "September 2026 trait export, measured 2026-10-24",
+   "span": "Full Contamination 7 (Scotch Tape)",
+   "epoch_note": ""
+  },
+  {
+   "say": "And the 1940s Set needs the only Cent dated 1949: 1.",
+   "kind": "paraphrase",
+   "epoch": "mint year, fixed",
+   "as_of": "September 2026 trait export, measured 2026-10-24",
+   "span": "the 1940s Set requires the one 1949 Cent",
+   "epoch_note": "Mint years don't change, so this cap is permanent."
+  },
+  {
+   "say": "One Cent, and one collector at a time.",
+   "kind": "paraphrase",
+   "epoch": "standing while the requirement holds",
+   "as_of": "September 2026 trait export, measured 2026-10-24",
+   "span": "so each can be held by at most one collector at a time",
+   "epoch_note": ""
+  },
+  {
+   "say": "Every time a Cent changes hands, it can complete one Set and break another.",
+   "kind": "addition",
+   "epoch": "standing, not time-varying",
+   "as_of": "derived from the requirements",
+   "approved": true,
+   "by": "user, thread message 2026-10-24 13:46",
+   "why": "USER'S LINE (2026-10-24 13:46), replacing draft 1's. The close: a continuing condition, not an ending."
+  }
+ ],
+ "onscreen": [],
+ "attributions": [],
+ "distinctions_kept": [
+  {
+   "distinction": "a CAP on how many can hold a Set at once vs how many DO hold it",
+   "where": "every number in lines 3-9 is a catalogue count; no holder count is said",
+   "verdict": "kept",
+   "by": "claude"
+  },
+  {
+   "distinction": "a narrowing by requirement vs a rarity score or a price",
+   "where": "the film counts Cents per requirement and never ranks Cents or names a value",
+   "verdict": "kept",
+   "by": "claude"
+  },
+  {
+   "distinction": "Full Contamination vs a 'Corroded Set' (which does not exist)",
+   "where": "line 8",
+   "verdict": "kept",
+   "by": "claude"
+  }
+ ]
+}
