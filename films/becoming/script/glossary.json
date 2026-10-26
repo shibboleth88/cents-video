@@ -1,0 +1,76 @@
+{
+ "_source": "Copied from the introduction film's glossary 2026-10-24; death-date note corrected.",
+ "forbidden_phrases": [
+  {
+   "pattern": "(?i)\\bthe essay (argues|links|suggests|claims)\\b",
+   "why": "Narration speaks the ideas directly; attribution belongs in the credits."
+  },
+  {
+   "pattern": "(?i)\\bthe author (argues|writes|says)\\b",
+   "why": "Habitual distancing phrase."
+  },
+  {
+   "pattern": "(?i)\\bChang (is|believes|thinks|wants)\\b",
+   "why": "He died on 24 January 2025 (9 February is the obituary date). The house guidance is past tense throughout."
+  },
+  {
+   "pattern": "(?i)\\b(all|every) (collector|holder)s?\\b",
+   "why": "Do not generalise across the collector base; it is not measured."
+  }
+ ],
+ "distinct_terms": [
+  {
+   "terms": [
+    "CENTS",
+    "Cents",
+    "cents"
+   ],
+   "why": "CENTS = the project; Cents = the collection pieces; cents = ordinary money."
+  },
+  {
+   "terms": [
+    "CENTS Block Copper",
+    "CENTS Block 839969"
+   ],
+   "why": "The physical block the coins were smelted into, versus the inscription OF its 3D model."
+  },
+  {
+   "terms": [
+    "satoshi",
+    "inscription",
+    "image",
+    "penny"
+   ],
+   "why": "The unit, its inscription, the image and the physical penny are four things."
+  },
+  {
+   "terms": [
+    "struck",
+    "in existence"
+   ],
+   "why": "Cumulative production since 1909 versus the population surviving now. 500+ billion and 288 billion answer different questions."
+  }
+ ],
+ "must_not_equate": [
+  {
+   "a": "the marks on a cent",
+   "b": "the names of its traits",
+   "why": "Circulation made the marks; the Trait Council named them. Not algorithmic, and not from the artist."
+  },
+  {
+   "a": "the most reproduced artwork",
+   "b": "the reason Chang chose the penny",
+   "why": "A property of the readymade is not a motive. The source gives the origin as a value discrepancy."
+  },
+  {
+   "a": "the end of the penny",
+   "b": "the end of CENTS",
+   "why": "The work's claim is that its value goes on being redefined after the coin stops being made."
+  },
+  {
+   "a": "voided",
+   "b": "destroyed",
+   "why": "A voided Cent is frozen in a shared UTXO, not destroyed (void-cents.json legend)."
+  }
+ ]
+}

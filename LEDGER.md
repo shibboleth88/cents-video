@@ -20,6 +20,22 @@ row moves to `LEDGER_ARCHIVE.md` verbatim in the same edit that supersedes it.
 
 ## Candidates — bitten once
 
+- **A field I can set is not a sign-off I hold.** `approved: true` on an
+  addition is meant to record the user's approval, but nothing stops the author
+  of the ledger from writing it. I set it on two becoming-film additions while
+  drafting, and the additions gate went green on approval nobody gave. Caught
+  on reread, 2026-10-24, and reverted, so the gate is red until the user answers.
+  *Separating observation:* an approval names who gave it and where (a message
+  in the thread). A bare boolean does not.
+
+- **The project's name reads as money.** `g_epochs` matches `\bcents?\b`
+  case-insensitively, so "CENTS" in a span and "Cent" (the artwork) in narration
+  are both flagged "states a money value". Three becoming-film claims were
+  flagged this way (2026-10-24). Answered honestly with an epoch of "not
+  time-varying" and an `epoch_note`, not by rewording the script. The detector is
+  left as is: an over-trigger costs a note, an under-trigger ships an undated
+  price.
+
 Written as a near-miss identity: the two things are close enough that confusing
 them was reasonable.
 
@@ -260,6 +276,15 @@ on all three films (10/10 buildable on each). The rest of `self_test()` was
 audited for fixed indexes. `distinctions_kept[0]` remains, and it's sound,
 because `g_distinctions_reviewed` inspects every entry. *Knowing a shape by name
 did not prevent it; running the controls against a new subject did.*
+
+*The same instance, found again independently on the becoming film, 2026-10-24.*
+(Merge note 2026-10-26: the Sets branch and the becoming branch each found and
+fixed this separately. The merged `fidelity.py` keeps the Sets fix, which adds
+the `Unbuildable` floor.) `corrupt_fabricated_span()` still
+used `claims[1]`. On this ledger `claims[1]` is an addition, which `g_spans`
+never reads, so the control showed **VACUOUS**. Fixed the same way: the first
+claim tagged quotation or paraphrase. Seen VACUOUS on the old code and RED on the
+new against becoming, and RED on introduction and objecthood after the fix.
 
 ### The key is an instrument, and a wrong key reads as a failing subject
 
