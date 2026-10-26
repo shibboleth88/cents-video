@@ -88,9 +88,11 @@ mobile-safe captions, verify links, numbered versions, real imagery as evidence.
   production to recycle one portrait (see "An image of a person" above).
 - **Press coverage shows the publication's official mark**, at its own
   proportions, not a generic icon or a typeset approximation; and the coverage
-  claim must match the article. *Open question for the user:* project memory
-  allows web-sourced images only if public domain or CC0, and a masthead is
-  neither. Ask before the first use.
+  claim must match the article. *Decided by the user, 2026-10-26:* official
+  publication logos may be used for press credits. This is an exception to the
+  rule that web-sourced images must be public domain or CC0. Take the logo
+  from the publication's own site or press kit, use it only to identify the
+  source being cited, and don't alter it.
 - **Label footage by where it was shot.** Footage from one venue must not read
   as another venue. Name the place on screen when the narration is about a
   different one.
