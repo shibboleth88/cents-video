@@ -66,6 +66,9 @@ The user's global practices govern and are not optional here:
   its own, and say the justification in that order.
 - **Corrections stay beside what they correct.** Do not quietly delete a wrong
   claim.
+- **Exported and verified is not approved.** Check the rendered file itself
+  (decode, first and last frame, black and frozen intervals; see the Collector
+  Wall brief §5) and say which checks ran. Only the user approves a version.
 
 ## Secrets
 
