@@ -22,9 +22,11 @@ twice. Breaking them is the most likely way to waste a session.
 - **CENTS has no ending.** Present it as a continual process, becoming, a
   system. Do not close on the artist's death or the penny's discontinuation;
   both are facts that belong early or at a hinge, never last.
-- **Past tense for Chang.** He died 24 January 2025. (Corrected 2026-10-24: this line said 9 February
-  2025, which is the date of the NYT obituary, not of his death.) Never "Chang is/believes/
+- **Past tense for Chang.** He died 24 January 2025. Never "Chang is/believes/
   thinks/wants" — the glossary enforces this.
+  *Correction, 2026-10-24:* this line said "He died 9 February 2025". That is
+  the date of the New York Times obituary, not of his death; confirmed by the
+  user.
 - **Narration speaks ideas directly.** No "the essay argues", "the author
   writes". Attribution belongs in credits.
 - **It is "within emptiness"**, in the black-hole-humour line.
@@ -43,6 +45,10 @@ twice. Breaking them is the most likely way to waste a session.
   model went onto one whole block. Conflating these shipped a misleading shot.
 - `struck` (cumulative since 1909) vs `in existence` (surviving now) answer
   different questions.
+- **"pre-1983" or "pre-zinc", never "pre-1982".** Copper cents were struck
+  through mid-1982, and CENTS holds 867 Cents dated 1982. Source texts that say
+  "pre-1982" are quoted as written; our own narration and titles do not repeat
+  it. (The shipped objecthood film says "pre-1982 coppers"; noted, not re-cut.)
 
 ## Working discipline
 
@@ -78,10 +84,26 @@ python3 harness/build_corpus.py              # rebuild the review corpus
 python3 harness/score.py <run>               # score stored reviewer verdicts
 ```
 
+## Material and where it lives
+
+- **Every Cent, 300 px:** the public repo `shibboleth88/sovrn-onchain`,
+  `cents/<n>.webp` for n = 1–10000, with `cents/index.json` (inscription id,
+  year, mint mark). Clone it; GitHub Pages throttles bulk fetches.
+- **800 px heads and tails:** `~/Pictures/cents shortlist/cents-instagram-poster/images/`
+  on the user's Mac (missing #1–1187). The 3000 px originals are only on a
+  failing Lexar drive.
+- **Footage, photos, diagrams:** `~/Pictures/cents shortlist/` and its
+  `for videos/` folder (copper pour, BLOCK loop, Chang's desk, UCCA stills,
+  set diagrams, `CENTS_asset_catalog.html`).
+- **Rights:** cents.gallery and its media library are the user's own and
+  cleared; Martin Lehnen cleared everything on cents.vision.
+- **Lessons from the GPT productions:** [docs/gpt-handover.md](docs/gpt-handover.md).
+
 ## Index
 
 [HANDOFF.md](HANDOFF.md) current state · [LEDGER.md](LEDGER.md) failure shapes
 and the current episode · [LEDGER_ARCHIVE.md](LEDGER_ARCHIVE.md) superseded
 episodes, verbatim · [README.md](README.md) pipeline and art direction ·
 [harness/RESULTS.md](harness/RESULTS.md) reviewer scores ·
-[docs/archive/](docs/archive/) the v1 handoff
+[docs/archive/](docs/archive/) the v1 handoff ·
+[docs/gpt-handover.md](docs/gpt-handover.md) lessons from the GPT productions

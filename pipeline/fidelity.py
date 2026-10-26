@@ -234,11 +234,14 @@ def self_test() -> int:
         v = vo + "\nThe work is ultimately about the fragility of all value.\n"
         return lambda: g_coverage(v, cl)
     def corrupt_fabricated_span():
-        # Target the first claim g_spans actually INSPECTS. claims[1] was fixed
-        # here and, on a ledger whose second claim is an addition, the control
-        # corrupted a field the gate never reads and reported VACUOUS.
+        # Target the first claim g_spans actually INSPECTS. claims[1] was a
+        # paraphrase on the first two films and an addition on the Sets film,
+        # so the fixed index planted the fake span where the gate never looks
+        # and the control passed: VACUOUS on 2026-10-24.
         c = json.loads(json.dumps(cl))
-        i = next(i for i, x in enumerate(c["claims"]) if x["kind"] in ("quotation", "paraphrase"))
+        i = next((j for j, x in enumerate(c["claims"]) if x["kind"] in ("quotation", "paraphrase")), None)
+        if i is None:
+            raise Unbuildable("no quotation or paraphrase claim to give a fabricated span")
         c["claims"][i]["span"] = "Chang has described the project as a meditation on entropy."
         return lambda: g_spans(essay, c)
     def corrupt_misquote():

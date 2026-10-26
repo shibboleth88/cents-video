@@ -1,0 +1,105 @@
+{
+ "_source": "Adapted for the Sets film (A) from the introduction film's glossary, plus the Set wording rules the user enforced (knowledge brief §4, cents-bot glossary).",
+ "forbidden_phrases": [
+  {
+   "pattern": "(?i)\\bthe essay (argues|links|suggests|claims)\\b",
+   "why": "Narration speaks the ideas directly; attribution belongs in the credits."
+  },
+  {
+   "pattern": "(?i)\\bthe author (argues|writes|says)\\b",
+   "why": "Habitual distancing phrase."
+  },
+  {
+   "pattern": "(?i)\\bChang (is|believes|thinks|wants)\\b",
+   "why": "He died in February 2025. The house guidance is past tense throughout."
+  },
+  {
+   "pattern": "(?i)\\b(all|every) (collector|holder)s?\\b",
+   "why": "Do not generalise across the collector base; it is not measured."
+  },
+  {
+   "pattern": "(?i)\\bcollecting goals?\\b",
+   "why": "Sets are emergent structures identified within the collection, never collecting goals (user rule)."
+  },
+  {
+   "pattern": "(?i)\\bcorroded sets?\\b",
+   "why": "There is no Corroded Set; the user's correction is 'Contaminated sets not Corroded sets'."
+  },
+  {
+   "pattern": "(?i)\\bmint mark set\\b",
+   "why": "It is the Full Mint Set."
+  },
+  {
+   "pattern": "(?i)\\bpre-?1982\\b",
+   "why": "Copper was struck through 1982: say pre-1983 or pre-zinc."
+  },
+  {
+   "pattern": "(?i)\\brarity (score|rank)",
+   "why": "No rarity scores; value is the frame, not scarcity rankings."
+  },
+  {
+   "pattern": "(?i)\\b(still|now|currently|today)\\b",
+   "why": "Deictics resolve to the source's date; holder counts especially must carry their own date (essay block [7])."
+  }
+ ],
+ "distinct_terms": [
+  {
+   "terms": [
+    "CENTS",
+    "Cents",
+    "cents"
+   ],
+   "why": "CENTS = the project; Cents = the collection pieces; cents = ordinary money."
+  },
+  {
+   "terms": [
+    "CENTS Block Copper",
+    "CENTS Block 839969"
+   ],
+   "why": "The physical block the coins were smelted into, versus the inscription OF its 3D model."
+  },
+  {
+   "terms": [
+    "satoshi",
+    "inscription",
+    "image",
+    "penny"
+   ],
+   "why": "The unit, its inscription, the image and the physical penny are four things."
+  },
+  {
+   "terms": [
+    "struck",
+    "in existence"
+   ],
+   "why": "Cumulative production since 1909 versus the population surviving now. 500+ billion and 288 billion answer different questions."
+  }
+ ],
+ "must_not_equate": [
+  {
+   "a": "the marks on a cent",
+   "b": "the names of its traits",
+   "why": "Circulation made the marks; the Trait Council named them. Not algorithmic, and not from the artist."
+  },
+  {
+   "a": "the most reproduced artwork",
+   "b": "the reason Chang chose the penny",
+   "why": "A property of the readymade is not a motive. The source gives the origin as a value discrepancy."
+  },
+  {
+   "a": "the end of the penny",
+   "b": "the end of CENTS",
+   "why": "The work's claim is that its value goes on being redefined after the coin stops being made."
+  },
+  {
+   "a": "the Sets",
+   "b": "collecting goals",
+   "why": "Identified structures, not targets the project set."
+  },
+  {
+   "a": "the Sets",
+   "b": "what Chang intended",
+   "why": "The Council identified the Sets after the work was released; Chang made neither the trait names nor the Sets."
+  }
+ ]
+}

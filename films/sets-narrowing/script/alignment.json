@@ -1,0 +1,548 @@
+{
+ "words": [
+  {
+   "word": "Ten",
+   "start": 0.0,
+   "end": 0.372
+  },
+  {
+   "word": "thousand",
+   "start": 0.488,
+   "end": 1.057
+  },
+  {
+   "word": "Cents.",
+   "start": 1.138,
+   "end": 1.881
+  },
+  {
+   "word": "The",
+   "start": 2.485,
+   "end": 2.612
+  },
+  {
+   "word": "number",
+   "start": 2.694,
+   "end": 2.995
+  },
+  {
+   "word": "of",
+   "start": 3.053,
+   "end": 3.123
+  },
+  {
+   "word": "Sets",
+   "start": 3.193,
+   "end": 3.529
+  },
+  {
+   "word": "that",
+   "start": 3.587,
+   "end": 3.762
+  },
+  {
+   "word": "can",
+   "start": 3.82,
+   "end": 3.959
+  },
+  {
+   "word": "exist",
+   "start": 4.017,
+   "end": 4.481
+  },
+  {
+   "word": "at",
+   "start": 4.551,
+   "end": 4.656
+  },
+  {
+   "word": "any",
+   "start": 4.725,
+   "end": 4.911
+  },
+  {
+   "word": "given",
+   "start": 4.969,
+   "end": 5.248
+  },
+  {
+   "word": "time",
+   "start": 5.306,
+   "end": 5.7
+  },
+  {
+   "word": "is",
+   "start": 5.747,
+   "end": 5.863
+  },
+  {
+   "word": "capped",
+   "start": 5.956,
+   "end": 6.351
+  },
+  {
+   "word": "by",
+   "start": 6.397,
+   "end": 6.525
+  },
+  {
+   "word": "the",
+   "start": 6.594,
+   "end": 6.664
+  },
+  {
+   "word": "scarcest",
+   "start": 6.734,
+   "end": 7.349
+  },
+  {
+   "word": "Cent",
+   "start": 7.407,
+   "end": 7.755
+  },
+  {
+   "word": "the",
+   "start": 7.837,
+   "end": 7.964
+  },
+  {
+   "word": "Set",
+   "start": 8.034,
+   "end": 8.324
+  },
+  {
+   "word": "requires.",
+   "start": 8.417,
+   "end": 9.323
+  },
+  {
+   "word": "A",
+   "start": 10.627,
+   "end": 10.719
+  },
+  {
+   "word": "Patina",
+   "start": 10.812,
+   "end": 11.312
+  },
+  {
+   "word": "Set",
+   "start": 11.393,
+   "end": 11.706
+  },
+  {
+   "word": "needs",
+   "start": 11.788,
+   "end": 12.043
+  },
+  {
+   "word": "a",
+   "start": 12.101,
+   "end": 12.136
+  },
+  {
+   "word": "notable",
+   "start": 12.229,
+   "end": 12.716
+  },
+  {
+   "word": "desert,",
+   "start": 12.786,
+   "end": 13.343
+  },
+  {
+   "word": "and",
+   "start": 13.378,
+   "end": 13.529
+  },
+  {
+   "word": "598",
+   "start": 13.645,
+   "end": 15.038
+  },
+  {
+   "word": "Cents",
+   "start": 15.085,
+   "end": 15.433
+  },
+  {
+   "word": "carry",
+   "start": 15.514,
+   "end": 15.839
+  },
+  {
+   "word": "one.",
+   "start": 15.932,
+   "end": 16.373
+  },
+  {
+   "word": "A",
+   "start": 17.284,
+   "end": 17.366
+  },
+  {
+   "word": "Sig",
+   "start": 17.482,
+   "end": 17.725
+  },
+  {
+   "word": "Set",
+   "start": 17.818,
+   "end": 18.109
+  },
+  {
+   "word": "needs",
+   "start": 18.19,
+   "end": 18.434
+  },
+  {
+   "word": "a",
+   "start": 18.469,
+   "end": 18.504
+  },
+  {
+   "word": "significant",
+   "start": 18.562,
+   "end": 19.258
+  },
+  {
+   "word": "desert:",
+   "start": 19.328,
+   "end": 19.839
+  },
+  {
+   "word": "150.",
+   "start": 19.885,
+   "end": 21.139
+  },
+  {
+   "word": "A",
+   "start": 21.864,
+   "end": 21.946
+  },
+  {
+   "word": "Spectrum",
+   "start": 22.039,
+   "end": 22.619
+  },
+  {
+   "word": "Set",
+   "start": 22.7,
+   "end": 23.002
+  },
+  {
+   "word": "needs",
+   "start": 23.083,
+   "end": 23.362
+  },
+  {
+   "word": "a",
+   "start": 23.42,
+   "end": 23.443
+  },
+  {
+   "word": "gold:",
+   "start": 23.513,
+   "end": 23.861
+  },
+  {
+   "word": "69.",
+   "start": 23.977,
+   "end": 24.964
+  },
+  {
+   "word": "A",
+   "start": 25.689,
+   "end": 25.771
+  },
+  {
+   "word": "Fulls",
+   "start": 25.852,
+   "end": 26.189
+  },
+  {
+   "word": "Set",
+   "start": 26.223,
+   "end": 26.502
+  },
+  {
+   "word": "needs",
+   "start": 26.583,
+   "end": 26.85
+  },
+  {
+   "word": "a",
+   "start": 26.897,
+   "end": 26.92
+  },
+  {
+   "word": "full",
+   "start": 26.99,
+   "end": 27.233
+  },
+  {
+   "word": "verdigris:",
+   "start": 27.303,
+   "end": 28.151
+  },
+  {
+   "word": "15.",
+   "start": 28.267,
+   "end": 29.056
+  },
+  {
+   "word": "A",
+   "start": 29.7,
+   "end": 29.781
+  },
+  {
+   "word": "Full",
+   "start": 29.863,
+   "end": 30.13
+  },
+  {
+   "word": "Spectrum",
+   "start": 30.188,
+   "end": 30.722
+  },
+  {
+   "word": "Set",
+   "start": 30.815,
+   "end": 31.128
+  },
+  {
+   "word": "needs",
+   "start": 31.244,
+   "end": 31.592
+  },
+  {
+   "word": "a",
+   "start": 31.662,
+   "end": 31.697
+  },
+  {
+   "word": "full",
+   "start": 31.767,
+   "end": 32.045
+  },
+  {
+   "word": "gold:",
+   "start": 32.115,
+   "end": 32.643
+  },
+  {
+   "word": "9.",
+   "start": 32.643,
+   "end": 33.171
+  },
+  {
+   "word": "A",
+   "start": 33.955,
+   "end": 34.024
+  },
+  {
+   "word": "Full",
+   "start": 34.094,
+   "end": 34.314
+  },
+  {
+   "word": "Contamination",
+   "start": 34.372,
+   "end": 35.243
+  },
+  {
+   "word": "Set",
+   "start": 35.336,
+   "end": 35.638
+  },
+  {
+   "word": "needs",
+   "start": 35.754,
+   "end": 36.021
+  },
+  {
+   "word": "scotch",
+   "start": 36.056,
+   "end": 36.462
+  },
+  {
+   "word": "tape:",
+   "start": 36.52,
+   "end": 37.095
+  },
+  {
+   "word": "7.",
+   "start": 37.095,
+   "end": 37.67
+  },
+  {
+   "word": "And",
+   "start": 38.621,
+   "end": 38.783
+  },
+  {
+   "word": "the",
+   "start": 38.83,
+   "end": 38.899
+  },
+  {
+   "word": "1940s",
+   "start": 38.946,
+   "end": 39.898
+  },
+  {
+   "word": "Set",
+   "start": 39.944,
+   "end": 40.246
+  },
+  {
+   "word": "needs",
+   "start": 40.339,
+   "end": 40.641
+  },
+  {
+   "word": "the",
+   "start": 40.687,
+   "end": 40.768
+  },
+  {
+   "word": "only",
+   "start": 40.85,
+   "end": 41.094
+  },
+  {
+   "word": "Cent",
+   "start": 41.163,
+   "end": 41.488
+  },
+  {
+   "word": "dated",
+   "start": 41.604,
+   "end": 42.022
+  },
+  {
+   "word": "1949:",
+   "start": 42.104,
+   "end": 43.16
+  },
+  {
+   "word": "1.",
+   "start": 43.16,
+   "end": 44.217
+  },
+  {
+   "word": "One",
+   "start": 45.658,
+   "end": 45.913
+  },
+  {
+   "word": "Cent,",
+   "start": 45.971,
+   "end": 46.412
+  },
+  {
+   "word": "and",
+   "start": 46.447,
+   "end": 46.61
+  },
+  {
+   "word": "one",
+   "start": 46.703,
+   "end": 46.877
+  },
+  {
+   "word": "collector",
+   "start": 46.935,
+   "end": 47.446
+  },
+  {
+   "word": "at",
+   "start": 47.504,
+   "end": 47.585
+  },
+  {
+   "word": "a",
+   "start": 47.631,
+   "end": 47.666
+  },
+  {
+   "word": "time.",
+   "start": 47.736,
+   "end": 48.166
+  },
+  {
+   "word": "Every",
+   "start": 49.349,
+   "end": 49.639
+  },
+  {
+   "word": "time",
+   "start": 49.685,
+   "end": 49.952
+  },
+  {
+   "word": "a",
+   "start": 49.987,
+   "end": 50.022
+  },
+  {
+   "word": "Cent",
+   "start": 50.092,
+   "end": 50.382
+  },
+  {
+   "word": "changes",
+   "start": 50.44,
+   "end": 50.881
+  },
+  {
+   "word": "hands,",
+   "start": 50.951,
+   "end": 51.508
+  },
+  {
+   "word": "it",
+   "start": 51.636,
+   "end": 51.798
+  },
+  {
+   "word": "can",
+   "start": 51.856,
+   "end": 52.054
+  },
+  {
+   "word": "complete",
+   "start": 52.147,
+   "end": 52.588
+  },
+  {
+   "word": "one",
+   "start": 52.657,
+   "end": 52.878
+  },
+  {
+   "word": "Set",
+   "start": 52.948,
+   "end": 53.261
+  },
+  {
+   "word": "and",
+   "start": 53.354,
+   "end": 53.517
+  },
+  {
+   "word": "break",
+   "start": 53.575,
+   "end": 53.807
+  },
+  {
+   "word": "another.",
+   "start": 53.865,
+   "end": 54.48
+  }
+ ],
+ "duration": 58.48,
+ "source_audio": "films/sets-narrowing/audio/vo.wav",
+ "model": "ElevenLabs eleven_multilingual_v2 voice eo (G9J6fFeGgUrIramcuC3q), timings from ElevenLabs",
+ "divergences": []
+}

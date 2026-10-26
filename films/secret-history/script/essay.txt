@@ -1,0 +1,106 @@
+SOURCES OF RECORD — Secret History of a Penny (the mint years in CENTS)
+Assembled 2026-10-24. Every narration claim maps to a span of this file. Each
+block names where it came from and, where a fact moves over time, when it was
+true. Blocks marked EXCERPT-VIA-SUMMARY were read through a summarising fetch,
+not copied verbatim from the page; their wording must be checked against the
+page before any of it is quoted on screen. Nothing in this film quotes them.
+
+================================================================
+[1] CENTS CATALOGUE — measured 2026-10-24 from the Sep 2026 trait export
+    (/mnt/project-files/knowledge/data/cents_traits.csv, 10,000 records)
+================================================================
+10,000 records. 58 distinct years, 1910 to 1982.
+Absent years in that span (15): 1913, 1914, 1915, 1916, 1917, 1918, 1921,
+1922, 1923, 1924, 1925, 1931, 1932, 1933, 1943.
+Only 1943 falls outside chance (knowledge brief: a chance zero there has
+p ~ 2.75e-5; 1910-39 holds only 26 Cents in all).
+Selected year counts: 1942: 2. 1943: 0. 1944: 22. 1963: 149. 1964: 356.
+1965: 90. 1971: 362. 1979: 640. 1980: 888. 1982: 867.
+No Cent is dated later than 1982.
+
+================================================================
+[2] 1943 STEEL CENT — Wikipedia, "1943 steel cent". EXCERPT-VIA-SUMMARY.
+================================================================
+Because of wartime demand for copper, the 1943 cent was struck in zinc-coated
+steel.
+
+================================================================
+[3] BRETTON WOODS — Federal Reserve History, "Creation of the Bretton Woods
+    System". EXCERPT-VIA-SUMMARY.
+================================================================
+In July 1944, delegates of 44 nations met at Bretton Woods. Member currencies
+were pegged to the dollar, and the dollar was fixed to gold at $35 an ounce.
+
+================================================================
+[4] THE 1964 COIN SHORTAGE AND THE COINAGE ACT OF 1965 — Wikipedia, "Coinage
+    Act of 1965", citing the 1964-65 House Committee on Government Operations
+    reports "Coin Shortage" and the 1965 Banking and Currency committee
+    reports. EXCERPT-VIA-SUMMARY. Date freeze also in CoinWeek, "The date
+    freeze, with mintages for 1964- and 1965-dated coins".
+================================================================
+Banks and their business customers were retaining coins, fearing shortages.
+Many of the silver ones were being taken out of circulation by people
+believing the price of that metal would rise. Congress allowed the Mint to
+continue to strike 1964-dated pieces into 1965. The act, enacted July 23,
+1965, eliminated silver from the circulating dime and quarter.
+
+================================================================
+[5] SILVER IN 1964 — USGS Data Series 140, Silver statistics (last modified
+    1 September 2023), unit value column. Arithmetic ours, 2026-10-24.
+================================================================
+1964 unit value: $41,500 per metric ton = about $1.29 per troy ounce.
+A 90% silver dime or quarter holds 0.7234 troy ounces of silver per dollar of
+face value, so in 1964 its silver was worth about 93% of its face value.
+1967 unit value: $49,800 per ton = about $1.55 an ounce, above face value.
+CORRECTION 2026-10-24: script v1 said silver was worth more than the coins
+in 1964. It was not; the narration now says "nearly".
+
+================================================================
+[6] AUGUST 15, 1971 — Wikipedia, "Nixon shock". EXCERPT-VIA-SUMMARY.
+================================================================
+On August 15, 1971, the United States suspended the convertibility of the
+dollar into gold.
+The user's own Chronicle caption for 1971: "the year US currency became fiat".
+
+================================================================
+[7] 1979 — US Bureau of Labor Statistics, Monthly Labor Review at 100, part
+    III. Wikipedia, "Rutherford Chang".
+================================================================
+Consumer prices rose 11.3% in 1979.
+Rutherford Chang was born December 27, 1979, and died January 24, 2025.
+
+================================================================
+[8] 1982 — NGC, "The Transitional Cents of 1982". EXCERPT-VIA-SUMMARY.
+    USGS Data Series 140, Copper statistics (2017 update). Arithmetic ours.
+================================================================
+The double-digit inflation of the late 1970s and early '80s again drove up
+the price of copper, and the cent's composition was changed. Coining of the
+zinc cents commenced on January 7, 1982 at the West Point Mint; brass cent
+production at Denver ended on October 21, 1982. Authority: Public Law 93-441
+(October 11, 1974).
+A 3.11 g cent at 95% copper holds 2.95 g of copper. At the USGS 1982 unit
+value of $1,610 per ton that is about 0.48 cents of copper; at the 1980 high
+of $2,230 per ton, about 0.66 cents.
+CORRECTION 2026-10-24: script v1 said the copper in a cent was worth more
+than a cent in 1982. It was not; the narration now says copper had grown too
+costly for the cent.
+
+================================================================
+[9] THE BLOCK — CENTS project description, sovrn.art/cents/project-description,
+    dated 2024-03-26 (block [1] of films/introduction/script/essay.txt)
+================================================================
+the physical coins are smelted and cast into a solid 68.56-pound copper block
+
+================================================================
+[10] PHILIP TINARI on CENTS — On NFTs, ed. Robert Alice, Taschen (block [2] of
+     films/introduction/script/essay.txt)
+================================================================
+the value of his digital CENTS became permanently indeterminate
+
+================================================================
+[11] EPOCH CONVENTION
+================================================================
+The year lines speak in the historical present: each describes its own year,
+which is its epoch. The film's own present is 2026. A source deictic (now,
+still, currently, today) resolves to the source's date and is converted to an
+absolute date on the way into narration.

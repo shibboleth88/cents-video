@@ -1,0 +1,27 @@
+{
+ "_what": "Voiceover takes for film B, synthesised 2026-10-24 in the user's ElevenLabs cloned voice 'eo' from script/voiceover.txt draft 2, numbers spelled out (tts_prompt.txt). Both takes are kept; build_vo.py builds audio/vo.wav from the chosen one.",
+ "_timings": "Word timings came back from ElevenLabs with each take (speech-to-text node, 0 credits). Its text equals the prompt verbatim, so it is a forced alignment, NOT an independent check of the wording. The timings were checked against ffmpeg silencedetect at -35 dB: every sentence gap falls inside a measured silence.",
+ "chosen": "take1",
+ "takes": {
+  "take1": {"file": "take1.mp3", "words": "take1_words.json", "duration": 49.21,
+            "model": "eleven_multilingual_v2", "voice": "eo", "voice_id": "G9J6fFeGgUrIramcuC3q",
+            "elevenlabs_generation": "tAEejIsYvYVSH7IxSMGN", "credits": 649,
+            "why": "Chosen. Slower and more even (49.2 s); sentence gaps of 0.3-0.8 s give each number room to land."},
+  "take2": {"file": "take2.mp3", "words": "take2_words.json", "duration": 39.73,
+            "model": "eleven_multilingual_v2", "voice": "eo", "voice_id": "G9J6fFeGgUrIramcuC3q",
+            "elevenlabs_generation": "ncqNCuI2pRCT7zBzqSMR", "credits": 649,
+            "why": "Kept. Rushed: lines 5-9 run together with gaps under 0.1 s, too fast for one count per beat."}
+ },
+ "pauses": [
+  {"after_word": "requires.", "before_word": "A", "add": 0.7, "why": "the thesis needs a beat before the first step"},
+  {"after_word": "one.", "before_word": "A", "add": 0.4, "why": "step beat"},
+  {"after_word": "fifty.", "before_word": "A", "add": 0.4, "why": "step beat"},
+  {"after_word": "sixty-nine.", "before_word": "A", "add": 0.4, "why": "step beat"},
+  {"after_word": "fifteen.", "before_word": "A", "add": 0.4, "why": "step beat"},
+  {"after_word": "nine.", "before_word": "A", "add": 0.4, "why": "step beat"},
+  {"after_word": "seven.", "before_word": "And", "add": 0.8, "why": "the turn to the last step"},
+  {"after_word": "one.", "before_word": "One", "add": 1.0, "why": "let the single Cent sit"},
+  {"after_word": "time.", "before_word": "Every", "add": 0.8, "why": "before the closing line"}
+ ],
+ "tail_seconds": 4.0
+}

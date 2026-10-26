@@ -265,7 +265,22 @@ control goes RED on each, against each one's own first pair.
 **The pair:** *a control written for a subject is not a control derived from it.*
 Written twice now, so it is a rule.
 
-*Third instance, 2026-10-24, becoming film.* `corrupt_fabricated_span()` still
+**Third instance, 2026-10-24, on the Sets film (`sets-found`).** The rule above
+was written and still did not stop it, because nobody audited the controls the
+rule didn't name. `corrupt_fabricated_span()` planted its fake span on
+`claims[1]`. That claim was a paraphrase on both earlier films. On the Sets film
+it is an addition ("Circulation made the marks."), and `g_spans` doesn't inspect
+additions, so the control read **VACUOUS**. Fixed the same way: target the first
+quotation or paraphrase, with an `Unbuildable` floor. After the fix it goes RED
+on all three films (10/10 buildable on each). The rest of `self_test()` was
+audited for fixed indexes. `distinctions_kept[0]` remains, and it's sound,
+because `g_distinctions_reviewed` inspects every entry. *Knowing a shape by name
+did not prevent it; running the controls against a new subject did.*
+
+*The same instance, found again independently on the becoming film, 2026-10-24.*
+(Merge note 2026-10-26: the Sets branch and the becoming branch each found and
+fixed this separately. The merged `fidelity.py` keeps the Sets fix, which adds
+the `Unbuildable` floor.) `corrupt_fabricated_span()` still
 used `claims[1]`. On this ledger `claims[1]` is an addition, which `g_spans`
 never reads, so the control showed **VACUOUS**. Fixed the same way: the first
 claim tagged quotation or paraphrase. Seen VACUOUS on the old code and RED on the
