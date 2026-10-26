@@ -1,5 +1,5 @@
 import React from "react";
-import { Img, interpolate, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
+import { Img, interpolate, Loop, OffthreadVideo, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import { CentGrid, CentImage, CentTurn, fitGrid } from "./grids";
 import { useEntrance, useShotFade, EASE } from "./motion";
 import { COLOR, SAFE, TYPE } from "./tokens";
@@ -191,15 +191,42 @@ export const WallStandout: React.FC<Anchored & {
   src?: string;
   /** Zoom onto the part of the face that bears the trait, as fractions of the image: [x0, y0, x1, y1]. */
   zoom?: { at_phrase: string; box: [number, number, number, number]; mark?: boolean };
+  /**
+   * A rendered turn of this Cent from 3DCENTS (sinvalli), looped: the one
+   * exception to the still-Cents rule, for the signature Cent only. The file
+   * must already be at the film's 30 fps; `coin` is where the coin sits in the
+   * clip's own pixels, measured on its first frame. The clip's black
+   * background is dropped with a lighten blend onto the stage colour.
+   */
+  clip?: { src: string; width: number; height: number; frames: number; coin: { cx: number; cy: number; d: number }; credit: string };
 }> = (props) => {
-  const { title, n, readout, caption, src, zoom, spin = 0 } = props;
+  const { title, n, readout, caption, src, zoom, clip, spin = 0 } = props;
   const fade = useShotFade();
   const frame = useCurrentFrame();
   const at = useAt(props);
   const size = 500;
   const left = (1080 - size) / 2, top = STAGE.y0 + (STAGE.y1 - STAGE.y0 - size) / 2;
   let coin: React.ReactNode;
-  if (!zoom) {
+  if (clip) {
+    if (zoom || spin) throw new Error(`WallStandout #${n}: a 3DCENTS clip takes no zoom or spin of our own`);
+    if (!clip.credit) throw new Error(`WallStandout #${n}: a 3DCENTS clip must carry its credit`);
+    const H = STAGE.y1 - STAGE.y0;
+    const k = size / clip.coin.d;
+    const enter = interpolate(frame, [0, 18], [0, 1], { extrapolateRight: "clamp", easing: EASE.out });
+    coin = (
+      // The blend needs the stage colour inside its own group: any opacity above
+      // (entrance, shot fade) isolates the group, and lighten against nothing
+      // would show the clip's black rectangle.
+      <div style={{ position: "absolute", left: 0, top: STAGE.y0, width: 1080, height: H, overflow: "hidden", opacity: enter,
+                    background: COLOR.bg, isolation: "isolate" }}>
+        <Loop durationInFrames={clip.frames} layout="none">
+          <OffthreadVideo src={staticFile(clip.src)} muted
+            style={{ position: "absolute", left: 540 - clip.coin.cx * k, top: H / 2 - clip.coin.cy * k,
+                     width: clip.width * k, height: clip.height * k, mixBlendMode: "lighten" }} />
+        </Loop>
+      </div>
+    );
+  } else if (!zoom) {
     coin = <CentTurn n={n} size={size} maxTilt={0} spin={spin} style={{ position: "absolute", left, top }} />;
   } else {
     if (!src) throw new Error(`WallStandout #${n}: a zoom needs a high-res src`);
@@ -238,6 +265,11 @@ export const WallStandout: React.FC<Anchored & {
     <div style={{ position: "absolute", inset: 0, opacity: fade }}>
       <Imagery>{coin}</Imagery>
       <NameBand title={title} subtitle={`CENT #${n}`} />
+      {clip ? (
+        <div style={{ position: "absolute", left: X0, top: STAGE.y1 - 60, width: X1 - X0, opacity: fadeIn(frame, 10) * 0.8 }}>
+          <SafeText role="label" fontSize={42} maxLines={1} color={COLOR.inkDim} style={{ fontFamily: TYPE.body, textAlign: "center" }}>{clip.credit}</SafeText>
+        </div>
+      ) : null}
       <div style={{ position: "absolute", left: X0, top: BAND.y0, width: X1 - X0, opacity: fadeIn(frame, 10) }}>
         <SafeText role="display" fontSize={84} maxLines={1} color={COLOR.accent}
                   style={{ fontFamily: TYPE.mono, fontWeight: 700 }}>{readout}</SafeText>
@@ -351,5 +383,45 @@ export const WallShot: React.FC<Anchored & {
   );
 };
 
-export const WALL = { WallCard, WallGrid, WallYears, WallStandout, WallList, WallShot } as const;
+/**
+ * One Cent turning over in the picture plane to show its back: a flat 2D flip
+ * (the face narrows to an edge and widens again as the other side), never a 3D
+ * tilt. For a trait that lives on the reverse, like the wheat ears of a wheat
+ * penny. Both sides are the 1050px cents.vision images, clipped to the coin.
+ */
+export const CentFlip: React.FC<Anchored & {
+  title: string; n: number; front: string; back: string; flip_at: string; readout: string; caption: string;
+}> = (props) => {
+  const { title, n, front, back, flip_at, readout, caption } = props;
+  const fade = useShotFade();
+  const frame = useCurrentFrame();
+  const at = useAt(props);
+  const size = 500;
+  const H = STAGE.y1 - STAGE.y0;
+  const S = size * (0.5 / 0.402);       // the fronts and backs put the coin in a circle of radius 0.40
+  const f0 = at(flip_at);
+  const t = interpolate(frame, [f0, f0 + 20], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: EASE.inOut });
+  const sx = Math.max(0.02, Math.abs(Math.cos(Math.PI * t)));
+  const enter = interpolate(frame, [0, 18], [0, 1], { extrapolateRight: "clamp", easing: EASE.out });
+  return (
+    <div style={{ position: "absolute", inset: 0, opacity: fade }}>
+      <Imagery>
+        <div style={{ position: "absolute", left: 0, top: STAGE.y0, width: 1080, height: H, overflow: "hidden", opacity: enter }}>
+          <Img src={staticFile(t < 0.5 ? front : back)}
+               style={{ position: "absolute", left: 540 - S / 2, top: H / 2 - S / 2, width: S, height: S,
+                        transform: `scaleX(${sx})`, clipPath: "circle(40.5% at 50% 50%)",
+                        filter: `drop-shadow(0 ${size * 0.04}px ${size * 0.06}px rgba(0,0,0,0.55))` }} />
+        </div>
+      </Imagery>
+      <NameBand title={title} subtitle={`CENT #${n}`} />
+      <div style={{ position: "absolute", left: X0, top: BAND.y0, width: X1 - X0, opacity: fadeIn(frame, 10) }}>
+        <SafeText role="display" fontSize={84} maxLines={1} color={COLOR.accent}
+                  style={{ fontFamily: TYPE.mono, fontWeight: 700 }}>{readout}</SafeText>
+        <SafeText role="body" fontSize={48} maxLines={2}>{caption}</SafeText>
+      </div>
+    </div>
+  );
+};
+
+export const WALL = { WallCard, WallGrid, WallYears, WallStandout, WallList, WallShot, CentFlip } as const;
 for (const C of Object.values(WALL)) (C as any).wantsAlignment = true;

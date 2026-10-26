@@ -84,7 +84,7 @@ export const PATINA_DOT = {
 } as const;
 export type Patina = keyof typeof PATINA_DOT;
 
-type Hero = { n: number; caption?: string; at_phrase?: string; patina?: Patina };
+type Hero = { n: number; caption?: string; at_phrase?: string; patina?: Patina; src?: string };
 
 /** The key dot under a Cent. Obsidian gets a light rim, or it vanishes into the background. */
 const Dot: React.FC<{ patina: Patina; d: number }> = ({ patina, d }) => {
@@ -102,12 +102,14 @@ const Dot: React.FC<{ patina: Patina; d: number }> = ({ patina, d }) => {
  * spoken and its caption takes the readout; the rest arrive together at the cut.
  * `labelsUnder` puts each caption under its own coin instead (short labels only,
  * like years).
+ * `solo_until` shows each anchored Cent on its own, large, as it is named, and
+ * then gathers them all into the row at that phrase.
  */
 export const CentRow: React.FC<Anchored & {
   title?: string; subtitle?: string; cents: Hero[]; labelsUnder?: boolean; cols?: number;
-  readout?: string; caption?: string; readout_at?: string;
+  readout?: string; caption?: string; readout_at?: string; solo_until?: string;
 }> = (props) => {
-  const { title, subtitle, cents, labelsUnder, cols, readout, caption, readout_at } = props;
+  const { title, subtitle, cents, labelsUnder, cols, readout, caption, readout_at, solo_until } = props;
   const frame = useCurrentFrame();
   const fade = useShotFade();
   const at = useAt(props);
@@ -126,14 +128,48 @@ export const CentRow: React.FC<Anchored & {
   const rows = Math.ceil(cents.length / lay.cols);
   const ox = STAGE.x0 + (W - lay.cols * cellW + lay.gap) / 2;
   const oy = STAGE.y0 + (H - rows * cellH + lay.gap) / 2;
-  const starts = cents.map((c, i) => (c.at_phrase ? at(c.at_phrase) : i * 3));
-  for (let i = 1; i < starts.length; i++)
-    if (cents[i]!.at_phrase && cents[i - 1]!.at_phrase && starts[i]! < starts[i - 1]!)
+  const spoken = cents.map((c, i) => (c.at_phrase ? at(c.at_phrase) : i * 3));
+  for (let i = 1; i < spoken.length; i++)
+    if (cents[i]!.at_phrase && cents[i - 1]!.at_phrase && spoken[i]! < spoken[i - 1]!)
       throw new Error(`CentRow: "${cents[i]!.at_phrase}" is spoken before "${cents[i - 1]!.at_phrase}"`);
   // The readout follows the most recently arrived anchored Cent.
   let cur = -1;
-  cents.forEach((c, i) => { if (c.at_phrase && frame >= starts[i]!) cur = i; });
+  cents.forEach((c, i) => { if (c.at_phrase && frame >= spoken[i]!) cur = i; });
   const rFrom = readout_at ? at(readout_at) : 0;
+  const soloEnd = solo_until ? at(solo_until) : -1;
+  if (solo_until && soloEnd <= Math.max(...spoken)) throw new Error(`CentRow: "${solo_until}" comes before the last Cent is named`);
+  if (solo_until && frame < soloEnd) {
+    // One Cent at a time, as large as the stage allows: the full stage height,
+    // centred on the frame. A high-res front (src) keeps it sharp at that size.
+    const c = cur >= 0 ? cents[cur]! : null;
+    const big = c?.src ? Math.floor(H) : Math.min(MAX_CENT_PX, Math.floor(Math.min(W, H) * 0.86));
+    const S = big * (0.5 / 0.402);      // cents.vision fronts: the coin is a circle of radius 0.40 on white
+    const t = c ? interpolate(frame, [spoken[cur]!, spoken[cur]! + 10], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: EASE.out }) : 0;
+    return (
+      <div style={{ position: "absolute", inset: 0, opacity: fade }}>
+        <Title title={title} subtitle={subtitle} />
+        {c ? (
+          <Imagery>
+            {c.src ? (
+              <div key={c.n} style={{ position: "absolute", left: 540 - S / 2, top: STAGE.y0 + H / 2 - S / 2, width: S, height: S,
+                                      opacity: t, transform: `scale(${0.9 + 0.1 * t})`, filter: "drop-shadow(0 14px 24px rgba(0,0,0,0.55))" }}>
+                <Img src={staticFile(c.src)} style={{ width: S, height: S, clipPath: "circle(40.5% at 50% 50%)" }} />
+              </div>
+            ) : (
+              <div key={c.n} style={{ position: "absolute", left: STAGE.x0 + (W - big) / 2, top: STAGE.y0 + (H - big) / 2,
+                                      opacity: t, transform: `scale(${0.85 + 0.15 * t})`, filter: "drop-shadow(0 14px 24px rgba(0,0,0,0.55))" }}>
+                <CentImage n={c.n} size={big} />
+              </div>
+            )}
+          </Imagery>
+        ) : null}
+        {c && c.caption ? <Readout key={cur} k={cur} caption={c.caption} from={spoken[cur]} /> : null}
+      </div>
+    );
+  }
+  // Gathered: after a solo run the Cents assemble in quick order at solo_until.
+  const starts = solo_until ? cents.map((_, i) => soloEnd + i * 2) : spoken;
+  if (solo_until) cur = -1;
   return (
     <div style={{ position: "absolute", inset: 0, opacity: fade }}>
       <Title title={title} subtitle={subtitle} />

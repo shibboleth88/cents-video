@@ -1,0 +1,1123 @@
+{
+ "essay": {
+  "title": "Collector Wall",
+  "subtitle": "Daidatep",
+  "author": "shibboleth",
+  "source": "https://cents.vision/collectors.html",
+  "version": "v5, script draft 2 (2026-10-25)"
+ },
+ "_what": "Collector Wall: Daidatep. Every coin is a real Cent by number; every figure comes from data/wall_board.json (cents.vision, 25 Oct 2026). No wallet address appears.",
+ "shots": [
+  {
+   "shot_id": "d00_wall",
+   "start": {
+    "at_start": true
+   },
+   "end": {
+    "at_phrase": "number ninety-nine oh eight"
+   },
+   "purpose": "Daidatep's Wall card, rebuilt from cents.vision data (25 Oct 2026); frame 0 is the card top. Zoom onto the signature Cent.",
+   "visual_kind": "code",
+   "component": "WallBoard",
+   "props": {
+    "wall": "daidatep",
+    "show": "card",
+    "moves": [
+     {
+      "at_phrase": "Its signature Cent",
+      "target": {
+       "cent": 9908,
+       "in": "signature"
+      },
+      "mark": true
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "d01_sig",
+   "start": {
+    "at_phrase": "number ninety-nine oh eight"
+   },
+   "end": {
+    "at_phrase": "The Wall holds a hundred"
+   },
+   "purpose": "The signature Cent on its own, turning: the 3DCENTS render by sinvalli (user's export, 25 fps retimed frame-for-frame to 30). Its traits cover the whole face, so no zoom.",
+   "visual_kind": "code",
+   "component": "WallStandout",
+   "props": {
+    "title": "Daidatep",
+    "n": 9908,
+    "readout": "1956",
+    "caption": "Full Desert \u00b7 Faceless",
+    "clip": {
+     "src": "3dcents/9908-360-30fps.mp4",
+     "width": 1080,
+     "height": 1920,
+     "frames": 150,
+     "coin": {
+      "cx": 539.5,
+      "cy": 959.5,
+      "d": 776
+     },
+     "credit": "3D render: 3DCENTS by sinvalli"
+    }
+   }
+  },
+  {
+   "shot_id": "d02_count",
+   "start": {
+    "at_phrase": "The Wall holds a hundred"
+   },
+   "end": {
+    "at_phrase": "which puts it in the Dollar"
+   },
+   "purpose": "The opened collection: all 132 Cents scrolling with a count.",
+   "visual_kind": "code",
+   "component": "WallBoard",
+   "props": {
+    "wall": "daidatep",
+    "show": "grid",
+    "moves": [
+     {
+      "at_phrase": "and thirty-two Cents",
+      "until_phrase": "which puts it in the Dollar",
+      "target": {
+       "grid_end": true
+      }
+     }
+    ],
+    "readout": {
+     "at_phrase": "The Wall holds a hundred",
+     "count": {
+      "from": 0,
+      "to": 132,
+      "until_phrase": "from nineteen forty-four to",
+      "suffix": " Cents"
+     }
+    }
+   }
+  },
+  {
+   "shot_id": "d02b_dollar",
+   "start": {
+    "at_phrase": "which puts it in the Dollar"
+   },
+   "end": {
+    "at_phrase": "Ten of them are wheat"
+   },
+   "purpose": "Dollar Club badge.",
+   "visual_kind": "code",
+   "component": "WallBoard",
+   "props": {
+    "wall": "daidatep",
+    "show": "card",
+    "moves": [
+     {
+      "at_phrase": "which puts it in the Dollar",
+      "target": {
+       "badge": "Dollar Club"
+      },
+      "mark": true
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "d03_wheat_badge",
+   "start": {
+    "at_phrase": "Ten of them are wheat"
+   },
+   "end": {
+    "at_phrase": "minted nineteen fifty-eight or"
+   },
+   "purpose": "Wheat 10 badge.",
+   "visual_kind": "code",
+   "component": "WallBoard",
+   "props": {
+    "wall": "daidatep",
+    "show": "card",
+    "moves": [
+     {
+      "at_phrase": "Ten of them are wheat",
+      "target": {
+       "badge": "Wheat"
+      },
+      "mark": true
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "d03b_wheat_rows",
+   "start": {
+    "at_phrase": "minted nineteen fifty-eight or"
+   },
+   "end": {
+    "at_phrase": "with two ears of"
+   },
+   "purpose": "The ten wheat Cents ringed in the collection rows.",
+   "visual_kind": "code",
+   "component": "WallBoard",
+   "props": {
+    "wall": "daidatep",
+    "show": "grid",
+    "moves": [
+     {
+      "at_phrase": "fifty-eight or earlier",
+      "until_phrase": "with two ears of",
+      "target": {
+       "grid_end": true
+      }
+     }
+    ],
+    "highlights": [
+     {
+      "at_phrase": "minted nineteen fifty-eight or",
+      "group": "wheat"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "d03c_flip",
+   "start": {
+    "at_phrase": "with two ears of"
+   },
+   "end": {
+    "at_phrase": "The earliest is from"
+   },
+   "purpose": "Cent #4028 turns over to show the wheat reverse (cents.vision back image).",
+   "visual_kind": "code",
+   "component": "CentFlip",
+   "props": {
+    "title": "Daidatep",
+    "n": 4028,
+    "front": "hires/4028.webp",
+    "back": "hires/4028_back.webp",
+    "flip_at": "two ears of wheat",
+    "readout": "Wheat",
+    "caption": "Two ears of wheat on the back"
+   }
+  },
+  {
+   "shot_id": "d04_1944",
+   "start": {
+    "at_phrase": "The earliest is from"
+   },
+   "end": {
+    "at_phrase": "It holds four Cents"
+   },
+   "purpose": "The 1944 Cent, zoomed onto its date (box measured on the 1050px front).",
+   "visual_kind": "code",
+   "component": "WallStandout",
+   "props": {
+    "title": "Daidatep",
+    "n": 4028,
+    "readout": "1944",
+    "caption": "The earliest Cent on the Wall",
+    "src": "hires/4028.webp",
+    "zoom": {
+     "at_phrase": "is from nineteen forty-four",
+     "box": [
+      0.64,
+      0.61,
+      0.84,
+      0.7
+     ],
+     "mark": true
+    }
+   }
+  },
+  {
+   "shot_id": "d05_rows",
+   "start": {
+    "at_phrase": "It holds four Cents"
+   },
+   "end": {
+    "at_phrase": "for the nineteen seventy-one Club"
+   },
+   "purpose": "The four 1971 and the four 1969 Cents ringed in the rows.",
+   "visual_kind": "code",
+   "component": "WallBoard",
+   "props": {
+    "wall": "daidatep",
+    "show": "grid",
+    "moves": [
+     {
+      "at_phrase": "four Cents from nineteen",
+      "until_phrase": "for the nineteen seventy-one Club",
+      "target": {
+       "grid_end": true
+      }
+     }
+    ],
+    "highlights": [
+     {
+      "at_phrase": "It holds four Cents",
+      "until_phrase": "and four from nineteen",
+      "group": "y1971"
+     },
+     {
+      "at_phrase": "and four from nineteen",
+      "group": "y1969"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "d05b_clubs",
+   "start": {
+    "at_phrase": "for the nineteen seventy-one Club"
+   },
+   "end": {
+    "at_phrase": "Cent number thirty-six forty"
+   },
+   "purpose": "1971 and 1969 Club badges.",
+   "visual_kind": "code",
+   "component": "WallBoard",
+   "props": {
+    "wall": "daidatep",
+    "show": "card",
+    "moves": [
+     {
+      "at_phrase": "for the nineteen seventy-one Club",
+      "target": {
+       "badge": "1971"
+      },
+      "mark": true
+     },
+     {
+      "at_phrase": "and the nineteen sixty-nine Club",
+      "target": {
+       "badge": "1969"
+      },
+      "mark": true
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "d06_1955d",
+   "start": {
+    "at_phrase": "Cent number thirty-six forty"
+   },
+   "end": {
+    "at_phrase": "which makes it a one"
+   },
+   "purpose": "Cent #3640, zoomed onto its date and D mint mark.",
+   "visual_kind": "code",
+   "component": "WallStandout",
+   "props": {
+    "title": "Daidatep",
+    "n": 3640,
+    "readout": "1955-D",
+    "caption": "The only 1955-D Cent",
+    "src": "hires/3640.webp",
+    "zoom": {
+     "at_phrase": "from nineteen fifty-five with",
+     "box": [
+      0.64,
+      0.61,
+      0.85,
+      0.74
+     ],
+     "mark": true
+    }
+   }
+  },
+  {
+   "shot_id": "d06b_mint_badge",
+   "start": {
+    "at_phrase": "which makes it a one"
+   },
+   "end": {
+    "at_phrase": "Four of its Cents are"
+   },
+   "purpose": "1/1 Mint badge.",
+   "visual_kind": "code",
+   "component": "WallBoard",
+   "props": {
+    "wall": "daidatep",
+    "show": "card",
+    "moves": [
+     {
+      "at_phrase": "which makes it a one",
+      "target": {
+       "badge": "1/1 Mint"
+      },
+      "mark": true
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "d07_combo_badge",
+   "start": {
+    "at_phrase": "Four of its Cents are"
+   },
+   "end": {
+    "at_phrase": "each carries a pair"
+   },
+   "purpose": "1/1 Trait Combo x 4 badge.",
+   "visual_kind": "code",
+   "component": "WallBoard",
+   "props": {
+    "wall": "daidatep",
+    "show": "card",
+    "moves": [
+     {
+      "at_phrase": "Four of its Cents are",
+      "target": {
+       "badge": "1/1 Trait"
+      },
+      "mark": true
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "d07b_combos",
+   "start": {
+    "at_phrase": "each carries a pair"
+   },
+   "end": {
+    "at_phrase": "Seven of its Cents"
+   },
+   "purpose": "The four 1/1 Trait Combo Cents; the signature Cent arrives as it is named.",
+   "visual_kind": "code",
+   "component": "WallList",
+   "props": {
+    "title": "Daidatep",
+    "subtitle": "1/1 Trait Combo x 4",
+    "rows": [
+     {
+      "n": 2755,
+      "label": "#2755"
+     },
+     {
+      "n": 4336,
+      "label": "#4336"
+     },
+     {
+      "n": 9828,
+      "label": "#9828"
+     },
+     {
+      "n": 9908,
+      "label": "#9908 \u00b7 signature",
+      "at_phrase": "The signature Cent is"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "d08_fulls_badge",
+   "start": {
+    "at_phrase": "Seven of its Cents"
+   },
+   "end": {
+    "at_phrase": "four full red"
+   },
+   "purpose": "Full x 7 badge.",
+   "visual_kind": "code",
+   "component": "WallBoard",
+   "props": {
+    "wall": "daidatep",
+    "show": "card",
+    "moves": [
+     {
+      "at_phrase": "Seven of its Cents",
+      "target": {
+       "badge": "Full x"
+      },
+      "mark": true
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "d08b_fulls",
+   "start": {
+    "at_phrase": "four full red"
+   },
+   "end": {
+    "at_phrase": "The Wall completes five"
+   },
+   "purpose": "The seven full-patina Cents, arriving as named.",
+   "visual_kind": "code",
+   "component": "CentRow",
+   "props": {
+    "title": "Daidatep",
+    "subtitle": "Full x 7",
+    "cents": [
+     {
+      "n": 1186,
+      "patina": "red",
+      "caption": "Full Red \u00b7 #1186",
+      "at_phrase": "four full red"
+     },
+     {
+      "n": 1727,
+      "patina": "red",
+      "caption": "Full Red \u00b7 #1727",
+      "at_phrase": "four full red"
+     },
+     {
+      "n": 7671,
+      "patina": "red",
+      "caption": "Full Red \u00b7 #7671",
+      "at_phrase": "four full red"
+     },
+     {
+      "n": 9427,
+      "patina": "red",
+      "caption": "Full Red \u00b7 #9427",
+      "at_phrase": "four full red"
+     },
+     {
+      "n": 1511,
+      "patina": "obsidian",
+      "caption": "Full Obsidian \u00b7 #1511",
+      "at_phrase": "two full obsidian"
+     },
+     {
+      "n": 5617,
+      "patina": "obsidian",
+      "caption": "Full Obsidian \u00b7 #5617",
+      "at_phrase": "two full obsidian"
+     },
+     {
+      "n": 9908,
+      "patina": "desert",
+      "caption": "Full Desert \u00b7 #9908",
+      "at_phrase": "and the full desert"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "d09_sets",
+   "start": {
+    "at_phrase": "The Wall completes five"
+   },
+   "end": {
+    "at_phrase": "a significant verdigris"
+   },
+   "purpose": "The card, then the Spectrum Set badge.",
+   "visual_kind": "code",
+   "component": "WallBoard",
+   "props": {
+    "wall": "daidatep",
+    "show": "card",
+    "moves": [
+     {
+      "at_phrase": "The Wall completes five",
+      "target": {
+       "card": true
+      }
+     },
+     {
+      "at_phrase": "A Spectrum Set",
+      "target": {
+       "badge": "Spectrum"
+      },
+      "mark": true
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "d09b_spectrum",
+   "start": {
+    "at_phrase": "a significant verdigris"
+   },
+   "end": {
+    "at_phrase": "A Chronicle Set"
+   },
+   "purpose": "Spectrum Set Cents arriving as named.",
+   "visual_kind": "code",
+   "component": "CentRow",
+   "props": {
+    "title": "Daidatep",
+    "subtitle": "Spectrum Set",
+    "cents": [
+     {
+      "n": 3867,
+      "patina": "verdigris",
+      "caption": "Significant Verdigris \u00b7 #3867",
+      "at_phrase": "a significant verdigris"
+     },
+     {
+      "n": 1511,
+      "patina": "obsidian",
+      "caption": "Full Obsidian \u00b7 #1511",
+      "at_phrase": "a full obsidian"
+     },
+     {
+      "n": 1186,
+      "patina": "red",
+      "caption": "Full Red \u00b7 #1186",
+      "at_phrase": "a full red, a"
+     },
+     {
+      "n": 9908,
+      "patina": "desert",
+      "caption": "Full Desert \u00b7 #9908",
+      "at_phrase": "a full desert, a"
+     },
+     {
+      "n": 7957,
+      "patina": "gold",
+      "caption": "Notable Gold \u00b7 #7957",
+      "at_phrase": "a notable gold"
+     },
+     {
+      "n": 857,
+      "patina": "orange",
+      "caption": "Orange \u00b7 #857",
+      "at_phrase": "and an orange"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "d10_chron_badge",
+   "start": {
+    "at_phrase": "A Chronicle Set"
+   },
+   "end": {
+    "at_phrase": "a Cent from nineteen seventy-one, from"
+   },
+   "purpose": "Chronicle Set badge.",
+   "visual_kind": "code",
+   "component": "WallBoard",
+   "props": {
+    "wall": "daidatep",
+    "show": "card",
+    "moves": [
+     {
+      "at_phrase": "A Chronicle Set",
+      "target": {
+       "badge": "Chronicle"
+      },
+      "mark": true
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "d10b_chron",
+   "start": {
+    "at_phrase": "a Cent from nineteen seventy-one, from"
+   },
+   "end": {
+    "at_phrase": "A Full Mint Set"
+   },
+   "purpose": "Chronicle Set: one Cent from each year.",
+   "visual_kind": "code",
+   "component": "CentRow",
+   "props": {
+    "title": "Daidatep",
+    "subtitle": "Chronicle Set",
+    "cents": [
+     {
+      "n": 7671,
+      "caption": "1971",
+      "at_phrase": "a Cent from nineteen seventy-one, from"
+     },
+     {
+      "n": 2755,
+      "caption": "1979",
+      "at_phrase": "from nineteen seventy-nine and"
+     },
+     {
+      "n": 1430,
+      "caption": "1982",
+      "at_phrase": "and from nineteen eighty-two"
+     }
+    ],
+    "cols": 3,
+    "labelsUnder": true
+   }
+  },
+  {
+   "shot_id": "d11_mint_badge",
+   "start": {
+    "at_phrase": "A Full Mint Set"
+   },
+   "end": {
+    "at_phrase": "an S mint, a D"
+   },
+   "purpose": "Full Mint Set badge.",
+   "visual_kind": "code",
+   "component": "WallBoard",
+   "props": {
+    "wall": "daidatep",
+    "show": "card",
+    "moves": [
+     {
+      "at_phrase": "A Full Mint Set",
+      "target": {
+       "badge": "Full Mint"
+      },
+      "mark": true
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "d11b_mint",
+   "start": {
+    "at_phrase": "an S mint, a D"
+   },
+   "end": {
+    "at_phrase": "Its S mint is"
+   },
+   "purpose": "Full Mint Set: an S, a D and a no-mint-mark Cent.",
+   "visual_kind": "code",
+   "component": "CentRow",
+   "props": {
+    "title": "Daidatep",
+    "subtitle": "Full Mint Set",
+    "cents": [
+     {
+      "n": 3474,
+      "caption": "1945-S",
+      "at_phrase": "an S mint, a D"
+     },
+     {
+      "n": 3640,
+      "caption": "1955-D",
+      "at_phrase": "a D mint and"
+     },
+     {
+      "n": 4028,
+      "caption": "1944",
+      "at_phrase": "a Cent with no mint"
+     }
+    ],
+    "cols": 3,
+    "labelsUnder": true
+   }
+  },
+  {
+   "shot_id": "d12_1945s",
+   "start": {
+    "at_phrase": "Its S mint is"
+   },
+   "end": {
+    "at_phrase": "A Three Decades Set"
+   },
+   "purpose": "Cent #3474, zoomed onto its date and S mint mark.",
+   "visual_kind": "code",
+   "component": "WallStandout",
+   "props": {
+    "title": "Daidatep",
+    "n": 3474,
+    "readout": "1945-S",
+    "caption": "The S mint in its Full Mint Set",
+    "src": "hires/3474.webp",
+    "zoom": {
+     "at_phrase": "is from nineteen forty-five",
+     "box": [
+      0.64,
+      0.61,
+      0.85,
+      0.74
+     ],
+     "mark": true
+    }
+   }
+  },
+  {
+   "shot_id": "d13_dec_badge",
+   "start": {
+    "at_phrase": "A Three Decades Set"
+   },
+   "end": {
+    "at_phrase": "every mint year of"
+   },
+   "purpose": "Three Decades Set badge.",
+   "visual_kind": "code",
+   "component": "WallBoard",
+   "props": {
+    "wall": "daidatep",
+    "show": "card",
+    "moves": [
+     {
+      "at_phrase": "A Three Decades Set",
+      "target": {
+       "badge": "Three Decades"
+      },
+      "mark": true
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "d13b_decades",
+   "start": {
+    "at_phrase": "every mint year of"
+   },
+   "end": {
+    "at_phrase": "And a Full Contamination"
+   },
+   "purpose": "One Cent for every year 1960-1982, arriving by decade as named.",
+   "visual_kind": "code",
+   "component": "CentRow",
+   "props": {
+    "title": "Daidatep",
+    "subtitle": "Three Decades Set",
+    "cents": [
+     {
+      "n": 7474,
+      "caption": "1960",
+      "at_phrase": "of the nineteen sixties"
+     },
+     {
+      "n": 611,
+      "caption": "1961",
+      "at_phrase": "of the nineteen sixties"
+     },
+     {
+      "n": 4794,
+      "caption": "1962",
+      "at_phrase": "of the nineteen sixties"
+     },
+     {
+      "n": 914,
+      "caption": "1963",
+      "at_phrase": "of the nineteen sixties"
+     },
+     {
+      "n": 1576,
+      "caption": "1964",
+      "at_phrase": "of the nineteen sixties"
+     },
+     {
+      "n": 201,
+      "caption": "1965",
+      "at_phrase": "of the nineteen sixties"
+     },
+     {
+      "n": 808,
+      "caption": "1966",
+      "at_phrase": "of the nineteen sixties"
+     },
+     {
+      "n": 375,
+      "caption": "1967",
+      "at_phrase": "of the nineteen sixties"
+     },
+     {
+      "n": 845,
+      "caption": "1968",
+      "at_phrase": "of the nineteen sixties"
+     },
+     {
+      "n": 2475,
+      "caption": "1969",
+      "at_phrase": "of the nineteen sixties"
+     },
+     {
+      "n": 4667,
+      "caption": "1970",
+      "at_phrase": "the nineteen seventies and"
+     },
+     {
+      "n": 1411,
+      "caption": "1971",
+      "at_phrase": "the nineteen seventies and"
+     },
+     {
+      "n": 3088,
+      "caption": "1972",
+      "at_phrase": "the nineteen seventies and"
+     },
+     {
+      "n": 3272,
+      "caption": "1973",
+      "at_phrase": "the nineteen seventies and"
+     },
+     {
+      "n": 2240,
+      "caption": "1974",
+      "at_phrase": "the nineteen seventies and"
+     },
+     {
+      "n": 6067,
+      "caption": "1975",
+      "at_phrase": "the nineteen seventies and"
+     },
+     {
+      "n": 1277,
+      "caption": "1976",
+      "at_phrase": "the nineteen seventies and"
+     },
+     {
+      "n": 1333,
+      "caption": "1977",
+      "at_phrase": "the nineteen seventies and"
+     },
+     {
+      "n": 1186,
+      "caption": "1978",
+      "at_phrase": "the nineteen seventies and"
+     },
+     {
+      "n": 2755,
+      "caption": "1979",
+      "at_phrase": "the nineteen seventies and"
+     },
+     {
+      "n": 1154,
+      "caption": "1980",
+      "at_phrase": "and the nineteen eighties"
+     },
+     {
+      "n": 1221,
+      "caption": "1981",
+      "at_phrase": "and the nineteen eighties"
+     },
+     {
+      "n": 1430,
+      "caption": "1982",
+      "at_phrase": "and the nineteen eighties"
+     }
+    ],
+    "labelsUnder": true,
+    "cols": 6
+   }
+  },
+  {
+   "shot_id": "d14_cont_badge",
+   "start": {
+    "at_phrase": "And a Full Contamination"
+   },
+   "end": {
+    "at_phrase": "all twelve contamination types"
+   },
+   "purpose": "Full Contamination badge.",
+   "visual_kind": "code",
+   "component": "WallBoard",
+   "props": {
+    "wall": "daidatep",
+    "show": "card",
+    "moves": [
+     {
+      "at_phrase": "And a Full Contamination",
+      "target": {
+       "badge": "Full Contamination"
+      },
+      "mark": true
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "d14b_cont",
+   "start": {
+    "at_phrase": "all twelve contamination types"
+   },
+   "end": {
+    "at_phrase": "The Wall carries Diamond"
+   },
+   "purpose": "Each contamination Cent alone as its type is named, then all twelve together; '1 of 2' collectors (artist wallet excluded per the brief).",
+   "visual_kind": "code",
+   "component": "CentRow",
+   "props": {
+    "title": "Daidatep",
+    "subtitle": "Full Contamination",
+    "cents": [
+     {
+      "n": 375,
+      "caption": "Paint \u00b7 #375",
+      "at_phrase": "paint",
+      "src": "hires/375.webp"
+     },
+     {
+      "n": 1277,
+      "caption": "Glue \u00b7 #1277",
+      "at_phrase": "glue",
+      "src": "hires/1277.webp"
+     },
+     {
+      "n": 1333,
+      "caption": "Sea Salt \u00b7 #1333",
+      "at_phrase": "sea salt",
+      "src": "hires/1333.webp"
+     },
+     {
+      "n": 1576,
+      "caption": "Scotch Tape \u00b7 #1576",
+      "at_phrase": "scotch tape",
+      "src": "hires/1576.webp"
+     },
+     {
+      "n": 2165,
+      "caption": "Dark Grime \u00b7 #2165",
+      "at_phrase": "dark grime",
+      "src": "hires/2165.webp"
+     },
+     {
+      "n": 2490,
+      "caption": "Obscure Adhesive \u00b7 #2490",
+      "at_phrase": "obscure adhesive",
+      "src": "hires/2490.webp"
+     },
+     {
+      "n": 2755,
+      "caption": "Blood \u00b7 #2755",
+      "at_phrase": "blood, unknown",
+      "src": "hires/2755.webp"
+     },
+     {
+      "n": 3668,
+      "caption": "Unknown Liquid \u00b7 #3668",
+      "at_phrase": "unknown liquid",
+      "src": "hires/3668.webp"
+     },
+     {
+      "n": 3884,
+      "caption": "3D Black \u00b7 #3884",
+      "at_phrase": "three D black",
+      "src": "hires/3884.webp"
+     },
+     {
+      "n": 5441,
+      "caption": "Speckles \u00b7 #5441",
+      "at_phrase": "speckles",
+      "src": "hires/5441.webp"
+     },
+     {
+      "n": 1186,
+      "caption": "Alien Secretion \u00b7 #1186",
+      "at_phrase": "alien secretion",
+      "src": "hires/1186.webp"
+     },
+     {
+      "n": 9908,
+      "caption": "Special Oddities \u00b7 #9908",
+      "at_phrase": "and special oddities",
+      "src": "hires/9908.webp"
+     }
+    ],
+    "solo_until": "As of October twenty",
+    "readout": "1 of 2",
+    "caption": "collectors with this Set",
+    "readout_at": "one of only two collectors"
+   }
+  },
+  {
+   "shot_id": "d16_diamond",
+   "start": {
+    "at_phrase": "The Wall carries Diamond"
+   },
+   "end": {
+    "at_phrase": "And it is a Mint"
+   },
+   "purpose": "Diamond Hands badge.",
+   "visual_kind": "code",
+   "component": "WallBoard",
+   "props": {
+    "wall": "daidatep",
+    "show": "card",
+    "moves": [
+     {
+      "at_phrase": "The Wall carries Diamond",
+      "target": {
+       "badge": "Diamond"
+      },
+      "mark": true
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "d17_keeper",
+   "start": {
+    "at_phrase": "And it is a Mint"
+   },
+   "end": {
+    "at_phrase": "minted Cent number eight"
+   },
+   "purpose": "Mint Keeper badge.",
+   "visual_kind": "code",
+   "component": "WallBoard",
+   "props": {
+    "wall": "daidatep",
+    "show": "card",
+    "moves": [
+     {
+      "at_phrase": "And it is a Mint",
+      "target": {
+       "badge": "Mint Keeper"
+      },
+      "mark": true
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "d17b_845",
+   "start": {
+    "at_phrase": "minted Cent number eight"
+   },
+   "end": {
+    "at_phrase": "Find all of the Collector"
+   },
+   "purpose": "Cent #845 in the rows.",
+   "visual_kind": "code",
+   "component": "WallBoard",
+   "props": {
+    "wall": "daidatep",
+    "show": "grid",
+    "moves": [
+     {
+      "at_phrase": "minted Cent number eight",
+      "target": {
+       "cent": 845
+      },
+      "mark": true
+     }
+    ],
+    "highlights": [
+     {
+      "at_phrase": "minted Cent number eight",
+      "group": "mint_keeper"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "d15_collectors",
+   "start": {
+    "at_phrase": "Find all of the Collector"
+   },
+   "end": {
+    "at_end": true
+   },
+   "purpose": "cents.vision Traits Lab; one zoom, onto Collectors.",
+   "visual_kind": "screenshot",
+   "component": "WallShot",
+   "props": {
+    "src": "vision/traits_lab.png",
+    "width": 2964,
+    "height": 1654,
+    "moves": [
+     {
+      "at_phrase": "under Collectors",
+      "box": [
+       1185,
+       1575,
+       1358,
+       1635
+      ],
+      "mark": true
+     }
+    ]
+   }
+  }
+ ]
+}
