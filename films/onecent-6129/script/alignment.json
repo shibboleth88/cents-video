@@ -1,0 +1,1036 @@
+{
+ "_source": "eo v3 take 1 (eleven_v4, script v0.5), transcribed with scribe_v1; word-for-word equal to audio/tts_text.txt; holds inserted by audio/build_vo.py: [('him.', 0.8), ('it.', 1.8), ('verdigris.', 1.2)]",
+ "duration": 104.3,
+ "words": [
+  {
+   "word": "Cent",
+   "start": 0.0,
+   "end": 0.32
+  },
+  {
+   "word": "number",
+   "start": 0.4,
+   "end": 0.64
+  },
+  {
+   "word": "sixty-one",
+   "start": 0.8,
+   "end": 1.44
+  },
+  {
+   "word": "twenty-nine.",
+   "start": 1.6,
+   "end": 2.76
+  },
+  {
+   "word": "A",
+   "start": 3.12,
+   "end": 3.2
+  },
+  {
+   "word": "penny",
+   "start": 3.28,
+   "end": 3.6
+  },
+  {
+   "word": "struck",
+   "start": 3.72,
+   "end": 4.08
+  },
+  {
+   "word": "in",
+   "start": 4.16,
+   "end": 4.32
+  },
+  {
+   "word": "nineteen",
+   "start": 4.4,
+   "end": 4.8
+  },
+  {
+   "word": "seventy-nine,",
+   "start": 4.96,
+   "end": 6.16
+  },
+  {
+   "word": "made",
+   "start": 6.24,
+   "end": 6.4
+  },
+  {
+   "word": "to",
+   "start": 6.48,
+   "end": 6.56
+  },
+  {
+   "word": "carry",
+   "start": 6.64,
+   "end": 6.96
+  },
+  {
+   "word": "one",
+   "start": 7.12,
+   "end": 7.36
+  },
+  {
+   "word": "image:",
+   "start": 7.44,
+   "end": 8.48
+  },
+  {
+   "word": "Lincoln.",
+   "start": 8.56,
+   "end": 9.12
+  },
+  {
+   "word": "Look",
+   "start": 9.68,
+   "end": 9.84
+  },
+  {
+   "word": "for",
+   "start": 9.92,
+   "end": 10.0
+  },
+  {
+   "word": "him.",
+   "start": 10.08,
+   "end": 10.48
+  },
+  {
+   "word": "The",
+   "start": 11.76,
+   "end": 11.84
+  },
+  {
+   "word": "edge",
+   "start": 11.92,
+   "end": 12.08
+  },
+  {
+   "word": "of",
+   "start": 12.16,
+   "end": 12.2
+  },
+  {
+   "word": "the",
+   "start": 12.24,
+   "end": 12.32
+  },
+  {
+   "word": "profile",
+   "start": 12.4,
+   "end": 12.88
+  },
+  {
+   "word": "survives.",
+   "start": 12.96,
+   "end": 13.76
+  },
+  {
+   "word": "The",
+   "start": 14.0,
+   "end": 14.08
+  },
+  {
+   "word": "features",
+   "start": 14.16,
+   "end": 14.64
+  },
+  {
+   "word": "have",
+   "start": 14.72,
+   "end": 14.8
+  },
+  {
+   "word": "worn",
+   "start": 14.84,
+   "end": 15.04
+  },
+  {
+   "word": "away.",
+   "start": 15.24,
+   "end": 15.52
+  },
+  {
+   "word": "Compare",
+   "start": 16.32,
+   "end": 16.72
+  },
+  {
+   "word": "Cent",
+   "start": 16.8,
+   "end": 17.04
+  },
+  {
+   "word": "number",
+   "start": 17.12,
+   "end": 17.36
+  },
+  {
+   "word": "sixteen-oh-five,",
+   "start": 17.44,
+   "end": 18.88
+  },
+  {
+   "word": "also",
+   "start": 19.04,
+   "end": 19.2
+  },
+  {
+   "word": "from",
+   "start": 19.28,
+   "end": 19.36
+  },
+  {
+   "word": "nineteen",
+   "start": 19.44,
+   "end": 19.76
+  },
+  {
+   "word": "seventy-nine,",
+   "start": 19.84,
+   "end": 20.8
+  },
+  {
+   "word": "which",
+   "start": 20.88,
+   "end": 20.96
+  },
+  {
+   "word": "kept",
+   "start": 21.04,
+   "end": 21.28
+  },
+  {
+   "word": "its",
+   "start": 21.4,
+   "end": 21.52
+  },
+  {
+   "word": "mint",
+   "start": 21.6,
+   "end": 21.84
+  },
+  {
+   "word": "lustre:",
+   "start": 21.92,
+   "end": 22.88
+  },
+  {
+   "word": "on",
+   "start": 22.96,
+   "end": 23.12
+  },
+  {
+   "word": "it,",
+   "start": 23.24,
+   "end": 23.52
+  },
+  {
+   "word": "the",
+   "start": 23.6,
+   "end": 23.68
+  },
+  {
+   "word": "portrait",
+   "start": 23.76,
+   "end": 24.16
+  },
+  {
+   "word": "is",
+   "start": 24.24,
+   "end": 24.32
+  },
+  {
+   "word": "still",
+   "start": 24.48,
+   "end": 24.64
+  },
+  {
+   "word": "sharp.",
+   "start": 24.8,
+   "end": 25.28
+  },
+  {
+   "word": "This",
+   "start": 25.92,
+   "end": 26.08
+  },
+  {
+   "word": "trait",
+   "start": 26.16,
+   "end": 26.48
+  },
+  {
+   "word": "is",
+   "start": 26.56,
+   "end": 26.64
+  },
+  {
+   "word": "called",
+   "start": 26.72,
+   "end": 26.96
+  },
+  {
+   "word": "Faceless.",
+   "start": 27.12,
+   "end": 27.84
+  },
+  {
+   "word": "Eighty-five",
+   "start": 28.32,
+   "end": 28.96
+  },
+  {
+   "word": "of",
+   "start": 29.0,
+   "end": 29.04
+  },
+  {
+   "word": "the",
+   "start": 29.12,
+   "end": 29.2
+  },
+  {
+   "word": "ten",
+   "start": 29.28,
+   "end": 29.44
+  },
+  {
+   "word": "thousand",
+   "start": 29.6,
+   "end": 29.92
+  },
+  {
+   "word": "Cents",
+   "start": 30.0,
+   "end": 30.4
+  },
+  {
+   "word": "carry",
+   "start": 30.48,
+   "end": 30.8
+  },
+  {
+   "word": "it.",
+   "start": 30.92,
+   "end": 31.4
+  },
+  {
+   "word": "Where",
+   "start": 33.56,
+   "end": 33.72
+  },
+  {
+   "word": "Liberty",
+   "start": 33.8,
+   "end": 34.12
+  },
+  {
+   "word": "was",
+   "start": 34.2,
+   "end": 34.28
+  },
+  {
+   "word": "struck,",
+   "start": 34.36,
+   "end": 35.0
+  },
+  {
+   "word": "something",
+   "start": 35.08,
+   "end": 35.48
+  },
+  {
+   "word": "has",
+   "start": 35.56,
+   "end": 35.64
+  },
+  {
+   "word": "settled",
+   "start": 35.72,
+   "end": 36.12
+  },
+  {
+   "word": "over",
+   "start": 36.2,
+   "end": 36.28
+  },
+  {
+   "word": "the",
+   "start": 36.36,
+   "end": 36.44
+  },
+  {
+   "word": "letters:",
+   "start": 36.52,
+   "end": 37.4
+  },
+  {
+   "word": "an",
+   "start": 37.44,
+   "end": 37.48
+  },
+  {
+   "word": "Obscure",
+   "start": 37.56,
+   "end": 38.12
+  },
+  {
+   "word": "Adhesive",
+   "start": 38.24,
+   "end": 38.76
+  },
+  {
+   "word": "contamination.",
+   "start": 38.84,
+   "end": 39.8
+  },
+  {
+   "word": "More",
+   "start": 40.36,
+   "end": 40.52
+  },
+  {
+   "word": "of",
+   "start": 40.6,
+   "end": 40.68
+  },
+  {
+   "word": "it",
+   "start": 40.76,
+   "end": 40.84
+  },
+  {
+   "word": "covers",
+   "start": 40.92,
+   "end": 41.24
+  },
+  {
+   "word": "the",
+   "start": 41.32,
+   "end": 41.4
+  },
+  {
+   "word": "D",
+   "start": 41.48,
+   "end": 41.8
+  },
+  {
+   "word": "of",
+   "start": 41.88,
+   "end": 42.04
+  },
+  {
+   "word": "God.",
+   "start": 42.12,
+   "end": 42.68
+  },
+  {
+   "word": "Between",
+   "start": 43.24,
+   "end": 43.56
+  },
+  {
+   "word": "the",
+   "start": 43.6,
+   "end": 43.64
+  },
+  {
+   "word": "two,",
+   "start": 43.72,
+   "end": 44.28
+  },
+  {
+   "word": "the",
+   "start": 44.32,
+   "end": 44.36
+  },
+  {
+   "word": "copper",
+   "start": 44.44,
+   "end": 44.84
+  },
+  {
+   "word": "has",
+   "start": 44.92,
+   "end": 45.08
+  },
+  {
+   "word": "warmed",
+   "start": 45.16,
+   "end": 45.56
+  },
+  {
+   "word": "to",
+   "start": 45.64,
+   "end": 45.72
+  },
+  {
+   "word": "gold.",
+   "start": 45.8,
+   "end": 46.28
+  },
+  {
+   "word": "In",
+   "start": 46.76,
+   "end": 46.84
+  },
+  {
+   "word": "patches",
+   "start": 46.92,
+   "end": 47.48
+  },
+  {
+   "word": "it",
+   "start": 47.52,
+   "end": 47.56
+  },
+  {
+   "word": "has",
+   "start": 47.64,
+   "end": 47.72
+  },
+  {
+   "word": "darkened",
+   "start": 47.8,
+   "end": 48.2
+  },
+  {
+   "word": "to",
+   "start": 48.24,
+   "end": 48.28
+  },
+  {
+   "word": "obsidian,",
+   "start": 48.36,
+   "end": 49.32
+  },
+  {
+   "word": "and",
+   "start": 49.36,
+   "end": 49.4
+  },
+  {
+   "word": "in",
+   "start": 49.48,
+   "end": 49.56
+  },
+  {
+   "word": "others",
+   "start": 49.64,
+   "end": 50.04
+  },
+  {
+   "word": "it",
+   "start": 50.28,
+   "end": 50.36
+  },
+  {
+   "word": "has",
+   "start": 50.44,
+   "end": 50.52
+  },
+  {
+   "word": "bloomed",
+   "start": 50.6,
+   "end": 51.0
+  },
+  {
+   "word": "with",
+   "start": 51.08,
+   "end": 51.24
+  },
+  {
+   "word": "verdigris.",
+   "start": 51.36,
+   "end": 51.96
+  },
+  {
+   "word": "The",
+   "start": 53.72,
+   "end": 53.8
+  },
+  {
+   "word": "mark",
+   "start": 53.88,
+   "end": 54.28
+  },
+  {
+   "word": "as",
+   "start": 54.44,
+   "end": 54.6
+  },
+  {
+   "word": "index.",
+   "start": 54.68,
+   "end": 55.4
+  },
+  {
+   "word": "In",
+   "start": 56.04,
+   "end": 56.12
+  },
+  {
+   "word": "the",
+   "start": 56.16,
+   "end": 56.2
+  },
+  {
+   "word": "words",
+   "start": 56.28,
+   "end": 56.52
+  },
+  {
+   "word": "of",
+   "start": 56.56,
+   "end": 56.6
+  },
+  {
+   "word": "Steven",
+   "start": 56.68,
+   "end": 57.0
+  },
+  {
+   "word": "Rice,",
+   "start": 57.08,
+   "end": 57.56
+  },
+  {
+   "word": "in",
+   "start": 57.64,
+   "end": 57.68
+  },
+  {
+   "word": "his",
+   "start": 57.72,
+   "end": 57.8
+  },
+  {
+   "word": "article",
+   "start": 57.88,
+   "end": 58.28
+  },
+  {
+   "word": "\"Materiality",
+   "start": 58.44,
+   "end": 59.32
+  },
+  {
+   "word": "and",
+   "start": 59.4,
+   "end": 59.48
+  },
+  {
+   "word": "Signification\":",
+   "start": 59.56,
+   "end": 61.08
+  },
+  {
+   "word": "\"The",
+   "start": 61.16,
+   "end": 61.24
+  },
+  {
+   "word": "official",
+   "start": 61.48,
+   "end": 61.72
+  },
+  {
+   "word": "icon,",
+   "start": 61.8,
+   "end": 62.44
+  },
+  {
+   "word": "Lincoln's",
+   "start": 62.52,
+   "end": 62.84
+  },
+  {
+   "word": "head,",
+   "start": 62.92,
+   "end": 63.48
+  },
+  {
+   "word": "fades;",
+   "start": 63.64,
+   "end": 64.6
+  },
+  {
+   "word": "what",
+   "start": 64.68,
+   "end": 64.84
+  },
+  {
+   "word": "matters",
+   "start": 64.92,
+   "end": 65.4
+  },
+  {
+   "word": "are",
+   "start": 65.48,
+   "end": 65.56
+  },
+  {
+   "word": "the",
+   "start": 65.6,
+   "end": 65.64
+  },
+  {
+   "word": "unplanned",
+   "start": 65.8,
+   "end": 66.36
+  },
+  {
+   "word": "indices.",
+   "start": 66.44,
+   "end": 67.24
+  },
+  {
+   "word": "The",
+   "start": 67.72,
+   "end": 67.8
+  },
+  {
+   "word": "penny",
+   "start": 67.88,
+   "end": 68.2
+  },
+  {
+   "word": "shifts",
+   "start": 68.28,
+   "end": 68.64
+  },
+  {
+   "word": "from",
+   "start": 68.68,
+   "end": 68.84
+  },
+  {
+   "word": "being",
+   "start": 68.96,
+   "end": 69.08
+  },
+  {
+   "word": "an",
+   "start": 69.16,
+   "end": 69.24
+  },
+  {
+   "word": "image",
+   "start": 69.48,
+   "end": 69.72
+  },
+  {
+   "word": "to",
+   "start": 69.88,
+   "end": 69.96
+  },
+  {
+   "word": "being",
+   "start": 70.04,
+   "end": 70.2
+  },
+  {
+   "word": "a",
+   "start": 70.24,
+   "end": 70.28
+  },
+  {
+   "word": "time-stamp.",
+   "start": 70.36,
+   "end": 71.16
+  },
+  {
+   "word": "Its",
+   "start": 71.56,
+   "end": 71.72
+  },
+  {
+   "word": "patina",
+   "start": 71.8,
+   "end": 72.2
+  },
+  {
+   "word": "says:",
+   "start": 72.28,
+   "end": 72.76
+  },
+  {
+   "word": "I",
+   "start": 73.16,
+   "end": 73.32
+  },
+  {
+   "word": "have",
+   "start": 73.4,
+   "end": 73.56
+  },
+  {
+   "word": "been",
+   "start": 73.6,
+   "end": 73.64
+  },
+  {
+   "word": "around.\"",
+   "start": 73.72,
+   "end": 74.44
+  },
+  {
+   "word": "Only",
+   "start": 75.08,
+   "end": 75.4
+  },
+  {
+   "word": "seven",
+   "start": 75.48,
+   "end": 75.8
+  },
+  {
+   "word": "Cents",
+   "start": 75.88,
+   "end": 76.28
+  },
+  {
+   "word": "are",
+   "start": 76.36,
+   "end": 76.44
+  },
+  {
+   "word": "both",
+   "start": 76.52,
+   "end": 76.68
+  },
+  {
+   "word": "Faceless",
+   "start": 76.84,
+   "end": 77.48
+  },
+  {
+   "word": "and",
+   "start": 77.56,
+   "end": 77.8
+  },
+  {
+   "word": "gold.",
+   "start": 77.88,
+   "end": 78.36
+  },
+  {
+   "word": "A",
+   "start": 78.84,
+   "end": 78.92
+  },
+  {
+   "word": "coin",
+   "start": 79.0,
+   "end": 79.16
+  },
+  {
+   "word": "collector",
+   "start": 79.24,
+   "end": 79.64
+  },
+  {
+   "word": "would",
+   "start": 79.72,
+   "end": 79.8
+  },
+  {
+   "word": "mark",
+   "start": 79.88,
+   "end": 80.04
+  },
+  {
+   "word": "this",
+   "start": 80.12,
+   "end": 80.2
+  },
+  {
+   "word": "penny",
+   "start": 80.28,
+   "end": 80.6
+  },
+  {
+   "word": "as",
+   "start": 80.68,
+   "end": 80.76
+  },
+  {
+   "word": "valueless",
+   "start": 80.84,
+   "end": 81.48
+  },
+  {
+   "word": "because",
+   "start": 81.56,
+   "end": 81.8
+  },
+  {
+   "word": "of",
+   "start": 81.84,
+   "end": 81.88
+  },
+  {
+   "word": "its",
+   "start": 81.96,
+   "end": 82.04
+  },
+  {
+   "word": "damage.",
+   "start": 82.12,
+   "end": 82.68
+  },
+  {
+   "word": "In",
+   "start": 83.16,
+   "end": 83.24
+  },
+  {
+   "word": "CENTS,",
+   "start": 83.4,
+   "end": 84.04
+  },
+  {
+   "word": "the",
+   "start": 84.08,
+   "end": 84.12
+  },
+  {
+   "word": "damage",
+   "start": 84.2,
+   "end": 84.6
+  },
+  {
+   "word": "is",
+   "start": 84.68,
+   "end": 84.84
+  },
+  {
+   "word": "valued.",
+   "start": 84.92,
+   "end": 85.56
+  },
+  {
+   "word": "In",
+   "start": 86.04,
+   "end": 86.12
+  },
+  {
+   "word": "the",
+   "start": 86.16,
+   "end": 86.2
+  },
+  {
+   "word": "words",
+   "start": 86.32,
+   "end": 86.44
+  },
+  {
+   "word": "of",
+   "start": 86.48,
+   "end": 86.52
+  },
+  {
+   "word": "collector",
+   "start": 86.6,
+   "end": 87.08
+  },
+  {
+   "word": "David",
+   "start": 87.16,
+   "end": 87.48
+  },
+  {
+   "word": "Rees:",
+   "start": 87.56,
+   "end": 88.04
+  },
+  {
+   "word": "\"The",
+   "start": 88.44,
+   "end": 88.52
+  },
+  {
+   "word": "more",
+   "start": 88.6,
+   "end": 88.76
+  },
+  {
+   "word": "imperfect",
+   "start": 88.84,
+   "end": 89.48
+  },
+  {
+   "word": "the",
+   "start": 89.52,
+   "end": 89.56
+  },
+  {
+   "word": "coin,",
+   "start": 89.64,
+   "end": 90.28
+  },
+  {
+   "word": "the",
+   "start": 90.32,
+   "end": 90.36
+  },
+  {
+   "word": "more",
+   "start": 90.44,
+   "end": 90.6
+  },
+  {
+   "word": "history",
+   "start": 90.68,
+   "end": 91.08
+  },
+  {
+   "word": "you",
+   "start": 91.16,
+   "end": 91.24
+  },
+  {
+   "word": "can",
+   "start": 91.32,
+   "end": 91.4
+  },
+  {
+   "word": "see,",
+   "start": 91.56,
+   "end": 92.2
+  },
+  {
+   "word": "the",
+   "start": 92.28,
+   "end": 92.36
+  },
+  {
+   "word": "more",
+   "start": 92.44,
+   "end": 92.52
+  },
+  {
+   "word": "value",
+   "start": 92.6,
+   "end": 93.0
+  },
+  {
+   "word": "we",
+   "start": 93.08,
+   "end": 93.16
+  },
+  {
+   "word": "give",
+   "start": 93.24,
+   "end": 93.4
+  },
+  {
+   "word": "it.\"",
+   "start": 93.52,
+   "end": 93.88
+  }
+ ]
+}

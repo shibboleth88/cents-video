@@ -185,6 +185,8 @@ export const WallYears: React.FC<Anchored & {
 /** One Cent close, turning, with the fact that makes it stand out. */
 export const WallStandout: React.FC<Anchored & {
   title: string; n: number; readout: string; caption: string;
+  /** Under the title; defaults to the Cent's number. */
+  subtitle?: string;
   /** Degrees per second of flat 2D turn. 0 (still) since 2026-10-25, at the user's request. */
   spin?: number;
   /** A high-res front (public path) for zooming; the 300px inscription image is too soft past ~500px. */
@@ -200,7 +202,7 @@ export const WallStandout: React.FC<Anchored & {
    */
   clip?: { src: string; width: number; height: number; frames: number; coin: { cx: number; cy: number; d: number }; credit: string };
 }> = (props) => {
-  const { title, n, readout, caption, src, zoom, clip, spin = 0 } = props;
+  const { title, n, readout, caption, src, zoom, clip, spin = 0, subtitle = `CENT #${n}` } = props;
   const fade = useShotFade();
   const frame = useCurrentFrame();
   const at = useAt(props);
@@ -264,7 +266,7 @@ export const WallStandout: React.FC<Anchored & {
   return (
     <div style={{ position: "absolute", inset: 0, opacity: fade }}>
       <Imagery>{coin}</Imagery>
-      <NameBand title={title} subtitle={`CENT #${n}`} />
+      <NameBand title={title} subtitle={subtitle} />
       {clip ? (
         <div style={{ position: "absolute", left: X0, top: STAGE.y1 - 60, width: X1 - X0, opacity: fadeIn(frame, 10) * 0.8 }}>
           <SafeText role="label" fontSize={42} maxLines={1} color={COLOR.inkDim} style={{ fontFamily: TYPE.body, textAlign: "center" }}>{clip.credit}</SafeText>
@@ -413,7 +415,7 @@ export const CentFlip: React.FC<Anchored & {
                         filter: `drop-shadow(0 ${size * 0.04}px ${size * 0.06}px rgba(0,0,0,0.55))` }} />
         </div>
       </Imagery>
-      <NameBand title={title} subtitle={`CENT #${n}`} />
+      <NameBand title={title} subtitle={subtitle} />
       <div style={{ position: "absolute", left: X0, top: BAND.y0, width: X1 - X0, opacity: fadeIn(frame, 10) }}>
         <SafeText role="display" fontSize={84} maxLines={1} color={COLOR.accent}
                   style={{ fontFamily: TYPE.mono, fontWeight: 700 }}>{readout}</SafeText>
