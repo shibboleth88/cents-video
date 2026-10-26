@@ -305,7 +305,7 @@ export const FieldTitle: React.FC<Anchored & { title: string; subtitle?: string 
  * a zoom on the 300px image would enlarge pixels, not the trait.
  */
 export const HI_RES = new Set([
-  25, 91, 111, 121, 215, 312, 322, 337, 412, 608, 794, 809, 990, 1079, 1170, 1264, 1510, 1771, 2332, 2359, 2568, 2583, 2735, 2785, 2881, 2900, 2956, 3398, 3861, 3950, 3981, 4273, 4554, 4668, 4679, 4788, 4825, 4884, 5144, 5346, 5581, 6055, 6059, 6078, 6107, 6223, 6492, 6495, 6980, 7799, 7823, 7926, 8185, 8353, 8382, 9172, 9533, 9786, 9992,
+  25, 70, 91, 111, 121, 215, 312, 322, 337, 412, 608, 794, 809, 990, 1079, 1170, 1264, 1510, 1771, 2332, 2359, 2568, 2583, 2735, 2785, 2881, 2900, 2956, 3398, 3861, 3950, 3981, 4273, 4554, 4668, 4679, 4788, 4825, 4884, 5144, 5346, 5581, 6055, 6059, 6078, 6107, 6223, 6492, 6495, 6980, 7799, 7823, 7926, 8185, 8353, 8382, 9172, 9533, 9786, 9992,
 ]);
 const HI_MAX_PX = 1150;
 
@@ -474,7 +474,15 @@ export const TraitBurst: React.FC<Anchored & { title?: string; segments: Segment
  * page can be read rather than shown as a thumbnail. Crops are [x, y, width]
  * in the capture's own pixels; the height follows the window's shape.
  */
-type Screen = { at_phrase?: string; src: string; from: [number, number, number]; to?: [number, number, number]; caption?: string };
+type Screen = {
+  /** Starts when this phrase starts, or (after_phrase) when it ends; plus `delay` seconds. */
+  at_phrase?: string; after_phrase?: string; delay?: number;
+  src: string; caption?: string;
+  /** Crops [x, y, width]; or `fit` for a landscape capture shown whole, pushing in slightly. */
+  from?: [number, number, number]; to?: [number, number, number]; fit?: boolean;
+  /** Window height as a fraction of its width, for landscape captures; default fills the stage. */
+  aspect?: number;
+};
 export const ScreenTour: React.FC<Anchored & { title?: string; subtitle?: string; screens: Screen[] }> = (props) => {
   const { title, subtitle, screens } = props;
   const frame = useCurrentFrame();
@@ -482,8 +490,14 @@ export const ScreenTour: React.FC<Anchored & { title?: string; subtitle?: string
   const fade = useShotFade();
   const at = useAt(props);
   if (screens.length === 0) throw new Error("ScreenTour: no screens");
-  screens.forEach((s, k) => { if (k > 0 && !s.at_phrase) throw new Error(`ScreenTour: screen ${k + 1} has no at_phrase`); });
-  const starts = screens.map((s) => (s.at_phrase ? at(s.at_phrase) : 0));
+  const { fps } = useVideoConfig();
+  screens.forEach((s, k) => { if (k > 0 && !s.at_phrase && !s.after_phrase) throw new Error(`ScreenTour: screen ${k + 1} has no anchor`); });
+  const starts = screens.map((s) => {
+    const base = s.after_phrase ? Math.round(findPhrase(props.alignment, s.after_phrase).end * fps) - props.shotStartFrame
+      : s.at_phrase ? at(s.at_phrase) : 0;
+    if (base < 0) throw new Error(`ScreenTour: "${s.after_phrase}" ends before this shot starts`);
+    return base + Math.round((s.delay ?? 0) * fps);
+  });
   if (starts[0]! > 2) throw new Error("ScreenTour: the first screen starts late; the shot would open empty");
   for (let k = 1; k < starts.length; k++)
     if (starts[k]! <= starts[k - 1]!) throw new Error(`ScreenTour: "${screens[k]!.at_phrase}" is not after the screen before it`);
@@ -491,22 +505,32 @@ export const ScreenTour: React.FC<Anchored & { title?: string; subtitle?: string
   for (let k = 0; k < starts.length; k++) if (frame >= starts[k]!) i = k;
   const sc = screens[i]!;
   const s0 = starts[i]!, s1 = i + 1 < starts.length ? starts[i + 1]! : durationInFrames;
-  const W = STAGE.x1 - STAGE.x0, H = STAGE.y1 - STAGE.y0;
+  const W = STAGE.x1 - STAGE.x0, H = sc.aspect ? Math.round(W * sc.aspect) : STAGE.y1 - STAGE.y0;
+  const top = STAGE.y0 + (STAGE.y1 - STAGE.y0 - H) / 2;
   const t = interpolate(frame, [s0, s1], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: EASE.inOut });
-  const to = sc.to ?? sc.from;
-  const [x, y, w] = [0, 1, 2].map((k) => sc.from[k]! + (to[k]! - sc.from[k]!) * t) as [number, number, number];
+  if (!sc.fit && !sc.from) throw new Error(`ScreenTour ${sc.src}: needs a crop or fit`);
+  const from = sc.from ?? [0, 0, 1080];
+  const to = sc.to ?? from;
+  const [x, y, w] = [0, 1, 2].map((k) => from[k]! + (to[k]! - from[k]!) * t) as [number, number, number];
   if (w > 1080 || x < 0 || x + w > 1080) throw new Error(`ScreenTour ${sc.src}: crop leaves the 1080 px capture`);
   const k = W / w;
+  const push = 1 + 0.06 * t;
   const cut = interpolate(frame, [s0, s0 + 6], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   return (
     <div style={{ position: "absolute", inset: 0, opacity: fade }}>
       <Title title={title} subtitle={subtitle} />
       <Imagery>
-        <div style={{ position: "absolute", left: STAGE.x0, top: STAGE.y0, width: W, height: H, overflow: "hidden",
+        <div style={{ position: "absolute", left: STAGE.x0, top, width: W, height: H, overflow: "hidden",
                       borderRadius: 28, background: "#fff", opacity: i === 0 ? 1 : cut,
                       boxShadow: "0 18px 40px rgba(0,0,0,0.55)" }}>
-          <Img src={staticFile(`vision/${sc.src}`)}
-               style={{ position: "absolute", left: -x * k, top: -y * k, width: 1080 * k, display: "block" }} />
+          {sc.fit ? (
+            <Img src={staticFile(`vision/${sc.src}`)}
+                 style={{ position: "absolute", left: 0, top: "50%", width: W, display: "block",
+                          transform: `translateY(-50%) scale(${push})` }} />
+          ) : (
+            <Img src={staticFile(`vision/${sc.src}`)}
+                 style={{ position: "absolute", left: -x * k, top: -y * k, width: 1080 * k, display: "block" }} />
+          )}
         </div>
       </Imagery>
       <Readout caption={sc.caption} from={s0} k={i} />
@@ -514,6 +538,44 @@ export const ScreenTour: React.FC<Anchored & { title?: string; subtitle?: string
   );
 };
 
-for (const C of [CentRow, PoolWall, CentHero, FieldTitle, TraitBurst, ScreenTour]) (C as any).wantsAlignment = true;
+/**
+ * The last shot: credits in the silence after the narration, then a wall of
+ * Cents filling the frame. A deterministic sample, so every render is the same
+ * wall; ordered by number, as the collection is.
+ */
+export const EndWall: React.FC<Anchored & { lines: string[]; url?: string; text_after: number; cols?: number }> = (props) => {
+  const { lines, url, text_after, cols = 9 } = props;
+  const frame = useCurrentFrame();
+  const { fps, durationInFrames } = useVideoConfig();
+  const fade = useShotFade();
+  const t0 = Math.round(text_after * fps);
+  if (t0 <= 0 || t0 >= durationInFrames - 2 * fps) throw new Error(`EndWall: text at ${text_after}s leaves under 2 s to read it`);
+  const gap = 10, size = Math.floor((1080 - gap * (cols + 1)) / cols);
+  const rows = Math.ceil((1920 - gap) / (size + gap));
+  const ns = sample(poolOf("*"), cols * rows, "end wall").sort((a, b) => a - b);
+  const text = interpolate(frame, [t0, t0 + 14], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: EASE.out });
+  const drift = interpolate(frame, [0, durationInFrames], [1.0, 1.05], { extrapolateRight: "clamp" });
+  return (
+    <div style={{ position: "absolute", inset: 0, opacity: fade }}>
+      <div style={{ position: "absolute", inset: 0, overflow: "hidden" }}>
+        <div style={{ position: "absolute", inset: 0, transform: `scale(${drift})` }}>
+          <CentGrid ns={ns} layout={{ cols, size, gap }} from={0} enterFrames={Math.min(45, t0 - 6)}
+                    style={{ position: "absolute", left: gap, top: gap }} />
+        </div>
+        {/* A scrim under the text only: the wall stays the picture, the words stay readable. */}
+        <div style={{ position: "absolute", inset: 0, opacity: text,
+                      background: "radial-gradient(ellipse 80% 34% at 50% 47%, rgba(10,10,10,0.94), rgba(10,10,10,0.82) 60%, rgba(10,10,10,0.45))" }} />
+      </div>
+      <div style={{ position: "absolute", left: STAGE.x0, width: STAGE.x1 - STAGE.x0, top: STAGE.y0, height: READOUT.y1 - STAGE.y0,
+                    display: "flex", flexDirection: "column", justifyContent: "center", gap: 18, opacity: text,
+                    transform: `translateY(${(1 - text) * 14}px)` }}>
+        {lines.map((l, i) => <SafeText key={i} role="body" fontSize={48} maxLines={2}>{l}</SafeText>)}
+        {url ? <SafeText role="body" fontSize={48} maxLines={1} color={COLOR.accent}>{url}</SafeText> : null}
+      </div>
+    </div>
+  );
+};
 
-export const SETS = { CentRow, PoolWall, CentHero, FieldTitle, TraitBurst, ScreenTour } as const;
+for (const C of [CentRow, PoolWall, CentHero, FieldTitle, TraitBurst, ScreenTour, EndWall]) (C as any).wantsAlignment = true;
+
+export const SETS = { CentRow, PoolWall, CentHero, FieldTitle, TraitBurst, ScreenTour, EndWall } as const;

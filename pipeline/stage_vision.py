@@ -18,6 +18,11 @@ SRC = pathlib.Path(sys.argv[1] if len(sys.argv) > 1 else "/mnt/project-files/set
 OUT = ROOT / "public" / "vision"
 COPY = ["01_home_lab_viewport", "02_trait_atlas_verdigris_full", "03_sets_viewport"]
 STRIP = range(2, 6)
+# The user's own captures (24 Oct 2026), landscape. Scaled to 1080 wide so every
+# screen shares one coordinate system. The Void cards list the holding wallet
+# under each Cent; everything from that row down is cut away (ADDRESS_CUT, in
+# the capture's own pixels), so no address reaches the screen.
+USER = {"holders_floor": None, "sales_volume": None, "void": 1204, "traits_lab_filters": None, "centsbot": None}
 STEP = 1536
 
 def main() -> int:
@@ -28,6 +33,12 @@ def main() -> int:
         im = Image.open(p)
         if im.width != 1080: sys.exit(f"{p.name} is {im.width} px wide, expected 1080")
         im.convert("RGB").save(OUT / f"{name}.jpg", quality=90)
+    for name, cut in USER.items():
+        p = SRC / "user" / f"{name}.png"
+        if not p.exists(): sys.exit(f"missing {p}")
+        im = Image.open(p).convert("RGB")
+        if cut: im = im.crop((0, 0, im.width, cut))
+        im.resize((1080, round(im.height * 1080 / im.width)), Image.LANCZOS).save(OUT / f"{name}.jpg", quality=90)
     frames = [Image.open(SRC / f"04_collectors_claimed_scroll_{k:02d}.png").convert("RGB") for k in STRIP]
     strip = Image.new("RGB", (1080, STEP * len(frames)))
     for i, f in enumerate(frames):

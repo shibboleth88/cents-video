@@ -31,6 +31,8 @@ def main(src):
     pools["gold:any"] = get("gold_any")
     pools["gold:full"] = get("full_gold")
     pools["orange"] = get("orange")
+    pools["no_visual_trait"] = get("no_visual_trait")
+    pools["abraded:heavily"] = get("heavily_abraded")
     for k in idx:
         if k.startswith("contaminated:"):
             pools[k] = get(k)

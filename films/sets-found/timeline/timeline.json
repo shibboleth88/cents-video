@@ -32,23 +32,45 @@
    "end": {
     "at_phrase": "The cataloging of these marks"
    },
-   "purpose": "Many Cents in quick succession, then one held and pushed in on: the marks of touch and time seen on the coin itself.",
+   "purpose": "The sentence, shot by shot: the canvas (a Cent with no visual trait), the marks of touch (heavy abrasion, close), the marks of time (patina, close).",
    "visual_kind": "code",
    "component": "TraitBurst",
    "props": {
     "segments": [
      {
       "at_phrase": "Every difference to the canvas",
-      "pool": "*",
-      "count": 10,
+      "pool": "no_visual_trait",
+      "count": 6,
+      "hero": 8950,
+      "caption": "no visual trait"
+     },
+     {
+      "at_phrase": "the marks of touch",
+      "pool": "abraded:heavily",
+      "count": 4,
+      "hero": 70,
+      "focus": [
+       0.42,
+       0.45
+      ],
+      "zoom": 1.6,
+      "caption": "heavily abraded"
+     },
+     {
+      "at_phrase": "and time",
+      "pool": "verdigris:full",
+      "count": 4,
       "hero": 3981,
       "focus": [
        0.55,
        0.42
       ],
-      "zoom": 1.6
+      "zoom": 1.6,
+      "caption": "full verdigris",
+      "patina": "verdigris"
      }
-    ]
+    ],
+    "flash": 6
    }
   },
   {
@@ -271,10 +293,10 @@
       "caption": "orange",
       "patina": "orange",
       "focus": [
-       0.75,
-       0.8
+       0.58,
+       0.36
       ],
-      "zoom": 1.5
+      "zoom": 1.79
      }
     ],
     "flash": 6
@@ -1030,7 +1052,7 @@
     "at_phrase": "On cents.vision"
    },
    "end": {
-    "after_phrase": "explore the project"
+    "at_phrase": "and many more features"
    },
    "purpose": "Where to go next, shown as the site itself: the Traits Lab, the Traits Atlas, claimed Collector Walls with their Set badges, the Sets page. The film hands on rather than closing.",
    "visual_kind": "code",
@@ -1039,17 +1061,18 @@
     "title": "cents.vision",
     "screens": [
      {
-      "src": "01_home_lab_viewport.jpg",
+      "src": "traits_lab_filters.jpg",
       "from": [
        0,
        0,
-       1080
+       560
       ],
       "to": [
-       0,
-       300,
-       760
+       420,
+       40,
+       560
       ],
+      "aspect": 0.42,
       "caption": "Traits Lab"
      },
      {
@@ -1081,21 +1104,101 @@
        1080
       ],
       "caption": "Collector Walls"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s21b_more",
+   "start": {
+    "at_phrase": "and many more features"
+   },
+   "end": {
+    "at_phrase": "The CENTSbot also"
+   },
+   "purpose": "The rest of what cents.vision tracks, briefly, from the user's own captures: holders and the floor, sales volume, the Void. Wallet rows on the Void cards are cut away.",
+   "visual_kind": "code",
+   "component": "ScreenTour",
+   "props": {
+    "title": "cents.vision",
+    "screens": [
+     {
+      "src": "holders_floor.jpg",
+      "caption": "Holders",
+      "aspect": 0.42,
+      "from": [
+       0,
+       170,
+       700
+      ],
+      "to": [
+       380,
+       170,
+       700
+      ]
      },
      {
-      "at_phrase": "and many more features",
-      "src": "03_sets_viewport.jpg",
+      "at_phrase": "to explore the project",
+      "src": "sales_volume.jpg",
       "from": [
        0,
        0,
-       1080
+       700
       ],
       "to": [
-       0,
-       250,
-       1080
+       380,
+       10,
+       700
       ],
-      "caption": "Sets"
+      "aspect": 0.42,
+      "caption": "Sales"
+     },
+     {
+      "after_phrase": "explore the project",
+      "src": "void.jpg",
+      "from": [
+       0,
+       0,
+       760
+      ],
+      "to": [
+       320,
+       110,
+       760
+      ],
+      "aspect": 0.42,
+      "caption": "The Void"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s21c_bot",
+   "start": {
+    "at_phrase": "The CENTSbot also"
+   },
+   "end": {
+    "after_phrase": "questions you might have"
+   },
+   "purpose": "The CENTSbot on cents.vision, from the user's own capture: where a viewer can take a question next.",
+   "visual_kind": "code",
+   "component": "ScreenTour",
+   "props": {
+    "title": "cents.vision",
+    "screens": [
+     {
+      "src": "centsbot.jpg",
+      "from": [
+       60,
+       0,
+       960
+      ],
+      "to": [
+       60,
+       850,
+       960
+      ],
+      "caption": "CENTSbot"
      }
     ]
    }
@@ -1103,14 +1206,14 @@
   {
    "shot_id": "s22_credits",
    "start": {
-    "after_phrase": "explore the project"
+    "after_phrase": "questions you might have"
    },
    "end": {
     "at_end": true
    },
-   "purpose": "Credit the artwork and the Council, in the silence left for them.",
+   "purpose": "The final graphic: a wall of Cents unfolds in the silence after the narration, and the credits appear on it. That is the end.",
    "visual_kind": "code",
-   "component": "Credits",
+   "component": "EndWall",
    "props": {
     "lines": [
      "Artwork: CENTS, by Rutherford Chang",
@@ -1118,7 +1221,8 @@
      "Sets and trait names: the CENTS Trait Council",
      "Script: shibboleth"
     ],
-    "url": "cents.gallery"
+    "url": "cents.gallery",
+    "text_after": 2.0
    }
   }
  ],
