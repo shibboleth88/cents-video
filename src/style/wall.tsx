@@ -393,8 +393,10 @@ export const WallShot: React.FC<Anchored & {
  */
 export const CentFlip: React.FC<Anchored & {
   title: string; n: number; front: string; back: string; flip_at: string; readout: string; caption: string;
+  /** Under the title; defaults to the Cent's number. */
+  subtitle?: string;
 }> = (props) => {
-  const { title, n, front, back, flip_at, readout, caption } = props;
+  const { title, n, front, back, flip_at, readout, caption, subtitle = `CENT #${n}` } = props;
   const fade = useShotFade();
   const frame = useCurrentFrame();
   const at = useAt(props);

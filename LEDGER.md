@@ -130,6 +130,17 @@ them was reasonable.
   frame while seeking. The comparison that depended on it returned "could not
   compare", which read as a missing file rather than a malformed command.
 
+- **A render of the film you changed is not a check of the shared code you
+  changed.** A find-and-replace in a shared component file, made for one film,
+  also hit a component only another film uses. That film's render had already
+  shipped, so nothing re-ran it, and the edit referenced a prop the other
+  component never declared. Found 2026-10-26 while merging: `CentFlip` in
+  `src/style/wall.tsx` (Daidatep's flip shot) threw `ReferenceError: subtitle`
+  after #6129 v2 (16ace98). Seen red with `tsc --noEmit` and `remotion still` at
+  frame 870, green after the fix. *Separating observation:* `npx tsc --noEmit`
+  over the whole project after any edit to `src/style/`, not a render of one
+  film.
+
 ## Refuted — killed by a measurement, do not re-investigate
 
 - *"The left-band safe-area failure is a mispositioned element."* **Refuted** by
