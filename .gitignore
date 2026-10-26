@@ -9,6 +9,7 @@ public/vo.wav
 .env.local
 public/cents/
 __pycache__/
+public/secret-history/
 public/cents_field.webp
 public/cents_hi/
 public/vision/
