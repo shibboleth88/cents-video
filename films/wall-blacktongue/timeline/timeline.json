@@ -38,7 +38,7 @@
      "total_frames": 2516
     },
     "clip": {
-     "src": "3dcents/5185-360-30fps.mp4",
+     "src": "3dcents/5185-360-30fps-alpha.webm",
      "width": 1080,
      "height": 1920,
      "frames": 150,
@@ -47,7 +47,8 @@
       "cy": 959.5,
       "d": 776
      },
-     "credit": "3D render: 3DCENTS by sinvalli"
+     "credit": "3D render: 3DCENTS by sinvalli",
+     "alpha": true
     }
    }
   },
