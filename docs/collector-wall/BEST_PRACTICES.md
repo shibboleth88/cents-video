@@ -4,7 +4,7 @@ This is the one source for the format of every Collector Wall episode. Read it b
 
 The reference episode is **blacktongue** (`films/wall-blacktongue/` on branch `claude/project-thread-nkzn17`, PR #5). Copy its folder layout, timeline shape and caption builder.
 
-Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the Daidatep thread's first findings. 2026-10-26: §5 "Delivery check" added from the GPT WBWA reel handover. 2026-10-27: narration voice changed to "eee" (§5).
+Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the Daidatep thread's first findings. 2026-10-26: §5 "Delivery check" added from the GPT WBWA reel handover. 2026-10-27: narration voice changed to "eee" (§5); candidate showcase opener (§3, pending).
 
 ## 1. What an episode is
 
@@ -38,6 +38,7 @@ Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the D
 ## 3. Structure (the order that worked)
 
 1. **Open on the Wall.** "This is the Wall of NAME." Use a cents.vision screenshot of that Wall's card if one exists. Otherwise use `WallBoard` at `{top: true}`. Either way, frame 0 shows the Wall.
+   - **Candidate, not yet final (ScrappyT, user 2026-10-27):** a "showcase" opener, so a scroller can tell from frame 0 that more is coming. It uses `WallOpener` variant `showcase` (src/style/wallopener.tsx, PR #14). The WallBoard card sits at the top, with the signature Cent as its 3DCENTS spin; the mosaic Cents light up one by one, then the badges in reading order, with a thin copper progress bar across the top. It runs until "Its signature Cent". The user is still tuning speed, order and the progress bar. Wait for the final settings from the ScrappyT thread before using it in another episode. Preview: `/mnt/project-files/collector-wall/openers/opener-showcase_v1.mp4`.
 2. **Zoom to the signature Cent on the screenshot.** Once that sentence ends, the camera zooms onto the signature Cent on the card. Only then does the film cut to the individual view of that Cent: its number, year, and its traits ("…and is a Ghost Cent").
 3. **Count and span:** "The Wall holds N Cents, from YEAR to YEAR." Then the size club, zooming onto the club badge, with the club's range ("…which puts it in the Dime Club, for ten to twenty-four Cents").
 4. **Standout Cents.** For each one, say what makes it rare, as "one of only N" with a measured N. Where the trait sits in one place on the coin, zoom into it (see §4).
@@ -161,7 +162,9 @@ For a trait you must see on the coin itself (a date, a mint mark), cut from the 
 
 ## 5. Narration, captions, delivery
 
-- **Voice (from 2026-10-27):** the user's ElevenLabs voice "eee" (`pp4OmJ3yyWS9Jyhejh5f`), model `eleven_multilingual_v2`, via the ElevenLabs MCP (`creative_list_voices` search "eee" finds it). It replaces "eo" (`G9J6fFeGgUrIramcuC3q`, `eleven_v4`), which stays only on episodes already voiced in it (blacktongue, Daidatep); do not re-voice those unless the user asks. Test takes: `/mnt/project-files/voice/`.
+- **Voice (from 2026-10-27):** the user's ElevenLabs voice "eee" (`pp4OmJ3yyWS9Jyhejh5f`), via the ElevenLabs MCP (`creative_list_voices` search "eee" finds it). It replaces "eo" (`G9J6fFeGgUrIramcuC3q`), which stays only on episodes already voiced in it (blacktongue, Daidatep); do not re-voice those unless the user asks.
+  - **Setting:** model `eleven_v4`, with `[thoughtfully] [calm]` at the start of every line. The user picked this in the #2616 thread, and ScrappyT uses it. *(Correction, 2026-10-27: this line first said `eleven_multilingual_v2`. That was only the model of the cloud test takes in `/mnt/project-files/voice/`.)*
+  - **scribe_v1 returns the audio tags as tiny word tokens.** Strip them from the transcript before the word-for-word check and the alignment.
 - **TTS text:**
   - Spell numbers out ("fifty-one eighty-five", "October twenty twenty-six").
   - Say "cents dot vision".
