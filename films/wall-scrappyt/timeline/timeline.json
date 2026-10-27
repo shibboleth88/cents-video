@@ -4,7 +4,7 @@
   "subtitle": "ScrappyT",
   "author": "shibboleth",
   "source": "https://cents.vision/collectors.html",
-  "version": "v1, opener rush (2026-10-27)"
+  "version": "v1, opener showcase + 3DCENTS clip (2026-10-27)"
  },
  "_what": "Collector Wall: ScrappyT. Every coin is a real Cent by number; every figure comes from data/wall_board.json (cents.vision, 27 Oct 2026). No wallet address appears.",
  "shots": [
@@ -16,11 +16,11 @@
    "end": {
     "at_phrase": "number seventy-one thirty-nine"
    },
-   "purpose": "Opening (rush): moving from frame 0, hands over to the Wall card, which zooms onto the signature Cent.",
+   "purpose": "Opening (showcase): moving from frame 0, hands over to the Wall card, which zooms onto the signature Cent.",
    "visual_kind": "code",
    "component": "WallOpener",
    "props": {
-    "variant": "rush",
+    "variant": "showcase",
     "wall": "scrappyt",
     "show": "card",
     "until_phrase": "Its signature Cent",
@@ -36,6 +36,18 @@
     ],
     "progress": {
      "total_frames": 4652
+    },
+    "clip": {
+     "src": "3dcents/7139-360-30fps.mp4",
+     "width": 1080,
+     "height": 1920,
+     "frames": 150,
+     "coin": {
+      "cx": 539.5,
+      "cy": 959.5,
+      "d": 776
+     },
+     "credit": "3D render: 3DCENTS by sinvalli"
     }
    }
   },
@@ -54,7 +66,19 @@
     "title": "ScrappyT",
     "n": 7139,
     "readout": "1967",
-    "caption": "Full Desert · Ghost"
+    "caption": "Full Desert · Ghost",
+    "clip": {
+     "src": "3dcents/7139-360-30fps.mp4",
+     "width": 1080,
+     "height": 1920,
+     "frames": 150,
+     "coin": {
+      "cx": 539.5,
+      "cy": 959.5,
+      "d": 776
+     },
+     "credit": "3D render: 3DCENTS by sinvalli"
+    }
    }
   },
   {

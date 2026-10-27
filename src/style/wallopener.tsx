@@ -3,7 +3,7 @@ import { Img, interpolate, Loop, OffthreadVideo, staticFile, useCurrentFrame, us
 import { EASE } from "./motion";
 import { COLOR, SAFE, TYPE } from "./tokens";
 import { Imagery, SafeText } from "./Safe";
-import { WallBoard, layoutWall, useBoard, type Board, type Move, type Show } from "./wallboard";
+import { WallBoard, layoutWall, useBoard, type Board, type Move, type Show, type Sweep } from "./wallboard";
 import { findPhrase, type Alignment } from "../lib/timeline";
 
 /**
@@ -19,6 +19,9 @@ import { findPhrase, type Alignment } from "../lib/timeline";
  *             a running count, then the whole thing folds down into the card.
  *  - "turn":  the signature Cent turning (the 3DCENTS render) under the name,
  *             then it shrinks into its place on the card.
+ *  - "showcase": the card at frame 0 with the signature Cent turning in its
+ *             slot (3DCENTS) while the badges, and the mosaic Cents, light up
+ *             one after another. The user's direction, 2026-10-27 16:55Z.
  * `progress` adds a thin bar across the top that fills over the whole film,
  * the way Stories show there is more to come.
  */
@@ -29,15 +32,20 @@ type Clip = { src: string; width: number; height: number; frames: number; coin: 
 const VIEW = { x0: 40, y0: SAFE.essential.y0 };   // where WallBoard puts board unit (0,0) at its top view, k = 1
 
 export const WallOpener: React.FC<Anchored & {
-  variant: "live" | "rush" | "turn";
+  variant: "live" | "rush" | "turn" | "showcase";
   wall: string; moves?: Move[]; show?: Show;
   /** The intro hands over to the card when this phrase starts. */
   until_phrase: string;
   /** Total film length in frames, for the progress bar. */
   progress?: { total_frames: number };
   clip?: Clip;
+  /** showcase: the light-up chases; defaults to the mosaic and, at the same time, every badge in reading order. */
+  sweep?: Sweep[];
 }> = (props) => {
   const { variant, wall, moves = [], show = "card", until_phrase, progress, clip, alignment, shotStartFrame } = props;
+  const showcase = variant === "showcase";
+  if (showcase && !clip) throw new Error("WallOpener showcase: needs the signature Cent's 3DCENTS clip");
+  const sweep = props.sweep ?? [{ rows: ["mosaic"], stagger: 5, hold: 14 }, { rows: ["tags", "sets", "fulls", "meta"], stagger: 3, hold: 14 }];
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const end = Math.round(findPhrase(alignment, until_phrase).start * fps) - shotStartFrame;
@@ -56,17 +64,23 @@ export const WallOpener: React.FC<Anchored & {
   return (
     <div style={{ position: "absolute", inset: 0 }}>
       <div style={{ position: "absolute", inset: 0,
-                    opacity: variant === "live" ? 1 : interpolate(frame, [end - 16, end - 2], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }) }}>
+                    opacity: variant === "live" || showcase ? 1 : interpolate(frame, [end - 16, end - 2], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }) }}>
         {/* The pull-back stays inside the board's own view, so nothing spills over the stage. */}
         <div style={{ position: "absolute", left: VIEW.x0, top: VIEW.y0, width: 1000, height: 1330 - VIEW.y0, overflow: "hidden", borderRadius: 18 }}>
           <div style={{ position: "absolute", left: -VIEW.x0, top: -VIEW.y0, width: 1080, height: 1920, ...under }}>
-            <WallBoard wall={wall} moves={moves} show={show} alignment={alignment} shotStartFrame={shotStartFrame} />
+            <WallBoard wall={wall} moves={moves} show={show} alignment={alignment} shotStartFrame={shotStartFrame}
+                       signature_clip={showcase ? clip : undefined} sweep={showcase ? sweep : undefined} />
             {variant === "live" && b ? <MosaicSweep board={b} frame={frame} end={end} /> : null}
           </div>
         </div>
       </div>
       {variant === "rush" && b && frame < end ? <Rush board={b} frame={frame} end={end} out={out} /> : null}
       {variant === "turn" && b && frame < end + 2 ? <Turn board={b} frame={frame} end={end} clip={clip} /> : null}
+      {showcase && clip ? (
+        <div style={{ position: "absolute", left: SAFE.essential.x0 + 24, top: 1262, width: SAFE.essential.x1 - SAFE.essential.x0 - 48 }}>
+          <SafeText role="label" fontSize={42} maxLines={1} color="#555" style={{ fontFamily: TYPE.body, textAlign: "center" }}>{clip.credit}</SafeText>
+        </div>
+      ) : null}
       {progress ? <ProgressBar total={progress.total_frames} frame={frame + shotStartFrame} /> : null}
     </div>
   );

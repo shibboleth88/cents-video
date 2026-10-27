@@ -1,7 +1,7 @@
 """Writes timeline.json for the ScrappyT episode. The opener variant is the one
 argument, so the three proposed openings render from one script.
 
-    python3 films/wall-scrappyt/timeline/make_timeline.py [live|rush|turn] [--clip]
+    python3 films/wall-scrappyt/timeline/make_timeline.py [showcase|live|rush|turn] [--clip]
 """
 import json, sys, pathlib
 F = pathlib.Path(__file__).resolve().parent
@@ -25,7 +25,7 @@ row = lambda sub, cents, **kw: dict({"title": T, "subtitle": sub, "cents": cents
 opener = {"variant": variant, "wall": W, "show": "card", "until_phrase": "Its signature Cent",
           "moves": [{"at_phrase": "Its signature Cent", "target": {"cent": 7139, "in": "signature"}, "mark": True}],
           "progress": {"total_frames": TOTAL}}
-if variant == "turn":
+if variant in ("turn", "showcase"):
     opener["clip"] = CLIP if use_clip else PLACEHOLDER
 sig = {"title": T, "n": 7139, "readout": "1967", "caption": "Full Desert · Ghost"}
 if use_clip: sig["clip"] = CLIP
