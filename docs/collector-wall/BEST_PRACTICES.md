@@ -4,7 +4,7 @@ This is the one source for the format of every Collector Wall episode. Read it b
 
 The reference episode is **blacktongue** (`films/wall-blacktongue/` on branch `claude/project-thread-nkzn17`, PR #5). Copy its folder layout, timeline shape and caption builder.
 
-Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the Daidatep thread's first findings. 2026-10-26: §5 "Delivery check" added from the GPT WBWA reel handover. 2026-10-27: narration voice changed to "eee" (§5); showcase opener is the series opening (§3); 3DCENTS credit wording approved (§4).
+Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the Daidatep thread's first findings. 2026-10-26: §5 "Delivery check" added from the GPT WBWA reel handover. 2026-10-27: narration voice changed to "eee" (§5); showcase opener is the series opening (§3); 3DCENTS credit wording approved (§4); badge zooms get the opener-style highlight (§4a).
 
 ## 1. What an episode is
 
@@ -171,6 +171,7 @@ python3 pipeline/stage_cents.py --src <sovrn-onchain>/cents <every Cent number o
 - A move eases over 18 frames.
 - With `until_phrase`, the move pans linearly until that phrase. That is how to scroll.
 - `mark: true` outlines the target in copper.
+- **A badge being talked about gets the opener's highlight (user, 2026-10-27).** When the narration names a single badge and the camera zooms onto it, light that badge up more prominently than the thin `mark` outline. Use the same style as the showcase opener's light-up: a copper ring with a glow, a slight brightness lift, and a small scale-up, held while it is spoken. Until `mark` does this by default on badge targets, add it explicitly in the episode. A `sweep` limited to that badge's row will not do, because it lights the whole row. This applies to every badge zoom (club, Wheat, Sets, Diamond Hands, Mint Keeper, trait tags).
 - `zoom` caps the magnification. The default is 2.6.
 
 **What the board shows:** `show: "card"` draws the card alone. The user wants this for the Wall itself: the card should not carry the "N CENTS in this wall" collection rows. `show: "grid"` draws the collection rows alone, which are for singling out Cents (the wheat pennies, a 1955-D). The default "all" draws both and is only kept for older episodes. (User, 2026-10-25; added on PR #8.)
