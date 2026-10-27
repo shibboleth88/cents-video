@@ -1,5 +1,5 @@
 import React from "react";
-import { continueRender, delayRender, Img, interpolate, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
+import { continueRender, delayRender, Img, interpolate, Loop, OffthreadVideo, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import { useShotFade, EASE } from "./motion";
 import { COLOR, SAFE, TYPE } from "./tokens";
 import { Imagery, SafeText } from "./Safe";
@@ -44,6 +44,17 @@ export type Target =
 export type Move = { at_phrase?: string; target: Target; until_phrase?: string; mark?: boolean; zoom?: number };
 export type Highlight = { at_phrase: string; until_phrase?: string; cents?: number[]; group?: string };
 export type Show = "all" | "card" | "grid";
+/** A 3DCENTS render of the signature Cent (sinvalli), already at 30 fps; `coin` is measured on its first frame. */
+export type SigClip = { src: string; width: number; height: number; frames: number; coin: { cx: number; cy: number; d: number }; credit: string;
+  /** true: src carries its own alpha (VP9 webm keyed off the render's black), so it sits on any card without a dark disc. */
+  alpha?: boolean };
+/**
+ * A light-up chase: the elements of the named rows, in reading order, glow one
+ * after another, `stagger` frames apart, each glow fading over `hold` frames,
+ * starting `from` frames into the shot. Several sweeps run at the same time.
+ * For openings: it shows from frame 0 that the card is alive.
+ */
+export type Sweep = { rows: ("mosaic" | "tags" | "sets" | "fulls" | "meta")[]; stagger?: number; hold?: number; from?: number };
 export type Readout = { at_phrase: string; text?: string; count?: { from: number; to: number; until_phrase: string; suffix?: string } };
 
 // ---------- layout (board units; the board is 1000 wide) ----------
@@ -138,7 +149,7 @@ export function layoutWall(b: Board) {
 // ---------- data ----------
 
 const cache = new Map<string, Board>();
-function useBoard(slug: string): Board | null {
+export function useBoard(slug: string): Board | null {
   const [b, setB] = React.useState<Board | null>(cache.get(slug) ?? null);
   const [handle] = React.useState(() => (cache.has(slug) ? null : delayRender(`wall board ${slug}`)));
   React.useEffect(() => {
@@ -160,14 +171,18 @@ export const WallBoard: React.FC<Anchored & {
   /** "card": the Wall card alone, as collectors.html shows it closed. "grid": only the opened
    *  "View collection" rows, for singling out Cents. Default "all" draws both. */
   show?: Show;
+  /** Turn the signature Cent in its slot: the 3DCENTS render, on a dark disc so its black background never shows on the white card. */
+  signature_clip?: SigClip;
+  sweep?: Sweep[];
 }> = (props) => {
   const b = useBoard(props.wall);
   if (!b) return null;
   return <WallBoardInner {...props} board={b} />;
 };
 
-const WallBoardInner: React.FC<Anchored & { board: Board; moves?: Move[]; highlights?: Highlight[]; readout?: Readout; show?: Show }> = (props) => {
-  const { board: b, moves = [], highlights = [], readout, alignment, shotStartFrame, show = "all" } = props;
+const WallBoardInner: React.FC<Anchored & { board: Board; moves?: Move[]; highlights?: Highlight[]; readout?: Readout; show?: Show; signature_clip?: SigClip; sweep?: Sweep[] }> = (props) => {
+  const { board: b, moves = [], highlights = [], readout, alignment, shotStartFrame, show = "all", signature_clip: clip, sweep } = props;
+  if (clip && !clip.credit) throw new Error("WallBoard: a 3DCENTS signature clip must carry its credit");
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const fade = useShotFade();
@@ -177,6 +192,24 @@ const WallBoardInner: React.FC<Anchored & { board: Board; moves?: Move[]; highli
     return f;
   };
   const L = React.useMemo(() => layoutWall(b), [b]);
+  // Light-up chase: item index -> glow 0..1.
+  const glow = React.useMemo(() => {
+    const g = new Map<number, number>();
+    for (const sw of sweep ?? []) {
+      const st = sw.stagger ?? 4, hold = sw.hold ?? 14, from = sw.from ?? 0;
+      const idx = sw.rows.flatMap((row) => L.items.map((it, i) => [it, i] as const)
+        .filter(([it]) => row === "mosaic" ? it.kind === "cent" && it.where === "mosaic" : it.kind === "badge" && it.row === row)
+        .map(([, i]) => i));
+      if (!idx.length) throw new Error(`WallBoard: sweep over ${sw.rows.join(", ")} finds nothing on ${b.name}'s Wall`);
+      idx.forEach((i, k) => {
+        const f0 = from + k * st;
+        // Up in 3 frames, down over `hold`. The first element is already lit at frame 0, so the preview frame shows it.
+        const v = frame < f0 ? 0 : frame < f0 + 3 ? (k === 0 && from === 0 ? 1 : (frame - f0) / 3) : Math.max(0, 1 - (frame - f0 - 3) / hold);
+        g.set(i, Math.max(g.get(i) ?? 0, v));
+      });
+    }
+    return g;
+  }, [sweep, L, frame]);
   const VIEW = { x0: 40, x1: 1040, y0: SAFE.essential.y0, y1: readout ? 1130 : 1330 };
   const VW = VIEW.x1 - VIEW.x0, VH = VIEW.y1 - VIEW.y0;
 
@@ -263,10 +296,28 @@ const WallBoardInner: React.FC<Anchored & { board: Board; moves?: Move[]; highli
             if (it.kind === "cent") {
               const on = lit?.has(it.n);
               const dim = lit && !on && it.where !== "signature" ? 1 - 0.75 * litT : 1;
+              const gl = glow.get(i) ?? 0;
+              if (clip && it.where === "signature") {
+                const d = S(x1 - x0), k = d / clip.coin.d;
+                return (
+                  // The blend needs its dark fill inside its own isolated group (as in WallStandout).
+                  // An alpha clip needs neither: a dark disc shows as a black circle whenever the coin turns edge-on on the white card.
+                  <div key={i} style={{ ...st, borderRadius: "50%", overflow: "hidden", background: clip.alpha ? undefined : COLOR.bg, isolation: "isolate", opacity: dim }}>
+                    <Loop durationInFrames={clip.frames} layout="none">
+                      <OffthreadVideo src={staticFile(clip.src)} muted transparent={!!clip.alpha}
+                        style={{ position: "absolute", left: d / 2 - clip.coin.cx * k, top: d / 2 - clip.coin.cy * k,
+                                 width: clip.width * k, height: clip.height * k, mixBlendMode: clip.alpha ? undefined : "lighten" }} />
+                    </Loop>
+                  </div>
+                );
+              }
               return (
-                <div key={i} style={{ ...st, opacity: dim }}>
+                <div key={i} style={{ ...st, opacity: dim, transform: gl ? `scale(${1 + 0.1 * gl})` : undefined,
+                                      filter: gl ? `brightness(${1 + 0.35 * gl})` : undefined }}>
                   <Img src={staticFile(`cents/${it.n}.webp`)} style={{ width: "100%", height: "100%" }} />
                   {on ? <div style={{ position: "absolute", inset: -S(5), borderRadius: "50%", border: `${S(5)}px solid ${COLOR.accent}`, opacity: litT }} /> : null}
+                  {gl ? <div style={{ position: "absolute", inset: -S(4), borderRadius: "50%", border: `${S(4)}px solid ${COLOR.accent}`,
+                                      boxShadow: `0 0 ${S(16)}px ${COLOR.accent}`, opacity: gl }} /> : null}
                 </div>
               );
             }
@@ -290,7 +341,10 @@ const WallBoardInner: React.FC<Anchored & { board: Board; moves?: Move[]; highli
                                     fontWeight: (s as any)?.weight ?? (it.row === "sets" ? 600 : 400),
                                     textTransform: it.row === "sets" && (s as any).upper ? "uppercase" : "none",
                                     letterSpacing: it.row === "sets" && (s as any).upper ? S(1) : 0,
-                                    opacity: lit ? 1 - 0.6 * litT : 1 }}>{it.text}</div>
+                                    opacity: lit ? 1 - 0.6 * litT : 1,
+                                    ...(glow.get(i) ? { transform: `scale(${1 + 0.08 * glow.get(i)!})`, borderRadius: S(4),
+                                                        outline: `${S(3)}px solid rgba(175,107,57,${glow.get(i)})`,
+                                                        boxShadow: `0 0 ${S(18)}px rgba(175,107,57,${glow.get(i)})` } : {}) }}>{it.text}</div>
             );
           })}
           {mark && mark.t > 0 ? (
