@@ -54,6 +54,12 @@ Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the D
                 "coin": {"cx": 539.5, "cy": 959.5, "d": 776}, "credit": "3D render: 3DCENTS by sinvalli"}}}
      ```
    - **It needs the signature Cent's 3DCENTS spin** (§4), so ask the user to export it at the start of an episode. It throws without a clip or a credit.
+   - **Key the clip for the white card.** On the card, the opener uses an alpha copy of the spin, not the black-background mp4: with a dark disc, the coin shows a black circle whenever it turns edge-on. Make it from the 30 fps retime:
+     ```bash
+     ffmpeg -i cent-<n>-360-1080x1920-30fps-retimed.mp4 -vf "format=yuva420p,geq=lum='lum(X,Y)':cb='cb(X,Y)':cr='cr(X,Y)':a='clip((lum(X,Y)-18)*40,0,255)'" -c:v libvpx-vp9 -pix_fmt yuva420p -auto-alt-ref 0 -b:v 4M cent-<n>-360-1080x1920-30fps-alpha.webm
+     ```
+     Then set `"src": "3dcents/<n>-360-30fps-alpha.webm", "alpha": true` in the opener's clip. The render's black sits at luma 16, so a threshold near 0 keys nothing. The `WallStandout` shot that follows stays on black and keeps the mp4. Keep both files in `/mnt/project-files/collector-wall/3dcents/`.
+   - The credit under the card fades out before the zoom onto the signature Cent (PR #14 a3ee33b), so it never sits on the zoomed badges.
    - **Still being tuned:** the user may change the speed, the order or the progress bar in the ScrappyT thread. Take the current settings from that thread. Reference renders: ScrappyT v1, and `/mnt/project-files/collector-wall/openers/opener-showcase_v1.mp4`.
    - The earlier opening, a cents.vision screenshot of the card zoomed onto the signature Cent, is retired for new episodes.
 2. **Zoom to the signature Cent on the card.** Once that sentence ends, the camera zooms onto the signature Cent on the card. Only then does the film cut to the individual view of that Cent: its number, year, and its traits ("…and is a Ghost Cent").
