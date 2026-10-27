@@ -9,6 +9,7 @@ import { NARROWING } from "../narrowing/shots";
 import { WALL } from "./wall";
 import { ONECENT } from "./onecent";
 import { WallBoard } from "./wallboard";
+import { WallOpener } from "./wallopener";
 
 const useFade = useShotFade;
 
@@ -186,5 +187,5 @@ export const CaptionLayer: React.FC<{
   );
 };
 
-export const REGISTRY = { TitleCard, PullQuote, StatReveal, AssetShot, Credits, ...SETS, ...NARROWING, ...WALL, WallBoard, ...ONECENT } as const;
+export const REGISTRY = { TitleCard, PullQuote, StatReveal, AssetShot, Credits, ...SETS, ...NARROWING, ...WALL, WallBoard, WallOpener, ...ONECENT } as const;
 export type ComponentName = keyof typeof REGISTRY;

@@ -98,7 +98,9 @@ def check(b: dict, rec: dict) -> None:
         sys.exit("REFUSING:\n  " + "\n  ".join(errs))
 
 
-def load_walls() -> list:
+def load_walls(snapshot: Path | None = None) -> list:
+    if snapshot:                      # a dated re-fetch: snapshots/YYYY-MM-DD/replay.json
+        return json.load(open(snapshot / "replay.json"))["claimed"]
     w = json.load(open(DATA / "claimed_walls.json"))
     return w["walls"] if isinstance(w, dict) else w
 
@@ -125,14 +127,18 @@ def self_test() -> None:
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--name"); ap.add_argument("--slug"); ap.add_argument("--as-of")
+    ap.add_argument("--snapshot", type=Path, help="a dated snapshot dir (replay.json + raw/) instead of claimed_walls.json")
     ap.add_argument("--self-test", action="store_true")
     a = ap.parse_args()
     if a.self_test: return self_test()
-    meta = json.load(open(DATA / "raw/merged-new2.json"))
-    recs = [w for w in load_walls() if w["name"] == a.name]
+    src = a.snapshot or DATA
+    meta = json.load(open(src / "raw/merged-new2.json"))
+    recs = [w for w in load_walls(a.snapshot) if w["name"] == a.name]
     if len(recs) != 1: sys.exit(f"{len(recs)} claimed Walls named {a.name!r}")
-    gen = json.load(open(DATA / "claimed_walls.json")).get("generated_at", "")
+    gen = a.snapshot.name if a.snapshot else json.load(open(DATA / "claimed_walls.json")).get("generated_at", "")
     board = build(recs[0], meta, a.as_of or gen[:10])
+    if a.snapshot:
+        board["_source"] = board["_source"].replace("claimed_walls.json + raw/", f"snapshots/{a.snapshot.name}/replay.json + raw/")
     for out in [ROOT / f"films/wall-{a.slug}/data/wall_board.json", ROOT / f"public/walls/{a.slug}.json"]:
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(json.dumps(board, indent=1))
