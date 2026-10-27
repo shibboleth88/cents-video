@@ -240,7 +240,7 @@ const WallBoardInner: React.FC<Anchored & { board: Board; moves?: Move[]; highli
 
   // Camera: hold the top of the card (or of the rows), then each move eases (or, with until_phrase, pans linearly) to its target.
   let c = show === "grid" ? cam(resolve({ grid_start: true }).box, 1) : cam([0, 0, BW, VH], 1);
-  let mark: { box: Box; t: number } | null = null;
+  let mark: { box: Box; t: number; badge?: number } | null = null;
   let last = -1;
   for (const [i, m] of moves.entries()) {
     const f0 = m.at_phrase ? at(m.at_phrase) : 0;
@@ -253,10 +253,12 @@ const WallBoardInner: React.FC<Anchored & { board: Board; moves?: Move[]; highli
     const t = interpolate(frame, [f0, f1], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp",
                                                     easing: m.until_phrase ? EASE.linear : EASE.inOut });
     c = { k: c.k + (to.k - c.k) * t, cx: c.cx + (to.cx - c.cx) * t, cy: c.cy + (to.cy - c.cy) * t };
-    const tb = "badge" in m.target ? L.items.find((i) => i.kind === "badge" && i.text.startsWith((m.target as any).badge))!.box
+    const bi = "badge" in m.target ? L.items.findIndex((i) => i.kind === "badge" && i.text.startsWith((m.target as any).badge)) : -1;
+    const tb = bi >= 0 ? L.items[bi]!.box
              : "cent" in m.target ? (() => { const [x0, y0, x1, y1] = r.box, p = (x1 - x0) * 0.35 / 1.7; return [x0 + p, y0 + p, x1 - p, y1 - p] as Box; })()
              : r.box;
-    mark = m.mark ? { box: tb, t: interpolate(frame, [f1 - 4, f1 + 8], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }) } : null;
+    mark = m.mark ? { box: tb, t: interpolate(frame, [f1 - 4, f1 + 8], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }),
+                      badge: bi >= 0 ? bi : undefined } : null;
   }
   const ox = VW / 2 - c.cx * c.k, oy = VH / 2 - c.cy * c.k;
   const S = (v: number) => v * c.k;
@@ -329,6 +331,9 @@ const WallBoardInner: React.FC<Anchored & { board: Board; moves?: Move[]; highli
               );
             }
             const size = SIZE[it.row];
+            // A marked badge lights up the way the opener's sweep does, held while it is spoken (user, 2026-10-27).
+            const marked = mark && mark.badge === i ? mark.t : 0;
+            const bg = Math.max(glow.get(i) ?? 0, marked);
             const s = it.row === "sets" ? setStyle(it.text)
                     : it.row === "fulls" || (it.row === "tags" && it.text.startsWith("Full x")) ? { color: "#1f5e3a", border: "#1f5e3a", bg: "#eaf5ee", weight: 600 }
                     : it.row === "meta" ? META_STYLE(it.text)
@@ -341,13 +346,17 @@ const WallBoardInner: React.FC<Anchored & { board: Board; moves?: Move[]; highli
                                     fontWeight: (s as any)?.weight ?? (it.row === "sets" ? 600 : 400),
                                     textTransform: it.row === "sets" && (s as any).upper ? "uppercase" : "none",
                                     letterSpacing: it.row === "sets" && (s as any).upper ? S(1) : 0,
-                                    opacity: lit ? 1 - 0.6 * litT : 1,
-                                    ...(glow.get(i) ? { transform: `scale(${1 + 0.08 * glow.get(i)!})`, borderRadius: S(4),
-                                                        outline: `${S(3)}px solid rgba(175,107,57,${glow.get(i)})`,
-                                                        boxShadow: `0 0 ${S(18)}px rgba(175,107,57,${glow.get(i)})` } : {}) }}>{it.text}</div>
+                                    opacity: lit && !(mark && mark.badge === i) ? 1 - 0.6 * litT : 1,
+                                    ...(bg ? { transform: `scale(${1 + 0.08 * bg + 0.06 * marked})`, borderRadius: S(4), zIndex: marked ? 2 : undefined,
+                                               outline: `${S(3)}px solid rgba(175,107,57,${bg})`,
+                                               boxShadow: `0 0 ${S(18)}px rgba(175,107,57,${bg})` } : {}),
+                                    // Spoken about: a copper wash and full-strength text on top of the light-up.
+                                    ...(marked ? { background: `linear-gradient(rgba(175,107,57,${0.16 * marked}), rgba(175,107,57,${0.16 * marked})), ${s ? s.bg : "white"}`,
+                                                   color: s ? s.color : `rgb(${119 - 70 * marked},${119 - 70 * marked},${119 - 70 * marked})`,
+                                                   fontWeight: 600, paddingLeft: s ? 0 : S(4), paddingRight: s ? 0 : S(4) } : {}) }}>{it.text}</div>
             );
           })}
-          {mark && mark.t > 0 ? (
+          {mark && mark.t > 0 && mark.badge === undefined ? (
             <div style={{ position: "absolute", left: ox + S(mark.box[0]) - 12, top: oy + S(mark.box[1]) - 12,
                           width: S(mark.box[2] - mark.box[0]) + 24, height: S(mark.box[3] - mark.box[1]) + 24,
                           border: `5px solid ${COLOR.accent}`, borderRadius: 14, opacity: mark.t }} />
