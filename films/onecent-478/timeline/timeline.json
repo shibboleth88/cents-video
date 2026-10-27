@@ -1,0 +1,461 @@
+{
+ "essay": {
+  "title": "Cent #478",
+  "subtitle": "Inscription #65999820",
+  "author": "shibboleth",
+  "source": "/mnt/project-files/single-cent-series/478/478_proposal_v0.1.md",
+  "version": "v1, script v0.1 (2026-10-26)"
+ },
+ "_what": "Cent #478. Concepts C50 (primary) and C04 (value tie). Every count from the Sep 2026 trait export. Traits are read from the front only.",
+ "shots": [
+  {
+   "shot_id": "s01_open",
+   "start": {
+    "at_start": true
+   },
+   "end": {
+    "at_phrase": "Compare Cent number thirty-five"
+   },
+   "purpose": "Standard opening: the 3DCENTS turn of #478 plays once, then settles on the 1050px front at the same size (clip coin measured on frame 0: centre 539.5, 959.0; d 775; photo coin 0.816 of the image). Then one zoom per named trait, front only. Trait areas are Claude's reading of the photo (478_zoom_plan_v0.1.jpg), pending the user's check.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65999820,
+    "n": 478,
+    "front": "hires/478.webp",
+    "moves": [
+     {
+      "at_phrase": "Under the word Trust",
+      "box": [
+       0.485,
+       0.16,
+       0.79,
+       0.32
+      ],
+      "mark": true,
+      "max": 4,
+      "dur": 0.8
+     },
+     {
+      "at_phrase": "At his collar",
+      "box": [
+       0.26,
+       0.12,
+       0.68,
+       0.62
+      ],
+      "marks": [
+       [
+        0.28,
+        0.14,
+        0.4,
+        0.22
+       ],
+       [
+        0.55,
+        0.53,
+        0.64,
+        0.6
+       ]
+      ],
+      "dur": 0.8
+     },
+     {
+      "at_phrase": "Across Liberty",
+      "box": [
+       0.1,
+       0.38,
+       0.82,
+       0.85
+      ],
+      "marks": [
+       [
+        0.12,
+        0.4,
+        0.48,
+        0.69
+       ],
+       [
+        0.49,
+        0.65,
+        0.8,
+        0.83
+       ]
+      ],
+      "dur": 0.8
+     }
+    ],
+    "spin": {
+     "src": "3dcents/478-360-30fps.mp4",
+     "width": 1080,
+     "height": 1920,
+     "frames": 150,
+     "coin": {
+      "cx": 539.5,
+      "cy": 959.0,
+      "d": 775
+     },
+     "credit": "3D render: 3DCENTS.vercel.app"
+    },
+    "reads": [
+     {
+      "at_phrase": "struck in nineteen sixty-three",
+      "readout": "1963"
+     },
+     {
+      "at_phrase": "Under the word Trust",
+      "caption": "Significant Obsidian"
+     },
+     {
+      "at_phrase": "At his collar",
+      "caption": "Notable Desert"
+     },
+     {
+      "at_phrase": "Across Liberty",
+      "caption": "Contaminated: Speckles"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s02_compare",
+   "start": {
+    "at_phrase": "Compare Cent number thirty-five"
+   },
+   "end": {
+    "at_phrase": "None of these names"
+   },
+   "purpose": "Template comparison: #3525, also 1963, whose only trait is Lustrous (inscription 65896626, Sep 2026 export). Dissolves 3525, 478, 3525, 478.",
+   "visual_kind": "code",
+   "component": "CentDissolve",
+   "props": {
+    "first": "b",
+    "a": {
+     "n": 478,
+     "inscription": 65999820,
+     "front": "hires/478.webp",
+     "readout": "1963",
+     "caption": "Obsidian, Desert, Speckles"
+    },
+    "b": {
+     "n": 3525,
+     "inscription": 65896626,
+     "front": "hires/3525.webp",
+     "readout": "1963",
+     "caption": "Lustrous"
+    },
+    "swaps": [
+     {
+      "at_phrase": "The same design",
+      "to": "a"
+     },
+     {
+      "at_phrase": "the same year",
+      "to": "b"
+     },
+     {
+      "at_phrase": "a different surface",
+      "to": "a"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s03_named",
+   "start": {
+    "at_phrase": "None of these names"
+   },
+   "end": {
+    "at_phrase": "A Trait Council of"
+   },
+   "purpose": "Concept C50 named on screen; Reiss quote attributed in the voiceover, credited on the card, lit as spoken. check_quotes.py: FOUND.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65999820,
+    "n": 478,
+    "front": "hires/478.webp",
+    "concept": {
+     "at_phrase": "Traits named by the community",
+     "label": "Traits named by the community"
+    },
+    "quote": {
+     "at_phrase": "Unlike most NFT",
+     "text": "Unlike most NFT projects, CENTS offered no preset rarity traits beyond mint year and mint mark. The community therefore began naming the spontaneous variations.",
+     "credit": "Steven Reiss, Materiality and Signification"
+    }
+   }
+  },
+  {
+   "shot_id": "s04_council",
+   "start": {
+    "at_phrase": "A Trait Council of"
+   },
+   "end": {
+    "at_phrase": "Ninety-five Cents carry"
+   },
+   "purpose": "The Council's naming; back to the Speckles on #478; 12 on screen as spoken (12 contamination subtypes in the Sep 2026 export).",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65999820,
+    "n": 478,
+    "front": "hires/478.webp",
+    "moves": [
+     {
+      "at_phrase": "Speckles is one",
+      "box": [
+       0.12,
+       0.4,
+       0.48,
+       0.69
+      ],
+      "marks": [
+       [
+        0.12,
+        0.4,
+        0.48,
+        0.69
+       ]
+      ],
+      "dur": 0.8
+     }
+    ],
+    "reads": [
+     {
+      "at_phrase": "one of twelve kinds",
+      "readout": "12",
+      "caption": "kinds of contamination"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s05_scroll",
+   "start": {
+    "at_phrase": "Ninety-five Cents carry"
+   },
+   "end": {
+    "at_phrase": "Four of them are"
+   },
+   "purpose": "Close-up quick scroll of all 95 Speckles Cents (cents_by_trait.json index['contaminated:Speckles']), on black, #478 ringed.",
+   "visual_kind": "code",
+   "component": "CentScroll",
+   "props": {
+    "title": "Speckles",
+    "ns": [
+     128,
+     138,
+     233,
+     237,
+     478,
+     744,
+     752,
+     810,
+     1045,
+     1083,
+     1107,
+     1118,
+     1161,
+     1311,
+     1331,
+     1527,
+     1570,
+     1636,
+     1999,
+     2163,
+     2257,
+     2387,
+     2457,
+     2538,
+     2550,
+     2678,
+     2712,
+     2856,
+     2900,
+     2909,
+     3011,
+     3122,
+     3171,
+     3312,
+     3581,
+     3690,
+     3865,
+     3988,
+     4394,
+     4431,
+     4521,
+     4704,
+     4799,
+     5089,
+     5118,
+     5200,
+     5441,
+     5519,
+     5948,
+     6018,
+     6069,
+     6150,
+     6210,
+     6328,
+     6392,
+     6502,
+     6666,
+     6683,
+     6823,
+     6915,
+     6993,
+     7010,
+     7085,
+     7091,
+     7168,
+     7313,
+     7609,
+     7927,
+     7965,
+     8017,
+     8063,
+     8160,
+     8231,
+     8277,
+     8305,
+     8340,
+     8360,
+     8498,
+     8881,
+     9080,
+     9083,
+     9084,
+     9302,
+     9389,
+     9463,
+     9514,
+     9643,
+     9689,
+     9702,
+     9707,
+     9730,
+     9796,
+     9816,
+     9876,
+     9982
+    ],
+    "mark": 478,
+    "readout": "95",
+    "caption": "of 10,000 Cents",
+    "until": "Four of them are",
+    "cols": 3
+   }
+  },
+  {
+   "shot_id": "s06_1963",
+   "start": {
+    "at_phrase": "Four of them are"
+   },
+   "end": {
+    "at_phrase": "Value made by consensus"
+   },
+   "purpose": "Every Speckles Cent dated 1963 in the Sep 2026 export: 478, 5118, 7085, 9876. On black.",
+   "visual_kind": "code",
+   "component": "CentSet",
+   "props": {
+    "title": "Speckles, 1963",
+    "ns": [
+     478,
+     5118,
+     7085,
+     9876
+    ],
+    "readout": "4",
+    "caption": "Speckles Cents from 1963",
+    "cols": 2
+   }
+  },
+  {
+   "shot_id": "s07_value",
+   "start": {
+    "at_phrase": "Value made by consensus"
+   },
+   "end": {
+    "after_phrase": "defining its significance",
+    "plus": 0.8
+   },
+   "purpose": "Value tie, concept C04; Lehnen quote attributed in the voiceover (title spoken), name only on the card (title too long for one line), full title in the credits. check_quotes.py: FOUND.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65999820,
+    "n": 478,
+    "front": "hires/478.webp",
+    "concept": {
+     "at_phrase": "Value made by consensus",
+     "label": "Value made by consensus"
+    },
+    "quote": {
+     "at_phrase": "Just as the project",
+     "text": "Just as the project removes the authority of the state in determining a penny’s worth, it also removes the authority of a single artist or institution in defining its significance.",
+     "credit": "Martin Lehnen"
+    }
+   }
+  },
+  {
+   "shot_id": "s08_card",
+   "start": {
+    "after_phrase": "defining its significance",
+    "plus": 0.8
+   },
+   "end": {
+    "after_phrase": "defining its significance",
+    "plus": 5.8
+   },
+   "purpose": "The opening card again, no voiceover, held for one full turn (150 frames).",
+   "visual_kind": "code",
+   "component": "CentSpin",
+   "props": {
+    "inscription": 65999820,
+    "n": 478,
+    "clip": {
+     "src": "3dcents/478-360-30fps.mp4",
+     "width": 1080,
+     "height": 1920,
+     "frames": 150,
+     "coin": {
+      "cx": 539.5,
+      "cy": 959.0,
+      "d": 775
+     },
+     "credit": "3D render: 3DCENTS.vercel.app"
+    },
+    "size": 560,
+    "reads": [
+     {
+      "readout": "1963"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s09_credits",
+   "start": {
+    "after_phrase": "defining its significance",
+    "plus": 5.8
+   },
+   "end": {
+    "at_end": true
+   },
+   "purpose": "End credits.",
+   "visual_kind": "code",
+   "component": "Credits",
+   "props": {
+    "lines": [
+     "Images: Rutherford Chang via cents.vision (site by Dr. Martin Lehnen)",
+     "3D Cent render from 3DCENTS.vercel.app (site by sinvalli)",
+     "Trait names: the CENTS Trait Council",
+     "Quote: Steven Reiss, “Materiality and Signification: Rutherford Chang’s CENTS and Semiotics”",
+     "Quote: Martin Lehnen, “CENTS as an artistic expression of Bitcoin’s core ideas”"
+    ],
+    "url": "cents.gallery"
+   }
+  }
+ ]
+}
