@@ -138,7 +138,7 @@ export function layoutWall(b: Board) {
 // ---------- data ----------
 
 const cache = new Map<string, Board>();
-function useBoard(slug: string): Board | null {
+export function useBoard(slug: string): Board | null {
   const [b, setB] = React.useState<Board | null>(cache.get(slug) ?? null);
   const [handle] = React.useState(() => (cache.has(slug) ? null : delayRender(`wall board ${slug}`)));
   React.useEffect(() => {

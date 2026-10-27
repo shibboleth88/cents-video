@@ -1,0 +1,969 @@
+{
+ "essay": {
+  "title": "Collector Wall",
+  "subtitle": "ScrappyT",
+  "author": "shibboleth",
+  "source": "https://cents.vision/collectors.html",
+  "version": "v1, opener rush (2026-10-27)"
+ },
+ "_what": "Collector Wall: ScrappyT. Every coin is a real Cent by number; every figure comes from data/wall_board.json (cents.vision, 27 Oct 2026). No wallet address appears.",
+ "shots": [
+  {
+   "shot_id": "s00_open",
+   "start": {
+    "at_start": true
+   },
+   "end": {
+    "at_phrase": "number seventy-one thirty-nine"
+   },
+   "purpose": "Opening (rush): moving from frame 0, hands over to the Wall card, which zooms onto the signature Cent.",
+   "visual_kind": "code",
+   "component": "WallOpener",
+   "props": {
+    "variant": "rush",
+    "wall": "scrappyt",
+    "show": "card",
+    "until_phrase": "Its signature Cent",
+    "moves": [
+     {
+      "at_phrase": "Its signature Cent",
+      "target": {
+       "cent": 7139,
+       "in": "signature"
+      },
+      "mark": true
+     }
+    ],
+    "progress": {
+     "total_frames": 4652
+    }
+   }
+  },
+  {
+   "shot_id": "s01_sig",
+   "start": {
+    "at_phrase": "number seventy-one thirty-nine"
+   },
+   "end": {
+    "at_phrase": "Ghost means a full"
+   },
+   "purpose": "The signature Cent #7139 on its own.",
+   "visual_kind": "code",
+   "component": "WallStandout",
+   "props": {
+    "title": "ScrappyT",
+    "n": 7139,
+    "readout": "1967",
+    "caption": "Full Desert · Ghost"
+   }
+  },
+  {
+   "shot_id": "s02_ghost",
+   "start": {
+    "at_phrase": "Ghost means a full"
+   },
+   "end": {
+    "at_phrase": "Of the thirty-three Ghost"
+   },
+   "purpose": "What Ghost means, on the signature Cent (Traits Atlas wording). Whole-face trait: no zoom.",
+   "visual_kind": "code",
+   "component": "WallStandout",
+   "props": {
+    "title": "ScrappyT",
+    "n": 7139,
+    "readout": "Ghost",
+    "caption": "Lincoln set apart from the field",
+    "src": "hires/7139.webp"
+   }
+  },
+  {
+   "shot_id": "s02b_13",
+   "start": {
+    "at_phrase": "Of the thirty-three Ghost"
+   },
+   "end": {
+    "at_phrase": "The Wall holds forty-one"
+   },
+   "purpose": "13 of the 33 Ghost Cents are full desert (merged-new2.json, 27 Oct 2026).",
+   "visual_kind": "code",
+   "component": "WallStandout",
+   "props": {
+    "title": "ScrappyT",
+    "n": 7139,
+    "readout": "13 of 33",
+    "caption": "Ghost Cents with a full desert patina",
+    "src": "hires/7139.webp"
+   }
+  },
+  {
+   "shot_id": "s03_count",
+   "start": {
+    "at_phrase": "The Wall holds forty-one"
+   },
+   "end": {
+    "at_phrase": "which puts it in the Quarter"
+   },
+   "purpose": "The opened collection: all 41 Cents scrolling with a count.",
+   "visual_kind": "code",
+   "component": "WallBoard",
+   "props": {
+    "wall": "scrappyt",
+    "show": "grid",
+    "moves": [
+     {
+      "at_phrase": "Cents in two wallets",
+      "until_phrase": "which puts it in the Quarter",
+      "target": {
+       "grid_end": true
+      }
+     }
+    ],
+    "readout": {
+     "at_phrase": "The Wall holds forty-one",
+     "count": {
+      "from": 0,
+      "to": 41,
+      "until_phrase": "from nineteen fifty-six to",
+      "suffix": " Cents"
+     }
+    }
+   }
+  },
+  {
+   "shot_id": "s03b_quarter",
+   "start": {
+    "at_phrase": "which puts it in the Quarter"
+   },
+   "end": {
+    "at_phrase": "One of them is a wheat"
+   },
+   "purpose": "Quarter Club badge.",
+   "visual_kind": "code",
+   "component": "WallBoard",
+   "props": {
+    "wall": "scrappyt",
+    "show": "card",
+    "moves": [
+     {
+      "at_phrase": "which puts it in the Quarter",
+      "target": {
+       "badge": "Quarter Club"
+      },
+      "mark": true
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s04_wheat",
+   "start": {
+    "at_phrase": "One of them is a wheat"
+   },
+   "end": {
+    "at_phrase": "minted nineteen fifty-eight or"
+   },
+   "purpose": "Wheat 1 badge.",
+   "visual_kind": "code",
+   "component": "WallBoard",
+   "props": {
+    "wall": "scrappyt",
+    "show": "card",
+    "moves": [
+     {
+      "at_phrase": "One of them is a wheat",
+      "target": {
+       "badge": "Wheat"
+      },
+      "mark": true
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s04b_wheat_rows",
+   "start": {
+    "at_phrase": "minted nineteen fifty-eight or"
+   },
+   "end": {
+    "at_phrase": "with two ears of"
+   },
+   "purpose": "The wheat Cent #3824 in the rows.",
+   "visual_kind": "code",
+   "component": "WallBoard",
+   "props": {
+    "wall": "scrappyt",
+    "show": "grid",
+    "moves": [
+     {
+      "at_phrase": "minted nineteen fifty-eight or",
+      "target": {
+       "cent": 3824
+      },
+      "mark": true
+     }
+    ],
+    "highlights": [
+     {
+      "at_phrase": "minted nineteen fifty-eight or",
+      "group": "wheat"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s04c_flip",
+   "start": {
+    "at_phrase": "with two ears of"
+   },
+   "end": {
+    "at_phrase": "It is from nineteen fifty-six"
+   },
+   "purpose": "#3824 turns over to show the wheat reverse.",
+   "visual_kind": "code",
+   "component": "CentFlip",
+   "props": {
+    "title": "ScrappyT",
+    "n": 3824,
+    "front": "hires/3824.webp",
+    "back": "hires/3824_back.webp",
+    "flip_at": "two ears of wheat",
+    "readout": "Wheat",
+    "caption": "Two ears of wheat on the back"
+   }
+  },
+  {
+   "shot_id": "s04d_1956",
+   "start": {
+    "at_phrase": "It is from nineteen fifty-six"
+   },
+   "end": {
+    "at_phrase": "It holds three Cents"
+   },
+   "purpose": "#3824 zoomed onto its date (box checked on the 1050px front).",
+   "visual_kind": "code",
+   "component": "WallStandout",
+   "props": {
+    "title": "ScrappyT",
+    "n": 3824,
+    "readout": "1956",
+    "caption": "The earliest year on the Wall",
+    "src": "hires/3824.webp",
+    "zoom": {
+     "at_phrase": "from nineteen fifty-six, the",
+     "box": [
+      0.62,
+      0.58,
+      0.86,
+      0.71
+     ],
+     "mark": true
+    }
+   }
+  },
+  {
+   "shot_id": "s05_1971",
+   "start": {
+    "at_phrase": "It holds three Cents"
+   },
+   "end": {
+    "at_phrase": "for the nineteen seventy-one Club"
+   },
+   "purpose": "The three 1971 Cents ringed in the rows.",
+   "visual_kind": "code",
+   "component": "WallBoard",
+   "props": {
+    "wall": "scrappyt",
+    "show": "grid",
+    "moves": [
+     {
+      "at_phrase": "It holds three Cents",
+      "until_phrase": "for the nineteen seventy-one Club",
+      "target": {
+       "grid_end": true
+      }
+     }
+    ],
+    "highlights": [
+     {
+      "at_phrase": "It holds three Cents",
+      "group": "y1971"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s05b_club",
+   "start": {
+    "at_phrase": "for the nineteen seventy-one Club"
+   },
+   "end": {
+    "at_phrase": "Two of its Cents carry"
+   },
+   "purpose": "The '1971 3' badge.",
+   "visual_kind": "code",
+   "component": "WallBoard",
+   "props": {
+    "wall": "scrappyt",
+    "show": "card",
+    "moves": [
+     {
+      "at_phrase": "for the nineteen seventy-one Club",
+      "target": {
+       "badge": "1971"
+      },
+      "mark": true
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s06_fulls",
+   "start": {
+    "at_phrase": "Two of its Cents carry"
+   },
+   "end": {
+    "at_phrase": "the full desert and"
+   },
+   "purpose": "Full x 2 badge.",
+   "visual_kind": "code",
+   "component": "WallBoard",
+   "props": {
+    "wall": "scrappyt",
+    "show": "card",
+    "moves": [
+     {
+      "at_phrase": "Two of its Cents carry",
+      "target": {
+       "badge": "Full x"
+      },
+      "mark": true
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s06b_fulls",
+   "start": {
+    "at_phrase": "the full desert and"
+   },
+   "end": {
+    "at_phrase": "Two are Iridescent"
+   },
+   "purpose": "The two full-patina Cents, arriving as named.",
+   "visual_kind": "code",
+   "component": "CentRow",
+   "props": {
+    "title": "ScrappyT",
+    "subtitle": "Full x 2",
+    "cents": [
+     {
+      "n": 7139,
+      "patina": "desert",
+      "caption": "Full Desert · #7139",
+      "at_phrase": "the full desert and"
+     },
+     {
+      "n": 9258,
+      "patina": "red",
+      "caption": "Full Red · #9258",
+      "at_phrase": "and a full red"
+     }
+    ],
+    "cols": 2
+   }
+  },
+  {
+   "shot_id": "s07_irid",
+   "start": {
+    "at_phrase": "Two are Iridescent"
+   },
+   "end": {
+    "at_phrase": "a copper surface overlaid"
+   },
+   "purpose": "Iridescent x 2 badge.",
+   "visual_kind": "code",
+   "component": "WallBoard",
+   "props": {
+    "wall": "scrappyt",
+    "show": "card",
+    "moves": [
+     {
+      "at_phrase": "Two are Iridescent",
+      "target": {
+       "badge": "Iridescent"
+      },
+      "mark": true
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s07b_irid",
+   "start": {
+    "at_phrase": "a copper surface overlaid"
+   },
+   "end": {
+    "at_phrase": "And two are Ghost"
+   },
+   "purpose": "The two Iridescent Cents.",
+   "visual_kind": "code",
+   "component": "CentRow",
+   "props": {
+    "title": "ScrappyT",
+    "subtitle": "Iridescent x 2",
+    "cents": [
+     {
+      "n": 2981,
+      "caption": "#2981",
+      "at_phrase": "a copper surface overlaid"
+     },
+     {
+      "n": 7713,
+      "caption": "#7713",
+      "at_phrase": "a copper surface overlaid"
+     }
+    ],
+    "cols": 2,
+    "labelsUnder": true
+   }
+  },
+  {
+   "shot_id": "s08_ghost",
+   "start": {
+    "at_phrase": "And two are Ghost"
+   },
+   "end": {
+    "at_phrase": "The Wall completes six"
+   },
+   "purpose": "The two Ghost Cents.",
+   "visual_kind": "code",
+   "component": "CentRow",
+   "props": {
+    "title": "ScrappyT",
+    "subtitle": "Ghost x 2",
+    "cents": [
+     {
+      "n": 7139,
+      "caption": "#7139",
+      "at_phrase": "And two are Ghost"
+     },
+     {
+      "n": 5448,
+      "caption": "#5448",
+      "at_phrase": "And two are Ghost"
+     }
+    ],
+    "cols": 2,
+    "labelsUnder": true
+   }
+  },
+  {
+   "shot_id": "s09_sets",
+   "start": {
+    "at_phrase": "The Wall completes six"
+   },
+   "end": {
+    "at_phrase": "a significant verdigris"
+   },
+   "purpose": "The card, then the Spectrum Set badge.",
+   "visual_kind": "code",
+   "component": "WallBoard",
+   "props": {
+    "wall": "scrappyt",
+    "show": "card",
+    "moves": [
+     {
+      "at_phrase": "The Wall completes six",
+      "target": {
+       "card": true
+      }
+     },
+     {
+      "at_phrase": "A Spectrum Set: a significant",
+      "target": {
+       "badge": "Spectrum"
+      },
+      "mark": true
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s09b_spectrum",
+   "start": {
+    "at_phrase": "a significant verdigris"
+   },
+   "end": {
+    "at_phrase": "A Chronicle Set"
+   },
+   "purpose": "Each Spectrum Cent alone as named, then the row; '1 of 15' collectors (16 Walls hold one; the artist wallet is excluded).",
+   "visual_kind": "code",
+   "component": "CentRow",
+   "props": {
+    "title": "ScrappyT",
+    "subtitle": "Spectrum Set",
+    "cents": [
+     {
+      "n": 8550,
+      "patina": "verdigris",
+      "caption": "Significant Verdigris · #8550",
+      "at_phrase": "a significant verdigris",
+      "src": "hires/8550.webp"
+     },
+     {
+      "n": 8394,
+      "patina": "obsidian",
+      "caption": "Significant Obsidian · #8394",
+      "at_phrase": "a significant obsidian",
+      "src": "hires/8394.webp"
+     },
+     {
+      "n": 9258,
+      "patina": "red",
+      "caption": "Full Red · #9258",
+      "at_phrase": "a full red, a",
+      "src": "hires/9258.webp"
+     },
+     {
+      "n": 7139,
+      "patina": "desert",
+      "caption": "Full Desert · #7139",
+      "at_phrase": "a full desert, a",
+      "src": "hires/7139.webp"
+     },
+     {
+      "n": 2981,
+      "patina": "gold",
+      "caption": "Notable Gold · #2981",
+      "at_phrase": "a notable gold",
+      "src": "hires/2981.webp"
+     },
+     {
+      "n": 9469,
+      "patina": "orange",
+      "caption": "Orange · #9469",
+      "at_phrase": "and an orange",
+      "src": "hires/9469.webp"
+     }
+    ],
+    "solo_until": "Notable means clearly",
+    "readout": "1 of 15",
+    "caption": "collectors with this Set",
+    "readout_at": "one of only fifteen collectors"
+   }
+  },
+  {
+   "shot_id": "s10_chron",
+   "start": {
+    "at_phrase": "A Chronicle Set"
+   },
+   "end": {
+    "at_phrase": "a Cent from nineteen seventy-one, from"
+   },
+   "purpose": "Chronicle Set badge.",
+   "visual_kind": "code",
+   "component": "WallBoard",
+   "props": {
+    "wall": "scrappyt",
+    "show": "card",
+    "moves": [
+     {
+      "at_phrase": "A Chronicle Set",
+      "target": {
+       "badge": "Chronicle"
+      },
+      "mark": true
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s10b_chron",
+   "start": {
+    "at_phrase": "a Cent from nineteen seventy-one, from"
+   },
+   "end": {
+    "at_phrase": "A Full Mint Set"
+   },
+   "purpose": "Chronicle Set: one Cent from each year.",
+   "visual_kind": "code",
+   "component": "CentRow",
+   "props": {
+    "title": "ScrappyT",
+    "subtitle": "Chronicle Set",
+    "cents": [
+     {
+      "n": 366,
+      "caption": "1971",
+      "at_phrase": "a Cent from nineteen seventy-one, from"
+     },
+     {
+      "n": 1965,
+      "caption": "1979",
+      "at_phrase": "from nineteen seventy-nine and"
+     },
+     {
+      "n": 372,
+      "caption": "1982",
+      "at_phrase": "and from nineteen eighty-two"
+     }
+    ],
+    "cols": 3,
+    "labelsUnder": true
+   }
+  },
+  {
+   "shot_id": "s11_mint",
+   "start": {
+    "at_phrase": "A Full Mint Set"
+   },
+   "end": {
+    "at_phrase": "an S mint, a D"
+   },
+   "purpose": "Full Mint Set badge.",
+   "visual_kind": "code",
+   "component": "WallBoard",
+   "props": {
+    "wall": "scrappyt",
+    "show": "card",
+    "moves": [
+     {
+      "at_phrase": "A Full Mint Set",
+      "target": {
+       "badge": "Full Mint"
+      },
+      "mark": true
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s11b_mint",
+   "start": {
+    "at_phrase": "an S mint, a D"
+   },
+   "end": {
+    "at_phrase": "A Contamination Set"
+   },
+   "purpose": "Full Mint Set: an S, a D and a no-mint-mark Cent.",
+   "visual_kind": "code",
+   "component": "CentRow",
+   "props": {
+    "title": "ScrappyT",
+    "subtitle": "Full Mint Set",
+    "cents": [
+     {
+      "n": 2446,
+      "caption": "1974-S",
+      "at_phrase": "an S mint, a D"
+     },
+     {
+      "n": 7713,
+      "caption": "1973-D",
+      "at_phrase": "a D mint and"
+     },
+     {
+      "n": 7139,
+      "caption": "1967",
+      "at_phrase": "a Cent with no mint"
+     }
+    ],
+    "cols": 3,
+    "labelsUnder": true
+   }
+  },
+  {
+   "shot_id": "s12_cont",
+   "start": {
+    "at_phrase": "A Contamination Set"
+   },
+   "end": {
+    "at_phrase": "four of the twelve"
+   },
+   "purpose": "Contamination Set (4/12) badge.",
+   "visual_kind": "code",
+   "component": "WallBoard",
+   "props": {
+    "wall": "scrappyt",
+    "show": "card",
+    "moves": [
+     {
+      "at_phrase": "A Contamination Set",
+      "target": {
+       "badge": "Contamination Set"
+      },
+      "mark": true
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s12b_cont",
+   "start": {
+    "at_phrase": "four of the twelve"
+   },
+   "end": {
+    "at_phrase": "and a nineteen eighties Set"
+   },
+   "purpose": "One Cent per contamination type, alone as named, then the row.",
+   "visual_kind": "code",
+   "component": "CentRow",
+   "props": {
+    "title": "ScrappyT",
+    "subtitle": "Contamination Set (4/12)",
+    "cents": [
+     {
+      "n": 372,
+      "caption": "Special Oddities · #372",
+      "at_phrase": "special oddities",
+      "src": "hires/372.webp"
+     },
+     {
+      "n": 1399,
+      "caption": "Obscure Adhesive · #1399",
+      "at_phrase": "obscure adhesive",
+      "src": "hires/1399.webp"
+     },
+     {
+      "n": 2387,
+      "caption": "Speckles · #2387",
+      "at_phrase": "speckles",
+      "src": "hires/2387.webp"
+     },
+     {
+      "n": 8899,
+      "caption": "Alien Secretion · #8899",
+      "at_phrase": "alien secretion",
+      "src": "hires/8899.webp"
+     }
+    ],
+    "solo_until": "And a nineteen seventies",
+    "cols": 2
+   }
+  },
+  {
+   "shot_id": "s13_decades",
+   "start": {
+    "at_phrase": "and a nineteen eighties Set"
+   },
+   "end": {
+    "at_phrase": "every mint year from"
+   },
+   "purpose": "1970s Set and 1980s Set badges together (box from layoutWall: 1970s [582,574,719,616], 1980s [729,574,866,616]). The Contamination row gathers over 'And a 1970s Set', so this shot starts one beat later.",
+   "visual_kind": "code",
+   "component": "WallBoard",
+   "props": {
+    "wall": "scrappyt",
+    "show": "card",
+    "moves": [
+     {
+      "at_phrase": "and a nineteen eighties Set",
+      "target": {
+       "box": [
+        572,
+        564,
+        876,
+        626
+       ]
+      },
+      "mark": true
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s13b_decades",
+   "start": {
+    "at_phrase": "every mint year from"
+   },
+   "end": {
+    "at_phrase": "The Wall carries Diamond"
+   },
+   "purpose": "One Cent for every year 1970-1982.",
+   "visual_kind": "code",
+   "component": "CentRow",
+   "props": {
+    "title": "ScrappyT",
+    "subtitle": "1970s Set · 1980s Set",
+    "cents": [
+     {
+      "n": 3838,
+      "caption": "1970",
+      "at_phrase": "every mint year from"
+     },
+     {
+      "n": 366,
+      "caption": "1971",
+      "at_phrase": "every mint year from"
+     },
+     {
+      "n": 4948,
+      "caption": "1972",
+      "at_phrase": "every mint year from"
+     },
+     {
+      "n": 1399,
+      "caption": "1973",
+      "at_phrase": "every mint year from"
+     },
+     {
+      "n": 2981,
+      "caption": "1974",
+      "at_phrase": "every mint year from"
+     },
+     {
+      "n": 830,
+      "caption": "1975",
+      "at_phrase": "every mint year from"
+     },
+     {
+      "n": 7599,
+      "caption": "1976",
+      "at_phrase": "every mint year from"
+     },
+     {
+      "n": 2387,
+      "caption": "1977",
+      "at_phrase": "every mint year from"
+     },
+     {
+      "n": 5430,
+      "caption": "1978",
+      "at_phrase": "every mint year from"
+     },
+     {
+      "n": 1965,
+      "caption": "1979",
+      "at_phrase": "every mint year from"
+     },
+     {
+      "n": 3815,
+      "caption": "1980",
+      "at_phrase": "every mint year from"
+     },
+     {
+      "n": 1295,
+      "caption": "1981",
+      "at_phrase": "every mint year from"
+     },
+     {
+      "n": 372,
+      "caption": "1982",
+      "at_phrase": "every mint year from"
+     }
+    ],
+    "labelsUnder": true
+   }
+  },
+  {
+   "shot_id": "s14_diamond",
+   "start": {
+    "at_phrase": "The Wall carries Diamond"
+   },
+   "end": {
+    "at_phrase": "And it is a Mint"
+   },
+   "purpose": "Diamond Hands badge.",
+   "visual_kind": "code",
+   "component": "WallBoard",
+   "props": {
+    "wall": "scrappyt",
+    "show": "card",
+    "moves": [
+     {
+      "at_phrase": "The Wall carries Diamond",
+      "target": {
+       "badge": "Diamond"
+      },
+      "mark": true
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s15_keeper",
+   "start": {
+    "at_phrase": "And it is a Mint"
+   },
+   "end": {
+    "at_phrase": "minted four of its"
+   },
+   "purpose": "Mint Keeper x 4 badge.",
+   "visual_kind": "code",
+   "component": "WallBoard",
+   "props": {
+    "wall": "scrappyt",
+    "show": "card",
+    "moves": [
+     {
+      "at_phrase": "And it is a Mint",
+      "target": {
+       "badge": "Mint Keeper"
+      },
+      "mark": true
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s15b_keeper",
+   "start": {
+    "at_phrase": "minted four of its"
+   },
+   "end": {
+    "at_phrase": "Find all of the Collector"
+   },
+   "purpose": "The four Mint Keeper Cents ringed in the rows.",
+   "visual_kind": "code",
+   "component": "WallBoard",
+   "props": {
+    "wall": "scrappyt",
+    "show": "grid",
+    "moves": [
+     {
+      "at_phrase": "minted four of its",
+      "until_phrase": "never sold",
+      "target": {
+       "grid_end": true
+      }
+     }
+    ],
+    "highlights": [
+     {
+      "at_phrase": "minted four of its",
+      "group": "mint_keeper"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s16_collectors",
+   "start": {
+    "at_phrase": "Find all of the Collector"
+   },
+   "end": {
+    "at_end": true
+   },
+   "purpose": "cents.vision Traits Lab; one zoom, onto Collectors.",
+   "visual_kind": "code",
+   "component": "WallShot",
+   "props": {
+    "src": "vision/traits_lab.png",
+    "width": 2964,
+    "height": 1654,
+    "moves": [
+     {
+      "at_phrase": "under Collectors",
+      "box": [
+       1185,
+       1575,
+       1358,
+       1635
+      ],
+      "mark": true
+     }
+    ]
+   }
+  }
+ ]
+}
