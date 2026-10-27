@@ -4,7 +4,7 @@
   "subtitle": "Daidatep",
   "author": "shibboleth",
   "source": "https://cents.vision/collectors.html",
-  "version": "v5, script draft 2 (2026-10-25)"
+  "version": "v6, script draft 2 (2026-10-27)"
  },
  "_what": "Collector Wall: Daidatep. Every coin is a real Cent by number; every figure comes from data/wall_board.json (cents.vision, 25 Oct 2026). No wallet address appears.",
  "shots": [
@@ -16,12 +16,14 @@
    "end": {
     "at_phrase": "number ninety-nine oh eight"
    },
-   "purpose": "Daidatep's Wall card, rebuilt from cents.vision data (25 Oct 2026); frame 0 is the card top. Zoom onto the signature Cent.",
+   "purpose": "Opening (showcase, the series opener from the ScrappyT episode): the Wall card from frame 0 with the signature Cent turning in its slot (3DCENTS), mosaic Cents and badges lighting up in turn, progress bar; then the card zooms onto the signature Cent.",
    "visual_kind": "code",
-   "component": "WallBoard",
+   "component": "WallOpener",
    "props": {
+    "variant": "showcase",
     "wall": "daidatep",
     "show": "card",
+    "until_phrase": "Its signature Cent",
     "moves": [
      {
       "at_phrase": "Its signature Cent",
@@ -31,7 +33,23 @@
       },
       "mark": true
      }
-    ]
+    ],
+    "progress": {
+     "total_frames": 4330
+    },
+    "clip": {
+     "src": "3dcents/9908-360-30fps-alpha.webm",
+     "width": 1080,
+     "height": 1920,
+     "frames": 150,
+     "coin": {
+      "cx": 539.5,
+      "cy": 959.5,
+      "d": 776
+     },
+     "credit": "3D render: 3DCENTS by sinvalli",
+     "alpha": true
+    }
    }
   },
   {
