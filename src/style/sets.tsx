@@ -482,6 +482,8 @@ type Screen = {
   from?: [number, number, number]; to?: [number, number, number]; fit?: boolean;
   /** Window height as a fraction of its width, for landscape captures; default fills the stage. */
   aspect?: number;
+  /** How far a `fit` capture pushes in over its time (default 0.06); 0 keeps a signed chart's edges whole. */
+  push?: number;
 };
 export const ScreenTour: React.FC<Anchored & { title?: string; subtitle?: string; screens: Screen[] }> = (props) => {
   const { title, subtitle, screens } = props;
@@ -514,7 +516,7 @@ export const ScreenTour: React.FC<Anchored & { title?: string; subtitle?: string
   const [x, y, w] = [0, 1, 2].map((k) => from[k]! + (to[k]! - from[k]!) * t) as [number, number, number];
   if (w > 1080 || x < 0 || x + w > 1080) throw new Error(`ScreenTour ${sc.src}: crop leaves the 1080 px capture`);
   const k = W / w;
-  const push = 1 + 0.06 * t;
+  const push = 1 + (sc.push ?? 0.06) * t;
   const cut = interpolate(frame, [s0, s0 + 6], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   return (
     <div style={{ position: "absolute", inset: 0, opacity: fade }}>
