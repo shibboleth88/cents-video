@@ -1,0 +1,29 @@
+{
+ "assets": {
+  "a14": {
+   "path": "inputs/assets/a14.mp4",
+   "sha256": "a309518db381880499a27be5a0c767bd004cb18834cd90b3ea399e1092351b1b",
+   "bytes": 1715812,
+   "width": 480,
+   "height": 848,
+   "motion": true,
+   "codec": "h264",
+   "source": "Rutherford Chang's workspace and the casting of the CENTS Block; supplied by the essay's author 2026-10-07",
+   "original_filename": "copper_pour.mp4",
+   "source_caption": "",
+   "subject": "Footage of the CENTS Block being cast outdoors: a crucible of molten copper is tilted on a pivoting arm and poured in a bright orange stream into a square mould built of white refractory brick, smoke rising as it fills. Two figures in heat suits and face shields work the crucible. 8s excerpt from a 110s clip, starting at 76.0s, which is where the tilt and the pour are.",
+   "kind": "real",
+   "rights": "photographs and footage of Rutherford Chang's studio process, supplied by the essay's author for use in films about CENTS",
+   "verified_at": "2026-10-07",
+   "crop_restrictions": "Vertical 480x848 and that is its real resolution, not a thumbnail. Do not display wider than ~560px: at full canvas width it is a 2.25x upscale and goes to mush. Never crop to the stream alone - the mould is what the copper is becoming, and losing it turns a casting into a fire.",
+   "low_res": true,
+   "max_display_width": 560,
+   "duration": 8.0,
+   "frames": 227,
+   "identified_by": "claude, by viewing sampled frames across the source clip",
+   "staged_as": "a14.mp4",
+   "staged_width": 480,
+   "staged_height": 848
+  }
+ }
+}

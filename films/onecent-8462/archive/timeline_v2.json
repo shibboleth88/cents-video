@@ -1,0 +1,349 @@
+{
+ "essay": {
+  "title": "Cent #8462",
+  "subtitle": "Inscription #65903248",
+  "author": "shibboleth",
+  "source": "/mnt/project-files/single-cent-series/8462/8462_proposal_v0.1.md",
+  "version": "v1, script v0.1 cut (2026-10-27)"
+ },
+ "_what": "Cent #8462. Concepts C23 (primary) and C08 (value). Every count from the Sep 2026 trait export. Traits are read from the front only.",
+ "shots": [
+  {
+   "shot_id": "s01_open",
+   "start": {
+    "at_start": true
+   },
+   "end": {
+    "at_phrase": "Twenty-six of the"
+   },
+   "purpose": "Standard opening: the 3DCENTS turn of #8462 plays once, then settles on the 1050px front at the same size (clip coin on frame 0: centre 539.5, 959.0; d 775). Zooms to the engraved rabbit and the word EASTER (front; boxes are Claude's reading, 8462_zoom_plan_v0.1.jpg). Vandalized is defined from the Traits Atlas (vandalized.txt), which lists CENT #8462 'Easter Bunny' engraving first among its examples.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65903248,
+    "n": 8462,
+    "front": "hires/8462.webp",
+    "spin": {
+     "src": "3dcents/8462-360-30fps.mp4",
+     "width": 1080,
+     "height": 1920,
+     "frames": 150,
+     "coin": {
+      "cx": 539.5,
+      "cy": 959.0,
+      "d": 775
+     },
+     "credit": "3D render: 3DCENTS.vercel.app"
+    },
+    "moves": [
+     {
+      "at_phrase": "Beside Lincoln's face",
+      "box": [
+       0.635,
+       0.27,
+       0.86,
+       0.535
+      ],
+      "mark": true,
+      "dur": 0.9
+     },
+     {
+      "at_phrase": "Under it",
+      "box": [
+       0.635,
+       0.525,
+       0.85,
+       0.605
+      ],
+      "mark": true,
+      "dur": 0.8
+     },
+     {
+      "at_phrase": "Its one trait",
+      "box": [
+       0.62,
+       0.26,
+       0.87,
+       0.615
+      ],
+      "mark": true,
+      "dur": 0.8
+     }
+    ],
+    "reads": [
+     {
+      "at_phrase": "struck in nineteen seventy-three",
+      "readout": "1973"
+     },
+     {
+      "at_phrase": "Beside Lincoln's face",
+      "caption": "An engraved rabbit"
+     },
+     {
+      "at_phrase": "Under it",
+      "caption": "EASTER"
+     },
+     {
+      "at_phrase": "Its one trait",
+      "readout": "Vandalized",
+      "caption": "its only trait"
+     },
+     {
+      "at_phrase": "The Traits Atlas",
+      "readout": "Vandalized",
+      "caption": "Traits Atlas definition"
+     },
+     {
+      "at_phrase": "The Atlas gives",
+      "readout": "Vandalized",
+      "caption": "the Atlas's first example"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s02_pool",
+   "start": {
+    "at_phrase": "Twenty-six of the"
+   },
+   "end": {
+    "at_phrase": "Compare Cent number"
+   },
+   "purpose": "Every Vandalized Cent (cents_by_trait.json index['vandalized'], Sep 2026 export: 26), #8462 ringed; the only one dated 1973. Close-up scroll on black (CentScroll), 4 columns.",
+   "visual_kind": "code",
+   "component": "CentScroll",
+   "props": {
+    "title": "Vandalized",
+    "ns": [
+     70,
+     203,
+     1419,
+     1470,
+     1889,
+     2023,
+     2270,
+     2700,
+     4154,
+     5371,
+     5425,
+     6761,
+     7017,
+     7042,
+     7393,
+     7395,
+     7745,
+     8223,
+     8350,
+     8462,
+     8607,
+     8642,
+     9222,
+     9692,
+     9800,
+     9828
+    ],
+    "mark": 8462,
+    "readout": "26",
+    "caption": "of 10,000 Cents",
+    "until": "Compare Cent number",
+    "cols": 4
+   }
+  },
+  {
+   "shot_id": "s03_compare",
+   "start": {
+    "at_phrase": "Compare Cent number"
+   },
+   "end": {
+    "at_phrase": "Difference makes meaning"
+   },
+   "purpose": "Template comparison: #2125, also 1973, whose only trait is Lustrous (inscription from the Sep 2026 export). Dissolves 2125, 8462, 2125, 8462.",
+   "visual_kind": "code",
+   "component": "CentDissolve",
+   "props": {
+    "first": "b",
+    "a": {
+     "n": 8462,
+     "inscription": 65903248,
+     "front": "hires/8462.webp",
+     "readout": "1973",
+     "caption": "Vandalized"
+    },
+    "b": {
+     "n": 2125,
+     "inscription": 66089135,
+     "front": "hires/2125.webp",
+     "readout": "1973",
+     "caption": "Lustrous"
+    },
+    "swaps": [
+     {
+      "at_phrase": "The same design",
+      "to": "a"
+     },
+     {
+      "at_phrase": "the same year",
+      "to": "b"
+     },
+     {
+      "at_phrase": "Only one of them",
+      "to": "a"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s04_difference",
+   "start": {
+    "at_phrase": "Difference makes meaning"
+   },
+   "end": {
+    "at_phrase": "After it was photographed"
+   },
+   "purpose": "Concept C23 named on screen; Reiss quote attributed in the voiceover, credited on the card, lit as spoken. check_quotes.py: FOUND.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65903248,
+    "n": 8462,
+    "front": "hires/8462.webp",
+    "concept": {
+     "at_phrase": "Difference makes meaning",
+     "label": "Difference makes meaning"
+    },
+    "quote": {
+     "at_phrase": "Coins whose look",
+     "text": "Coins whose look strays farthest from the norm became the most coveted. Difference now drives value - just as Saussure said: we understand a sign by what it is not.",
+     "credit": "Steven Reiss"
+    }
+   }
+  },
+  {
+   "shot_id": "s05_photographed",
+   "start": {
+    "at_phrase": "After it was photographed"
+   },
+   "end": {
+    "at_phrase": "with the rest"
+   },
+   "purpose": "The photograph: the 1050px front, plain.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65903248,
+    "n": 8462,
+    "front": "hires/8462.webp"
+   }
+  },
+  {
+   "shot_id": "s06_casting",
+   "start": {
+    "at_phrase": "with the rest"
+   },
+   "end": {
+    "at_phrase": "Its image is inscribed"
+   },
+   "purpose": "Casting CENTS Block Copper: the real footage of the pour (asset a14, as in the objecthood film). The physical block, not CENTS Block 839969.",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "a14",
+   "props": {
+    "caption": "Casting CENTS Block Copper",
+    "maxWidth": 560
+   }
+  },
+  {
+   "shot_id": "s07_destruction",
+   "start": {
+    "at_phrase": "Its image is inscribed"
+   },
+   "end": {
+    "after_phrase": "reintroduce uniqueness",
+    "plus": 0.8
+   },
+   "purpose": "The image on its satoshi (inscription number from the export); then concept C08 with the Lehnen quote, kept as a question (C08 caution). check_quotes.py: FOUND. Card credit is the name; the title is spoken and in the credits.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65903248,
+    "n": 8462,
+    "front": "hires/8462.webp",
+    "reads": [
+     {
+      "at_phrase": "Its image is inscribed",
+      "readout": "#65903248",
+      "caption": "its inscription"
+     }
+    ],
+    "concept": {
+     "at_phrase": "In the words of Martin",
+     "label": "Can destruction create value?"
+    },
+    "quote": {
+     "at_phrase": "Can destruction create",
+     "text": "Can destruction create value, just as accumulation does? If mass production standardizes objects, can time and context reintroduce uniqueness?",
+     "credit": "Martin Lehnen"
+    }
+   }
+  },
+  {
+   "shot_id": "s08_card",
+   "start": {
+    "after_phrase": "reintroduce uniqueness",
+    "plus": 0.8
+   },
+   "end": {
+    "after_phrase": "reintroduce uniqueness",
+    "plus": 5.8
+   },
+   "purpose": "The opening card again, no voiceover, held for one full turn (150 frames).",
+   "visual_kind": "code",
+   "component": "CentSpin",
+   "props": {
+    "inscription": 65903248,
+    "n": 8462,
+    "clip": {
+     "src": "3dcents/8462-360-30fps.mp4",
+     "width": 1080,
+     "height": 1920,
+     "frames": 150,
+     "coin": {
+      "cx": 539.5,
+      "cy": 959.0,
+      "d": 775
+     },
+     "credit": "3D render: 3DCENTS.vercel.app"
+    },
+    "size": 560,
+    "reads": [
+     {
+      "readout": "1973"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s09_credits",
+   "start": {
+    "after_phrase": "reintroduce uniqueness",
+    "plus": 5.8
+   },
+   "end": {
+    "at_end": true
+   },
+   "purpose": "End credits.",
+   "visual_kind": "code",
+   "component": "Credits",
+   "props": {
+    "lines": [
+     "Images: Rutherford Chang via cents.vision (site by Dr. Martin Lehnen)",
+     "3D Cent render from 3DCENTS.vercel.app (site by sinvalli)",
+     "Trait names and definition: Traits Atlas, CENTS Trait Council",
+     "Quote: Steven Reiss, “Materiality and Signification: Rutherford Chang’s CENTS and Semiotics”",
+     "Quote: Martin Lehnen, “Rutherford Chang’s Conceptual Collecting”"
+    ],
+    "url": "cents.gallery"
+   }
+  }
+ ]
+}
