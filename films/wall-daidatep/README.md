@@ -45,3 +45,8 @@ Every figure was checked against `snapshots/2026-10-25/raw/merged-new2.json` and
 - Retimed to 30 fps frame for frame (`setpts=N/30/TB`): 150 frames still, each output frame matches its source frame (PSNR 55 dB, against 31.8 dB for the same comparison offset by one frame), no duplicated frames (a plain `fps=30` would have duplicated 30, which judders). The turn is 20% faster: 5 s instead of 6 s, looped across the shot.
 - `WallStandout clip`: the clip is scaled so its coin (measured on frame 0: centre 539.5, 959.5, diameter 776 px) matches the 500 px coin of the other shots, and its black background is dropped with a lighten blend on a stage-coloured group. A small credit, "3D render: 3DCENTS by sinvalli", sits under the coin for the whole shot. This film has no end credits, so the on-screen credit is the only one.
 - The reverse shows upside down as the coin turns about its vertical axis. That is how a US cent is struck (coin alignment), not a render error.
+
+## v6 (user request, 2026-10-27 18:16Z)
+
+- New series opening: `WallOpener` variant `showcase` (from the ScrappyT episode, PR #14) replaces the plain card. From frame 0 the Wall card shows the signature Cent #9908 turning in its slot (the same 3DCENTS clip as d01), the mosaic Cents and the badges light up one after another, and a thin progress bar runs across the top. At "Its signature Cent" it hands over to the card, which zooms onto the signature as before. The rest of the film is v5 unchanged.
+- The showcase's credit line now fades out as the card zooms in (8 frames from the handover): before, it sat on top of the zoomed white card.

@@ -77,7 +77,9 @@ export const WallOpener: React.FC<Anchored & {
       {variant === "rush" && b && frame < end ? <Rush board={b} frame={frame} end={end} out={out} /> : null}
       {variant === "turn" && b && frame < end + 2 ? <Turn board={b} frame={frame} end={end} clip={clip} /> : null}
       {showcase && clip ? (
-        <div style={{ position: "absolute", left: SAFE.essential.x0 + 24, top: 1262, width: SAFE.essential.x1 - SAFE.essential.x0 - 48 }}>
+        // Gone once the card zooms in: the zoomed card fills this band, and the credit would sit on it.
+        <div style={{ position: "absolute", left: SAFE.essential.x0 + 24, top: 1262, width: SAFE.essential.x1 - SAFE.essential.x0 - 48,
+                      opacity: 1 - interpolate(frame, [end, end + 8], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }) }}>
           <SafeText role="label" fontSize={42} maxLines={1} color="#555" style={{ fontFamily: TYPE.body, textAlign: "center" }}>{clip.credit}</SafeText>
         </div>
       ) : null}
