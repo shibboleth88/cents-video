@@ -34,18 +34,24 @@ const useAt = ({ alignment, shotStartFrame }: Anchored) => {
  * word for word (punctuation and parentheses aside): a mismatch fails the render.
  */
 const nrmWord = (w: string) => w.toLowerCase().replace(/[\u2019']/g, "").replace(/[^a-z0-9]/g, "");
-const useSpokenWords = ({ alignment, shotStartFrame }: Anchored, quote?: { at_phrase: string; text: string }) => {
+const useSpokenWords = ({ alignment, shotStartFrame }: Anchored, quote?: { at_phrase: string; text: string; spoken?: Record<string, string> }) => {
   const { fps } = useVideoConfig();
   if (!quote) return [] as number[];
   const card = quote.text.split(/\s+/);
   const t0 = findPhrase(alignment, quote.at_phrase).start;
-  const i0 = alignment.words.findIndex((w) => w.start === t0);
-  const said = alignment.words.slice(i0, i0 + card.length);
-  card.forEach((w, j) => {
-    if (!said[j] || nrmWord(w) !== nrmWord(said[j]!.word))
-      throw new Error(`quote card word ${j + 1} "${w}" is not the spoken "${said[j]?.word}"`);
+  let i = alignment.words.findIndex((w) => w.start === t0);
+  // A card word written as digits ("1912,") is said as several words: `spoken` maps it to them.
+  // A token that is punctuation alone (a spaced dash) is not said: it lights with the word before it.
+  let last = Math.round(t0 * fps) - shotStartFrame;
+  return card.map((w, j) => {
+    if (!quote.spoken?.[w] && nrmWord(w) === "") return last;
+    const say = (quote.spoken?.[w] ?? w).split(/\s+/);
+    const said = alignment.words.slice(i, i + say.length);
+    if (said.length < say.length || say.some((s, k) => nrmWord(s) !== nrmWord(said[k]!.word)))
+      throw new Error(`quote card word ${j + 1} "${w}" is not the spoken "${said.map((x) => x.word).join(" ")}"`);
+    i += say.length;
+    return (last = Math.round(said[0]!.start * fps) - shotStartFrame);
   });
-  return said.map((w) => Math.round(w.start * fps) - shotStartFrame);
 };
 
 const E = SAFE.essential;
@@ -66,7 +72,7 @@ type Box = [number, number, number, number];
 type Move = { at_phrase: string; plus?: number; dur?: number; box: Box | null; mark?: boolean; marks?: Box[]; max?: number };
 type Read = { at_phrase?: string; readout?: string; caption?: string };
 type Concept = { at_phrase: string; label: string };
-type Quote = { at_phrase: string; text: string; credit: string };
+type Quote = { at_phrase: string; text: string; credit: string; spoken?: Record<string, string> };
 
 export const CentLook: React.FC<Anchored & {
   /** The inscription number, shown under the Cent's name (from the trait export). */
