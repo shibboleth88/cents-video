@@ -1,4 +1,4 @@
-"""Captions for One Cent #8462 (copied from the Daidatep builder): cut-aware cues on eee v1 take 1, with each
+"""Captions for One Cent #8462 (copied from the Daidatep builder): cut-aware cues on the current eee take, with each
 spoken number written back the way the script writes it. Each script word is
 paired with its spoken words by a table of how many words it takes to say, so
 the written form inherits their exact timing. Refuses unless the cue text
@@ -33,6 +33,9 @@ for tok in script:
     out.append({"word": tok, "start": said[0]["start"], "end": said[-1]["end"]}); i += n
 if i != len(words): sys.exit(f"REFUSING: {len(words) - i} spoken words left over")
 
+# v3: the four example close-ups cut on single words ("paint,"), so the examples sentence is captioned as
+# one sentence across those cuts instead of breaking into one-word cues at each.
+RUN_ON = {"s02c_drill", "s02d_paint", "s02e_liner"}
 flat = [(t, k) for k, w in enumerate(words) for t in norm(w["word"])]
 def start_of(ph, end=False):
     n = norm(ph)
@@ -42,7 +45,7 @@ def start_of(ph, end=False):
     k = next(j for j in range(len(flat)) if flat[j][1] == hits[0])
     return words[flat[k + len(n) - 1][1]]["end"]
 bounds = [start_of(s["start"]["at_phrase"]) if "at_phrase" in s["start"] else start_of(s["start"]["after_phrase"], True) + s["start"].get("plus", 0)
-          for s in tl["shots"] if "at_phrase" in s["start"] or "after_phrase" in s["start"]]
+          for s in tl["shots"] if ("at_phrase" in s["start"] or "after_phrase" in s["start"]) and s["shot_id"] not in RUN_ON]
 
 cues = C.build(out, bounds)
 problems = C.audit(cues, bounds)

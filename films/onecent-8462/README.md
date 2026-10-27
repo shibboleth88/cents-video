@@ -35,3 +35,20 @@ In the cloud container, add `--browser-executable=/opt/pw-browsers/chromium_head
   - On v4 takes, scribe word ends run about 0.4 s into the following pause, so 9 of 15 gap midpoints fell on the next word's attack. The #2616 thread saw the same trap.
   - `vo.wav` is 112.84 s, of which 102.4 s is narration.
 - **Renders.** `one-cent-8462_v2_{clean,captioned}.mp4` run 1:53 (3385 frames). Copies are in `/mnt/project-files/single-cent-series/8462/`.
+
+## v3 (2026-10-27): the user's notes of 18:14Z
+- **Script.** `script/voiceover.txt` is v3; v2 is in `archive/`. The user's changes:
+  - "this is an exemplary instance of the Vandalized trait"; "defines Vandalized"; "This was one of the hardest traits to catalog due to the ambiguity of intentionality."
+  - The nickname: "Collectors have nicknamed it the Easter penny." (source: the user).
+  - The template #2125 is "a Cent close to mint state", not "lustrous", in voice and caption. This is a series rule.
+  - "The copper was altered twice".
+  - Closing line "Cent #8462, a great Cent." spoken over the final spin card (s08).
+- **Voice.** One eee take on eleven_v4 calm (277 words, 105.1 s, about 2.6 words/s). The scribe transcript equals `audio/tts_text.txt`.
+- **Pool.** s02 is a 3-column scroll of all 26 (600px sources in `public/cents/`), with a 2 s hold after "carry the trait.".
+  - Then s02b–s02e: a full-size close-up of each Traits Atlas example as it is named (#9828 scratched, #6761 drill attempt, #2270 paint, #4154 fine liner). Each zooms to the damage; the boxes are Claude's reading.
+  - Then s02f: #8462 again, "the only Vandalized 1973".
+  - The examples sentence is captioned as one sentence across those cuts (`RUN_ON` in `captions/build_cues.py`).
+- **Holds at commas.** The take has no 0.2 s pause at the list commas. Those holds sit in the longest run of 10 ms windows under -35 dB RMS, at least 150 ms long.
+  - Control: a hold after "struck" passed at 60 ms (a stop consonant's closure) and is refused at 150 ms.
+- **Alignment fix.** A word whose scribe end overruns its own hold now ends at the edit point. In v2 such words ran on through the inserted silence, which would have put s08 after the closing line began.
+- **Length.** `vo.wav` is 128.9 s (END_PAD 6.5 s). The film runs 2:09.
