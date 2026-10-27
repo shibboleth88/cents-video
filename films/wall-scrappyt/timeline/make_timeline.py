@@ -26,7 +26,7 @@ opener = {"variant": variant, "wall": W, "show": "card", "until_phrase": "Its si
           "moves": [{"at_phrase": "Its signature Cent", "target": {"cent": 7139, "in": "signature"}, "mark": True}],
           "progress": {"total_frames": TOTAL}}
 if variant in ("turn", "showcase"):
-    opener["clip"] = CLIP if use_clip else PLACEHOLDER
+    opener["clip"] = dict(CLIP, src="3dcents/7139-360-30fps-alpha.webm", alpha=True) if use_clip else PLACEHOLDER
 sig = {"title": T, "n": 7139, "readout": "1967", "caption": "Full Desert · Ghost"}
 if use_clip: sig["clip"] = CLIP
 

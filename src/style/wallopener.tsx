@@ -27,7 +27,7 @@ import { findPhrase, type Alignment } from "../lib/timeline";
  */
 
 type Anchored = { alignment: Alignment; shotStartFrame: number };
-type Clip = { src: string; width: number; height: number; frames: number; coin: { cx: number; cy: number; d: number }; credit: string; note?: string };
+type Clip = { src: string; width: number; height: number; frames: number; coin: { cx: number; cy: number; d: number }; credit: string; note?: string; alpha?: boolean };
 
 const VIEW = { x0: 40, y0: SAFE.essential.y0 };   // where WallBoard puts board unit (0,0) at its top view, k = 1
 
@@ -51,6 +51,10 @@ export const WallOpener: React.FC<Anchored & {
   const end = Math.round(findPhrase(alignment, until_phrase).start * fps) - shotStartFrame;
   if (end < 20) throw new Error(`WallOpener: "${until_phrase}" leaves the intro under 20 frames`);
   const b = useBoard(wall);
+  // WallBoard starts a move a little ahead of its phrase, so the credit is gone 12 frames before the first one.
+  const timed = moves.filter((m: any) => m.at_phrase);
+  const firstMove = timed.length ? Math.min(...timed.map((m: any) => Math.round(findPhrase(alignment, m.at_phrase).start * fps) - shotStartFrame)) : end;
+  const creditOut = Math.min(end, firstMove) - 12;
   const out = interpolate(frame, [end - 14, end], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: EASE.inOut });
 
   // The card underneath, at full opacity from frame 0 (WallBoard fades in only when it is not the opening shot).
@@ -77,7 +81,9 @@ export const WallOpener: React.FC<Anchored & {
       {variant === "rush" && b && frame < end ? <Rush board={b} frame={frame} end={end} out={out} /> : null}
       {variant === "turn" && b && frame < end + 2 ? <Turn board={b} frame={frame} end={end} clip={clip} /> : null}
       {showcase && clip ? (
-        <div style={{ position: "absolute", left: SAFE.essential.x0 + 24, top: 1262, width: SAFE.essential.x1 - SAFE.essential.x0 - 48 }}>
+        // The credit leaves before the card moves: left in place it lands on the zoomed card's badges.
+        <div style={{ position: "absolute", left: SAFE.essential.x0 + 24, top: 1262, width: SAFE.essential.x1 - SAFE.essential.x0 - 48,
+                      opacity: interpolate(frame, [creditOut - 8, creditOut], [1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }) }}>
           <SafeText role="label" fontSize={42} maxLines={1} color="#555" style={{ fontFamily: TYPE.body, textAlign: "center" }}>{clip.credit}</SafeText>
         </div>
       ) : null}
