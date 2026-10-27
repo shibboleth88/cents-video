@@ -4,7 +4,7 @@ This is the one source for the format of every Collector Wall episode. Read it b
 
 The reference episode is **blacktongue** (`films/wall-blacktongue/` on branch `claude/project-thread-nkzn17`, PR #5). Copy its folder layout, timeline shape and caption builder.
 
-Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the Daidatep thread's first findings. 2026-10-26: §5 "Delivery check" added from the GPT WBWA reel handover. 2026-10-27: narration voice changed to "eee" (§5); candidate showcase opener (§3, pending).
+Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the Daidatep thread's first findings. 2026-10-26: §5 "Delivery check" added from the GPT WBWA reel handover. 2026-10-27: narration voice changed to "eee" (§5); candidate showcase opener (§3, pending); 3DCENTS credit wording approved (§4).
 
 ## 1. What an episode is
 
@@ -66,7 +66,7 @@ Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the D
 - **Cents do not rotate.** Show each Cent still, the signature Cent included. `WallCard` and `WallStandout` now default to `spin: 0`. Never use a 3D tilt. (User, 2026-10-25 13:56Z. The earlier rule allowed a flat 2D spin; blacktongue v4 and Daidatep v3 were made under it and are accepted as they are.)
   - Exception: the wheat flip (`CentFlip`) is a separate move and is still used.
   - **Exception: the signature Cent can rotate in a 3DCENTS render.** The user approved this on 2026-10-25 14:13Z. 3DCENTS is sinvalli's tool, not Chang's. sinvalli is happy for the tool and its renders to be used and shared.
-    - **Credit:** the wording is waiting on the user's OK. The proposal is "3D render: 3DCENTS by sinvalli", on screen and in the end credits.
+    - **Credit (approved by the user, 2026-10-27):** "3D render: 3DCENTS by sinvalli". It sits small under the coin for the whole clip shot, and also goes in the end credits.
     - **Files:** the user exports the spins by hand into "/Users/moobook/Pictures/cents shortlist", using the site's own file names: `cent-<n>-360-1080x1920-25fps-reel` (Daidatep's #9908 came first).
       - Each episode thread copies its file into `/mnt/project-files/collector-wall/3dcents/`.
       - The exports are 25 fps. Retime them frame for frame to 30 fps:
