@@ -125,43 +125,38 @@
    "end": {
     "at_phrase": "In the words of Martin Lehnen, in his essay Reflections"
    },
-   "purpose": "Mint-year charts by @daidatep from Lehnen's 'Reflections on Mint Years' (Medium, 8 Mar 2025), one per spoken line. Counts measured on knowledge/data/cents_traits.csv: 2,126 / 291 / 96 / 26 of 10,000, matching the charts. The 2.08% Wheat chart is skipped, as the narration skips it.",
+   "purpose": "The mint-year charts by @daidatep from Lehnen's 'Reflections on Mint Years' (Medium, 8 Mar 2025), redrawn for the tall frame (user, 2026-10-27: the wide originals were too small): one ring around #2616 that shrinks step by step. Counts measured on knowledge/data/cents_traits.csv: 2,126 / 291 / 96 / 26 of 10,000, matching the charts' percentages; MintRing refuses a percentage that does not match its count. The 2.08% Wheat step is skipped, as the narration skips it.",
    "visual_kind": "code",
-   "component": "ScreenTour",
+   "component": "MintRing",
    "props": {
     "title": "Mint years",
-    "subtitle": "Charts: @daidatep",
-    "screens": [
+    "subtitle": "After charts by @daidatep",
+    "n": 2616,
+    "front": "hires/2616.webp",
+    "total": 10000,
+    "steps": [
      {
-      "src": "mintyears-pre1970.png",
-      "fit": true,
-      "aspect": 0.3335714285714286,
-      "push": 0,
-      "caption": "21.26% from before 1970"
+      "before": 1970,
+      "count": 2126,
+      "pct": "21.26%"
      },
      {
       "at_phrase": "Before nineteen sixty",
-      "src": "mintyears-pre1960.png",
-      "fit": true,
-      "aspect": 0.3335714285714286,
-      "push": 0,
-      "caption": "2.91% from before 1960"
+      "before": 1960,
+      "count": 291,
+      "pct": "2.91%"
      },
      {
       "at_phrase": "Before nineteen fifty",
-      "src": "mintyears-pre1950.png",
-      "fit": true,
-      "aspect": 0.3335714285714286,
-      "push": 0,
-      "caption": "0.96% from before 1950"
+      "before": 1950,
+      "count": 96,
+      "pct": "0.96%"
      },
      {
       "at_phrase": "Before nineteen forty",
-      "src": "mintyears-pre1940.png",
-      "fit": true,
-      "aspect": 0.3335714285714286,
-      "push": 0,
-      "caption": "0.26%: 26 Cents from before 1940"
+      "before": 1940,
+      "count": 26,
+      "pct": "0.26%"
      }
     ]
    }
@@ -395,7 +390,7 @@
     "at_phrase": "This is the oldest"
    },
    "end": {
-    "at_phrase": "In the words of Martin Lehnen, in his essay Lustrous"
+    "at_phrase": "Coin collecting turned"
    },
    "purpose": "The oldest Full Red Cent (#2616, 1912) and the next oldest (#1073, 1957 D; Sep 2026 export).",
    "visual_kind": "code",
@@ -425,29 +420,7 @@
    }
   },
   {
-   "shot_id": "s10_quote_lustrous",
-   "start": {
-    "at_phrase": "In the words of Martin Lehnen, in his essay Lustrous"
-   },
-   "end": {
-    "at_phrase": "Coin collecting turned"
-   },
-   "purpose": "Lehnen, 'Lustrous CENTS - a Conceptual Contradiction?' (Medium RSS), check_quotes.py: FOUND; control 'neither plural' MISSING. Said of transformation in general, not as a reason for this Cent's colour.",
-   "visual_kind": "code",
-   "component": "CentLook",
-   "props": {
-    "inscription": 65990912,
-    "n": 2616,
-    "front": "hires/2616.webp",
-    "quote": {
-     "at_phrase": "transformation is neither",
-     "text": "transformation is neither singular nor uniform, but a process that unfolds at different speeds, in different ways.",
-     "credit": "Martin Lehnen, Lustrous CENTS"
-    }
-   }
-  },
-  {
-   "shot_id": "s11_value",
+   "shot_id": "s10_value",
    "start": {
     "at_phrase": "Coin collecting turned"
    },
@@ -474,7 +447,7 @@
    }
   },
   {
-   "shot_id": "s12_card",
+   "shot_id": "s11_card",
    "start": {
     "after_phrase": "these fiat coins",
     "plus": 0.8
@@ -483,7 +456,7 @@
     "after_phrase": "these fiat coins",
     "plus": 5.8
    },
-   "purpose": "The opening card again, no voiceover, held for one full turn (150 frames).",
+   "purpose": "The opening card again, held for one full turn (150 frames), with the closing line (user, 2026-10-27) spoken over it.",
    "visual_kind": "code",
    "component": "CentSpin",
    "props": {
@@ -510,7 +483,7 @@
    }
   },
   {
-   "shot_id": "s13_credits",
+   "shot_id": "s12_credits",
    "start": {
     "after_phrase": "these fiat coins",
     "plus": 5.8
@@ -526,8 +499,8 @@
      "Images: Rutherford Chang via cents.vision (site by Dr. Martin Lehnen)",
      "3D Cent render from 3DCENTS.vercel.app (site by sinvalli)",
      "Trait names and grades: the CENTS Trait Council, Traits Atlas",
-     "Mint-year charts: @daidatep",
-     "Quotes: Martin Lehnen, “Reflections on Mint Years” and “Lustrous CENTS”",
+     "Mint-year charts after @daidatep",
+     "Quotes: Martin Lehnen, “Reflections on Mint Years”",
      "Quote: Dagmar, MAKES CENTS interview"
     ],
     "url": "cents.gallery"

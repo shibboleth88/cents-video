@@ -1,8 +1,8 @@
 """Write timeline/timeline.json for Cent #2616 v2 (script v0.4, eee v4 take 1).
 
 Order (user, 2026-10-27): the 1/1 Year first, then the mint-year charts and the
-Lehnen quotes, then the traits, the Full Red pool, the Lustrous quote, the value
-tie and the closing card. Shot props that v1 measured (coin centre, trait boxes,
+Lehnen quotes, then the traits, the Full Red pool, the value tie and the closing
+card with its closing line. Shot props that v1 measured (coin centre, trait boxes,
 the two Cent lists) are read from v1's timeline in git, not retyped.
 
     python3 -I films/onecent-2616/timeline/build_timeline.py   (from the repo root)
@@ -16,12 +16,10 @@ COIN = {k: open_[k] for k in ("inscription", "n", "front")}
 moves = {m["at_phrase"]: m for m in open_["moves"]}
 reads = {r["at_phrase"]: r for r in open_["reads"]}
 LEHNEN_MINT = "In the words of Martin Lehnen, in his essay Reflections"
-LEHNEN_LUST = "In the words of Martin Lehnen, in his essay Lustrous"
 
 def shot(sid, start, end, comp, props, purpose):
     return {"shot_id": sid, "start": start, "end": end, "purpose": purpose, "visual_kind": "code", "component": comp, "props": props}
 at = lambda p: {"at_phrase": p}
-CHART = 467 / 1400
 
 shots = [
     shot("s01_open", {"at_start": True}, at("One of twelve one-of-one"), "CentLook",
@@ -34,15 +32,16 @@ shots = [
     shot("s03_concept", at("Scarcity written by"), at("Among the ten thousand"), "CentLook",
          {**COIN, "concept": {"at_phrase": "Scarcity written by", "label": "Scarcity written by survival"}},
          "Concept C57 named on screen."),
-    shot("s04_charts", at("Among the ten thousand"), at(LEHNEN_MINT), "ScreenTour",
-         {"title": "Mint years", "subtitle": "Charts: @daidatep",
-          "screens": [
-              {"src": "mintyears-pre1970.png", "fit": True, "aspect": CHART, "push": 0, "caption": "21.26% from before 1970"},
-              {"at_phrase": "Before nineteen sixty", "src": "mintyears-pre1960.png", "fit": True, "aspect": CHART, "push": 0, "caption": "2.91% from before 1960"},
-              {"at_phrase": "Before nineteen fifty", "src": "mintyears-pre1950.png", "fit": True, "aspect": CHART, "push": 0, "caption": "0.96% from before 1950"},
-              {"at_phrase": "Before nineteen forty", "src": "mintyears-pre1940.png", "fit": True, "aspect": CHART, "push": 0, "caption": "0.26%: 26 Cents from before 1940"}]},
-         "Mint-year charts by @daidatep from Lehnen's 'Reflections on Mint Years' (Medium, 8 Mar 2025), one per spoken line. "
-         "Counts measured on knowledge/data/cents_traits.csv: 2,126 / 291 / 96 / 26 of 10,000, matching the charts. The 2.08% Wheat chart is skipped, as the narration skips it."),
+    shot("s04_charts", at("Among the ten thousand"), at(LEHNEN_MINT), "MintRing",
+         {"title": "Mint years", "subtitle": "After charts by @daidatep", "n": 2616, "front": "hires/2616.webp", "total": 10000,
+          "steps": [{"before": 1970, "count": 2126, "pct": "21.26%"},
+                    {"at_phrase": "Before nineteen sixty", "before": 1960, "count": 291, "pct": "2.91%"},
+                    {"at_phrase": "Before nineteen fifty", "before": 1950, "count": 96, "pct": "0.96%"},
+                    {"at_phrase": "Before nineteen forty", "before": 1940, "count": 26, "pct": "0.26%"}]},
+         "The mint-year charts by @daidatep from Lehnen's 'Reflections on Mint Years' (Medium, 8 Mar 2025), redrawn for the tall frame "
+         "(user, 2026-10-27: the wide originals were too small): one ring around #2616 that shrinks step by step. Counts measured on "
+         "knowledge/data/cents_traits.csv: 2,126 / 291 / 96 / 26 of 10,000, matching the charts' percentages; MintRing refuses a percentage that does not match its count. "
+         "The 2.08% Wheat step is skipped, as the narration skips it."),
     shot("s05_quote_mint", at(LEHNEN_MINT), at("And of the one-of-one"), "CentLook",
          {**COIN, "quote": {"at_phrase": "This data reveals", "text": "This data reveals how quickly scarcity accelerates the further back in time you go.",
                             "credit": "Martin Lehnen, Reflections on Mint Years"}},
@@ -54,20 +53,15 @@ shots = [
           "reads": [reads[k] for k in ("Its surface has", "full means red", "Across Lincoln's head", "Significant means a")]},
          "The trait zooms of v1, front only: the Full Red field, then the verdigris on head and shoulder."),
     shot("s08_scroll", at("Seventy-one Cents are"), at("This is the oldest"), "CentScroll", v1["s02_scroll"]["props"], v1["s02_scroll"]["purpose"]),
-    shot("s09_oldest", at("This is the oldest"), at(LEHNEN_LUST), "CentDissolve", v1["s03_oldest"]["props"], v1["s03_oldest"]["purpose"]),
-    shot("s10_quote_lustrous", at(LEHNEN_LUST), at("Coin collecting turned"), "CentLook",
-         {**COIN, "quote": {"at_phrase": "transformation is neither",
-                            "text": "transformation is neither singular nor uniform, but a process that unfolds at different speeds, in different ways.",
-                            "credit": "Martin Lehnen, Lustrous CENTS"}},
-         "Lehnen, 'Lustrous CENTS - a Conceptual Contradiction?' (Medium RSS), check_quotes.py: FOUND; control 'neither plural' MISSING. Said of transformation in general, not as a reason for this Cent's colour."),
-    shot("s11_value", at("Coin collecting turned"), {"after_phrase": "these fiat coins", "plus": 0.8}, "CentLook", v1["s08_value"]["props"], v1["s08_value"]["purpose"]),
-    {**v1["s09_card"], "shot_id": "s12_card"},
-    {**v1["s10_credits"], "shot_id": "s13_credits", "props": {**v1["s10_credits"]["props"], "lines": [
+    shot("s09_oldest", at("This is the oldest"), at("Coin collecting turned"), "CentDissolve", v1["s03_oldest"]["props"], v1["s03_oldest"]["purpose"]),
+    shot("s10_value", at("Coin collecting turned"), {"after_phrase": "these fiat coins", "plus": 0.8}, "CentLook", v1["s08_value"]["props"], v1["s08_value"]["purpose"]),
+    {**v1["s09_card"], "shot_id": "s11_card", "purpose": "The opening card again, held for one full turn (150 frames), with the closing line (user, 2026-10-27) spoken over it."},
+    {**v1["s10_credits"], "shot_id": "s12_credits", "props": {**v1["s10_credits"]["props"], "lines": [
         "Images: Rutherford Chang via cents.vision (site by Dr. Martin Lehnen)",
         "3D Cent render from 3DCENTS.vercel.app (site by sinvalli)",
         "Trait names and grades: the CENTS Trait Council, Traits Atlas",
-        "Mint-year charts: @daidatep",
-        "Quotes: Martin Lehnen, “Reflections on Mint Years” and “Lustrous CENTS”",
+        "Mint-year charts after @daidatep",
+        "Quotes: Martin Lehnen, “Reflections on Mint Years”",
         "Quote: Dagmar, MAKES CENTS interview"]}},
 ]
 tl = {"essay": {**json.loads(subprocess.run(["git", "show", "17489b4:films/onecent-2616/timeline/timeline.json"], cwd=F,

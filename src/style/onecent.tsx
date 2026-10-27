@@ -524,5 +524,76 @@ export const CentSet: React.FC<Anchored & { title: string; ns: number[]; readout
   );
 };
 
-export const ONECENT = { CentLook, CentCompare, CentField, CentSpin, CentDissolve, CentScroll, CentSet } as const;
-for (const C of [CentLook, CentCompare, CentField, CentSpin, CentDissolve, CentScroll, CentSet]) (C as any).wantsAlignment = true;
+/**
+ * The mint-year charts of Lehnen's "Reflections on Mint Years" (made by
+ * @daidatep), redrawn for the tall frame: a ring around one Cent, the share of
+ * Cents older than a year in the light colour, the rest in slate, as in the
+ * originals. Each step arrives on its phrase and the ring eases to it, so the
+ * shrinking share is seen. The share is checked against the count it states.
+ */
+type MintStep = { at_phrase?: string; before: number; count: number; pct: string };
+export const MintRing: React.FC<Anchored & {
+  title: string; subtitle: string; n: number; front: string; total: number; steps: MintStep[];
+}> = (props) => {
+  const { title, subtitle, front, total, steps } = props;
+  const frame = useCurrentFrame();
+  const fade = useShotFade();
+  const at = useAt(props);
+  if (steps.length === 0) throw new Error("MintRing: no steps");
+  steps.forEach((s, k) => {
+    if (k > 0 && !s.at_phrase) throw new Error(`MintRing: step ${k + 1} has no anchor`);
+    if (s.pct !== `${((100 * s.count) / total).toFixed(2)}%`)
+      throw new Error(`MintRing: ${s.pct} is not ${s.count} of ${total}`);
+  });
+  const starts = steps.map((s) => (s.at_phrase ? at(s.at_phrase) : 0));
+  let i = 0;
+  for (let k = 0; k < starts.length; k++) if (frame >= starts[k]!) i = k;
+  // The ring eases from the share before to this one.
+  const t = i === 0 ? 1 : ramp(frame, starts[i]!, 24);
+  const share = (k: number) => steps[k]!.count / total;
+  const f = i === 0 ? share(0) : share(i - 1) + (share(i) - share(i - 1)) * t;
+  const W = X1 - X0, H = STAGE.y1 - STAGE.y0;
+  const D = Math.min(W, H) - 20;                 // the ring's outer diameter
+  const RO = D / 2, RI = RO - 54, cx = 540, cy = H / 2;
+  // Older share drawn counter-clockwise from twelve o'clock, as in the originals.
+  const arc = (r: number, frac: number) => {
+    const a = -Math.PI / 2 - 2 * Math.PI * Math.min(frac, 0.9999);
+    return { x: cx + r * Math.cos(a), y: cy + r * Math.sin(a), large: frac > 0.5 ? 1 : 0 };
+  };
+  const o = arc(RO, f), n = arc(RI, f);
+  const wedge = `M ${cx} ${cy - RO} A ${RO} ${RO} 0 ${o.large} 0 ${o.x} ${o.y} L ${n.x} ${n.y} A ${RI} ${RI} 0 ${n.large} 1 ${cx} ${cy - RI} Z`;
+  const face = arc(RI - 10, f);
+  const faceWedge = `M ${cx} ${cy} L ${cx} ${cy - RI + 10} A ${RI - 10} ${RI - 10} 0 ${face.large} 0 ${face.x} ${face.y} Z`;
+  const coinD = 2 * (RI - 10);
+  const S = coinD / (2 * R);
+  const step = steps[i]!;
+  const rT = i === 0 ? ramp(frame, 4, 8) : ramp(frame, starts[i]!, 10);
+  const OLD = "#d8c9ae", NEW = "#7d90a8";
+  return (
+    <div style={{ position: "absolute", inset: 0, opacity: fade }}>
+      <Imagery>
+        <div style={{ position: "absolute", left: 0, top: STAGE.y0, width: 1080, height: H, opacity: ramp(frame, 0, 12) }}>
+          <Img src={staticFile(front)} style={{ position: "absolute", left: cx - S / 2, top: cy - S / 2, width: S, height: S,
+                                                clipPath: `circle(${(coinD / 2 / S) * 100}% at 50% 50%)` }} />
+          <svg width={1080} height={H} style={{ position: "absolute", left: 0, top: 0 }}>
+            <circle cx={cx} cy={cy} r={(RO + RI) / 2} fill="none" stroke={NEW} strokeWidth={RO - RI} />
+            <path d={wedge} fill={OLD} />
+            <path d={faceWedge} fill={OLD} opacity={0.42} />
+            <line x1={cx} y1={cy - RO - 6} x2={cx} y2={cy} stroke={COLOR.accent} strokeWidth={3} opacity={0.9} />
+          </svg>
+        </div>
+      </Imagery>
+      <div style={{ position: "absolute", left: X0, top: TITLE.y0, width: W }}>
+        <SafeText role="display" fontSize={84} maxLines={1} style={{ fontWeight: 700, letterSpacing: -1 }}>{title}</SafeText>
+        <SafeText role="body" fontSize={46} maxLines={1} color={COLOR.inkDim}>{subtitle}</SafeText>
+      </div>
+      <div style={{ position: "absolute", left: X0, top: BAND.y0, width: W, opacity: rT, transform: `translateY(${(1 - rT) * 14}px)` }}>
+        <SafeText role="display" fontSize={84} maxLines={1} color={COLOR.accent} style={{ fontFamily: TYPE.mono, fontWeight: 700 }}>{step.pct}</SafeText>
+        <SafeText role="body" fontSize={48} maxLines={1}>{`from before ${step.before}: ${step.count.toLocaleString("en-US")} Cents`}</SafeText>
+      </div>
+    </div>
+  );
+};
+
+export const ONECENT = { CentLook, CentCompare, CentField, CentSpin, CentDissolve, CentScroll, CentSet, MintRing } as const;
+for (const C of [CentLook, CentCompare, CentField, CentSpin, CentDissolve, CentScroll, CentSet, MintRing]) (C as any).wantsAlignment = true;

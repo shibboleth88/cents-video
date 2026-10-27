@@ -19,9 +19,15 @@ Episode 3 of the One Cent series. Series brief: `/mnt/project-files/single-cent-
 - **Charts:** in `public/vision/mintyears-pre19{70,60,50,40}.png` (gitignored). The originals are in `/mnt/project-files/single-cent-series/2616/lehnen-charts/`. They are shown whole with `push: 0` (a new optional `ScreenTour` prop, default unchanged), so the @daidatep signature stays in frame.
 - **Timeline:** written by `timeline/build_timeline.py`, which reads v1's measured props from git (commit 17489b4).
 
+## v3 (2026-10-27)
+
+- **Charts redrawn** for the tall frame (user: the wide originals were too small). `MintRing` (in `src/style/onecent.tsx`) draws a ring around #2616 in the originals' colours and eases from step to step. It refuses any percentage that does not match its count. The credit reads "After charts by @daidatep" on screen, and "Mint-year charts after @daidatep" in the credits.
+- **Lustrous CENTS quote cut** (user: keep it for another film). It is removed from the recording by `DROPS` in `audio/build_vo.py` (pause to pause), so nothing was re-recorded.
+- **Closing line** "2616, a great Cent." (user) is `audio/close_take1.mp3`: eee v4, same tags, 3.36 s. It is spoken over the closing spin card, starting 1.0 s into the card. `vo.wav` is 106.84 s.
+
 Render (from the repo root, after `python3 pipeline/film.py switch onecent-2616`):
 
-    npx remotion render src/index.ts Video films/onecent-2616/exports/one-cent-2616_v2_clean.mp4
-    npx remotion render src/index.ts VideoCaptioned films/onecent-2616/exports/one-cent-2616_v2_captioned.mp4
+    npx remotion render src/index.ts Video films/onecent-2616/exports/one-cent-2616_v3_clean.mp4
+    npx remotion render src/index.ts VideoCaptioned films/onecent-2616/exports/one-cent-2616_v3_captioned.mp4
 
 In the cloud container add `--browser-executable=/opt/pw-browsers/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell`.

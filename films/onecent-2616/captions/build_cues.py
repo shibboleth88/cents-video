@@ -16,7 +16,7 @@ tl = json.load(open(F / "timeline/timeline.json"))
 norm = lambda s: re.sub(r"[^a-z0-9 ]", " ", s.lower().replace("-", " ")).split()
 
 # Written token (punctuation stripped) -> its spoken form, as in audio/tts_text.txt.
-SPOKEN = {"#2616": "number twenty-six sixteen", "1912": "nineteen twelve", "71": "seventy-one",
+SPOKEN = {"#2616": "number twenty-six sixteen", "2616": "twenty-six sixteen", "1912": "nineteen twelve", "71": "seventy-one",
           "1957": "nineteen fifty-seven", "1911": "nineteen eleven", "1919": "nineteen nineteen",
           "1970": "nineteen seventy", "1960": "nineteen sixty", "1950": "nineteen fifty", "1940": "nineteen forty",
           "10,000": "ten thousand", "12": "twelve", "26": "twenty-six", "1/1": "one-of-one",

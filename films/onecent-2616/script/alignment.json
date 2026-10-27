@@ -1,6 +1,6 @@
 {
- "_source": "eee v4 take 1 (eleven_v4, [thoughtfully] [calm], script v0.4), transcribed with scribe_v1; word-for-word equal to audio/tts_text.txt; holds inserted by audio/build_vo.py: [('nineteen.', 1, 0.6), ('survival.', 1, 0.8), ('seventy.', 1, 0.6), ('percent.', 1, 0.6), ('one.', 1, 0.6), ('Cents.', 1, 1.0), ('go.\"', 1, 0.6), ('relics.\"', 1, 1.0), ('glance.', 1, 0.8), ('dominant.', 1, 1.0), ('Red.', 2, 1.5), ('fifty-seven.', 1, 0.8), ('ways.\"', 1, 1.0), ('over.', 1, 0.6)]",
- "duration": 118.12,
+ "_source": "eee v4 take 1 (eleven_v4, [thoughtfully] [calm], script v0.4), transcribed with scribe_v1; word-for-word equal to audio/tts_text.txt; holds inserted by audio/build_vo.py: [('nineteen.', 1, 0.6), ('survival.', 1, 0.8), ('seventy.', 1, 0.6), ('percent.', 1, 0.6), ('one.', 1, 0.6), ('Cents.', 1, 1.0), ('go.\"', 1, 0.6), ('relics.\"', 1, 1.0), ('glance.', 1, 0.8), ('dominant.', 1, 1.0), ('Red.', 2, 1.5), ('fifty-seven.', 1, 1.0), ('over.', 1, 0.6)]; passages dropped: [(('fifty-seven.', 1), ('ways.\"', 1))]; closing line from audio/close_take1.mp3",
+ "duration": 106.84,
  "words": [
   {
    "word": "Cent",
@@ -875,302 +875,187 @@
   {
    "word": "fifty-seven.",
    "start": 80.647,
-   "end": 82.407
-  },
-  {
-   "word": "In",
-   "start": 82.433,
-   "end": 82.46
-  },
-  {
-   "word": "the",
-   "start": 82.54,
-   "end": 82.62
-  },
-  {
-   "word": "words",
-   "start": 82.74,
-   "end": 82.86
-  },
-  {
-   "word": "of",
-   "start": 82.9,
-   "end": 82.94
-  },
-  {
-   "word": "Martin",
-   "start": 83.02,
-   "end": 83.26
-  },
-  {
-   "word": "Lehnen,",
-   "start": 83.34,
-   "end": 83.767
-  },
-  {
-   "word": "in",
-   "start": 83.793,
-   "end": 83.82
-  },
-  {
-   "word": "his",
-   "start": 83.9,
-   "end": 83.98
-  },
-  {
-   "word": "essay",
-   "start": 84.06,
-   "end": 84.46
-  },
-  {
-   "word": "\"Lustrous",
-   "start": 84.5,
-   "end": 85.02
-  },
-  {
-   "word": "CENTS\",",
-   "start": 85.18,
-   "end": 85.66
-  },
-  {
-   "word": "transformation",
-   "start": 85.74,
-   "end": 86.54
-  },
-  {
-   "word": "is",
-   "start": 86.62,
-   "end": 86.94
-  },
-  {
-   "word": "\"neither",
-   "start": 86.967,
-   "end": 87.34
-  },
-  {
-   "word": "singular",
-   "start": 87.62,
-   "end": 87.9
-  },
-  {
-   "word": "nor",
-   "start": 87.98,
-   "end": 88.22
-  },
-  {
-   "word": "uniform,",
-   "start": 88.3,
-   "end": 89.02
-  },
-  {
-   "word": "but",
-   "start": 89.06,
-   "end": 89.1
-  },
-  {
-   "word": "a",
-   "start": 89.26,
-   "end": 89.42
-  },
-  {
-   "word": "process",
-   "start": 89.58,
-   "end": 89.74
-  },
-  {
-   "word": "that",
-   "start": 89.82,
-   "end": 89.9
-  },
-  {
-   "word": "unfolds",
-   "start": 90.02,
-   "end": 90.38
-  },
-  {
-   "word": "at",
-   "start": 90.46,
-   "end": 90.62
-  },
-  {
-   "word": "different",
-   "start": 90.78,
-   "end": 90.94
-  },
-  {
-   "word": "speeds,",
-   "start": 91.1,
-   "end": 91.74
-  },
-  {
-   "word": "in",
-   "start": 91.78,
-   "end": 91.82
-  },
-  {
-   "word": "different",
-   "start": 91.98,
-   "end": 92.14
-  },
-  {
-   "word": "ways.\"",
-   "start": 92.54,
-   "end": 93.98
+   "end": 82.607
   },
   {
    "word": "Coin",
-   "start": 94.02,
-   "end": 94.26
+   "start": 82.697,
+   "end": 82.937
   },
   {
    "word": "collecting",
-   "start": 94.42,
-   "end": 94.82
+   "start": 83.097,
+   "end": 83.497
   },
   {
    "word": "turned",
-   "start": 94.9,
-   "end": 95.14
+   "start": 83.577,
+   "end": 83.817
   },
   {
    "word": "over.",
-   "start": 95.22,
-   "end": 96.5
+   "start": 83.897,
+   "end": 85.177
   },
   {
    "word": "In",
-   "start": 96.54,
-   "end": 96.62
+   "start": 85.217,
+   "end": 85.297
   },
   {
    "word": "the",
-   "start": 96.66,
-   "end": 96.7
+   "start": 85.337,
+   "end": 85.377
   },
   {
    "word": "words",
-   "start": 96.82,
-   "end": 96.94
+   "start": 85.497,
+   "end": 85.617
   },
   {
    "word": "of",
-   "start": 97.02,
-   "end": 97.1
+   "start": 85.697,
+   "end": 85.777
   },
   {
    "word": "collector",
-   "start": 97.3,
-   "end": 97.5
+   "start": 85.977,
+   "end": 86.177
   },
   {
    "word": "Dagmar:",
-   "start": 97.54,
-   "end": 98.327
+   "start": 86.217,
+   "end": 87.004
   },
   {
    "word": "\"Unlike",
-   "start": 98.353,
-   "end": 98.7
+   "start": 87.03,
+   "end": 87.377
   },
   {
    "word": "traditional",
-   "start": 98.94,
-   "end": 99.18
+   "start": 87.617,
+   "end": 87.857
   },
   {
    "word": "coin",
-   "start": 99.3,
-   "end": 99.42
+   "start": 87.977,
+   "end": 88.097
   },
   {
    "word": "collectors,",
-   "start": 99.62,
-   "end": 100.113
+   "start": 88.297,
+   "end": 88.79
   },
   {
    "word": "who",
-   "start": 100.167,
-   "end": 100.22
+   "start": 88.844,
+   "end": 88.897
   },
   {
    "word": "prefer",
-   "start": 100.42,
-   "end": 100.62
+   "start": 89.097,
+   "end": 89.297
   },
   {
    "word": "old",
-   "start": 100.7,
-   "end": 100.86
+   "start": 89.377,
+   "end": 89.537
   },
   {
    "word": "coins",
-   "start": 100.94,
-   "end": 101.18
+   "start": 89.617,
+   "end": 89.857
   },
   {
    "word": "in",
-   "start": 101.26,
-   "end": 101.34
+   "start": 89.937,
+   "end": 90.017
   },
   {
    "word": "pristine",
-   "start": 101.42,
-   "end": 101.82
+   "start": 90.097,
+   "end": 90.497
   },
   {
    "word": "condition,",
-   "start": 101.9,
-   "end": 102.78
+   "start": 90.577,
+   "end": 91.457
   },
   {
    "word": "we",
-   "start": 102.86,
-   "end": 102.94
+   "start": 91.537,
+   "end": 91.617
   },
   {
    "word": "degens",
-   "start": 103.06,
-   "end": 103.5
+   "start": 91.737,
+   "end": 92.177
   },
   {
    "word": "value",
-   "start": 103.58,
-   "end": 103.82
+   "start": 92.257,
+   "end": 92.497
   },
   {
    "word": "the",
-   "start": 103.9,
-   "end": 103.98
+   "start": 92.577,
+   "end": 92.657
   },
   {
    "word": "symbolic",
-   "start": 104.22,
-   "end": 104.62
+   "start": 92.897,
+   "end": 93.297
   },
   {
    "word": "decay",
-   "start": 104.86,
-   "end": 105.1
+   "start": 93.537,
+   "end": 93.777
   },
   {
    "word": "of",
-   "start": 105.18,
-   "end": 105.26
+   "start": 93.857,
+   "end": 93.937
   },
   {
    "word": "these",
-   "start": 105.38,
-   "end": 105.5
+   "start": 94.057,
+   "end": 94.177
   },
   {
    "word": "fiat",
-   "start": 105.58,
-   "end": 105.82
+   "start": 94.257,
+   "end": 94.497
   },
   {
    "word": "coins.\"",
-   "start": 105.9,
-   "end": 106.7
+   "start": 94.577,
+   "end": 95.377
+  },
+  {
+   "word": "Twenty-six",
+   "start": 97.177,
+   "end": 97.897
+  },
+  {
+   "word": "sixteen,",
+   "start": 98.057,
+   "end": 98.817
+  },
+  {
+   "word": "a",
+   "start": 99.097,
+   "end": 99.177
+  },
+  {
+   "word": "great",
+   "start": 99.257,
+   "end": 99.577
+  },
+  {
+   "word": "Cent.",
+   "start": 99.657,
+   "end": 100.377
   }
  ]
 }
