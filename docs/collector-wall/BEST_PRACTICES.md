@@ -4,7 +4,7 @@ This is the one source for the format of every Collector Wall episode. Read it b
 
 The reference episode is **blacktongue** (`films/wall-blacktongue/` on branch `claude/project-thread-nkzn17`, PR #5). Copy its folder layout, timeline shape and caption builder.
 
-Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the Daidatep thread's first findings. 2026-10-26: §5 "Delivery check" added from the GPT WBWA reel handover.
+Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the Daidatep thread's first findings. 2026-10-26: §5 "Delivery check" added from the GPT WBWA reel handover. 2026-10-27: narration voice changed to "eee" (§5); showcase opener is the series opening (§3); 3DCENTS credit wording approved (§4); badge zooms get the opener-style highlight (§4a).
 
 ## 1. What an episode is
 
@@ -37,8 +37,32 @@ Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the D
 
 ## 3. Structure (the order that worked)
 
-1. **Open on the Wall.** "This is the Wall of NAME." Use a cents.vision screenshot of that Wall's card if one exists. Otherwise use `WallBoard` at `{top: true}`. Either way, frame 0 shows the Wall.
-2. **Zoom to the signature Cent on the screenshot.** Once that sentence ends, the camera zooms onto the signature Cent on the card. Only then does the film cut to the individual view of that Cent: its number, year, and its traits ("…and is a Ghost Cent").
+1. **Open on the Wall, with the showcase opener (series format, user 2026-10-27).** "This is the Wall of NAME." Frame 0 must already read as a video with more to come, not a still. The user asked for this in the ScrappyT thread, then asked for blacktongue and Daidatep to be redone with it.
+   - **What it shows from frame 0:**
+     - the Wall card (`WallBoard`, `show: "card"`), with the signature Cent turning in its slot as its 3DCENTS spin;
+     - the mosaic Cents lighting up one after another, with a copper ring, 5 frames apart;
+     - at the same time, every badge in reading order (tags, sets, fulls, meta), 3 frames apart;
+     - a thin copper progress bar across the top.
+   - It runs until "Its signature Cent". The card then zooms onto the signature Cent, which carries a copper mark, and the film cuts to that Cent on its own (`WallStandout` with the same `clip`).
+   - **Shot:** `WallOpener` (src/style/wallopener.tsx, from PR #14):
+     ```json
+     {"component": "WallOpener", "start": {"at_start": true}, "end": {"at_phrase": "number <signature in words>"},
+      "props": {"variant": "showcase", "wall": "<slug>", "show": "card", "until_phrase": "Its signature Cent",
+       "moves": [{"at_phrase": "Its signature Cent", "target": {"cent": <n>, "in": "signature"}, "mark": true}],
+       "progress": {"total_frames": <round(alignment duration * 30)>},
+       "clip": {"src": "3dcents/<n>-360-30fps.mp4", "width": 1080, "height": 1920, "frames": 150,
+                "coin": {"cx": 539.5, "cy": 959.5, "d": 776}, "credit": "3D render: 3DCENTS by sinvalli"}}}
+     ```
+   - **It needs the signature Cent's 3DCENTS spin** (§4), so ask the user to export it at the start of an episode. It throws without a clip or a credit.
+   - **Key the clip for the white card.** On the card, the opener uses an alpha copy of the spin, not the black-background mp4: with a dark disc, the coin shows a black circle whenever it turns edge-on. Make it from the 30 fps retime:
+     ```bash
+     ffmpeg -i cent-<n>-360-1080x1920-30fps-retimed.mp4 -vf "format=yuva420p,geq=lum='lum(X,Y)':cb='cb(X,Y)':cr='cr(X,Y)':a='clip((lum(X,Y)-18)*40,0,255)'" -c:v libvpx-vp9 -pix_fmt yuva420p -auto-alt-ref 0 -b:v 4M cent-<n>-360-1080x1920-30fps-alpha.webm
+     ```
+     Then set `"src": "3dcents/<n>-360-30fps-alpha.webm", "alpha": true` in the opener's clip. The render's black sits at luma 16, so a threshold near 0 keys nothing. The `WallStandout` shot that follows stays on black and keeps the mp4. Keep both files in `/mnt/project-files/collector-wall/3dcents/`.
+   - The credit under the card fades out before the zoom onto the signature Cent (PR #14 a3ee33b), so it never sits on the zoomed badges.
+   - **Still being tuned:** the user may change the speed, the order or the progress bar in the ScrappyT thread. Take the current settings from that thread. Reference renders: ScrappyT v1, and `/mnt/project-files/collector-wall/openers/opener-showcase_v1.mp4`.
+   - The earlier opening, a cents.vision screenshot of the card zoomed onto the signature Cent, is retired for new episodes.
+2. **Zoom to the signature Cent on the card.** Once that sentence ends, the camera zooms onto the signature Cent on the card. Only then does the film cut to the individual view of that Cent: its number, year, and its traits ("…and is a Ghost Cent").
 3. **Count and span:** "The Wall holds N Cents, from YEAR to YEAR." Then the size club, zooming onto the club badge, with the club's range ("…which puts it in the Dime Club, for ten to twenty-four Cents").
 4. **Standout Cents.** For each one, say what makes it rare, as "one of only N" with a measured N. Where the trait sits in one place on the coin, zoom into it (see §4).
 5. **Mint-year badges:** Wheat, 1971 Club, 1969 Club, 1/1 Year, 1/1 Mint, 1/1 Trait Combo. Zoom onto the badge, then show the Cents behind it.
@@ -65,7 +89,7 @@ Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the D
 - **Cents do not rotate.** Show each Cent still, the signature Cent included. `WallCard` and `WallStandout` now default to `spin: 0`. Never use a 3D tilt. (User, 2026-10-25 13:56Z. The earlier rule allowed a flat 2D spin; blacktongue v4 and Daidatep v3 were made under it and are accepted as they are.)
   - Exception: the wheat flip (`CentFlip`) is a separate move and is still used.
   - **Exception: the signature Cent can rotate in a 3DCENTS render.** The user approved this on 2026-10-25 14:13Z. 3DCENTS is sinvalli's tool, not Chang's. sinvalli is happy for the tool and its renders to be used and shared.
-    - **Credit:** the wording is waiting on the user's OK. The proposal is "3D render: 3DCENTS by sinvalli", on screen and in the end credits.
+    - **Credit (approved by the user, 2026-10-27):** "3D render: 3DCENTS by sinvalli". It sits small under the coin for the whole clip shot, and also goes in the end credits.
     - **Files:** the user exports the spins by hand into "/Users/moobook/Pictures/cents shortlist", using the site's own file names: `cent-<n>-360-1080x1920-25fps-reel` (Daidatep's #9908 came first).
       - Each episode thread copies its file into `/mnt/project-files/collector-wall/3dcents/`.
       - The exports are 25 fps. Retime them frame for frame to 30 fps:
@@ -106,7 +130,7 @@ Use `WallBoard` (`src/style/wallboard.tsx`) for every shot that moves around a W
 - It only holds one screen of the page.
 - Live capture of collectors.html now times out in the cloud container: gstatic is refused, and the `window.firebase` stub no longer lets `state.collectors` load (Daidatep thread, 2026-10-25).
 
-A real cents.vision screenshot is still welcome for the first second, if one exists.
+*(Superseded 2026-10-27: this line said a real cents.vision screenshot was welcome for the first second. The opening is now the showcase opener, §3 step 1.)*
 
 **1. Snapshot the Wall's data.** The command writes `films/wall-<slug>/data/wall_board.json` (committed) and `public/walls/<slug>.json` (what the component fetches):
 
@@ -147,6 +171,7 @@ python3 pipeline/stage_cents.py --src <sovrn-onchain>/cents <every Cent number o
 - A move eases over 18 frames.
 - With `until_phrase`, the move pans linearly until that phrase. That is how to scroll.
 - `mark: true` outlines the target in copper.
+- **A badge being talked about gets the opener's highlight (user, 2026-10-27).** When the narration names a single badge and the camera zooms onto it, light that badge up more prominently than the thin `mark` outline. Use the same style as the showcase opener's light-up: a copper ring with a glow, a slight brightness lift, and a small scale-up, held while it is spoken. Until `mark` does this by default on badge targets, add it explicitly in the episode. A `sweep` limited to that badge's row will not do, because it lights the whole row. This applies to every badge zoom (club, Wheat, Sets, Diamond Hands, Mint Keeper, trait tags).
 - `zoom` caps the magnification. The default is 2.6.
 
 **What the board shows:** `show: "card"` draws the card alone. The user wants this for the Wall itself: the card should not carry the "N CENTS in this wall" collection rows. `show: "grid"` draws the collection rows alone, which are for singling out Cents (the wheat pennies, a 1955-D). The default "all" draws both and is only kept for older episodes. (User, 2026-10-25; added on PR #8.)
@@ -161,7 +186,9 @@ For a trait you must see on the coin itself (a date, a mint mark), cut from the 
 
 ## 5. Narration, captions, delivery
 
-- **Voice:** the user's ElevenLabs voice "eo" (`G9J6fFeGgUrIramcuC3q`), model `eleven_v4`.
+- **Voice (from 2026-10-27):** the user's ElevenLabs voice "eee" (`pp4OmJ3yyWS9Jyhejh5f`), via the ElevenLabs MCP (`creative_list_voices` search "eee" finds it). It replaces "eo" (`G9J6fFeGgUrIramcuC3q`), which stays only on episodes already voiced in it (blacktongue, Daidatep); do not re-voice those unless the user asks.
+  - **Setting:** model `eleven_v4`, with `[thoughtfully] [calm]` at the start of every line. The user picked this in the #2616 thread, and ScrappyT uses it. *(Correction, 2026-10-27: this line first said `eleven_multilingual_v2`. That was only the model of the cloud test takes in `/mnt/project-files/voice/`.)*
+  - **scribe_v1 returns the audio tags as tiny word tokens.** Strip them from the transcript before the word-for-word check and the alignment.
 - **TTS text:**
   - Spell numbers out ("fifty-one eighty-five", "October twenty twenty-six").
   - Say "cents dot vision".

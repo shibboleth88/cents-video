@@ -9,48 +9,77 @@
  "_what": "Collector Wall episode 1. Every coin is a real Cent by number; every figure comes from data/wall.json (cents.vision, 24 Oct 2026). No wallet address appears.",
  "shots": [
   {
-   "shot_id": "w00_wall",
+   "shot_id": "w00_open",
    "start": {
     "at_start": true
    },
    "end": {
     "at_phrase": "number fifty-one eighty-five"
    },
-   "purpose": "The Wall as cents.vision shows it; after the first sentence, zoom onto its signature Cent.",
-   "visual_kind": "screenshot",
-   "component": "WallShot",
+   "purpose": "Opening (showcase, as in ScrappyT): moving from frame 0, the signature Cent turning in its slot while the Cents and badges light up; then the card zooms onto the signature Cent.",
+   "visual_kind": "code",
+   "component": "WallOpener",
    "props": {
-    "src": "vision/wall-blacktongue_card.png",
-    "width": 1080,
-    "height": 1340,
+    "variant": "showcase",
+    "wall": "blacktongue",
+    "show": "card",
+    "until_phrase": "Its signature Cent",
     "moves": [
      {
       "at_phrase": "Its signature Cent",
-      "box": [
-       40,
-       85,
-       230,
-       345
-      ]
+      "target": {
+       "cent": 5185,
+       "in": "signature"
+      },
+      "mark": true
      }
-    ]
+    ],
+    "progress": {
+     "total_frames": 2516
+    },
+    "clip": {
+     "src": "3dcents/5185-360-30fps-alpha.webm",
+     "width": 1080,
+     "height": 1920,
+     "frames": 150,
+     "coin": {
+      "cx": 539.5,
+      "cy": 959.5,
+      "d": 776
+     },
+     "credit": "3D render: 3DCENTS by sinvalli",
+     "alpha": true
+    }
    }
   },
   {
-   "shot_id": "w01_card",
+   "shot_id": "w01_sig",
    "start": {
     "at_phrase": "number fifty-one eighty-five"
    },
    "end": {
     "at_phrase": "The Wall holds twenty-four"
    },
-   "purpose": "Name the Wall and show its signature Cent, as the card does.",
+   "purpose": "The signature Cent #5185 on its own, turning (3DCENTS).",
    "visual_kind": "code",
-   "component": "WallCard",
+   "component": "WallStandout",
    "props": {
     "title": "blacktongue",
-    "signature": 5185,
-    "caption": "Signature Cent #5185 \u00b7 1968"
+    "n": 5185,
+    "readout": "1968",
+    "caption": "Full Desert · Ghost",
+    "clip": {
+     "src": "3dcents/5185-360-30fps.mp4",
+     "width": 1080,
+     "height": 1920,
+     "frames": 150,
+     "coin": {
+      "cx": 539.5,
+      "cy": 959.5,
+      "d": 776
+     },
+     "credit": "3D render: 3DCENTS by sinvalli"
+    }
    }
   },
   {
@@ -215,7 +244,7 @@
       "year": 1967
      }
     ],
-    "caption": "Years 1938\u20131980"
+    "caption": "Years 1938–1980"
    }
   },
   {
@@ -406,37 +435,37 @@
      {
       "n": 6054,
       "patina": "verdigris",
-      "caption": "Full Verdigris \u00b7 #6054",
+      "caption": "Full Verdigris · #6054",
       "at_phrase": "a full verdigris"
      },
      {
       "n": 555,
       "patina": "obsidian",
-      "caption": "Full Obsidian \u00b7 #555",
+      "caption": "Full Obsidian · #555",
       "at_phrase": "a full obsidian"
      },
      {
       "n": 189,
       "patina": "red",
-      "caption": "Full Red \u00b7 #189",
+      "caption": "Full Red · #189",
       "at_phrase": "a full red, a full"
      },
      {
       "n": 5185,
       "patina": "desert",
-      "caption": "Full Desert \u00b7 #5185",
+      "caption": "Full Desert · #5185",
       "at_phrase": "full desert, a full gold"
      },
      {
       "n": 3231,
       "patina": "gold",
-      "caption": "Full Gold \u00b7 #3231",
+      "caption": "Full Gold · #3231",
       "at_phrase": "full gold and an"
      },
      {
       "n": 1757,
       "patina": "orange",
-      "caption": "Orange \u00b7 #1757",
+      "caption": "Orange · #1757",
       "at_phrase": "and an orange"
      }
     ]
@@ -564,7 +593,7 @@
    "component": "WallList",
    "props": {
     "title": "blacktongue",
-    "subtitle": "Ghost x 2 \u00b7 Vandalized x 1",
+    "subtitle": "Ghost x 2 · Vandalized x 1",
     "rows": [
      {
       "n": 5185,
