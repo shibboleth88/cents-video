@@ -4,7 +4,7 @@ This is the one source for the format of every Collector Wall episode. Read it b
 
 The reference episode is **blacktongue** (`films/wall-blacktongue/` on branch `claude/project-thread-nkzn17`, PR #5). Copy its folder layout, timeline shape and caption builder.
 
-Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the Daidatep thread's first findings. 2026-10-26: §5 "Delivery check" added from the GPT WBWA reel handover.
+Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the Daidatep thread's first findings. 2026-10-26: §5 "Delivery check" added from the GPT WBWA reel handover. 2026-10-27: narration voice changed to "eee" (§5).
 
 ## 1. What an episode is
 
@@ -161,7 +161,7 @@ For a trait you must see on the coin itself (a date, a mint mark), cut from the 
 
 ## 5. Narration, captions, delivery
 
-- **Voice:** the user's ElevenLabs voice "eo" (`G9J6fFeGgUrIramcuC3q`), model `eleven_v4`.
+- **Voice (from 2026-10-27):** the user's ElevenLabs voice "eee" (`pp4OmJ3yyWS9Jyhejh5f`), model `eleven_multilingual_v2`, via the ElevenLabs MCP (`creative_list_voices` search "eee" finds it). It replaces "eo" (`G9J6fFeGgUrIramcuC3q`, `eleven_v4`), which stays only on episodes already voiced in it (blacktongue, Daidatep); do not re-voice those unless the user asks. Test takes: `/mnt/project-files/voice/`.
 - **TTS text:**
   - Spell numbers out ("fifty-one eighty-five", "October twenty twenty-six").
   - Say "cents dot vision".
