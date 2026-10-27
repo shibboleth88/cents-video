@@ -49,4 +49,5 @@ Every figure was checked against `snapshots/2026-10-25/raw/merged-new2.json` and
 ## v6 (user request, 2026-10-27 18:16Z)
 
 - New series opening: `WallOpener` variant `showcase` (from the ScrappyT episode, PR #14) replaces the plain card. From frame 0 the Wall card shows the signature Cent #9908 turning in its slot (the same 3DCENTS clip as d01), the mosaic Cents and the badges light up one after another, and a thin progress bar runs across the top. At "Its signature Cent" it hands over to the card, which zooms onto the signature as before. The rest of the film is v5 unchanged.
-- The showcase's credit line now fades out as the card zooms in (8 frames from the handover): before, it sat on top of the zoomed white card.
+- The opener uses an alpha copy of the 9908 clip (`9908-360-30fps-alpha.webm`, VP9, alpha 0 where luma <= 18, the ScrappyT recipe), so no black disc shows on the white card when the coin turns edge-on. Checked on frames 0 and 75: no transparent pixels inside the coin.
+- The opener's credit fades before the card starts to move (ScrappyT's a3ee33b, which replaced this thread's own fade fix).
