@@ -45,7 +45,9 @@ export type Move = { at_phrase?: string; target: Target; until_phrase?: string; 
 export type Highlight = { at_phrase: string; until_phrase?: string; cents?: number[]; group?: string };
 export type Show = "all" | "card" | "grid";
 /** A 3DCENTS render of the signature Cent (sinvalli), already at 30 fps; `coin` is measured on its first frame. */
-export type SigClip = { src: string; width: number; height: number; frames: number; coin: { cx: number; cy: number; d: number }; credit: string };
+export type SigClip = { src: string; width: number; height: number; frames: number; coin: { cx: number; cy: number; d: number }; credit: string;
+  /** true: src carries its own alpha (VP9 webm keyed off the render's black), so it sits on any card without a dark disc. */
+  alpha?: boolean };
 /**
  * A light-up chase: the elements of the named rows, in reading order, glow one
  * after another, `stagger` frames apart, each glow fading over `hold` frames,
@@ -299,11 +301,12 @@ const WallBoardInner: React.FC<Anchored & { board: Board; moves?: Move[]; highli
                 const d = S(x1 - x0), k = d / clip.coin.d;
                 return (
                   // The blend needs its dark fill inside its own isolated group (as in WallStandout).
-                  <div key={i} style={{ ...st, borderRadius: "50%", overflow: "hidden", background: COLOR.bg, isolation: "isolate", opacity: dim }}>
+                  // An alpha clip needs neither: a dark disc shows as a black circle whenever the coin turns edge-on on the white card.
+                  <div key={i} style={{ ...st, borderRadius: "50%", overflow: "hidden", background: clip.alpha ? undefined : COLOR.bg, isolation: "isolate", opacity: dim }}>
                     <Loop durationInFrames={clip.frames} layout="none">
-                      <OffthreadVideo src={staticFile(clip.src)} muted
+                      <OffthreadVideo src={staticFile(clip.src)} muted transparent={!!clip.alpha}
                         style={{ position: "absolute", left: d / 2 - clip.coin.cx * k, top: d / 2 - clip.coin.cy * k,
-                                 width: clip.width * k, height: clip.height * k, mixBlendMode: "lighten" }} />
+                                 width: clip.width * k, height: clip.height * k, mixBlendMode: clip.alpha ? undefined : "lighten" }} />
                     </Loop>
                   </div>
                 );
