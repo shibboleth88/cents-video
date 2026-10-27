@@ -1,4 +1,4 @@
-"""Captions for One Cent #2616 (copied from the Daidatep builder): cut-aware cues on eee v2 take 2, with each
+"""Captions for One Cent #2616 (copied from the Daidatep builder): cut-aware cues on eee v4 take 1, with each
 spoken number written back the way the script writes it. Each script word is
 paired with its spoken words by a table of how many words it takes to say, so
 the written form inherits their exact timing. Refuses unless the cue text
@@ -17,8 +17,10 @@ norm = lambda s: re.sub(r"[^a-z0-9 ]", " ", s.lower().replace("-", " ")).split()
 
 # Written token (punctuation stripped) -> its spoken form, as in audio/tts_text.txt.
 SPOKEN = {"#2616": "number twenty-six sixteen", "1912": "nineteen twelve", "71": "seventy-one",
-          "1957": "nineteen fifty-seven", "#9540": "number ninety-five forty", "1911": "nineteen eleven",
-          "10,000": "ten thousand", "12": "twelve", "…1912": "nineteen twelve"}
+          "1957": "nineteen fifty-seven", "1911": "nineteen eleven", "1919": "nineteen nineteen",
+          "1970": "nineteen seventy", "1960": "nineteen sixty", "1950": "nineteen fifty", "1940": "nineteen forty",
+          "10,000": "ten thousand", "12": "twelve", "26": "twenty-six", "1/1": "one-of-one",
+          "21%": "twenty-one percent", "3%": "three percent", "…1912": "nineteen twelve"}
 
 script = open(F / "script/voiceover.txt").read().split()
 words, out, i = al["words"], [], 0

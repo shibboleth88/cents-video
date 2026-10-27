@@ -11,9 +11,17 @@ Episode 3 of the One Cent series. Series brief: `/mnt/project-files/single-cent-
 - **Images:** 1050px fronts of #2616, #9540, #1073 from cents.vision in `public/hires/`; the 71 Full Red and 12 1/1 Year Cents downscaled from cents.vision fronts to 300px in `public/cents/` (all gitignored).
 - **Trait areas** (fractions of the 1050px front; Claude's reading, pending the user): date [0.64,0.60,0.84,0.70]; red field [0.58,0.24,0.93,0.64]; verdigris [0.40,0.27,0.62,0.52], [0.40,0.54,0.58,0.70], [0.26,0.68,0.44,0.83].
 
+## v2 (2026-10-27, script v0.4)
+
+- **User notes applied:** the 1/1 Year leads, before the traits (series rule from this episode). The two #9540 lines and "One year apart, a different surface" are cut. The mint-year line is shown on @daidatep's charts from Lehnen's "Reflections on Mint Years" (cleared by the user, 2026-10-27). Two Lehnen quotes are added: "This data reveals…" (Trait Council text) and "Lustrous CENTS" ("neither singular nor uniform…"). All are FOUND by `check_quotes.py`; the control "neither plural" is MISSING.
+- **Narration:** eee on **eleven_v4**, with `[thoughtfully] [calm]` once at the start and default settings (the user's pick, test E). Take 1 is 95.1 s for 236 words. Take 2 (96.2 s) is kept. The v0.3 take recorded before the user's cuts is in `archive/`.
+- **Holds:** scribe_v1 word ends run about 0.4 s into each pause on v4, so `audio/build_vo.py` now places each hold in a pause measured with silencedetect. There are 14 holds and END_PAD is 11.5 s; `vo.wav` is 118.12 s.
+- **Charts:** in `public/vision/mintyears-pre19{70,60,50,40}.png` (gitignored). The originals are in `/mnt/project-files/single-cent-series/2616/lehnen-charts/`. They are shown whole with `push: 0` (a new optional `ScreenTour` prop, default unchanged), so the @daidatep signature stays in frame.
+- **Timeline:** written by `timeline/build_timeline.py`, which reads v1's measured props from git (commit 17489b4).
+
 Render (from the repo root, after `python3 pipeline/film.py switch onecent-2616`):
 
-    npx remotion render src/index.ts Video films/onecent-2616/exports/one-cent-2616_v1_clean.mp4
-    npx remotion render src/index.ts VideoCaptioned films/onecent-2616/exports/one-cent-2616_v1_captioned.mp4
+    npx remotion render src/index.ts Video films/onecent-2616/exports/one-cent-2616_v2_clean.mp4
+    npx remotion render src/index.ts VideoCaptioned films/onecent-2616/exports/one-cent-2616_v2_captioned.mp4
 
 In the cloud container add `--browser-executable=/opt/pw-browsers/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell`.

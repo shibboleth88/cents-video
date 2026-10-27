@@ -3,8 +3,8 @@
   "title": "Cent #2616",
   "subtitle": "Inscription #65990912",
   "author": "shibboleth",
-  "source": "/mnt/project-files/single-cent-series/2616/2616_proposal_v0.2.md",
-  "version": "v1, script v0.2 (2026-10-27)"
+  "source": "/mnt/project-files/single-cent-series/2616/2616_script_v0.4.md",
+  "version": "v2, script v0.4 (2026-10-27)"
  },
  "_what": "Cent #2616. Concepts C57 (primary) and C26 (value tie). Every count from the Sep 2026 trait export. Traits are read from the front only.",
  "shots": [
@@ -14,15 +14,27 @@
     "at_start": true
    },
    "end": {
-    "at_phrase": "Seventy-one Cents are"
+    "at_phrase": "One of twelve one-of-one"
    },
-   "purpose": "Standard opening: the 3DCENTS turn of #2616 plays once, then settles on the 1050px front at the same size (clip coin measured on frame 0: centre 539.5, 959.5; d 776; the photo coin is 0.822 of the image here, not 0.815, so d is given as 776 x 0.815/0.822 = 769). Then the date, the Full Red field and the verdigris, front only. Trait areas are Claude's reading of the photo (2616_zoom_plan_v0.1.jpg).",
+   "purpose": "Standard opening (v1 measurements): the 3DCENTS turn, then the 1050px front; the date ringed on 'The only Cent'.",
    "visual_kind": "code",
    "component": "CentLook",
    "props": {
     "inscription": 65990912,
     "n": 2616,
     "front": "hires/2616.webp",
+    "spin": {
+     "src": "3dcents/2616-360-30fps.mp4",
+     "width": 1080,
+     "height": 1920,
+     "frames": 150,
+     "coin": {
+      "cx": 539.5,
+      "cy": 959.5,
+      "d": 769
+     },
+     "credit": "3D render: 3DCENTS.vercel.app"
+    },
     "moves": [
      {
       "at_phrase": "The only Cent",
@@ -35,7 +47,189 @@
       "mark": true,
       "max": 4,
       "dur": 0.8
+     }
+    ],
+    "reads": [
+     {
+      "at_phrase": "struck in nineteen twelve",
+      "readout": "1912"
      },
+     {
+      "at_phrase": "The only Cent",
+      "readout": "1912",
+      "caption": "the only Cent from 1912"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s02_ones",
+   "start": {
+    "at_phrase": "One of twelve one-of-one"
+   },
+   "end": {
+    "at_phrase": "Scarcity written by"
+   },
+   "purpose": "The twelve 1/1 Year Cents, as hard-coded on cents.vision (ONE_OF_ONE_YEAR_IDS, collectors.html snapshot 2026-10-27) and confirmed by the Sep 2026 export: years 1911-1954, ordered by year, #2616 ringed. CentScroll rather than CentField, which draws the Cents on white squares. Moved first in v2: the rarer quality leads (user, 2026-10-27).",
+   "visual_kind": "code",
+   "component": "CentScroll",
+   "props": {
+    "title": "1/1 Years",
+    "ns": [
+     9540,
+     2616,
+     3340,
+     3609,
+     5953,
+     5944,
+     4784,
+     6619,
+     6628,
+     8618,
+     6980,
+     1004
+    ],
+    "mark": 2616,
+    "readout": "12",
+    "caption": "years with a single Cent",
+    "until": "Scarcity written by",
+    "cols": 3
+   }
+  },
+  {
+   "shot_id": "s03_concept",
+   "start": {
+    "at_phrase": "Scarcity written by"
+   },
+   "end": {
+    "at_phrase": "Among the ten thousand"
+   },
+   "purpose": "Concept C57 named on screen.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65990912,
+    "n": 2616,
+    "front": "hires/2616.webp",
+    "concept": {
+     "at_phrase": "Scarcity written by",
+     "label": "Scarcity written by survival"
+    }
+   }
+  },
+  {
+   "shot_id": "s04_charts",
+   "start": {
+    "at_phrase": "Among the ten thousand"
+   },
+   "end": {
+    "at_phrase": "In the words of Martin Lehnen, in his essay Reflections"
+   },
+   "purpose": "Mint-year charts by @daidatep from Lehnen's 'Reflections on Mint Years' (Medium, 8 Mar 2025), one per spoken line. Counts measured on knowledge/data/cents_traits.csv: 2,126 / 291 / 96 / 26 of 10,000, matching the charts. The 2.08% Wheat chart is skipped, as the narration skips it.",
+   "visual_kind": "code",
+   "component": "ScreenTour",
+   "props": {
+    "title": "Mint years",
+    "subtitle": "Charts: @daidatep",
+    "screens": [
+     {
+      "src": "mintyears-pre1970.png",
+      "fit": true,
+      "aspect": 0.3335714285714286,
+      "push": 0,
+      "caption": "21.26% from before 1970"
+     },
+     {
+      "at_phrase": "Before nineteen sixty",
+      "src": "mintyears-pre1960.png",
+      "fit": true,
+      "aspect": 0.3335714285714286,
+      "push": 0,
+      "caption": "2.91% from before 1960"
+     },
+     {
+      "at_phrase": "Before nineteen fifty",
+      "src": "mintyears-pre1950.png",
+      "fit": true,
+      "aspect": 0.3335714285714286,
+      "push": 0,
+      "caption": "0.96% from before 1950"
+     },
+     {
+      "at_phrase": "Before nineteen forty",
+      "src": "mintyears-pre1940.png",
+      "fit": true,
+      "aspect": 0.3335714285714286,
+      "push": 0,
+      "caption": "0.26%: 26 Cents from before 1940"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s05_quote_mint",
+   "start": {
+    "at_phrase": "In the words of Martin Lehnen, in his essay Reflections"
+   },
+   "end": {
+    "at_phrase": "And of the one-of-one"
+   },
+   "purpose": "Lehnen quote (C57), check_quotes.py: FOUND (cents.gallery Trait Council text).",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65990912,
+    "n": 2616,
+    "front": "hires/2616.webp",
+    "quote": {
+     "at_phrase": "This data reveals",
+     "text": "This data reveals how quickly scarcity accelerates the further back in time you go.",
+     "credit": "Martin Lehnen, Reflections on Mint Years"
+    }
+   }
+  },
+  {
+   "shot_id": "s06_quote_ones",
+   "start": {
+    "at_phrase": "And of the one-of-one"
+   },
+   "end": {
+    "at_phrase": "Its surface has"
+   },
+   "purpose": "Lehnen quote (C57), attributed in the voiceover, credited on the card, lit as spoken. Card text checked by check_quotes.py: FOUND (the marked omission); the unmarked version is MISSING.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65990912,
+    "n": 2616,
+    "front": "hires/2616.webp",
+    "quote": {
+     "at_phrase": "These CENTS are",
+     "text": "These CENTS are extraordinary anomalies with absolute scarcity: …1912, and 1911 stand as singular relics.",
+     "credit": "Martin Lehnen, Reflections on Mint Years",
+     "spoken": {
+      "…1912,": "nineteen twelve",
+      "1911": "nineteen eleven"
+     }
+    }
+   }
+  },
+  {
+   "shot_id": "s07_traits",
+   "start": {
+    "at_phrase": "Its surface has"
+   },
+   "end": {
+    "at_phrase": "Seventy-one Cents are"
+   },
+   "purpose": "The trait zooms of v1, front only: the Full Red field, then the verdigris on head and shoulder.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65990912,
+    "n": 2616,
+    "front": "hires/2616.webp",
+    "moves": [
      {
       "at_phrase": "Its surface has",
       "box": null,
@@ -82,28 +276,7 @@
       "dur": 0.8
      }
     ],
-    "spin": {
-     "src": "3dcents/2616-360-30fps.mp4",
-     "width": 1080,
-     "height": 1920,
-     "frames": 150,
-     "coin": {
-      "cx": 539.5,
-      "cy": 959.5,
-      "d": 769
-     },
-     "credit": "3D render: 3DCENTS.vercel.app"
-    },
     "reads": [
-     {
-      "at_phrase": "struck in nineteen twelve",
-      "readout": "1912"
-     },
-     {
-      "at_phrase": "The only Cent",
-      "readout": "1912",
-      "caption": "the only Cent from 1912"
-     },
      {
       "at_phrase": "Its surface has",
       "caption": "Full Red"
@@ -124,7 +297,7 @@
    }
   },
   {
-   "shot_id": "s02_scroll",
+   "shot_id": "s08_scroll",
    "start": {
     "at_phrase": "Seventy-one Cents are"
    },
@@ -217,12 +390,12 @@
    }
   },
   {
-   "shot_id": "s03_oldest",
+   "shot_id": "s09_oldest",
    "start": {
     "at_phrase": "This is the oldest"
    },
    "end": {
-    "at_phrase": "Compare Cent number ninety-five"
+    "at_phrase": "In the words of Martin Lehnen, in his essay Lustrous"
    },
    "purpose": "The oldest Full Red Cent (#2616, 1912) and the next oldest (#1073, 1957 D; Sep 2026 export).",
    "visual_kind": "code",
@@ -252,115 +425,14 @@
    }
   },
   {
-   "shot_id": "s04_compare",
+   "shot_id": "s10_quote_lustrous",
    "start": {
-    "at_phrase": "Compare Cent number ninety-five"
-   },
-   "end": {
-    "at_phrase": "Scarcity written by"
-   },
-   "purpose": "Template comparison: #9540, 1911, whose only trait is Notable Obsidian (inscription 65956999). No 1912 template exists (#2616 is the only 1912 Cent) and no wheat Cent has Lustrous alone, so the neighbouring 1/1 Year stands in. Dissolves 9540, 2616, 9540.",
-   "visual_kind": "code",
-   "component": "CentDissolve",
-   "props": {
-    "first": "b",
-    "a": {
-     "n": 2616,
-     "inscription": 65990912,
-     "front": "hires/2616.webp",
-     "readout": "1912",
-     "caption": "Full Red, Significant Verdigris"
-    },
-    "b": {
-     "n": 9540,
-     "inscription": 65956999,
-     "front": "hires/9540.webp",
-     "readout": "1911",
-     "caption": "Notable Obsidian"
-    },
-    "swaps": [
-     {
-      "at_phrase": "One year apart",
-      "to": "a"
-     },
-     {
-      "at_phrase": "a different surface",
-      "to": "b"
-     }
-    ]
-   }
-  },
-  {
-   "shot_id": "s05_concept",
-   "start": {
-    "at_phrase": "Scarcity written by"
-   },
-   "end": {
-    "at_phrase": "Twelve years appear"
-   },
-   "purpose": "Concept C57 named on screen.",
-   "visual_kind": "code",
-   "component": "CentLook",
-   "props": {
-    "inscription": 65990912,
-    "n": 2616,
-    "front": "hires/2616.webp",
-    "concept": {
-     "at_phrase": "Scarcity written by",
-     "label": "Scarcity written by survival"
-    },
-    "reads": [
-     {
-      "at_phrase": "Among the ten thousand",
-      "readout": "10,000",
-      "caption": "Cents"
-     }
-    ]
-   }
-  },
-  {
-   "shot_id": "s06_ones",
-   "start": {
-    "at_phrase": "Twelve years appear"
-   },
-   "end": {
-    "at_phrase": "In the words of Martin"
-   },
-   "purpose": "The twelve 1/1 Year Cents, as hard-coded on cents.vision (ONE_OF_ONE_YEAR_IDS, collectors.html snapshot 2026-10-27) and confirmed by the Sep 2026 export: years 1911-1954, ordered by year, #2616 ringed. CentScroll rather than CentField, which draws the Cents on white squares.",
-   "visual_kind": "code",
-   "component": "CentScroll",
-   "props": {
-    "title": "1/1 Years",
-    "ns": [
-     9540,
-     2616,
-     3340,
-     3609,
-     5953,
-     5944,
-     4784,
-     6619,
-     6628,
-     8618,
-     6980,
-     1004
-    ],
-    "mark": 2616,
-    "readout": "12",
-    "caption": "years with a single Cent",
-    "until": "In the words of Martin",
-    "cols": 3
-   }
-  },
-  {
-   "shot_id": "s07_quote",
-   "start": {
-    "at_phrase": "In the words of Martin"
+    "at_phrase": "In the words of Martin Lehnen, in his essay Lustrous"
    },
    "end": {
     "at_phrase": "Coin collecting turned"
    },
-   "purpose": "Lehnen quote (C57), attributed in the voiceover, credited on the card, lit as spoken. Card text checked by check_quotes.py: FOUND (the marked omission); the unmarked version is MISSING.",
+   "purpose": "Lehnen, 'Lustrous CENTS - a Conceptual Contradiction?' (Medium RSS), check_quotes.py: FOUND; control 'neither plural' MISSING. Said of transformation in general, not as a reason for this Cent's colour.",
    "visual_kind": "code",
    "component": "CentLook",
    "props": {
@@ -368,18 +440,14 @@
     "n": 2616,
     "front": "hires/2616.webp",
     "quote": {
-     "at_phrase": "These CENTS are",
-     "text": "These CENTS are extraordinary anomalies with absolute scarcity: …1912, and 1911 stand as singular relics.",
-     "credit": "Martin Lehnen, Reflections on Mint Years",
-     "spoken": {
-      "…1912,": "nineteen twelve",
-      "1911": "nineteen eleven"
-     }
+     "at_phrase": "transformation is neither",
+     "text": "transformation is neither singular nor uniform, but a process that unfolds at different speeds, in different ways.",
+     "credit": "Martin Lehnen, Lustrous CENTS"
     }
    }
   },
   {
-   "shot_id": "s08_value",
+   "shot_id": "s11_value",
    "start": {
     "at_phrase": "Coin collecting turned"
    },
@@ -406,7 +474,7 @@
    }
   },
   {
-   "shot_id": "s09_card",
+   "shot_id": "s12_card",
    "start": {
     "after_phrase": "these fiat coins",
     "plus": 0.8
@@ -442,7 +510,7 @@
    }
   },
   {
-   "shot_id": "s10_credits",
+   "shot_id": "s13_credits",
    "start": {
     "after_phrase": "these fiat coins",
     "plus": 5.8
@@ -457,8 +525,9 @@
     "lines": [
      "Images: Rutherford Chang via cents.vision (site by Dr. Martin Lehnen)",
      "3D Cent render from 3DCENTS.vercel.app (site by sinvalli)",
-     "Trait names: the CENTS Trait Council; grades: Traits Atlas, CENTS Trait Council",
-     "Quote: Martin Lehnen, “CENTS – Reflections on Mint Years and their Long-Term Significance”",
+     "Trait names and grades: the CENTS Trait Council, Traits Atlas",
+     "Mint-year charts: @daidatep",
+     "Quotes: Martin Lehnen, “Reflections on Mint Years” and “Lustrous CENTS”",
      "Quote: Dagmar, MAKES CENTS interview"
     ],
     "url": "cents.gallery"
