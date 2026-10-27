@@ -4,7 +4,7 @@ This is the one source for the format of every Collector Wall episode. Read it b
 
 The reference episode is **blacktongue** (`films/wall-blacktongue/` on branch `claude/project-thread-nkzn17`, PR #5). Copy its folder layout, timeline shape and caption builder.
 
-Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the Daidatep thread's first findings. 2026-10-26: §5 "Delivery check" added from the GPT WBWA reel handover. 2026-10-27: narration voice changed to "eee" (§5); candidate showcase opener (§3, pending); 3DCENTS credit wording approved (§4).
+Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the Daidatep thread's first findings. 2026-10-26: §5 "Delivery check" added from the GPT WBWA reel handover. 2026-10-27: narration voice changed to "eee" (§5); showcase opener is the series opening (§3); 3DCENTS credit wording approved (§4).
 
 ## 1. What an episode is
 
@@ -37,9 +37,26 @@ Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the D
 
 ## 3. Structure (the order that worked)
 
-1. **Open on the Wall.** "This is the Wall of NAME." Use a cents.vision screenshot of that Wall's card if one exists. Otherwise use `WallBoard` at `{top: true}`. Either way, frame 0 shows the Wall.
-   - **Candidate, not yet final (ScrappyT, user 2026-10-27):** a "showcase" opener, so a scroller can tell from frame 0 that more is coming. It uses `WallOpener` variant `showcase` (src/style/wallopener.tsx, PR #14). The WallBoard card sits at the top, with the signature Cent as its 3DCENTS spin; the mosaic Cents light up one by one, then the badges in reading order, with a thin copper progress bar across the top. It runs until "Its signature Cent". The user is still tuning speed, order and the progress bar. Wait for the final settings from the ScrappyT thread before using it in another episode. Preview: `/mnt/project-files/collector-wall/openers/opener-showcase_v1.mp4`.
-2. **Zoom to the signature Cent on the screenshot.** Once that sentence ends, the camera zooms onto the signature Cent on the card. Only then does the film cut to the individual view of that Cent: its number, year, and its traits ("…and is a Ghost Cent").
+1. **Open on the Wall, with the showcase opener (series format, user 2026-10-27).** "This is the Wall of NAME." Frame 0 must already read as a video with more to come, not a still. The user asked for this in the ScrappyT thread, then asked for blacktongue and Daidatep to be redone with it.
+   - **What it shows from frame 0:**
+     - the Wall card (`WallBoard`, `show: "card"`), with the signature Cent turning in its slot as its 3DCENTS spin;
+     - the mosaic Cents lighting up one after another, with a copper ring, 5 frames apart;
+     - at the same time, every badge in reading order (tags, sets, fulls, meta), 3 frames apart;
+     - a thin copper progress bar across the top.
+   - It runs until "Its signature Cent". The card then zooms onto the signature Cent, which carries a copper mark, and the film cuts to that Cent on its own (`WallStandout` with the same `clip`).
+   - **Shot:** `WallOpener` (src/style/wallopener.tsx, from PR #14):
+     ```json
+     {"component": "WallOpener", "start": {"at_start": true}, "end": {"at_phrase": "number <signature in words>"},
+      "props": {"variant": "showcase", "wall": "<slug>", "show": "card", "until_phrase": "Its signature Cent",
+       "moves": [{"at_phrase": "Its signature Cent", "target": {"cent": <n>, "in": "signature"}, "mark": true}],
+       "progress": {"total_frames": <round(alignment duration * 30)>},
+       "clip": {"src": "3dcents/<n>-360-30fps.mp4", "width": 1080, "height": 1920, "frames": 150,
+                "coin": {"cx": 539.5, "cy": 959.5, "d": 776}, "credit": "3D render: 3DCENTS by sinvalli"}}}
+     ```
+   - **It needs the signature Cent's 3DCENTS spin** (§4), so ask the user to export it at the start of an episode. It throws without a clip or a credit.
+   - **Still being tuned:** the user may change the speed, the order or the progress bar in the ScrappyT thread. Take the current settings from that thread. Reference renders: ScrappyT v1, and `/mnt/project-files/collector-wall/openers/opener-showcase_v1.mp4`.
+   - The earlier opening, a cents.vision screenshot of the card zoomed onto the signature Cent, is retired for new episodes.
+2. **Zoom to the signature Cent on the card.** Once that sentence ends, the camera zooms onto the signature Cent on the card. Only then does the film cut to the individual view of that Cent: its number, year, and its traits ("…and is a Ghost Cent").
 3. **Count and span:** "The Wall holds N Cents, from YEAR to YEAR." Then the size club, zooming onto the club badge, with the club's range ("…which puts it in the Dime Club, for ten to twenty-four Cents").
 4. **Standout Cents.** For each one, say what makes it rare, as "one of only N" with a measured N. Where the trait sits in one place on the coin, zoom into it (see §4).
 5. **Mint-year badges:** Wheat, 1971 Club, 1969 Club, 1/1 Year, 1/1 Mint, 1/1 Trait Combo. Zoom onto the badge, then show the Cents behind it.
@@ -107,7 +124,7 @@ Use `WallBoard` (`src/style/wallboard.tsx`) for every shot that moves around a W
 - It only holds one screen of the page.
 - Live capture of collectors.html now times out in the cloud container: gstatic is refused, and the `window.firebase` stub no longer lets `state.collectors` load (Daidatep thread, 2026-10-25).
 
-A real cents.vision screenshot is still welcome for the first second, if one exists.
+*(Superseded 2026-10-27: this line said a real cents.vision screenshot was welcome for the first second. The opening is now the showcase opener, §3 step 1.)*
 
 **1. Snapshot the Wall's data.** The command writes `films/wall-<slug>/data/wall_board.json` (committed) and `public/walls/<slug>.json` (what the component fetches):
 
