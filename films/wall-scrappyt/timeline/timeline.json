@@ -35,7 +35,7 @@
      }
     ],
     "progress": {
-     "total_frames": 4652
+     "total_frames": 3687
     },
     "clip": {
      "src": "3dcents/7139-360-30fps.mp4",
@@ -702,7 +702,7 @@
     "at_phrase": "A Contamination Set"
    },
    "end": {
-    "at_phrase": "four of the twelve"
+    "at_phrase": "special oddities"
    },
    "purpose": "Contamination Set (4/12) badge.",
    "visual_kind": "code",
@@ -724,7 +724,7 @@
   {
    "shot_id": "s12b_cont",
    "start": {
-    "at_phrase": "four of the twelve"
+    "at_phrase": "special oddities"
    },
    "end": {
     "at_phrase": "and a nineteen eighties Set"

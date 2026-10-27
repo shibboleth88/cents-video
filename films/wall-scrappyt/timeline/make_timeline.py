@@ -107,9 +107,9 @@ shots = [
                             {"n": 7713, "caption": "1973-D", "at_phrase": "a D mint and"},
                             {"n": 7139, "caption": "1967", "at_phrase": "a Cent with no mint"}], cols=3, labelsUnder=True),
       "Full Mint Set: an S, a D and a no-mint-mark Cent."),
- shot("s12_cont", "A Contamination Set", "four of the twelve", "WallBoard",
+ shot("s12_cont", "A Contamination Set", "special oddities", "WallBoard",
       board("card", [badge("A Contamination Set", "Contamination Set")]), "Contamination Set (4/12) badge."),
- shot("s12b_cont", "four of the twelve", "and a nineteen eighties Set", "CentRow",
+ shot("s12b_cont", "special oddities", "and a nineteen eighties Set", "CentRow",
       row("Contamination Set (4/12)", [
         {"n": 372, "caption": "Special Oddities · #372", "at_phrase": "special oddities", "src": "hires/372.webp"},
         {"n": 1399, "caption": "Obscure Adhesive · #1399", "at_phrase": "obscure adhesive", "src": "hires/1399.webp"},

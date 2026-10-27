@@ -36,6 +36,15 @@ row moves to `LEDGER_ARCHIVE.md` verbatim in the same edit that supersedes it.
   left as is: an over-trigger costs a note, an under-trigger ships an undated
   price.
 
+- **A shot's start is not the moment its content appears.** A row shot began at
+  one phrase but showed nothing until each Cent's own phrase. With the old voice
+  the gap was short; the re-voiced take paused 2.6 s there, and the ScrappyT v1
+  render held an empty titled frame (blackdetect 91.07-93.67 s, 2026-10-27).
+  Stills at shot midpoints missed it, because the midpoint fell after the first
+  Cent. *Separating observation:* blackdetect on the render, or a still at each
+  shot's first frame, not its middle. Fixed by starting the shot at its first
+  Cent's phrase; caught before delivery.
+
 Written as a near-miss identity: the two things are close enough that confusing
 them was reasonable.
 
