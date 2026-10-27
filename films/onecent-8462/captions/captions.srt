@@ -1,143 +1,159 @@
 1
-00:00:00,000 --> 00:00:02,415
+00:00:00,160 --> 00:00:02,879
 Cent #8462.
 
 2
-00:00:02,843 --> 00:00:06,895
+00:00:02,919 --> 00:00:07,120
 A penny struck in 1973, at Philadelphia.
 
 3
-00:00:07,593 --> 00:00:09,172
+00:00:07,240 --> 00:00:08,480
 Beside Lincoln's face,
 
 4
-00:00:09,368 --> 00:00:11,087
+00:00:08,560 --> 00:00:10,900
 someone has engraved a rabbit.
 
 5
-00:00:12,183 --> 00:00:15,689
+00:00:11,060 --> 00:00:14,699
 Under it, the word EASTER, just above the date.
 
 6
-00:00:16,893 --> 00:00:19,251
+00:00:14,820 --> 00:00:17,199
 Its one trait is Vandalized.
 
 7
-00:00:19,855 --> 00:00:22,327
+00:00:17,280 --> 00:00:18,800
 The Traits Atlas of the CENTS Trait
 
 8
-00:00:22,397 --> 00:00:24,754
+00:00:18,960 --> 00:00:20,719
 Council defines it as clear,
 
 9
-00:00:24,812 --> 00:00:27,227
+00:00:20,839 --> 00:00:23,039
 intentional, human-made deformation
 
 10
-00:00:27,343 --> 00:00:28,795
+00:00:23,120 --> 00:00:24,960
 or marking of the coin.
 
 11
-00:00:29,550 --> 00:00:32,695
-The Atlas gives this Cent as its first example.
+00:00:25,039 --> 00:00:27,120
+The Council debated the trait for hours,
 
 12
-00:00:33,621 --> 00:00:36,859
-26 of the 10,000 Cents carry the trait.
+00:00:27,199 --> 00:00:31,320
+circling one question: did someone mean to do this?
 
 13
-00:00:37,463 --> 00:00:42,073
-#8462 is the only one from 1973.
+00:00:31,359 --> 00:00:34,820
+The Atlas gives this Cent as its first example.
 
 14
-00:00:43,969 --> 00:00:46,616
-Compare Cent #2125,
+00:00:34,899 --> 00:00:38,320
+26 of the 10,000 Cents carry the trait.
 
 15
-00:00:46,942 --> 00:00:51,433
-also from 1973, whose only trait is Lustrous.
+00:00:38,439 --> 00:00:43,600
+#8462 is the only one from 1973.
 
 16
-00:00:51,933 --> 00:00:53,872
-The same design, the same year.
+00:00:43,759 --> 00:00:45,920
+Compare Cent #2125,
 
 17
-00:00:54,661 --> 00:00:56,334
-Only one of them was engraved.
+00:00:46,079 --> 00:00:49,600
+also from 1973, whose only trait is Lustrous.
 
 18
-00:00:57,723 --> 00:00:59,104
-Difference makes meaning.
+00:00:49,640 --> 00:00:52,159
+The same design, the same year.
 
 19
-00:01:00,021 --> 00:01:01,764
-In the words of Steven Reiss,
+00:00:52,320 --> 00:00:54,659
+Only one of them was engraved.
 
 20
-00:01:01,996 --> 00:01:05,361
-in his article "Materiality and Signification":
+00:00:54,859 --> 00:00:56,960
+Difference makes meaning.
 
 21
-00:01:06,034 --> 00:01:08,138
-"Coins whose look strays farthest
+00:00:57,119 --> 00:00:58,479
+In the words of Steven Reiss,
 
 22
-00:01:08,183 --> 00:01:10,564
-from the norm became the most coveted.
+00:00:58,520 --> 00:01:01,439
+in his article "Materiality and Signification":
 
 23
-00:01:11,376 --> 00:01:13,096
-Difference now drives value -
+00:01:01,546 --> 00:01:03,119
+"Coins whose look strays farthest
 
 24
-00:01:13,269 --> 00:01:14,766
-just as Saussure said:
+00:01:03,200 --> 00:01:05,200
+from the norm became the most coveted.
 
 25
-00:01:15,278 --> 00:01:18,064
-we understand a sign by what it is not."
+00:01:05,359 --> 00:01:07,040
+Difference now drives value -
 
 26
-00:01:18,876 --> 00:01:22,093
-After it was photographed, this penny was melted,
+00:01:07,120 --> 00:01:08,480
+just as Saussure said:
 
 27
-00:01:22,418 --> 00:01:24,251
-with the rest of the 10,000,
+00:01:08,519 --> 00:01:11,900
+we understand a sign by what it is not."
 
 28
-00:01:24,427 --> 00:01:26,132
-into a single copper block.
+00:01:12,099 --> 00:01:14,579
+After it was photographed, this penny was melted,
 
 29
-00:01:26,459 --> 00:01:28,361
-Its copper is in the block.
+00:01:14,659 --> 00:01:16,099
+with the rest of the 10,000,
 
 30
-00:01:28,873 --> 00:01:31,206
-Its image is inscribed on a satoshi.
+00:01:16,180 --> 00:01:17,939
+into a single copper block.
 
 31
-00:01:32,031 --> 00:01:33,807
-In the words of Martin Lehnen,
+00:01:18,060 --> 00:01:19,780
+Its copper is in the block.
 
 32
-00:01:33,980 --> 00:01:36,918
-in his essay "Rutherford Chang's Conceptual
+00:01:19,900 --> 00:01:22,879
+Its image is inscribed on a satoshi.
 
 33
-00:01:36,987 --> 00:01:39,658
-Collecting": "Can destruction
+00:01:22,959 --> 00:01:24,640
+The penny was altered twice:
 
 34
-00:01:39,727 --> 00:01:42,629
-create value, just as accumulation does?
+00:01:24,719 --> 00:01:28,739
+once by an unknown engraver, once by melting.
 
 35
-00:01:43,326 --> 00:01:46,171
-If mass production standardizes objects,
+00:01:28,780 --> 00:01:30,099
+In the words of Martin Lehnen,
 
 36
-00:01:46,496 --> 00:01:49,909
+00:01:30,140 --> 00:01:32,340
+in his essay "Rutherford Chang's Conceptual
+
+37
+00:01:32,420 --> 00:01:34,019
+Collecting": "Can destruction
+
+38
+00:01:34,099 --> 00:01:36,739
+create value, just as accumulation does?
+
+39
+00:01:36,819 --> 00:01:39,219
+If mass production standardizes objects,
+
+40
+00:01:39,340 --> 00:01:42,420
 can time and context reintroduce uniqueness?"

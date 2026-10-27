@@ -25,3 +25,13 @@ Render (from the repo root, after `python3 pipeline/film.py switch onecent-8462`
     npx remotion render src/index.ts VideoCaptioned films/onecent-8462/exports/one-cent-8462_v1_captioned.mp4
 
 In the cloud container, add `--browser-executable=/opt/pw-browsers/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell`.
+
+## v2 (2026-10-27): the calm voice
+- **Voice.** v2 uses the setting the user picked in the #2616 thread: "eee" on eleven_v4, with `[thoughtfully] [calm]` once at the start of the prompt and default voice settings.
+  - The full script (v0.1, nothing cut) is 246 words and ran 93.0 s, about 2.65 words/s.
+  - The scribe transcript equals `audio/tts_text.txt`. A control word change does not match.
+  - The two v1 cuts are no longer needed for length, so v2 keeps them both. The v1 build is in `archive/`.
+- **Holds.** v2 has 15 holds. Each sits at the middle of a silencedetect pause (n=-35dB, d=0.2), not at the midpoint between scribe word timings.
+  - On v4 takes, scribe word ends run about 0.4 s into the following pause, so 9 of 15 gap midpoints fell on the next word's attack. The #2616 thread saw the same trap.
+  - `vo.wav` is 112.84 s, of which 102.4 s is narration.
+- **Renders.** `one-cent-8462_v2_{clean,captioned}.mp4` run 1:53 (3385 frames). Copies are in `/mnt/project-files/single-cent-series/8462/`.
