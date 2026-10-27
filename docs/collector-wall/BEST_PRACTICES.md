@@ -4,14 +4,15 @@ This is the one source for the format of every Collector Wall episode. Read it b
 
 The reference episode is **blacktongue** (`films/wall-blacktongue/` on branch `claude/project-thread-nkzn17`, PR #5). Copy its folder layout, timeline shape and caption builder.
 
-Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the Daidatep thread's first findings. 2026-10-26: §5 "Delivery check" added from the GPT WBWA reel handover. 2026-10-27: narration voice changed to "eee" (§5); showcase opener is the series opening (§3); 3DCENTS credit wording approved (§4); badge zooms get the opener-style highlight (§4a).
+Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the Daidatep thread's first findings. 2026-10-26: §5 "Delivery check" added from the GPT WBWA reel handover. 2026-10-27: narration voice changed to "eee" (§5); showcase opener is the series opening (§3); 3DCENTS credit wording approved (§4); badge zooms get the opener-style highlight (§4a); audit against the day's decisions: lead with the Wall's standout fact (§1), graded traits, fronts only, Cents on black, Daidatep (§2), no long still holds (§4a), dated snapshots (§4a).
 
 ## 1. What an episode is
 
 - One claimed Wall per episode, as it appears on cents.vision/collectors.html under the Claimed filter.
 - The tone is matter-of-fact. Each episode just walks through what that collector has: standout Cents, Sets and badges.
 - Don't add essayistic framing or a reflection at the close. The user cut "the traits were named by collectors…" and "every Wall is a record that keeps changing".
-- The length is whatever the Wall needs. blacktongue runs about 60 to 70 seconds.
+- **Lead with what is extraordinary about this Wall.** When a Wall has one standout distinction, build the episode around it and keep the rest short. For ScrappyT, that is one Cent of every one of the 19 visual traits (user, 2026-10-27). Before building on such a claim, check it against every claimed Wall, the artist wallet included. ScrappyT's holds: no other Wall has all 19, not even the artist wallet, which has no Iridescent.
+- The length is whatever the Wall needs: blacktongue v5 is 84 s, ScrappyT about 2 min.
 - One thread per episode.
 
 ## 2. What may appear
@@ -33,6 +34,10 @@ Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the D
   - CENTS has no ending.
   - Use the past tense for Rutherford Chang.
   - Never imply Chang's intent.
+- **Graded traits:** when a film names a grade (Notable, Significant, Full), say what the grade means, worded from the Traits Atlas (`films/traits/script/atlas/<trait>.txt`). Credit "Traits Atlas, CENTS Trait Council". (User, 2026-10-26.)
+  - **Traits are read from the front only.** Every trait zoom or piece of evidence uses the 1050px front. A back may appear for another reason, such as the wheat flip, but never as evidence of a trait. (User, 2026-10-26.)
+  - **Cents on black.** Show Cents cut out on black (`clipPath: circle(40.5%)`), not on their white image squares. The exception is the Wall card itself, which is drawn white as the site draws it. (User, 2026-10-26.)
+- **Daidatep** is the Council name of Martin Lehnen, who built cents.vision (confirmed for the project, 2026-10-25). His Wall's episode may say so. Credit the site as "Images: Rutherford Chang via cents.vision (site by Dr. Martin Lehnen)", as in the One Cent series.
 - **Pronouns:** narration needs none. If one is needed, use they/them unless the user has stated otherwise.
 
 ## 3. Structure (the order that worked)
@@ -86,7 +91,7 @@ Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the D
 ## 4. Camera and motion
 
 - **Never open on black.** Many platforms use the first frame as the preview. The opening shot is fully visible at frame 0: `OpeningShotCtx` in `src/style/motion.ts` turns off the fade-in for the shot at frame 0. After rendering, check that frame 0 of the MP4 is not dark.
-- **Cents do not rotate.** Show each Cent still, the signature Cent included. `WallCard` and `WallStandout` now default to `spin: 0`. Never use a 3D tilt. (User, 2026-10-25 13:56Z. The earlier rule allowed a flat 2D spin; blacktongue v4 and Daidatep v3 were made under it and are accepted as they are.)
+- **Cents do not rotate,** apart from the two exceptions below. Our own animations show each Cent still. The signature Cent turns only in its 3DCENTS render, in the opener (§3) and in its own shot. `WallCard` and `WallStandout` now default to `spin: 0`. Never use a 3D tilt. (User, 2026-10-25 13:56Z. The earlier rule allowed a flat 2D spin; blacktongue v4 and Daidatep v3 were made under it and are accepted as they are.)
   - Exception: the wheat flip (`CentFlip`) is a separate move and is still used.
   - **Exception: the signature Cent can rotate in a 3DCENTS render.** The user approved this on 2026-10-25 14:13Z. 3DCENTS is sinvalli's tool, not Chang's. sinvalli is happy for the tool and its renders to be used and shared.
     - **Credit (approved by the user, 2026-10-27):** "3D render: 3DCENTS by sinvalli". It sits small under the coin for the whole clip shot, and also goes in the end credits.
@@ -132,7 +137,7 @@ Use `WallBoard` (`src/style/wallboard.tsx`) for every shot that moves around a W
 
 *(Superseded 2026-10-27: this line said a real cents.vision screenshot was welcome for the first second. The opening is now the showcase opener, §3 step 1.)*
 
-**1. Snapshot the Wall's data.** The command writes `films/wall-<slug>/data/wall_board.json` (committed) and `public/walls/<slug>.json` (what the component fetches):
+**1. Snapshot the Wall's data.** Prefer a fresh dated snapshot: `pipeline/wall_board.py --name <Name> --slug <slug> --snapshot /mnt/project-files/collectors/snapshots/YYYY-MM-DD` (ScrappyT, 27 Oct). Check the Set counts against cents.vision `set-counts.php`; ScrappyT's matched 17/17. The site now renders the patina badge as "Patina count N"; it is still left out (§3). The command writes `films/wall-<slug>/data/wall_board.json` (committed) and `public/walls/<slug>.json` (what the component fetches):
 
 ```
 cd /home/claude/cents-video
@@ -171,6 +176,7 @@ python3 pipeline/stage_cents.py --src <sovrn-onchain>/cents <every Cent number o
 - A move eases over 18 frames.
 - With `until_phrase`, the move pans linearly until that phrase. That is how to scroll.
 - `mark: true` outlines the target in copper.
+- **No long still holds.** Keep something moving or changing at least every few seconds. ScrappyT v1's Spectrum row sat still for about 10 s while a grade was explained, and its thread flagged it.
 - **A badge being talked about gets the opener's highlight (user, 2026-10-27).** When the narration names a single badge and the camera zooms onto it, light that badge up more prominently than the thin `mark` outline. Use the same style as the showcase opener's light-up: a copper ring with a glow, a slight brightness lift, and a small scale-up, held while it is spoken. Until `mark` does this by default on badge targets, add it explicitly in the episode. A `sweep` limited to that badge's row will not do, because it lights the whole row. This applies to every badge zoom (club, Wheat, Sets, Diamond Hands, Mint Keeper, trait tags).
 - `zoom` caps the magnification. The default is 2.6.
 
