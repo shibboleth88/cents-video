@@ -169,8 +169,11 @@ function phrases(words: string[]): number[][] {
     const last = out[out.length - 1]!;
     const prev = out[out.length - 2]!;
     const prevLen = prev.map((i) => words[i]!.length).reduce((a, b) => a + b + 1, -1);
-    if (last.length === 1 && prevLen + 1 + words[last[0]!]!.length <= 18 && !/[,.;:!?]$/.test(words[prev[prev.length - 1]!]!))
+    const joined = !/[,.;:!?]$/.test(words[prev[prev.length - 1]!]!);
+    if (last.length === 1 && joined && prevLen + 1 + words[last[0]!]!.length <= 18)
       out.splice(out.length - 2, 2, [...prev, ...last]);
+    // Too long to fold: lend it the previous phrase's last word ("Ghost Cents,").
+    else if (last.length === 1 && joined && prev.length >= 3) last.unshift(prev.pop()!);
   }
   return out;
 }
