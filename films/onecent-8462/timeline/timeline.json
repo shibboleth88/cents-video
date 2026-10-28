@@ -4,7 +4,7 @@
   "subtitle": "Inscription #65903248",
   "author": "shibboleth",
   "source": "/mnt/project-files/single-cent-series/8462/8462_proposal_v0.1.md",
-  "version": "v3, script v3 (2026-10-27): user notes of 18:14Z"
+  "version": "v4 (2026-10-28): Story time pill card, 3DCENTS credit moved to the end credits"
  },
  "_what": "Cent #8462. Concepts C23 (primary) and C08 (value). Every count from the Sep 2026 trait export. Traits are read from the front only.",
  "shots": [
@@ -16,7 +16,7 @@
    "end": {
     "at_phrase": "Twenty-six of the"
    },
-   "purpose": "Standard opening: the 3DCENTS turn of #8462 plays once, then settles on the 1050px front at the same size (clip coin on frame 0: centre 539.5, 959.0; d 775). Zooms to the engraved rabbit and the word EASTER (front; boxes are Claude's reading, 8462_zoom_plan_v0.1.jpg). Vandalized is defined from the Traits Atlas (vandalized.txt), which lists CENT #8462 'Easter Bunny' engraving first among its examples. v3: the nickname 'the Easter penny' (collectors, per the user, 2026-10-27).",
+   "purpose": "Standard opening: the 3DCENTS turn of #8462 plays once, then settles on the 1050px front at the same size (clip coin on frame 0: centre 539.5, 959.0; d 775). Zooms to the engraved rabbit and the word EASTER (front; boxes are Claude's reading, 8462_zoom_plan_v0.1.jpg). Vandalized is defined from the Traits Atlas (vandalized.txt), which lists CENT #8462 'Easter Bunny' engraving first among its examples. v3: the nickname 'the Easter penny' (collectors, per the user, 2026-10-27). v4: 'Story time' pill on frame 0 (user picked the pill, 2026-10-28); the 3DCENTS credit is on the end card, not under the coin.",
    "visual_kind": "code",
    "component": "CentLook",
    "props": {
@@ -33,7 +33,8 @@
       "cy": 959.0,
       "d": 775
      },
-     "credit": "3D render: 3DCENTS.vercel.app"
+     "credit": "3D render: 3DCENTS by sinvalli",
+     "credit_at_end": true
     },
     "moves": [
      {
@@ -102,7 +103,12 @@
       "readout": "Vandalized",
       "caption": "the Atlas's first example"
      }
-    ]
+    ],
+    "kicker": {
+     "text": "Story time",
+     "look": "pill",
+     "hold": 3.4
+    }
    }
   },
   {
@@ -506,7 +512,8 @@
       "cy": 959.0,
       "d": 775
      },
-     "credit": "3D render: 3DCENTS.vercel.app"
+     "credit": "3D render: 3DCENTS by sinvalli",
+     "credit_at_end": true
     },
     "size": 560,
     "reads": [
@@ -530,9 +537,10 @@
    "component": "Credits",
    "props": {
     "lines": [
-     "Images: Rutherford Chang via cents.vision (site by Dr. Martin Lehnen)",
-     "3D Cent render from 3DCENTS.vercel.app (site by sinvalli)",
+     "Images: Rutherford Chang",
+     "3D render: 3DCENTS by sinvalli",
      "Trait names and definition: Traits Atlas, CENTS Trait Council",
+     "Trait counts as of September 2026",
      "Quote: Steven Reiss, “Materiality and Signification: Rutherford Chang’s CENTS and Semiotics”",
      "Quote: Martin Lehnen, “Rutherford Chang’s Conceptual Collecting”"
     ],
