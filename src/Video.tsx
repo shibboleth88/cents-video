@@ -17,12 +17,13 @@ export type Props = {
   cues: { start: number; end: number; text: string }[];
   mode: RenderMode;
   captions: boolean;
-  /** How captions are drawn; "classic" is the shipped look. See style/captions.tsx. */
+  /** How captions are drawn. "lead" is the series look from 2026-10-28 (user pick);
+   *  "classic" re-renders a version delivered before then. See style/captions.tsx. */
   captionStyle?: CaptionStyle;
   voiceover?: string;
 };
 
-export const Video: React.FC<Props> = ({ timeline, alignment, assets, cues, mode, captions, captionStyle = "classic", voiceover }) => {
+export const Video: React.FC<Props> = ({ timeline, alignment, assets, cues, mode, captions, captionStyle = "lead", voiceover }) => {
   const shots = resolveShots(timeline, alignment, 30);
   return (
     <ModeCtx.Provider value={mode}>

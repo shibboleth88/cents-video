@@ -7,8 +7,9 @@ import { wordProgress } from "./motion";
 
 /**
  * Caption looks, picked per render with the `captionStyle` prop.
- *   classic  the shipped look: dim box, words brighten as spoken (CaptionLayer)
- *   lead     no box; the word being spoken is copper, said words white, the rest dim
+ *   classic  the look shipped up to 2026-10-28: dim box, words brighten as spoken (CaptionLayer)
+ *   lead     THE DEFAULT (user pick, 2026-10-28). No box; the word being spoken is
+ *            copper, said words white, the rest dim
  *   keys     the whole line at once; numbers and years in copper, like the
  *            readouts; a copper rule fills as the line is spoken
  *   phrase   two to four words at a time, large, each word lighting as it is spoken
