@@ -73,6 +73,10 @@ type Move = { at_phrase: string; plus?: number; dur?: number; box: Box | null; m
 type Read = { at_phrase?: string; readout?: string; caption?: string };
 type Concept = { at_phrase: string; label: string };
 type Quote = { at_phrase: string; text: string; credit: string; spoken?: Record<string, string> };
+/** A cover line for the first frames, so a still feed preview reads as a story to play with sound.
+ *  "pill": a play mark and the words in a copper pill; "headline": large words over a copper rule that runs
+ *  like a progress bar. Shown from frame 0 at full strength, gone by `hold` seconds (before the first read). */
+type Kicker = { text: string; look: "pill" | "headline"; hold: number };
 
 export const CentLook: React.FC<Anchored & {
   /** The inscription number, shown under the Cent's name (from the trait export). */
@@ -81,8 +85,9 @@ export const CentLook: React.FC<Anchored & {
   /** Open on the 3DCENTS turn of this Cent, played once (front, back, front), then
    *  settle on the photo at the same size and place, so the zooms follow without a cut. */
   spin?: Clip;
+  kicker?: Kicker;
 }> = (props) => {
-  const { inscription, n, front, back, moves = [], flip_at, reads = [], concept, quote, spin } = props;
+  const { inscription, n, front, back, moves = [], flip_at, reads = [], concept, quote, spin, kicker } = props;
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const fade = useShotFade();
@@ -155,6 +160,12 @@ export const CentLook: React.FC<Anchored & {
       throw new Error(`CentLook: "${r.at_phrase}" is spoken before the read before it`);
   });
   const rT = cur ? (curFrom === 0 && opening ? 1 : ramp(frame, curFrom, 8)) : 0;
+  const kEnd = kicker ? Math.round(kicker.hold * fps) : 0;
+  if (kicker && reads[0]?.at_phrase && at(reads[0].at_phrase) < kEnd)
+    throw new Error(`CentLook #${n}: the kicker is still up when the first read "${reads[0].at_phrase}" arrives`);
+  const kT = kicker ? 1 - ramp(frame, kEnd - 10, 10) : 0;
+  // The pill pulses once, after the still preview frame: frame 0 shows it at rest.
+  const pulse = kicker?.look === "pill" ? Math.sin(Math.PI * Math.min(1, Math.max(0, (frame - 15) / 24))) : 0;
 
   return (
     <div style={{ position: "absolute", inset: 0, opacity: fade }}>
@@ -182,7 +193,7 @@ export const CentLook: React.FC<Anchored & {
         </div>
       </Imagery>
       <NameBand title={`Cent #${n}`} subtitle={`Inscription #${inscription}`} />
-      {spin && settle < 1 ? (
+      {spin && settle < 1 && !spin.credit_at_end ? (
         <div style={{ position: "absolute", left: X0, top: STAGE.y1 - 46, width: X1 - X0, opacity: 0.8 * (1 - settle) }}>
           <SafeText role="label" fontSize={42} maxLines={1} color={COLOR.inkDim} style={{ fontFamily: TYPE.body, textAlign: "center" }}>{spin.credit}</SafeText>
         </div>
@@ -205,11 +216,31 @@ export const CentLook: React.FC<Anchored & {
           </SafeText>
         </div>
       ) : null}
+      {kicker && kT > 0 && kicker.look === "pill" ? (
+        <div style={{ position: "absolute", left: X0, top: BAND.y0 + 10, width: W, display: "flex", opacity: kT }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 26, padding: "18px 40px 18px 30px", borderRadius: 999,
+                        border: `5px solid ${COLOR.accent}`, background: "rgba(0,0,0,0.35)",
+                        transform: `scale(${1 + 0.07 * pulse})`, transformOrigin: "left center",
+                        boxShadow: `0 0 ${36 * pulse}px ${6 * pulse}px ${COLOR.accent}55` }}>
+            <svg width={50} height={56} viewBox="0 0 50 56"><path d="M4 3 L47 28 L4 53 Z" fill={COLOR.accent} /></svg>
+            <SafeText role="display" fontSize={64} maxLines={1} color={COLOR.ink}
+                      style={{ fontFamily: TYPE.mono, fontWeight: 700, textTransform: "uppercase", letterSpacing: 4 }}>{kicker.text}</SafeText>
+          </div>
+        </div>
+      ) : null}
+      {kicker && kT > 0 && kicker.look === "headline" ? (
+        <div style={{ position: "absolute", left: X0, top: BAND.y0 - 10, width: W, opacity: kT }}>
+          <SafeText role="display" fontSize={124} maxLines={1} color={COLOR.ink} style={{ fontWeight: 800, letterSpacing: -3 }}>{kicker.text}</SafeText>
+          <div style={{ marginTop: 18, height: 10, width: W, background: COLOR.rule, borderRadius: 5, overflow: "hidden" }}>
+            <div style={{ height: 10, width: W * (0.06 + 0.94 * Math.min(1, frame / Math.max(1, kEnd - 10))), background: COLOR.accent }} />
+          </div>
+        </div>
+      ) : null}
       {quote && qT > 0 ? (
         <div style={{ position: "absolute", left: X0, top: BAND.y0 + 20, width: W, opacity: qT }}>
           <SafeText role="label" fontSize={42} maxLines={2} color={COLOR.accent}>{`— ${quote.credit}`}</SafeText>
         </div>
-      ) : cur ? (
+      ) : cur && kT <= 0 ? (
         <div style={{ position: "absolute", left: X0, top: BAND.y0, width: W, opacity: rT, transform: `translateY(${(1 - rT) * 14}px)` }}>
           {cur.readout ? (
             <SafeText role="display" fontSize={84} maxLines={1} color={COLOR.accent}
@@ -329,7 +360,9 @@ export const CentField: React.FC<Anchored & {
 
 const CUTOUT: React.CSSProperties = { clipPath: "circle(40.5% at 50% 50%)" };   // 300px images: the coin on black, not on its white square
 
-type Clip = { src: string; width: number; height: number; frames: number; coin: { cx: number; cy: number; d: number }; credit: string };
+/** credit_at_end: the credit is still required, but it goes on the end credits card instead of under the coin
+ *  (user, 2026-10-28, One Cent #8462 v4: a cleaner opening card). */
+type Clip = { src: string; width: number; height: number; frames: number; coin: { cx: number; cy: number; d: number }; credit: string; credit_at_end?: boolean };
 
 /**
  * The Cent's card: its name, its inscription number, and the user's 3DCENTS turn
@@ -364,9 +397,11 @@ export const CentSpin: React.FC<Anchored & { inscription: number; n: number; cli
         </div>
       </Imagery>
       <NameBand title={`Cent #${n}`} subtitle={`Inscription #${inscription}`} />
-      <div style={{ position: "absolute", left: X0, top: STAGE.y1 - 46, width: X1 - X0, opacity: 0.8 }}>
-        <SafeText role="label" fontSize={42} maxLines={1} color={COLOR.inkDim} style={{ fontFamily: TYPE.body, textAlign: "center" }}>{clip.credit}</SafeText>
-      </div>
+      {clip.credit_at_end ? null : (
+        <div style={{ position: "absolute", left: X0, top: STAGE.y1 - 46, width: X1 - X0, opacity: 0.8 }}>
+          <SafeText role="label" fontSize={42} maxLines={1} color={COLOR.inkDim} style={{ fontFamily: TYPE.body, textAlign: "center" }}>{clip.credit}</SafeText>
+        </div>
+      )}
       {cur ? (
         <div style={{ position: "absolute", left: X0, top: BAND.y0, width: X1 - X0, opacity: rT, transform: `translateY(${(1 - rT) * 14}px)` }}>
           {cur.readout ? <SafeText role="display" fontSize={84} maxLines={1} color={COLOR.accent} style={{ fontFamily: TYPE.mono, fontWeight: 700 }}>{cur.readout}</SafeText> : null}

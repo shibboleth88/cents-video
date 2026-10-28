@@ -52,3 +52,14 @@ In the cloud container, add `--browser-executable=/opt/pw-browsers/chromium_head
   - Control: a hold after "struck" passed at 60 ms (a stop consonant's closure) and is refused at 150 ms.
 - **Alignment fix.** A word whose scribe end overruns its own hold now ends at the edit point. In v2 such words ran on through the inserted silence, which would have put s08 after the closing line began.
 - **Length.** `vo.wav` is 128.9 s (END_PAD 6.5 s). The film runs 2:09.
+
+## v4 (2026-10-28): Story time card, credits
+- **Opening.** The user picked the "Story time" pill from the two trial looks (`CentLook kicker`, look `pill`, hold 3.4 s). It pulses once after frame 0, at the user's request. The trials are in `/mnt/project-files/single-cent-series/8462/story-time/`.
+- **Credits.** The 3DCENTS credit is no longer under the coin (`credit_at_end: true` on both clips). The end card reads:
+  - "Images: Rutherford Chang" (no cents.vision, per the user);
+  - "3D render: 3DCENTS by sinvalli" (the approved wording);
+  - the Traits Atlas line;
+  - "Trait counts as of September 2026";
+  - the two quote credits.
+- The script, voice and every other shot are unchanged from v3. v3's timeline is in `archive/timeline_v3.json`.
+- **v4.1 (2026-10-28).** The user removed "Trait counts as of September 2026" from the end credits; nothing else changed.
