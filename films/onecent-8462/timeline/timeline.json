@@ -4,7 +4,7 @@
   "subtitle": "Inscription #65903248",
   "author": "shibboleth",
   "source": "/mnt/project-files/single-cent-series/8462/8462_proposal_v0.1.md",
-  "version": "v4 (2026-10-28): Story time pill card, 3DCENTS credit moved to the end credits"
+  "version": "v4.1 (2026-10-28): Story time pill card, end credits without the trait-count date"
  },
  "_what": "Cent #8462. Concepts C23 (primary) and C08 (value). Every count from the Sep 2026 trait export. Traits are read from the front only.",
  "shots": [
@@ -540,7 +540,6 @@
      "Images: Rutherford Chang",
      "3D render: 3DCENTS by sinvalli",
      "Trait names and definition: Traits Atlas, CENTS Trait Council",
-     "Trait counts as of September 2026",
      "Quote: Steven Reiss, “Materiality and Signification: Rutherford Chang’s CENTS and Semiotics”",
      "Quote: Martin Lehnen, “Rutherford Chang’s Conceptual Collecting”"
     ],

@@ -62,3 +62,4 @@ In the cloud container, add `--browser-executable=/opt/pw-browsers/chromium_head
   - "Trait counts as of September 2026";
   - the two quote credits.
 - The script, voice and every other shot are unchanged from v3. v3's timeline is in `archive/timeline_v3.json`.
+- **v4.1 (2026-10-28).** The user removed "Trait counts as of September 2026" from the end credits; nothing else changed.
