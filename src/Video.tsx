@@ -7,6 +7,7 @@ import { DIAGRAMS, type DiagramName } from "./style/diagrams";
 import { Backdrop, Plate, type Asset } from "./style/plates";
 import { Atmosphere } from "./style/atmosphere";
 import { OpeningShotCtx, ShotJoinCtx } from "./style/motion";
+import { StyledCaptions, type CaptionStyle } from "./style/captions";
 import { resolveShots, type Alignment, type Timeline } from "./lib/timeline";
 
 export type Props = {
@@ -16,10 +17,13 @@ export type Props = {
   cues: { start: number; end: number; text: string }[];
   mode: RenderMode;
   captions: boolean;
+  /** How captions are drawn. "lead" is the series look from 2026-10-28 (user pick);
+   *  "classic" re-renders a version delivered before then. See style/captions.tsx. */
+  captionStyle?: CaptionStyle;
   voiceover?: string;
 };
 
-export const Video: React.FC<Props> = ({ timeline, alignment, assets, cues, mode, captions, voiceover }) => {
+export const Video: React.FC<Props> = ({ timeline, alignment, assets, cues, mode, captions, captionStyle = "lead", voiceover }) => {
   const shots = resolveShots(timeline, alignment, 30);
   return (
     <ModeCtx.Provider value={mode}>
@@ -71,7 +75,11 @@ export const Video: React.FC<Props> = ({ timeline, alignment, assets, cues, mode
           );
         })}
         <Atmosphere />
-        {captions ? <CaptionLayer cues={cues} alignment={alignment} /> : null}
+        {!captions ? null : captionStyle === "classic" ? (
+          <CaptionLayer cues={cues} alignment={alignment} />
+        ) : (
+          <StyledCaptions cues={cues} alignment={alignment} look={captionStyle} />
+        )}
       </AbsoluteFill>
     </ModeCtx.Provider>
   );
