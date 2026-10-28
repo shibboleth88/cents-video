@@ -384,10 +384,10 @@ const B_Ones: React.FC<{ L: Look; big: React.CSSProperties }> = ({ L, big }) => 
 // =====================================================================
 /** A ring around a coin with legends set as a coin sets them: the top one
  *  reads over the rim, the bottom one reads upright under it. Drawn on, never spun. */
-const Legend: React.FC<{ L: Look; cx: number; cy: number; r: number; top: string; bottom?: string; delay?: number; id: string; size?: number }> =
-  ({ L, cx, cy, r, top, bottom, delay = 0, id, size = 42 }) => {
+const Legend: React.FC<{ L: Look; cx: number; cy: number; r: number; top: string; bottom?: string; delay?: number; id: string; size?: number; drawn?: boolean }> =
+  ({ L, cx, cy, r, top, bottom, delay = 0, id, size = 42, drawn }) => {
     const f = useCurrentFrame();
-    const p = interpolate(f - delay, [0, 24], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.inOut(Easing.cubic) });
+    const p = drawn ? 1 : interpolate(f - delay, [0, 24], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.inOut(Easing.cubic) });
     const C = 2 * Math.PI * r;
     const tt = r + 16, tb = r + 16 + size * 0.74;
     const txt: React.CSSProperties = { fontFamily: L.mono, fontSize: size, fontWeight: 500, letterSpacing: "0.12em", fill: L.ink, opacity: p };
@@ -405,6 +405,32 @@ const Legend: React.FC<{ L: Look; cx: number; cy: number; r: number; top: string
     );
   };
 
+/** "Story time" (the One Cent cover line, user pick 2026-10-28) in Rim terms: the play
+ *  mark sits in a small copper ring, a miniature of the coin's ring, with the words beside
+ *  it in the legend face. Full strength at frame 0; the pulse is one ripple leaving the
+ *  ring, as a struck coin rings; gone by `hold` seconds. */
+const StoryTime: React.FC<{ L: Look; y: number; hold?: number }> = ({ L, y, hold = 3.4 }) => {
+  const f = useCurrentFrame();
+  const out = interpolate(f, [s(hold) - 10, s(hold)], [1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  if (out <= 0) return null;
+  const ripple = interpolate(f, [15, 45], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.out(Easing.cubic) });
+  const D = 104;
+  return (
+    <div style={{ position: "absolute", left: 104, width: 732, top: y, display: "flex", justifyContent: "center",
+                  alignItems: "center", gap: 30, opacity: out }}>
+      <svg width={D} height={D} viewBox={`0 0 ${D} ${D}`} style={{ overflow: "visible" }}>
+        {ripple > 0 && ripple < 1 ? (
+          <circle cx={D / 2} cy={D / 2} r={D / 2 - 3 + 46 * ripple} fill="none" stroke={L.hi} strokeWidth={5}
+                  opacity={0.95 * (1 - ripple)} />
+        ) : null}
+        <circle cx={D / 2} cy={D / 2} r={D / 2 - 3} fill="none" stroke={L.hi} strokeWidth={5} />
+        <path d={`M${D * 0.4} ${D * 0.3} L${D * 0.72} ${D / 2} L${D * 0.4} ${D * 0.7} Z`} fill={L.hi} />
+      </svg>
+      <div style={{ fontFamily: L.mono, fontWeight: 600, fontSize: 60, letterSpacing: "0.16em", color: L.ink }}>STORY TIME</div>
+    </div>
+  );
+};
+
 /** Scene change through a circle opening from the coin's centre. */
 const Iris: React.FC<{ cx: number; cy: number; children: React.ReactNode }> = ({ cx, cy, children }) => {
   const f = useCurrentFrame();
@@ -412,24 +438,26 @@ const Iris: React.FC<{ cx: number; cy: number; children: React.ReactNode }> = ({
   return <AbsoluteFill style={{ clipPath: `circle(${r}px at ${cx}px ${cy}px)` }}>{children}</AbsoluteFill>;
 };
 
-const LookC: React.FC = () => {
-  const L = LOOKS.C;
+const LookC: React.FC<{ hi?: string }> = ({ hi }) => {
+  const L = { ...LOOKS.C, hi: hi ?? LOOKS.C.hi };
   const fr = (soft: number, opsz = 144): React.CSSProperties =>
     ({ fontFamily: L.display, fontVariationSettings: `"opsz" ${opsz}, "SOFT" ${soft}, "WONK" 0` });
   return (
     <AbsoluteFill style={{ background: L.bg, color: L.ink }}>
       <Audio src={staticFile("look/vo-2616.m4a")} />
       <Sequence from={SCENES.title[0]} durationInFrames={SCENES.title[1] - SCENES.title[0]}>
-        <Spin cx={540} cy={720} d={470} bg={L.bg} />
-        <Legend L={L} cx={540} cy={720} r={276} id="lg1" delay={2}
+        {/* frame 0 is the cover: everything at full strength, nothing still arriving */}
+        <Spin cx={540} cy={790} d={450} bg={L.bg} />
+        <StoryTime L={L} y={292} />
+        <Legend L={L} cx={540} cy={790} r={262} id="lg1" drawn
                 top={`ONE CENT · Nº ${CENT.episode}`} bottom={`INSCRIPTION ${CENT.inscription}`} />
-        <div style={{ position: "absolute", left: 104, width: 732, top: 1080, textAlign: "center" }}>
-          <Rise delay={6}><div style={{ ...caps(L, 42, L.dim, "0.3em") }}>Cent</div></Rise>
-          <Rise delay={9}><div style={{ ...fr(100), fontWeight: 600, fontSize: 176, lineHeight: 0.95, color: L.hi }}>{CENT.n}</div></Rise>
+        <div style={{ position: "absolute", left: 104, width: 732, top: 1112, textAlign: "center" }}>
+          <div style={{ ...caps(L, 42, L.dim, "0.3em") }}>Cent</div>
+          <div style={{ ...fr(100), fontWeight: 600, fontSize: 160, lineHeight: 0.95, color: L.hi }}>{CENT.n}</div>
         </div>
       </Sequence>
       <Sequence from={SCENES.only[0]} durationInFrames={SCENES.only[1] - SCENES.only[0]}>
-        <Iris cx={540} cy={720}>
+        <Iris cx={540} cy={790}>
           <AbsoluteFill style={{ background: L.bg }}>
             <Img src={staticFile("look/2616.webp")} style={{ ...CUT, position: "absolute", width: 590, height: 590, left: 245, top: 425 }} />
             <Legend L={L} cx={540} cy={720} r={262} id="lg2" top="THE ONLY CENT OF ITS YEAR" bottom="1912 · PHILADELPHIA" />
@@ -512,3 +540,13 @@ const C_Ones: React.FC<{ L: Look; fr: (soft: number, opsz?: number) => React.CSS
 };
 
 export const LOOK_COMPONENTS = { LookA, LookB, LookC };
+
+/** Highlight candidates for look C (2026-10-28). Each is a colour CENTS already carries. */
+export const C_HIGHLIGHTS: Record<string, string> = {
+  Copper: "#d9925c",      // current: the Lead caption copper
+  Rose: "#c99079",        // cents.gallery's light copper
+  FullRed: "#e8744a",     // a Full Red Cent, bright mint copper
+  Brass: "#d8b25a",       // the Gold trait, honey to pale amber
+  Verdigris: "#76b7a6",   // the patina that grows on copper
+  Paper: "#efe7dc",       // no colour: the highlight is weight and light alone
+};
