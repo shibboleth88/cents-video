@@ -61,15 +61,23 @@ export function useEntrance(role: MotionRole = "rise", index = 0, from = 0): Ent
  */
 export const OpeningShotCtx = React.createContext(false);
 
+/**
+ * A shot joined to its neighbour (`join_prev: true` on the later shot in the
+ * timeline): no dip through black between them, so a move can carry across
+ * the cut (the signature Cent leaving the card and growing into its own shot).
+ */
+export const ShotJoinCtx = React.createContext({ in: false, out: false });
+
 /** Opacity for a whole shot: in at the start, out at the end. */
 export function useShotFade(): number {
   const frame = useCurrentFrame();
   const { durationInFrames } = useVideoConfig();
   const opening = React.useContext(OpeningShotCtx);
+  const join = React.useContext(ShotJoinCtx);
   return interpolate(
     frame,
     [0, TIMING.shotIn, durationInFrames - TIMING.shotOut, durationInFrames],
-    [opening ? 1 : 0, 1, 1, 0],
+    [opening || join.in ? 1 : 0, 1, 1, join.out ? 1 : 0],
     { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: EASE.out }
   );
 }

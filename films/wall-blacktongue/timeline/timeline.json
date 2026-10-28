@@ -78,9 +78,21 @@
       "cy": 959.5,
       "d": 776
      },
-     "credit": "3D render: 3DCENTS by sinvalli"
+     "credit": "3D render: 3DCENTS by sinvalli",
+     "sync": true,
+     "still": {
+      "src": "hires/5185.webp",
+      "at_phrase": "carries a full desert patina",
+      "r": 0.41
+     },
+     "enter_from": {
+      "cx": 540,
+      "cy": 800,
+      "d": 495
+     }
     }
-   }
+   },
+   "join_prev": true
   },
   {
    "shot_id": "w02_grid",

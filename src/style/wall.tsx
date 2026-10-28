@@ -1,5 +1,5 @@
 import React from "react";
-import { Img, interpolate, Loop, OffthreadVideo, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
+import { Freeze, Img, interpolate, Loop, OffthreadVideo, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import { CentGrid, CentImage, CentTurn, fitGrid } from "./grids";
 import { useEntrance, useShotFade, EASE } from "./motion";
 import { COLOR, SAFE, TYPE } from "./tokens";
@@ -183,6 +183,38 @@ export const WallYears: React.FC<Anchored & {
 };
 
 /** One Cent close, turning, with the fact that makes it stand out. */
+/**
+ * The still a 3DCENTS turn settles on: the same geometry as WallStandout's zoom
+ * path at rest (so a cut between them is invisible), with no entrance of its own,
+ * optionally zooming onto a trait once it is still.
+ */
+const StillZoom: React.FC<{ src: string; size: number; frame: number; at: (p: string) => number;
+  zoom?: { at_phrase: string; box: [number, number, number, number]; mark?: boolean } }> = ({ src, size, frame, at, zoom }) => {
+  const W = X1 - X0, H = STAGE.y1 - STAGE.y0;
+  const S = size * (0.5 / 0.402);
+  const [x0, y0, x1, y1] = zoom?.box ?? [0.5, 0.5, 0.5, 0.5];
+  if (zoom && !(0 <= x0 && x0 < x1 && x1 <= 1 && 0 <= y0 && y0 < y1 && y1 <= 1)) throw new Error(`StillZoom: zoom box ${zoom.box} is not inside the coin`);
+  const zf = zoom ? at(zoom.at_phrase) : Infinity;
+  const t = zoom ? interpolate(frame, [zf, zf + 18], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: EASE.inOut }) : 0;
+  const k = zoom ? Math.min(W / ((x1 - x0) * S), H / ((y1 - y0) * S), 3.2) : 1;
+  const sc = 1 + (k - 1) * t;
+  const cx = S / 2 + ((x0 + x1) / 2 * S - S / 2) * t, cy = S / 2 + ((y0 + y1) / 2 * S - S / 2) * t;
+  const ox = (1080 / 2) - cx * sc, oy = (STAGE.y0 + H / 2) - cy * sc;
+  const markT = zoom?.mark ? interpolate(frame, [zf + 14, zf + 26], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }) : 0;
+  return (
+    <div style={{ position: "absolute", left: 0, top: STAGE.y0, width: 1080, height: H, overflow: "hidden" }}>
+      <Img src={staticFile(src)} style={{ position: "absolute", left: ox, top: oy - STAGE.y0, width: S * sc, height: S * sc,
+                                          clipPath: "circle(40.5% at 50% 50%)",
+                                          filter: `drop-shadow(0 ${size * 0.04}px ${size * 0.06}px rgba(0,0,0,0.55))` }} />
+      {markT > 0 ? (
+        <div style={{ position: "absolute", left: ox + x0 * S * sc - 12, top: oy - STAGE.y0 + y0 * S * sc - 12,
+                      width: (x1 - x0) * S * sc + 24, height: (y1 - y0) * S * sc + 24,
+                      border: `5px solid ${COLOR.accent}`, borderRadius: 18, opacity: markT }} />
+      ) : null}
+    </div>
+  );
+};
+
 export const WallStandout: React.FC<Anchored & {
   title: string; n: number; readout: string; caption: string;
   /** Under the title; defaults to the Cent's number. */
@@ -200,7 +232,18 @@ export const WallStandout: React.FC<Anchored & {
    * clip's own pixels, measured on its first frame. The clip's black
    * background is dropped with a lighten blend onto the stage colour.
    */
-  clip?: { src: string; width: number; height: number; frames: number; coin: { cx: number; cy: number; d: number }; credit: string };
+  clip?: { src: string; width: number; height: number; frames: number; coin: { cx: number; cy: number; d: number }; credit: string;
+    /** Continue the turn where the opener's card left it (the opener's clip starts at film frame 0). */
+    sync?: boolean;
+    /**
+     * Settle on the still photo: the turn is retimed so the Cent faces fully forward
+     * (clip frame 0) exactly as `at_phrase` starts, then crossfades over 8 frames to
+     * the 1050px front `src`, drawn where the next still shot draws it. `r` is the
+     * coin's radius as a fraction of that photo (measured; 0.41 on #5185).
+     */
+    still?: { src: string; at_phrase: string; r?: number };
+    /** Grow out of where the coin sat at the end of the previous shot (screen px), instead of fading in. */
+    enter_from?: { cx: number; cy: number; d: number } };
 }> = (props) => {
   const { title, n, readout, caption, src, zoom, clip, spin = 0, subtitle = `CENT #${n}` } = props;
   const fade = useShotFade();
@@ -209,24 +252,56 @@ export const WallStandout: React.FC<Anchored & {
   const size = 500;
   const left = (1080 - size) / 2, top = STAGE.y0 + (STAGE.y1 - STAGE.y0 - size) / 2;
   let coin: React.ReactNode;
+  const { shotStartFrame } = props;
   if (clip) {
-    if (zoom || spin) throw new Error(`WallStandout #${n}: a 3DCENTS clip takes no zoom or spin of our own`);
+    if (spin || (zoom && !clip.still)) throw new Error(`WallStandout #${n}: a 3DCENTS clip takes no spin of our own, and a zoom only after its still`);
     if (!clip.credit) throw new Error(`WallStandout #${n}: a 3DCENTS clip must carry its credit`);
     const H = STAGE.y1 - STAGE.y0;
-    const k = size / clip.coin.d;
-    const enter = interpolate(frame, [0, 18], [0, 1], { extrapolateRight: "clamp", easing: EASE.out });
+    const N = clip.frames;
+    // Where the turn stands at this shot's first frame, and how fast it runs.
+    const p0 = clip.sync ? shotStartFrame % N : 0;
+    let fs = Infinity, rate = 1;
+    if (clip.still) {
+      fs = at(clip.still.at_phrase);
+      // Land on a front-facing frame (a multiple of N) exactly at fs, at the speed nearest the export's own.
+      let turns = Math.ceil((p0 + 1) / N);
+      for (let k = turns + 1; k < turns + 8; k++)
+        if (Math.abs(Math.log((k * N - p0) / fs)) < Math.abs(Math.log((turns * N - p0) / fs))) turns = k;
+      rate = (turns * N - p0) / fs;
+      if (fs <= 0 || rate < 0.6 || rate > 1.6)
+        throw new Error(`WallStandout #${n}: "${clip.still.at_phrase}" comes ${fs} frames in; the turn would have to run at ${rate.toFixed(2)}x to face front then (allowed 0.6-1.6x)`);
+    }
+    const cf = frame < fs ? Math.round(p0 + rate * frame) % N : 0;
+    // The still: drawn exactly as the zoom path below draws it, so a cut to a still shot of this Cent is invisible.
+    const r = clip.still?.r ?? 0.41;
+    const S = size * (0.5 / 0.402);
+    const d = clip.still ? 2 * r * S : size;          // the turning coin, scaled to the photo's coin
+    const xf = clip.still ? interpolate(frame, [fs, fs + 8], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }) : 0;
+    const ef = clip.enter_from;
+    const e = ef ? interpolate(frame, [0, 14], [0, 1], { extrapolateRight: "clamp", easing: EASE.inOut }) : 1;
+    const enter = ef ? 1 : interpolate(frame, [0, 18], [0, 1], { extrapolateRight: "clamp", easing: EASE.out });
+    const cx = ef ? ef.cx + (540 - ef.cx) * e : 540;
+    const cy = ef ? ef.cy - STAGE.y0 + (H / 2 - (ef.cy - STAGE.y0)) * e : H / 2;
+    const dd = ef ? ef.d + (d - ef.d) * e : d;
+    const k = dd / clip.coin.d;
+    const video = <OffthreadVideo src={staticFile(clip.src)} muted
+      style={{ position: "absolute", left: cx - clip.coin.cx * k, top: cy - clip.coin.cy * k,
+               width: clip.width * k, height: clip.height * k, mixBlendMode: "lighten" }} />;
     coin = (
-      // The blend needs the stage colour inside its own group: any opacity above
-      // (entrance, shot fade) isolates the group, and lighten against nothing
-      // would show the clip's black rectangle.
-      <div style={{ position: "absolute", left: 0, top: STAGE.y0, width: 1080, height: H, overflow: "hidden", opacity: enter,
-                    background: COLOR.bg, isolation: "isolate" }}>
-        <Loop durationInFrames={clip.frames} layout="none">
-          <OffthreadVideo src={staticFile(clip.src)} muted
-            style={{ position: "absolute", left: 540 - clip.coin.cx * k, top: H / 2 - clip.coin.cy * k,
-                     width: clip.width * k, height: clip.height * k, mixBlendMode: "lighten" }} />
-        </Loop>
-      </div>
+      <>
+        {xf < 1 ? (
+          // The blend needs the stage colour inside its own group: any opacity above
+          // (entrance, shot fade) isolates the group, and lighten against nothing
+          // would show the clip's black rectangle.
+          <div style={{ position: "absolute", left: 0, top: STAGE.y0, width: 1080, height: H, overflow: "hidden", opacity: enter,
+                        background: COLOR.bg, isolation: "isolate" }}>
+            <Freeze frame={cf}>{video}</Freeze>
+          </div>
+        ) : null}
+        {clip.still && xf > 0 ? <div style={{ position: "absolute", inset: 0, opacity: xf }}>
+          <StillZoom src={clip.still.src} size={size} zoom={zoom} at={at} frame={frame} />
+        </div> : null}
+      </>
     );
   } else if (!zoom) {
     coin = <CentTurn n={n} size={size} maxTilt={0} spin={spin} style={{ position: "absolute", left, top }} />;

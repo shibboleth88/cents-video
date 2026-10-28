@@ -4,7 +4,7 @@ This is the one source for the format of every Collector Wall episode. Read it b
 
 The reference episode is **blacktongue** (`films/wall-blacktongue/` on branch `claude/project-thread-nkzn17`, PR #5). Copy its folder layout, timeline shape and caption builder.
 
-Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the Daidatep thread's first findings. 2026-10-26: §5 "Delivery check" added from the GPT WBWA reel handover. 2026-10-27: narration voice changed to "eee" (§5); showcase opener is the series opening (§3); 3DCENTS credit wording approved (§4); badge zooms get the opener-style highlight (§4a); audit against the day's decisions: lead with the Wall's standout fact (§1), graded traits, fronts only, Cents on black, Daidatep (§2), no long still holds (§4a), dated snapshots (§4a). 2026-10-28: find the focus with `wall_focus.py` (§1).
+Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the Daidatep thread's first findings. 2026-10-26: §5 "Delivery check" added from the GPT WBWA reel handover. 2026-10-27: narration voice changed to "eee" (§5); showcase opener is the series opening (§3); 3DCENTS credit wording approved (§4); badge zooms get the opener-style highlight (§4a); audit against the day's decisions: lead with the Wall's standout fact (§1), graded traits, fronts only, Cents on black, Daidatep (§2), no long still holds (§4a), dated snapshots (§4a). 2026-10-28: find the focus with `wall_focus.py` (§1); seamless signature hand-offs, card to spin to still, front on cue (§3).
 
 ## 1. What an episode is
 
@@ -73,6 +73,17 @@ Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the D
      ```
      Then set `"src": "3dcents/<n>-360-30fps-alpha.webm", "alpha": true` in the opener's clip. The render's black sits at luma 16, so a threshold near 0 keys nothing. The `WallStandout` shot that follows stays on black and keeps the mp4. Keep both files in `/mnt/project-files/collector-wall/3dcents/`.
    - The credit under the card fades out before the zoom onto the signature Cent (PR #14 a3ee33b), so it never sits on the zoomed badges.
+   - **Seamless hand-offs: card spin, then large spin, then still (user, 2026-10-28).** The signature Cent is one continuous object from the card to its own shot.
+     - **Card to large spin:** set `"join_prev": true` on the `WallStandout` shot (top level of the shot, not in props). That removes the dip through black between the two shots. The card then fades away around the turning Cent in its last 12 frames.
+       - In the shot's `clip`, `"sync": true` continues the turn at the same frame the card's turn had reached. This works because the opener's clip starts at film frame 0.
+       - `"enter_from": {cx, cy, d}` makes the Cent grow out of its slot instead of fading in. Measure the values on the opener's last frame: the slot's centre and the coin's full height, in screen pixels. blacktongue's are 540, 800, 495.
+     - **Large spin to still, on cue:** in the clip, `"still": {"src": "hires/<n>.webp", "at_phrase": "<cue>", "r": <coin radius>}`.
+       - The turn is retimed, at the speed nearest the export's own and within 0.6 to 1.6x, so the Cent faces fully front (clip frame 0) exactly when the cue starts.
+       - It then crossfades over 8 frames to the 1050px photo, drawn where any still `WallStandout` of that Cent draws it. A following still shot therefore cuts invisibly, and the shot can go on to a `zoom` on the photo.
+       - `r` is the coin's radius as a fraction of the photo: measure it with a threshold on the white background (#5185: 0.41).
+       - If no speed within that range can land the front on the cue, the render refuses and names the cue. Pick a cue a little later or earlier.
+     - **Choose the cue for the picture:** the still should arrive as the narration names something the photo shows. For blacktongue that is "carries a full desert patina".
+     - **Check:** look at the frames on both sides of each hand-off. The coin must not jump in size, position or angle.
    - **Still being tuned:** the user may change the speed, the order or the progress bar in the ScrappyT thread. Take the current settings from that thread. Reference renders: ScrappyT v1, and `/mnt/project-files/collector-wall/openers/opener-showcase_v1.mp4`.
    - The earlier opening, a cents.vision screenshot of the card zoomed onto the signature Cent, is retired for new episodes.
 2. **Zoom to the signature Cent on the card.** Once that sentence ends, the camera zooms onto the signature Cent on the card. Only then does the film cut to the individual view of that Cent: its number, year, and its traits ("…and is a Ghost Cent").

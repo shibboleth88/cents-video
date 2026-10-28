@@ -1,6 +1,6 @@
 import React from "react";
 import { continueRender, delayRender, Img, interpolate, Loop, OffthreadVideo, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
-import { useShotFade, EASE } from "./motion";
+import { useShotFade, EASE, ShotJoinCtx } from "./motion";
 import { COLOR, SAFE, TYPE } from "./tokens";
 import { Imagery, SafeText } from "./Safe";
 import { findPhrase, type Alignment } from "../lib/timeline";
@@ -186,6 +186,11 @@ const WallBoardInner: React.FC<Anchored & { board: Board; moves?: Move[]; highli
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const fade = useShotFade();
+  // Joined to the next shot (the signature Cent growing into its own shot): the card
+  // fades away around a turning signature Cent, which stays, so the turn carries across the cut.
+  const join = React.useContext(ShotJoinCtx);
+  const { durationInFrames: dur } = useVideoConfig();
+  const leave = join.out && clip ? interpolate(frame, [dur - 12, dur - 1], [1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }) : 1;
   const at = (phrase: string) => {
     const f = Math.round(findPhrase(alignment, phrase).start * fps) - shotStartFrame;
     if (f < 0) throw new Error(`WallBoard: "${phrase}" is spoken before this shot starts`);
@@ -288,8 +293,8 @@ const WallBoardInner: React.FC<Anchored & { board: Board; moves?: Move[]; highli
   return (
     <div style={{ position: "absolute", inset: 0, opacity: fade }}>
       <Imagery>
-        <div style={{ position: "absolute", left: VIEW.x0, top: VIEW.y0, width: VW, height: VH, overflow: "hidden", borderRadius: 18, background: "#ececec" }}>
-          <div style={{ position: "absolute", left: ox, top: oy + S(sheetY0), width: S(BW), height: S(sheetY1 - sheetY0), background: "white",
+        <div style={{ position: "absolute", left: VIEW.x0, top: VIEW.y0, width: VW, height: VH, overflow: "hidden", borderRadius: 18, background: `rgba(236,236,236,${leave})` }}>
+          <div style={{ position: "absolute", left: ox, top: oy + S(sheetY0), width: S(BW), height: S(sheetY1 - sheetY0), background: "white", opacity: leave,
                         border: `${Math.max(1, S(1.5))}px solid #d7d7d7`, boxSizing: "border-box" }} />
           {L.items.map((it, i) => {
             if (!vis(it.box) || !inPart(it.box)) return null;
@@ -314,7 +319,7 @@ const WallBoardInner: React.FC<Anchored & { board: Board; moves?: Move[]; highli
                 );
               }
               return (
-                <div key={i} style={{ ...st, opacity: dim, transform: gl ? `scale(${1 + 0.1 * gl})` : undefined,
+                <div key={i} style={{ ...st, opacity: dim * leave, transform: gl ? `scale(${1 + 0.1 * gl})` : undefined,
                                       filter: gl ? `brightness(${1 + 0.35 * gl})` : undefined }}>
                   <Img src={staticFile(`cents/${it.n}.webp`)} style={{ width: "100%", height: "100%" }} />
                   {on ? <div style={{ position: "absolute", inset: -S(5), borderRadius: "50%", border: `${S(5)}px solid ${COLOR.accent}`, opacity: litT }} /> : null}
@@ -327,7 +332,7 @@ const WallBoardInner: React.FC<Anchored & { board: Board; moves?: Move[]; highli
               return (
                 <div key={i} style={{ ...st, fontFamily: FONT, fontSize: S(it.size), fontWeight: it.weight ?? 400, color: it.color ?? "#111",
                                       textAlign: it.align ?? "left", whiteSpace: "nowrap", lineHeight: `${S(y1 - y0)}px`,
-                                      textDecoration: it.underline ? "underline" : "none", opacity: lit ? 1 - 0.6 * litT : 1 }}>{it.text}</div>
+                                      textDecoration: it.underline ? "underline" : "none", opacity: (lit ? 1 - 0.6 * litT : 1) * leave }}>{it.text}</div>
               );
             }
             const size = SIZE[it.row];
@@ -346,7 +351,7 @@ const WallBoardInner: React.FC<Anchored & { board: Board; moves?: Move[]; highli
                                     fontWeight: (s as any)?.weight ?? (it.row === "sets" ? 600 : 400),
                                     textTransform: it.row === "sets" && (s as any).upper ? "uppercase" : "none",
                                     letterSpacing: it.row === "sets" && (s as any).upper ? S(1) : 0,
-                                    opacity: lit && !(mark && mark.badge === i) ? 1 - 0.6 * litT : 1,
+                                    opacity: (lit && !(mark && mark.badge === i) ? 1 - 0.6 * litT : 1) * leave,
                                     ...(bg ? { transform: `scale(${1 + 0.08 * bg + 0.06 * marked})`, borderRadius: S(4), zIndex: marked ? 2 : undefined,
                                                outline: `${S(3)}px solid rgba(175,107,57,${bg})`,
                                                boxShadow: `0 0 ${S(18)}px rgba(175,107,57,${bg})` } : {}),
@@ -359,7 +364,7 @@ const WallBoardInner: React.FC<Anchored & { board: Board; moves?: Move[]; highli
           {mark && mark.t > 0 && mark.badge === undefined ? (
             <div style={{ position: "absolute", left: ox + S(mark.box[0]) - 12, top: oy + S(mark.box[1]) - 12,
                           width: S(mark.box[2] - mark.box[0]) + 24, height: S(mark.box[3] - mark.box[1]) + 24,
-                          border: `5px solid ${COLOR.accent}`, borderRadius: 14, opacity: mark.t }} />
+                          border: `5px solid ${COLOR.accent}`, borderRadius: 14, opacity: mark.t * leave }} />
           ) : null}
         </div>
       </Imagery>
