@@ -27,3 +27,16 @@ Follows `docs/collector-wall/BEST_PRACTICES.md` (the series brief). Reference ep
 | Grade wording, Ghost and Iridescent definitions | Traits Atlas, as worded in `films/traits/script/voiceover.txt` |
 
 Not covered on purpose: "Patina count 51" (no user-facing meaning yet, per the brief) and the separate "Contaminated … x 1" tags, which the Contamination Set row shows.
+
+## v2: one of every trait (user, 2026-10-27 18:18Z)
+
+The user: "the most extraordinary thing about ScrappyT's wall is that it has one of every visual trait. Let's reorient the video around that." Script v2 is `script/voiceover.txt` (v1 kept as `voiceover_v1.txt`, timeline v1 as `timeline/make_timeline_v1.py`). The spoken form comes from `script/spoken.json` through `audio/make_tts.py`, and `captions/build_cues.py` reads the same table. Voice: eee, eleven_v4, `[thoughtfully] [calm]`, v3 take 1 (181.2 s). The transcript with tag tokens removed equals `audio/tts_text.txt` (440 words); a one-word control does not. New component `TraitTally` (`src/style/traittally.tsx`): the 19 traits as a checklist (grid) and one Cent per trait (walk); it refuses a trait with no Cent behind it.
+
+| Claim | Check (merged-new2.json and the 27 Oct snapshot) |
+|---|---|
+| The Wall holds all 19 Atlas traits | union of traits over its 41 Cents = 19 (grades folded: notable/significant/full, notable/heavily abraded; Wheat = year ≤ 1958; rare_sats is not an Atlas trait). Totals per trait match `films/traits` (e.g. Iridescent 20, Vandalized 26, Wheat 208) |
+| No other Wall does | every wallet in `wallet_index_cents.json` (2098) and every group in `wallet-groups.json` (5): best single wallet 18; ScrappyT's group is the only 19. Claimed Walls next: CL7 18 (no Vandalized), Daidatep 18 (no Iridescent) |
+| The artist wallet has no Iridescent Cent | Rutherford Chang Wall, 1000 Cents: 18 of 19, missing Iridescent |
+| One Cent per trait | Desert/Ghost #7139; Verdigris #8550 (significant); Obsidian #8394 (significant); Red #9258 (full); Gold #5856 (notable); Orange #9469; Iridescent #7713; Corroded #366; Lustrous #830; Striated #1295; Abraded #8136 (heavily); Faceless #1965; Fingerprint #508; White drips #2654; Contaminated 372, 1399, 2387, 8899; Assassin #739; Vandalized #7745; Wheat #3824. Each checked by eye on its 1050 px front |
+| Iridescent: 20 Cents, this Wall holds two | 2981, 7713 |
+| Spectrum picks (v2) | notable gold is #5856 instead of #2981, to match the walk |

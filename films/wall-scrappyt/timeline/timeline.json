@@ -4,9 +4,9 @@
   "subtitle": "ScrappyT",
   "author": "shibboleth",
   "source": "https://cents.vision/collectors.html",
-  "version": "v1, opener showcase + 3DCENTS clip (2026-10-27)"
+  "version": "v2, one of every trait, opener showcase + 3DCENTS clip (2026-10-27)"
  },
- "_what": "Collector Wall: ScrappyT. Every coin is a real Cent by number; every figure comes from data/wall_board.json (cents.vision, 27 Oct 2026). No wallet address appears.",
+ "_what": "Collector Wall: ScrappyT. Every coin is a real Cent by number; every figure comes from data/wall_board.json and merged-new2.json (cents.vision, 27 Oct 2026). No wallet address appears.",
  "shots": [
   {
    "shot_id": "s00_open",
@@ -14,31 +14,22 @@
     "at_start": true
    },
    "end": {
-    "at_phrase": "number seventy-one thirty-nine"
+    "at_phrase": "Its forty-one Cents"
    },
-   "purpose": "Opening (showcase): moving from frame 0, hands over to the Wall card, which zooms onto the signature Cent.",
+   "purpose": "Opening (showcase): the card from frame 0, signature turning, Cents and badges lighting in turn.",
    "visual_kind": "code",
    "component": "WallOpener",
    "props": {
     "variant": "showcase",
     "wall": "scrappyt",
     "show": "card",
-    "until_phrase": "Its signature Cent",
-    "moves": [
-     {
-      "at_phrase": "Its signature Cent",
-      "target": {
-       "cent": 7139,
-       "in": "signature"
-      },
-      "mark": true
-     }
-    ],
+    "until_phrase": "Its forty-one Cents",
+    "moves": [],
     "progress": {
-     "total_frames": 3687
+     "total_frames": 5511
     },
     "clip": {
-     "src": "3dcents/7139-360-30fps.mp4",
+     "src": "3dcents/7139-360-30fps-alpha.webm",
      "width": 1080,
      "height": 1920,
      "frames": 150,
@@ -47,19 +38,445 @@
       "cy": 959.5,
       "d": 776
      },
-     "credit": "3D render: 3DCENTS by sinvalli"
+     "credit": "3D render: 3DCENTS by sinvalli",
+     "alpha": true
     }
    }
   },
   {
-   "shot_id": "s01_sig",
+   "shot_id": "s01_all",
    "start": {
-    "at_phrase": "number seventy-one thirty-nine"
+    "at_phrase": "Its forty-one Cents"
+   },
+   "end": {
+    "at_phrase": "Even the artist wallet"
+   },
+   "purpose": "The 19 Atlas traits as a checklist, each with this Wall's Cent, filling as the line is spoken (counts: merged-new2.json, 27 Oct 2026).",
+   "visual_kind": "code",
+   "component": "TraitTally",
+   "props": {
+    "title": "ScrappyT",
+    "traits": [
+     "Desert",
+     "Ghost",
+     "Verdigris",
+     "Obsidian",
+     "Red",
+     "Gold",
+     "Orange",
+     "Iridescent",
+     "Corroded",
+     "Lustrous",
+     "Striated",
+     "Abraded",
+     "Faceless",
+     "Fingerprint",
+     "White drips",
+     "Contaminated",
+     "Assassin",
+     "Vandalized",
+     "Wheat"
+    ],
+    "items": [
+     {
+      "trait": "Desert",
+      "n": 7139,
+      "src": "hires/7139.webp",
+      "at_phrase": null,
+      "caption": "#7139 · Full"
+     },
+     {
+      "trait": "Ghost",
+      "n": 7139,
+      "src": "hires/7139.webp",
+      "at_phrase": null,
+      "caption": "#7139"
+     },
+     {
+      "trait": "Verdigris",
+      "n": 8550,
+      "src": "hires/8550.webp",
+      "at_phrase": "Verdigris, green to teal",
+      "caption": "#8550 · Significant"
+     },
+     {
+      "trait": "Obsidian",
+      "n": 8394,
+      "src": "hires/8394.webp",
+      "at_phrase": "Obsidian, dark brown to",
+      "caption": "#8394 · Significant"
+     },
+     {
+      "trait": "Red",
+      "n": 9258,
+      "src": "hires/9258.webp",
+      "at_phrase": "Red, scarlet to russet",
+      "caption": "#9258 · Full"
+     },
+     {
+      "trait": "Gold",
+      "n": 5856,
+      "src": "hires/5856.webp",
+      "at_phrase": "Gold, honey gold to",
+      "caption": "#5856 · Notable"
+     },
+     {
+      "trait": "Orange",
+      "n": 9469,
+      "src": "hires/9469.webp",
+      "at_phrase": "Orange, given only to",
+      "caption": "#9469"
+     },
+     {
+      "trait": "Iridescent",
+      "n": 7713,
+      "src": "hires/7713.webp",
+      "at_phrase": "Iridescent, a copper surface",
+      "caption": "#7713 · 1 of 20"
+     },
+     {
+      "trait": "Corroded",
+      "n": 366,
+      "src": "hires/366.webp",
+      "at_phrase": "Corroded, oxidation that",
+      "caption": "#366"
+     },
+     {
+      "trait": "Lustrous",
+      "n": 830,
+      "src": "hires/830.webp",
+      "at_phrase": "Lustrous, original mint shine",
+      "caption": "#830"
+     },
+     {
+      "trait": "Striated",
+      "n": 1295,
+      "src": "hires/1295.webp",
+      "at_phrase": "Striated, parallel lines",
+      "caption": "#1295"
+     },
+     {
+      "trait": "Abraded",
+      "n": 8136,
+      "src": "hires/8136.webp",
+      "at_phrase": "Abraded, copper missing",
+      "caption": "#8136 · Heavily abraded"
+     },
+     {
+      "trait": "Faceless",
+      "n": 1965,
+      "src": "hires/1965.webp",
+      "at_phrase": "Faceless",
+      "caption": "#1965"
+     },
+     {
+      "trait": "Fingerprint",
+      "n": 508,
+      "src": "hires/508.webp",
+      "at_phrase": "Fingerprint, ridges clear",
+      "caption": "#508",
+      "zoom": {
+       "box": [
+        0.22,
+        0.1,
+        0.82,
+        0.7
+       ]
+      }
+     },
+     {
+      "trait": "White drips",
+      "n": 2654,
+      "src": "hires/2654.webp",
+      "at_phrase": "White drips and streaks",
+      "caption": "#2654"
+     },
+     {
+      "trait": "Contaminated",
+      "cents": [
+       372,
+       1399,
+       2387,
+       8899
+      ],
+      "at_phrase": "Contaminated, foreign matter",
+      "caption": "4 of 12 types"
+     },
+     {
+      "trait": "Assassin",
+      "n": 739,
+      "src": "hires/739.webp",
+      "at_phrase": "Assassin, one round mark",
+      "caption": "#739",
+      "zoom": {
+       "box": [
+        0.32,
+        0.2,
+        0.44,
+        0.32
+       ]
+      }
+     },
+     {
+      "trait": "Vandalized",
+      "n": 7745,
+      "src": "hires/7745.webp",
+      "at_phrase": "Vandalized, marks that show",
+      "caption": "#7745 · 1 of 26",
+      "zoom": {
+       "box": [
+        0.3,
+        0.17,
+        0.66,
+        0.52
+       ]
+      }
+     },
+     {
+      "trait": "Wheat",
+      "n": 3824,
+      "src": "hires/3824.webp",
+      "at_phrase": "And Wheat, struck",
+      "caption": "#3824 · 1956",
+      "zoom": {
+       "box": [
+        0.62,
+        0.58,
+        0.86,
+        0.71
+       ],
+       "at_phrase": "from nineteen fifty-six, the"
+      }
+     }
+    ],
+    "mode": "grid",
+    "at_phrase": "Its forty-one Cents",
+    "until_phrase": "no other Wall on"
+   }
+  },
+  {
+   "shot_id": "s01b_artist",
+   "start": {
+    "at_phrase": "Even the artist wallet"
+   },
+   "end": {
+    "at_phrase": "Its signature Cent"
+   },
+   "purpose": "The artist wallet holds 18 of 19: no Iridescent. Iridescent stands out.",
+   "visual_kind": "code",
+   "component": "TraitTally",
+   "props": {
+    "title": "ScrappyT",
+    "traits": [
+     "Desert",
+     "Ghost",
+     "Verdigris",
+     "Obsidian",
+     "Red",
+     "Gold",
+     "Orange",
+     "Iridescent",
+     "Corroded",
+     "Lustrous",
+     "Striated",
+     "Abraded",
+     "Faceless",
+     "Fingerprint",
+     "White drips",
+     "Contaminated",
+     "Assassin",
+     "Vandalized",
+     "Wheat"
+    ],
+    "items": [
+     {
+      "trait": "Desert",
+      "n": 7139,
+      "src": "hires/7139.webp",
+      "at_phrase": null,
+      "caption": "#7139 · Full"
+     },
+     {
+      "trait": "Ghost",
+      "n": 7139,
+      "src": "hires/7139.webp",
+      "at_phrase": null,
+      "caption": "#7139"
+     },
+     {
+      "trait": "Verdigris",
+      "n": 8550,
+      "src": "hires/8550.webp",
+      "at_phrase": "Verdigris, green to teal",
+      "caption": "#8550 · Significant"
+     },
+     {
+      "trait": "Obsidian",
+      "n": 8394,
+      "src": "hires/8394.webp",
+      "at_phrase": "Obsidian, dark brown to",
+      "caption": "#8394 · Significant"
+     },
+     {
+      "trait": "Red",
+      "n": 9258,
+      "src": "hires/9258.webp",
+      "at_phrase": "Red, scarlet to russet",
+      "caption": "#9258 · Full"
+     },
+     {
+      "trait": "Gold",
+      "n": 5856,
+      "src": "hires/5856.webp",
+      "at_phrase": "Gold, honey gold to",
+      "caption": "#5856 · Notable"
+     },
+     {
+      "trait": "Orange",
+      "n": 9469,
+      "src": "hires/9469.webp",
+      "at_phrase": "Orange, given only to",
+      "caption": "#9469"
+     },
+     {
+      "trait": "Iridescent",
+      "n": 7713,
+      "src": "hires/7713.webp",
+      "at_phrase": "Iridescent, a copper surface",
+      "caption": "#7713 · 1 of 20"
+     },
+     {
+      "trait": "Corroded",
+      "n": 366,
+      "src": "hires/366.webp",
+      "at_phrase": "Corroded, oxidation that",
+      "caption": "#366"
+     },
+     {
+      "trait": "Lustrous",
+      "n": 830,
+      "src": "hires/830.webp",
+      "at_phrase": "Lustrous, original mint shine",
+      "caption": "#830"
+     },
+     {
+      "trait": "Striated",
+      "n": 1295,
+      "src": "hires/1295.webp",
+      "at_phrase": "Striated, parallel lines",
+      "caption": "#1295"
+     },
+     {
+      "trait": "Abraded",
+      "n": 8136,
+      "src": "hires/8136.webp",
+      "at_phrase": "Abraded, copper missing",
+      "caption": "#8136 · Heavily abraded"
+     },
+     {
+      "trait": "Faceless",
+      "n": 1965,
+      "src": "hires/1965.webp",
+      "at_phrase": "Faceless",
+      "caption": "#1965"
+     },
+     {
+      "trait": "Fingerprint",
+      "n": 508,
+      "src": "hires/508.webp",
+      "at_phrase": "Fingerprint, ridges clear",
+      "caption": "#508",
+      "zoom": {
+       "box": [
+        0.22,
+        0.1,
+        0.82,
+        0.7
+       ]
+      }
+     },
+     {
+      "trait": "White drips",
+      "n": 2654,
+      "src": "hires/2654.webp",
+      "at_phrase": "White drips and streaks",
+      "caption": "#2654"
+     },
+     {
+      "trait": "Contaminated",
+      "cents": [
+       372,
+       1399,
+       2387,
+       8899
+      ],
+      "at_phrase": "Contaminated, foreign matter",
+      "caption": "4 of 12 types"
+     },
+     {
+      "trait": "Assassin",
+      "n": 739,
+      "src": "hires/739.webp",
+      "at_phrase": "Assassin, one round mark",
+      "caption": "#739",
+      "zoom": {
+       "box": [
+        0.32,
+        0.2,
+        0.44,
+        0.32
+       ]
+      }
+     },
+     {
+      "trait": "Vandalized",
+      "n": 7745,
+      "src": "hires/7745.webp",
+      "at_phrase": "Vandalized, marks that show",
+      "caption": "#7745 · 1 of 26",
+      "zoom": {
+       "box": [
+        0.3,
+        0.17,
+        0.66,
+        0.52
+       ]
+      }
+     },
+     {
+      "trait": "Wheat",
+      "n": 3824,
+      "src": "hires/3824.webp",
+      "at_phrase": "And Wheat, struck",
+      "caption": "#3824 · 1956",
+      "zoom": {
+       "box": [
+        0.62,
+        0.58,
+        0.86,
+        0.71
+       ],
+       "at_phrase": "from nineteen fifty-six, the"
+      }
+     }
+    ],
+    "mode": "grid",
+    "lit_all": true,
+    "focus": {
+     "trait": "Iridescent",
+     "at_phrase": "has no Iridescent"
+    }
+   }
+  },
+  {
+   "shot_id": "s02_sig",
+   "start": {
+    "at_phrase": "Its signature Cent"
    },
    "end": {
     "at_phrase": "Ghost means a full"
    },
-   "purpose": "The signature Cent #7139 on its own.",
+   "purpose": "The signature Cent #7139: Desert and Ghost.",
    "visual_kind": "code",
    "component": "WallStandout",
    "props": {
@@ -82,14 +499,14 @@
    }
   },
   {
-   "shot_id": "s02_ghost",
+   "shot_id": "s02b_ghost",
    "start": {
     "at_phrase": "Ghost means a full"
    },
    "end": {
     "at_phrase": "Of the thirty-three Ghost"
    },
-   "purpose": "What Ghost means, on the signature Cent (Traits Atlas wording). Whole-face trait: no zoom.",
+   "purpose": "What Ghost means (Traits Atlas wording). Whole-face trait: no zoom.",
    "visual_kind": "code",
    "component": "WallStandout",
    "props": {
@@ -101,28 +518,451 @@
    }
   },
   {
-   "shot_id": "s02b_13",
+   "shot_id": "s02c_13",
    "start": {
     "at_phrase": "Of the thirty-three Ghost"
    },
    "end": {
-    "at_phrase": "The Wall holds forty-one"
+    "at_phrase": "Here are the other seventeen"
    },
-   "purpose": "13 of the 33 Ghost Cents are full desert (merged-new2.json, 27 Oct 2026).",
+   "purpose": "13 of the 33 Ghost Cents are full desert.",
    "visual_kind": "code",
    "component": "WallStandout",
    "props": {
     "title": "ScrappyT",
     "n": 7139,
     "readout": "13 of 33",
-    "caption": "Ghost Cents with a full desert patina",
+    "caption": "Full desert Ghost Cents",
     "src": "hires/7139.webp"
    }
   },
   {
-   "shot_id": "s03_count",
+   "shot_id": "s03_walk",
    "start": {
-    "at_phrase": "The Wall holds forty-one"
+    "at_phrase": "Here are the other seventeen"
+   },
+   "end": {
+    "at_phrase": "Nineteen of nineteen"
+   },
+   "purpose": "One Cent per trait, large, as each is named; the band of 19 Cents keeps count. Zooms on the fingerprint, the assassin mark, the vandal's outline, and the date.",
+   "visual_kind": "code",
+   "component": "TraitTally",
+   "props": {
+    "title": "ScrappyT",
+    "traits": [
+     "Desert",
+     "Ghost",
+     "Verdigris",
+     "Obsidian",
+     "Red",
+     "Gold",
+     "Orange",
+     "Iridescent",
+     "Corroded",
+     "Lustrous",
+     "Striated",
+     "Abraded",
+     "Faceless",
+     "Fingerprint",
+     "White drips",
+     "Contaminated",
+     "Assassin",
+     "Vandalized",
+     "Wheat"
+    ],
+    "items": [
+     {
+      "trait": "Desert",
+      "n": 7139,
+      "src": "hires/7139.webp",
+      "at_phrase": null,
+      "caption": "#7139 · Full"
+     },
+     {
+      "trait": "Ghost",
+      "n": 7139,
+      "src": "hires/7139.webp",
+      "at_phrase": null,
+      "caption": "#7139"
+     },
+     {
+      "trait": "Verdigris",
+      "n": 8550,
+      "src": "hires/8550.webp",
+      "at_phrase": "Verdigris, green to teal",
+      "caption": "#8550 · Significant"
+     },
+     {
+      "trait": "Obsidian",
+      "n": 8394,
+      "src": "hires/8394.webp",
+      "at_phrase": "Obsidian, dark brown to",
+      "caption": "#8394 · Significant"
+     },
+     {
+      "trait": "Red",
+      "n": 9258,
+      "src": "hires/9258.webp",
+      "at_phrase": "Red, scarlet to russet",
+      "caption": "#9258 · Full"
+     },
+     {
+      "trait": "Gold",
+      "n": 5856,
+      "src": "hires/5856.webp",
+      "at_phrase": "Gold, honey gold to",
+      "caption": "#5856 · Notable"
+     },
+     {
+      "trait": "Orange",
+      "n": 9469,
+      "src": "hires/9469.webp",
+      "at_phrase": "Orange, given only to",
+      "caption": "#9469"
+     },
+     {
+      "trait": "Iridescent",
+      "n": 7713,
+      "src": "hires/7713.webp",
+      "at_phrase": "Iridescent, a copper surface",
+      "caption": "#7713 · 1 of 20"
+     },
+     {
+      "trait": "Corroded",
+      "n": 366,
+      "src": "hires/366.webp",
+      "at_phrase": "Corroded, oxidation that",
+      "caption": "#366"
+     },
+     {
+      "trait": "Lustrous",
+      "n": 830,
+      "src": "hires/830.webp",
+      "at_phrase": "Lustrous, original mint shine",
+      "caption": "#830"
+     },
+     {
+      "trait": "Striated",
+      "n": 1295,
+      "src": "hires/1295.webp",
+      "at_phrase": "Striated, parallel lines",
+      "caption": "#1295"
+     },
+     {
+      "trait": "Abraded",
+      "n": 8136,
+      "src": "hires/8136.webp",
+      "at_phrase": "Abraded, copper missing",
+      "caption": "#8136 · Heavily abraded"
+     },
+     {
+      "trait": "Faceless",
+      "n": 1965,
+      "src": "hires/1965.webp",
+      "at_phrase": "Faceless",
+      "caption": "#1965"
+     },
+     {
+      "trait": "Fingerprint",
+      "n": 508,
+      "src": "hires/508.webp",
+      "at_phrase": "Fingerprint, ridges clear",
+      "caption": "#508",
+      "zoom": {
+       "box": [
+        0.22,
+        0.1,
+        0.82,
+        0.7
+       ]
+      }
+     },
+     {
+      "trait": "White drips",
+      "n": 2654,
+      "src": "hires/2654.webp",
+      "at_phrase": "White drips and streaks",
+      "caption": "#2654"
+     },
+     {
+      "trait": "Contaminated",
+      "cents": [
+       372,
+       1399,
+       2387,
+       8899
+      ],
+      "at_phrase": "Contaminated, foreign matter",
+      "caption": "4 of 12 types"
+     },
+     {
+      "trait": "Assassin",
+      "n": 739,
+      "src": "hires/739.webp",
+      "at_phrase": "Assassin, one round mark",
+      "caption": "#739",
+      "zoom": {
+       "box": [
+        0.32,
+        0.2,
+        0.44,
+        0.32
+       ]
+      }
+     },
+     {
+      "trait": "Vandalized",
+      "n": 7745,
+      "src": "hires/7745.webp",
+      "at_phrase": "Vandalized, marks that show",
+      "caption": "#7745 · 1 of 26",
+      "zoom": {
+       "box": [
+        0.3,
+        0.17,
+        0.66,
+        0.52
+       ]
+      }
+     },
+     {
+      "trait": "Wheat",
+      "n": 3824,
+      "src": "hires/3824.webp",
+      "at_phrase": "And Wheat, struck",
+      "caption": "#3824 · 1956",
+      "zoom": {
+       "box": [
+        0.62,
+        0.58,
+        0.86,
+        0.71
+       ],
+       "at_phrase": "from nineteen fifty-six, the"
+      }
+     }
+    ],
+    "mode": "walk",
+    "lit_before": [
+     "Desert",
+     "Ghost"
+    ]
+   }
+  },
+  {
+   "shot_id": "s04_full",
+   "start": {
+    "at_phrase": "Nineteen of nineteen"
+   },
+   "end": {
+    "at_phrase": "The Wall spans two wallets"
+   },
+   "purpose": "All nineteen, lit.",
+   "visual_kind": "code",
+   "component": "TraitTally",
+   "props": {
+    "title": "ScrappyT",
+    "traits": [
+     "Desert",
+     "Ghost",
+     "Verdigris",
+     "Obsidian",
+     "Red",
+     "Gold",
+     "Orange",
+     "Iridescent",
+     "Corroded",
+     "Lustrous",
+     "Striated",
+     "Abraded",
+     "Faceless",
+     "Fingerprint",
+     "White drips",
+     "Contaminated",
+     "Assassin",
+     "Vandalized",
+     "Wheat"
+    ],
+    "items": [
+     {
+      "trait": "Desert",
+      "n": 7139,
+      "src": "hires/7139.webp",
+      "at_phrase": null,
+      "caption": "#7139 · Full"
+     },
+     {
+      "trait": "Ghost",
+      "n": 7139,
+      "src": "hires/7139.webp",
+      "at_phrase": null,
+      "caption": "#7139"
+     },
+     {
+      "trait": "Verdigris",
+      "n": 8550,
+      "src": "hires/8550.webp",
+      "at_phrase": "Verdigris, green to teal",
+      "caption": "#8550 · Significant"
+     },
+     {
+      "trait": "Obsidian",
+      "n": 8394,
+      "src": "hires/8394.webp",
+      "at_phrase": "Obsidian, dark brown to",
+      "caption": "#8394 · Significant"
+     },
+     {
+      "trait": "Red",
+      "n": 9258,
+      "src": "hires/9258.webp",
+      "at_phrase": "Red, scarlet to russet",
+      "caption": "#9258 · Full"
+     },
+     {
+      "trait": "Gold",
+      "n": 5856,
+      "src": "hires/5856.webp",
+      "at_phrase": "Gold, honey gold to",
+      "caption": "#5856 · Notable"
+     },
+     {
+      "trait": "Orange",
+      "n": 9469,
+      "src": "hires/9469.webp",
+      "at_phrase": "Orange, given only to",
+      "caption": "#9469"
+     },
+     {
+      "trait": "Iridescent",
+      "n": 7713,
+      "src": "hires/7713.webp",
+      "at_phrase": "Iridescent, a copper surface",
+      "caption": "#7713 · 1 of 20"
+     },
+     {
+      "trait": "Corroded",
+      "n": 366,
+      "src": "hires/366.webp",
+      "at_phrase": "Corroded, oxidation that",
+      "caption": "#366"
+     },
+     {
+      "trait": "Lustrous",
+      "n": 830,
+      "src": "hires/830.webp",
+      "at_phrase": "Lustrous, original mint shine",
+      "caption": "#830"
+     },
+     {
+      "trait": "Striated",
+      "n": 1295,
+      "src": "hires/1295.webp",
+      "at_phrase": "Striated, parallel lines",
+      "caption": "#1295"
+     },
+     {
+      "trait": "Abraded",
+      "n": 8136,
+      "src": "hires/8136.webp",
+      "at_phrase": "Abraded, copper missing",
+      "caption": "#8136 · Heavily abraded"
+     },
+     {
+      "trait": "Faceless",
+      "n": 1965,
+      "src": "hires/1965.webp",
+      "at_phrase": "Faceless",
+      "caption": "#1965"
+     },
+     {
+      "trait": "Fingerprint",
+      "n": 508,
+      "src": "hires/508.webp",
+      "at_phrase": "Fingerprint, ridges clear",
+      "caption": "#508",
+      "zoom": {
+       "box": [
+        0.22,
+        0.1,
+        0.82,
+        0.7
+       ]
+      }
+     },
+     {
+      "trait": "White drips",
+      "n": 2654,
+      "src": "hires/2654.webp",
+      "at_phrase": "White drips and streaks",
+      "caption": "#2654"
+     },
+     {
+      "trait": "Contaminated",
+      "cents": [
+       372,
+       1399,
+       2387,
+       8899
+      ],
+      "at_phrase": "Contaminated, foreign matter",
+      "caption": "4 of 12 types"
+     },
+     {
+      "trait": "Assassin",
+      "n": 739,
+      "src": "hires/739.webp",
+      "at_phrase": "Assassin, one round mark",
+      "caption": "#739",
+      "zoom": {
+       "box": [
+        0.32,
+        0.2,
+        0.44,
+        0.32
+       ]
+      }
+     },
+     {
+      "trait": "Vandalized",
+      "n": 7745,
+      "src": "hires/7745.webp",
+      "at_phrase": "Vandalized, marks that show",
+      "caption": "#7745 · 1 of 26",
+      "zoom": {
+       "box": [
+        0.3,
+        0.17,
+        0.66,
+        0.52
+       ]
+      }
+     },
+     {
+      "trait": "Wheat",
+      "n": 3824,
+      "src": "hires/3824.webp",
+      "at_phrase": "And Wheat, struck",
+      "caption": "#3824 · 1956",
+      "zoom": {
+       "box": [
+        0.62,
+        0.58,
+        0.86,
+        0.71
+       ],
+       "at_phrase": "from nineteen fifty-six, the"
+      }
+     }
+    ],
+    "mode": "grid",
+    "lit_all": true
+   }
+  },
+  {
+   "shot_id": "s05_count",
+   "start": {
+    "at_phrase": "The Wall spans two wallets"
    },
    "end": {
     "at_phrase": "which puts it in the Quarter"
@@ -135,7 +975,7 @@
     "show": "grid",
     "moves": [
      {
-      "at_phrase": "Cents in two wallets",
+      "at_phrase": "The Wall spans two wallets",
       "until_phrase": "which puts it in the Quarter",
       "target": {
        "grid_end": true
@@ -143,23 +983,23 @@
      }
     ],
     "readout": {
-     "at_phrase": "The Wall holds forty-one",
+     "at_phrase": "The Wall spans two wallets",
      "count": {
       "from": 0,
       "to": 41,
-      "until_phrase": "from nineteen fifty-six to",
+      "until_phrase": "nineteen fifty-six to",
       "suffix": " Cents"
      }
     }
    }
   },
   {
-   "shot_id": "s03b_quarter",
+   "shot_id": "s05b_quarter",
    "start": {
     "at_phrase": "which puts it in the Quarter"
    },
    "end": {
-    "at_phrase": "One of them is a wheat"
+    "at_phrase": "It completes six Sets"
    },
    "purpose": "Quarter Club badge.",
    "visual_kind": "code",
@@ -179,14 +1019,14 @@
    }
   },
   {
-   "shot_id": "s04_wheat",
+   "shot_id": "s06_sets",
    "start": {
-    "at_phrase": "One of them is a wheat"
+    "at_phrase": "It completes six Sets"
    },
    "end": {
-    "at_phrase": "minted nineteen fifty-eight or"
+    "at_phrase": "all four base patinas"
    },
-   "purpose": "Wheat 1 badge.",
+   "purpose": "The Sets rows, then the Spectrum Set badge.",
    "visual_kind": "code",
    "component": "WallBoard",
    "props": {
@@ -194,316 +1034,7 @@
     "show": "card",
     "moves": [
      {
-      "at_phrase": "One of them is a wheat",
-      "target": {
-       "badge": "Wheat"
-      },
-      "mark": true
-     }
-    ]
-   }
-  },
-  {
-   "shot_id": "s04b_wheat_rows",
-   "start": {
-    "at_phrase": "minted nineteen fifty-eight or"
-   },
-   "end": {
-    "at_phrase": "with two ears of"
-   },
-   "purpose": "The wheat Cent #3824 in the rows.",
-   "visual_kind": "code",
-   "component": "WallBoard",
-   "props": {
-    "wall": "scrappyt",
-    "show": "grid",
-    "moves": [
-     {
-      "at_phrase": "minted nineteen fifty-eight or",
-      "target": {
-       "cent": 3824
-      },
-      "mark": true
-     }
-    ],
-    "highlights": [
-     {
-      "at_phrase": "minted nineteen fifty-eight or",
-      "group": "wheat"
-     }
-    ]
-   }
-  },
-  {
-   "shot_id": "s04c_flip",
-   "start": {
-    "at_phrase": "with two ears of"
-   },
-   "end": {
-    "at_phrase": "It is from nineteen fifty-six"
-   },
-   "purpose": "#3824 turns over to show the wheat reverse.",
-   "visual_kind": "code",
-   "component": "CentFlip",
-   "props": {
-    "title": "ScrappyT",
-    "n": 3824,
-    "front": "hires/3824.webp",
-    "back": "hires/3824_back.webp",
-    "flip_at": "two ears of wheat",
-    "readout": "Wheat",
-    "caption": "Two ears of wheat on the back"
-   }
-  },
-  {
-   "shot_id": "s04d_1956",
-   "start": {
-    "at_phrase": "It is from nineteen fifty-six"
-   },
-   "end": {
-    "at_phrase": "It holds three Cents"
-   },
-   "purpose": "#3824 zoomed onto its date (box checked on the 1050px front).",
-   "visual_kind": "code",
-   "component": "WallStandout",
-   "props": {
-    "title": "ScrappyT",
-    "n": 3824,
-    "readout": "1956",
-    "caption": "The earliest year on the Wall",
-    "src": "hires/3824.webp",
-    "zoom": {
-     "at_phrase": "from nineteen fifty-six, the",
-     "box": [
-      0.62,
-      0.58,
-      0.86,
-      0.71
-     ],
-     "mark": true
-    }
-   }
-  },
-  {
-   "shot_id": "s05_1971",
-   "start": {
-    "at_phrase": "It holds three Cents"
-   },
-   "end": {
-    "at_phrase": "for the nineteen seventy-one Club"
-   },
-   "purpose": "The three 1971 Cents ringed in the rows.",
-   "visual_kind": "code",
-   "component": "WallBoard",
-   "props": {
-    "wall": "scrappyt",
-    "show": "grid",
-    "moves": [
-     {
-      "at_phrase": "It holds three Cents",
-      "until_phrase": "for the nineteen seventy-one Club",
-      "target": {
-       "grid_end": true
-      }
-     }
-    ],
-    "highlights": [
-     {
-      "at_phrase": "It holds three Cents",
-      "group": "y1971"
-     }
-    ]
-   }
-  },
-  {
-   "shot_id": "s05b_club",
-   "start": {
-    "at_phrase": "for the nineteen seventy-one Club"
-   },
-   "end": {
-    "at_phrase": "Two of its Cents carry"
-   },
-   "purpose": "The '1971 3' badge.",
-   "visual_kind": "code",
-   "component": "WallBoard",
-   "props": {
-    "wall": "scrappyt",
-    "show": "card",
-    "moves": [
-     {
-      "at_phrase": "for the nineteen seventy-one Club",
-      "target": {
-       "badge": "1971"
-      },
-      "mark": true
-     }
-    ]
-   }
-  },
-  {
-   "shot_id": "s06_fulls",
-   "start": {
-    "at_phrase": "Two of its Cents carry"
-   },
-   "end": {
-    "at_phrase": "the full desert and"
-   },
-   "purpose": "Full x 2 badge.",
-   "visual_kind": "code",
-   "component": "WallBoard",
-   "props": {
-    "wall": "scrappyt",
-    "show": "card",
-    "moves": [
-     {
-      "at_phrase": "Two of its Cents carry",
-      "target": {
-       "badge": "Full x"
-      },
-      "mark": true
-     }
-    ]
-   }
-  },
-  {
-   "shot_id": "s06b_fulls",
-   "start": {
-    "at_phrase": "the full desert and"
-   },
-   "end": {
-    "at_phrase": "Two are Iridescent"
-   },
-   "purpose": "The two full-patina Cents, arriving as named.",
-   "visual_kind": "code",
-   "component": "CentRow",
-   "props": {
-    "title": "ScrappyT",
-    "subtitle": "Full x 2",
-    "cents": [
-     {
-      "n": 7139,
-      "patina": "desert",
-      "caption": "Full Desert · #7139",
-      "at_phrase": "the full desert and"
-     },
-     {
-      "n": 9258,
-      "patina": "red",
-      "caption": "Full Red · #9258",
-      "at_phrase": "and a full red"
-     }
-    ],
-    "cols": 2
-   }
-  },
-  {
-   "shot_id": "s07_irid",
-   "start": {
-    "at_phrase": "Two are Iridescent"
-   },
-   "end": {
-    "at_phrase": "a copper surface overlaid"
-   },
-   "purpose": "Iridescent x 2 badge.",
-   "visual_kind": "code",
-   "component": "WallBoard",
-   "props": {
-    "wall": "scrappyt",
-    "show": "card",
-    "moves": [
-     {
-      "at_phrase": "Two are Iridescent",
-      "target": {
-       "badge": "Iridescent"
-      },
-      "mark": true
-     }
-    ]
-   }
-  },
-  {
-   "shot_id": "s07b_irid",
-   "start": {
-    "at_phrase": "a copper surface overlaid"
-   },
-   "end": {
-    "at_phrase": "And two are Ghost"
-   },
-   "purpose": "The two Iridescent Cents.",
-   "visual_kind": "code",
-   "component": "CentRow",
-   "props": {
-    "title": "ScrappyT",
-    "subtitle": "Iridescent x 2",
-    "cents": [
-     {
-      "n": 2981,
-      "caption": "#2981",
-      "at_phrase": "a copper surface overlaid"
-     },
-     {
-      "n": 7713,
-      "caption": "#7713",
-      "at_phrase": "a copper surface overlaid"
-     }
-    ],
-    "cols": 2,
-    "labelsUnder": true
-   }
-  },
-  {
-   "shot_id": "s08_ghost",
-   "start": {
-    "at_phrase": "And two are Ghost"
-   },
-   "end": {
-    "at_phrase": "The Wall completes six"
-   },
-   "purpose": "The two Ghost Cents.",
-   "visual_kind": "code",
-   "component": "CentRow",
-   "props": {
-    "title": "ScrappyT",
-    "subtitle": "Ghost x 2",
-    "cents": [
-     {
-      "n": 7139,
-      "caption": "#7139",
-      "at_phrase": "And two are Ghost"
-     },
-     {
-      "n": 5448,
-      "caption": "#5448",
-      "at_phrase": "And two are Ghost"
-     }
-    ],
-    "cols": 2,
-    "labelsUnder": true
-   }
-  },
-  {
-   "shot_id": "s09_sets",
-   "start": {
-    "at_phrase": "The Wall completes six"
-   },
-   "end": {
-    "at_phrase": "a significant verdigris"
-   },
-   "purpose": "The card, then the Spectrum Set badge.",
-   "visual_kind": "code",
-   "component": "WallBoard",
-   "props": {
-    "wall": "scrappyt",
-    "show": "card",
-    "moves": [
-     {
-      "at_phrase": "The Wall completes six",
-      "target": {
-       "card": true
-      }
-     },
-     {
-      "at_phrase": "A Spectrum Set: a significant",
+      "at_phrase": "among them a Spectrum Set",
       "target": {
        "badge": "Spectrum"
       },
@@ -513,14 +1044,14 @@
    }
   },
   {
-   "shot_id": "s09b_spectrum",
+   "shot_id": "s06b_spectrum",
    "start": {
-    "at_phrase": "a significant verdigris"
+    "at_phrase": "all four base patinas"
    },
    "end": {
-    "at_phrase": "A Chronicle Set"
+    "at_phrase": "The Wall carries Diamond"
    },
-   "purpose": "Each Spectrum Cent alone as named, then the row; '1 of 15' collectors (16 Walls hold one; the artist wallet is excluded).",
+   "purpose": "The six patina Cents of the Spectrum Set; '1 of 15' collectors (16 Walls hold one; the artist wallet is excluded).",
    "visual_kind": "code",
    "component": "CentRow",
    "props": {
@@ -529,358 +1060,37 @@
     "cents": [
      {
       "n": 8550,
-      "patina": "verdigris",
-      "caption": "Significant Verdigris · #8550",
-      "at_phrase": "a significant verdigris",
       "src": "hires/8550.webp"
      },
      {
       "n": 8394,
-      "patina": "obsidian",
-      "caption": "Significant Obsidian · #8394",
-      "at_phrase": "a significant obsidian",
       "src": "hires/8394.webp"
      },
      {
       "n": 9258,
-      "patina": "red",
-      "caption": "Full Red · #9258",
-      "at_phrase": "a full red, a",
       "src": "hires/9258.webp"
      },
      {
       "n": 7139,
-      "patina": "desert",
-      "caption": "Full Desert · #7139",
-      "at_phrase": "a full desert, a",
       "src": "hires/7139.webp"
      },
      {
-      "n": 2981,
-      "patina": "gold",
-      "caption": "Notable Gold · #2981",
-      "at_phrase": "a notable gold",
-      "src": "hires/2981.webp"
+      "n": 5856,
+      "src": "hires/5856.webp"
      },
      {
       "n": 9469,
-      "patina": "orange",
-      "caption": "Orange · #9469",
-      "at_phrase": "and an orange",
       "src": "hires/9469.webp"
      }
     ],
-    "solo_until": "Notable means clearly",
     "readout": "1 of 15",
-    "caption": "collectors with this Set",
-    "readout_at": "one of only fifteen collectors"
+    "caption": "collectors who hold a Spectrum Set",
+    "readout_at": "one of only fifteen collectors",
+    "cols": 3
    }
   },
   {
-   "shot_id": "s10_chron",
-   "start": {
-    "at_phrase": "A Chronicle Set"
-   },
-   "end": {
-    "at_phrase": "a Cent from nineteen seventy-one, from"
-   },
-   "purpose": "Chronicle Set badge.",
-   "visual_kind": "code",
-   "component": "WallBoard",
-   "props": {
-    "wall": "scrappyt",
-    "show": "card",
-    "moves": [
-     {
-      "at_phrase": "A Chronicle Set",
-      "target": {
-       "badge": "Chronicle"
-      },
-      "mark": true
-     }
-    ]
-   }
-  },
-  {
-   "shot_id": "s10b_chron",
-   "start": {
-    "at_phrase": "a Cent from nineteen seventy-one, from"
-   },
-   "end": {
-    "at_phrase": "A Full Mint Set"
-   },
-   "purpose": "Chronicle Set: one Cent from each year.",
-   "visual_kind": "code",
-   "component": "CentRow",
-   "props": {
-    "title": "ScrappyT",
-    "subtitle": "Chronicle Set",
-    "cents": [
-     {
-      "n": 366,
-      "caption": "1971",
-      "at_phrase": "a Cent from nineteen seventy-one, from"
-     },
-     {
-      "n": 1965,
-      "caption": "1979",
-      "at_phrase": "from nineteen seventy-nine and"
-     },
-     {
-      "n": 372,
-      "caption": "1982",
-      "at_phrase": "and from nineteen eighty-two"
-     }
-    ],
-    "cols": 3,
-    "labelsUnder": true
-   }
-  },
-  {
-   "shot_id": "s11_mint",
-   "start": {
-    "at_phrase": "A Full Mint Set"
-   },
-   "end": {
-    "at_phrase": "an S mint, a D"
-   },
-   "purpose": "Full Mint Set badge.",
-   "visual_kind": "code",
-   "component": "WallBoard",
-   "props": {
-    "wall": "scrappyt",
-    "show": "card",
-    "moves": [
-     {
-      "at_phrase": "A Full Mint Set",
-      "target": {
-       "badge": "Full Mint"
-      },
-      "mark": true
-     }
-    ]
-   }
-  },
-  {
-   "shot_id": "s11b_mint",
-   "start": {
-    "at_phrase": "an S mint, a D"
-   },
-   "end": {
-    "at_phrase": "A Contamination Set"
-   },
-   "purpose": "Full Mint Set: an S, a D and a no-mint-mark Cent.",
-   "visual_kind": "code",
-   "component": "CentRow",
-   "props": {
-    "title": "ScrappyT",
-    "subtitle": "Full Mint Set",
-    "cents": [
-     {
-      "n": 2446,
-      "caption": "1974-S",
-      "at_phrase": "an S mint, a D"
-     },
-     {
-      "n": 7713,
-      "caption": "1973-D",
-      "at_phrase": "a D mint and"
-     },
-     {
-      "n": 7139,
-      "caption": "1967",
-      "at_phrase": "a Cent with no mint"
-     }
-    ],
-    "cols": 3,
-    "labelsUnder": true
-   }
-  },
-  {
-   "shot_id": "s12_cont",
-   "start": {
-    "at_phrase": "A Contamination Set"
-   },
-   "end": {
-    "at_phrase": "special oddities"
-   },
-   "purpose": "Contamination Set (4/12) badge.",
-   "visual_kind": "code",
-   "component": "WallBoard",
-   "props": {
-    "wall": "scrappyt",
-    "show": "card",
-    "moves": [
-     {
-      "at_phrase": "A Contamination Set",
-      "target": {
-       "badge": "Contamination Set"
-      },
-      "mark": true
-     }
-    ]
-   }
-  },
-  {
-   "shot_id": "s12b_cont",
-   "start": {
-    "at_phrase": "special oddities"
-   },
-   "end": {
-    "at_phrase": "and a nineteen eighties Set"
-   },
-   "purpose": "One Cent per contamination type, alone as named, then the row.",
-   "visual_kind": "code",
-   "component": "CentRow",
-   "props": {
-    "title": "ScrappyT",
-    "subtitle": "Contamination Set (4/12)",
-    "cents": [
-     {
-      "n": 372,
-      "caption": "Special Oddities · #372",
-      "at_phrase": "special oddities",
-      "src": "hires/372.webp"
-     },
-     {
-      "n": 1399,
-      "caption": "Obscure Adhesive · #1399",
-      "at_phrase": "obscure adhesive",
-      "src": "hires/1399.webp"
-     },
-     {
-      "n": 2387,
-      "caption": "Speckles · #2387",
-      "at_phrase": "speckles",
-      "src": "hires/2387.webp"
-     },
-     {
-      "n": 8899,
-      "caption": "Alien Secretion · #8899",
-      "at_phrase": "alien secretion",
-      "src": "hires/8899.webp"
-     }
-    ],
-    "solo_until": "And a nineteen seventies",
-    "cols": 2
-   }
-  },
-  {
-   "shot_id": "s13_decades",
-   "start": {
-    "at_phrase": "and a nineteen eighties Set"
-   },
-   "end": {
-    "at_phrase": "every mint year from"
-   },
-   "purpose": "1970s Set and 1980s Set badges together (box from layoutWall: 1970s [582,574,719,616], 1980s [729,574,866,616]). The Contamination row gathers over 'And a 1970s Set', so this shot starts one beat later.",
-   "visual_kind": "code",
-   "component": "WallBoard",
-   "props": {
-    "wall": "scrappyt",
-    "show": "card",
-    "moves": [
-     {
-      "at_phrase": "and a nineteen eighties Set",
-      "target": {
-       "box": [
-        572,
-        564,
-        876,
-        626
-       ]
-      },
-      "mark": true
-     }
-    ]
-   }
-  },
-  {
-   "shot_id": "s13b_decades",
-   "start": {
-    "at_phrase": "every mint year from"
-   },
-   "end": {
-    "at_phrase": "The Wall carries Diamond"
-   },
-   "purpose": "One Cent for every year 1970-1982.",
-   "visual_kind": "code",
-   "component": "CentRow",
-   "props": {
-    "title": "ScrappyT",
-    "subtitle": "1970s Set · 1980s Set",
-    "cents": [
-     {
-      "n": 3838,
-      "caption": "1970",
-      "at_phrase": "every mint year from"
-     },
-     {
-      "n": 366,
-      "caption": "1971",
-      "at_phrase": "every mint year from"
-     },
-     {
-      "n": 4948,
-      "caption": "1972",
-      "at_phrase": "every mint year from"
-     },
-     {
-      "n": 1399,
-      "caption": "1973",
-      "at_phrase": "every mint year from"
-     },
-     {
-      "n": 2981,
-      "caption": "1974",
-      "at_phrase": "every mint year from"
-     },
-     {
-      "n": 830,
-      "caption": "1975",
-      "at_phrase": "every mint year from"
-     },
-     {
-      "n": 7599,
-      "caption": "1976",
-      "at_phrase": "every mint year from"
-     },
-     {
-      "n": 2387,
-      "caption": "1977",
-      "at_phrase": "every mint year from"
-     },
-     {
-      "n": 5430,
-      "caption": "1978",
-      "at_phrase": "every mint year from"
-     },
-     {
-      "n": 1965,
-      "caption": "1979",
-      "at_phrase": "every mint year from"
-     },
-     {
-      "n": 3815,
-      "caption": "1980",
-      "at_phrase": "every mint year from"
-     },
-     {
-      "n": 1295,
-      "caption": "1981",
-      "at_phrase": "every mint year from"
-     },
-     {
-      "n": 372,
-      "caption": "1982",
-      "at_phrase": "every mint year from"
-     }
-    ],
-    "labelsUnder": true
-   }
-  },
-  {
-   "shot_id": "s14_diamond",
+   "shot_id": "s07_diamond",
    "start": {
     "at_phrase": "The Wall carries Diamond"
    },
@@ -905,7 +1115,7 @@
    }
   },
   {
-   "shot_id": "s15_keeper",
+   "shot_id": "s08_keeper",
    "start": {
     "at_phrase": "And it is a Mint"
    },
@@ -930,7 +1140,7 @@
    }
   },
   {
-   "shot_id": "s15b_keeper",
+   "shot_id": "s08b_keeper",
    "start": {
     "at_phrase": "minted four of its"
    },
@@ -961,7 +1171,7 @@
    }
   },
   {
-   "shot_id": "s16_collectors",
+   "shot_id": "s09_collectors",
    "start": {
     "at_phrase": "Find all of the Collector"
    },
