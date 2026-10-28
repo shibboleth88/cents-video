@@ -1,0 +1,6626 @@
+{
+ "source": "cents.vision snapshot 2026-10-27T16:33Z; pipeline/stories.py (cents-video PR #23)",
+ "generated": "2026-10-28",
+ "notes": [
+  "oldest_of: earliest-dated Cent of that trait/grade/contamination type; tied_with>0 means others share the year",
+  "unique_trait_profile: no other Cent has exactly this set of graded traits + contamination types; broader than the site 1/1 Trait Combo (a unique pair)",
+  "still_with_minter: from cents.vision mint_keeper.json, artist wallet excluded (all 1000 of its Cents are minted there); changes daily",
+  "no wallet addresses; no rare sats"
+ ],
+ "cents": {
+  "12": {
+   "still_with_minter": true
+  },
+  "13": {
+   "still_with_minter": true
+  },
+  "15": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "18": {
+   "still_with_minter": true
+  },
+  "25": {
+   "still_with_minter": true
+  },
+  "27": {
+   "still_with_minter": true
+  },
+  "29": {
+   "still_with_minter": true
+  },
+  "34": {
+   "still_with_minter": true
+  },
+  "46": {
+   "still_with_minter": true
+  },
+  "49": {
+   "oldest_of": [
+    {
+     "value": "abraded",
+     "pool": 516,
+     "tied_with": 0
+    },
+    {
+     "value": "notable abraded",
+     "pool": 472,
+     "tied_with": 0
+    }
+   ]
+  },
+  "51": {
+   "still_with_minter": true
+  },
+  "65": {
+   "still_with_minter": true
+  },
+  "69": {
+   "still_with_minter": true
+  },
+  "70": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "72": {
+   "still_with_minter": true
+  },
+  "88": {
+   "still_with_minter": true
+  },
+  "89": {
+   "still_with_minter": true
+  },
+  "92": {
+   "still_with_minter": true
+  },
+  "98": {
+   "still_with_minter": true
+  },
+  "105": {
+   "still_with_minter": true
+  },
+  "111": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "116": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "124": {
+   "still_with_minter": true
+  },
+  "145": {
+   "still_with_minter": true
+  },
+  "152": {
+   "still_with_minter": true
+  },
+  "156": {
+   "still_with_minter": true
+  },
+  "164": {
+   "still_with_minter": true
+  },
+  "167": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "181": {
+   "still_with_minter": true
+  },
+  "187": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "191": {
+   "still_with_minter": true
+  },
+  "193": {
+   "still_with_minter": true
+  },
+  "218": {
+   "still_with_minter": true
+  },
+  "219": {
+   "oldest_of": [
+    {
+     "value": "iridescent",
+     "pool": 20,
+     "tied_with": 0
+    }
+   ],
+   "still_with_minter": true
+  },
+  "222": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": true
+  },
+  "223": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": true
+  },
+  "238": {
+   "still_with_minter": true
+  },
+  "251": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "263": {
+   "oldest_of": [
+    {
+     "value": "lustrous",
+     "pool": 150,
+     "tied_with": 2
+    }
+   ]
+  },
+  "273": {
+   "still_with_minter": true
+  },
+  "286": {
+   "still_with_minter": true
+  },
+  "294": {
+   "still_with_minter": true
+  },
+  "302": {
+   "inscription_rank_from_last": 7
+  },
+  "308": {
+   "still_with_minter": true
+  },
+  "316": {
+   "still_with_minter": true
+  },
+  "321": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "322": {
+   "still_with_minter": true
+  },
+  "323": {
+   "still_with_minter": true
+  },
+  "325": {
+   "still_with_minter": true
+  },
+  "327": {
+   "still_with_minter": true
+  },
+  "332": {
+   "still_with_minter": true
+  },
+  "334": {
+   "still_with_minter": true
+  },
+  "337": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "338": {
+   "still_with_minter": true
+  },
+  "339": {
+   "still_with_minter": true
+  },
+  "349": {
+   "still_with_minter": true
+  },
+  "360": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "363": {
+   "still_with_minter": true
+  },
+  "366": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "369": {
+   "still_with_minter": true
+  },
+  "370": {
+   "oldest_of": [
+    {
+     "value": "fingerprint",
+     "pool": 224,
+     "tied_with": 1
+    }
+   ]
+  },
+  "372": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "374": {
+   "still_with_minter": true
+  },
+  "378": {
+   "still_with_minter": true
+  },
+  "380": {
+   "still_with_minter": true
+  },
+  "389": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "390": {
+   "still_with_minter": true
+  },
+  "407": {
+   "still_with_minter": true
+  },
+  "414": {
+   "still_with_minter": true
+  },
+  "419": {
+   "still_with_minter": true
+  },
+  "421": {
+   "still_with_minter": true
+  },
+  "423": {
+   "still_with_minter": true
+  },
+  "425": {
+   "still_with_minter": true
+  },
+  "426": {
+   "still_with_minter": true
+  },
+  "427": {
+   "still_with_minter": true
+  },
+  "434": {
+   "still_with_minter": true
+  },
+  "435": {
+   "still_with_minter": true
+  },
+  "436": {
+   "still_with_minter": true
+  },
+  "440": {
+   "still_with_minter": true
+  },
+  "446": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "460": {
+   "still_with_minter": true
+  },
+  "472": {
+   "still_with_minter": true
+  },
+  "473": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "476": {
+   "still_with_minter": true
+  },
+  "478": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "481": {
+   "still_with_minter": true
+  },
+  "487": {
+   "still_with_minter": true
+  },
+  "488": {
+   "still_with_minter": true
+  },
+  "494": {
+   "still_with_minter": true
+  },
+  "495": {
+   "still_with_minter": true
+  },
+  "501": {
+   "still_with_minter": true
+  },
+  "509": {
+   "still_with_minter": true
+  },
+  "512": {
+   "still_with_minter": true
+  },
+  "514": {
+   "oldest_of": [
+    {
+     "value": "contamination Alien Secretion",
+     "pool": 79,
+     "tied_with": 1
+    }
+   ]
+  },
+  "517": {
+   "still_with_minter": true
+  },
+  "518": {
+   "still_with_minter": true
+  },
+  "521": {
+   "still_with_minter": true
+  },
+  "522": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "537": {
+   "still_with_minter": true
+  },
+  "546": {
+   "still_with_minter": true
+  },
+  "553": {
+   "still_with_minter": true
+  },
+  "561": {
+   "still_with_minter": true
+  },
+  "562": {
+   "still_with_minter": true
+  },
+  "565": {
+   "still_with_minter": true
+  },
+  "566": {
+   "still_with_minter": true
+  },
+  "571": {
+   "still_with_minter": true
+  },
+  "576": {
+   "still_with_minter": true
+  },
+  "577": {
+   "still_with_minter": true
+  },
+  "578": {
+   "still_with_minter": true
+  },
+  "579": {
+   "still_with_minter": true
+  },
+  "585": {
+   "still_with_minter": true
+  },
+  "587": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "590": {
+   "still_with_minter": true
+  },
+  "598": {
+   "still_with_minter": true
+  },
+  "601": {
+   "still_with_minter": true
+  },
+  "613": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "615": {
+   "still_with_minter": true
+  },
+  "621": {
+   "still_with_minter": true
+  },
+  "627": {
+   "still_with_minter": true
+  },
+  "628": {
+   "still_with_minter": true
+  },
+  "636": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "647": {
+   "still_with_minter": true
+  },
+  "648": {
+   "still_with_minter": true
+  },
+  "651": {
+   "still_with_minter": true
+  },
+  "652": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "654": {
+   "still_with_minter": true
+  },
+  "659": {
+   "still_with_minter": true
+  },
+  "669": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "673": {
+   "still_with_minter": true
+  },
+  "675": {
+   "still_with_minter": true
+  },
+  "682": {
+   "still_with_minter": true
+  },
+  "688": {
+   "still_with_minter": true
+  },
+  "690": {
+   "still_with_minter": true
+  },
+  "694": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "698": {
+   "still_with_minter": true
+  },
+  "699": {
+   "still_with_minter": true
+  },
+  "704": {
+   "still_with_minter": true
+  },
+  "708": {
+   "still_with_minter": true
+  },
+  "713": {
+   "still_with_minter": true
+  },
+  "717": {
+   "still_with_minter": true
+  },
+  "724": {
+   "still_with_minter": true
+  },
+  "729": {
+   "still_with_minter": true
+  },
+  "739": {
+   "oldest_of": [
+    {
+     "value": "assassin",
+     "pool": 42,
+     "tied_with": 1
+    }
+   ]
+  },
+  "744": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "760": {
+   "still_with_minter": true
+  },
+  "765": {
+   "still_with_minter": true
+  },
+  "774": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "778": {
+   "still_with_minter": true
+  },
+  "781": {
+   "still_with_minter": true
+  },
+  "790": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "794": {
+   "oldest_of": [
+    {
+     "value": "notable desert",
+     "pool": 448,
+     "tied_with": 0
+    },
+    {
+     "value": "contamination Paint",
+     "pool": 145,
+     "tied_with": 0
+    }
+   ]
+  },
+  "800": {
+   "still_with_minter": true
+  },
+  "801": {
+   "still_with_minter": true
+  },
+  "814": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "820": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "828": {
+   "still_with_minter": true
+  },
+  "845": {
+   "still_with_minter": true
+  },
+  "848": {
+   "still_with_minter": true
+  },
+  "860": {
+   "still_with_minter": true
+  },
+  "876": {
+   "still_with_minter": true
+  },
+  "879": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "882": {
+   "still_with_minter": true
+  },
+  "888": {
+   "still_with_minter": true
+  },
+  "893": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "894": {
+   "inscription_rank": 9
+  },
+  "895": {
+   "still_with_minter": true
+  },
+  "896": {
+   "still_with_minter": true
+  },
+  "916": {
+   "still_with_minter": true
+  },
+  "917": {
+   "still_with_minter": true
+  },
+  "921": {
+   "still_with_minter": true
+  },
+  "925": {
+   "still_with_minter": true
+  },
+  "928": {
+   "still_with_minter": true
+  },
+  "932": {
+   "still_with_minter": true
+  },
+  "939": {
+   "still_with_minter": true
+  },
+  "950": {
+   "still_with_minter": true
+  },
+  "957": {
+   "oldest_of": [
+    {
+     "value": "striated",
+     "pool": 498,
+     "tied_with": 1
+    }
+   ]
+  },
+  "958": {
+   "still_with_minter": true
+  },
+  "960": {
+   "still_with_minter": true
+  },
+  "962": {
+   "still_with_minter": true
+  },
+  "963": {
+   "still_with_minter": true
+  },
+  "967": {
+   "still_with_minter": true
+  },
+  "975": {
+   "still_with_minter": true
+  },
+  "977": {
+   "still_with_minter": true
+  },
+  "981": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "985": {
+   "still_with_minter": true
+  },
+  "994": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "996": {
+   "still_with_minter": true
+  },
+  "1000": {
+   "still_with_minter": true
+  },
+  "1008": {
+   "still_with_minter": true
+  },
+  "1020": {
+   "still_with_minter": true
+  },
+  "1031": {
+   "still_with_minter": true
+  },
+  "1032": {
+   "still_with_minter": true
+  },
+  "1040": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "1044": {
+   "still_with_minter": true
+  },
+  "1047": {
+   "still_with_minter": true
+  },
+  "1050": {
+   "still_with_minter": true
+  },
+  "1051": {
+   "still_with_minter": true
+  },
+  "1055": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "1061": {
+   "still_with_minter": true
+  },
+  "1064": {
+   "still_with_minter": true
+  },
+  "1072": {
+   "still_with_minter": true
+  },
+  "1079": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": true
+  },
+  "1080": {
+   "still_with_minter": true
+  },
+  "1103": {
+   "still_with_minter": true
+  },
+  "1106": {
+   "still_with_minter": true
+  },
+  "1119": {
+   "still_with_minter": true
+  },
+  "1123": {
+   "still_with_minter": true
+  },
+  "1138": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "1161": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "1164": {
+   "still_with_minter": true
+  },
+  "1165": {
+   "still_with_minter": true
+  },
+  "1166": {
+   "still_with_minter": true
+  },
+  "1169": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "1170": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "1176": {
+   "still_with_minter": true
+  },
+  "1179": {
+   "still_with_minter": true
+  },
+  "1182": {
+   "still_with_minter": true
+  },
+  "1185": {
+   "still_with_minter": true
+  },
+  "1186": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "1195": {
+   "still_with_minter": true
+  },
+  "1198": {
+   "still_with_minter": true
+  },
+  "1202": {
+   "still_with_minter": true
+  },
+  "1203": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "1204": {
+   "still_with_minter": true
+  },
+  "1220": {
+   "still_with_minter": true
+  },
+  "1231": {
+   "inscription_rank": 3
+  },
+  "1237": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "1242": {
+   "still_with_minter": true
+  },
+  "1244": {
+   "still_with_minter": true
+  },
+  "1264": {
+   "oldest_of": [
+    {
+     "value": "gold",
+     "pool": 69,
+     "tied_with": 0
+    },
+    {
+     "value": "notable gold",
+     "pool": 60,
+     "tied_with": 0
+    }
+   ],
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "1268": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "1270": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "1274": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "1276": {
+   "still_with_minter": true
+  },
+  "1285": {
+   "still_with_minter": true
+  },
+  "1286": {
+   "still_with_minter": true
+  },
+  "1296": {
+   "still_with_minter": true
+  },
+  "1298": {
+   "still_with_minter": true
+  },
+  "1308": {
+   "still_with_minter": true
+  },
+  "1311": {
+   "still_with_minter": true
+  },
+  "1312": {
+   "still_with_minter": true
+  },
+  "1314": {
+   "still_with_minter": true
+  },
+  "1319": {
+   "still_with_minter": true
+  },
+  "1320": {
+   "still_with_minter": true
+  },
+  "1324": {
+   "still_with_minter": true
+  },
+  "1328": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "1333": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "1335": {
+   "oldest_of": [
+    {
+     "value": "lustrous",
+     "pool": 150,
+     "tied_with": 2
+    }
+   ]
+  },
+  "1336": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "1345": {
+   "still_with_minter": true
+  },
+  "1346": {
+   "still_with_minter": true
+  },
+  "1347": {
+   "still_with_minter": true
+  },
+  "1348": {
+   "still_with_minter": true
+  },
+  "1357": {
+   "still_with_minter": true
+  },
+  "1365": {
+   "still_with_minter": true
+  },
+  "1375": {
+   "still_with_minter": true
+  },
+  "1377": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "1381": {
+   "still_with_minter": true
+  },
+  "1394": {
+   "still_with_minter": true
+  },
+  "1399": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "1404": {
+   "still_with_minter": true
+  },
+  "1419": {
+   "still_with_minter": true
+  },
+  "1421": {
+   "still_with_minter": true
+  },
+  "1426": {
+   "still_with_minter": true
+  },
+  "1432": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "1434": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "1444": {
+   "still_with_minter": true
+  },
+  "1445": {
+   "still_with_minter": true
+  },
+  "1463": {
+   "still_with_minter": true
+  },
+  "1464": {
+   "still_with_minter": true
+  },
+  "1465": {
+   "still_with_minter": true
+  },
+  "1472": {
+   "still_with_minter": true
+  },
+  "1474": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "1475": {
+   "still_with_minter": true
+  },
+  "1486": {
+   "still_with_minter": true
+  },
+  "1510": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "1511": {
+   "oldest_of": [
+    {
+     "value": "full obsidian",
+     "pool": 38,
+     "tied_with": 0
+    }
+   ]
+  },
+  "1512": {
+   "still_with_minter": true
+  },
+  "1514": {
+   "still_with_minter": true
+  },
+  "1516": {
+   "still_with_minter": true
+  },
+  "1518": {
+   "still_with_minter": true
+  },
+  "1519": {
+   "still_with_minter": true
+  },
+  "1523": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": true
+  },
+  "1527": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "1549": {
+   "still_with_minter": true
+  },
+  "1553": {
+   "still_with_minter": true
+  },
+  "1558": {
+   "still_with_minter": true
+  },
+  "1567": {
+   "still_with_minter": true
+  },
+  "1568": {
+   "still_with_minter": true
+  },
+  "1576": {
+   "oldest_of": [
+    {
+     "value": "contamination Scotch Tape",
+     "pool": 7,
+     "tied_with": 0
+    }
+   ]
+  },
+  "1580": {
+   "still_with_minter": true
+  },
+  "1583": {
+   "still_with_minter": true
+  },
+  "1584": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "1586": {
+   "still_with_minter": true
+  },
+  "1601": {
+   "still_with_minter": true
+  },
+  "1605": {
+   "still_with_minter": true
+  },
+  "1607": {
+   "still_with_minter": true
+  },
+  "1613": {
+   "still_with_minter": true
+  },
+  "1615": {
+   "still_with_minter": true
+  },
+  "1620": {
+   "still_with_minter": true
+  },
+  "1622": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "1625": {
+   "still_with_minter": true
+  },
+  "1629": {
+   "still_with_minter": true
+  },
+  "1630": {
+   "inscription_rank_from_last": 8
+  },
+  "1637": {
+   "still_with_minter": true
+  },
+  "1643": {
+   "still_with_minter": true
+  },
+  "1648": {
+   "still_with_minter": true
+  },
+  "1650": {
+   "still_with_minter": true
+  },
+  "1651": {
+   "still_with_minter": true
+  },
+  "1653": {
+   "still_with_minter": true
+  },
+  "1657": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "1666": {
+   "still_with_minter": true
+  },
+  "1671": {
+   "still_with_minter": true
+  },
+  "1681": {
+   "still_with_minter": true
+  },
+  "1682": {
+   "still_with_minter": true
+  },
+  "1687": {
+   "still_with_minter": true
+  },
+  "1704": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "1706": {
+   "still_with_minter": true
+  },
+  "1716": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "1717": {
+   "still_with_minter": true
+  },
+  "1722": {
+   "still_with_minter": true
+  },
+  "1730": {
+   "still_with_minter": true
+  },
+  "1732": {
+   "still_with_minter": true
+  },
+  "1734": {
+   "still_with_minter": true
+  },
+  "1737": {
+   "still_with_minter": true
+  },
+  "1738": {
+   "still_with_minter": true
+  },
+  "1741": {
+   "still_with_minter": true
+  },
+  "1745": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "1747": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "1750": {
+   "still_with_minter": true
+  },
+  "1758": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "1763": {
+   "still_with_minter": true
+  },
+  "1767": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": true
+  },
+  "1785": {
+   "still_with_minter": true
+  },
+  "1794": {
+   "still_with_minter": true
+  },
+  "1800": {
+   "still_with_minter": true
+  },
+  "1805": {
+   "inscription_rank_from_last": 2
+  },
+  "1807": {
+   "still_with_minter": true
+  },
+  "1808": {
+   "still_with_minter": true
+  },
+  "1809": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "1810": {
+   "still_with_minter": true
+  },
+  "1813": {
+   "still_with_minter": true
+  },
+  "1819": {
+   "still_with_minter": true
+  },
+  "1820": {
+   "still_with_minter": true
+  },
+  "1821": {
+   "still_with_minter": true
+  },
+  "1823": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "1838": {
+   "still_with_minter": true
+  },
+  "1848": {
+   "still_with_minter": true
+  },
+  "1852": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "1864": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": true,
+   "still_with_minter": true
+  },
+  "1866": {
+   "still_with_minter": true
+  },
+  "1867": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "1868": {
+   "still_with_minter": true
+  },
+  "1870": {
+   "still_with_minter": true
+  },
+  "1879": {
+   "still_with_minter": true
+  },
+  "1896": {
+   "still_with_minter": true
+  },
+  "1905": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "1906": {
+   "still_with_minter": true
+  },
+  "1912": {
+   "still_with_minter": true
+  },
+  "1923": {
+   "still_with_minter": true
+  },
+  "1924": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": true
+  },
+  "1926": {
+   "oldest_of": [
+    {
+     "value": "full verdigris",
+     "pool": 15,
+     "tied_with": 0
+    }
+   ],
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "1927": {
+   "still_with_minter": true
+  },
+  "1928": {
+   "still_with_minter": true
+  },
+  "1935": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "1938": {
+   "still_with_minter": true
+  },
+  "1943": {
+   "still_with_minter": true
+  },
+  "1959": {
+   "still_with_minter": true
+  },
+  "1962": {
+   "still_with_minter": true
+  },
+  "1968": {
+   "still_with_minter": true
+  },
+  "1973": {
+   "still_with_minter": true
+  },
+  "1976": {
+   "still_with_minter": true
+  },
+  "1980": {
+   "still_with_minter": true
+  },
+  "1981": {
+   "still_with_minter": true
+  },
+  "1982": {
+   "still_with_minter": true
+  },
+  "1985": {
+   "still_with_minter": true
+  },
+  "1987": {
+   "still_with_minter": true
+  },
+  "1988": {
+   "still_with_minter": true
+  },
+  "1990": {
+   "still_with_minter": true
+  },
+  "1992": {
+   "still_with_minter": true
+  },
+  "2004": {
+   "still_with_minter": true
+  },
+  "2008": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "2009": {
+   "still_with_minter": true
+  },
+  "2011": {
+   "still_with_minter": true
+  },
+  "2016": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "2023": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "2026": {
+   "still_with_minter": true
+  },
+  "2028": {
+   "still_with_minter": true
+  },
+  "2031": {
+   "still_with_minter": true
+  },
+  "2032": {
+   "still_with_minter": true
+  },
+  "2036": {
+   "still_with_minter": true
+  },
+  "2038": {
+   "still_with_minter": true
+  },
+  "2044": {
+   "still_with_minter": true
+  },
+  "2047": {
+   "still_with_minter": true
+  },
+  "2048": {
+   "still_with_minter": true
+  },
+  "2053": {
+   "still_with_minter": true
+  },
+  "2055": {
+   "still_with_minter": true
+  },
+  "2072": {
+   "still_with_minter": true
+  },
+  "2093": {
+   "still_with_minter": true
+  },
+  "2106": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "2112": {
+   "still_with_minter": true
+  },
+  "2113": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "2117": {
+   "still_with_minter": true
+  },
+  "2122": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "2127": {
+   "still_with_minter": true
+  },
+  "2137": {
+   "still_with_minter": true
+  },
+  "2139": {
+   "still_with_minter": true
+  },
+  "2159": {
+   "still_with_minter": true
+  },
+  "2168": {
+   "still_with_minter": true
+  },
+  "2169": {
+   "still_with_minter": true
+  },
+  "2176": {
+   "still_with_minter": true
+  },
+  "2189": {
+   "still_with_minter": true
+  },
+  "2199": {
+   "still_with_minter": true
+  },
+  "2200": {
+   "still_with_minter": true
+  },
+  "2202": {
+   "still_with_minter": true
+  },
+  "2210": {
+   "still_with_minter": true
+  },
+  "2219": {
+   "still_with_minter": true
+  },
+  "2225": {
+   "still_with_minter": true
+  },
+  "2226": {
+   "still_with_minter": true
+  },
+  "2241": {
+   "still_with_minter": true
+  },
+  "2250": {
+   "still_with_minter": true
+  },
+  "2256": {
+   "still_with_minter": true
+  },
+  "2257": {
+   "still_with_minter": true
+  },
+  "2264": {
+   "still_with_minter": true
+  },
+  "2270": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "2271": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "2272": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "2274": {
+   "oldest_of": [
+    {
+     "value": "contamination Sea Salt",
+     "pool": 49,
+     "tied_with": 0
+    }
+   ],
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": true
+  },
+  "2279": {
+   "still_with_minter": true
+  },
+  "2282": {
+   "still_with_minter": true
+  },
+  "2283": {
+   "still_with_minter": true
+  },
+  "2288": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "2293": {
+   "still_with_minter": true
+  },
+  "2294": {
+   "still_with_minter": true
+  },
+  "2297": {
+   "still_with_minter": true
+  },
+  "2305": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "2308": {
+   "still_with_minter": true
+  },
+  "2313": {
+   "still_with_minter": true
+  },
+  "2314": {
+   "still_with_minter": true
+  },
+  "2331": {
+   "still_with_minter": true
+  },
+  "2332": {
+   "still_with_minter": true
+  },
+  "2334": {
+   "still_with_minter": true
+  },
+  "2335": {
+   "still_with_minter": true
+  },
+  "2341": {
+   "still_with_minter": true
+  },
+  "2357": {
+   "still_with_minter": true
+  },
+  "2375": {
+   "still_with_minter": true
+  },
+  "2394": {
+   "still_with_minter": true
+  },
+  "2397": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "2398": {
+   "still_with_minter": true
+  },
+  "2402": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "2419": {
+   "still_with_minter": true
+  },
+  "2426": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "2429": {
+   "still_with_minter": true
+  },
+  "2436": {
+   "still_with_minter": true
+  },
+  "2439": {
+   "still_with_minter": true
+  },
+  "2442": {
+   "still_with_minter": true
+  },
+  "2443": {
+   "still_with_minter": true
+  },
+  "2457": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "2472": {
+   "still_with_minter": true
+  },
+  "2473": {
+   "still_with_minter": true
+  },
+  "2477": {
+   "still_with_minter": true
+  },
+  "2478": {
+   "still_with_minter": true
+  },
+  "2482": {
+   "still_with_minter": true
+  },
+  "2486": {
+   "still_with_minter": true
+  },
+  "2492": {
+   "still_with_minter": true
+  },
+  "2495": {
+   "still_with_minter": true
+  },
+  "2498": {
+   "still_with_minter": true
+  },
+  "2506": {
+   "still_with_minter": true
+  },
+  "2516": {
+   "still_with_minter": true
+  },
+  "2520": {
+   "still_with_minter": true
+  },
+  "2522": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "2538": {
+   "still_with_minter": true
+  },
+  "2539": {
+   "still_with_minter": true
+  },
+  "2541": {
+   "still_with_minter": true
+  },
+  "2549": {
+   "still_with_minter": true
+  },
+  "2551": {
+   "still_with_minter": true
+  },
+  "2559": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "2560": {
+   "still_with_minter": true
+  },
+  "2561": {
+   "still_with_minter": true
+  },
+  "2566": {
+   "still_with_minter": true
+  },
+  "2568": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": true,
+   "still_with_minter": true
+  },
+  "2570": {
+   "still_with_minter": true
+  },
+  "2571": {
+   "still_with_minter": true
+  },
+  "2572": {
+   "still_with_minter": true
+  },
+  "2574": {
+   "still_with_minter": true
+  },
+  "2580": {
+   "still_with_minter": true
+  },
+  "2583": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "2592": {
+   "still_with_minter": true
+  },
+  "2594": {
+   "still_with_minter": true
+  },
+  "2597": {
+   "still_with_minter": true
+  },
+  "2602": {
+   "still_with_minter": true
+  },
+  "2604": {
+   "still_with_minter": true
+  },
+  "2615": {
+   "still_with_minter": true
+  },
+  "2616": {
+   "oldest_of": [
+    {
+     "value": "significant verdigris",
+     "pool": 376,
+     "tied_with": 0
+    },
+    {
+     "value": "red",
+     "pool": 670,
+     "tied_with": 0
+    },
+    {
+     "value": "full red",
+     "pool": 71,
+     "tied_with": 0
+    }
+   ]
+  },
+  "2623": {
+   "still_with_minter": true
+  },
+  "2628": {
+   "still_with_minter": true
+  },
+  "2640": {
+   "still_with_minter": true
+  },
+  "2645": {
+   "still_with_minter": true
+  },
+  "2656": {
+   "still_with_minter": true
+  },
+  "2658": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": true
+  },
+  "2664": {
+   "still_with_minter": true
+  },
+  "2670": {
+   "still_with_minter": true
+  },
+  "2674": {
+   "still_with_minter": true
+  },
+  "2682": {
+   "still_with_minter": true
+  },
+  "2683": {
+   "still_with_minter": true
+  },
+  "2685": {
+   "still_with_minter": true
+  },
+  "2694": {
+   "still_with_minter": true
+  },
+  "2700": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "2709": {
+   "still_with_minter": true
+  },
+  "2710": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": true,
+   "still_with_minter": true
+  },
+  "2719": {
+   "inscription_rank_from_last": 4,
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "2723": {
+   "still_with_minter": true
+  },
+  "2724": {
+   "still_with_minter": true
+  },
+  "2739": {
+   "still_with_minter": true
+  },
+  "2755": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": true
+  },
+  "2763": {
+   "still_with_minter": true
+  },
+  "2765": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "2771": {
+   "still_with_minter": true
+  },
+  "2775": {
+   "still_with_minter": true
+  },
+  "2777": {
+   "still_with_minter": true
+  },
+  "2787": {
+   "still_with_minter": true
+  },
+  "2791": {
+   "still_with_minter": true
+  },
+  "2795": {
+   "inscription_rank_from_last": 5
+  },
+  "2801": {
+   "still_with_minter": true
+  },
+  "2803": {
+   "still_with_minter": true
+  },
+  "2805": {
+   "still_with_minter": true
+  },
+  "2818": {
+   "still_with_minter": true
+  },
+  "2823": {
+   "still_with_minter": true
+  },
+  "2826": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "2829": {
+   "still_with_minter": true
+  },
+  "2852": {
+   "still_with_minter": true
+  },
+  "2858": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "2864": {
+   "still_with_minter": true
+  },
+  "2865": {
+   "still_with_minter": true
+  },
+  "2866": {
+   "still_with_minter": true
+  },
+  "2869": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "2873": {
+   "still_with_minter": true
+  },
+  "2879": {
+   "still_with_minter": true
+  },
+  "2886": {
+   "still_with_minter": true
+  },
+  "2891": {
+   "still_with_minter": true
+  },
+  "2899": {
+   "still_with_minter": true
+  },
+  "2900": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "2906": {
+   "still_with_minter": true
+  },
+  "2911": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "2917": {
+   "still_with_minter": true
+  },
+  "2918": {
+   "still_with_minter": true
+  },
+  "2922": {
+   "still_with_minter": true
+  },
+  "2928": {
+   "still_with_minter": true
+  },
+  "2930": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": true
+  },
+  "2934": {
+   "still_with_minter": true
+  },
+  "2938": {
+   "still_with_minter": true
+  },
+  "2943": {
+   "still_with_minter": true
+  },
+  "2946": {
+   "still_with_minter": true
+  },
+  "2954": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "2955": {
+   "still_with_minter": true
+  },
+  "2956": {
+   "still_with_minter": true
+  },
+  "2978": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "2979": {
+   "still_with_minter": true
+  },
+  "2989": {
+   "inscription_rank": 8
+  },
+  "2990": {
+   "still_with_minter": true
+  },
+  "2994": {
+   "still_with_minter": true
+  },
+  "3013": {
+   "still_with_minter": true
+  },
+  "3016": {
+   "still_with_minter": true
+  },
+  "3017": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "3020": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "3023": {
+   "still_with_minter": true
+  },
+  "3025": {
+   "still_with_minter": true
+  },
+  "3026": {
+   "still_with_minter": true
+  },
+  "3031": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "3032": {
+   "still_with_minter": true
+  },
+  "3035": {
+   "still_with_minter": true
+  },
+  "3036": {
+   "still_with_minter": true
+  },
+  "3038": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "3041": {
+   "still_with_minter": true
+  },
+  "3043": {
+   "still_with_minter": true
+  },
+  "3045": {
+   "still_with_minter": true
+  },
+  "3066": {
+   "still_with_minter": true
+  },
+  "3071": {
+   "still_with_minter": true
+  },
+  "3079": {
+   "still_with_minter": true
+  },
+  "3085": {
+   "still_with_minter": true
+  },
+  "3086": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "3089": {
+   "still_with_minter": true
+  },
+  "3091": {
+   "still_with_minter": true
+  },
+  "3108": {
+   "still_with_minter": true
+  },
+  "3109": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "3120": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "3122": {
+   "still_with_minter": true
+  },
+  "3128": {
+   "still_with_minter": true
+  },
+  "3130": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "3135": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "3145": {
+   "still_with_minter": true
+  },
+  "3150": {
+   "still_with_minter": true
+  },
+  "3152": {
+   "inscription_rank": 1,
+   "still_with_minter": true
+  },
+  "3154": {
+   "still_with_minter": true
+  },
+  "3155": {
+   "still_with_minter": true
+  },
+  "3163": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "3172": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": true
+  },
+  "3184": {
+   "still_with_minter": true
+  },
+  "3194": {
+   "still_with_minter": true
+  },
+  "3196": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "3200": {
+   "still_with_minter": true
+  },
+  "3204": {
+   "still_with_minter": true
+  },
+  "3208": {
+   "still_with_minter": true
+  },
+  "3210": {
+   "still_with_minter": true
+  },
+  "3212": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "3217": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "3231": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "3237": {
+   "still_with_minter": true
+  },
+  "3241": {
+   "still_with_minter": true
+  },
+  "3257": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "3260": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "3266": {
+   "still_with_minter": true
+  },
+  "3271": {
+   "still_with_minter": true
+  },
+  "3272": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "3277": {
+   "still_with_minter": true
+  },
+  "3278": {
+   "still_with_minter": true
+  },
+  "3280": {
+   "still_with_minter": true
+  },
+  "3285": {
+   "still_with_minter": true
+  },
+  "3290": {
+   "still_with_minter": true
+  },
+  "3297": {
+   "still_with_minter": true
+  },
+  "3302": {
+   "still_with_minter": true
+  },
+  "3312": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "3313": {
+   "still_with_minter": true
+  },
+  "3320": {
+   "still_with_minter": true
+  },
+  "3324": {
+   "still_with_minter": true
+  },
+  "3329": {
+   "still_with_minter": true
+  },
+  "3334": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "3335": {
+   "still_with_minter": true
+  },
+  "3343": {
+   "still_with_minter": true
+  },
+  "3346": {
+   "still_with_minter": true
+  },
+  "3353": {
+   "still_with_minter": true
+  },
+  "3355": {
+   "still_with_minter": true
+  },
+  "3357": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "3368": {
+   "still_with_minter": true
+  },
+  "3374": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "3385": {
+   "still_with_minter": true
+  },
+  "3389": {
+   "still_with_minter": true
+  },
+  "3392": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "3398": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "3405": {
+   "still_with_minter": true
+  },
+  "3408": {
+   "still_with_minter": true
+  },
+  "3411": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "3413": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "3415": {
+   "still_with_minter": true
+  },
+  "3421": {
+   "still_with_minter": true
+  },
+  "3428": {
+   "still_with_minter": true
+  },
+  "3435": {
+   "still_with_minter": true
+  },
+  "3439": {
+   "still_with_minter": true
+  },
+  "3448": {
+   "still_with_minter": true
+  },
+  "3450": {
+   "still_with_minter": true
+  },
+  "3454": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "3459": {
+   "still_with_minter": true
+  },
+  "3461": {
+   "oldest_of": [
+    {
+     "value": "assassin",
+     "pool": 42,
+     "tied_with": 1
+    }
+   ]
+  },
+  "3465": {
+   "still_with_minter": true
+  },
+  "3473": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "3478": {
+   "still_with_minter": true
+  },
+  "3480": {
+   "still_with_minter": true
+  },
+  "3482": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "3483": {
+   "still_with_minter": true
+  },
+  "3488": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "3489": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "3504": {
+   "still_with_minter": true
+  },
+  "3512": {
+   "still_with_minter": true
+  },
+  "3515": {
+   "still_with_minter": true
+  },
+  "3516": {
+   "still_with_minter": true
+  },
+  "3531": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "3540": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "3541": {
+   "still_with_minter": true
+  },
+  "3546": {
+   "still_with_minter": true
+  },
+  "3549": {
+   "still_with_minter": true
+  },
+  "3551": {
+   "still_with_minter": true
+  },
+  "3555": {
+   "still_with_minter": true
+  },
+  "3558": {
+   "still_with_minter": true
+  },
+  "3560": {
+   "still_with_minter": true
+  },
+  "3563": {
+   "still_with_minter": true
+  },
+  "3564": {
+   "still_with_minter": true
+  },
+  "3566": {
+   "still_with_minter": true
+  },
+  "3569": {
+   "still_with_minter": true
+  },
+  "3574": {
+   "still_with_minter": true
+  },
+  "3576": {
+   "still_with_minter": true
+  },
+  "3581": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "3596": {
+   "oldest_of": [
+    {
+     "value": "contamination Dark Grime",
+     "pool": 127,
+     "tied_with": 0
+    }
+   ]
+  },
+  "3599": {
+   "still_with_minter": true
+  },
+  "3602": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "3603": {
+   "still_with_minter": true
+  },
+  "3608": {
+   "still_with_minter": true
+  },
+  "3609": {
+   "still_with_minter": true
+  },
+  "3616": {
+   "still_with_minter": true
+  },
+  "3617": {
+   "still_with_minter": true
+  },
+  "3619": {
+   "still_with_minter": true
+  },
+  "3626": {
+   "still_with_minter": true
+  },
+  "3630": {
+   "still_with_minter": true
+  },
+  "3632": {
+   "still_with_minter": true
+  },
+  "3635": {
+   "still_with_minter": true
+  },
+  "3641": {
+   "still_with_minter": true
+  },
+  "3645": {
+   "still_with_minter": true
+  },
+  "3647": {
+   "still_with_minter": true
+  },
+  "3650": {
+   "still_with_minter": true
+  },
+  "3673": {
+   "still_with_minter": true
+  },
+  "3675": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "3683": {
+   "still_with_minter": true
+  },
+  "3689": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "3690": {
+   "oldest_of": [
+    {
+     "value": "contamination Speckles",
+     "pool": 95,
+     "tied_with": 0
+    }
+   ]
+  },
+  "3713": {
+   "still_with_minter": true
+  },
+  "3722": {
+   "still_with_minter": true
+  },
+  "3729": {
+   "still_with_minter": true
+  },
+  "3730": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "3732": {
+   "still_with_minter": true
+  },
+  "3734": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "3737": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "3741": {
+   "still_with_minter": true
+  },
+  "3742": {
+   "still_with_minter": true
+  },
+  "3743": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "3745": {
+   "still_with_minter": true
+  },
+  "3753": {
+   "still_with_minter": true
+  },
+  "3756": {
+   "still_with_minter": true
+  },
+  "3757": {
+   "still_with_minter": true
+  },
+  "3758": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "3760": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "3761": {
+   "still_with_minter": true
+  },
+  "3765": {
+   "still_with_minter": true
+  },
+  "3768": {
+   "still_with_minter": true
+  },
+  "3792": {
+   "still_with_minter": true
+  },
+  "3804": {
+   "still_with_minter": true
+  },
+  "3808": {
+   "still_with_minter": true
+  },
+  "3810": {
+   "still_with_minter": true
+  },
+  "3812": {
+   "still_with_minter": true
+  },
+  "3825": {
+   "still_with_minter": true
+  },
+  "3826": {
+   "still_with_minter": true
+  },
+  "3828": {
+   "still_with_minter": true
+  },
+  "3844": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "3857": {
+   "still_with_minter": true
+  },
+  "3863": {
+   "still_with_minter": true
+  },
+  "3875": {
+   "still_with_minter": true
+  },
+  "3877": {
+   "still_with_minter": true
+  },
+  "3878": {
+   "still_with_minter": true
+  },
+  "3883": {
+   "still_with_minter": true
+  },
+  "3885": {
+   "still_with_minter": true
+  },
+  "3886": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "3893": {
+   "still_with_minter": true
+  },
+  "3894": {
+   "still_with_minter": true
+  },
+  "3899": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "3901": {
+   "still_with_minter": true
+  },
+  "3910": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "3917": {
+   "still_with_minter": true
+  },
+  "3920": {
+   "still_with_minter": true
+  },
+  "3923": {
+   "still_with_minter": true
+  },
+  "3924": {
+   "still_with_minter": true
+  },
+  "3931": {
+   "still_with_minter": true
+  },
+  "3933": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "3936": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "3940": {
+   "still_with_minter": true
+  },
+  "3943": {
+   "still_with_minter": true
+  },
+  "3944": {
+   "still_with_minter": true
+  },
+  "3950": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "3954": {
+   "still_with_minter": true
+  },
+  "3957": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "3977": {
+   "still_with_minter": true
+  },
+  "3980": {
+   "still_with_minter": true
+  },
+  "3981": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": true
+  },
+  "3983": {
+   "oldest_of": [
+    {
+     "value": "white drips and streaks",
+     "pool": 82,
+     "tied_with": 0
+    }
+   ]
+  },
+  "3992": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "3993": {
+   "still_with_minter": true
+  },
+  "3995": {
+   "still_with_minter": true
+  },
+  "4007": {
+   "still_with_minter": true
+  },
+  "4016": {
+   "still_with_minter": true
+  },
+  "4020": {
+   "still_with_minter": true
+  },
+  "4025": {
+   "still_with_minter": true
+  },
+  "4046": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "4053": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "4060": {
+   "inscription_rank_from_last": 3
+  },
+  "4063": {
+   "still_with_minter": true
+  },
+  "4065": {
+   "still_with_minter": true
+  },
+  "4066": {
+   "still_with_minter": true
+  },
+  "4067": {
+   "still_with_minter": true
+  },
+  "4068": {
+   "still_with_minter": true
+  },
+  "4070": {
+   "still_with_minter": true
+  },
+  "4074": {
+   "still_with_minter": true
+  },
+  "4077": {
+   "still_with_minter": true
+  },
+  "4080": {
+   "still_with_minter": true
+  },
+  "4083": {
+   "still_with_minter": true
+  },
+  "4089": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "4090": {
+   "still_with_minter": true
+  },
+  "4092": {
+   "still_with_minter": true
+  },
+  "4098": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "4108": {
+   "still_with_minter": true
+  },
+  "4126": {
+   "still_with_minter": true
+  },
+  "4130": {
+   "still_with_minter": true
+  },
+  "4138": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "4139": {
+   "still_with_minter": true
+  },
+  "4144": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "4151": {
+   "still_with_minter": true
+  },
+  "4154": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "4162": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "4163": {
+   "still_with_minter": true
+  },
+  "4167": {
+   "still_with_minter": true
+  },
+  "4168": {
+   "still_with_minter": true
+  },
+  "4174": {
+   "still_with_minter": true
+  },
+  "4191": {
+   "still_with_minter": true
+  },
+  "4200": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "4205": {
+   "still_with_minter": true
+  },
+  "4210": {
+   "still_with_minter": true
+  },
+  "4224": {
+   "still_with_minter": true
+  },
+  "4226": {
+   "still_with_minter": true
+  },
+  "4228": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": true
+  },
+  "4229": {
+   "still_with_minter": true
+  },
+  "4231": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "4234": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "4239": {
+   "still_with_minter": true
+  },
+  "4248": {
+   "still_with_minter": true
+  },
+  "4252": {
+   "still_with_minter": true
+  },
+  "4257": {
+   "still_with_minter": true
+  },
+  "4260": {
+   "still_with_minter": true
+  },
+  "4267": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "4273": {
+   "oldest_of": [
+    {
+     "value": "full gold",
+     "pool": 9,
+     "tied_with": 0
+    }
+   ],
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "4277": {
+   "still_with_minter": true
+  },
+  "4279": {
+   "still_with_minter": true
+  },
+  "4299": {
+   "still_with_minter": true
+  },
+  "4308": {
+   "still_with_minter": true
+  },
+  "4309": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "4314": {
+   "still_with_minter": true
+  },
+  "4315": {
+   "still_with_minter": true
+  },
+  "4316": {
+   "still_with_minter": true
+  },
+  "4318": {
+   "still_with_minter": true
+  },
+  "4321": {
+   "still_with_minter": true
+  },
+  "4326": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "4336": {
+   "oldest_of": [
+    {
+     "value": "heavily abraded",
+     "pool": 44,
+     "tied_with": 0
+    }
+   ],
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": true
+  },
+  "4337": {
+   "still_with_minter": true
+  },
+  "4341": {
+   "still_with_minter": true
+  },
+  "4344": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "4354": {
+   "still_with_minter": true
+  },
+  "4355": {
+   "still_with_minter": true
+  },
+  "4357": {
+   "still_with_minter": true
+  },
+  "4363": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "4365": {
+   "still_with_minter": true
+  },
+  "4368": {
+   "still_with_minter": true
+  },
+  "4378": {
+   "still_with_minter": true
+  },
+  "4379": {
+   "still_with_minter": true
+  },
+  "4384": {
+   "still_with_minter": true
+  },
+  "4385": {
+   "still_with_minter": true
+  },
+  "4394": {
+   "still_with_minter": true
+  },
+  "4399": {
+   "still_with_minter": true
+  },
+  "4401": {
+   "still_with_minter": true
+  },
+  "4405": {
+   "still_with_minter": true
+  },
+  "4410": {
+   "still_with_minter": true
+  },
+  "4412": {
+   "still_with_minter": true
+  },
+  "4413": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "4416": {
+   "still_with_minter": true
+  },
+  "4418": {
+   "still_with_minter": true
+  },
+  "4420": {
+   "still_with_minter": true
+  },
+  "4428": {
+   "still_with_minter": true
+  },
+  "4432": {
+   "still_with_minter": true
+  },
+  "4435": {
+   "still_with_minter": true
+  },
+  "4436": {
+   "still_with_minter": true
+  },
+  "4440": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "4446": {
+   "still_with_minter": true
+  },
+  "4448": {
+   "still_with_minter": true
+  },
+  "4452": {
+   "still_with_minter": true
+  },
+  "4455": {
+   "still_with_minter": true
+  },
+  "4463": {
+   "still_with_minter": true
+  },
+  "4497": {
+   "still_with_minter": true
+  },
+  "4498": {
+   "still_with_minter": true
+  },
+  "4504": {
+   "still_with_minter": true
+  },
+  "4505": {
+   "still_with_minter": true
+  },
+  "4512": {
+   "still_with_minter": true
+  },
+  "4518": {
+   "still_with_minter": true
+  },
+  "4521": {
+   "still_with_minter": true
+  },
+  "4533": {
+   "still_with_minter": true
+  },
+  "4534": {
+   "still_with_minter": true
+  },
+  "4541": {
+   "still_with_minter": true
+  },
+  "4543": {
+   "still_with_minter": true
+  },
+  "4545": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "4548": {
+   "still_with_minter": true
+  },
+  "4559": {
+   "still_with_minter": true
+  },
+  "4563": {
+   "still_with_minter": true
+  },
+  "4568": {
+   "still_with_minter": true
+  },
+  "4570": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "4575": {
+   "still_with_minter": true
+  },
+  "4584": {
+   "still_with_minter": true
+  },
+  "4587": {
+   "still_with_minter": true
+  },
+  "4589": {
+   "still_with_minter": true
+  },
+  "4594": {
+   "still_with_minter": true
+  },
+  "4601": {
+   "still_with_minter": true
+  },
+  "4604": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "4612": {
+   "still_with_minter": true
+  },
+  "4613": {
+   "still_with_minter": true
+  },
+  "4617": {
+   "still_with_minter": true
+  },
+  "4621": {
+   "still_with_minter": true
+  },
+  "4646": {
+   "still_with_minter": true
+  },
+  "4656": {
+   "still_with_minter": true
+  },
+  "4657": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "4664": {
+   "still_with_minter": true
+  },
+  "4668": {
+   "still_with_minter": true
+  },
+  "4669": {
+   "still_with_minter": true
+  },
+  "4670": {
+   "still_with_minter": true
+  },
+  "4683": {
+   "still_with_minter": true
+  },
+  "4686": {
+   "still_with_minter": true
+  },
+  "4687": {
+   "still_with_minter": true
+  },
+  "4690": {
+   "still_with_minter": true
+  },
+  "4701": {
+   "still_with_minter": true
+  },
+  "4703": {
+   "still_with_minter": true
+  },
+  "4711": {
+   "still_with_minter": true
+  },
+  "4712": {
+   "still_with_minter": true
+  },
+  "4716": {
+   "still_with_minter": true
+  },
+  "4717": {
+   "still_with_minter": true
+  },
+  "4723": {
+   "still_with_minter": true
+  },
+  "4732": {
+   "still_with_minter": true
+  },
+  "4735": {
+   "still_with_minter": true
+  },
+  "4736": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "4746": {
+   "still_with_minter": true
+  },
+  "4748": {
+   "still_with_minter": true
+  },
+  "4751": {
+   "still_with_minter": true
+  },
+  "4756": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "4764": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "4765": {
+   "oldest_of": [
+    {
+     "value": "fingerprint",
+     "pool": 224,
+     "tied_with": 1
+    }
+   ]
+  },
+  "4776": {
+   "still_with_minter": true
+  },
+  "4779": {
+   "still_with_minter": true
+  },
+  "4788": {
+   "still_with_minter": true
+  },
+  "4790": {
+   "still_with_minter": true
+  },
+  "4793": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "4795": {
+   "still_with_minter": true
+  },
+  "4796": {
+   "still_with_minter": true
+  },
+  "4800": {
+   "still_with_minter": true
+  },
+  "4806": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "4812": {
+   "still_with_minter": true
+  },
+  "4822": {
+   "oldest_of": [
+    {
+     "value": "contamination Special Oddities",
+     "pool": 44,
+     "tied_with": 0
+    }
+   ],
+   "still_with_minter": true
+  },
+  "4824": {
+   "still_with_minter": true
+  },
+  "4825": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "4826": {
+   "still_with_minter": true
+  },
+  "4830": {
+   "still_with_minter": true
+  },
+  "4831": {
+   "still_with_minter": true
+  },
+  "4834": {
+   "still_with_minter": true
+  },
+  "4844": {
+   "still_with_minter": true
+  },
+  "4847": {
+   "still_with_minter": true
+  },
+  "4852": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "4857": {
+   "still_with_minter": true
+  },
+  "4872": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "4875": {
+   "still_with_minter": true
+  },
+  "4876": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "4882": {
+   "oldest_of": [
+    {
+     "value": "contamination 3D-black",
+     "pool": 35,
+     "tied_with": 0
+    }
+   ],
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "4886": {
+   "still_with_minter": true
+  },
+  "4893": {
+   "still_with_minter": true
+  },
+  "4899": {
+   "still_with_minter": true
+  },
+  "4910": {
+   "still_with_minter": true
+  },
+  "4918": {
+   "still_with_minter": true
+  },
+  "4922": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "4927": {
+   "still_with_minter": true
+  },
+  "4928": {
+   "still_with_minter": true
+  },
+  "4933": {
+   "still_with_minter": true
+  },
+  "4938": {
+   "still_with_minter": true
+  },
+  "4946": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": true
+  },
+  "4954": {
+   "still_with_minter": true
+  },
+  "4955": {
+   "still_with_minter": true
+  },
+  "4956": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "4958": {
+   "still_with_minter": true
+  },
+  "4971": {
+   "still_with_minter": true
+  },
+  "4977": {
+   "still_with_minter": true
+  },
+  "4980": {
+   "still_with_minter": true
+  },
+  "4982": {
+   "still_with_minter": true
+  },
+  "4990": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "4993": {
+   "still_with_minter": true
+  },
+  "4995": {
+   "still_with_minter": true
+  },
+  "4998": {
+   "still_with_minter": true
+  },
+  "5001": {
+   "still_with_minter": true
+  },
+  "5002": {
+   "still_with_minter": true
+  },
+  "5008": {
+   "still_with_minter": true
+  },
+  "5013": {
+   "still_with_minter": true
+  },
+  "5018": {
+   "still_with_minter": true
+  },
+  "5027": {
+   "still_with_minter": true
+  },
+  "5032": {
+   "still_with_minter": true
+  },
+  "5033": {
+   "still_with_minter": true
+  },
+  "5037": {
+   "still_with_minter": true
+  },
+  "5041": {
+   "still_with_minter": true
+  },
+  "5045": {
+   "still_with_minter": true
+  },
+  "5046": {
+   "still_with_minter": true
+  },
+  "5048": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "5056": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "5065": {
+   "still_with_minter": true
+  },
+  "5068": {
+   "still_with_minter": true
+  },
+  "5073": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": true
+  },
+  "5079": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "5080": {
+   "still_with_minter": true
+  },
+  "5085": {
+   "still_with_minter": true
+  },
+  "5086": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "5088": {
+   "still_with_minter": true
+  },
+  "5089": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "5104": {
+   "still_with_minter": true
+  },
+  "5107": {
+   "still_with_minter": true
+  },
+  "5123": {
+   "still_with_minter": true
+  },
+  "5127": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "5128": {
+   "still_with_minter": true
+  },
+  "5134": {
+   "still_with_minter": true
+  },
+  "5137": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "5140": {
+   "still_with_minter": true
+  },
+  "5141": {
+   "still_with_minter": true
+  },
+  "5161": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "5162": {
+   "still_with_minter": true
+  },
+  "5163": {
+   "still_with_minter": true
+  },
+  "5166": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": true
+  },
+  "5173": {
+   "still_with_minter": true
+  },
+  "5177": {
+   "still_with_minter": true
+  },
+  "5185": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "5188": {
+   "still_with_minter": true
+  },
+  "5192": {
+   "still_with_minter": true
+  },
+  "5193": {
+   "still_with_minter": true
+  },
+  "5195": {
+   "still_with_minter": true
+  },
+  "5201": {
+   "still_with_minter": true
+  },
+  "5202": {
+   "still_with_minter": true
+  },
+  "5212": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "5215": {
+   "still_with_minter": true
+  },
+  "5223": {
+   "still_with_minter": true
+  },
+  "5225": {
+   "still_with_minter": true
+  },
+  "5226": {
+   "still_with_minter": true
+  },
+  "5229": {
+   "still_with_minter": true
+  },
+  "5230": {
+   "still_with_minter": true
+  },
+  "5237": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "5241": {
+   "still_with_minter": true
+  },
+  "5244": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "5246": {
+   "still_with_minter": true
+  },
+  "5248": {
+   "still_with_minter": true
+  },
+  "5252": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "5254": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "5255": {
+   "still_with_minter": true
+  },
+  "5259": {
+   "still_with_minter": true
+  },
+  "5265": {
+   "still_with_minter": true
+  },
+  "5269": {
+   "still_with_minter": true
+  },
+  "5275": {
+   "still_with_minter": true
+  },
+  "5276": {
+   "still_with_minter": true
+  },
+  "5286": {
+   "still_with_minter": true
+  },
+  "5290": {
+   "still_with_minter": true
+  },
+  "5293": {
+   "still_with_minter": true
+  },
+  "5294": {
+   "still_with_minter": true
+  },
+  "5295": {
+   "still_with_minter": true
+  },
+  "5297": {
+   "still_with_minter": true
+  },
+  "5305": {
+   "still_with_minter": true
+  },
+  "5309": {
+   "inscription_rank_from_last": 6
+  },
+  "5310": {
+   "still_with_minter": true
+  },
+  "5312": {
+   "still_with_minter": true
+  },
+  "5313": {
+   "still_with_minter": true
+  },
+  "5315": {
+   "still_with_minter": true
+  },
+  "5320": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "5324": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "5325": {
+   "still_with_minter": true
+  },
+  "5332": {
+   "still_with_minter": true
+  },
+  "5346": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "5349": {
+   "still_with_minter": true
+  },
+  "5351": {
+   "still_with_minter": true
+  },
+  "5356": {
+   "still_with_minter": true
+  },
+  "5358": {
+   "still_with_minter": true
+  },
+  "5362": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "5366": {
+   "still_with_minter": true
+  },
+  "5395": {
+   "still_with_minter": true
+  },
+  "5402": {
+   "still_with_minter": true
+  },
+  "5404": {
+   "still_with_minter": true
+  },
+  "5405": {
+   "still_with_minter": true
+  },
+  "5411": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "5416": {
+   "still_with_minter": true
+  },
+  "5417": {
+   "still_with_minter": true
+  },
+  "5422": {
+   "still_with_minter": true
+  },
+  "5425": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "5434": {
+   "still_with_minter": true
+  },
+  "5435": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "5437": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "5438": {
+   "still_with_minter": true
+  },
+  "5441": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "5458": {
+   "still_with_minter": true
+  },
+  "5464": {
+   "still_with_minter": true
+  },
+  "5470": {
+   "still_with_minter": true
+  },
+  "5480": {
+   "still_with_minter": true
+  },
+  "5481": {
+   "still_with_minter": true
+  },
+  "5485": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": true
+  },
+  "5487": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "5492": {
+   "still_with_minter": true
+  },
+  "5510": {
+   "still_with_minter": true
+  },
+  "5517": {
+   "still_with_minter": true
+  },
+  "5521": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "5526": {
+   "still_with_minter": true
+  },
+  "5537": {
+   "still_with_minter": true
+  },
+  "5540": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "5543": {
+   "still_with_minter": true
+  },
+  "5545": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "5547": {
+   "still_with_minter": true
+  },
+  "5548": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "5549": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "5553": {
+   "oldest_of": [
+    {
+     "value": "ghost",
+     "pool": 33,
+     "tied_with": 0
+    }
+   ],
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "5563": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "5565": {
+   "still_with_minter": true
+  },
+  "5567": {
+   "still_with_minter": true
+  },
+  "5571": {
+   "still_with_minter": true
+  },
+  "5575": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "5577": {
+   "still_with_minter": true
+  },
+  "5581": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "5595": {
+   "still_with_minter": true
+  },
+  "5596": {
+   "still_with_minter": true
+  },
+  "5597": {
+   "still_with_minter": true
+  },
+  "5602": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "5603": {
+   "still_with_minter": true
+  },
+  "5609": {
+   "still_with_minter": true
+  },
+  "5611": {
+   "still_with_minter": true
+  },
+  "5630": {
+   "still_with_minter": true
+  },
+  "5634": {
+   "still_with_minter": true
+  },
+  "5636": {
+   "still_with_minter": true
+  },
+  "5649": {
+   "still_with_minter": true
+  },
+  "5653": {
+   "still_with_minter": true
+  },
+  "5659": {
+   "still_with_minter": true
+  },
+  "5667": {
+   "still_with_minter": true
+  },
+  "5669": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "5670": {
+   "still_with_minter": true
+  },
+  "5677": {
+   "still_with_minter": true
+  },
+  "5681": {
+   "still_with_minter": true
+  },
+  "5690": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "5708": {
+   "still_with_minter": true
+  },
+  "5714": {
+   "still_with_minter": true
+  },
+  "5715": {
+   "still_with_minter": true
+  },
+  "5719": {
+   "still_with_minter": true
+  },
+  "5724": {
+   "still_with_minter": true
+  },
+  "5725": {
+   "still_with_minter": true
+  },
+  "5738": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "5744": {
+   "still_with_minter": true
+  },
+  "5747": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "5750": {
+   "still_with_minter": true
+  },
+  "5754": {
+   "still_with_minter": true
+  },
+  "5757": {
+   "still_with_minter": true
+  },
+  "5759": {
+   "still_with_minter": true
+  },
+  "5766": {
+   "still_with_minter": true
+  },
+  "5768": {
+   "still_with_minter": true
+  },
+  "5769": {
+   "still_with_minter": true
+  },
+  "5784": {
+   "oldest_of": [
+    {
+     "value": "significant red",
+     "pool": 183,
+     "tied_with": 0
+    }
+   ]
+  },
+  "5792": {
+   "still_with_minter": true
+  },
+  "5810": {
+   "still_with_minter": true
+  },
+  "5812": {
+   "still_with_minter": true
+  },
+  "5815": {
+   "still_with_minter": true
+  },
+  "5839": {
+   "still_with_minter": true
+  },
+  "5842": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "5849": {
+   "still_with_minter": true
+  },
+  "5856": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "5859": {
+   "still_with_minter": true
+  },
+  "5860": {
+   "still_with_minter": true
+  },
+  "5863": {
+   "still_with_minter": true
+  },
+  "5864": {
+   "still_with_minter": true
+  },
+  "5867": {
+   "still_with_minter": true
+  },
+  "5882": {
+   "still_with_minter": true
+  },
+  "5891": {
+   "still_with_minter": true
+  },
+  "5893": {
+   "still_with_minter": true
+  },
+  "5896": {
+   "still_with_minter": true
+  },
+  "5897": {
+   "still_with_minter": true
+  },
+  "5898": {
+   "inscription_rank": 2,
+   "still_with_minter": true
+  },
+  "5900": {
+   "still_with_minter": true
+  },
+  "5904": {
+   "still_with_minter": true
+  },
+  "5907": {
+   "still_with_minter": true
+  },
+  "5908": {
+   "still_with_minter": true
+  },
+  "5910": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "5923": {
+   "still_with_minter": true
+  },
+  "5924": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "5928": {
+   "still_with_minter": true
+  },
+  "5937": {
+   "still_with_minter": true
+  },
+  "5943": {
+   "still_with_minter": true
+  },
+  "5944": {
+   "still_with_minter": true
+  },
+  "5949": {
+   "still_with_minter": true
+  },
+  "5955": {
+   "still_with_minter": true
+  },
+  "5957": {
+   "still_with_minter": true
+  },
+  "5978": {
+   "still_with_minter": true
+  },
+  "5981": {
+   "still_with_minter": true
+  },
+  "5982": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "5983": {
+   "still_with_minter": true
+  },
+  "5984": {
+   "still_with_minter": true
+  },
+  "5989": {
+   "still_with_minter": true
+  },
+  "5992": {
+   "still_with_minter": true
+  },
+  "6000": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "6004": {
+   "still_with_minter": true
+  },
+  "6006": {
+   "still_with_minter": true
+  },
+  "6015": {
+   "still_with_minter": true
+  },
+  "6017": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "6026": {
+   "still_with_minter": true
+  },
+  "6031": {
+   "still_with_minter": true
+  },
+  "6039": {
+   "still_with_minter": true
+  },
+  "6045": {
+   "still_with_minter": true
+  },
+  "6054": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "6058": {
+   "still_with_minter": true
+  },
+  "6059": {
+   "still_with_minter": true
+  },
+  "6070": {
+   "still_with_minter": true
+  },
+  "6072": {
+   "still_with_minter": true
+  },
+  "6073": {
+   "inscription_rank": 5
+  },
+  "6074": {
+   "still_with_minter": true
+  },
+  "6084": {
+   "still_with_minter": true
+  },
+  "6091": {
+   "still_with_minter": true
+  },
+  "6093": {
+   "still_with_minter": true
+  },
+  "6094": {
+   "still_with_minter": true
+  },
+  "6102": {
+   "still_with_minter": true
+  },
+  "6104": {
+   "still_with_minter": true
+  },
+  "6106": {
+   "still_with_minter": true
+  },
+  "6107": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "6118": {
+   "still_with_minter": true
+  },
+  "6119": {
+   "still_with_minter": true
+  },
+  "6120": {
+   "still_with_minter": true
+  },
+  "6124": {
+   "still_with_minter": true
+  },
+  "6125": {
+   "still_with_minter": true
+  },
+  "6129": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "6130": {
+   "still_with_minter": true
+  },
+  "6136": {
+   "still_with_minter": true
+  },
+  "6146": {
+   "still_with_minter": true
+  },
+  "6148": {
+   "still_with_minter": true
+  },
+  "6149": {
+   "still_with_minter": true
+  },
+  "6154": {
+   "still_with_minter": true
+  },
+  "6165": {
+   "still_with_minter": true
+  },
+  "6193": {
+   "still_with_minter": true
+  },
+  "6195": {
+   "still_with_minter": true
+  },
+  "6196": {
+   "still_with_minter": true
+  },
+  "6200": {
+   "still_with_minter": true
+  },
+  "6205": {
+   "still_with_minter": true
+  },
+  "6214": {
+   "still_with_minter": true
+  },
+  "6221": {
+   "still_with_minter": true
+  },
+  "6223": {
+   "still_with_minter": true
+  },
+  "6225": {
+   "still_with_minter": true
+  },
+  "6233": {
+   "still_with_minter": true
+  },
+  "6242": {
+   "still_with_minter": true
+  },
+  "6263": {
+   "still_with_minter": true
+  },
+  "6275": {
+   "oldest_of": [
+    {
+     "value": "full desert",
+     "pool": 21,
+     "tied_with": 1
+    }
+   ]
+  },
+  "6276": {
+   "still_with_minter": true
+  },
+  "6280": {
+   "still_with_minter": true
+  },
+  "6281": {
+   "still_with_minter": true
+  },
+  "6285": {
+   "still_with_minter": true
+  },
+  "6301": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "6304": {
+   "still_with_minter": true
+  },
+  "6311": {
+   "still_with_minter": true
+  },
+  "6315": {
+   "still_with_minter": true
+  },
+  "6316": {
+   "still_with_minter": true
+  },
+  "6323": {
+   "still_with_minter": true
+  },
+  "6349": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": true
+  },
+  "6350": {
+   "still_with_minter": true
+  },
+  "6353": {
+   "still_with_minter": true
+  },
+  "6355": {
+   "still_with_minter": true
+  },
+  "6360": {
+   "still_with_minter": true
+  },
+  "6368": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "6369": {
+   "still_with_minter": true
+  },
+  "6370": {
+   "still_with_minter": true
+  },
+  "6372": {
+   "still_with_minter": true
+  },
+  "6378": {
+   "still_with_minter": true
+  },
+  "6379": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "6382": {
+   "still_with_minter": true
+  },
+  "6386": {
+   "still_with_minter": true
+  },
+  "6388": {
+   "still_with_minter": true
+  },
+  "6392": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "6404": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "6418": {
+   "still_with_minter": true
+  },
+  "6424": {
+   "still_with_minter": true
+  },
+  "6425": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "6429": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "6433": {
+   "still_with_minter": true
+  },
+  "6434": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "6439": {
+   "still_with_minter": true
+  },
+  "6441": {
+   "still_with_minter": true
+  },
+  "6445": {
+   "still_with_minter": true
+  },
+  "6450": {
+   "still_with_minter": true
+  },
+  "6465": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "6466": {
+   "still_with_minter": true
+  },
+  "6467": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "6471": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "6474": {
+   "still_with_minter": true
+  },
+  "6477": {
+   "still_with_minter": true
+  },
+  "6479": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "6488": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "6494": {
+   "still_with_minter": true
+  },
+  "6501": {
+   "still_with_minter": true
+  },
+  "6502": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "6506": {
+   "still_with_minter": true
+  },
+  "6515": {
+   "still_with_minter": true
+  },
+  "6531": {
+   "still_with_minter": true
+  },
+  "6542": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "6544": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "6546": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "6547": {
+   "still_with_minter": true
+  },
+  "6553": {
+   "still_with_minter": true
+  },
+  "6556": {
+   "inscription_rank_from_last": 1
+  },
+  "6560": {
+   "still_with_minter": true
+  },
+  "6570": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "6578": {
+   "still_with_minter": true
+  },
+  "6580": {
+   "still_with_minter": true
+  },
+  "6581": {
+   "still_with_minter": true
+  },
+  "6582": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "6584": {
+   "still_with_minter": true
+  },
+  "6588": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "6602": {
+   "still_with_minter": true
+  },
+  "6603": {
+   "still_with_minter": true
+  },
+  "6613": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "6621": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "6641": {
+   "still_with_minter": true
+  },
+  "6646": {
+   "still_with_minter": true
+  },
+  "6656": {
+   "still_with_minter": true
+  },
+  "6658": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "6673": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "6684": {
+   "still_with_minter": true
+  },
+  "6689": {
+   "still_with_minter": true
+  },
+  "6697": {
+   "still_with_minter": true
+  },
+  "6702": {
+   "still_with_minter": true
+  },
+  "6706": {
+   "still_with_minter": true
+  },
+  "6711": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "6712": {
+   "still_with_minter": true
+  },
+  "6714": {
+   "still_with_minter": true
+  },
+  "6724": {
+   "still_with_minter": true
+  },
+  "6735": {
+   "still_with_minter": true
+  },
+  "6736": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "6739": {
+   "still_with_minter": true
+  },
+  "6741": {
+   "still_with_minter": true
+  },
+  "6742": {
+   "still_with_minter": true
+  },
+  "6744": {
+   "still_with_minter": true
+  },
+  "6746": {
+   "still_with_minter": true
+  },
+  "6749": {
+   "oldest_of": [
+    {
+     "value": "notable red",
+     "pool": 416,
+     "tied_with": 0
+    },
+    {
+     "value": "orange",
+     "pool": 141,
+     "tied_with": 0
+    }
+   ],
+   "still_with_minter": true
+  },
+  "6753": {
+   "still_with_minter": true
+  },
+  "6767": {
+   "still_with_minter": true
+  },
+  "6770": {
+   "still_with_minter": true
+  },
+  "6773": {
+   "still_with_minter": true
+  },
+  "6779": {
+   "still_with_minter": true
+  },
+  "6780": {
+   "still_with_minter": true
+  },
+  "6784": {
+   "still_with_minter": true
+  },
+  "6789": {
+   "oldest_of": [
+    {
+     "value": "corroded",
+     "pool": 69,
+     "tied_with": 0
+    }
+   ],
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "6791": {
+   "still_with_minter": true
+  },
+  "6794": {
+   "still_with_minter": true
+  },
+  "6795": {
+   "still_with_minter": true
+  },
+  "6797": {
+   "still_with_minter": true
+  },
+  "6804": {
+   "still_with_minter": true
+  },
+  "6808": {
+   "still_with_minter": true
+  },
+  "6818": {
+   "still_with_minter": true
+  },
+  "6823": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "6832": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "6836": {
+   "still_with_minter": true
+  },
+  "6845": {
+   "still_with_minter": true
+  },
+  "6846": {
+   "still_with_minter": true
+  },
+  "6862": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": true
+  },
+  "6865": {
+   "still_with_minter": true
+  },
+  "6868": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "6870": {
+   "still_with_minter": true
+  },
+  "6874": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "6882": {
+   "still_with_minter": true
+  },
+  "6886": {
+   "still_with_minter": true
+  },
+  "6891": {
+   "still_with_minter": true
+  },
+  "6895": {
+   "still_with_minter": true
+  },
+  "6897": {
+   "still_with_minter": true
+  },
+  "6898": {
+   "still_with_minter": true
+  },
+  "6900": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "6901": {
+   "still_with_minter": true
+  },
+  "6910": {
+   "still_with_minter": true
+  },
+  "6913": {
+   "still_with_minter": true
+  },
+  "6917": {
+   "still_with_minter": true
+  },
+  "6918": {
+   "still_with_minter": true
+  },
+  "6922": {
+   "still_with_minter": true
+  },
+  "6923": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "6929": {
+   "inscription_rank": 10
+  },
+  "6930": {
+   "still_with_minter": true
+  },
+  "6944": {
+   "still_with_minter": true
+  },
+  "6948": {
+   "still_with_minter": true
+  },
+  "6956": {
+   "still_with_minter": true
+  },
+  "6957": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "6969": {
+   "still_with_minter": true
+  },
+  "6976": {
+   "still_with_minter": true
+  },
+  "6981": {
+   "still_with_minter": true
+  },
+  "6991": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "6994": {
+   "still_with_minter": true
+  },
+  "6995": {
+   "still_with_minter": true
+  },
+  "7000": {
+   "still_with_minter": true
+  },
+  "7001": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "7005": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "7007": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "7013": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "7017": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": true
+  },
+  "7023": {
+   "still_with_minter": true
+  },
+  "7032": {
+   "still_with_minter": true
+  },
+  "7033": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "7038": {
+   "still_with_minter": true
+  },
+  "7042": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "7043": {
+   "still_with_minter": true
+  },
+  "7044": {
+   "still_with_minter": true
+  },
+  "7052": {
+   "still_with_minter": true
+  },
+  "7056": {
+   "still_with_minter": true
+  },
+  "7059": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": true
+  },
+  "7063": {
+   "still_with_minter": true
+  },
+  "7066": {
+   "still_with_minter": true
+  },
+  "7069": {
+   "still_with_minter": true
+  },
+  "7074": {
+   "still_with_minter": true
+  },
+  "7083": {
+   "still_with_minter": true
+  },
+  "7087": {
+   "still_with_minter": true
+  },
+  "7088": {
+   "still_with_minter": true
+  },
+  "7096": {
+   "still_with_minter": true
+  },
+  "7105": {
+   "still_with_minter": true
+  },
+  "7108": {
+   "still_with_minter": true
+  },
+  "7109": {
+   "still_with_minter": true
+  },
+  "7110": {
+   "still_with_minter": true
+  },
+  "7122": {
+   "still_with_minter": true
+  },
+  "7126": {
+   "still_with_minter": true
+  },
+  "7136": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "7138": {
+   "still_with_minter": true
+  },
+  "7142": {
+   "still_with_minter": true
+  },
+  "7150": {
+   "still_with_minter": true
+  },
+  "7155": {
+   "still_with_minter": true
+  },
+  "7156": {
+   "still_with_minter": true
+  },
+  "7168": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "7170": {
+   "still_with_minter": true
+  },
+  "7177": {
+   "still_with_minter": true
+  },
+  "7184": {
+   "still_with_minter": true
+  },
+  "7187": {
+   "still_with_minter": true
+  },
+  "7195": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "7197": {
+   "still_with_minter": true
+  },
+  "7199": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "7211": {
+   "still_with_minter": true
+  },
+  "7220": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "7224": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "7243": {
+   "still_with_minter": true
+  },
+  "7252": {
+   "still_with_minter": true
+  },
+  "7257": {
+   "still_with_minter": true
+  },
+  "7259": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "7267": {
+   "still_with_minter": true
+  },
+  "7276": {
+   "still_with_minter": true
+  },
+  "7280": {
+   "still_with_minter": true
+  },
+  "7282": {
+   "still_with_minter": true
+  },
+  "7294": {
+   "still_with_minter": true
+  },
+  "7297": {
+   "still_with_minter": true
+  },
+  "7307": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "7313": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "7316": {
+   "still_with_minter": true
+  },
+  "7317": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "7321": {
+   "still_with_minter": true
+  },
+  "7322": {
+   "still_with_minter": true
+  },
+  "7327": {
+   "still_with_minter": true
+  },
+  "7332": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "7336": {
+   "still_with_minter": true
+  },
+  "7343": {
+   "still_with_minter": true
+  },
+  "7344": {
+   "oldest_of": [
+    {
+     "value": "lustrous",
+     "pool": 150,
+     "tied_with": 2
+    }
+   ]
+  },
+  "7360": {
+   "still_with_minter": true
+  },
+  "7365": {
+   "still_with_minter": true
+  },
+  "7371": {
+   "still_with_minter": true
+  },
+  "7374": {
+   "still_with_minter": true
+  },
+  "7393": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "7395": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "7399": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "7406": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "7407": {
+   "still_with_minter": true
+  },
+  "7408": {
+   "still_with_minter": true
+  },
+  "7412": {
+   "still_with_minter": true
+  },
+  "7422": {
+   "still_with_minter": true
+  },
+  "7424": {
+   "still_with_minter": true
+  },
+  "7429": {
+   "still_with_minter": true
+  },
+  "7438": {
+   "still_with_minter": true
+  },
+  "7441": {
+   "still_with_minter": true
+  },
+  "7452": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "7453": {
+   "still_with_minter": true
+  },
+  "7465": {
+   "still_with_minter": true
+  },
+  "7467": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "7474": {
+   "oldest_of": [
+    {
+     "value": "contamination Glue",
+     "pool": 51,
+     "tied_with": 0
+    }
+   ]
+  },
+  "7475": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "7481": {
+   "still_with_minter": true
+  },
+  "7489": {
+   "still_with_minter": true
+  },
+  "7492": {
+   "still_with_minter": true
+  },
+  "7498": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "7502": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "7503": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "7506": {
+   "still_with_minter": true
+  },
+  "7507": {
+   "still_with_minter": true
+  },
+  "7515": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "7525": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": true
+  },
+  "7527": {
+   "still_with_minter": true
+  },
+  "7531": {
+   "oldest_of": [
+    {
+     "value": "contamination Alien Secretion",
+     "pool": 79,
+     "tied_with": 1
+    }
+   ]
+  },
+  "7539": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "7558": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "7559": {
+   "still_with_minter": true
+  },
+  "7568": {
+   "still_with_minter": true
+  },
+  "7574": {
+   "still_with_minter": true
+  },
+  "7584": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "7593": {
+   "still_with_minter": true
+  },
+  "7594": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "7597": {
+   "still_with_minter": true
+  },
+  "7598": {
+   "still_with_minter": true
+  },
+  "7607": {
+   "still_with_minter": true
+  },
+  "7616": {
+   "still_with_minter": true
+  },
+  "7637": {
+   "still_with_minter": true
+  },
+  "7644": {
+   "still_with_minter": true
+  },
+  "7645": {
+   "still_with_minter": true
+  },
+  "7646": {
+   "still_with_minter": true
+  },
+  "7652": {
+   "still_with_minter": true
+  },
+  "7653": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "7657": {
+   "still_with_minter": true
+  },
+  "7659": {
+   "still_with_minter": true
+  },
+  "7663": {
+   "still_with_minter": true
+  },
+  "7687": {
+   "still_with_minter": true
+  },
+  "7692": {
+   "still_with_minter": true
+  },
+  "7694": {
+   "still_with_minter": true
+  },
+  "7697": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "7698": {
+   "still_with_minter": true
+  },
+  "7699": {
+   "still_with_minter": true
+  },
+  "7700": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "7702": {
+   "still_with_minter": true
+  },
+  "7705": {
+   "still_with_minter": true
+  },
+  "7717": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": true
+  },
+  "7720": {
+   "still_with_minter": true
+  },
+  "7722": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "7731": {
+   "still_with_minter": true
+  },
+  "7734": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "7740": {
+   "still_with_minter": true
+  },
+  "7741": {
+   "still_with_minter": true
+  },
+  "7744": {
+   "inscription_rank_from_last": 9
+  },
+  "7747": {
+   "still_with_minter": true
+  },
+  "7749": {
+   "still_with_minter": true
+  },
+  "7751": {
+   "still_with_minter": true
+  },
+  "7753": {
+   "still_with_minter": true
+  },
+  "7754": {
+   "still_with_minter": true
+  },
+  "7755": {
+   "still_with_minter": true
+  },
+  "7772": {
+   "still_with_minter": true
+  },
+  "7773": {
+   "still_with_minter": true
+  },
+  "7780": {
+   "still_with_minter": true
+  },
+  "7789": {
+   "still_with_minter": true
+  },
+  "7797": {
+   "still_with_minter": true
+  },
+  "7799": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "7802": {
+   "still_with_minter": true
+  },
+  "7803": {
+   "still_with_minter": true
+  },
+  "7806": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "7810": {
+   "still_with_minter": true
+  },
+  "7812": {
+   "still_with_minter": true
+  },
+  "7823": {
+   "still_with_minter": true
+  },
+  "7832": {
+   "still_with_minter": true
+  },
+  "7836": {
+   "still_with_minter": true
+  },
+  "7847": {
+   "still_with_minter": true
+  },
+  "7848": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "7854": {
+   "still_with_minter": true
+  },
+  "7855": {
+   "still_with_minter": true
+  },
+  "7859": {
+   "still_with_minter": true
+  },
+  "7874": {
+   "still_with_minter": true
+  },
+  "7881": {
+   "still_with_minter": true
+  },
+  "7893": {
+   "still_with_minter": true
+  },
+  "7895": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "7901": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "7902": {
+   "still_with_minter": true
+  },
+  "7909": {
+   "still_with_minter": true
+  },
+  "7914": {
+   "still_with_minter": true
+  },
+  "7915": {
+   "still_with_minter": true
+  },
+  "7916": {
+   "still_with_minter": true
+  },
+  "7926": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": true
+  },
+  "7934": {
+   "still_with_minter": true
+  },
+  "7935": {
+   "still_with_minter": true
+  },
+  "7938": {
+   "still_with_minter": true
+  },
+  "7940": {
+   "still_with_minter": true
+  },
+  "7941": {
+   "still_with_minter": true
+  },
+  "7953": {
+   "still_with_minter": true
+  },
+  "7965": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "7966": {
+   "still_with_minter": true
+  },
+  "7975": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "7978": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "7981": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "7984": {
+   "oldest_of": [
+    {
+     "value": "verdigris",
+     "pool": 1884,
+     "tied_with": 1
+    },
+    {
+     "value": "notable verdigris",
+     "pool": 1493,
+     "tied_with": 1
+    },
+    {
+     "value": "obsidian",
+     "pool": 1757,
+     "tied_with": 1
+    },
+    {
+     "value": "significant obsidian",
+     "pool": 220,
+     "tied_with": 0
+    }
+   ]
+  },
+  "7997": {
+   "still_with_minter": true
+  },
+  "8002": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "8007": {
+   "still_with_minter": true
+  },
+  "8017": {
+   "still_with_minter": true
+  },
+  "8024": {
+   "still_with_minter": true
+  },
+  "8028": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "8032": {
+   "still_with_minter": true
+  },
+  "8033": {
+   "still_with_minter": true
+  },
+  "8058": {
+   "still_with_minter": true
+  },
+  "8059": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "8060": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "8063": {
+   "still_with_minter": true
+  },
+  "8068": {
+   "still_with_minter": true
+  },
+  "8072": {
+   "still_with_minter": true
+  },
+  "8085": {
+   "still_with_minter": true
+  },
+  "8100": {
+   "still_with_minter": true
+  },
+  "8104": {
+   "still_with_minter": true
+  },
+  "8112": {
+   "still_with_minter": true
+  },
+  "8113": {
+   "still_with_minter": true
+  },
+  "8119": {
+   "oldest_of": [
+    {
+     "value": "full desert",
+     "pool": 21,
+     "tied_with": 1
+    }
+   ]
+  },
+  "8132": {
+   "still_with_minter": true
+  },
+  "8133": {
+   "still_with_minter": true
+  },
+  "8149": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "8150": {
+   "still_with_minter": true
+  },
+  "8152": {
+   "still_with_minter": true
+  },
+  "8154": {
+   "still_with_minter": true
+  },
+  "8155": {
+   "still_with_minter": true
+  },
+  "8157": {
+   "still_with_minter": true
+  },
+  "8160": {
+   "still_with_minter": true
+  },
+  "8162": {
+   "still_with_minter": true
+  },
+  "8177": {
+   "still_with_minter": true
+  },
+  "8185": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "8187": {
+   "still_with_minter": true
+  },
+  "8188": {
+   "still_with_minter": true
+  },
+  "8192": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "8199": {
+   "still_with_minter": true
+  },
+  "8221": {
+   "still_with_minter": true
+  },
+  "8222": {
+   "still_with_minter": true
+  },
+  "8223": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": true
+  },
+  "8226": {
+   "still_with_minter": true
+  },
+  "8232": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "8236": {
+   "still_with_minter": true
+  },
+  "8239": {
+   "still_with_minter": true
+  },
+  "8243": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "8246": {
+   "still_with_minter": true
+  },
+  "8249": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "8250": {
+   "still_with_minter": true
+  },
+  "8254": {
+   "still_with_minter": true
+  },
+  "8255": {
+   "still_with_minter": true
+  },
+  "8258": {
+   "still_with_minter": true
+  },
+  "8263": {
+   "still_with_minter": true
+  },
+  "8268": {
+   "still_with_minter": true
+  },
+  "8271": {
+   "still_with_minter": true
+  },
+  "8272": {
+   "still_with_minter": true
+  },
+  "8275": {
+   "still_with_minter": true
+  },
+  "8284": {
+   "still_with_minter": true
+  },
+  "8292": {
+   "still_with_minter": true
+  },
+  "8293": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "8305": {
+   "still_with_minter": true
+  },
+  "8325": {
+   "still_with_minter": true
+  },
+  "8335": {
+   "still_with_minter": true
+  },
+  "8345": {
+   "still_with_minter": true
+  },
+  "8348": {
+   "still_with_minter": true
+  },
+  "8350": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": true
+  },
+  "8353": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "8354": {
+   "still_with_minter": true
+  },
+  "8358": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": true
+  },
+  "8359": {
+   "still_with_minter": true
+  },
+  "8370": {
+   "still_with_minter": true
+  },
+  "8376": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "8382": {
+   "still_with_minter": true
+  },
+  "8390": {
+   "still_with_minter": true
+  },
+  "8392": {
+   "still_with_minter": true
+  },
+  "8400": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "8407": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": true
+  },
+  "8413": {
+   "still_with_minter": true
+  },
+  "8427": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "8437": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "8444": {
+   "still_with_minter": true
+  },
+  "8447": {
+   "still_with_minter": true
+  },
+  "8448": {
+   "still_with_minter": true
+  },
+  "8459": {
+   "still_with_minter": true
+  },
+  "8461": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "8464": {
+   "still_with_minter": true
+  },
+  "8465": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "8466": {
+   "still_with_minter": true
+  },
+  "8467": {
+   "still_with_minter": true
+  },
+  "8471": {
+   "still_with_minter": true
+  },
+  "8491": {
+   "still_with_minter": true
+  },
+  "8493": {
+   "still_with_minter": true
+  },
+  "8495": {
+   "still_with_minter": true
+  },
+  "8513": {
+   "still_with_minter": true
+  },
+  "8516": {
+   "still_with_minter": true
+  },
+  "8519": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": true
+  },
+  "8533": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "8535": {
+   "still_with_minter": true
+  },
+  "8538": {
+   "still_with_minter": true
+  },
+  "8542": {
+   "still_with_minter": true
+  },
+  "8545": {
+   "still_with_minter": true
+  },
+  "8557": {
+   "oldest_of": [
+    {
+     "value": "contamination Unknown Liquid",
+     "pool": 109,
+     "tied_with": 0
+    }
+   ]
+  },
+  "8566": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "8568": {
+   "still_with_minter": true
+  },
+  "8572": {
+   "still_with_minter": true
+  },
+  "8576": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "8580": {
+   "still_with_minter": true
+  },
+  "8584": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "8588": {
+   "still_with_minter": true
+  },
+  "8589": {
+   "still_with_minter": true
+  },
+  "8601": {
+   "still_with_minter": true
+  },
+  "8607": {
+   "oldest_of": [
+    {
+     "value": "vandalized",
+     "pool": 26,
+     "tied_with": 0
+    }
+   ],
+   "still_with_minter": true
+  },
+  "8613": {
+   "still_with_minter": true
+  },
+  "8617": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "8618": {
+   "still_with_minter": true
+  },
+  "8625": {
+   "still_with_minter": true
+  },
+  "8635": {
+   "still_with_minter": true
+  },
+  "8641": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "8656": {
+   "still_with_minter": true
+  },
+  "8681": {
+   "still_with_minter": true
+  },
+  "8693": {
+   "still_with_minter": true
+  },
+  "8695": {
+   "still_with_minter": true
+  },
+  "8704": {
+   "still_with_minter": true
+  },
+  "8709": {
+   "still_with_minter": true
+  },
+  "8711": {
+   "still_with_minter": true
+  },
+  "8714": {
+   "still_with_minter": true
+  },
+  "8715": {
+   "still_with_minter": true
+  },
+  "8726": {
+   "still_with_minter": true
+  },
+  "8733": {
+   "still_with_minter": true
+  },
+  "8739": {
+   "still_with_minter": true
+  },
+  "8741": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "8748": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "8750": {
+   "still_with_minter": true
+  },
+  "8754": {
+   "still_with_minter": true
+  },
+  "8755": {
+   "still_with_minter": true
+  },
+  "8767": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "8774": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": true
+  },
+  "8775": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "8785": {
+   "still_with_minter": true
+  },
+  "8790": {
+   "still_with_minter": true
+  },
+  "8808": {
+   "still_with_minter": true
+  },
+  "8809": {
+   "still_with_minter": true
+  },
+  "8813": {
+   "still_with_minter": true
+  },
+  "8815": {
+   "still_with_minter": true
+  },
+  "8830": {
+   "still_with_minter": true
+  },
+  "8844": {
+   "still_with_minter": true
+  },
+  "8845": {
+   "still_with_minter": true
+  },
+  "8847": {
+   "still_with_minter": true
+  },
+  "8848": {
+   "still_with_minter": true
+  },
+  "8856": {
+   "still_with_minter": true
+  },
+  "8865": {
+   "still_with_minter": true
+  },
+  "8869": {
+   "still_with_minter": true
+  },
+  "8887": {
+   "still_with_minter": true
+  },
+  "8892": {
+   "still_with_minter": true
+  },
+  "8896": {
+   "still_with_minter": true
+  },
+  "8899": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "8905": {
+   "still_with_minter": true
+  },
+  "8908": {
+   "still_with_minter": true
+  },
+  "8910": {
+   "still_with_minter": true
+  },
+  "8917": {
+   "still_with_minter": true
+  },
+  "8918": {
+   "still_with_minter": true
+  },
+  "8926": {
+   "still_with_minter": true
+  },
+  "8939": {
+   "still_with_minter": true
+  },
+  "8943": {
+   "still_with_minter": true
+  },
+  "8949": {
+   "still_with_minter": true
+  },
+  "8957": {
+   "still_with_minter": true
+  },
+  "8968": {
+   "still_with_minter": true
+  },
+  "8983": {
+   "still_with_minter": true
+  },
+  "8985": {
+   "inscription_rank": 6
+  },
+  "8988": {
+   "still_with_minter": true
+  },
+  "8990": {
+   "still_with_minter": true
+  },
+  "8991": {
+   "still_with_minter": true
+  },
+  "8998": {
+   "still_with_minter": true
+  },
+  "9003": {
+   "still_with_minter": true
+  },
+  "9004": {
+   "still_with_minter": true
+  },
+  "9009": {
+   "still_with_minter": true
+  },
+  "9017": {
+   "still_with_minter": true
+  },
+  "9018": {
+   "still_with_minter": true
+  },
+  "9025": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "9031": {
+   "still_with_minter": true
+  },
+  "9032": {
+   "still_with_minter": true
+  },
+  "9055": {
+   "still_with_minter": true
+  },
+  "9056": {
+   "still_with_minter": true
+  },
+  "9068": {
+   "still_with_minter": true
+  },
+  "9080": {
+   "still_with_minter": true
+  },
+  "9083": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "9084": {
+   "oldest_of": [
+    {
+     "value": "striated",
+     "pool": 498,
+     "tied_with": 1
+    }
+   ]
+  },
+  "9085": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "9097": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "9100": {
+   "still_with_minter": true
+  },
+  "9104": {
+   "still_with_minter": true
+  },
+  "9108": {
+   "still_with_minter": true
+  },
+  "9113": {
+   "still_with_minter": true
+  },
+  "9117": {
+   "still_with_minter": true
+  },
+  "9123": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "9124": {
+   "still_with_minter": true
+  },
+  "9127": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "9140": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "9142": {
+   "still_with_minter": true
+  },
+  "9154": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "9158": {
+   "still_with_minter": true
+  },
+  "9164": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "9165": {
+   "still_with_minter": true
+  },
+  "9166": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "9168": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "9170": {
+   "still_with_minter": true
+  },
+  "9172": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "9180": {
+   "still_with_minter": true
+  },
+  "9181": {
+   "still_with_minter": true
+  },
+  "9188": {
+   "still_with_minter": true
+  },
+  "9199": {
+   "still_with_minter": true
+  },
+  "9203": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "9205": {
+   "still_with_minter": true
+  },
+  "9206": {
+   "still_with_minter": true
+  },
+  "9209": {
+   "still_with_minter": true
+  },
+  "9219": {
+   "still_with_minter": true
+  },
+  "9236": {
+   "still_with_minter": true
+  },
+  "9243": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "9265": {
+   "still_with_minter": true
+  },
+  "9267": {
+   "still_with_minter": true
+  },
+  "9268": {
+   "still_with_minter": true
+  },
+  "9270": {
+   "inscription_rank_from_last": 10
+  },
+  "9284": {
+   "still_with_minter": true
+  },
+  "9285": {
+   "still_with_minter": true
+  },
+  "9291": {
+   "inscription_rank": 4
+  },
+  "9302": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "9303": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "9305": {
+   "still_with_minter": true
+  },
+  "9309": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "9313": {
+   "still_with_minter": true
+  },
+  "9319": {
+   "still_with_minter": true
+  },
+  "9321": {
+   "still_with_minter": true
+  },
+  "9324": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "9330": {
+   "still_with_minter": true
+  },
+  "9337": {
+   "still_with_minter": true
+  },
+  "9344": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "9345": {
+   "still_with_minter": true
+  },
+  "9348": {
+   "still_with_minter": true
+  },
+  "9349": {
+   "still_with_minter": true
+  },
+  "9375": {
+   "still_with_minter": true
+  },
+  "9381": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "9385": {
+   "still_with_minter": true
+  },
+  "9389": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "9391": {
+   "still_with_minter": true
+  },
+  "9392": {
+   "still_with_minter": true
+  },
+  "9394": {
+   "still_with_minter": true
+  },
+  "9395": {
+   "still_with_minter": true
+  },
+  "9396": {
+   "still_with_minter": true
+  },
+  "9398": {
+   "still_with_minter": true
+  },
+  "9400": {
+   "still_with_minter": true
+  },
+  "9404": {
+   "still_with_minter": true
+  },
+  "9405": {
+   "still_with_minter": true
+  },
+  "9413": {
+   "still_with_minter": true
+  },
+  "9426": {
+   "still_with_minter": true
+  },
+  "9428": {
+   "still_with_minter": true
+  },
+  "9442": {
+   "still_with_minter": true
+  },
+  "9450": {
+   "still_with_minter": true
+  },
+  "9451": {
+   "still_with_minter": true
+  },
+  "9452": {
+   "still_with_minter": true
+  },
+  "9456": {
+   "still_with_minter": true
+  },
+  "9457": {
+   "still_with_minter": true
+  },
+  "9466": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "9476": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "9483": {
+   "still_with_minter": true
+  },
+  "9490": {
+   "still_with_minter": true
+  },
+  "9493": {
+   "still_with_minter": true
+  },
+  "9502": {
+   "still_with_minter": true
+  },
+  "9507": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "9512": {
+   "still_with_minter": true
+  },
+  "9514": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "9524": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "9526": {
+   "oldest_of": [
+    {
+     "value": "verdigris",
+     "pool": 1884,
+     "tied_with": 1
+    },
+    {
+     "value": "notable verdigris",
+     "pool": 1493,
+     "tied_with": 1
+    },
+    {
+     "value": "contaminated",
+     "pool": 895,
+     "tied_with": 0
+    },
+    {
+     "value": "obsidian",
+     "pool": 1757,
+     "tied_with": 1
+    },
+    {
+     "value": "notable obsidian",
+     "pool": 1499,
+     "tied_with": 0
+    },
+    {
+     "value": "significant desert",
+     "pool": 129,
+     "tied_with": 0
+    },
+    {
+     "value": "desert",
+     "pool": 598,
+     "tied_with": 0
+    },
+    {
+     "value": "faceless",
+     "pool": 85,
+     "tied_with": 0
+    },
+    {
+     "value": "contamination Obscure Adhesive",
+     "pool": 150,
+     "tied_with": 0
+    }
+   ],
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "9527": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "9532": {
+   "still_with_minter": true
+  },
+  "9533": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": true,
+   "still_with_minter": true
+  },
+  "9534": {
+   "still_with_minter": true
+  },
+  "9551": {
+   "still_with_minter": true
+  },
+  "9558": {
+   "still_with_minter": true
+  },
+  "9560": {
+   "still_with_minter": true
+  },
+  "9563": {
+   "inscription_rank": 7
+  },
+  "9564": {
+   "still_with_minter": true
+  },
+  "9565": {
+   "still_with_minter": true
+  },
+  "9567": {
+   "still_with_minter": true
+  },
+  "9571": {
+   "still_with_minter": true
+  },
+  "9574": {
+   "still_with_minter": true
+  },
+  "9575": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "9581": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "9582": {
+   "still_with_minter": true
+  },
+  "9588": {
+   "still_with_minter": true
+  },
+  "9596": {
+   "still_with_minter": true
+  },
+  "9597": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "9603": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "9606": {
+   "still_with_minter": true
+  },
+  "9612": {
+   "still_with_minter": true
+  },
+  "9620": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "9622": {
+   "still_with_minter": true
+  },
+  "9629": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "9638": {
+   "still_with_minter": true
+  },
+  "9639": {
+   "still_with_minter": true
+  },
+  "9650": {
+   "still_with_minter": true
+  },
+  "9657": {
+   "still_with_minter": true
+  },
+  "9662": {
+   "still_with_minter": true
+  },
+  "9668": {
+   "still_with_minter": true
+  },
+  "9678": {
+   "still_with_minter": true
+  },
+  "9682": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "9684": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "9685": {
+   "still_with_minter": true
+  },
+  "9691": {
+   "still_with_minter": true
+  },
+  "9692": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": true
+  },
+  "9703": {
+   "still_with_minter": true
+  },
+  "9704": {
+   "still_with_minter": true
+  },
+  "9707": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "9711": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "9712": {
+   "still_with_minter": true
+  },
+  "9714": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "9717": {
+   "still_with_minter": true
+  },
+  "9720": {
+   "still_with_minter": true
+  },
+  "9721": {
+   "still_with_minter": true
+  },
+  "9727": {
+   "still_with_minter": true
+  },
+  "9728": {
+   "still_with_minter": true
+  },
+  "9735": {
+   "still_with_minter": true
+  },
+  "9741": {
+   "still_with_minter": true
+  },
+  "9744": {
+   "still_with_minter": true
+  },
+  "9746": {
+   "still_with_minter": true
+  },
+  "9747": {
+   "still_with_minter": true
+  },
+  "9767": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "9769": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "9775": {
+   "still_with_minter": true
+  },
+  "9778": {
+   "still_with_minter": true
+  },
+  "9780": {
+   "still_with_minter": true
+  },
+  "9786": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "9787": {
+   "still_with_minter": true
+  },
+  "9788": {
+   "still_with_minter": true
+  },
+  "9791": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "9797": {
+   "still_with_minter": true
+  },
+  "9798": {
+   "still_with_minter": true
+  },
+  "9808": {
+   "still_with_minter": true
+  },
+  "9815": {
+   "still_with_minter": true
+  },
+  "9819": {
+   "still_with_minter": true
+  },
+  "9826": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "9828": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": true
+  },
+  "9832": {
+   "still_with_minter": true
+  },
+  "9833": {
+   "still_with_minter": true
+  },
+  "9849": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "9861": {
+   "still_with_minter": true
+  },
+  "9865": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "9867": {
+   "still_with_minter": true
+  },
+  "9878": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "9880": {
+   "still_with_minter": true
+  },
+  "9881": {
+   "still_with_minter": true
+  },
+  "9884": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "9886": {
+   "still_with_minter": true
+  },
+  "9889": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "9893": {
+   "still_with_minter": true
+  },
+  "9898": {
+   "still_with_minter": true
+  },
+  "9902": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "9906": {
+   "still_with_minter": true
+  },
+  "9908": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": true
+  },
+  "9913": {
+   "still_with_minter": true
+  },
+  "9917": {
+   "still_with_minter": true
+  },
+  "9920": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "9924": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "9925": {
+   "still_with_minter": true
+  },
+  "9929": {
+   "still_with_minter": true
+  },
+  "9932": {
+   "still_with_minter": true
+  },
+  "9935": {
+   "still_with_minter": true
+  },
+  "9938": {
+   "still_with_minter": true
+  },
+  "9950": {
+   "still_with_minter": true
+  },
+  "9955": {
+   "oldest_of": [
+    {
+     "value": "contamination Blood",
+     "pool": 17,
+     "tied_with": 0
+    }
+   ]
+  },
+  "9956": {
+   "still_with_minter": true
+  },
+  "9958": {
+   "still_with_minter": true
+  },
+  "9960": {
+   "still_with_minter": true
+  },
+  "9972": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false,
+   "still_with_minter": true
+  },
+  "9976": {
+   "still_with_minter": true
+  },
+  "9979": {
+   "still_with_minter": true
+  },
+  "9981": {
+   "still_with_minter": true
+  },
+  "9991": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  },
+  "9992": {
+   "unique_trait_profile": true,
+   "site_1of1_trait_combo": false
+  }
+ }
+}
