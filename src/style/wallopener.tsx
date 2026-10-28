@@ -27,7 +27,7 @@ import { findPhrase, type Alignment } from "../lib/timeline";
  */
 
 type Anchored = { alignment: Alignment; shotStartFrame: number };
-type Clip = { src: string; width: number; height: number; frames: number; coin: { cx: number; cy: number; d: number }; credit: string; note?: string; alpha?: boolean };
+type Clip = { src: string; width: number; height: number; frames: number; coin: { cx: number; cy: number; d: number }; credit: string; credit_at_end?: boolean; note?: string; alpha?: boolean };
 
 const VIEW = { x0: 40, y0: SAFE.essential.y0 };   // where WallBoard puts board unit (0,0) at its top view, k = 1
 
@@ -80,7 +80,7 @@ export const WallOpener: React.FC<Anchored & {
       </div>
       {variant === "rush" && b && frame < end ? <Rush board={b} frame={frame} end={end} out={out} /> : null}
       {variant === "turn" && b && frame < end + 2 ? <Turn board={b} frame={frame} end={end} clip={clip} /> : null}
-      {showcase && clip ? (
+      {showcase && clip && !clip.credit_at_end ? (
         // The credit leaves before the card moves: left in place it lands on the zoomed card's badges.
         <div style={{ position: "absolute", left: SAFE.essential.x0 + 24, top: 1262, width: SAFE.essential.x1 - SAFE.essential.x0 - 48,
                       opacity: interpolate(frame, [creditOut - 8, creditOut], [1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }) }}>
@@ -184,7 +184,7 @@ const Turn: React.FC<{ board: Board; frame: number; end: number; clip?: Clip }> 
       <div style={{ opacity: 1 - t }}>
         <Title name={board.name} frame={frame} />
         <div style={{ position: "absolute", left: SAFE.essential.x0 + 24, top: 1236, width: SAFE.essential.x1 - SAFE.essential.x0 - 48, opacity: 0.8 }}>
-          <SafeText role="label" fontSize={42} maxLines={1} color={COLOR.inkDim} style={{ fontFamily: TYPE.body, textAlign: "center" }}>{clip.credit}</SafeText>
+          {clip.credit_at_end ? null : <SafeText role="label" fontSize={42} maxLines={1} color={COLOR.inkDim} style={{ fontFamily: TYPE.body, textAlign: "center" }}>{clip.credit}</SafeText>}
           {clip.note ? <SafeText role="label" fontSize={42} maxLines={1} color={COLOR.accent} style={{ fontFamily: TYPE.mono, textAlign: "center" }}>{clip.note}</SafeText> : null}
         </div>
       </div>

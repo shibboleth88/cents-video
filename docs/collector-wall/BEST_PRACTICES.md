@@ -4,14 +4,22 @@ This is the one source for the format of every Collector Wall episode. Read it b
 
 The reference episode is **blacktongue** (`films/wall-blacktongue/` on branch `claude/project-thread-nkzn17`, PR #5). Copy its folder layout, timeline shape and caption builder.
 
-Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the Daidatep thread's first findings. 2026-10-26: §5 "Delivery check" added from the GPT WBWA reel handover. 2026-10-27: narration voice changed to "eee" (§5); showcase opener is the series opening (§3); 3DCENTS credit wording approved (§4); badge zooms get the opener-style highlight (§4a); audit against the day's decisions: lead with the Wall's standout fact (§1), graded traits, fronts only, Cents on black, Daidatep (§2), no long still holds (§4a), dated snapshots (§4a).
+Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the Daidatep thread's first findings. 2026-10-26: §5 "Delivery check" added from the GPT WBWA reel handover. 2026-10-27: narration voice changed to "eee" (§5); showcase opener is the series opening (§3); 3DCENTS credit wording approved (§4); badge zooms get the opener-style highlight (§4a); audit against the day's decisions: lead with the Wall's standout fact (§1), graded traits, fronts only, Cents on black, Daidatep (§2), no long still holds (§4a), dated snapshots (§4a). 2026-10-28: find the focus with `wall_focus.py` (§1); seamless signature hand-offs, card to spin to still, front on cue (§3), approved as the series format; captioned render only (§5); end credits card, 3DCENTS credit moved there (§3 step 10, §4); "Lead" caption look (§5).
 
 ## 1. What an episode is
 
 - One claimed Wall per episode, as it appears on cents.vision/collectors.html under the Claimed filter.
 - The tone is matter-of-fact. Each episode just walks through what that collector has: standout Cents, Sets and badges.
 - Don't add essayistic framing or a reflection at the close. The user cut "the traits were named by collectors…" and "every Wall is a record that keeps changing".
-- **Lead with what is extraordinary about this Wall.** When a Wall has one standout distinction, build the episode around it and keep the rest short. For ScrappyT, that is one Cent of every one of the 19 visual traits (user, 2026-10-27). Before building on such a claim, check it against every claimed Wall, the artist wallet included. ScrappyT's holds: no other Wall has all 19, not even the artist wallet, which has no Iridescent.
+- **Find the focus by analysis, then lead with it (user, 2026-10-27/28).** In the user's words: "we should look for what the most notable quality of the wall is to find a focus for the video, and sometimes that is not the most rare Set". Build the episode around that quality and keep the rest short.
+  - **Run `pipeline/wall_focus.py` first:** `python3 pipeline/wall_focus.py --snapshot <dated snapshot dir> --wall <Name>` (from PR #18).
+    - It measures each Wall against all 2093 Walls on trait coverage (of 19), contamination types (of 12), full patinas (of 5), hoards of scarce values, Sets (from `set-counts.php`), 1/1 Years and Mints, year span and size.
+    - It ranks a quality by how many other collectors match or beat it. The artist wallet is noted, never counted as a rival.
+    - Its self-test must go red when the trait count is broken.
+    - The report for every claimed Wall is in `/mnt/project-files/collector-wall/focus/` (`wall_focus_2026-10-27.txt`).
+  - **Lead with the top row.** When rows are close, prefer coverage or a Set over a hoard (such as "most Glue Cents"), and use hoards as second beats.
+  - **An editor still chooses,** and the claim is verified on the dated snapshot before any script is written.
+  - **What it found:** ScrappyT has one Cent of every one of the 19 visual traits, and no other Wall does, not even the artist wallet. The user accepted v2, built around that: "this is a good video". The tool also agrees with the earlier picks: blacktongue's Full Spectrum with all 5 fulls (no other collector), and Daidatep's 12 of 12 contamination types (one of 2).
 - The length is whatever the Wall needs: blacktongue v5 is 84 s, ScrappyT about 2 min.
 - One thread per episode.
 
@@ -56,7 +64,7 @@ Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the D
        "moves": [{"at_phrase": "Its signature Cent", "target": {"cent": <n>, "in": "signature"}, "mark": true}],
        "progress": {"total_frames": <round(alignment duration * 30)>},
        "clip": {"src": "3dcents/<n>-360-30fps.mp4", "width": 1080, "height": 1920, "frames": 150,
-                "coin": {"cx": 539.5, "cy": 959.5, "d": 776}, "credit": "3D render: 3DCENTS by sinvalli"}}}
+                "coin": {"cx": 539.5, "cy": 959.5, "d": 776}, "credit": "3D render: 3DCENTS by sinvalli", "credit_at_end": true}}}
      ```
    - **It needs the signature Cent's 3DCENTS spin** (§4), so ask the user to export it at the start of an episode. It throws without a clip or a credit.
    - **Key the clip for the white card.** On the card, the opener uses an alpha copy of the spin, not the black-background mp4: with a dark disc, the coin shows a black circle whenever it turns edge-on. Make it from the 30 fps retime:
@@ -64,7 +72,18 @@ Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the D
      ffmpeg -i cent-<n>-360-1080x1920-30fps-retimed.mp4 -vf "format=yuva420p,geq=lum='lum(X,Y)':cb='cb(X,Y)':cr='cr(X,Y)':a='clip((lum(X,Y)-18)*40,0,255)'" -c:v libvpx-vp9 -pix_fmt yuva420p -auto-alt-ref 0 -b:v 4M cent-<n>-360-1080x1920-30fps-alpha.webm
      ```
      Then set `"src": "3dcents/<n>-360-30fps-alpha.webm", "alpha": true` in the opener's clip. The render's black sits at luma 16, so a threshold near 0 keys nothing. The `WallStandout` shot that follows stays on black and keeps the mp4. Keep both files in `/mnt/project-files/collector-wall/3dcents/`.
-   - The credit under the card fades out before the zoom onto the signature Cent (PR #14 a3ee33b), so it never sits on the zoomed badges.
+   - With `credit_at_end` (the default from 2026-10-28) there is no credit on the card. Without it, the credit under the card fades out before the zoom onto the signature Cent (PR #14 a3ee33b), so it never sits on the zoomed badges.
+   - **Seamless hand-offs: card spin, then large spin, then still (user, 2026-10-28; approved as the series format on blacktongue v6).** The signature Cent is one continuous object from the card to its own shot.
+     - **Card to large spin:** set `"join_prev": true` on the `WallStandout` shot (top level of the shot, not in props). That removes the dip through black between the two shots. The card then fades away around the turning Cent in its last 12 frames.
+       - In the shot's `clip`, `"sync": true` continues the turn at the same frame the card's turn had reached. This works because the opener's clip starts at film frame 0.
+       - `"enter_from": {cx, cy, d}` makes the Cent grow out of its slot instead of fading in. Measure the values on the opener's last frame: the slot's centre and the coin's full height, in screen pixels. blacktongue's are 540, 800, 495.
+     - **Large spin to still, on cue:** in the clip, `"still": {"src": "hires/<n>.webp", "at_phrase": "<cue>", "r": <coin radius>}`.
+       - The turn is retimed, at the speed nearest the export's own and within 0.6 to 1.6x, so the Cent faces fully front (clip frame 0) exactly when the cue starts.
+       - It then crossfades over 8 frames to the 1050px photo, drawn where any still `WallStandout` of that Cent draws it. A following still shot therefore cuts invisibly, and the shot can go on to a `zoom` on the photo.
+       - `r` is the coin's radius as a fraction of the photo: measure it with a threshold on the white background (#5185: 0.41).
+       - If no speed within that range can land the front on the cue, the render refuses and names the cue. Pick a cue a little later or earlier.
+     - **Choose the cue for the picture:** the still should arrive as the narration names something the photo shows. For blacktongue that is "carries a full desert patina".
+     - **Check:** look at the frames on both sides of each hand-off. The coin must not jump in size, position or angle.
    - **Still being tuned:** the user may change the speed, the order or the progress bar in the ScrappyT thread. Take the current settings from that thread. Reference renders: ScrappyT v1, and `/mnt/project-files/collector-wall/openers/opener-showcase_v1.mp4`.
    - The earlier opening, a cents.vision screenshot of the card zoomed onto the signature Cent, is retired for new episodes.
 2. **Zoom to the signature Cent on the card.** Once that sentence ends, the camera zooms onto the signature Cent on the card. Only then does the film cut to the individual view of that Cent: its number, year, and its traits ("…and is a Ghost Cent").
@@ -82,6 +101,16 @@ Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the D
 9. **Close.** "Find all of the Collector Walls on cents.vision under Collectors."
    - It sits over the cents.vision Traits Lab screenshot (`films/wall-blacktongue/data/traits_lab.png`).
    - The camera makes **one** zoom, onto "Collectors" in the menu, as the word is spoken. Add no other move before it.
+   - End it at `{"after_phrase": "under Collectors", "plus": 1.5}`, not at the end of the audio.
+10. **End credits card (user, 2026-10-28).** A wordless `Credits` shot, the same component as the One Cent series, from that cue to `{"at_end": true}`:
+    ```json
+    {"component": "Credits", "props": {"lines": [
+      "Images: Rutherford Chang via cents.vision (site by Dr. Martin Lehnen)",
+      "3D render: 3DCENTS by sinvalli",
+      "Collector Wall data: cents.vision, as of <Month Year>"], "url": "cents.gallery"}}
+    ```
+    - Add "Trait grades: Traits Atlas, CENTS Trait Council" when the film explains a grade (§2).
+    - The voiceover needs about 4.5 s of silence after its last word for this card. Pad `vo.wav` (`ffmpeg -af apad=whole_dur=<s>`) and raise `duration` in `script/alignment.json` to match.
 
 **Cover every badge on the card, as far as it makes sense.**
 - Skip a badge only when another part of the film already shows it. blacktongue's "Full Patinas held" badges, for example, are already shown by the Full Spectrum Set.
@@ -94,7 +123,7 @@ Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the D
 - **Cents do not rotate,** apart from the two exceptions below. Our own animations show each Cent still. The signature Cent turns only in its 3DCENTS render, in the opener (§3) and in its own shot. `WallCard` and `WallStandout` now default to `spin: 0`. Never use a 3D tilt. (User, 2026-10-25 13:56Z. The earlier rule allowed a flat 2D spin; blacktongue v4 and Daidatep v3 were made under it and are accepted as they are.)
   - Exception: the wheat flip (`CentFlip`) is a separate move and is still used.
   - **Exception: the signature Cent can rotate in a 3DCENTS render.** The user approved this on 2026-10-25 14:13Z. 3DCENTS is sinvalli's tool, not Chang's. sinvalli is happy for the tool and its renders to be used and shared.
-    - **Credit (approved by the user, 2026-10-27):** "3D render: 3DCENTS by sinvalli". It sits small under the coin for the whole clip shot, and also goes in the end credits.
+    - **Credit (approved by the user, 2026-10-27):** "3D render: 3DCENTS by sinvalli". It goes on the end credits card (§3 step 10), **not** under the coin (user, 2026-10-28: "we don't need the 3d render credit on the title card"). Set `"credit_at_end": true` on every clip, in the opener and in `WallStandout`. The credit string is still required, so a clip without one throws. Correction: until 2026-10-28 this line put the credit under the coin for the whole clip shot.
     - **Files:** the user exports the spins by hand into "/Users/moobook/Pictures/cents shortlist", using the site's own file names: `cent-<n>-360-1080x1920-25fps-reel` (Daidatep's #9908 came first).
       - Each episode thread copies its file into `/mnt/project-files/collector-wall/3dcents/`.
       - The exports are 25 fps. Retime them frame for frame to 30 fps:
@@ -108,7 +137,7 @@ Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the D
         - Measure `cx`, `cy` and `d` on frame 0. For the reel export: 539.5, 959.5, 776.
         - The clip's black background drops out with a lighten blend onto a group filled with `COLOR.bg`. Keep that fill: any opacity above it isolates the blend, and the black rectangle shows.
         - It throws with `zoom` or `spin`, or with an empty `credit`.
-        - The credit sits under the coin in the body font (mono doesn't fit one line at the 42px floor).
+        - Without `credit_at_end`, the credit sits under the coin in the body font (mono doesn't fit one line at the 42px floor). Episodes now always set `credit_at_end`.
       - **The reverse shows upside down mid-turn.** US cents are struck in coin alignment, so this is correct and not a render bug.
       - Ask the user for the export if it isn't there. Don't screen-record the site.
     - **Facts:** the render makes one full turn about the vertical axis every 6 s. The export offers IG Reel 1080x1920 framing at 720p to 4K. It is rebuilt from the 1050px cents.vision photos, so it carries no more detail than they do, and it is darker and lower in contrast than the photo.
@@ -177,7 +206,7 @@ python3 pipeline/stage_cents.py --src <sovrn-onchain>/cents <every Cent number o
 - With `until_phrase`, the move pans linearly until that phrase. That is how to scroll.
 - `mark: true` outlines the target in copper.
 - **No long still holds.** Keep something moving or changing at least every few seconds. ScrappyT v1's Spectrum row sat still for about 10 s while a grade was explained, and its thread flagged it.
-- **A badge being talked about gets the opener's highlight (user, 2026-10-27).** When the narration names a single badge and the camera zooms onto it, light that badge up more prominently than the thin `mark` outline. Use the same style as the showcase opener's light-up: a copper ring with a glow, a slight brightness lift, and a small scale-up, held while it is spoken. Until `mark` does this by default on badge targets, add it explicitly in the episode. A `sweep` limited to that badge's row will not do, because it lights the whole row. This applies to every badge zoom (club, Wheat, Sets, Diamond Hands, Mint Keeper, trait tags).
+- **A badge being talked about gets the opener's highlight (user, 2026-10-27).** When the narration names a single badge and the camera zooms onto it, light that badge up more prominently than the thin `mark` outline. Use the same style as the showcase opener's light-up: a copper ring with a glow, a slight brightness lift, and a small scale-up, held while it is spoken. `mark: true` on a `{badge}` target now does this by default: copper ring and glow, a copper wash, bold full-strength text, and a slight scale-up, in place of the thin frame. Cents and boxes keep the frame. Episodes made before this change pick it up when re-rendered. This applies to every badge zoom (club, Wheat, Sets, Diamond Hands, Mint Keeper, trait tags).
 - `zoom` caps the magnification. The default is 2.6.
 
 **What the board shows:** `show: "card"` draws the card alone. The user wants this for the Wall itself: the card should not carry the "N CENTS in this wall" collection rows. `show: "grid"` draws the collection rows alone, which are for singling out Cents (the wheat pennies, a 1955-D). The default "all" draws both and is only kept for older episodes. (User, 2026-10-25; added on PR #8.)
@@ -208,13 +237,17 @@ For a trait you must see on the coin itself (a date, a mint mark), cut from the 
   - It refuses to run unless the joined cues equal `voiceover.txt` exactly.
   - Cues break at sentence and shot boundaries.
   - Captions must be safe on mobile.
+  - **Caption look: "Lead" (the user's "captions-1"), for every film from 2026-10-28.** There's no box, just a soft dark scrim. Words already said are white, upcoming words are dim, and the word being spoken is copper (#d9925c). Numbers 10 to 99 show as digits so they match the readouts, and hyphenated words never break across lines. The SRT is unchanged.
+    - The code is in PR #22 (`src/style/captions.tsx`, prop `captionStyle` on `Video`). Once #22 is merged, "lead" is the default and `VideoCaptioned` renders it. Until then, render from that branch with `--props='{"captionStyle":"lead"}'`.
+    - To reproduce a version delivered before 2026-10-28 (blacktongue v6.1 and earlier), use `captionStyle: "classic"`.
+    - Sample: `/mnt/project-files/captions-styles/captions-1_lead_scrappyt.mp4`.
 - **Timeline anchors** are phrases from the alignment.
   - They must be unique. Use four words or more when a phrase repeats.
   - A move's phrase must fall after the start of its shot.
 - **Before rendering:** render stills of every shot. `SafeText` fails a render when a label wraps past its line count, so shorten the label rather than the check.
-- **Render** captioned (`VideoCaptioned`) and clean (`Video`), plus an SRT.
+- **Render the captioned version only** (`VideoCaptioned`), plus the SRT (user, 2026-10-28). A clean version is no longer delivered by default. It can be rendered from the same committed timeline at any time with the `Video` composition, so keep each delivered version reproducible: commit its timeline, and keep its audio and its `public/` assets (3DCENTS clips, hires fronts) in `/mnt/project-files/collector-wall/`.
   - Use `--browser-executable=/opt/pw-browsers/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell`.
-  - Deliver to `/mnt/project-files/collector-wall/wall-<name>_vN_{captioned,clean}.mp4` and `_vN.srt`.
+  - Deliver to `/mnt/project-files/collector-wall/wall-<name>_vN_captioned.mp4` and `_vN.srt` (a `_vN_clean.mp4` only when asked).
 - **Numbering:** each revision is a new numbered version. Never overwrite an earlier one.
 - **Git:**
   - Work on the episode branch and open a draft PR.
@@ -245,7 +278,7 @@ ffmpeg -hide_banner -i "$f" -vf "blackdetect=d=0.1:pix_th=0.10,freezedetect=n=0.
 ### Practical notes from episodes (Daidatep v1 and v2, 2026-10-25)
 
 - **Fresh container setup:** run `npm ci` in the repo root before the first `npx remotion`.
-- **Alignment duration:** `script/alignment.json` must have a `duration` key, set to the length of `vo.wav` (the take plus 2.5 s of padding). Without it, the anchors and caption cutting throw a KeyError.
+- **Alignment duration:** `script/alignment.json` must have a `duration` key, set to the length of `vo.wav` (the take plus its padding, about 4.5 s now that the credits card follows the last word, §3 step 10). Without it, the anchors and caption cutting throw a KeyError.
 - **Caption builder:** prefer the generic builder in `films/wall-daidatep/captions/build_cues.py` over the per-episode WRITTEN lists.
   - A table maps each written token (5185, 1968, cents.vision) to its spoken form.
   - Each script word takes the timing of its spoken words.

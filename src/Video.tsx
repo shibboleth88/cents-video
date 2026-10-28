@@ -6,7 +6,7 @@ import { REGISTRY, CaptionLayer, type ComponentName } from "./style/components";
 import { DIAGRAMS, type DiagramName } from "./style/diagrams";
 import { Backdrop, Plate, type Asset } from "./style/plates";
 import { Atmosphere } from "./style/atmosphere";
-import { OpeningShotCtx } from "./style/motion";
+import { OpeningShotCtx, ShotJoinCtx } from "./style/motion";
 import { StyledCaptions, type CaptionStyle } from "./style/captions";
 import { resolveShots, type Alignment, type Timeline } from "./lib/timeline";
 
@@ -29,7 +29,7 @@ export const Video: React.FC<Props> = ({ timeline, alignment, assets, cues, mode
     <ModeCtx.Provider value={mode}>
       <AbsoluteFill data-canvas-root="1" style={{ background: COLOR.bg }}>
         {voiceover && mode === "full" ? <Audio src={staticFile(voiceover)} /> : null}
-        {shots.map((s) => {
+        {shots.map((s, si) => {
           const name = (s.component ?? (s.asset_id ? "Plate" : "")) as string;
           const bd = (s.props as any)?.backdrop as string | undefined;
           const bdAsset = bd ? assets[bd] : undefined;
@@ -65,9 +65,11 @@ export const Video: React.FC<Props> = ({ timeline, alignment, assets, cues, mode
           return (
             <Sequence key={s.shot_id} from={s.fromFrame} durationInFrames={s.durationInFrames} name={s.shot_id}>
               <OpeningShotCtx.Provider value={s.fromFrame === 0}>
+              <ShotJoinCtx.Provider value={{ in: !!(s as any).join_prev, out: !!(shots[si + 1] as any)?.join_prev }}>
                 {bdAsset ? <Backdrop asset={bdAsset} focus={(s.props as any)?.backdropFocus} dim={(s.props as any)?.backdropDim} seed={s.shot_id} /> : null}
                 {/* @ts-expect-error props are validated against the schema, not the type system */}
                 <C {...props} />
+              </ShotJoinCtx.Provider>
               </OpeningShotCtx.Provider>
             </Sequence>
           );

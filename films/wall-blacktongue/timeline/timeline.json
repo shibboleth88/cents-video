@@ -48,7 +48,8 @@
       "d": 776
      },
      "credit": "3D render: 3DCENTS by sinvalli",
-     "alpha": true
+     "alpha": true,
+     "credit_at_end": true
     }
    }
   },
@@ -78,9 +79,22 @@
       "cy": 959.5,
       "d": 776
      },
-     "credit": "3D render: 3DCENTS by sinvalli"
+     "credit": "3D render: 3DCENTS by sinvalli",
+     "sync": true,
+     "still": {
+      "src": "hires/5185.webp",
+      "at_phrase": "carries a full desert patina",
+      "r": 0.41
+     },
+     "enter_from": {
+      "cx": 540,
+      "cy": 800,
+      "d": 495
+     },
+     "credit_at_end": true
     }
-   }
+   },
+   "join_prev": true
   },
   {
    "shot_id": "w02_grid",
@@ -646,7 +660,8 @@
     "at_phrase": "Find all of the Collector"
    },
    "end": {
-    "at_end": true
+    "after_phrase": "under Collectors",
+    "plus": 1.5
    },
    "purpose": "Where to find every Wall: the cents.vision Traits Lab (user's screenshot), zooming onto Collectors in the menu.",
    "visual_kind": "screenshot",
@@ -667,6 +682,27 @@
       "mark": true
      }
     ]
+   }
+  },
+  {
+   "shot_id": "w13_credits",
+   "start": {
+    "after_phrase": "under Collectors",
+    "plus": 1.5
+   },
+   "end": {
+    "at_end": true
+   },
+   "purpose": "End credits (user, 2026-10-28: the 3DCENTS credit moves here from under the coin).",
+   "visual_kind": "code",
+   "component": "Credits",
+   "props": {
+    "lines": [
+     "Images: Rutherford Chang via cents.vision (site by Dr. Martin Lehnen)",
+     "3D render: 3DCENTS by sinvalli",
+     "Collector Wall data: cents.vision, as of October 2026"
+    ],
+    "url": "cents.gallery"
    }
   }
  ],
