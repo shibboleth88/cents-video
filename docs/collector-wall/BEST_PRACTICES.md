@@ -4,14 +4,22 @@ This is the one source for the format of every Collector Wall episode. Read it b
 
 The reference episode is **blacktongue** (`films/wall-blacktongue/` on branch `claude/project-thread-nkzn17`, PR #5). Copy its folder layout, timeline shape and caption builder.
 
-Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the Daidatep thread's first findings. 2026-10-26: §5 "Delivery check" added from the GPT WBWA reel handover. 2026-10-27: narration voice changed to "eee" (§5); showcase opener is the series opening (§3); 3DCENTS credit wording approved (§4); badge zooms get the opener-style highlight (§4a); audit against the day's decisions: lead with the Wall's standout fact (§1), graded traits, fronts only, Cents on black, Daidatep (§2), no long still holds (§4a), dated snapshots (§4a).
+Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the Daidatep thread's first findings. 2026-10-26: §5 "Delivery check" added from the GPT WBWA reel handover. 2026-10-27: narration voice changed to "eee" (§5); showcase opener is the series opening (§3); 3DCENTS credit wording approved (§4); badge zooms get the opener-style highlight (§4a); audit against the day's decisions: lead with the Wall's standout fact (§1), graded traits, fronts only, Cents on black, Daidatep (§2), no long still holds (§4a), dated snapshots (§4a). 2026-10-28: find the focus with `wall_focus.py` (§1).
 
 ## 1. What an episode is
 
 - One claimed Wall per episode, as it appears on cents.vision/collectors.html under the Claimed filter.
 - The tone is matter-of-fact. Each episode just walks through what that collector has: standout Cents, Sets and badges.
 - Don't add essayistic framing or a reflection at the close. The user cut "the traits were named by collectors…" and "every Wall is a record that keeps changing".
-- **Lead with what is extraordinary about this Wall.** When a Wall has one standout distinction, build the episode around it and keep the rest short. For ScrappyT, that is one Cent of every one of the 19 visual traits (user, 2026-10-27). Before building on such a claim, check it against every claimed Wall, the artist wallet included. ScrappyT's holds: no other Wall has all 19, not even the artist wallet, which has no Iridescent.
+- **Find the focus by analysis, then lead with it (user, 2026-10-27/28).** In the user's words: "we should look for what the most notable quality of the wall is to find a focus for the video, and sometimes that is not the most rare Set". Build the episode around that quality and keep the rest short.
+  - **Run `pipeline/wall_focus.py` first:** `python3 pipeline/wall_focus.py --snapshot <dated snapshot dir> --wall <Name>` (from PR #18).
+    - It measures each Wall against all 2093 Walls on trait coverage (of 19), contamination types (of 12), full patinas (of 5), hoards of scarce values, Sets (from `set-counts.php`), 1/1 Years and Mints, year span and size.
+    - It ranks a quality by how many other collectors match or beat it. The artist wallet is noted, never counted as a rival.
+    - Its self-test must go red when the trait count is broken.
+    - The report for every claimed Wall is in `/mnt/project-files/collector-wall/focus/` (`wall_focus_2026-10-27.txt`).
+  - **Lead with the top row.** When rows are close, prefer coverage or a Set over a hoard (such as "most Glue Cents"), and use hoards as second beats.
+  - **An editor still chooses,** and the claim is verified on the dated snapshot before any script is written.
+  - **What it found:** ScrappyT has one Cent of every one of the 19 visual traits, and no other Wall does, not even the artist wallet. The user accepted v2, built around that: "this is a good video". The tool also agrees with the earlier picks: blacktongue's Full Spectrum with all 5 fulls (no other collector), and Daidatep's 12 of 12 contamination types (one of 2).
 - The length is whatever the Wall needs: blacktongue v5 is 84 s, ScrappyT about 2 min.
 - One thread per episode.
 
