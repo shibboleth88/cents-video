@@ -45,7 +45,7 @@ export type Move = { at_phrase?: string; target: Target; until_phrase?: string; 
 export type Highlight = { at_phrase: string; until_phrase?: string; cents?: number[]; group?: string };
 export type Show = "all" | "card" | "grid";
 /** A 3DCENTS render of the signature Cent (sinvalli), already at 30 fps; `coin` is measured on its first frame. */
-export type SigClip = { src: string; width: number; height: number; frames: number; coin: { cx: number; cy: number; d: number }; credit: string;
+export type SigClip = { src: string; width: number; height: number; frames: number; coin: { cx: number; cy: number; d: number }; credit: string; credit_at_end?: boolean;
   /** true: src carries its own alpha (VP9 webm keyed off the render's black), so it sits on any card without a dark disc. */
   alpha?: boolean };
 /**

@@ -233,6 +233,8 @@ export const WallStandout: React.FC<Anchored & {
    * background is dropped with a lighten blend onto the stage colour.
    */
   clip?: { src: string; width: number; height: number; frames: number; coin: { cx: number; cy: number; d: number }; credit: string;
+    /** The credit is still required, but it goes on the end credits card instead of under the coin (user, 2026-10-28). */
+    credit_at_end?: boolean;
     /** Continue the turn where the opener's card left it (the opener's clip starts at film frame 0). */
     sync?: boolean;
     /**
@@ -342,7 +344,7 @@ export const WallStandout: React.FC<Anchored & {
     <div style={{ position: "absolute", inset: 0, opacity: fade }}>
       <Imagery>{coin}</Imagery>
       <NameBand title={title} subtitle={subtitle} />
-      {clip ? (
+      {clip && !clip.credit_at_end ? (
         <div style={{ position: "absolute", left: X0, top: STAGE.y1 - 60, width: X1 - X0, opacity: fadeIn(frame, 10) * 0.8 }}>
           <SafeText role="label" fontSize={42} maxLines={1} color={COLOR.inkDim} style={{ fontFamily: TYPE.body, textAlign: "center" }}>{clip.credit}</SafeText>
         </div>

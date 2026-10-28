@@ -4,7 +4,7 @@ This is the one source for the format of every Collector Wall episode. Read it b
 
 The reference episode is **blacktongue** (`films/wall-blacktongue/` on branch `claude/project-thread-nkzn17`, PR #5). Copy its folder layout, timeline shape and caption builder.
 
-Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the Daidatep thread's first findings. 2026-10-26: §5 "Delivery check" added from the GPT WBWA reel handover. 2026-10-27: narration voice changed to "eee" (§5); showcase opener is the series opening (§3); 3DCENTS credit wording approved (§4); badge zooms get the opener-style highlight (§4a); audit against the day's decisions: lead with the Wall's standout fact (§1), graded traits, fronts only, Cents on black, Daidatep (§2), no long still holds (§4a), dated snapshots (§4a). 2026-10-28: find the focus with `wall_focus.py` (§1); seamless signature hand-offs, card to spin to still, front on cue (§3), approved as the series format; captioned render only (§5).
+Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the Daidatep thread's first findings. 2026-10-26: §5 "Delivery check" added from the GPT WBWA reel handover. 2026-10-27: narration voice changed to "eee" (§5); showcase opener is the series opening (§3); 3DCENTS credit wording approved (§4); badge zooms get the opener-style highlight (§4a); audit against the day's decisions: lead with the Wall's standout fact (§1), graded traits, fronts only, Cents on black, Daidatep (§2), no long still holds (§4a), dated snapshots (§4a). 2026-10-28: find the focus with `wall_focus.py` (§1); seamless signature hand-offs, card to spin to still, front on cue (§3), approved as the series format; captioned render only (§5); end credits card, 3DCENTS credit moved there (§3 step 10, §4).
 
 ## 1. What an episode is
 
@@ -64,7 +64,7 @@ Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the D
        "moves": [{"at_phrase": "Its signature Cent", "target": {"cent": <n>, "in": "signature"}, "mark": true}],
        "progress": {"total_frames": <round(alignment duration * 30)>},
        "clip": {"src": "3dcents/<n>-360-30fps.mp4", "width": 1080, "height": 1920, "frames": 150,
-                "coin": {"cx": 539.5, "cy": 959.5, "d": 776}, "credit": "3D render: 3DCENTS by sinvalli"}}}
+                "coin": {"cx": 539.5, "cy": 959.5, "d": 776}, "credit": "3D render: 3DCENTS by sinvalli", "credit_at_end": true}}}
      ```
    - **It needs the signature Cent's 3DCENTS spin** (§4), so ask the user to export it at the start of an episode. It throws without a clip or a credit.
    - **Key the clip for the white card.** On the card, the opener uses an alpha copy of the spin, not the black-background mp4: with a dark disc, the coin shows a black circle whenever it turns edge-on. Make it from the 30 fps retime:
@@ -72,7 +72,7 @@ Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the D
      ffmpeg -i cent-<n>-360-1080x1920-30fps-retimed.mp4 -vf "format=yuva420p,geq=lum='lum(X,Y)':cb='cb(X,Y)':cr='cr(X,Y)':a='clip((lum(X,Y)-18)*40,0,255)'" -c:v libvpx-vp9 -pix_fmt yuva420p -auto-alt-ref 0 -b:v 4M cent-<n>-360-1080x1920-30fps-alpha.webm
      ```
      Then set `"src": "3dcents/<n>-360-30fps-alpha.webm", "alpha": true` in the opener's clip. The render's black sits at luma 16, so a threshold near 0 keys nothing. The `WallStandout` shot that follows stays on black and keeps the mp4. Keep both files in `/mnt/project-files/collector-wall/3dcents/`.
-   - The credit under the card fades out before the zoom onto the signature Cent (PR #14 a3ee33b), so it never sits on the zoomed badges.
+   - With `credit_at_end` (the default from 2026-10-28) there is no credit on the card. Without it, the credit under the card fades out before the zoom onto the signature Cent (PR #14 a3ee33b), so it never sits on the zoomed badges.
    - **Seamless hand-offs: card spin, then large spin, then still (user, 2026-10-28; approved as the series format on blacktongue v6).** The signature Cent is one continuous object from the card to its own shot.
      - **Card to large spin:** set `"join_prev": true` on the `WallStandout` shot (top level of the shot, not in props). That removes the dip through black between the two shots. The card then fades away around the turning Cent in its last 12 frames.
        - In the shot's `clip`, `"sync": true` continues the turn at the same frame the card's turn had reached. This works because the opener's clip starts at film frame 0.
@@ -101,6 +101,16 @@ Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the D
 9. **Close.** "Find all of the Collector Walls on cents.vision under Collectors."
    - It sits over the cents.vision Traits Lab screenshot (`films/wall-blacktongue/data/traits_lab.png`).
    - The camera makes **one** zoom, onto "Collectors" in the menu, as the word is spoken. Add no other move before it.
+   - End it at `{"after_phrase": "under Collectors", "plus": 1.5}`, not at the end of the audio.
+10. **End credits card (user, 2026-10-28).** A wordless `Credits` shot, the same component as the One Cent series, from that cue to `{"at_end": true}`:
+    ```json
+    {"component": "Credits", "props": {"lines": [
+      "Images: Rutherford Chang via cents.vision (site by Dr. Martin Lehnen)",
+      "3D render: 3DCENTS by sinvalli",
+      "Collector Wall data: cents.vision, as of <Month Year>"], "url": "cents.gallery"}}
+    ```
+    - Add "Trait grades: Traits Atlas, CENTS Trait Council" when the film explains a grade (§2).
+    - The voiceover needs about 4.5 s of silence after its last word for this card. Pad `vo.wav` (`ffmpeg -af apad=whole_dur=<s>`) and raise `duration` in `script/alignment.json` to match.
 
 **Cover every badge on the card, as far as it makes sense.**
 - Skip a badge only when another part of the film already shows it. blacktongue's "Full Patinas held" badges, for example, are already shown by the Full Spectrum Set.
@@ -113,7 +123,7 @@ Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the D
 - **Cents do not rotate,** apart from the two exceptions below. Our own animations show each Cent still. The signature Cent turns only in its 3DCENTS render, in the opener (§3) and in its own shot. `WallCard` and `WallStandout` now default to `spin: 0`. Never use a 3D tilt. (User, 2026-10-25 13:56Z. The earlier rule allowed a flat 2D spin; blacktongue v4 and Daidatep v3 were made under it and are accepted as they are.)
   - Exception: the wheat flip (`CentFlip`) is a separate move and is still used.
   - **Exception: the signature Cent can rotate in a 3DCENTS render.** The user approved this on 2026-10-25 14:13Z. 3DCENTS is sinvalli's tool, not Chang's. sinvalli is happy for the tool and its renders to be used and shared.
-    - **Credit (approved by the user, 2026-10-27):** "3D render: 3DCENTS by sinvalli". It sits small under the coin for the whole clip shot, and also goes in the end credits.
+    - **Credit (approved by the user, 2026-10-27):** "3D render: 3DCENTS by sinvalli". It goes on the end credits card (§3 step 10), **not** under the coin (user, 2026-10-28: "we don't need the 3d render credit on the title card"). Set `"credit_at_end": true` on every clip, in the opener and in `WallStandout`. The credit string is still required, so a clip without one throws. Correction: until 2026-10-28 this line put the credit under the coin for the whole clip shot.
     - **Files:** the user exports the spins by hand into "/Users/moobook/Pictures/cents shortlist", using the site's own file names: `cent-<n>-360-1080x1920-25fps-reel` (Daidatep's #9908 came first).
       - Each episode thread copies its file into `/mnt/project-files/collector-wall/3dcents/`.
       - The exports are 25 fps. Retime them frame for frame to 30 fps:
@@ -127,7 +137,7 @@ Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the D
         - Measure `cx`, `cy` and `d` on frame 0. For the reel export: 539.5, 959.5, 776.
         - The clip's black background drops out with a lighten blend onto a group filled with `COLOR.bg`. Keep that fill: any opacity above it isolates the blend, and the black rectangle shows.
         - It throws with `zoom` or `spin`, or with an empty `credit`.
-        - The credit sits under the coin in the body font (mono doesn't fit one line at the 42px floor).
+        - Without `credit_at_end`, the credit sits under the coin in the body font (mono doesn't fit one line at the 42px floor). Episodes now always set `credit_at_end`.
       - **The reverse shows upside down mid-turn.** US cents are struck in coin alignment, so this is correct and not a render bug.
       - Ask the user for the export if it isn't there. Don't screen-record the site.
     - **Facts:** the render makes one full turn about the vertical axis every 6 s. The export offers IG Reel 1080x1920 framing at 720p to 4K. It is rebuilt from the 1050px cents.vision photos, so it carries no more detail than they do, and it is darker and lower in contrast than the photo.

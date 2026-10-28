@@ -1,5 +1,5 @@
 {
- "_source": "eo v4 take 1 (eleven_v4, gen h38g4S9DRKlEFxQLpKpg), transcribed with scribe_v1; word-for-word equal to audio/tts_text.txt",
+ "_source": "eo v4 take 1 (eleven_v4, gen h38g4S9DRKlEFxQLpKpg), transcribed with scribe_v1; word-for-word equal to audio/tts_text.txt; 2026-10-28: 4.5 s of silence added at the end for the credits card",
  "words": [
   {
    "word": "This",
@@ -1077,5 +1077,5 @@
    "end": 81.36
   }
  ],
- "duration": 83.86
+ "duration": 88.36
 }
