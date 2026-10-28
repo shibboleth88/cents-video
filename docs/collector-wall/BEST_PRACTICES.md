@@ -4,7 +4,7 @@ This is the one source for the format of every Collector Wall episode. Read it b
 
 The reference episode is **blacktongue** (`films/wall-blacktongue/` on branch `claude/project-thread-nkzn17`, PR #5). Copy its folder layout, timeline shape and caption builder.
 
-Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the Daidatep thread's first findings. 2026-10-26: §5 "Delivery check" added from the GPT WBWA reel handover. 2026-10-27: narration voice changed to "eee" (§5); showcase opener is the series opening (§3); 3DCENTS credit wording approved (§4); badge zooms get the opener-style highlight (§4a); audit against the day's decisions: lead with the Wall's standout fact (§1), graded traits, fronts only, Cents on black, Daidatep (§2), no long still holds (§4a), dated snapshots (§4a). 2026-10-28: find the focus with `wall_focus.py` (§1); seamless signature hand-offs, card to spin to still, front on cue (§3).
+Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the Daidatep thread's first findings. 2026-10-26: §5 "Delivery check" added from the GPT WBWA reel handover. 2026-10-27: narration voice changed to "eee" (§5); showcase opener is the series opening (§3); 3DCENTS credit wording approved (§4); badge zooms get the opener-style highlight (§4a); audit against the day's decisions: lead with the Wall's standout fact (§1), graded traits, fronts only, Cents on black, Daidatep (§2), no long still holds (§4a), dated snapshots (§4a). 2026-10-28: find the focus with `wall_focus.py` (§1); seamless signature hand-offs, card to spin to still, front on cue (§3), approved as the series format; captioned render only (§5).
 
 ## 1. What an episode is
 
@@ -73,7 +73,7 @@ Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the D
      ```
      Then set `"src": "3dcents/<n>-360-30fps-alpha.webm", "alpha": true` in the opener's clip. The render's black sits at luma 16, so a threshold near 0 keys nothing. The `WallStandout` shot that follows stays on black and keeps the mp4. Keep both files in `/mnt/project-files/collector-wall/3dcents/`.
    - The credit under the card fades out before the zoom onto the signature Cent (PR #14 a3ee33b), so it never sits on the zoomed badges.
-   - **Seamless hand-offs: card spin, then large spin, then still (user, 2026-10-28).** The signature Cent is one continuous object from the card to its own shot.
+   - **Seamless hand-offs: card spin, then large spin, then still (user, 2026-10-28; approved as the series format on blacktongue v6).** The signature Cent is one continuous object from the card to its own shot.
      - **Card to large spin:** set `"join_prev": true` on the `WallStandout` shot (top level of the shot, not in props). That removes the dip through black between the two shots. The card then fades away around the turning Cent in its last 12 frames.
        - In the shot's `clip`, `"sync": true` continues the turn at the same frame the card's turn had reached. This works because the opener's clip starts at film frame 0.
        - `"enter_from": {cx, cy, d}` makes the Cent grow out of its slot instead of fading in. Measure the values on the opener's last frame: the slot's centre and the coin's full height, in screen pixels. blacktongue's are 540, 800, 495.
@@ -231,9 +231,9 @@ For a trait you must see on the coin itself (a date, a mint mark), cut from the 
   - They must be unique. Use four words or more when a phrase repeats.
   - A move's phrase must fall after the start of its shot.
 - **Before rendering:** render stills of every shot. `SafeText` fails a render when a label wraps past its line count, so shorten the label rather than the check.
-- **Render** captioned (`VideoCaptioned`) and clean (`Video`), plus an SRT.
+- **Render the captioned version only** (`VideoCaptioned`), plus the SRT (user, 2026-10-28). A clean version is no longer delivered by default. It can be rendered from the same committed timeline at any time with the `Video` composition, so keep each delivered version reproducible: commit its timeline, and keep its audio and its `public/` assets (3DCENTS clips, hires fronts) in `/mnt/project-files/collector-wall/`.
   - Use `--browser-executable=/opt/pw-browsers/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell`.
-  - Deliver to `/mnt/project-files/collector-wall/wall-<name>_vN_{captioned,clean}.mp4` and `_vN.srt`.
+  - Deliver to `/mnt/project-files/collector-wall/wall-<name>_vN_captioned.mp4` and `_vN.srt` (a `_vN_clean.mp4` only when asked).
 - **Numbering:** each revision is a new numbered version. Never overwrite an earlier one.
 - **Git:**
   - Work on the episode branch and open a draft PR.
