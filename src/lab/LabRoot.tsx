@@ -2,6 +2,7 @@ import React from "react";
 import { AbsoluteFill, Composition } from "remotion";
 import { CANVAS, COLOR, REGIONS } from "../style/tokens";
 import { CentGrid, CentTurn, fitGrid } from "../style/grids";
+import { LOOK_COMPONENTS, LOOK_FRAMES } from "./Looks";
 import poolsJson from "../../films/sets/data/pools.json";
 
 /**
@@ -70,5 +71,8 @@ export const LabRoot: React.FC = () => (
     <Composition id="FullsWall" component={FullsWall} {...base} />
     <Composition id="TurnFullVerdigris" component={Turn} {...base} durationInFrames={210} defaultProps={{ n: 3981 }} />
     <Composition id="FieldFullRed" component={Field} {...base} defaultProps={{ pool: "red:full" }} />
+    {Object.entries(LOOK_COMPONENTS).map(([id, C]) => (
+      <Composition key={id} id={id} component={C} width={1080} height={1920} fps={30} durationInFrames={LOOK_FRAMES} />
+    ))}
   </>
 );
