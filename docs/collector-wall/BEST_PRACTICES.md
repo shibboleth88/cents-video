@@ -4,7 +4,7 @@ This is the one source for the format of every Collector Wall episode. Read it b
 
 The reference episode is **blacktongue** (`films/wall-blacktongue/` on branch `claude/project-thread-nkzn17`, PR #5). Copy its folder layout, timeline shape and caption builder.
 
-Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the Daidatep thread's first findings. 2026-10-26: §5 "Delivery check" added from the GPT WBWA reel handover. 2026-10-27: narration voice changed to "eee" (§5); showcase opener is the series opening (§3); 3DCENTS credit wording approved (§4); badge zooms get the opener-style highlight (§4a); audit against the day's decisions: lead with the Wall's standout fact (§1), graded traits, fronts only, Cents on black, Daidatep (§2), no long still holds (§4a), dated snapshots (§4a). 2026-10-28: find the focus with `wall_focus.py` (§1); seamless signature hand-offs, card to spin to still, front on cue (§3), approved as the series format; captioned render only (§5); end credits card, 3DCENTS credit moved there (§3 step 10, §4).
+Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the Daidatep thread's first findings. 2026-10-26: §5 "Delivery check" added from the GPT WBWA reel handover. 2026-10-27: narration voice changed to "eee" (§5); showcase opener is the series opening (§3); 3DCENTS credit wording approved (§4); badge zooms get the opener-style highlight (§4a); audit against the day's decisions: lead with the Wall's standout fact (§1), graded traits, fronts only, Cents on black, Daidatep (§2), no long still holds (§4a), dated snapshots (§4a). 2026-10-28: find the focus with `wall_focus.py` (§1); seamless signature hand-offs, card to spin to still, front on cue (§3), approved as the series format; captioned render only (§5); end credits card, 3DCENTS credit moved there (§3 step 10, §4); "Lead" caption look (§5).
 
 ## 1. What an episode is
 
@@ -237,6 +237,10 @@ For a trait you must see on the coin itself (a date, a mint mark), cut from the 
   - It refuses to run unless the joined cues equal `voiceover.txt` exactly.
   - Cues break at sentence and shot boundaries.
   - Captions must be safe on mobile.
+  - **Caption look: "Lead" (the user's "captions-1"), for every film from 2026-10-28.** There's no box, just a soft dark scrim. Words already said are white, upcoming words are dim, and the word being spoken is copper (#d9925c). Numbers 10 to 99 show as digits so they match the readouts, and hyphenated words never break across lines. The SRT is unchanged.
+    - The code is in PR #22 (`src/style/captions.tsx`, prop `captionStyle` on `Video`). Once #22 is merged, "lead" is the default and `VideoCaptioned` renders it. Until then, render from that branch with `--props='{"captionStyle":"lead"}'`.
+    - To reproduce a version delivered before 2026-10-28 (blacktongue v6.1 and earlier), use `captionStyle: "classic"`.
+    - Sample: `/mnt/project-files/captions-styles/captions-1_lead_scrappyt.mp4`.
 - **Timeline anchors** are phrases from the alignment.
   - They must be unique. Use four words or more when a phrase repeats.
   - A move's phrase must fall after the start of its shot.
@@ -274,7 +278,7 @@ ffmpeg -hide_banner -i "$f" -vf "blackdetect=d=0.1:pix_th=0.10,freezedetect=n=0.
 ### Practical notes from episodes (Daidatep v1 and v2, 2026-10-25)
 
 - **Fresh container setup:** run `npm ci` in the repo root before the first `npx remotion`.
-- **Alignment duration:** `script/alignment.json` must have a `duration` key, set to the length of `vo.wav` (the take plus 2.5 s of padding). Without it, the anchors and caption cutting throw a KeyError.
+- **Alignment duration:** `script/alignment.json` must have a `duration` key, set to the length of `vo.wav` (the take plus its padding, about 4.5 s now that the credits card follows the last word, §3 step 10). Without it, the anchors and caption cutting throw a KeyError.
 - **Caption builder:** prefer the generic builder in `films/wall-daidatep/captions/build_cues.py` over the per-episode WRITTEN lists.
   - A table maps each written token (5185, 1968, cents.vision) to its spoken form.
   - Each script word takes the timing of its spoken words.
