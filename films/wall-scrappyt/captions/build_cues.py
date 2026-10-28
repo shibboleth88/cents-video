@@ -1,4 +1,4 @@
-"""Captions for the ScrappyT episode: cut-aware cues on eee v1 take 1, with each
+"""Captions for the ScrappyT episode: cut-aware cues on the current take (script/alignment.json), with each
 spoken number written back the way the script writes it. Each script word is
 paired with its spoken words by a table of how many words it takes to say, so
 the written form inherits their exact timing. Refuses unless the cue text
@@ -15,12 +15,8 @@ al = json.load(open(F / "script/alignment.json"))
 tl = json.load(open(F / "timeline/timeline.json"))
 norm = lambda s: re.sub(r"[^a-z0-9 ]", " ", s.lower().replace("-", " ")).split()
 
-# Written token (punctuation stripped) -> its spoken form, as in audio/tts_text.txt.
-SPOKEN = {"ScrappyT": "Scrappy T", "7139": "seventy-one thirty-nine", "41": "forty-one", "2026": "twenty twenty-six",
-          "1970s": "nineteen seventies", "1980s": "nineteen eighties", "cents.vision": "cents dot vision"}
-for y, s in {"1956": "fifty-six", "1958": "fifty-eight", "1967": "sixty-seven", "1970": "seventy", "1971": "seventy-one",
-             "1979": "seventy-nine", "1982": "eighty-two"}.items():
-    SPOKEN[y] = "nineteen " + s
+# Written token (punctuation stripped) -> its spoken form: the table audio/make_tts.py spoke from.
+SPOKEN = json.load(open(F / "script/spoken.json"))
 
 script = open(F / "script/voiceover.txt").read().split()
 words, out, i = al["words"], [], 0

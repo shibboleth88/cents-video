@@ -1,215 +1,275 @@
 1
-00:00:00,145 --> 00:00:02,279
+00:00:00,145 --> 00:00:02,480
 This is the Wall of ScrappyT.
 
 2
-00:00:03,012 --> 00:00:04,120
-Its signature Cent,
+00:00:02,938 --> 00:00:05,599
+Its 41 Cents hold every one of the nineteen
 
 3
-00:00:04,240 --> 00:00:08,000
-number 7139, was struck in 1967,
+00:00:05,679 --> 00:00:07,200
+traits in the Traits Atlas.
 
 4
-00:00:08,080 --> 00:00:11,519
-carries a full desert patina, and is a Ghost Cent.
+00:00:07,440 --> 00:00:09,359
+As of October 2026,
 
 5
-00:00:11,599 --> 00:00:13,519
-Ghost means a full or near-full
+00:00:09,439 --> 00:00:12,119
+no other Wall on cents.vision does.
 
 6
-00:00:13,640 --> 00:00:16,000
-patina sets Lincoln apart from the field.
+00:00:12,160 --> 00:00:13,240
+Even the artist wallet,
 
 7
-00:00:16,079 --> 00:00:17,600
-Of the thirty-three Ghost Cents,
+00:00:13,279 --> 00:00:16,039
+with a thousand Cents, has no Iridescent Cent.
 
 8
-00:00:17,679 --> 00:00:20,399
-only thirteen carry a full desert patina.
+00:00:16,457 --> 00:00:19,000
+Its signature Cent, number 7139,
 
 9
-00:00:20,480 --> 00:00:22,800
-The Wall holds 41 Cents in two
+00:00:19,039 --> 00:00:21,800
+from 1967, carries two of them:
 
 10
-00:00:22,879 --> 00:00:25,839
-wallets, from 1956 to 1982,
+00:00:21,920 --> 00:00:24,320
+a full desert patina, and Ghost.
 
 11
-00:00:25,920 --> 00:00:27,440
-which puts it in the Quarter Club,
+00:00:24,399 --> 00:00:26,399
+Ghost means a full or near-full
 
 12
-00:00:27,519 --> 00:00:29,760
-for twenty-five to forty-nine Cents.
+00:00:26,519 --> 00:00:29,013
+patina sets Lincoln apart from the field.
 
 13
-00:00:29,907 --> 00:00:31,280
-One of them is a wheat penny,
+00:00:29,067 --> 00:00:30,600
+Of the thirty-three Ghost Cents,
 
 14
-00:00:31,359 --> 00:00:33,280
-minted 1958 or earlier,
+00:00:30,640 --> 00:00:33,292
+only thirteen carry a full desert patina.
 
 15
-00:00:33,399 --> 00:00:35,200
-with two ears of wheat on the back.
+00:00:33,439 --> 00:00:36,246
+Here are the other seventeen, one Cent each.
 
 16
-00:00:35,240 --> 00:00:38,640
-It is from 1956, the earliest year on the Wall.
+00:00:36,320 --> 00:00:40,807
+Verdigris, green to teal: number 8550, significant.
 
 17
-00:00:38,713 --> 00:00:41,119
-It holds three Cents from 1971,
+00:00:40,880 --> 00:00:43,119
+Obsidian, dark brown to black:
 
 18
-00:00:41,159 --> 00:00:42,880
-for the 1971 Club.
+00:00:43,200 --> 00:00:45,767
+number 8394, significant.
 
 19
-00:00:42,960 --> 00:00:45,119
-Two of its Cents carry a full patina:
+00:00:45,840 --> 00:00:50,173
+Red, scarlet to russet: number 9258, full.
 
 20
-00:00:45,200 --> 00:00:47,200
-the full desert and a full red.
-
-21
-00:00:47,280 --> 00:00:48,640
-Two are Iridescent,
-
-22
-00:00:48,719 --> 00:00:50,159
-a copper surface overlaid
-
-23
-00:00:50,240 --> 00:00:52,240
-with gold, violet and blue.
-
-24
-00:00:52,280 --> 00:00:54,000
-And two are Ghost Cents.
-
-25
-00:00:54,073 --> 00:00:56,159
-The Wall completes six Sets.
-
-26
-00:00:56,232 --> 00:00:57,359
-A Spectrum Set:
-
-27
-00:00:57,399 --> 00:00:58,799
-a significant verdigris,
-
-28
-00:00:58,826 --> 00:01:00,320
-a significant obsidian,
-
-29
-00:01:00,359 --> 00:01:02,320
-a full red, a full desert,
-
-30
-00:01:02,359 --> 00:01:04,480
-a notable gold and an orange.
-
-31
-00:01:04,560 --> 00:01:07,040
+00:00:50,320 --> 00:00:53,039
 Notable means clearly visible but local,
 
-32
-00:01:07,120 --> 00:01:09,599
+21
+00:00:53,280 --> 00:00:55,320
 significant a major presence on the face,
 
-33
-00:01:09,680 --> 00:01:12,560
+22
+00:00:55,359 --> 00:00:58,167
 and full means the patina dominates the coin.
 
+23
+00:00:58,320 --> 00:01:02,487
+Gold, honey gold to pale amber: number 5856.
+
+24
+00:01:02,560 --> 00:01:07,049
+Orange, given only to clear standouts: number 9469.
+
+25
+00:01:07,180 --> 00:01:09,439
+Iridescent, a copper surface overlaid
+
+26
+00:01:09,560 --> 00:01:13,319
+with gold, violet and blue: number 7713.
+
+27
+00:01:13,359 --> 00:01:16,486
+Only twenty Cents carry it, and this Wall holds two.
+
+28
+00:01:16,560 --> 00:01:18,239
+Corroded, oxidation that has
+
+29
+00:01:18,319 --> 00:01:21,206
+gone into the metal: number 366.
+
+30
+00:01:21,280 --> 00:01:24,887
+Lustrous, original mint shine: number 830.
+
+31
+00:01:24,959 --> 00:01:27,359
+Striated, parallel lines made by metal
+
+32
+00:01:27,480 --> 00:01:30,326
+flow during striking: number 1295.
+
+33
+00:01:30,400 --> 00:01:33,040
+Abraded, copper missing from gouges:
+
 34
-00:01:12,706 --> 00:01:15,840
-As of October 2026, ScrappyT is one of only
+00:01:33,120 --> 00:01:35,772
+number 8136, heavily abraded.
 
 35
-00:01:16,000 --> 00:01:18,640
-fifteen collectors to hold a Spectrum Set.
+00:01:35,920 --> 00:01:40,093
+Faceless, Lincoln's features lost: number 1965.
 
 36
-00:01:18,712 --> 00:01:19,840
-A Chronicle Set:
+00:01:40,239 --> 00:01:42,000
+Fingerprint, ridges clear enough
 
 37
-00:01:19,879 --> 00:01:24,719
-a Cent from 1971, from 1979 and from 1982.
+00:01:42,079 --> 00:01:44,412
+to read at once: number 508.
 
 38
-00:01:24,793 --> 00:01:26,079
-A Full Mint Set:
+00:01:44,560 --> 00:01:46,186
+White drips and streaks,
 
 39
-00:01:26,120 --> 00:01:29,599
-an S mint, a D mint and a Cent with no mint mark.
+00:01:46,212 --> 00:01:49,766
+pale runs across the patina: number 2654.
 
 40
-00:01:29,673 --> 00:01:31,120
-A Contamination Set,
+00:01:49,840 --> 00:01:52,239
+Contaminated, foreign matter added after
 
 41
-00:01:31,200 --> 00:01:32,719
-four of the twelve contamination
+00:01:52,359 --> 00:01:54,359
+minting: four of the twelve types,
 
 42
-00:01:32,879 --> 00:01:34,480
-types: special oddities,
+00:01:54,400 --> 00:01:56,560
+special oddities, obscure adhesive,
 
 43
-00:01:34,560 --> 00:01:37,920
-obscure adhesive, speckles and alien secretion.
+00:01:56,640 --> 00:01:58,566
+speckles and alien secretion.
 
 44
-00:01:38,000 --> 00:01:39,599
-And a 1970s Set
+00:01:58,640 --> 00:02:01,040
+Assassin, one round mark on Lincoln's
 
 45
-00:01:39,680 --> 00:01:41,200
-and a 1980s Set:
+00:02:01,120 --> 00:02:03,959
+head, neck or body: number 739.
 
 46
-00:01:41,319 --> 00:01:44,480
-every mint year from 1970 to 1982.
+00:02:04,159 --> 00:02:06,079
+Vandalized, marks that show
 
 47
-00:01:44,552 --> 00:01:46,560
-The Wall carries Diamond Hands:
+00:02:06,159 --> 00:02:10,319
+deliberate human intent: number 7745.
 
 48
-00:01:46,599 --> 00:01:48,159
-it has held its position for at least
+00:02:10,400 --> 00:02:12,360
+Only twenty-six Cents carry it.
 
 49
-00:01:48,239 --> 00:01:50,319
-a year, with little to no selling.
+00:02:12,772 --> 00:02:15,759
+And Wheat, struck 1958 or earlier,
 
 50
-00:01:50,612 --> 00:01:52,560
-And it is a Mint Keeper: ScrappyT
+00:02:15,840 --> 00:02:17,360
+with wheat ears on the back:
 
 51
-00:01:52,640 --> 00:01:54,000
-minted four of its Cents
+00:02:17,439 --> 00:02:20,639
+number 3824, from 1956,
 
 52
-00:01:54,079 --> 00:01:56,400
-and still holds them, never sold.
+00:02:20,719 --> 00:02:22,240
+the earliest year on the Wall.
 
 53
-00:01:56,480 --> 00:01:57,920
-Find all of the Collector Walls
+00:02:22,560 --> 00:02:24,560
+Nineteen of nineteen.
 
 54
-00:01:58,040 --> 00:02:00,480
+00:02:24,706 --> 00:02:26,240
+The Wall spans two wallets
+
+55
+00:02:26,319 --> 00:02:29,360
+and the years 1956 to 1982,
+
+56
+00:02:29,479 --> 00:02:30,879
+which puts it in the Quarter Club,
+
+57
+00:02:30,960 --> 00:02:33,199
+for twenty-five to forty-nine Cents.
+
+58
+00:02:33,280 --> 00:02:36,560
+It completes six Sets, among them a Spectrum Set:
+
+59
+00:02:36,680 --> 00:02:39,680
+all four base patinas, plus gold and orange.
+
+60
+00:02:39,719 --> 00:02:42,400
+As of October 2026, ScrappyT is one
+
+61
+00:02:42,439 --> 00:02:45,039
+of only fifteen collectors to hold one.
+
+62
+00:02:45,112 --> 00:02:47,039
+The Wall carries Diamond Hands:
+
+63
+00:02:47,080 --> 00:02:48,719
+it has held its position for at least
+
+64
+00:02:48,800 --> 00:02:51,039
+a year, with little to no selling.
+
+65
+00:02:51,120 --> 00:02:53,360
+And it is a Mint Keeper: ScrappyT
+
+66
+00:02:53,479 --> 00:02:54,719
+minted four of its Cents
+
+67
+00:02:54,800 --> 00:02:57,120
+and still holds them, never sold.
+
+68
+00:02:57,360 --> 00:02:58,800
+Find all of the Collector Walls
+
+69
+00:02:58,879 --> 00:03:01,360
 on cents.vision under Collectors.
