@@ -159,15 +159,22 @@ def lens_extremes(meta):
     for n, c in meta.items():
         for t in traits(c) - {"wheat"}: pool[t].append(int(n))
     year_n = collections.Counter(c["year"] for c in meta.values())
-    for t, ns in pool.items():
-        if len(ns) < 10: continue
+    # Oldest Cent of every trait, graded value and contamination type (user 2026-10-28: no margin needed)
+    fine = collections.defaultdict(list)
+    for n, c in meta.items():
+        for v in (traits(c) - {"wheat"}) | (values(c) - {"wheat", "fingerprints"}): fine[v].append(int(n))
+    for t, ns in fine.items():
+        if len(ns) < 3: continue
         ys = sorted((meta[str(n)]["year"], n) for n in ns)
         oldest = [n for y, n in ys if y == ys[0][0]]
         second = next((y for y, _ in ys if y > ys[0][0]), None)
-        if len(oldest) == 1 and second and second - ys[0][0] >= 5:
-            out.append(F("extremes", f"Cent #{oldest[0]}",
-                         f"#{oldest[0]} ({ys[0][0]}) is the oldest {label(t)} Cent by {second - ys[0][0]} years; the next is {second}",
-                         1 / len(ns), oldest, kind="oldest", trait=t))
+        gap = f" by {second - ys[0][0]} years; the next is {second}" if second and second - ys[0][0] >= 2 else ""
+        who = " and ".join(f"#{n}" for n in oldest)
+        out.append(F("extremes", f"Cent #{oldest[0]}" if len(oldest) == 1 else "collection",
+                     f"{who} ({ys[0][0]}) {'is' if len(oldest) == 1 else 'are'} the oldest {nice(t)} Cent{'s' if len(oldest) > 1 else ''} (of {len(ns)}){gap}",
+                     len(oldest) / len(ns), oldest, kind="oldest", trait=t))
+    for t, ns in pool.items():
+        if len(ns) < 10: continue
         for mm in ("S", "D"):
             hit = [n for n in ns if meta[str(n)]["mint_mark"] == mm]
             share = sum(1 for c in meta.values() if c["mint_mark"] == mm) / N
@@ -203,6 +210,11 @@ def lens_extremes(meta):
     out.append(F("extremes", "collection",
                  f"The most contamination types on one Cent is {mx}, on {len(mxs)} Cent(s): {', '.join('#%d' % n for n in sorted(mxs)[:12])}",
                  len(mxs) / N, mxs, kind="most-contam"))
+    selfnum = [int(n) for n, c in meta.items() if int(n) == c["year"]]
+    exp = sum(year_n.get(k, 0) for k in range(1900, 1990)) / N
+    out.append(F("extremes", "collection",
+                 f"Cent number equals its date on {len(selfnum)} Cent(s): {', '.join('#%d' % n for n in selfnum)} (chance gives about {exp:.1f}; a curiosity, not a pattern)",
+                 0.5, selfnum, kind="self-number"))
     # 1/1 Years the site already badges; listed so "holders" can name who has them
     for y, k in year_n.items():
         if k == 1:
@@ -215,7 +227,8 @@ def lens_extremes(meta):
 # ---------- the Walls ----------
 def wall_names(walls, names):
     artist = next(w for w, n in names.items() if n == "Rutherford Chang")
-    return artist, (lambda w: names.get(w) or "an unclaimed Wall")
+    # Unclaimed Walls by a short address prefix (user 2026-10-28: videos of unclaimed Walls will use the address)
+    return artist, (lambda w: names.get(w) or f"unclaimed Wall {w[:8]}…")
 
 
 def pools(meta):
@@ -223,10 +236,26 @@ def pools(meta):
     for n, c in meta.items():
         for v in values(c): pv[v].add(int(n))
         for t in traits(c): pv["trait: " + t].add(int(n))
+        mm = c["mint_mark"] or "no mint mark"
+        pv[f"year: {c['year']}"].add(int(n))
+        pv[f"mint: {mm}"].add(int(n))
+        pv[f"ym: {c['year']} {mm}"].add(int(n))
     return pv
 
 
+DATE = ("year: ", "mint: ", "ym: ")
+
+
+def an(v):
+    return ("a Cent " if v.startswith(DATE) else "an " if nice(v)[0] in "aeiou" else "a ") + nice(v)
+
+
 def nice(v):
+    if v.startswith("year: "): return "dated " + v[6:]
+    if v.startswith("mint: "): return v[6:] if v[6:] == "no mint mark" else v[6:] + "-mint"
+    if v.startswith("ym: "):
+        y, mm = v[4:].split(" ", 1)
+        return f"{y} {'(no mint mark)' if mm == 'no mint mark' else mm}"
     return label(v.replace("trait: ", "").replace("contamination: ", "contamination "))
 
 
@@ -365,6 +394,7 @@ def lens_pair(meta, walls, names, pv):
     for i, a in enumerate(scarce):
         for b in scarce[i + 1:]:
             if a.split("_")[-1] == b.split("_")[-1]: continue     # full_red vs significant_red: same trait
+            if a.startswith(DATE) and b.startswith(DATE): continue
             both = has[a] & has[b]
             both_c = both - {artist}
             if len(both_c) == 1:
@@ -372,25 +402,265 @@ def lens_pair(meta, walls, names, pv):
                 if w not in names: continue
                 p = (len(has[a]) / len(walls)) * (len(has[b]) / len(walls))
                 out.append(F("pair", names[w],
-                             f"{names[w]} is the only collector holding both a {nice(a)} ({len(pv[a])} exist) and a {nice(b)} ({len(pv[b])} exist)"
+                             f"{names[w]} is the only collector holding both {an(a)} ({len(pv[a])} exist) and {an(b)} ({len(pv[b])} exist)"
                              + ("; the artist wallet does too" if artist in both else ""),
                              p, (hold[w] & pv[a]) | (hold[w] & pv[b])))
     return out
 
 
 def lens_holders(extremes, walls, names):
+    """Who holds each extreme Cent, claimed or not (user 2026-10-28: include unclaimed Walls),
+    and which Walls hold the oldest Cent of the most traits."""
     artist, who = wall_names(walls, names)
     owner = {n: w for w, ids in walls.items() for n in ids}
-    out = []
+    out, firsts = [], collections.defaultdict(list)
     for f in extremes:
         if not f["cents"] or f["n_cents"] > 3: continue
         hs = [who(owner[n]) + (" (the artist wallet)" if owner[n] == artist else "") for n in f["cents"]]
-        claimed = [h for n, h in zip(f["cents"], hs) if owner[n] in names]
-        if claimed:
-            out.append(F("holders", ", ".join(sorted(set(claimed))),
-                         f"{f['claim']}: held by " + ", ".join(f"#{n} {h}" for n, h in zip(f["cents"], hs)),
-                         f["p"], f["cents"], on_site=f["on_site"]))
+        out.append(F("holders", ", ".join(sorted(set(hs))),
+                     f"{f['claim']}: held by " + ", ".join(f"#{n} {h}" for n, h in zip(f["cents"], hs)),
+                     f["p"], f["cents"], on_site=f["on_site"]))
+        if f.get("kind") == "oldest" and f["n_cents"] == 1:
+            firsts[owner[f["cents"][0]]].append((f["trait"], f["cents"][0]))
+    all_first = {n for ts in firsts.values() for _, n in ts}
+    for w, ts in firsts.items():
+        if len(ts) < 3: continue
+        tag = " (the artist wallet)" if w == artist else ""
+        cents = sorted({n for _, n in ts})
+        out.append(F("holders", who(w) + tag,
+                     f"{who(w)}{tag} holds the oldest Cent of {len(ts)} traits or grades, in {len(cents)} Cent(s): "
+                     + "; ".join(f"#{n} ({', '.join(nice(t) for t, m in ts if m == n)})" for n in cents)
+                     + f" ({len(all_first)} Cents are the single oldest of some trait; a Wall this size would hold {len(walls[w]) * len(all_first) / N:.1f})",
+                     hyper_ge(len(cents), N, len(all_first), len(walls[w])), cents, kind="firsts"))
     return out
+
+
+KNOWN = [  # facts collectors or our own brief already have: marked, not offered as new
+    (r"No Cent carries two Full grades", "known to collectors (user, 2026-10-28)"),
+    (r"most Atlas traits on one Cent is 9.*#9344", "knowledge brief: #9344 has 9 traits"),
+    (r"both desert and ghost", "knowledge brief: 79% of Ghost Cents are desert"),
+    (r"a 1/1 Year", "cents.vision 1/1 Year badge"),
+]
+
+
+def mark_known(found):
+    for f in found:
+        for pat, src in KNOWN:
+            if re.search(pat, f["claim"]): f["on_site"] = True; f["known"] = src
+    return found
+
+
+def lens_keep(meta, walls, names, mk):
+    """Cents still in the wallet that minted them (cents.vision mint_keeper.json, per wallet).
+    The artist wallet is reported apart; rates are measured on the other 9,000."""
+    artist, who = wall_names(walls, names)
+    art = set(walls[artist])
+    kept_all = {n for v in mk.values() for n in v}
+    kept_art = len(kept_all & art)
+    rest = set(range(1, N + 1)) - art
+    kept = kept_all & rest
+    base = len(kept) / len(rest)
+    out = [F("keep", "collection",
+             f"{len(kept)} of the {len(rest)} Cents outside the artist wallet ({base:.0%}) are still held by the wallet that minted them, "
+             f"across {sum(1 for w, v in mk.items() if set(v) - art)} minting wallets; {kept_art} of the artist wallet's {len(art)} Cents are Mint Keeper Cents",
+             0.5, [])]
+    pv = pools(meta)
+    for v, P in pv.items():
+        if v.startswith("trait: ") or v.startswith("ym: "): continue
+        P = P & rest
+        if len(P) < 15: continue
+        k = len(P & kept)
+        exp = len(P) * base
+        hi, lo = hyper_ge(k, len(rest), len(kept), len(P)), hyper_le(k, len(rest), len(kept), len(P))
+        p = min(hi, lo) * 2
+        if p < 2 ** -8:
+            out.append(F("keep", "collection",
+                         f"{nice(v).capitalize()} Cents stay with their minter {'more' if hi < lo else 'less'} often: {k} of {len(P)} ({k/len(P):.0%}) are still in the minting wallet, against {base:.0%} overall (chance gives {exp:.0f})",
+                         p, P & kept if hi < lo else set()))
+    return out
+
+
+_TR = {}
+
+
+def trait_vec(meta, ids):
+    """Share of the Cents in `ids` carrying each Atlas trait (trait sets cached per metadata object)."""
+    key = id(meta)
+    if key not in _TR:
+        tr = {int(n): traits(c) for n, c in meta.items()}
+        _TR.clear(); _TR[key] = (tr, sorted(set().union(*tr.values())))
+    tr, keys = _TR[key]
+    cnt = collections.Counter(t for n in ids for t in tr[n])
+    return [cnt[k] / len(ids) for k in keys], keys
+
+
+def lens_mix(meta, walls, names, samples=300, seed=11):
+    """How far a Wall's trait mix, age and untraited share sit from the collection's, against random Walls of the same size;
+    and which two Walls are most alike."""
+    artist, who = wall_names(walls, names)
+    rnd = random.Random(seed)
+    allids = list(range(1, N + 1))
+    coll, keys = trait_vec(meta, allids)
+    untr = {int(n) for n, c in meta.items() if not traits(c)}
+    old = {int(n) for n, c in meta.items() if c["year"] < 1970}
+    yrs = sorted(c["year"] for c in meta.values())
+    dist = lambda v: sum(abs(a - b) for a, b in zip(v, coll))
+    out, vecs = [], {}
+    null = {}
+    for w in names:
+        ids = walls[w]; n = len(ids)
+        if n < 15: continue
+        tag = " (the artist wallet)" if w == artist else ""
+        v, _ = trait_vec(meta, ids); vecs[w] = v
+        if n not in null:
+            null[n] = sorted(dist(trait_vec(meta, rnd.sample(allids, n))[0]) for _ in range(samples))
+        d = dist(v)
+        p = (sum(1 for x in null[n] if x >= d) + 1) / (samples + 1)
+        top = sorted(zip(keys, v, coll), key=lambda t: -abs(t[1] - t[2]))[:3]
+        out.append(F("mix", names[w] + tag,
+                     f"{names[w]}{tag}: its trait mix is further from the collection's than {1 - p:.0%} of random Walls its size ({n}); most apart: "
+                     + ", ".join(f"{label(k)} {a:.0%} vs {b:.0%}" for k, a, b in top), p, []))
+        k = len(set(ids) & untr); exp = n * len(untr) / N
+        p = 2 * min(hyper_ge(k, N, len(untr), n), hyper_le(k, N, len(untr), n))
+        if p < 2 ** -6:
+            out.append(F("mix", names[w] + tag,
+                         f"{names[w]}{tag}: {k} of its {n} Cents carry no trait ({k/n:.0%}, against {len(untr)/N:.0%} in the collection)",
+                         p, []))
+        k = len(set(ids) & old); exp = n * len(old) / N
+        p = 2 * min(hyper_ge(k, N, len(old), n), hyper_le(k, N, len(old), n))
+        if p < 2 ** -6:
+            med = sorted(meta[str(x)]["year"] for x in ids)[n // 2]
+            out.append(F("mix", names[w] + tag,
+                         f"{names[w]}{tag} leans {'old' if k > exp else 'new'}: {k} of its {n} Cents are dated before 1970 ({k/n:.0%}, against {len(old)/N:.0%}); median year {med} vs {yrs[N // 2]}",
+                         p, []))
+    # claimed Walls against the rest of the community (counts only for the unclaimed)
+    cl = {n for w in names if w != artist for n in walls[w]}
+    def u_share(ws):
+        ids = [n for w in ws for n in walls[w]]
+        return len(untr & set(ids)) / max(1, len(ids))
+    small = u_share([w for w, ids in walls.items() if len(ids) <= 4 and w != artist])
+    big = u_share([w for w, ids in walls.items() if len(ids) >= 100 and w != artist])
+    k = len(cl & untr)
+    rest_n = N - len(walls[artist]) - len(cl)
+    rest_u = len(untr - cl - set(walls[artist]))
+    out.append(F("mix", "collection",
+                 f"Claimed Walls hold far more traited Cents: {k} of the {len(cl)} Cents on collectors' claimed Walls carry no trait ({k/len(cl):.0%}), "
+                 f"against {rest_u/rest_n:.0%} on unclaimed Walls and {len(set(walls[artist]) & untr)/len(walls[artist]):.0%} in the artist wallet; Wall size alone does not do this ({small:.0%} on 1-4 Cent Walls, {big:.0%} on 100+)",
+                 hyper_le(k, N, len(untr), len(cl)), []))
+    pocket = [w for w, ids in walls.items() if len(ids) <= 4]
+    out.append(F("mix", "collection",
+                 f"{len(pocket)} of the {len(walls)} Walls ({len(pocket)/len(walls):.0%}) are Pocket Collections of 1-4 Cents; together they hold {sum(len(walls[w]) for w in pocket):,} Cents",
+                 0.5, []))
+    # twins: cosine similarity of trait mixes, against random pairs of the same sizes
+    cos = lambda a, b: sum(x * y for x, y in zip(a, b)) / (math.sqrt(sum(x * x for x in a) * sum(y * y for y in b)) or 1)
+    ws = [w for w in vecs if w != artist and len(walls[w]) >= 20]
+    pairs = sorted(((cos(vecs[a], vecs[b]), a, b) for i, a in enumerate(ws) for b in ws[i + 1:]), reverse=True)
+    for c, a, b in pairs[:3]:
+        ra = [cos(trait_vec(meta, rnd.sample(allids, len(walls[a])))[0], trait_vec(meta, rnd.sample(allids, len(walls[b])))[0]) for _ in range(100)]
+        p = (sum(1 for x in ra if x >= c) + 1) / 101
+        out.append(F("mix", f"{names[a]}, {names[b]}",
+                     f"{names[a]} and {names[b]} have the most alike trait mixes of any two collectors with 20+ Cents (similarity {c:.3f}; random Walls of these sizes reach it {p:.0%} of the time)",
+                     p, []))
+    return out
+
+
+def lens_inscription(meta, walls, names, mk):
+    """Inscription order: the first and last Cents inscribed, who holds them, and whether order follows date."""
+    artist, who = wall_names(walls, names)
+    owner = {n: w for w, ids in walls.items() for n in ids}
+    kept = {n for v in mk.values() for n in v}
+    ins = sorted((c["inscription_number"], int(n)) for n, c in meta.items() if "inscription_number" in c)
+    missing = [int(n) for n, c in meta.items() if "inscription_number" not in c]
+    out = []
+    for label_, part in (("first", ins[:5]), ("last", ins[-3:])):
+        txt = "; ".join(f"#{n} (inscription {i:,}, {meta[str(n)]['year']}) held by {who(owner[n])}{' (the artist wallet)' if owner[n] == artist else ''}"
+                        f"{', still with its minter' if n in kept else ''}" for i, n in part)
+        out.append(F("inscription", "collection", f"The {label_} Cents inscribed: {txt}", 1 / N, [n for _, n in part]))
+    # Runs: the most Cents a Wall holds inside any window of 150 consecutive inscriptions, against random Walls its size
+    rank = {n: i for i, (_, n) in enumerate(ins)}
+    def best_run(ids, win=150):
+        rs = sorted(rank[n] for n in ids if n in rank); j = 0; top = (0, 0)
+        for i in range(len(rs)):
+            while rs[i] - rs[j] >= win: j += 1
+            if i - j + 1 > top[0]: top = (i - j + 1, j)
+        return top[0], (rs[top[1]] if rs else 0)
+    rnd = random.Random(5)
+    nullrun = {}
+    for w in names:
+        ids = walls[w]; n = len(ids)
+        if n < 10: continue
+        k, start = best_run(ids)
+        if n not in nullrun: nullrun[n] = [best_run(rnd.sample(range(1, N + 1), n))[0] for _ in range(200)]
+        p = (sum(1 for x in nullrun[n] if x >= k) + 1) / 201
+        if p <= 0.01 and k >= 5:
+            tag = " (the artist wallet)" if w == artist else ""
+            out.append(F("inscription", names[w] + tag,
+                         f"{k} of {names[w]}{tag}'s {n} Cents fall inside one run of 150 consecutive inscriptions (from the {start + 1:,}th inscribed); random Walls its size reach {max(nullrun[n])} at most in 200 tries",
+                         p, []))
+    # Walls whose Cents sit in the first or last tenth of the inscription order
+    dec = len(ins) // 10
+    early, late = {n for _, n in ins[:dec]}, {n for _, n in ins[-dec:]}
+    for w in names:
+        ids = set(walls[w]); n = len(ids)
+        if n < 15: continue
+        tag = " (the artist wallet)" if w == artist else ""
+        for part, S in (("first", early), ("last", late)):
+            k = len(ids & S)
+            p = hyper_ge(k, N, len(S), n)
+            if p < 2 ** -8:
+                out.append(F("inscription", names[w] + tag,
+                             f"{k} of {names[w]}{tag}'s {n} Cents are among the {part} tenth inscribed ({dec:,} Cents) (chance gives {n * len(S) / N:.0f})",
+                             p * len(names) * 2, ids & S))
+    # rank correlation of inscription order with year
+    r = {n: i for i, (_, n) in enumerate(ins)}
+    ys = [(meta[str(n)]["year"], r[n]) for n in r]
+    def ranks(xs):
+        order = sorted(range(len(xs)), key=lambda i: xs[i]); rk = [0] * len(xs); i = 0
+        while i < len(order):
+            j = i
+            while j + 1 < len(order) and xs[order[j + 1]] == xs[order[i]]: j += 1
+            for t in range(i, j + 1): rk[order[t]] = (i + j) / 2
+            i = j + 1
+        return rk
+    a, b = ranks([y for y, _ in ys]), ranks([i for _, i in ys])
+    ma, mb = sum(a) / len(a), sum(b) / len(b)
+    rho = sum((x - ma) * (y - mb) for x, y in zip(a, b)) / math.sqrt(sum((x - ma) ** 2 for x in a) * sum((y - mb) ** 2 for y in b))
+    out.append(F("inscription", "collection",
+                 f"Inscription order does {'not ' if abs(rho) < 0.05 else ''}follow date (rank correlation {rho:+.3f}); "
+                 f"{len(missing)} Cents carry no inscription number in the data ({', '.join('#%d' % n for n in missing)})",
+                 0.5, [], rho=rho))
+    return out
+
+
+def profile(c):
+    return frozenset(values(c) - {"wheat"})
+
+
+def lens_profile(meta, walls, names, site_combo):
+    """Cents whose whole trait profile (graded values + contamination types) no other Cent shares.
+    Broader than the site's 1/1 Trait Combo (a unique PAIR), which it must contain."""
+    artist, who = wall_names(walls, names)
+    prof = {int(n): profile(c) for n, c in meta.items()}
+    cnt = collections.Counter(p for p in prof.values() if p)
+    uniq = {n for n, p in prof.items() if p and cnt[p] == 1}
+    out = []
+    common = cnt.most_common(3)
+    out.append(F("profile", "collection",
+                 f"{len(uniq)} Cents have a trait profile no other Cent shares ({len(site_combo)} of them are the site's 1/1 Trait Combos); "
+                 f"the commonest profiles are " + "; ".join(f"{' + '.join(sorted(map(label, p)))} ({k})" for p, k in common),
+                 0.5, []))
+    per = {w: len(uniq & set(ids)) for w, ids in walls.items()}
+    for w in names:
+        k = per[w]
+        if k < 2: continue
+        exp = len(walls[w]) * len(uniq) / N
+        rivals = sum(1 for x, v in per.items() if v >= k and x not in (w, artist))
+        tag = " (the artist wallet)" if w == artist else ""
+        out.append(F("profile", names[w] + tag,
+                     f"{names[w]}{tag} holds {k} Cents whose whole trait profile is unique (size predicts {exp:.1f}; {len(site_combo & set(walls[w]))} are site 1/1 Trait Combos); "
+                     + ("no other collector holds as many" if rivals == 0 else f"{rivals} other Wall(s) hold as many"),
+                     max(hyper_ge(k, N, len(uniq), len(walls[w])), 2 ** -20), uniq & set(walls[w])))
+    return out, uniq
 
 
 # ---------- report ----------
@@ -403,13 +673,31 @@ def run(snap, only=None):
     pairs, tests = lens_pairs(meta)
     ext = lens_extremes(meta)
     near, _ = lens_nearmiss(meta, walls, names)
-    found = pairs + lens_era(meta) + ext + lens_share(meta, walls, names, pv) + lens_grip(meta, walls, names, pv) \
+    mk = json.load(open(snap / "raw/mint_keeper.json"))
+    combo = {r["cent"] for r in json.load(open(snap / "raw/unique-2-community-trait-1of1s-merged-new2.json"))["cents"]}
+    prof, _ = lens_profile(meta, walls, names, combo)
+    found = lens_keep(meta, walls, names, mk) + lens_mix(meta, walls, names) + lens_inscription(meta, walls, names, mk) + prof \
+        + pairs + lens_era(meta) + ext + lens_share(meta, walls, names, pv) + lens_grip(meta, walls, names, pv) \
         + near + lens_smallyear(meta, walls, names) + lens_pair(meta, walls, names, pv) + lens_holders(ext, walls, names)
+    # Multiple testing: a lens that tries many things will find 1-in-1000 events by chance.
+    # p is multiplied by the number of things the lens tried (Bonferroni); the raw p stays as p_raw.
+    artist = next(w for w, n in names.items() if n == "Rutherford Chang")
+    claimed = len(names) - 1
+    vals = [v for v, P in pv.items() if not v.startswith("trait: ")]
+    scarce = [v for v in vals if 8 <= len(pv[v]) <= 60]
+    tried = {"pairs": tests, "share": claimed * sum(1 for v in vals if len(pv[v]) <= 1500),
+             "grip": sum(1 for v in vals if len(pv[v]) >= 8), "pair": claimed * len(scarce) * (len(scarce) - 1) // 2,
+             "keep": sum(1 for v in vals if not v.startswith("ym: ")), "era": 19}
+    for f in found:
+        m = tried.get(f["lens"])
+        if m and f["p"] < 0.5:
+            f["p_raw"] = f["p"]; f["p"] = min(1.0, f["p"] * m); f["bits"] = bits(f["p"]); f["tests"] = m
+    mark_known(found)
     if only: found = [f for f in found if only in f["subject"]]
     found.sort(key=lambda f: (-f["bits"], f["lens"]))
     floors = {lens: sum(1 for f in found if f["lens"] == lens) for lens in
-              ("pairs", "era", "extremes", "share", "grip", "nearmiss", "smallyear", "pair", "holders")}
-    return found, dict(pair_tests=tests, floors=floors, walls=len(walls), claimed=len(names))
+              ("pairs", "era", "extremes", "share", "grip", "nearmiss", "smallyear", "pair", "holders", "keep", "mix", "inscription", "profile")}
+    return found, dict(pair_tests=tests, tried=tried, floors=floors, walls=len(walls), claimed=len(names))
 
 
 def self_test(snap):
@@ -458,6 +746,46 @@ def self_test(snap):
     ss = strong(lens_pairs(shuf)[0], t)
     check(len(ss) < max(1, len(rs)), f"shuffled faceless: {len(rs)} strong pair findings fall to {len(ss)}",
           f"shuffled faceless still gives {len(ss)} strong findings (real {len(rs)}): the lens finds noise")
+    # 7. keep: shuffling which Cents are Mint Keeper Cents must remove the by-value findings.
+    mk = json.load(open(snap / "raw/mint_keeper.json"))
+    real_k = [f for f in lens_keep(meta, walls, names, mk) if f["bits"] >= 8 and "stay with" in f["claim"]]
+    art = set(walls[artist]); rest = sorted(set(range(1, N + 1)) - art)
+    nk = len({n for v in mk.values() for n in v} - art)
+    fake_mk = {"A": sorted(art), "B": rnd.sample(rest, nk)}
+    shuf_k = [f for f in lens_keep(meta, walls, names, fake_mk) if f["bits"] >= 8 and "stay with" in f["claim"]]
+    check(len(shuf_k) < max(1, len(real_k)), f"keep: shuffled Mint Keeper gives {len(shuf_k)} findings at 8+ bits (real {len(real_k)})",
+          f"keep: shuffled Mint Keeper still gives {len(shuf_k)} (real {len(real_k)}): noise")
+    # 8. mix: a planted Wall of 40 untraited Cents must be flagged; a clone of ScrappyT must be its twin at similarity 1.
+    untr = sorted(int(n) for n, c in meta.items() if not traits(c))
+    scrappy = next(w for w, n in names.items() if n == "ScrappyT")
+    fake = {w: [n for n in ids if n not in set(untr[:40]) | set(walls[scrappy])] for w, ids in walls.items()}
+    fake[scrappy] = walls[scrappy]
+    fake["PLANT"] = untr[:40]; fake["CLONE"] = list(walls[scrappy])
+    fn = dict(names); fn["PLANT"] = "PLANT"; fn["CLONE"] = "CLONE"
+    mx = lens_mix(meta, {w: v for w, v in fake.items() if v}, fn, samples=50)
+    check(any(f["subject"] == "PLANT" and "40 of its 40 Cents carry no trait" in f["claim"] for f in mx),
+          "mix: planted all-untraited Wall flagged", "mix: planted all-untraited Wall NOT flagged")
+    tw = [f for f in mx if "most alike" in f["claim"]]
+    check(bool(tw) and "CLONE" in tw[0]["subject"] and "ScrappyT" in tw[0]["subject"] and "1.000" in tw[0]["claim"],
+          "mix: a ScrappyT clone is found as its twin at 1.000", f"mix: clone not found as twin: {tw[:1]}")
+    # 9. profile: every site 1/1 Trait Combo (a unique pair) must have a unique whole profile; a copied profile must lose it.
+    combo = {r["cent"] for r in json.load(open(snap / "raw/unique-2-community-trait-1of1s-merged-new2.json"))["cents"]}
+    _, uniq = lens_profile(meta, walls, names, combo)
+    check(combo <= uniq, f"profile: all {len(combo)} site 1/1 Trait Combos are among our {len(uniq)} unique profiles",
+          f"profile: {len(combo - uniq)} site combos missing from our unique profiles: {sorted(combo - uniq)}")
+    c0 = min(uniq); twin = dict(meta); donor = next(n for n, c in meta.items() if not traits(c))
+    twin[donor] = {**meta[str(c0)], "unique_id": "x"}
+    _, uniq2 = lens_profile(twin, walls, names, set())
+    check(c0 not in uniq2, f"profile: copying #{c0}'s traits onto #{donor} makes it no longer unique", f"profile: copied profile still unique")
+    # 10. inscription runs: 20 consecutive inscriptions planted as a Wall must be flagged; 20 random Cents must not.
+    ins = sorted((c["inscription_number"], int(n)) for n, c in meta.items() if "inscription_number" in c)
+    block = [n for _, n in ins[5000:5020]]; scatter = rnd.sample([n for _, n in ins], 20)
+    for nm, ids, want in (("BLOCK", block, True), ("SCATTER", scatter, False)):
+        fk = {w: [n for n in v if n not in set(ids)] for w, v in walls.items()}; fk[nm] = ids
+        fn = dict(names); fn[nm] = nm
+        got = any(f["subject"] == nm and "one run of 150" in f["claim"] for f in lens_inscription(meta, fk, fn, mk))
+        check(got == want, f"inscription runs: planted {nm} {'flagged' if want else 'not flagged'}, as it should be",
+              f"inscription runs: planted {nm} {'NOT flagged' if want else 'flagged'}")
     # 5. Floors: every lens must return something on the real data.
     found, info = run(snap)
     empty = [k for k, v in info["floors"].items() if v == 0]
@@ -479,7 +807,8 @@ if __name__ == "__main__":
     if a.self_test: self_test(a.snapshot)
     found, info = run(a.snapshot, a.wall)
     if a.json: json.dump(dict(info=info, findings=found), open(a.json, "w"), indent=1, default=list)
-    print(f"# {len(found)} findings; per lens {info['floors']}; {info['pair_tests']} pair tests (expect ~{info['pair_tests']*2**-10:.1f} false finds at 10 bits)")
+    print(f"# {len(found)} findings; per lens {info['floors']}")
+    print(f"# bits are after correcting for how many things each lens tried: {info['tried']}; 0 bits = could be chance")
     for f in found:
         if f["bits"] < a.min_bits: continue
         print(f"{f['bits']:6.1f}  [{f['lens']:9s}] {'(on site) ' if f['on_site'] else ''}{f['claim']}")
