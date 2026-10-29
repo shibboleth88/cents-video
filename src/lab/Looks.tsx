@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  AbsoluteFill, Audio, Img, OffthreadVideo, Sequence, interpolate, spring, staticFile,
+  AbsoluteFill, Audio, Freeze, Img, OffthreadVideo, Sequence, interpolate, spring, staticFile,
   useCurrentFrame, useVideoConfig, Easing,
 } from "remotion";
 import { loadFonts } from "../style/fonts";
@@ -64,8 +64,8 @@ const LOOKS: Record<"A" | "B" | "C", Look> = {
   /** Registry: a catalogue sheet; verdigris is the interface, copper is only the coin. */
   B: { bg: "#0b0c0b", ink: "#ecebe6", dim: "#8b918d", rule: "#2a2f2d", hi: "#76b7a6", block: "#233933",
        display: "IBM Plex Sans Condensed", sans: "IBM Plex Sans Condensed", mono: "IBM Plex Mono" },
-  /** Rim: the coin's own geometry; rings and legends, bright copper. */
-  C: { bg: "#0b0908", ink: "#f3ece6", dim: "#93877f", rule: "#33281f", hi: "#d9925c", block: "#5a3218",
+  /** Look C (was "Rim"): cents.gallery copper as fills and rings; see v3 notes below. */
+  C: { bg: "#0b0908", ink: "#f3ece6", dim: "#93877f", rule: "#33281f", hi: "#824C3D", block: "#824C3D",
        display: "Fraunces", sans: "IBM Plex Sans", mono: "IBM Plex Mono" },
 };
 
@@ -104,8 +104,8 @@ const Spin: React.FC<{ cx: number; cy: number; d: number; bg: string }> = ({ cx,
 };
 
 // ---------- captions: the chosen "Lead" behaviour, re-typed per look ----------
-const Caption: React.FC<{ L: Look; font: string; size: number; weight: number; align: "left" | "center"; underline?: boolean }> =
-  ({ L, font, size, weight, align, underline }) => {
+const Caption: React.FC<{ L: Look; font: string; size: number; weight: number; align: "left" | "center"; underline?: boolean; block?: boolean }> =
+  ({ L, font, size, weight, align, underline, block }) => {
     const f = useCurrentFrame();
     const t = f / FPS;
     const i = CUES.findIndex((c, k) => t >= c.t0 && t < (CUES[k + 1]?.t0 ?? c.t1 + 0.4));
@@ -123,9 +123,13 @@ const Caption: React.FC<{ L: Look; font: string; size: number; weight: number; a
                       textAlign: align, textWrap: "balance", textShadow: "0 2px 10px rgba(0,0,0,0.85)" } as React.CSSProperties}>
           {words.map((w, k) => (
             <React.Fragment key={k}>
-              <span style={{ color: k === cur ? L.hi : k < cur ? L.ink : L.dim,
-                             textDecoration: underline && k === cur ? "underline" : "none",
-                             textDecorationThickness: 4, textUnderlineOffset: 10 }}>{w}</span>
+              <span style={block
+                ? { color: k <= cur ? L.ink : L.dim, background: k === cur ? L.hi : "transparent",
+                    padding: "0 10px", margin: "0 -10px", borderRadius: 6, textShadow: k === cur ? "none" : undefined,
+                    boxDecorationBreak: "clone", WebkitBoxDecorationBreak: "clone" }
+                : { color: k === cur ? L.hi : k < cur ? L.ink : L.dim,
+                    textDecoration: underline && k === cur ? "underline" : "none",
+                    textDecorationThickness: 4, textUnderlineOffset: 10 }}>{w}</span>
               {k < words.length - 1 ? " " : ""}
             </React.Fragment>
           ))}
@@ -382,55 +386,6 @@ const B_Ones: React.FC<{ L: Look; big: React.CSSProperties }> = ({ L, big }) => 
 // =====================================================================
 // C · RIM
 // =====================================================================
-/** A ring around a coin with legends set as a coin sets them: the top one
- *  reads over the rim, the bottom one reads upright under it. Drawn on, never spun. */
-const Legend: React.FC<{ L: Look; cx: number; cy: number; r: number; top: string; bottom?: string; delay?: number; id: string; size?: number; drawn?: boolean }> =
-  ({ L, cx, cy, r, top, bottom, delay = 0, id, size = 42, drawn }) => {
-    const f = useCurrentFrame();
-    const p = drawn ? 1 : interpolate(f - delay, [0, 24], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.inOut(Easing.cubic) });
-    const C = 2 * Math.PI * r;
-    const tt = r + 16, tb = r + 16 + size * 0.74;
-    const txt: React.CSSProperties = { fontFamily: L.mono, fontSize: size, fontWeight: 500, letterSpacing: "0.12em", fill: L.ink, opacity: p };
-    return (
-      <svg width={1080} height={1920} style={{ position: "absolute", left: 0, top: 0 }}>
-        <defs>
-          <path id={`${id}-t`} d={`M ${cx - tt} ${cy} A ${tt} ${tt} 0 0 1 ${cx + tt} ${cy}`} />
-          <path id={`${id}-b`} d={`M ${cx - tb} ${cy} A ${tb} ${tb} 0 0 0 ${cx + tb} ${cy}`} />
-        </defs>
-        <circle cx={cx} cy={cy} r={r} fill="none" stroke={L.hi} strokeWidth={3}
-                strokeDasharray={C} strokeDashoffset={C * (1 - p)} transform={`rotate(-90 ${cx} ${cy})`} />
-        <text style={txt} textAnchor="middle"><textPath href={`#${id}-t`} startOffset="50%">{top}</textPath></text>
-        {bottom ? <text style={txt} textAnchor="middle"><textPath href={`#${id}-b`} startOffset="50%">{bottom}</textPath></text> : null}
-      </svg>
-    );
-  };
-
-/** "Story time" (the One Cent cover line, user pick 2026-10-28) in Rim terms: the play
- *  mark sits in a small copper ring, a miniature of the coin's ring, with the words beside
- *  it in the legend face. Full strength at frame 0; the pulse is one ripple leaving the
- *  ring, as a struck coin rings; gone by `hold` seconds. */
-const StoryTime: React.FC<{ L: Look; y: number; hold?: number }> = ({ L, y, hold = 3.4 }) => {
-  const f = useCurrentFrame();
-  const out = interpolate(f, [s(hold) - 10, s(hold)], [1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
-  if (out <= 0) return null;
-  const ripple = interpolate(f, [15, 45], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.out(Easing.cubic) });
-  const D = 104;
-  return (
-    <div style={{ position: "absolute", left: 104, width: 732, top: y, display: "flex", justifyContent: "center",
-                  alignItems: "center", gap: 30, opacity: out }}>
-      <svg width={D} height={D} viewBox={`0 0 ${D} ${D}`} style={{ overflow: "visible" }}>
-        {ripple > 0 && ripple < 1 ? (
-          <circle cx={D / 2} cy={D / 2} r={D / 2 - 3 + 46 * ripple} fill="none" stroke={L.hi} strokeWidth={5}
-                  opacity={0.95 * (1 - ripple)} />
-        ) : null}
-        <circle cx={D / 2} cy={D / 2} r={D / 2 - 3} fill="none" stroke={L.hi} strokeWidth={5} />
-        <path d={`M${D * 0.4} ${D * 0.3} L${D * 0.72} ${D / 2} L${D * 0.4} ${D * 0.7} Z`} fill={L.hi} />
-      </svg>
-      <div style={{ fontFamily: L.mono, fontWeight: 600, fontSize: 60, letterSpacing: "0.16em", color: L.ink }}>STORY TIME</div>
-    </div>
-  );
-};
-
 /** Scene change through a circle opening from the coin's centre. */
 const Iris: React.FC<{ cx: number; cy: number; children: React.ReactNode }> = ({ cx, cy, children }) => {
   const f = useCurrentFrame();
@@ -438,102 +393,189 @@ const Iris: React.FC<{ cx: number; cy: number; children: React.ReactNode }> = ({
   return <AbsoluteFill style={{ clipPath: `circle(${r}px at ${cx}px ${cy}px)` }}>{children}</AbsoluteFill>;
 };
 
-const LookC: React.FC<{ hi?: string }> = ({ hi }) => {
+/*
+ * Look C, v3 (user notes, 2026-10-29):
+ * - highlight is cents.gallery's copper #824C3D. On black it is 2.9:1, too dark for
+ *   text, so it is used as the site uses it: a FILL behind light text (chips, the play
+ *   button, the spoken word in captions) and as rings, never as a text colour;
+ * - a piece is named "Cent #2616"; no "One Cent Nº 03" label;
+ * - "CENTS STORY TIME" with a play button on the Cent, pressed, then gone;
+ * - diagrams are linear; no text set around the Cent. Three title arrangements.
+ */
+const PRESS_END = 34; // the Cent starts to turn once play is pressed
+
+/** The poster frame: the Cent dimmed under a copper play button and CENTS STORY TIME.
+ *  At rest on frame 0; pressed at ~0.5 s; gone by ~1.3 s. */
+const PlayPoster: React.FC<{ L: Look; cx: number; cy: number; d: number }> = ({ L, cx, cy, d }) => {
+  const f = useCurrentFrame();
+  if (f >= 42) return null;
+  const press = interpolate(f, [12, 17, 24], [1, 0.8, 1.06], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  const out = interpolate(f, [27, 40], [1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.in(Easing.quad) });
+  const grow = interpolate(f, [27, 40], [1, 1.2], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  const ripple = interpolate(f, [17, 34], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.out(Easing.cubic) });
+  const down = f >= 12 && f < 22;
+  const B = 150;
+  return (
+    <AbsoluteFill>
+      <div style={{ position: "absolute", left: cx - d / 2, top: cy - d / 2, width: d, height: d, borderRadius: "50%",
+                    background: "rgba(0,0,0,0.5)", opacity: out }} />
+      <svg width={1080} height={1920} style={{ position: "absolute" }}>
+        {ripple > 0 && ripple < 1 ? (
+          <circle cx={cx} cy={cy - 30} r={B / 2 + 110 * ripple} fill="none" stroke={L.ink} strokeWidth={6} opacity={0.9 * (1 - ripple)} />
+        ) : null}
+        <g transform={`translate(${cx} ${cy - 30}) scale(${press * grow})`} opacity={out}>
+          <circle r={B / 2} fill={L.hi} style={{ filter: down ? "brightness(0.7)" : "none" }} />
+          <circle r={B / 2} fill="none" stroke={L.ink} strokeOpacity={0.85} strokeWidth={4} />
+          <path d={`M${-B * 0.13} ${-B * 0.2} L${B * 0.22} 0 L${-B * 0.13} ${B * 0.2} Z`} fill={L.ink} />
+        </g>
+      </svg>
+      <div style={{ position: "absolute", left: cx - d / 2, width: d, top: cy + 70, textAlign: "center", opacity: out,
+                    fontFamily: L.mono, fontWeight: 600, fontSize: 40, letterSpacing: "0.06em", color: L.ink,
+                    textShadow: "0 2px 10px rgba(0,0,0,0.9)" }}>CENTS STORY TIME</div>
+    </AbsoluteFill>
+  );
+};
+
+/** Copper chip: light text on the copper fill, as on cents.gallery. */
+const Chip: React.FC<{ L: Look; children: string; size?: number }> = ({ L, children, size = 42 }) => (
+  <span style={{ display: "inline-block", background: L.hi, color: L.ink, padding: "10px 22px",
+                 fontFamily: L.mono, fontWeight: 600, fontSize: size, letterSpacing: "0.1em", textTransform: "uppercase" }}>{children}</span>
+);
+
+export type Arrangement = 1 | 2 | 3;
+/** Where the Cent sits on the title card for each arrangement. */
+const TITLE_COIN: Record<Arrangement, { cy: number; d: number }> = {
+  1: { cy: 760, d: 520 },  // label below
+  2: { cy: 850, d: 520 },  // name above, inscription below
+  3: { cy: 720, d: 520 },  // on a copper line, label beneath it
+};
+
+const TitleText: React.FC<{ L: Look; arr: Arrangement; fr: (soft: number, opsz?: number) => React.CSSProperties }> = ({ L, arr, fr }) => {
+  const name = <span>Cent <span style={{ fontVariantNumeric: "lining-nums" }}>#{CENT.n}</span></span>;
+  const nameStyle: React.CSSProperties = { ...fr(100), fontWeight: 600, color: L.ink, lineHeight: 1 };
+  const ins = <div style={{ ...caps(L, 42, L.dim, "0.12em") }}>Inscription {CENT.inscription}</div>;
+  if (arr === 1)
+    return (
+      <div style={{ position: "absolute", left: 104, width: 732, top: 1062, textAlign: "center" }}>
+        <div style={{ ...nameStyle, fontSize: 140 }}>{name}</div>
+        <div style={{ width: 120, height: 6, background: L.hi, margin: "26px auto 22px" }} />
+        {ins}
+      </div>
+    );
+  if (arr === 2)
+    return (
+      <>
+        <div style={{ position: "absolute", left: 104, width: 732, top: 330, textAlign: "center", ...nameStyle, fontSize: 140 }}>{name}</div>
+        <div style={{ position: "absolute", left: 104, width: 732, top: 1150, textAlign: "center" }}>{ins}</div>
+      </>
+    );
+  return (
+    <>
+      <div style={{ position: "absolute", left: 104, width: 732, top: 1046, height: 6, background: L.hi }} />
+      <div style={{ position: "absolute", left: 104, width: 732, top: 1084 }}>
+        <div style={{ ...nameStyle, fontSize: 124 }}>{name}</div>
+        <div style={{ marginTop: 20 }}>{ins}</div>
+      </div>
+    </>
+  );
+};
+
+const LookC: React.FC<{ hi?: string; arr?: Arrangement }> = ({ hi, arr = 1 }) => {
   const L = { ...LOOKS.C, hi: hi ?? LOOKS.C.hi };
   const fr = (soft: number, opsz = 144): React.CSSProperties =>
     ({ fontFamily: L.display, fontVariationSettings: `"opsz" ${opsz}, "SOFT" ${soft}, "WONK" 0` });
+  const tc = TITLE_COIN[arr];
   return (
     <AbsoluteFill style={{ background: L.bg, color: L.ink }}>
       <Audio src={staticFile("look/vo-2616.m4a")} />
       <Sequence from={SCENES.title[0]} durationInFrames={SCENES.title[1] - SCENES.title[0]}>
-        {/* frame 0 is the cover: everything at full strength, nothing still arriving */}
-        <Spin cx={540} cy={790} d={450} bg={L.bg} />
-        <StoryTime L={L} y={292} />
-        <Legend L={L} cx={540} cy={790} r={262} id="lg1" drawn
-                top={`ONE CENT · Nº ${CENT.episode}`} bottom={`INSCRIPTION ${CENT.inscription}`} />
-        <div style={{ position: "absolute", left: 104, width: 732, top: 1112, textAlign: "center" }}>
-          <div style={{ ...caps(L, 42, L.dim, "0.3em") }}>Cent</div>
-          <div style={{ ...fr(100), fontWeight: 600, fontSize: 160, lineHeight: 0.95, color: L.hi }}>{CENT.n}</div>
-        </div>
+        {/* frame 0 is the cover: the Cent, its name and the play button, all at full strength */}
+        <Sequence durationInFrames={PRESS_END}><Freeze frame={0}><Spin cx={540} cy={tc.cy} d={tc.d} bg={L.bg} /></Freeze></Sequence>
+        <Sequence from={PRESS_END}><Spin cx={540} cy={tc.cy} d={tc.d} bg={L.bg} /></Sequence>
+        <TitleText L={L} arr={arr} fr={fr} />
+        <PlayPoster L={L} cx={540} cy={tc.cy} d={tc.d} />
       </Sequence>
       <Sequence from={SCENES.only[0]} durationInFrames={SCENES.only[1] - SCENES.only[0]}>
-        <Iris cx={540} cy={790}>
+        <Iris cx={540} cy={tc.cy}>
           <AbsoluteFill style={{ background: L.bg }}>
-            <Img src={staticFile("look/2616.webp")} style={{ ...CUT, position: "absolute", width: 590, height: 590, left: 245, top: 425 }} />
-            <Legend L={L} cx={540} cy={720} r={262} id="lg2" top="THE ONLY CENT OF ITS YEAR" bottom="1912 · PHILADELPHIA" />
-            <div style={{ position: "absolute", left: 104, width: 732, top: 1080, textAlign: "center" }}>
-              <Rise delay={6}><div style={{ ...caps(L, 42, L.dim, "0.3em") }}>Philadelphia</div></Rise>
-              <Rise delay={9}><div style={{ ...fr(100), fontWeight: 600, fontSize: 176, lineHeight: 0.95, color: L.hi }}>1912</div></Rise>
+            <Img src={staticFile("look/2616.webp")} style={{ ...CUT, position: "absolute", width: 600, height: 600, left: 240, top: 310 }} />
+            <div style={{ position: "absolute", left: 104, width: 732, top: 930, textAlign: "center" }}>
+              <Rise delay={4}><div style={{ ...caps(L, 42, L.dim, "0.2em") }}>Philadelphia</div></Rise>
+              <Rise delay={7}><div style={{ ...fr(100), fontWeight: 600, fontSize: 150, lineHeight: 1, marginTop: 6 }}>1912</div></Rise>
+              <Rise delay={12}><div style={{ marginTop: 20 }}><Chip L={L} size={40}>Only Cent of 1912</Chip></div></Rise>
             </div>
           </AbsoluteFill>
         </Iris>
       </Sequence>
       <Sequence from={SCENES.ones[0]} durationInFrames={SCENES.ones[1] - SCENES.ones[0]}>
-        <Iris cx={540} cy={720}><C_Ones L={L} fr={fr} /></Iris>
+        <Iris cx={540} cy={650}><C_Ones L={L} fr={fr} /></Iris>
       </Sequence>
       <Sequence from={SCENES.quote[0]} durationInFrames={SCENES.quote[1] - SCENES.quote[0]}>
-        <Iris cx={540} cy={860}>
-          <AbsoluteFill style={{ background: L.bg }}>
-            <Legend L={L} cx={540} cy={860} r={318} id="lg3" top="MARTIN LEHNEN" bottom="REFLECTIONS ON MINT YEARS" />
-            <div style={{ position: "absolute", left: 270, width: 540, top: 860, transform: "translateY(-50%)", textAlign: "center" }}>
-              <Rise delay={8}><div style={{ ...fr(50, 72), fontStyle: "italic", fontWeight: 400, fontSize: 56, lineHeight: 1.18 }}>“{QUOTE.text}”</div></Rise>
-            </div>
-          </AbsoluteFill>
-        </Iris>
+        <AbsoluteFill style={{ background: L.bg }}>
+          <div style={{ position: "absolute", left: 104, width: 732, top: 560, borderLeft: `8px solid ${L.hi}`, paddingLeft: 40, boxSizing: "border-box" }}>
+            <Rise><div style={{ ...fr(50, 72), fontStyle: "italic", fontWeight: 400, fontSize: 66, lineHeight: 1.18 }}>“{QUOTE.text}”</div></Rise>
+            <Rise delay={10}>
+              <div style={{ marginTop: 44 }}>
+                <div style={{ ...caps(L, 42, L.ink, "0.12em") }}>{QUOTE.who}</div>
+                <div style={{ ...fr(0, 36), fontStyle: "italic", fontWeight: 400, fontSize: 48, color: L.dim, marginTop: 8 }}>{QUOTE.where}</div>
+              </div>
+            </Rise>
+          </div>
+        </AbsoluteFill>
       </Sequence>
       <Sequence from={SCENES.end[0]} durationInFrames={SCENES.end[1] - SCENES.end[0]}>
-        <Iris cx={540} cy={720}>
-          <AbsoluteFill style={{ background: L.bg }}>
-            <Legend L={L} cx={540} cy={720} r={276} id="lg4" top="CENTS" bottom="RUTHERFORD CHANG" />
-            <div style={{ position: "absolute", left: 240, width: 600, top: 720, transform: "translateY(-50%)", textAlign: "center" }}>
-              <Rise delay={6}><div style={{ ...fr(100), fontWeight: 600, fontSize: 110, color: L.hi, lineHeight: 1 }}>One Cent</div></Rise>
-              <Rise delay={10}><div style={{ ...fr(0, 72), fontStyle: "italic", fontWeight: 400, fontSize: 54, color: L.dim, marginTop: 10 }}>Nº {CENT.episode} · Cent #{CENT.n}</div></Rise>
-            </div>
-            <div style={{ position: "absolute", left: 104, width: 732, top: 1120, textAlign: "center", fontFamily: L.sans, fontSize: 46, lineHeight: 1.5 }}>
-              {[["Images", "Rutherford Chang"], ["3D render", "3DCENTS by sinvalli"], ["Words", "Martin Lehnen"]].map(([k, v], i) => (
-                <Rise key={k} delay={14 + i * 4}><span style={{ ...caps(L, 42, L.dim, "0.14em") }}>{k}</span>  {v}</Rise>
-              ))}
-            </div>
-          </AbsoluteFill>
-        </Iris>
+        <AbsoluteFill style={{ background: L.bg }}>
+          <div style={{ position: "absolute", left: 104, width: 732, top: 360, textAlign: "center" }}>
+            <Rise><div style={{ ...fr(100), fontWeight: 600, fontSize: 140, lineHeight: 1 }}>CENTS</div></Rise>
+            <Rise delay={4}><div style={{ ...fr(0, 36), fontStyle: "italic", fontWeight: 400, fontSize: 58, color: L.dim, marginTop: 10 }}>Rutherford Chang</div></Rise>
+            <Rise delay={8}><div style={{ width: 120, height: 6, background: L.hi, margin: "50px auto" }} /></Rise>
+            {[["Images", "Rutherford Chang"], ["3D render", "3DCENTS by sinvalli"], ["Words", "Martin Lehnen"]].map(([k, v], i) => (
+              <Rise key={k} delay={12 + i * 4}>
+                <div style={{ marginBottom: 34 }}>
+                  <div style={{ ...caps(L, 42, L.dim, "0.12em") }}>{k}</div>
+                  <div style={{ fontFamily: L.sans, fontSize: 48, marginTop: 4 }}>{v}</div>
+                </div>
+              </Rise>
+            ))}
+            <Rise delay={26}><div style={{ marginTop: 20 }}><Chip L={L}>CENTS story time</Chip></div></Rise>
+          </div>
+        </AbsoluteFill>
       </Sequence>
-      <Caption L={L} font={L.sans} size={50} weight={500} align="center" />
+      <Caption L={L} font={L.sans} size={50} weight={500} align="center" block />
     </AbsoluteFill>
   );
 };
 
+/** The twelve 1/1 Years as a line of years, read left to right, top to bottom. */
 const C_Ones: React.FC<{ L: Look; fr: (soft: number, opsz?: number) => React.CSSProperties }> = ({ L, fr }) => {
   const f = useCurrentFrame();
   const two = f >= s(11.28 - 9.22);
-  // the twelve on a ring, oldest at 12 o'clock, clockwise
-  const cx = 540, cy = 720, R = 290, d = 132;
+  const size = 150;
   return (
     <AbsoluteFill style={{ background: L.bg }}>
-      <svg width={1080} height={1920} style={{ position: "absolute" }}>
-        <circle cx={cx} cy={cy} r={R} fill="none" stroke={L.rule} strokeWidth={2} />
-      </svg>
-      {ONES.map((c, i) => {
-        const a = (i / 12) * Math.PI * 2 - Math.PI / 2;
-        const on = two ? c.y < 1919 : c.n === CENT.n;
-        const appear = interpolate(f - i * 2, [0, 8], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
-        return (
-          <div key={c.n} style={{ position: "absolute", left: cx + R * Math.cos(a) - d / 2, top: cy + R * Math.sin(a) - d / 2,
-                                   width: d, height: d, borderRadius: "50%", opacity: appear,
-                                   boxShadow: on ? `0 0 0 4px ${L.hi}, 0 0 28px ${L.hi}88` : "none" }}>
-            <Img src={staticFile(`look/cents/${c.n}.webp`)}
-                 style={{ ...CUT, width: d * 1.235, height: d * 1.235, margin: -d * 0.1175,
-                          filter: on ? "none" : "brightness(0.42) saturate(0.6)" }} />
-          </div>
-        );
-      })}
-      <div style={{ position: "absolute", left: cx - 150, width: 300, top: cy, transform: "translateY(-50%)", textAlign: "center" }}>
-        <div style={{ ...fr(100), fontWeight: 600, fontSize: 150, lineHeight: 1, color: L.hi }}>{two ? 2 : 12}</div>
-      </div>
-      <div style={{ position: "absolute", left: 104, width: 732, top: 1090, textAlign: "center" }}>
-        <div style={{ ...caps(L, 42, L.dim, "0.3em") }}>{two ? "before 1919" : "1/1 Years"}</div>
-        <div style={{ ...fr(0, 72), fontStyle: "italic", fontWeight: 400, fontSize: 54, marginTop: 12 }}>
-          {two ? "1911 and 1912" : "one Cent alone in its year"}
+      <div style={{ position: "absolute", left: 104, width: 732, top: 300, textAlign: "center" }}>
+        <div style={{ ...caps(L, 42, L.dim, "0.2em") }}>{two ? "1/1 Years before 1919" : "1/1 Years"}</div>
+        <div style={{ ...fr(100), fontWeight: 600, fontSize: 150, lineHeight: 1, marginTop: 8 }}>
+          {two ? <>2 <span style={{ ...fr(0, 72), fontStyle: "italic", fontWeight: 400, fontSize: 96, color: L.dim }}>of</span> 12</> : <>12</>}
         </div>
+      </div>
+      <div style={{ position: "absolute", left: 104, width: 732, top: 560, display: "grid",
+                    gridTemplateColumns: `repeat(4, ${size}px)`, justifyContent: "space-between", rowGap: 24 }}>
+        {ONES.map((c, i) => {
+          const on = two ? c.y < 1919 : c.n === CENT.n;
+          const appear = interpolate(f - i * 2, [0, 8], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+          return (
+            <div key={c.n} style={{ opacity: appear, display: "flex", flexDirection: "column", alignItems: "center" }}>
+              <div style={{ width: size, height: size, borderRadius: "50%", boxShadow: on ? `0 0 0 6px ${L.hi}` : "none" }}>
+                <Img src={staticFile(`look/cents/${c.n}.webp`)}
+                     style={{ ...CUT, width: size * 1.235, height: size * 1.235, margin: -size * 0.1175,
+                              filter: on ? "none" : "brightness(0.42) saturate(0.6)" }} />
+              </div>
+              <div style={{ marginTop: 12, padding: "2px 12px", background: on ? L.hi : "transparent",
+                            fontFamily: L.mono, fontWeight: 500, fontSize: 42, color: on ? L.ink : L.dim }}>{c.y}</div>
+            </div>
+          );
+        })}
       </div>
     </AbsoluteFill>
   );
@@ -541,12 +583,5 @@ const C_Ones: React.FC<{ L: Look; fr: (soft: number, opsz?: number) => React.CSS
 
 export const LOOK_COMPONENTS = { LookA, LookB, LookC };
 
-/** Highlight candidates for look C (2026-10-28). Each is a colour CENTS already carries. */
-export const C_HIGHLIGHTS: Record<string, string> = {
-  Copper: "#d9925c",      // current: the Lead caption copper
-  Rose: "#c99079",        // cents.gallery's light copper
-  FullRed: "#e8744a",     // a Full Red Cent, bright mint copper
-  Brass: "#d8b25a",       // the Gold trait, honey to pale amber
-  Verdigris: "#76b7a6",   // the patina that grows on copper
-  Paper: "#efe7dc",       // no colour: the highlight is weight and light alone
-};
+/** Title arrangements for look C v3 (2026-10-29). */
+export const C_ARRANGEMENTS: Record<string, Arrangement> = { Below: 1, AboveBelow: 2, Line: 3 };

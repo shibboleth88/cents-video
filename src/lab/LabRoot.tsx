@@ -2,7 +2,7 @@ import React from "react";
 import { AbsoluteFill, Composition } from "remotion";
 import { CANVAS, COLOR, REGIONS } from "../style/tokens";
 import { CentGrid, CentTurn, fitGrid } from "../style/grids";
-import { C_HIGHLIGHTS, LOOK_COMPONENTS, LOOK_FRAMES } from "./Looks";
+import { C_ARRANGEMENTS, LOOK_COMPONENTS, LOOK_FRAMES } from "./Looks";
 import poolsJson from "../../films/sets/data/pools.json";
 
 /**
@@ -74,9 +74,9 @@ export const LabRoot: React.FC = () => (
     {Object.entries(LOOK_COMPONENTS).map(([id, C]) => (
       <Composition key={id} id={id} component={C} width={1080} height={1920} fps={30} durationInFrames={LOOK_FRAMES} />
     ))}
-    {Object.entries(C_HIGHLIGHTS).map(([name, hi]) => (
+    {Object.entries(C_ARRANGEMENTS).map(([name, arr]) => (
       <Composition key={name} id={`LookC-${name}`} component={LOOK_COMPONENTS.LookC} width={1080} height={1920} fps={30}
-                   durationInFrames={LOOK_FRAMES} defaultProps={{ hi }} />
+                   durationInFrames={LOOK_FRAMES} defaultProps={{ arr }} />
     ))}
   </>
 );
