@@ -1,0 +1,579 @@
+{
+ "essay": {
+  "title": "Cent #1264",
+  "subtitle": "Inscription #65957688",
+  "author": "shibboleth",
+  "source": "/mnt/project-files/single-cent-series/1264/1264_proposal_v0.1.md",
+  "version": "v1 (2026-11-02)"
+ },
+ "_what": "Cent #1264 (1944, Notable Gold, Significant Obsidian, Contaminated: Paint). Concepts C17 (primary) and C55 (value tie: years become coveted). Every count from the Sep 2026 trait export. Traits are read from the front only.",
+ "shots": [
+  {
+   "shot_id": "s01_open",
+   "start": {
+    "at_start": true
+   },
+   "end": {
+    "at_phrase": "Twenty-two of the"
+   },
+   "purpose": "Standard opening: the 3DCENTS turn of #1264 plays once, then settles on the 1050px front at the same size. Story time pill on frame 0. Year zoom, then the mint-mark area under the date (no mark: Philadelphia). Boxes are Claude's reading of the front.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65957688,
+    "n": 1264,
+    "front": "hires/1264.webp",
+    "spin": {
+     "src": "3dcents/1264-360-30fps.mp4",
+     "width": 1080,
+     "height": 1920,
+     "frames": 150,
+     "coin": {
+      "cx": 539.5,
+      "cy": 959.5,
+      "d": 768
+     },
+     "credit": "3D render: 3DCENTS by sinvalli",
+     "credit_at_end": true
+    },
+    "moves": [
+     {
+      "at_phrase": "nineteen forty-four with no mint",
+      "box": [
+       0.64,
+       0.6,
+       0.86,
+       0.7
+      ],
+      "mark": true,
+      "dur": 0.8
+     },
+     {
+      "at_phrase": "no mint mark",
+      "box": [
+       0.66,
+       0.67,
+       0.86,
+       0.78
+      ],
+      "mark": true,
+      "dur": 0.7
+     }
+    ],
+    "reads": [
+     {
+      "at_phrase": "struck in nineteen forty-four",
+      "readout": "1944"
+     },
+     {
+      "at_phrase": "no mint mark",
+      "readout": "1944",
+      "caption": "no mint mark"
+     },
+     {
+      "at_phrase": "generally indicating",
+      "readout": "1944",
+      "caption": "Philadelphia"
+     }
+    ],
+    "kicker": {
+     "text": "Story time",
+     "look": "pill",
+     "hold": 3.4
+    }
+   }
+  },
+  {
+   "shot_id": "s02_year_pool",
+   "start": {
+    "at_phrase": "Twenty-two of the"
+   },
+   "end": {
+    "at_phrase": "It is a Wheat"
+   },
+   "purpose": "Every Cent dated 1944 (Sep 2026 export: 22), #1264 ringed. No Cent in CENTS is dated 1943 (export: 0), the steel-cent year (Wikipedia, 1943 steel cent).",
+   "visual_kind": "code",
+   "component": "CentScroll",
+   "props": {
+    "title": "1944",
+    "ns": [
+     322,
+     543,
+     1225,
+     1264,
+     1921,
+     2174,
+     2874,
+     3438,
+     3690,
+     3799,
+     4028,
+     4604,
+     5691,
+     5935,
+     6591,
+     6817,
+     7415,
+     7567,
+     7806,
+     8526,
+     9714,
+     9956
+    ],
+    "mark": 1264,
+    "readout": "22",
+    "caption": "of 10,000 Cents",
+    "until": "It is a Wheat",
+    "cols": 3
+   }
+  },
+  {
+   "shot_id": "s03_sets",
+   "start": {
+    "at_phrase": "It is a Wheat"
+   },
+   "end": {
+    "at_phrase": "which no Wall"
+   },
+   "purpose": "Set roles (user rule 2026-10-28): 1944 is a Wheat Club year (cents.vision: wheat penny, minted 1958 or earlier) and a 1940s Set year; set-counts.php of 2026-10-27 counts 0 Walls holding the 1940s Set.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65957688,
+    "n": 1264,
+    "front": "hires/1264.webp",
+    "moves": [
+     {
+      "at_phrase": "It is a Wheat",
+      "box": [
+       0.64,
+       0.6,
+       0.86,
+       0.7
+      ],
+      "mark": true,
+      "dur": 0.8
+     }
+    ],
+    "reads": [
+     {
+      "at_phrase": "It is a Wheat",
+      "readout": "Wheat Club",
+      "caption": "1944"
+     },
+     {
+      "at_phrase": "nineteen-forties Set",
+      "readout": "1940s Set",
+      "caption": "1944"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s03b_set_count",
+   "start": {
+    "at_phrase": "which no Wall"
+   },
+   "end": {
+    "at_phrase": "This Cent is the oldest"
+   },
+   "purpose": "The 1940s Set count (set-counts.php, 2026-10-27: 0 Walls). Its own shot so the long sentence breaks into two caption cues (one cue overran the safe area in v1's first render).",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65957688,
+    "n": 1264,
+    "front": "hires/1264.webp",
+    "reads": [
+     {
+      "at_phrase": "which no Wall",
+      "readout": "1940s Set",
+      "caption": "none complete, Oct 2026"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s04_gold",
+   "start": {
+    "at_phrase": "This Cent is the oldest"
+   },
+   "end": {
+    "at_phrase": "The other grade"
+   },
+   "purpose": "Oldest Gold: of the 69 Gold Cents (notable 60 + full 9) #1264 is 1944, the next is #6789 (1956). Definition from the Traits Atlas, Gold Patina v1.0 (gold.txt). Gold area box is Claude's reading.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65957688,
+    "n": 1264,
+    "front": "hires/1264.webp",
+    "moves": [
+     {
+      "at_phrase": "This Cent is the oldest",
+      "box": null,
+      "dur": 0.8
+     },
+     {
+      "at_phrase": "The Traits Atlas",
+      "box": [
+       0.26,
+       0.5,
+       0.7,
+       0.9
+      ],
+      "mark": true,
+      "dur": 0.9
+     }
+    ],
+    "reads": [
+     {
+      "at_phrase": "oldest Gold Cent",
+      "readout": "Oldest Gold",
+      "caption": "by 12 years"
+     },
+     {
+      "at_phrase": "The Traits Atlas",
+      "readout": "Notable Gold",
+      "caption": "Traits Atlas"
+     },
+     {
+      "at_phrase": "This one is Notable",
+      "readout": "Notable Gold",
+      "caption": "one of 2 grades"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s04b_full",
+   "start": {
+    "at_phrase": "The other grade"
+   },
+   "end": {
+    "at_phrase": "Sixty-nine Cents carry"
+   },
+   "purpose": "Full Gold, shown on #4273, the Traits Atlas's own Full Gold Patina example (gold.txt).",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65996790,
+    "n": 4273,
+    "front": "hires/4273.webp",
+    "reads": [
+     {
+      "at_phrase": "The other grade",
+      "readout": "Full Gold",
+      "caption": "over 70% of the surface"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s05_gold_pool",
+   "start": {
+    "at_phrase": "Sixty-nine Cents carry"
+   },
+   "end": {
+    "at_phrase": "Over Lincoln's head"
+   },
+   "purpose": "Every Gold Cent (cents_by_trait gold_any, Sep 2026 export: 69), #1264 ringed; all the others are dated 1956 or later.",
+   "visual_kind": "code",
+   "component": "CentScroll",
+   "props": {
+    "title": "Gold",
+    "ns": [
+     73,
+     473,
+     893,
+     981,
+     1040,
+     1264,
+     1358,
+     1378,
+     1474,
+     1475,
+     1707,
+     1823,
+     1864,
+     1899,
+     1904,
+     1924,
+     2016,
+     2559,
+     2594,
+     2746,
+     2911,
+     2929,
+     2930,
+     2981,
+     3020,
+     3109,
+     3130,
+     3231,
+     3252,
+     3260,
+     3734,
+     3997,
+     4144,
+     4162,
+     4228,
+     4267,
+     4273,
+     4413,
+     4570,
+     4788,
+     4922,
+     4940,
+     4956,
+     5086,
+     5161,
+     5856,
+     6000,
+     6129,
+     6465,
+     6711,
+     6789,
+     7001,
+     7013,
+     7332,
+     7449,
+     7957,
+     8002,
+     8293,
+     8356,
+     8407,
+     8461,
+     9085,
+     9198,
+     9330,
+     9344,
+     9481,
+     9575,
+     9581,
+     9889
+    ],
+    "mark": 1264,
+    "readout": "69",
+    "caption": "carry gold",
+    "until": "Over Lincoln's head",
+    "cols": 3
+   }
+  },
+  {
+   "shot_id": "s06_obsidian_paint",
+   "start": {
+    "at_phrase": "Over Lincoln's head"
+   },
+   "end": {
+    "at_phrase": "Compare Cent number"
+   },
+   "purpose": "Significant Obsidian over the head (Atlas v1.1 Intensity Scale, quoted) and the paint fleck near the rim (Contaminated: Paint). Both boxes are Claude's reading of the front.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65957688,
+    "n": 1264,
+    "front": "hires/1264.webp",
+    "moves": [
+     {
+      "at_phrase": "Over Lincoln's head",
+      "box": [
+       0.42,
+       0.12,
+       0.88,
+       0.62
+      ],
+      "mark": true,
+      "dur": 0.9
+     },
+     {
+      "at_phrase": "Near the rim",
+      "box": [
+       0.1,
+       0.32,
+       0.24,
+       0.45
+      ],
+      "mark": true,
+      "dur": 0.9,
+      "max": 4
+     }
+    ],
+    "reads": [
+     {
+      "at_phrase": "Over Lincoln's head",
+      "readout": "Obsidian",
+      "caption": "Significant"
+     },
+     {
+      "at_phrase": "a major visual",
+      "readout": "Obsidian",
+      "caption": "a major visual actor"
+     },
+     {
+      "at_phrase": "Near the rim",
+      "readout": "Contaminated",
+      "caption": "Paint"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s07_compare",
+   "start": {
+    "at_phrase": "Compare Cent number"
+   },
+   "end": {
+    "at_phrase": "Time-based generative art"
+   },
+   "purpose": "Template: #543, also 1944, no visual trait and no contamination in the Sep 2026 export. Not lustrous, so not called close to mint state. Dissolves 543, 1264, 543, 1264.",
+   "visual_kind": "code",
+   "component": "CentDissolve",
+   "props": {
+    "first": "b",
+    "a": {
+     "n": 1264,
+     "inscription": 65957688,
+     "front": "hires/1264.webp",
+     "readout": "1944",
+     "caption": "Notable Gold"
+    },
+    "b": {
+     "n": 543,
+     "inscription": 65954963,
+     "front": "hires/543.webp",
+     "readout": "1944",
+     "caption": "no visual trait"
+    },
+    "swaps": [
+     {
+      "at_phrase": "The same design",
+      "to": "a"
+     },
+     {
+      "at_phrase": "the same year",
+      "to": "b"
+     },
+     {
+      "at_phrase": "Only one of them",
+      "to": "a"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s08_time",
+   "start": {
+    "at_phrase": "Time-based generative art"
+   },
+   "end": {
+    "at_phrase": "Years that carry meaning"
+   },
+   "purpose": "Concept C17 named on screen; Lehnen quote attributed in the voiceover, credited on the card, lit as spoken. check_quotes.py: FOUND (lehnen__unique-nature-of-cents-traits.md).",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65957688,
+    "n": 1264,
+    "front": "hires/1264.webp",
+    "concept": {
+     "at_phrase": "Time-based generative art",
+     "label": "Time-based generative art"
+    },
+    "quote": {
+     "at_phrase": "Each CENT is",
+     "text": "Each CENT is a high-resolution photograph of a genuine coin, and its traits are natural phenomena like wear, patina, and imperfections – etched by time, not code.",
+     "credit": "Martin Lehnen"
+    }
+   }
+  },
+  {
+   "shot_id": "s09_years",
+   "start": {
+    "at_phrase": "Years that carry meaning"
+   },
+   "end": {
+    "after_phrase": "to the project",
+    "plus": 0.3
+   },
+   "purpose": "Concept C55 (value tie: years that become coveted) named on screen; Lehnen quote from the same essay, cut at the start with a marked ellipsis. check_quotes.py: FOUND.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65957688,
+    "n": 1264,
+    "front": "hires/1264.webp",
+    "concept": {
+     "at_phrase": "Years that carry meaning",
+     "label": "Years that carry meaning"
+    },
+    "quote": {
+     "at_phrase": "coins from significant",
+     "text": "…coins from significant historical years become highly coveted, adding a layer of historical storytelling to the project.",
+     "credit": "Martin Lehnen"
+    }
+   }
+  },
+  {
+   "shot_id": "s10_card",
+   "start": {
+    "after_phrase": "to the project",
+    "plus": 0.3
+   },
+   "end": {
+    "after_phrase": "a great Cent",
+    "plus": 1.2
+   },
+   "purpose": "The opening card again; the closing line 'Cent #1264, a great Cent.' is spoken over it (series default since 2026-10-27).",
+   "visual_kind": "code",
+   "component": "CentSpin",
+   "props": {
+    "inscription": 65957688,
+    "n": 1264,
+    "clip": {
+     "src": "3dcents/1264-360-30fps.mp4",
+     "width": 1080,
+     "height": 1920,
+     "frames": 150,
+     "coin": {
+      "cx": 539.5,
+      "cy": 959.5,
+      "d": 768
+     },
+     "credit": "3D render: 3DCENTS by sinvalli",
+     "credit_at_end": true
+    },
+    "size": 560,
+    "reads": [
+     {
+      "readout": "1944"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s11_credits",
+   "start": {
+    "after_phrase": "a great Cent",
+    "plus": 1.2
+   },
+   "end": {
+    "at_end": true
+   },
+   "purpose": "End credits.",
+   "visual_kind": "code",
+   "component": "Credits",
+   "props": {
+    "lines": [
+     "Images: Rutherford Chang",
+     "3D render: 3DCENTS by sinvalli",
+     "Trait names and definitions: Traits Atlas, CENTS Trait Council",
+     "Quotes: Martin Lehnen,",
+     "“Thoughts about the unique nature of CENTS traits and their significance”"
+    ],
+    "url": "cents.gallery"
+   }
+  }
+ ]
+}

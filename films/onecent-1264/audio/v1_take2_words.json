@@ -1,0 +1,1661 @@
+{
+"_source": "scribe_v1 on eee take 2 (generation 6B8Iol8t0P57u3UCsVwG, 99.36 s), flow IlOj0SH2aPERgwPfYu67",
+"words": [
+{
+"text": "[thoughtfully]",
+"type": "word",
+"start": 0.0,
+"end": 0.073
+},
+{
+"text": "[calm]",
+"type": "word",
+"start": 0.087,
+"end": 0.145
+},
+{
+"text": "Cent",
+"type": "word",
+"start": 0.16,
+"end": 0.48
+},
+{
+"text": "number",
+"type": "word",
+"start": 0.56,
+"end": 0.8
+},
+{
+"text": "twelve",
+"type": "word",
+"start": 0.88,
+"end": 1.28
+},
+{
+"text": "sixty-four.",
+"type": "word",
+"start": 1.36,
+"end": 2.56
+},
+{
+"text": "A",
+"type": "word",
+"start": 2.6,
+"end": 2.64
+},
+{
+"text": "penny",
+"type": "word",
+"start": 2.72,
+"end": 2.96
+},
+{
+"text": "struck",
+"type": "word",
+"start": 3.04,
+"end": 3.36
+},
+{
+"text": "in",
+"type": "word",
+"start": 3.44,
+"end": 3.52
+},
+{
+"text": "nineteen",
+"type": "word",
+"start": 3.6,
+"end": 4.0
+},
+{
+"text": "forty-four",
+"type": "word",
+"start": 4.12,
+"end": 4.64
+},
+{
+"text": "with",
+"type": "word",
+"start": 4.76,
+"end": 4.88
+},
+{
+"text": "no",
+"type": "word",
+"start": 4.96,
+"end": 5.12
+},
+{
+"text": "mint",
+"type": "word",
+"start": 5.2,
+"end": 5.36
+},
+{
+"text": "mark,",
+"type": "word",
+"start": 5.44,
+"end": 6.0
+},
+{
+"text": "generally",
+"type": "word",
+"start": 6.12,
+"end": 6.4
+},
+{
+"text": "indicating",
+"type": "word",
+"start": 6.56,
+"end": 6.96
+},
+{
+"text": "the",
+"type": "word",
+"start": 7.0,
+"end": 7.04
+},
+{
+"text": "Philadelphia",
+"type": "word",
+"start": 7.12,
+"end": 7.68
+},
+{
+"text": "mint.",
+"type": "word",
+"start": 7.76,
+"end": 8.4
+},
+{
+"text": "Twenty-two",
+"type": "word",
+"start": 8.56,
+"end": 8.96
+},
+{
+"text": "of",
+"type": "word",
+"start": 9.04,
+"end": 9.12
+},
+{
+"text": "the",
+"type": "word",
+"start": 9.2,
+"end": 9.28
+},
+{
+"text": "ten",
+"type": "word",
+"start": 9.36,
+"end": 9.44
+},
+{
+"text": "thousand",
+"type": "word",
+"start": 9.6,
+"end": 10.0
+},
+{
+"text": "Cents",
+"type": "word",
+"start": 10.107,
+"end": 10.32
+},
+{
+"text": "are",
+"type": "word",
+"start": 10.4,
+"end": 10.48
+},
+{
+"text": "dated",
+"type": "word",
+"start": 10.64,
+"end": 10.8
+},
+{
+"text": "nineteen",
+"type": "word",
+"start": 10.84,
+"end": 11.2
+},
+{
+"text": "forty-four.",
+"type": "word",
+"start": 11.32,
+"end": 12.24
+},
+{
+"text": "None",
+"type": "word",
+"start": 12.4,
+"end": 12.56
+},
+{
+"text": "is",
+"type": "word",
+"start": 12.64,
+"end": 12.72
+},
+{
+"text": "dated",
+"type": "word",
+"start": 12.8,
+"end": 13.04
+},
+{
+"text": "nineteen",
+"type": "word",
+"start": 13.08,
+"end": 13.44
+},
+{
+"text": "forty-three,",
+"type": "word",
+"start": 13.52,
+"end": 14.347
+},
+{
+"text": "the",
+"type": "word",
+"start": 14.373,
+"end": 14.4
+},
+{
+"text": "year",
+"type": "word",
+"start": 14.48,
+"end": 14.64
+},
+{
+"text": "pennies",
+"type": "word",
+"start": 14.68,
+"end": 14.96
+},
+{
+"text": "were",
+"type": "word",
+"start": 15.04,
+"end": 15.12
+},
+{
+"text": "struck",
+"type": "word",
+"start": 15.16,
+"end": 15.36
+},
+{
+"text": "in",
+"type": "word",
+"start": 15.44,
+"end": 15.52
+},
+{
+"text": "steel.",
+"type": "word",
+"start": 15.6,
+"end": 16.347
+},
+{
+"text": "It",
+"type": "word",
+"start": 16.373,
+"end": 16.4
+},
+{
+"text": "is",
+"type": "word",
+"start": 16.44,
+"end": 16.48
+},
+{
+"text": "a",
+"type": "word",
+"start": 16.64,
+"end": 16.7
+},
+{
+"text": "Wheat",
+"type": "word",
+"start": 16.76,
+"end": 16.88
+},
+{
+"text": "Club",
+"type": "word",
+"start": 17.0,
+"end": 17.12
+},
+{
+"text": "year,",
+"type": "word",
+"start": 17.2,
+"end": 17.64
+},
+{
+"text": "and",
+"type": "word",
+"start": 17.68,
+"end": 17.84
+},
+{
+"text": "a",
+"type": "word",
+"start": 17.88,
+"end": 17.92
+},
+{
+"text": "year",
+"type": "word",
+"start": 18.0,
+"end": 18.16
+},
+{
+"text": "of",
+"type": "word",
+"start": 18.2,
+"end": 18.24
+},
+{
+"text": "the",
+"type": "word",
+"start": 18.32,
+"end": 18.4
+},
+{
+"text": "nineteen-forties",
+"type": "word",
+"start": 18.44,
+"end": 19.2
+},
+{
+"text": "Set,",
+"type": "word",
+"start": 19.32,
+"end": 19.6
+},
+{
+"text": "which",
+"type": "word",
+"start": 19.72,
+"end": 19.84
+},
+{
+"text": "no",
+"type": "word",
+"start": 19.96,
+"end": 20.08
+},
+{
+"text": "Wall",
+"type": "word",
+"start": 20.2,
+"end": 20.32
+},
+{
+"text": "had",
+"type": "word",
+"start": 20.4,
+"end": 20.48
+},
+{
+"text": "completed",
+"type": "word",
+"start": 20.72,
+"end": 20.96
+},
+{
+"text": "as",
+"type": "word",
+"start": 21.04,
+"end": 21.12
+},
+{
+"text": "of",
+"type": "word",
+"start": 21.16,
+"end": 21.2
+},
+{
+"text": "October",
+"type": "word",
+"start": 21.28,
+"end": 21.68
+},
+{
+"text": "twenty",
+"type": "word",
+"start": 21.76,
+"end": 22.0
+},
+{
+"text": "twenty-six.",
+"type": "word",
+"start": 22.16,
+"end": 23.12
+},
+{
+"text": "This",
+"type": "word",
+"start": 23.2,
+"end": 23.28
+},
+{
+"text": "Cent",
+"type": "word",
+"start": 23.4,
+"end": 23.52
+},
+{
+"text": "is",
+"type": "word",
+"start": 23.6,
+"end": 23.68
+},
+{
+"text": "the",
+"type": "word",
+"start": 23.76,
+"end": 23.92
+},
+{
+"text": "oldest",
+"type": "word",
+"start": 24.0,
+"end": 24.32
+},
+{
+"text": "Gold",
+"type": "word",
+"start": 24.4,
+"end": 24.64
+},
+{
+"text": "Cent",
+"type": "word",
+"start": 24.76,
+"end": 24.88
+},
+{
+"text": "in",
+"type": "word",
+"start": 24.92,
+"end": 24.96
+},
+{
+"text": "the",
+"type": "word",
+"start": 25.0,
+"end": 25.04
+},
+{
+"text": "collection,",
+"type": "word",
+"start": 25.12,
+"end": 25.76
+},
+{
+"text": "by",
+"type": "word",
+"start": 25.84,
+"end": 25.92
+},
+{
+"text": "twelve",
+"type": "word",
+"start": 26.0,
+"end": 26.32
+},
+{
+"text": "years.",
+"type": "word",
+"start": 26.4,
+"end": 27.2
+},
+{
+"text": "The",
+"type": "word",
+"start": 27.28,
+"end": 27.36
+},
+{
+"text": "Traits",
+"type": "word",
+"start": 27.52,
+"end": 27.68
+},
+{
+"text": "Atlas",
+"type": "word",
+"start": 27.76,
+"end": 28.08
+},
+{
+"text": "of",
+"type": "word",
+"start": 28.12,
+"end": 28.16
+},
+{
+"text": "the",
+"type": "word",
+"start": 28.24,
+"end": 28.32
+},
+{
+"text": "CENTS",
+"type": "word",
+"start": 28.4,
+"end": 28.64
+},
+{
+"text": "Trait",
+"type": "word",
+"start": 28.72,
+"end": 28.88
+},
+{
+"text": "Council",
+"type": "word",
+"start": 28.96,
+"end": 29.36
+},
+{
+"text": "describes",
+"type": "word",
+"start": 29.44,
+"end": 29.84
+},
+{
+"text": "gold",
+"type": "word",
+"start": 29.92,
+"end": 30.16
+},
+{
+"text": "patina",
+"type": "word",
+"start": 30.28,
+"end": 30.72
+},
+{
+"text": "as",
+"type": "word",
+"start": 30.76,
+"end": 30.8
+},
+{
+"text": "a",
+"type": "word",
+"start": 30.88,
+"end": 30.96
+},
+{
+"text": "luminous",
+"type": "word",
+"start": 31.04,
+"end": 31.52
+},
+{
+"text": "surface",
+"type": "word",
+"start": 31.72,
+"end": 31.92
+},
+{
+"text": "toning,",
+"type": "word",
+"start": 32.04,
+"end": 32.62
+},
+{
+"text": "suspended",
+"type": "word",
+"start": 32.76,
+"end": 33.04
+},
+{
+"text": "between",
+"type": "word",
+"start": 33.24,
+"end": 33.44
+},
+{
+"text": "metal",
+"type": "word",
+"start": 33.6,
+"end": 33.76
+},
+{
+"text": "and",
+"type": "word",
+"start": 33.84,
+"end": 34.0
+},
+{
+"text": "light.",
+"type": "word",
+"start": 34.16,
+"end": 34.72
+},
+{
+"text": "This",
+"type": "word",
+"start": 34.8,
+"end": 34.96
+},
+{
+"text": "one",
+"type": "word",
+"start": 35.04,
+"end": 35.28
+},
+{
+"text": "is",
+"type": "word",
+"start": 35.36,
+"end": 35.44
+},
+{
+"text": "Notable",
+"type": "word",
+"start": 35.52,
+"end": 35.92
+},
+{
+"text": "Gold.",
+"type": "word",
+"start": 36.08,
+"end": 36.56
+},
+{
+"text": "The",
+"type": "word",
+"start": 36.64,
+"end": 36.72
+},
+{
+"text": "other",
+"type": "word",
+"start": 36.8,
+"end": 36.96
+},
+{
+"text": "grade,",
+"type": "word",
+"start": 37.12,
+"end": 37.44
+},
+{
+"text": "Full,",
+"type": "word",
+"start": 37.52,
+"end": 37.96
+},
+{
+"text": "is",
+"type": "word",
+"start": 38.0,
+"end": 38.08
+},
+{
+"text": "a",
+"type": "word",
+"start": 38.16,
+"end": 38.373
+},
+{
+"text": "continuous",
+"type": "word",
+"start": 38.587,
+"end": 38.8
+},
+{
+"text": "golden",
+"type": "word",
+"start": 38.88,
+"end": 39.2
+},
+{
+"text": "sheen",
+"type": "word",
+"start": 39.28,
+"end": 39.6
+},
+{
+"text": "over",
+"type": "word",
+"start": 39.72,
+"end": 39.84
+},
+{
+"text": "more",
+"type": "word",
+"start": 39.92,
+"end": 40.0
+},
+{
+"text": "than",
+"type": "word",
+"start": 40.08,
+"end": 40.16
+},
+{
+"text": "about",
+"type": "word",
+"start": 40.32,
+"end": 40.48
+},
+{
+"text": "seventy",
+"type": "word",
+"start": 40.56,
+"end": 40.88
+},
+{
+"text": "percent",
+"type": "word",
+"start": 41.04,
+"end": 41.2
+},
+{
+"text": "of",
+"type": "word",
+"start": 41.24,
+"end": 41.28
+},
+{
+"text": "the",
+"type": "word",
+"start": 41.36,
+"end": 41.44
+},
+{
+"text": "surface.",
+"type": "word",
+"start": 41.88,
+"end": 42.4
+},
+{
+"text": "Sixty-nine",
+"type": "word",
+"start": 42.52,
+"end": 43.12
+},
+{
+"text": "Cents",
+"type": "word",
+"start": 43.16,
+"end": 43.44
+},
+{
+"text": "carry",
+"type": "word",
+"start": 43.52,
+"end": 43.76
+},
+{
+"text": "gold.",
+"type": "word",
+"start": 44.08,
+"end": 44.44
+},
+{
+"text": "Every",
+"type": "word",
+"start": 44.48,
+"end": 44.72
+},
+{
+"text": "other",
+"type": "word",
+"start": 44.84,
+"end": 44.96
+},
+{
+"text": "one",
+"type": "word",
+"start": 45.04,
+"end": 45.12
+},
+{
+"text": "was",
+"type": "word",
+"start": 45.2,
+"end": 45.28
+},
+{
+"text": "struck",
+"type": "word",
+"start": 45.36,
+"end": 45.52
+},
+{
+"text": "in",
+"type": "word",
+"start": 45.6,
+"end": 45.68
+},
+{
+"text": "nineteen",
+"type": "word",
+"start": 45.72,
+"end": 46.08
+},
+{
+"text": "fifty-six",
+"type": "word",
+"start": 46.187,
+"end": 46.72
+},
+{
+"text": "or",
+"type": "word",
+"start": 46.8,
+"end": 46.88
+},
+{
+"text": "later.",
+"type": "word",
+"start": 47.2,
+"end": 47.56
+},
+{
+"text": "Over",
+"type": "word",
+"start": 47.6,
+"end": 47.84
+},
+{
+"text": "Lincoln's",
+"type": "word",
+"start": 47.92,
+"end": 48.24
+},
+{
+"text": "head",
+"type": "word",
+"start": 48.36,
+"end": 48.48
+},
+{
+"text": "lies",
+"type": "word",
+"start": 48.56,
+"end": 48.8
+},
+{
+"text": "Significant",
+"type": "word",
+"start": 48.92,
+"end": 49.36
+},
+{
+"text": "Obsidian:",
+"type": "word",
+"start": 49.44,
+"end": 50.347
+},
+{
+"text": "in",
+"type": "word",
+"start": 50.373,
+"end": 50.4
+},
+{
+"text": "the",
+"type": "word",
+"start": 50.44,
+"end": 50.48
+},
+{
+"text": "Atlas's",
+"type": "word",
+"start": 50.56,
+"end": 50.96
+},
+{
+"text": "words,",
+"type": "word",
+"start": 51.04,
+"end": 51.52
+},
+{
+"text": "a",
+"type": "word",
+"start": 51.6,
+"end": 51.76
+},
+{
+"text": "major",
+"type": "word",
+"start": 51.92,
+"end": 52.08
+},
+{
+"text": "visual",
+"type": "word",
+"start": 52.16,
+"end": 52.48
+},
+{
+"text": "actor",
+"type": "word",
+"start": 52.64,
+"end": 52.96
+},
+{
+"text": "with",
+"type": "word",
+"start": 53.04,
+"end": 53.12
+},
+{
+"text": "strong",
+"type": "word",
+"start": 53.28,
+"end": 53.52
+},
+{
+"text": "darkening,",
+"type": "word",
+"start": 53.6,
+"end": 54.24
+},
+{
+"text": "but",
+"type": "word",
+"start": 54.32,
+"end": 54.4
+},
+{
+"text": "not",
+"type": "word",
+"start": 54.48,
+"end": 54.56
+},
+{
+"text": "yet",
+"type": "word",
+"start": 54.64,
+"end": 54.88
+},
+{
+"text": "fully",
+"type": "word",
+"start": 55.0,
+"end": 55.12
+},
+{
+"text": "dominant.",
+"type": "word",
+"start": 55.24,
+"end": 55.96
+},
+{
+"text": "Near",
+"type": "word",
+"start": 56.0,
+"end": 56.08
+},
+{
+"text": "the",
+"type": "word",
+"start": 56.16,
+"end": 56.24
+},
+{
+"text": "rim,",
+"type": "word",
+"start": 56.44,
+"end": 56.693
+},
+{
+"text": "a",
+"type": "word",
+"start": 56.747,
+"end": 56.8
+},
+{
+"text": "fleck",
+"type": "word",
+"start": 56.84,
+"end": 56.96
+},
+{
+"text": "of",
+"type": "word",
+"start": 57.04,
+"end": 57.2
+},
+{
+"text": "paint",
+"type": "word",
+"start": 57.32,
+"end": 57.44
+},
+{
+"text": "marks",
+"type": "word",
+"start": 57.52,
+"end": 57.76
+},
+{
+"text": "it",
+"type": "word",
+"start": 57.84,
+"end": 57.92
+},
+{
+"text": "as",
+"type": "word",
+"start": 58.0,
+"end": 58.08
+},
+{
+"text": "Contaminated.",
+"type": "word",
+"start": 58.24,
+"end": 59.333
+},
+{
+"text": "Compare",
+"type": "word",
+"start": 59.467,
+"end": 59.6
+},
+{
+"text": "Cent",
+"type": "word",
+"start": 59.72,
+"end": 59.84
+},
+{
+"text": "number",
+"type": "word",
+"start": 60.0,
+"end": 60.16
+},
+{
+"text": "five",
+"type": "word",
+"start": 60.24,
+"end": 60.48
+},
+{
+"text": "forty-three,",
+"type": "word",
+"start": 60.64,
+"end": 61.4
+},
+{
+"text": "also",
+"type": "word",
+"start": 61.44,
+"end": 61.68
+},
+{
+"text": "from",
+"type": "word",
+"start": 61.76,
+"end": 61.84
+},
+{
+"text": "nineteen",
+"type": "word",
+"start": 61.88,
+"end": 62.16
+},
+{
+"text": "forty-four,",
+"type": "word",
+"start": 62.24,
+"end": 62.84
+},
+{
+"text": "with",
+"type": "word",
+"start": 62.88,
+"end": 63.04
+},
+{
+"text": "no",
+"type": "word",
+"start": 63.12,
+"end": 63.28
+},
+{
+"text": "visual",
+"type": "word",
+"start": 63.36,
+"end": 63.68
+},
+{
+"text": "trait.",
+"type": "word",
+"start": 63.76,
+"end": 64.28
+},
+{
+"text": "The",
+"type": "word",
+"start": 64.32,
+"end": 64.48
+},
+{
+"text": "same",
+"type": "word",
+"start": 64.6,
+"end": 64.72
+},
+{
+"text": "design,",
+"type": "word",
+"start": 65.08,
+"end": 65.493
+},
+{
+"text": "the",
+"type": "word",
+"start": 65.547,
+"end": 65.6
+},
+{
+"text": "same",
+"type": "word",
+"start": 65.72,
+"end": 65.84
+},
+{
+"text": "year.",
+"type": "word",
+"start": 65.92,
+"end": 66.667
+},
+{
+"text": "Only",
+"type": "word",
+"start": 66.773,
+"end": 66.88
+},
+{
+"text": "one",
+"type": "word",
+"start": 66.92,
+"end": 66.96
+},
+{
+"text": "of",
+"type": "word",
+"start": 67.04,
+"end": 67.12
+},
+{
+"text": "them",
+"type": "word",
+"start": 67.2,
+"end": 67.36
+},
+{
+"text": "turned",
+"type": "word",
+"start": 67.52,
+"end": 67.68
+},
+{
+"text": "gold.",
+"type": "word",
+"start": 68.04,
+"end": 68.44
+},
+{
+"text": "Time-based",
+"type": "word",
+"start": 68.48,
+"end": 69.12
+},
+{
+"text": "generative",
+"type": "word",
+"start": 69.2,
+"end": 69.68
+},
+{
+"text": "art.",
+"type": "word",
+"start": 69.76,
+"end": 70.44
+},
+{
+"text": "In",
+"type": "word",
+"start": 70.48,
+"end": 70.56
+},
+{
+"text": "the",
+"type": "word",
+"start": 70.6,
+"end": 70.64
+},
+{
+"text": "words",
+"type": "word",
+"start": 70.76,
+"end": 70.88
+},
+{
+"text": "of",
+"type": "word",
+"start": 70.96,
+"end": 71.04
+},
+{
+"text": "Martin",
+"type": "word",
+"start": 71.16,
+"end": 71.28
+},
+{
+"text": "Lehnen,",
+"type": "word",
+"start": 71.36,
+"end": 71.867
+},
+{
+"text": "in",
+"type": "word",
+"start": 71.893,
+"end": 71.92
+},
+{
+"text": "his",
+"type": "word",
+"start": 72.0,
+"end": 72.08
+},
+{
+"text": "essay",
+"type": "word",
+"start": 72.16,
+"end": 72.56
+},
+{
+"text": "\"Thoughts",
+"type": "word",
+"start": 72.6,
+"end": 72.92
+},
+{
+"text": "about",
+"type": "word",
+"start": 72.96,
+"end": 73.12
+},
+{
+"text": "the",
+"type": "word",
+"start": 73.2,
+"end": 73.28
+},
+{
+"text": "unique",
+"type": "word",
+"start": 73.44,
+"end": 73.6
+},
+{
+"text": "nature",
+"type": "word",
+"start": 73.68,
+"end": 74.0
+},
+{
+"text": "of",
+"type": "word",
+"start": 74.08,
+"end": 74.16
+},
+{
+"text": "CENTS",
+"type": "word",
+"start": 74.32,
+"end": 74.48
+},
+{
+"text": "traits",
+"type": "word",
+"start": 74.64,
+"end": 74.8
+},
+{
+"text": "and",
+"type": "word",
+"start": 74.84,
+"end": 74.88
+},
+{
+"text": "their",
+"type": "word",
+"start": 74.96,
+"end": 75.04
+},
+{
+"text": "significance\":",
+"type": "word",
+"start": 75.12,
+"end": 76.3
+},
+{
+"text": "\"Each",
+"type": "word",
+"start": 76.36,
+"end": 76.48
+},
+{
+"text": "CENT",
+"type": "word",
+"start": 76.64,
+"end": 76.8
+},
+{
+"text": "is",
+"type": "word",
+"start": 76.84,
+"end": 76.88
+},
+{
+"text": "a",
+"type": "word",
+"start": 77.12,
+"end": 77.173
+},
+{
+"text": "high-resolution",
+"type": "word",
+"start": 77.227,
+"end": 77.92
+},
+{
+"text": "photograph",
+"type": "word",
+"start": 78.0,
+"end": 78.48
+},
+{
+"text": "of",
+"type": "word",
+"start": 78.52,
+"end": 78.56
+},
+{
+"text": "a",
+"type": "word",
+"start": 78.72,
+"end": 78.747
+},
+{
+"text": "genuine",
+"type": "word",
+"start": 78.773,
+"end": 79.2
+},
+{
+"text": "coin,",
+"type": "word",
+"start": 79.52,
+"end": 79.867
+},
+{
+"text": "and",
+"type": "word",
+"start": 79.893,
+"end": 79.92
+},
+{
+"text": "its",
+"type": "word",
+"start": 80.04,
+"end": 80.16
+},
+{
+"text": "traits",
+"type": "word",
+"start": 80.32,
+"end": 80.48
+},
+{
+"text": "are",
+"type": "word",
+"start": 80.56,
+"end": 80.72
+},
+{
+"text": "natural",
+"type": "word",
+"start": 80.92,
+"end": 81.12
+},
+{
+"text": "phenomena",
+"type": "word",
+"start": 81.24,
+"end": 81.76
+},
+{
+"text": "like",
+"type": "word",
+"start": 81.84,
+"end": 82.0
+},
+{
+"text": "wear,",
+"type": "word",
+"start": 82.08,
+"end": 82.587
+},
+{
+"text": "patina,",
+"type": "word",
+"start": 82.693,
+"end": 83.093
+},
+{
+"text": "and",
+"type": "word",
+"start": 83.147,
+"end": 83.2
+},
+{
+"text": "imperfections,",
+"type": "word",
+"start": 83.28,
+"end": 84.32
+},
+{
+"text": "etched",
+"type": "word",
+"start": 84.4,
+"end": 84.48
+},
+{
+"text": "by",
+"type": "word",
+"start": 84.56,
+"end": 84.72
+},
+{
+"text": "time,",
+"type": "word",
+"start": 84.8,
+"end": 85.4
+},
+{
+"text": "not",
+"type": "word",
+"start": 85.44,
+"end": 85.68
+},
+{
+"text": "code.\"",
+"type": "word",
+"start": 86.04,
+"end": 86.48
+},
+{
+"text": "Years",
+"type": "word",
+"start": 86.56,
+"end": 86.88
+},
+{
+"text": "that",
+"type": "word",
+"start": 86.96,
+"end": 87.04
+},
+{
+"text": "carry",
+"type": "word",
+"start": 87.12,
+"end": 87.36
+},
+{
+"text": "meaning.",
+"type": "word",
+"start": 87.44,
+"end": 88.267
+},
+{
+"text": "In",
+"type": "word",
+"start": 88.293,
+"end": 88.32
+},
+{
+"text": "the",
+"type": "word",
+"start": 88.4,
+"end": 88.48
+},
+{
+"text": "same",
+"type": "word",
+"start": 88.6,
+"end": 88.72
+},
+{
+"text": "essay:",
+"type": "word",
+"start": 89.08,
+"end": 89.52
+},
+{
+"text": "\"coins",
+"type": "word",
+"start": 89.6,
+"end": 89.76
+},
+{
+"text": "from",
+"type": "word",
+"start": 89.84,
+"end": 90.0
+},
+{
+"text": "significant",
+"type": "word",
+"start": 90.28,
+"end": 90.56
+},
+{
+"text": "historical",
+"type": "word",
+"start": 90.72,
+"end": 91.12
+},
+{
+"text": "years",
+"type": "word",
+"start": 91.2,
+"end": 91.44
+},
+{
+"text": "become",
+"type": "word",
+"start": 91.52,
+"end": 91.84
+},
+{
+"text": "highly",
+"type": "word",
+"start": 91.92,
+"end": 92.24
+},
+{
+"text": "coveted,",
+"type": "word",
+"start": 92.32,
+"end": 92.92
+},
+{
+"text": "adding",
+"type": "word",
+"start": 92.96,
+"end": 93.12
+},
+{
+"text": "a",
+"type": "word",
+"start": 93.28,
+"end": 93.36
+},
+{
+"text": "layer",
+"type": "word",
+"start": 93.44,
+"end": 93.52
+},
+{
+"text": "of",
+"type": "word",
+"start": 93.6,
+"end": 93.68
+},
+{
+"text": "historical",
+"type": "word",
+"start": 93.84,
+"end": 94.32
+},
+{
+"text": "storytelling",
+"type": "word",
+"start": 94.4,
+"end": 94.96
+},
+{
+"text": "to",
+"type": "word",
+"start": 95.0,
+"end": 95.04
+},
+{
+"text": "the",
+"type": "word",
+"start": 95.08,
+"end": 95.12
+},
+{
+"text": "project.\"",
+"type": "word",
+"start": 95.2,
+"end": 96.16
+},
+{
+"text": "Cent",
+"type": "word",
+"start": 96.24,
+"end": 96.4
+},
+{
+"text": "number",
+"type": "word",
+"start": 96.48,
+"end": 96.8
+},
+{
+"text": "twelve",
+"type": "word",
+"start": 96.88,
+"end": 97.2
+},
+{
+"text": "sixty-four,",
+"type": "word",
+"start": 97.32,
+"end": 98.28
+},
+{
+"text": "a",
+"type": "word",
+"start": 98.32,
+"end": 98.48
+},
+{
+"text": "great",
+"type": "word",
+"start": 98.64,
+"end": 98.8
+},
+{
+"text": "Cent.",
+"type": "word",
+"start": 98.88,
+"end": 99.44
+}
+]
+}

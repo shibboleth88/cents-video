@@ -18,6 +18,16 @@ row moves to `LEDGER_ARCHIVE.md` verbatim in the same edit that supersedes it.
   spoken and flagged rather than overwritten. Anchors match fuzzily
   (`MATCH_MIN`), keeping the ambiguity guard via a margin against the runner-up.
 
+- **Punctuation in the script is not a pause in the audio.** A comma or a full
+  stop says where a reader would breathe; it does not say the take has a
+  silence there. *Bitten twice:* #8462 v3's list commas had no 0.2 s pause, and
+  #1264 v1's eleven_v4 take had none after three full stops ("later.",
+  "gold.", "code.""), so a hold builder that looks for silence there refused.
+  **Separating observation:** measure the gap in the audio (silencedetect, or
+  the longest run of quiet 10 ms windows, at least 150 ms so a stop
+  consonant's closure does not count), never infer it from the text. The
+  #1264 builder falls back to the quiet run and prints which holds used it.
+
 ## Candidates — bitten once
 
 - **A field I can set is not a sign-off I hold.** `approved: true` on an
