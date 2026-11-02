@@ -1,175 +1,179 @@
 1
-00:00:00,160 --> 00:00:02,371
+00:00:00,160 --> 00:00:02,386
 Cent #1264.
 
 2
-00:00:04,200 --> 00:00:06,960
+00:00:04,240 --> 00:00:06,879
 A penny struck in 1944 with no mint
 
 3
-00:00:07,040 --> 00:00:09,820
+00:00:07,040 --> 00:00:09,650
 mark, generally indicating the Philadelphia mint.
 
 4
-00:00:10,960 --> 00:00:14,640
+00:00:10,560 --> 00:00:13,880
 22 of the 10,000 Cents are dated 1944.
 
 5
-00:00:14,800 --> 00:00:16,746
+00:00:14,519 --> 00:00:16,547
 None is dated 1943,
 
 6
-00:00:16,772 --> 00:00:18,539
+00:00:16,573 --> 00:00:18,379
 the year pennies were struck in steel.
 
 7
-00:00:19,373 --> 00:00:20,640
-It is a Wheat Club year,
+00:00:19,359 --> 00:00:20,640
+Coins from significant years
 
 8
-00:00:20,679 --> 00:00:22,600
-and a year of the 1940s Set,
+00:00:20,719 --> 00:00:22,550
+have acquired a special resonance.
 
 9
-00:00:22,719 --> 00:00:23,960
-which no Wall had completed
+00:00:23,626 --> 00:00:26,160
+In July 1944, at Bretton Woods,
 
 10
-00:00:24,039 --> 00:00:25,850
-as of October 2026.
+00:00:26,239 --> 00:00:28,160
+44 nations tied their currencies
 
 11
-00:00:26,899 --> 00:00:28,339
-This Cent is the oldest Gold
+00:00:28,199 --> 00:00:30,650
+to the US dollar, and the dollar to gold.
 
 12
-00:00:28,460 --> 00:00:30,714
-Cent in the collection, by 12 years.
+00:00:31,679 --> 00:00:33,963
+In 1971 that tie was cut.
 
 13
-00:00:31,579 --> 00:00:33,659
-The Traits Atlas of the CENTS Trait Council
+00:00:34,460 --> 00:00:36,060
+The dollar could no longer be exchanged
 
 14
-00:00:33,740 --> 00:00:36,219
-describes gold patina as a luminous surface
+00:00:36,140 --> 00:00:38,060
+for gold, and US currency became
 
 15
-00:00:36,340 --> 00:00:38,816
-toning, suspended between metal and light.
+00:00:38,140 --> 00:00:40,680
+fiat: worth what it is trusted to be worth.
 
 16
-00:00:39,500 --> 00:00:41,128
-This one is Notable Gold.
+00:00:41,320 --> 00:00:43,240
+CENTS keeps that question open:
 
 17
-00:00:41,740 --> 00:00:44,299
-The other grade, Full, is a continuous golden
+00:00:43,320 --> 00:00:45,570
+what a cent is worth, and who decides.
 
 18
-00:00:44,380 --> 00:00:45,579
-sheen over more than about
+00:00:46,840 --> 00:00:49,600
+1944 also makes this a Wheat Cent,
 
 19
-00:00:45,659 --> 00:00:47,237
-70 percent of the surface.
+00:00:49,640 --> 00:00:53,280
+one of 208: from 1909 to 1958,
 
 20
-00:00:48,420 --> 00:00:50,340
-69 Cents carry gold.
+00:00:53,359 --> 00:00:55,652
+two ears of wheat framed the back of the penny.
 
 21
-00:00:50,380 --> 00:00:53,289
-Every other one was struck in 1956 or later.
+00:00:56,799 --> 00:00:58,159
+This Cent is the oldest Gold
 
 22
-00:00:55,500 --> 00:00:58,246
-Over Lincoln's head lies Significant Obsidian:
+00:00:58,280 --> 00:01:00,405
+Cent in the collection, by 12 years.
 
 23
-00:00:58,273 --> 00:01:00,859
-in the Atlas's words, a major visual actor
+00:01:01,240 --> 00:01:03,240
+The Traits Atlas of the CENTS Trait Council
 
 24
-00:01:00,939 --> 00:01:03,658
-with strong darkening, but not yet fully dominant.
+00:01:03,359 --> 00:01:05,719
+describes gold patina as a luminous surface
 
 25
-00:01:04,400 --> 00:01:05,840
-Near the rim, a fleck of paint
+00:01:05,799 --> 00:01:08,140
+toning, suspended between metal and light.
 
 26
-00:01:05,920 --> 00:01:07,393
-marks it as Contaminated.
+00:01:08,760 --> 00:01:10,375
+This one is Notable Gold.
 
 27
-00:01:08,766 --> 00:01:10,700
-Compare Cent #543,
+00:01:10,972 --> 00:01:13,480
+The other grade, Full, is a continuous golden
 
 28
-00:01:10,739 --> 00:01:13,445
-also from 1944, with no visual trait.
+00:01:13,560 --> 00:01:14,680
+sheen over more than about
 
 29
-00:01:14,019 --> 00:01:16,052
-The same design, the same year.
+00:01:14,760 --> 00:01:16,308
+70 percent of the surface.
 
 30
-00:01:16,873 --> 00:01:18,314
-Only one of them turned gold.
+00:01:17,400 --> 00:01:19,439
+69 Cents carry gold.
 
 31
-00:01:19,480 --> 00:01:21,212
-Time-based generative art.
+00:01:19,480 --> 00:01:22,379
+Every other one was struck in 1956 or later.
 
 32
-00:01:21,879 --> 00:01:23,266
-In the words of Martin Lehnen,
+00:01:24,599 --> 00:01:27,280
+Over Lincoln's head lies Significant Obsidian:
 
 33
-00:01:23,293 --> 00:01:25,000
-in his essay "Thoughts about the unique
+00:01:27,319 --> 00:01:29,799
+in the Atlas's words, a major visual actor
 
 34
-00:01:25,079 --> 00:01:27,700
-nature of CENTS traits and their significance":
+00:01:29,920 --> 00:01:32,620
+with strong darkening, but not yet fully dominant.
 
 35
-00:01:27,760 --> 00:01:29,879
-"Each CENT is a high-resolution photograph
+00:01:33,340 --> 00:01:35,099
+The unique form of the obsidian on this
 
 36
-00:01:29,920 --> 00:01:32,519
-of a genuine coin, and its traits are natural
+00:01:35,219 --> 00:01:37,995
+Cent is what gives it its nickname: the Alien Cent.
 
 37
-00:01:32,640 --> 00:01:34,492
-phenomena like wear, patina,
+00:01:39,019 --> 00:01:40,459
+Near the rim, a fleck of paint
 
 38
-00:01:34,546 --> 00:01:37,635
-and imperfections – etched by time, not code."
+00:01:40,540 --> 00:01:42,132
+marks it as Contaminated.
 
 39
-00:01:38,959 --> 00:01:40,414
-Years that carry meaning.
+00:01:43,280 --> 00:01:45,400
+Compare Cent #543,
 
 40
-00:01:41,093 --> 00:01:43,359
-In the same essay: "…coins from significant
+00:01:45,439 --> 00:01:48,153
+also from 1944, with no visual trait.
 
 41
-00:01:43,519 --> 00:01:45,719
-historical years become highly coveted,
+00:01:48,799 --> 00:01:50,379
+Only one of them turned gold.
 
 42
-00:01:45,760 --> 00:01:47,120
-adding a layer of historical
+00:01:51,540 --> 00:01:52,819
+Struck in the year the dollar was
 
 43
-00:01:47,200 --> 00:01:48,688
-storytelling to the project."
+00:01:52,859 --> 00:01:54,819
+tied to gold, and now toned the colour
 
 44
-00:01:49,640 --> 00:01:52,840
+00:01:54,900 --> 00:01:57,353
+of gold: a coincidence no one planned.
+
+45
+00:01:58,299 --> 00:02:01,659
 Cent #1264, a great Cent.

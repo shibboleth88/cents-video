@@ -1,4 +1,4 @@
-"""Build audio/vo.wav and script/alignment.json for Cent #1264 v1 from eee take 2
+"""Build audio/vo.wav and script/alignment.json for Cent #1264 v2 from eee v2 take 2
 (eleven_v4, "[thoughtfully] [calm]" at the start of the prompt; the tags are dropped from the words).
 Copied from films/onecent-1264/audio/build_vo.py; only the source, the holds and the pad differ.
 
@@ -12,16 +12,16 @@ the credits.
 """
 import json, pathlib, re, subprocess, sys
 F = pathlib.Path(__file__).resolve().parents[1]
-SRC = F / "audio/v1_take2.mp3"
-WORDS = [w for w in json.load(open(F / "audio/v1_take2_words.json"))["words"]
+SRC = F / "audio/v2_take2.mp3"
+WORDS = [w for w in json.load(open(F / "audio/v2_take2_words.json"))["words"]
          if w["type"] == "word" and not w["text"].startswith("[")]
 CUTS = []
 # v4 leaves short gaps between sentences, so the holds give the picture (and the listener) room.
 # A hold is (word, seconds) or (word, seconds, n) for the n-th time the word is spoken ("trait." is said twice).
-HOLDS = [("sixty-four.", 1.6), ("mint.", 0.8), ("steel.", 0.6), ("twenty-six.", 0.7), ("years.", 0.6),
-         ("light.", 0.4), ("Gold.", 0.4), ("surface.", 0.8), ("later.", 2.0), ("dominant.", 0.5),
-         ("Contaminated.", 0.9), ("trait.", 0.4), ("year.", 0.4), ("gold.", 0.9, 2), ("art.", 0.4),
-         ("code.\"", 1.0), ("meaning.", 0.4), ("project.\"", 0.6)]
+HOLDS = [("sixty-four.", 1.6, 1), ("mint.", 0.6), ("forty-four.", 0.4), ("steel.", 0.6), ("resonance.", 0.8),
+         ("gold.", 0.8, 1), ("cut.", 0.3), ("worth.", 0.3), ("decides.", 1.0), ("penny.", 0.8), ("years.", 0.6),
+         ("light.", 0.4), ("Gold.", 0.4), ("surface.", 0.8), ("later.", 2.0), ("dominant.", 0.5), ("Cent.", 0.8, 1),
+         ("Contaminated.", 0.9), ("trait.", 0.4), ("gold.", 0.9, 3), ("planned.", 0.6)]
 # The commas of the examples list have no pause that silencedetect (0.2 s) finds; each of those holds goes in
 # the longest run of quiet 10 ms windows (RMS under -35 dB, at least 150 ms: a stop consonant's closure gives 60 ms, as the control after "struck" showed) instead (v3: one close-up per example).
 COMMA_HOLDS = set()

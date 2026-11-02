@@ -1,3 +1,19 @@
 {
- "assets": {}
+ "assets": {
+  "bw1944": {
+   "path": "public/assets/bw1944.jpg",
+   "staged_as": "bw1944.jpg",
+   "sha1": "54ed644799fd775e174d183c6a6b18aa78dd8b8d",
+   "width": 706,
+   "height": 572,
+   "motion": false,
+   "kind": "real",
+   "low_res": true,
+   "max_display_width": 706,
+   "subject": "Henry Morgenthau Jr. addresses delegates at the opening of the Bretton Woods Conference, July 1944.",
+   "source": "Wikimedia Commons, File:Morgenthau_Bretton_Woods_opening_1944.jpg; copy from /mnt/project-files/secret-history/archival/ (manifest verified 2026-10-24)",
+   "rights": "Public domain (PD-USGov), US Office of War Information; credit: National Archives and Records Administration, RG 208",
+   "verified_at": "2026-10-24"
+  }
+ }
 }

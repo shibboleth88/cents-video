@@ -17,3 +17,27 @@ Render (from the repo root, after `python3 pipeline/film.py switch onecent-1264`
     npx remotion render src/index.ts VideoCaptioned films/onecent-1264/exports/one-cent-1264_v1_captioned.mp4
 
 In the cloud container, add `--browser-executable=/opt/pw-browsers/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell`. Restore the root symlinks with `git checkout` before committing.
+
+## v2 (2026-11-02, the user's notes on v1)
+
+- **Changes asked for:**
+  - Both gold areas the user circled are ringed together.
+  - The 1940s Set line is gone, and so is the first quote.
+  - Wheat is shown on the back and explained: "from 1909 to 1958, two ears of wheat framed the back of the penny".
+  - The obsidian has the user's nickname line: "the Alien Cent".
+  - The second quote is replaced with "Coins from significant years have acquired a special resonance."
+  - New, near the start: Bretton Woods (July 1944, the dollar tied to gold), its end in 1971 (fiat), and the tie to CENTS: "what a cent is worth, and who decides". The film closes on that coincidence: "Struck in the year the dollar was tied to gold, and now toned the colour of gold: a coincidence no one planned."
+- **Concepts:** C55 "Years that carry meaning", plus the 1971 / fiat card. No quotes.
+- **Narration:**
+  - eee, eleven_v4, `[thoughtfully] [calm]`.
+  - Take 2 (generation 9xmBpcUZpl6Cn3Lqqzfi, 106.08 s, 314 words) is used.
+  - Its scribe_v1 transcript equals `audio/tts_text.txt`.
+  - The v1 files are in `archive/`.
+- **Audio:** `audio/build_vo.py` inserts 21 holds and pads 6.5 s, giving `vo.wav` of 128.08 s.
+  - Five holds fell back to quiet runs: light., Gold., later., Cent. and the third gold.
+  - Each fallback cut point was checked against the waveform (each is below -60 dB).
+  - Note: "Cent" in "the Alien Cent" is spoken softly. The voice trails off.
+- **Archival photo:** Opening of the Bretton Woods Conference, July 1944.
+  - US National Archives, RG 208, public domain (US government work).
+  - It is 706 px wide, so it is shown at its own size on a Plate, never upscaled.
+- **Captions:** the SPOKEN table gains 1971, 44, 1909, 1958, 208 and US. Control: "fleck" → "chip" was refused.

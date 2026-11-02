@@ -19,6 +19,8 @@ norm = lambda s: re.sub(r"[^a-z0-9 ]", " ", s.lower().replace("-", " ")).split()
 SPOKEN = {"#1264": "number twelve sixty-four", "1944": "nineteen forty-four", "1943": "nineteen forty-three",
           "22": "twenty-two", "10,000": "ten thousand", "1940s": "nineteen-forties", "2026": "twenty twenty-six",
           "12": "twelve", "70": "seventy", "69": "sixty-nine", "1956": "nineteen fifty-six", "#543": "number five forty-three",
+          "1971": "nineteen seventy-one", "44": "forty-four", "1909": "nineteen oh nine", "1958": "nineteen fifty-eight",
+          "208": "two hundred and eight", "US": "U.S.",
           "–": ""}   # the spaced dash in the Lehnen quote is not said: it takes the time of the word before it
 
 script = open(F / "script/voiceover.txt").read().split()
@@ -50,7 +52,7 @@ bounds = [start_of(s["start"]["at_phrase"]) if "at_phrase" in s["start"] else st
 
 # #1264: "which no Wall had completed as of October 2026." wrapped to three Lead lines and left the safe
 # area, so the cue is also broken at a phrase that is not a shot boundary.
-EXTRA_BREAKS = ["as of October"]
+EXTRA_BREAKS = []   # v1 broke the 1940s Set sentence; v2 has no such sentence
 bounds = sorted(bounds + [start_of(ph) for ph in EXTRA_BREAKS])
 cues = C.build(out, bounds)
 problems = C.audit(cues, bounds)
