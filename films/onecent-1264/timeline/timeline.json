@@ -14,9 +14,9 @@
     "at_start": true
    },
    "end": {
-    "at_phrase": "How it came about"
+    "at_phrase": "In July"
    },
-   "purpose": "Standard opening card with the Story time pill; episode title 'Cent #1264 & Bretton Woods' (user, 2026-11-03). The value gap is from the project description, dated 2024-03-26 (copper approximately 3.1 cents), so 'when Chang released CENTS in March 2024'. Concept C02 on screen.",
+   "purpose": "Opening card, titled layout (user, 2026-11-03 14:14Z): 'Cent #1264' / '& Bretton Woods' (second line in copper), the Story time pill right under it, both above the coin; the inscription number under the coin. The 3x figure: 3.1 cents of copper against 1 cent (project description, 2024-03-26). C02 on screen.",
    "visual_kind": "code",
    "component": "CentLook",
    "props": {
@@ -38,9 +38,9 @@
     },
     "reads": [
      {
-      "at_phrase": "the copper in one penny",
-      "readout": "3.1¢",
-      "caption": "of copper, March 2024"
+      "at_phrase": "three times as much",
+      "readout": "3×",
+      "caption": "copper vs. face value"
      }
     ],
     "kicker": {
@@ -48,48 +48,11 @@
      "look": "pill",
      "hold": 3.4
     },
-    "title": "Cent #1264 &\nBretton Woods",
+    "title": "Cent #1264\n& Bretton Woods",
     "concept": {
-     "at_phrase": "CENTS begins its exploration",
+     "at_phrase": "has roots and implications",
      "label": "Assigned versus material value"
     }
-   }
-  },
-  {
-   "shot_id": "s01b_story",
-   "start": {
-    "at_phrase": "How it came about"
-   },
-   "end": {
-    "at_phrase": "In July"
-   },
-   "purpose": "A separate visual for 'How it came about runs through the story of Cent #1264' (user, 2026-11-03): the year zoom, 1944.",
-   "visual_kind": "code",
-   "component": "CentLook",
-   "props": {
-    "inscription": 65957688,
-    "n": 1264,
-    "front": "hires/1264.webp",
-    "moves": [
-     {
-      "at_phrase": "runs through the story",
-      "box": [
-       0.64,
-       0.6,
-       0.86,
-       0.7
-      ],
-      "mark": true,
-      "dur": 0.9
-     }
-    ],
-    "reads": [
-     {
-      "at_phrase": "runs through the story",
-      "readout": "1944",
-      "caption": "the year it was struck"
-     }
-    ]
    }
   },
   {
@@ -98,7 +61,7 @@
     "at_phrase": "In July"
    },
    "end": {
-    "at_phrase": "On August fifteenth"
+    "at_phrase": "forty-four nations tied"
    },
    "purpose": "Bretton Woods, July 1944: 44 nations, currencies pegged to the dollar, the dollar to gold (Federal Reserve History, 'Creation of the Bretton Woods System', as sourced in films/secret-history/script/essay.txt [3]). Public-domain OWI photograph (NARA RG 208).",
    "visual_kind": "real",
@@ -110,14 +73,48 @@
    }
   },
   {
+   "shot_id": "s04b_bw_hall",
+   "start": {
+    "at_phrase": "forty-four nations tied"
+   },
+   "end": {
+    "at_phrase": "Gold was the measure"
+   },
+   "purpose": "The user's second Bretton Woods image (2026-11-03).",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "bw_hall",
+   "props": {
+    "caption": "Bretton Woods Conference, July 1944",
+    "maxWidth": 720
+   }
+  },
+  {
+   "shot_id": "s04c_gold",
+   "start": {
+    "at_phrase": "Gold was the measure"
+   },
+   "end": {
+    "at_phrase": "On August fifteenth"
+   },
+   "purpose": "Gold bars after the Bretton Woods images, same passage (user, 2026-11-03).",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "gold_bars",
+   "props": {
+    "caption": ""
+   }
+  },
+  {
    "shot_id": "s05_1971",
    "start": {
     "at_phrase": "On August fifteenth"
    },
    "end": {
-    "at_phrase": "had wide-ranging"
+    "after_phrase": "dollars for gold.",
+    "plus": 0.25
    },
-   "purpose": "C56 on screen. 15 Aug 1971: the US stopped exchanging dollars for gold (for foreign governments; Federal Reserve History, 'Nixon Ends Convertibility'); Bretton Woods collapsed by 1973 and rates floated (Lehnen, 'Reflections on Mint Years', Mar 2025). Two slow moves (in to Lincoln, back out) keep a 20 s card from freezing (v3 delivery check: 7.7 s frozen).",
+   "purpose": "C56 on screen. 15 Aug 1971: the US stopped exchanging dollars for gold (for foreign governments; Federal Reserve History, 'Nixon Ends Convertibility'); Bretton Woods collapsed by 1973 and rates floated (Lehnen, 'Reflections on Mint Years', Mar 2025). v4: the date card under the date; Nixon follows.",
    "visual_kind": "code",
    "component": "CentLook",
    "props": {
@@ -128,19 +125,73 @@
      "at_phrase": "On August fifteenth",
      "label": "1971 and the end of gold"
     },
+    "moves": []
+   }
+  },
+  {
+   "shot_id": "s05a_nixon",
+   "start": {
+    "after_phrase": "dollars for gold.",
+    "plus": 0.25
+   },
+   "end": {
+    "after_phrase": "as it is today.",
+    "plus": 0.18
+   },
+   "purpose": "The user's Nixon clip WITH its sound (user, 2026-11-03 15:50Z). build_vo.py splices the clip's audio in after 'dollars for gold.'; this shot starts on that sample and ends when the clip does (4.10 s), so it never loops.",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "nixon1971",
+   "props": {
+    "caption": "Richard Nixon, televised address, 15 August 1971"
+   }
+  },
+  {
+   "shot_id": "s05b_nyt",
+   "start": {
+    "after_phrase": "as it is today.",
+    "plus": 0.18
+   },
+   "end": {
+    "at_phrase": "U.S. currency became"
+   },
+   "purpose": "NYT front page, 16 Aug 1971 (cleared by the user).",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "nyt1971",
+   "props": {
+    "caption": "The New York Times, 16 August 1971",
+    "maxWidth": 713
+   }
+  },
+  {
+   "shot_id": "s05_fiat",
+   "start": {
+    "at_phrase": "U.S. currency became"
+   },
+   "end": {
+    "at_phrase": "had wide-ranging"
+   },
+   "purpose": "v4: fiat and the dislocation from material substance, over the Cent itself, which is the material the sentence is about. A slow move in and back out keeps it from freezing.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65957688,
+    "n": 1264,
+    "front": "hires/1264.webp",
     "moves": [
      {
-      "at_phrase": "Within two years",
+      "at_phrase": "U.S. currency became",
       "box": [
-       0.2,
-       0.15,
-       0.85,
-       0.8
+       0.1,
+       0.1,
+       0.9,
+       0.9
       ],
       "dur": 3.0
      },
      {
-      "at_phrase": "U.S. currency became",
+      "at_phrase": "Dislocating the global",
       "box": null,
       "dur": 3.0
      }
@@ -148,41 +199,105 @@
    }
   },
   {
-   "shot_id": "s05b_material",
+   "shot_id": "s05c_chart1",
    "start": {
     "at_phrase": "had wide-ranging"
    },
    "end": {
-    "at_phrase": "These effects continue"
+    "at_phrase": "not only on"
    },
-   "purpose": "The user's lines on materiality over real footage of CENTS Block Copper being cast (asset a14, from the objecthood film; cents.gallery media, cleared). Starts at 'had wide-ranging effects' so the 8 s clip covers its shot without looping.",
+   "purpose": "User-supplied chart (2026-11-03); source not printed on it.",
    "visual_kind": "real",
    "component": "Plate",
-   "asset_id": "a14",
+   "asset_id": "chart_1_90",
    "props": {
-    "caption": "Casting CENTS Block Copper",
-    "maxWidth": 560
+    "caption": "Income share of the top 1% relative to the bottom 90%",
+    "maxWidth": 630
    }
   },
   {
-   "shot_id": "s05b2_effects",
+   "shot_id": "s05d_chart2",
+   "start": {
+    "at_phrase": "not only on"
+   },
+   "end": {
+    "at_phrase": "and social equity"
+   },
+   "purpose": "User-supplied chart (2026-11-03).",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "chart_saez",
+   "props": {
+    "caption": "Source: Emmanuel Saez, based on IRS data",
+    "maxWidth": 732
+   }
+  },
+  {
+   "shot_id": "s05e_chart3",
+   "start": {
+    "at_phrase": "and social equity"
+   },
+   "end": {
+    "at_phrase": "but on materiality"
+   },
+   "purpose": "User-supplied chart (2026-11-03).",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "chart_epi",
+   "props": {
+    "caption": "Source: Economic Policy Institute",
+    "maxWidth": 732
+   }
+  },
+  {
+   "shot_id": "s05e2_minecraft",
+   "start": {
+    "at_phrase": "but on materiality"
+   },
+   "end": {
+    "at_phrase": "These effects continue"
+   },
+   "purpose": "User-supplied Minecraft clip around 'materiality itself' (user, 2026-11-03 15:50Z). Of the two uploads, clip 1: the player walks the length of the build, where clip 2 only climbs down one corner. No sound. The 1.5 s hold after 'itself.' keeps the shot (about 3.5 s) inside the 4.68 s clip.",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "minecraft",
+   "props": {
+    "caption": "",
+    "maxWidth": 732
+   }
+  },
+  {
+   "shot_id": "s05f_polymarket",
    "start": {
     "at_phrase": "These effects continue"
    },
    "end": {
+    "at_phrase": "as well as art"
+   },
+   "purpose": "Economics today: a prediction-market order on Fed rate cuts (user-supplied screenshot, 2026-11-03).",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "polymarket",
+   "props": {
+    "caption": "Polymarket, 2026",
+    "maxWidth": 600
+   }
+  },
+  {
+   "shot_id": "s05g_banana",
+   "start": {
+    "at_phrase": "as well as art"
+   },
+   "end": {
     "at_phrase": "In the words of"
    },
-   "purpose": "The user's line on lasting effects in economics and art; concept C07 'Value itself becomes the medium' (Lehnen) named on screen. The pour clip is 8 s, so it is not looped across this line.",
-   "visual_kind": "code",
-   "component": "CentLook",
+   "purpose": "Art today: the $6.2M banana (user-supplied clip, 2026-11-03). The hold after 'art.' is 3.0 s so the 4.5 s clip plays out.",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "sun_banana",
    "props": {
-    "inscription": 65957688,
-    "n": 1264,
-    "front": "hires/1264.webp",
-    "concept": {
-     "at_phrase": "These effects continue",
-     "label": "Value itself becomes the medium"
-    }
+    "caption": "Justin Sun eats Maurizio Cattelan’s Comedian, 2024",
+    "maxWidth": 732
    }
   },
   {
@@ -213,19 +328,49 @@
     "at_phrase": "It is in the strange"
    },
    "end": {
+    "at_phrase": "between absence of"
+   },
+   "purpose": "cents.gallery media library C037 (user's own library, cleared): the CENTS installation at UCCA Beijing, physical Block, book and the digital model on screens, under 'conceptual art and post-internet art'.",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "ucca_frontal",
+   "props": {
+    "caption": "CENTS at UCCA Beijing",
+    "maxWidth": 732
+   }
+  },
+  {
+   "shot_id": "s05d2_tension",
+   "start": {
+    "at_phrase": "between absence of"
+   },
+   "end": {
+    "at_phrase": "between value discrepancy"
+   },
+   "purpose": "Media library C036: the CENTS book under the screen showing CENTS Block 839969, under 'absence of an object and digital objecthood'.",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "ucca_book_screen",
+   "props": {
+    "caption": "The CENTS book and CENTS Block 839969, UCCA Beijing",
+    "maxWidth": 600
+   }
+  },
+  {
+   "shot_id": "s05d3_tension",
+   "start": {
+    "at_phrase": "between value discrepancy"
+   },
+   "end": {
     "at_phrase": "Among collectors"
    },
-   "purpose": "The user's line on where CENTS resides; C12 named on screen.",
-   "visual_kind": "code",
-   "component": "CentLook",
+   "purpose": "Media library S0709 'copper futures copper pasts 9 dec 24': the COMEX copper futures quote alternating with Cents, under 'value discrepancy and speculation'.",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "copper_futures",
    "props": {
-    "inscription": 65957688,
-    "n": 1264,
-    "front": "hires/1264.webp",
-    "concept": {
-     "at_phrase": "between absence of an",
-     "label": "Blockchain as this era's objecthood"
-    }
+    "caption": "Copper futures, copper pasts, 9 December 2024",
+    "maxWidth": 732
    }
   },
   {
@@ -342,7 +487,7 @@
     "at_phrase": "This Cent is the oldest"
    },
    "end": {
-    "at_phrase": "The other grade"
+    "at_phrase": "Sixty-nine Cents carry"
    },
    "purpose": "Oldest Gold: of the 69 Gold Cents (notable 60 + full 9) #1264 is 1944, the next is #6789 (1956). Definition from the Traits Atlas, Gold Patina v1.0 (gold.txt). Gold area box is Claude's reading. v2: the zoom rings both areas the user circled (2026-11-02 screenshot), converted to fractions of the 1050px front.",
    "visual_kind": "code",
@@ -397,30 +542,6 @@
       "at_phrase": "This one is Notable",
       "readout": "Notable Gold",
       "caption": "one of 2 grades"
-     }
-    ]
-   }
-  },
-  {
-   "shot_id": "s07b_full",
-   "start": {
-    "at_phrase": "The other grade"
-   },
-   "end": {
-    "at_phrase": "Sixty-nine Cents carry"
-   },
-   "purpose": "Full Gold, shown on #4273, the Traits Atlas's own Full Gold Patina example (gold.txt).",
-   "visual_kind": "code",
-   "component": "CentLook",
-   "props": {
-    "inscription": 65996790,
-    "n": 4273,
-    "front": "hires/4273.webp",
-    "reads": [
-     {
-      "at_phrase": "The other grade",
-      "readout": "Full Gold",
-      "caption": "over 70% of the surface"
      }
     ]
    }
@@ -599,7 +720,7 @@
    "end": {
     "at_phrase": "Struck in the year"
    },
-   "purpose": "Template: #543, also 1944, no visual trait and no contamination in the Sep 2026 export. Not lustrous, so not called close to mint state. Dissolves 543, 1264, 543, 1264.",
+   "purpose": "Template: #543, also 1944, no visual trait and no contamination in the Sep 2026 export. Not lustrous, so not called close to mint state. v4: back and forth five times (user, 2026-11-03 15:50Z): 543, 1264, 543, 1264, 543, 1264.",
    "visual_kind": "code",
    "component": "CentDissolve",
    "props": {
@@ -620,7 +741,23 @@
     },
     "swaps": [
      {
+      "at_phrase": "also from nineteen",
+      "to": "a"
+     },
+     {
+      "at_phrase": "with no visual",
+      "to": "b"
+     },
+     {
       "at_phrase": "Two very different",
+      "to": "a"
+     },
+     {
+      "at_phrase": "histories within",
+      "to": "b"
+     },
+     {
+      "at_phrase": "one history",
       "to": "a"
      }
     ]
@@ -709,10 +846,12 @@
    "component": "Credits",
    "props": {
     "lines": [
-     "Images: Rutherford Chang",
+     "Images: Rutherford Chang; cents.gallery media library",
      "3D render: 3DCENTS by sinvalli",
      "Trait names and definitions: Traits Atlas, CENTS Trait Council",
-     "Photograph: Bretton Woods Conference, 1944, US National Archives",
+     "Photographs: Bretton Woods Conference, 1944, US National Archives",
+     "Richard Nixon, 15 August 1971; The New York Times, 16 August 1971",
+     "Charts: Emmanuel Saez (IRS data); Economic Policy Institute",
      "Quote: Adina Glickstein, “Never Midcurve”, Spike Art Magazine"
     ],
     "url": "cents.gallery"

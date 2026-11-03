@@ -54,3 +54,17 @@ In the cloud container, add `--browser-executable=/opt/pw-browsers/chromium_head
   - 24 holds give 192.4 s of audio. Two of them fell back to quiet runs: "worth." (below -60 dB) and "dominant." (the soft tail of the word, about -48 dB).
 - **Code:** `CentLook` takes an optional `title`. It may run to two lines, set at 68 px (`pre-line`), so it and the inscription line clear the coin on the opening card.
 - **Asset:** a14, the pour footage. It is registered from the objecthood film, shown at 560 px or less, and never looped.
+
+## v4 (2026-11-03): the user's three rounds of notes (14:14Z, 15:28Z, 15:50Z)
+
+- **Opening card:** "Cent #1264" over "& Bretton Woods" (copper), the Story time pill under it, then the coin, and the inscription number under the coin (`CentLook` `title`, now a 64 px `TitleBand`; the coin drops 60 px).
+- **Script:** the user's new two-sentence opening ("The story of the value discrepancy…"). The Full Gold sentence is out. Nixon's own line is in, as heard in his clip.
+- **Narration:** eee, eleven_v4, `[thoughtfully] [calm]`. Take 2 (generation sIGtXpwnwKLpdn6YErEv, 164.99 s) is used; its scribe transcript equals `audio/tts_text.txt` (460 words). 23 holds plus the Nixon clip give 195.98 s. Five holds fell back to quiet runs; every edit point measures -85 dB or quieter over ±30 ms.
+- **Nixon with sound:** `build_vo.py` has a `CLIPS` list. The clip's audio (4.116 s, turned down 17.5 dB from -9.1 LUFS) goes in at the pause after "dollars for gold." and its 13 scribe words go into the alignment, so the line is captioned. `s05a_nixon` starts on the clip's first sample (`after_phrase` "dollars for gold." + 0.25) and ends when the clip ends, so it never loops.
+- **1971:** date card, Nixon, the NYT front page, then the Cent under "fiat" and "Dislocating". The three charts run through "wide-ranging effects, not only on wealth distribution and social equity" (holds after "effects," and "equity,").
+- **Minecraft:** clip 1 of the two uploads (the player walks the length of the build; clip 2 only climbs down one corner), muted, under "but on materiality itself." (3.5 s of a 4.68 s clip).
+- **Polymarket** under "in economics", **Justin Sun / Comedian** muted under "as well as art".
+- **Strange tension:** three items from the cents.gallery media library: C037 (UCCA installation), C036 (the book under CENTS Block 839969 on screen), S0709 (copper futures, copper pasts).
+- **#543:** five dissolves, 543 → 1264 → 543 → 1264 → 543 → 1264.
+- **Removed:** the pour footage (a14 stays registered, unused) and the Full Gold shot of #4273.
+- **Code:** `Plate` draws no caption block when the caption is empty (the gold bars and Minecraft carry none; SafeText refuses an empty string). Captions break before "and digital objecthood" (the cue wrapped to three lines and left the safe area).

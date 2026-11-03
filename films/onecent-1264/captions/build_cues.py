@@ -22,7 +22,7 @@ SPOKEN = {"#1264": "number twelve sixty-four", "1944": "nineteen forty-four", "1
           "1971": "nineteen seventy-one", "44": "forty-four", "1909": "nineteen oh nine", "1958": "nineteen fifty-eight",
           "208": "two hundred and eight", "US": "U.S.",
           "2024": "twenty twenty-four", "3.1": "three point one", "15": "fifteenth", "35": "thirty-five",
-          "20th": "twentieth", "21st": "twenty-first",
+          "20th": "twentieth", "21st": "twenty-first", "3": "three",
           "–": ""}   # the spaced dash in the Lehnen quote is not said: it takes the time of the word before it
 
 script = open(F / "script/voiceover.txt").read().split()
@@ -54,7 +54,7 @@ bounds = [start_of(s["start"]["at_phrase"]) if "at_phrase" in s["start"] else st
 
 # #1264: "which no Wall had completed as of October 2026." wrapped to three Lead lines and left the safe
 # area, so the cue is also broken at a phrase that is not a shot boundary.
-EXTRA_BREAKS = []   # v1 broke the 1940s Set sentence; v2 has no such sentence
+EXTRA_BREAKS = ["and digital objecthood"]   # v4: "between absence of an object and digital objecthood," wrapped to 3 Lead lines and left the safe area
 bounds = sorted(bounds + [start_of(ph) for ph in EXTRA_BREAKS])
 cues = C.build(out, bounds)
 problems = C.audit(cues, bounds)

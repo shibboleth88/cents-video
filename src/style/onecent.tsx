@@ -86,7 +86,9 @@ export const CentLook: React.FC<Anchored & {
    *  settle on the photo at the same size and place, so the zooms follow without a cut. */
   spin?: Clip;
   kicker?: Kicker;
-  /** An episode title in place of "Cent #n", e.g. "Cent #1264 & Bretton Woods" (user, 2026-11-03). It may take two lines. */
+  /** An episode title in place of "Cent #n" (user, 2026-11-03, #1264: "Cent #1264 & Bretton Woods").
+   *  Lines are split on "\n"; the lines after the first are set in the accent colour. With a title the
+   *  card is laid out title, then the kicker, then the coin, then the inscription number under the coin. */
   title?: string;
 }> = (props) => {
   const { inscription, n, front, back, moves = [], flip_at, reads = [], concept, quote, spin, kicker, title } = props;
@@ -96,6 +98,8 @@ export const CentLook: React.FC<Anchored & {
   const opening = React.useContext(OpeningShotCtx);
   const at = useAt(props);
   const W = X1 - X0, H = STAGE.y1 - STAGE.y0;
+  // Titled layout: the coin drops TITLED_DROP px so the title and the kicker above it clear its crest.
+  const SY = STAGE.y0 + (title ? TITLED_DROP : 0);
   const S = SIZE * (0.5 / R);
   const spoken = useSpokenWords(props, quote);
 
@@ -174,14 +178,14 @@ export const CentLook: React.FC<Anchored & {
       <Imagery>
         {spin && settle < 1 ? (
           // Lighten blend drops the clip's black onto the stage colour (as in WallStandout).
-          <div style={{ position: "absolute", left: 0, top: STAGE.y0, width: 1080, height: H, overflow: "hidden",
+          <div style={{ position: "absolute", left: 0, top: SY, width: 1080, height: H, overflow: "hidden",
                         background: COLOR.bg, isolation: "isolate" }}>
             <OffthreadVideo src={staticFile(spin.src)} muted
               style={{ position: "absolute", left: 540 - spin.coin.cx * (COIN_D / spin.coin.d), top: H / 2 - spin.coin.cy * (COIN_D / spin.coin.d),
                        width: spin.width * (COIN_D / spin.coin.d), height: spin.height * (COIN_D / spin.coin.d), mixBlendMode: "lighten" }} />
           </div>
         ) : null}
-        <div style={{ position: "absolute", left: 0, top: STAGE.y0, width: 1080, height: H, overflow: "hidden", opacity: enter * dim * settle }}>
+        <div style={{ position: "absolute", left: 0, top: SY, width: 1080, height: H, overflow: "hidden", opacity: enter * dim * settle }}>
           <div style={{ position: "absolute", left: ox, top: oy, width: S * sc, height: S * sc, transform: `scaleX(${sx})` }}>
             <Img src={staticFile(src)} style={{ width: S * sc, height: S * sc, clipPath: "circle(40.5% at 50% 50%)",
                                                 filter: `drop-shadow(0 ${SIZE * 0.04}px ${SIZE * 0.06}px rgba(0,0,0,0.55))` }} />
@@ -194,7 +198,14 @@ export const CentLook: React.FC<Anchored & {
           )) : null}
         </div>
       </Imagery>
-      <NameBand title={title ?? `Cent #${n}`} subtitle={`Inscription #${inscription}`} lines={title ? 2 : 1} />
+      {title ? (
+        <>
+          <TitleBand lines={title.split("\n")} />
+          <div style={{ position: "absolute", left: X0, top: SY + H / 2 + COIN_D / 2 + 14, width: W, opacity: 1 - cT }}>
+            <SafeText role="body" fontSize={46} maxLines={1} color={COLOR.inkDim}>{`Inscription #${inscription}`}</SafeText>
+          </div>
+        </>
+      ) : <NameBand title={`Cent #${n}`} subtitle={`Inscription #${inscription}`} />}
       {spin && settle < 1 && !spin.credit_at_end ? (
         <div style={{ position: "absolute", left: X0, top: STAGE.y1 - 46, width: X1 - X0, opacity: 0.8 * (1 - settle) }}>
           <SafeText role="label" fontSize={42} maxLines={1} color={COLOR.inkDim} style={{ fontFamily: TYPE.body, textAlign: "center" }}>{spin.credit}</SafeText>
@@ -219,8 +230,8 @@ export const CentLook: React.FC<Anchored & {
         </div>
       ) : null}
       {kicker && kT > 0 && kicker.look === "pill" ? (
-        <div style={{ position: "absolute", left: X0, top: BAND.y0 + 10, width: W, display: "flex", opacity: kT }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 26, padding: "18px 40px 18px 30px", borderRadius: 999,
+        <div style={{ position: "absolute", left: X0, top: title ? TITLE.y0 + TITLED_PILL_Y : BAND.y0 + 10, width: W, display: "flex", opacity: kT }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 26, padding: title ? "8px 36px 8px 28px" : "18px 40px 18px 30px", borderRadius: 999,
                         border: `5px solid ${COLOR.accent}`, background: "rgba(0,0,0,0.35)",
                         transform: `scale(${1 + 0.07 * pulse})`, transformOrigin: "left center",
                         boxShadow: `0 0 ${36 * pulse}px ${6 * pulse}px ${COLOR.accent}55` }}>
@@ -254,6 +265,17 @@ export const CentLook: React.FC<Anchored & {
     </div>
   );
 };
+
+/** Titled opening card (see CentLook `title`): a two-line title at 64px, then the kicker pill, then the coin. */
+const TITLED_LINE = 64 * 1.05, TITLED_PILL_Y = 2 * TITLED_LINE + 16, TITLED_DROP = 60;
+const TitleBand: React.FC<{ lines: string[] }> = ({ lines }) => (
+  <div style={{ position: "absolute", left: X0, top: TITLE.y0, width: X1 - X0 }}>
+    {lines.map((l, i) => (
+      <SafeText key={i} role="display" fontSize={64} maxLines={1} color={i === 0 ? COLOR.ink : COLOR.accent}
+                style={{ fontWeight: 700, letterSpacing: -1, lineHeight: 1.05 }}>{l}</SafeText>
+    ))}
+  </div>
+);
 
 /** The Cent's name is the largest text on screen; the inscription number sits under it. */
 const NameBand: React.FC<{ title: string; subtitle?: string; lines?: number }> = ({ title, subtitle, lines = 1 }) => {
