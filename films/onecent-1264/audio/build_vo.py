@@ -1,4 +1,4 @@
-"""Build audio/vo.wav and script/alignment.json for Cent #1264 v4 from eee v4 take 2
+"""Build audio/vo.wav and script/alignment.json for Cent #1264 v6 from eee v6 take 2
 (eleven_v4, "[thoughtfully] [calm]" at the start of the prompt; the tags are dropped from the words).
 Copied from films/onecent-1264/audio/build_vo.py; only the source, the holds and the pad differ.
 
@@ -12,18 +12,21 @@ the credits.
 """
 import json, pathlib, re, subprocess, sys
 F = pathlib.Path(__file__).resolve().parents[1]
-SRC = F / "audio/v4_take2.mp3"
-WORDS = [w for w in json.load(open(F / "audio/v4_take2_words.json"))["words"]
+SRC = F / "audio/v6_take2.mp3"
+WORDS = [w for w in json.load(open(F / "audio/v6_take2_words.json"))["words"]
          if w["type"] == "word" and not w["text"].startswith("[")]
-CUTS = [("Among", "collectors,", "between.")]   # v5: the traits section is held for another video (user, 2026-11-03 18:04Z)
+CUTS = []   # v6: re-voiced without the traits section (held for another video)
 # v4 leaves short gaps between sentences, so the holds give the picture (and the listener) room.
 # A hold is (word, seconds) or (word, seconds, n) for the n-th time the word is spoken ("trait." is said twice).
 # v4: the opening is the user's two sentences; "sixty-four." and "CENTS." end them. "surface." went with the Full
 # Gold sentence (user, 2026-11-03 15:50Z). "effects," and "equity," give the three charts time; "itself." holds for
 # the Minecraft clip; "trait." for the back-and-forth with #543.
-HOLDS = [("sixty-four.", 0.8, 1), ("CENTS.", 0.6, 1), ("money.", 0.6),
-         ("worth.", 0.6, 1), ("effects,", 1.0), ("equity,", 0.8), ("itself.", 1.5), ("art.", 3.0, 1),
+HOLDS = [("sixty-four.", 0.8, 1), ("CENTS.", 0.6, 1), ("money.", 0.5), ("years.", 0.6),
+         ("worth.", 0.6, 1), ("dominant.", 0.4), ("Cent.", 0.5, 1), ("itself.", 0.8, 1),
+         ("effects,", 1.0), ("equity,", 0.8), ("itself.", 2.8, 2), ("art.", 1.0, 1),
          ("excellence?\"", 0.8), ("resides.", 1.2)]
+# v6 (user, 2026-11-03 18:37Z): "art." holds 1.0 s, not 3.0 (less pause; the banana clip is trimmed to fit);
+# the second "itself." holds 2.8 s for the bubble, then the Minecraft clip.
 # v4: Nixon's own line from the user's clip is heard (user, 2026-11-03 15:50Z: "the nixon clip should have sound").
 # Its audio goes in at the pause after "dollars for gold." as (word, nth, lead silence, file, tail silence); the shot
 # s05a_nixon starts exactly where the clip's audio starts, so picture and sound stay in sync. The clip is

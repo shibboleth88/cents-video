@@ -81,3 +81,21 @@ In the cloud container, add `--browser-executable=/opt/pw-browsers/chromium_head
 - **Fix:** when a hold and a cut share an edit point, the hold now sorts first. Before the fix, the concat restarted at the cut and put the whole section back: the file came out 187 s instead of 111 s.
 - **Credits:** the Traits Atlas line is dropped, since no trait is defined in the film any more.
 - **Delivery check (v5 file):** 3337 frames, 111.25 s, decodes clean at −17.6 LUFS. No black ≥0.5 s; the only freeze over 3 s is the credits. The render's audio envelope correlates 1.000 with the staged `public/vo.wav`, against −0.02 for the control, the v3 take.
+
+## v6 (2026-11-03): the user's notes of 18:37Z and 18:40Z
+
+- **Two new passages.** The wording is Claude's; the facts and phrases are the user's.
+  - After "Gold was the measure of money.": "Struck in 1944, Cent #1264 is the oldest Cent in the collection with a gold trait, by 12 years." The picture zooms to the gold areas, with rings and the "Oldest Gold" readout.
+  - After "…trusted to be worth.": "Significant Obsidian is covering Lincoln's face: in the Atlas's words, a major visual actor with strong darkening, but not yet fully dominant. The unique form of the obsidian on this Cent gives it its nickname: the Alien Cent. This is an object that has become alien to itself." The picture zooms to the obsidian on the front, with marks and readouts.
+- **Narration.** The whole script was re-voiced as eee v6 take 2 (generation Sr2Ws1WaY1TQLpSwwFmX). The transcript equals the TTS text. 14 holds plus the Nixon clip give 135.94 s.
+- **New pictures, all user-attached.**
+  - Desk of pennies (C063) under "The starting point…".
+  - CENTS ∞ bitcoin diagram (C018) from "by the system that he created with CENTS".
+  - Bubble popping under "materiality itself", then Minecraft.
+  - UCCA still C077 in place of copper futures.
+- **Timing.** "art." holds 1.0 s, down from 3.0 s. The banana clip is trimmed by 1.5 s at the start (`sun_banana_trim`).
+- **Delivery check.**
+  - 4078 frames, 135.94 s. It decodes clean at −17.3 LUFS.
+  - No black ≥0.5 s. The only freeze over 3 s is the credits.
+  - `public/vo.wav` md5 equals the master.
+  - The render's audio envelope correlates 1.000 with the staged VO. The control, the v4 take, gives 0.02.

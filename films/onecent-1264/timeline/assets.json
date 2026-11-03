@@ -222,6 +222,70 @@
    "source": "cents.gallery media library S0719 's0719-cube-with-cents-bkg-14mb.gif', attached by the user 2026-11-03; 234 px GIF scaled 3x (lanczos) to 702 px at the user's request",
    "rights": "cleared (user's media library)",
    "verified_at": "2026-11-03"
+  },
+  "bubble": {
+   "path": "public/assets/v3new/bubble.mp4",
+   "staged_as": "v3new/bubble.mp4",
+   "width": 400,
+   "height": 392,
+   "motion": true,
+   "kind": "real",
+   "duration": 3.48,
+   "subject": "A soap bubble popping (animation, greyscale).",
+   "source": "attached by the user 2026-11-03 18:37Z ('bubble popping.gif'), converted to H.264",
+   "rights": "user-supplied; rights to be confirmed by the user",
+   "verified_at": "2026-11-03",
+   "low_res": true,
+   "max_display_width": 600
+  },
+  "desk_pennies": {
+   "path": "public/assets/v3new/desk_pennies.jpg",
+   "staged_as": "v3new/desk_pennies.jpg",
+   "width": 1600,
+   "height": 1200,
+   "motion": false,
+   "kind": "real",
+   "subject": "Pennies arranged across a desk at Rutherford Chang's studio, with rolls of pennies, a scale and a box marked COPPER.",
+   "source": "cents.gallery media library (the user's own site; cleared), attached by the user 2026-11-03 18:37Z: c063-pennies-arranged-across-desk-at-rutherford-chang-s-studio.jpg, scaled from 4032 px",
+   "rights": "cleared (user's media library)",
+   "verified_at": "2026-11-03"
+  },
+  "infinity": {
+   "path": "public/assets/v3new/cents_bitcoin_infinity.png",
+   "staged_as": "v3new/cents_bitcoin_infinity.png",
+   "width": 1344,
+   "height": 1344,
+   "motion": false,
+   "kind": "real",
+   "subject": "CENTS and bitcoin infinity diagram: a 1971 Cent, a bitcoin address, the cent and bitcoin signs joined by an infinity loop, CENTS Block Copper and a white disc.",
+   "source": "cents.gallery media library (the user's own site; cleared), attached by the user 2026-11-03 18:37Z: c018-cents-and-bitcoin-infinity-diagram1.png",
+   "rights": "cleared (user's media library)",
+   "verified_at": "2026-11-03"
+  },
+  "ucca_c077": {
+   "path": "public/assets/v3new/ucca_c077.jpg",
+   "staged_as": "v3new/ucca_c077.jpg",
+   "width": 1600,
+   "height": 1030,
+   "motion": false,
+   "kind": "real",
+   "subject": "CENTS at UCCA Beijing: CENTS Block Copper in its vitrine between a screen with a Cent and a screen with the digital Block, the CENTS book on a stand.",
+   "source": "cents.gallery media library (the user's own site; cleared), attached by the user 2026-11-03 18:37Z: c077-dsc3998.jpg, scaled from 3355 px",
+   "rights": "cleared (user's media library)",
+   "verified_at": "2026-11-03"
+  },
+  "sun_banana_trim": {
+   "path": "public/assets/v3new/sun_banana_trim.mp4",
+   "staged_as": "v3new/sun_banana_trim.mp4",
+   "width": 1262,
+   "height": 930,
+   "motion": true,
+   "kind": "real",
+   "duration": 3.008,
+   "subject": "Justin Sun eating the banana of Maurizio Cattelan's Comedian, which he bought at Sotheby's in November 2024 (screen recording; the player bar below y=930 cropped off). First 1.5 s trimmed (user, 2026-11-03 18:37Z: less pause after 'as well as art').",
+   "source": "supplied by the user in the project thread, 2026-11-03",
+   "rights": "user-supplied; rights to be confirmed by the user",
+   "verified_at": "2026-11-03"
   }
  }
 }
