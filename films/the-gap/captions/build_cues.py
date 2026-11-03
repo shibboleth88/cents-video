@@ -34,8 +34,9 @@ def start_of(ph):
     hits = [flat[k][1] for k in range(len(flat) - len(n) + 1) if [x[0] for x in flat[k:k + len(n)]] == n]
     if len(hits) != 1: sys.exit(f"anchor {ph!r} found {len(hits)} times")
     return words[hits[0]]["start"]
-bounds = [start_of(s["from"]) for s in scenes if s["from"]]
-if len(bounds) != len(scenes) - 1: sys.exit("FLOOR: a scene cut was not resolved")
+cutting = [s for s in scenes if s["from"] and s.get("caption_cut", True)]
+bounds = [start_of(s["from"]) for s in cutting]
+if len(bounds) != len(cutting) or len(bounds) < 5: sys.exit("FLOOR: scene cuts were not resolved")
 
 cues = C.build(out, bounds)
 problems = C.audit(cues, bounds)

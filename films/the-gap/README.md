@@ -6,6 +6,28 @@ of the last circulating cent (12 Nov 2025) plus the record copper price (Sep 202
 widening of the value gap CENTS begins from. Closes on value still being decided, never
 on the penny's end (standing rule: CENTS has no ending).
 
+## v2 (2026-11-03): visual variety
+
+Same narration and audio as v1. Rebuilt the picture to the user's rule of 2026-11-03 for all
+CENTS videos (benchmark: Cent #1264 & Bretton Woods v7, ~4.7 s a shot): change visuals often,
+short holds, few repeats, imagery from many sources.
+
+- **Shots:** 27 scenes in `build/scenes.json` (v1 had 10), median about 3.7 s. The longest is
+  the close (9.6 s, includes the end card). Repeats: Cent #142 front (hero, melt), the
+  Capitol and ingots photos (own shots, then the split), the 10K mosaic (open, CENTS title, close).
+- **Sources:** Library of Congress archival, all "no known restrictions":
+  Keystone View Co., "Coining presses, Government Mint, Philadelphia, Pa." (c. 1916, 2023634738);
+  Fritz Henle for FSA/OWI, "Casting copper ingots" (1942, 2017864754);
+  Carol M. Highsmith, US Capitol. From the user's own collection: Chang's desk and photography
+  setup, penny rolls, the copper pour, the Block Copper still, the UCCA installation view,
+  the five-natures diagram, the CENTS Traits Lab screenshot, the 10,000-Cent mosaic. Cents:
+  on-chain 300 px images and cents.vision 1050 px fronts and backs.
+- **Captions:** 42 cues; bounds come from scene cuts, except the four quick trait shots
+  (`caption_cut: false`).
+- **Open questions for the user:** whether `Block copper still.png` shows the physical
+  CENTS Block Copper (labelled so) or the 3D model; who made the Traits Lab screenshot;
+  whether recolouring the mosaic's white to the film's black is acceptable.
+
 ## v1 (2026-11-03)
 
 - **Script:** `script/voiceover.txt` (written form, used for captions) and

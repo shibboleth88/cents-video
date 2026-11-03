@@ -71,90 +71,98 @@ The coin says one.
 For most of 20 years, its copper has said more.
 
 19
-00:00:50,300 --> 00:00:52,580
-That gap, between what the state decrees
+00:00:50,300 --> 00:00:51,940
+That gap, between what the state
 
 20
-00:00:52,660 --> 00:00:57,180
-and what the metal holds, is where CENTS begins.
+00:00:52,020 --> 00:00:54,207
+decrees and what the metal holds,
 
 21
+00:00:54,233 --> 00:00:57,180
+is where CENTS begins.
+
+22
 00:00:57,260 --> 00:00:59,260
 Rutherford Chang removed 10,000
 
-22
+23
 00:00:59,340 --> 00:01:00,900
 copper cents from circulation,
 
-23
-00:01:00,940 --> 00:01:04,393
-and photographed each one, front and back.
-
 24
-00:01:04,447 --> 00:01:05,700
-He melted them into a single
+00:01:00,940 --> 00:01:02,500
+and photographed each one,
 
 25
-00:01:05,780 --> 00:01:09,873
-block of copper, 31 kilograms.
+00:01:02,540 --> 00:01:04,393
+front and back.
 
 26
+00:01:04,447 --> 00:01:06,860
+He melted them into a single block of copper,
+
+27
+00:01:06,900 --> 00:01:09,873
+31 kilograms.
+
+28
 00:01:09,927 --> 00:01:12,140
 In March 2024, the image of each
 
-27
+29
 00:01:12,300 --> 00:01:15,753
 front was inscribed on its own satoshi.
 
-28
+30
 00:01:15,807 --> 00:01:17,660
 A Cent is a unit of currency,
 
-29
+31
 00:01:17,700 --> 00:01:19,113
 a quantity of copper,
 
-30
+32
 00:01:19,167 --> 00:01:20,233
 part of a sculpture,
 
-31
+33
 00:01:20,287 --> 00:01:22,700
 a photograph, and a Bitcoin inscription.
 
-32
+34
 00:01:22,740 --> 00:01:25,727
 Each is valued by a different measure.
 
-33
+35
 00:01:25,753 --> 00:01:27,420
 And the measures keep moving.
 
-34
+36
 00:01:27,460 --> 00:01:28,860
 Over two years of voting,
 
-35
-00:01:28,900 --> 00:01:30,900
-collectors named the marks that circulation
-
-36
-00:01:30,980 --> 00:01:32,847
-left on them: verdigris,
-
 37
-00:01:32,953 --> 00:01:36,820
-obsidian, fingerprints, ghost.
+00:01:28,900 --> 00:01:30,100
+collectors named the marks
 
 38
+00:01:30,180 --> 00:01:31,900
+that circulation left on them:
+
+39
+00:01:31,940 --> 00:01:36,820
+verdigris, obsidian, fingerprints, ghost.
+
+40
 00:01:36,900 --> 00:01:39,380
 The cent is leaving the till.
 
-39
+41
 00:01:39,420 --> 00:01:41,580
 In CENTS, what a cent is worth
 
-40
+42
 00:01:41,660 --> 00:01:43,100
 is still being decided.
 
