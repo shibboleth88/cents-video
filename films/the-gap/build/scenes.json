@@ -1,0 +1,143 @@
+{
+ "_what": "Picture cuts of The Gap v2, as narration phrases. Read by src/the-gap/Film.tsx and captions/build_cues.py. v2 (2026-11-03): ~4 s per shot, few repeats (user rule, 2026-11-03). caption_cut:false marks a montage cut inside one spoken list, which a caption may span.",
+ "scenes": [
+  {
+   "id": "open",
+   "from": null,
+   "to": "the United States Mint"
+  },
+  {
+   "id": "press",
+   "from": "the United States Mint",
+   "to": "A year on"
+  },
+  {
+   "id": "tender",
+   "from": "A year on",
+   "to": "But by July"
+  },
+  {
+   "id": "till",
+   "from": "But by July",
+   "to": "In September, Congress"
+  },
+  {
+   "id": "capitol",
+   "from": "In September, Congress",
+   "to": "The face value"
+  },
+  {
+   "id": "away",
+   "from": "The face value",
+   "to": "That same September"
+  },
+  {
+   "id": "ingots",
+   "from": "That same September",
+   "to": "A cent struck before"
+  },
+  {
+   "id": "hero",
+   "from": "A cent struck before",
+   "to": "At that peak"
+  },
+  {
+   "id": "melt",
+   "from": "At that peak",
+   "to": "The coin says one"
+  },
+  {
+   "id": "bars",
+   "from": "The coin says one",
+   "to": "That gap"
+  },
+  {
+   "id": "split",
+   "from": "That gap",
+   "to": "is where CENTS"
+  },
+  {
+   "id": "mosaic",
+   "from": "is where CENTS",
+   "to": "Rutherford Chang removed"
+  },
+  {
+   "id": "desk",
+   "from": "Rutherford Chang removed",
+   "to": "and photographed each"
+  },
+  {
+   "id": "arm",
+   "from": "and photographed each",
+   "to": "front and back"
+  },
+  {
+   "id": "frontback",
+   "from": "front and back",
+   "to": "He melted them"
+  },
+  {
+   "id": "pour",
+   "from": "He melted them",
+   "to": "thirty-one kilograms"
+  },
+  {
+   "id": "block",
+   "from": "thirty-one kilograms",
+   "to": "In March twenty"
+  },
+  {
+   "id": "grid",
+   "from": "In March twenty",
+   "to": "A Cent is a unit"
+  },
+  {
+   "id": "natures",
+   "from": "A Cent is a unit",
+   "to": "Each is valued"
+  },
+  {
+   "id": "ucca",
+   "from": "Each is valued",
+   "to": "And the measures keep"
+  },
+  {
+   "id": "lab",
+   "from": "And the measures keep",
+   "to": "verdigris"
+  },
+  {
+   "id": "t_verdigris",
+   "from": "verdigris",
+   "to": "obsidian"
+  },
+  {
+   "id": "t_obsidian",
+   "from": "obsidian",
+   "to": "fingerprints",
+   "caption_cut": false
+  },
+  {
+   "id": "t_fingerprints",
+   "from": "fingerprints",
+   "to": "ghost",
+   "caption_cut": false
+  },
+  {
+   "id": "t_ghost",
+   "from": "ghost",
+   "to": "The cent is leaving",
+   "caption_cut": false
+  },
+  {
+   "id": "rolls",
+   "from": "The cent is leaving",
+   "to": "In CENTS what"
+  },
+  {
+   "id": "close",
+   "from": "In CENTS what",
+   "to": null
+  }
+ ]
+}
