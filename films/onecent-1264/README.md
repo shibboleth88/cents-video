@@ -41,3 +41,16 @@ In the cloud container, add `--browser-executable=/opt/pw-browsers/chromium_head
   - US National Archives, RG 208, public domain (US government work).
   - It is 706 px wide, so it is shown at its own size on a Plate, never upscaled.
 - **Captions:** the SPOKEN table gains 1971, 44, 1909, 1958, 208 and US. Control: "fleck" → "chip" was refused.
+
+## v3 (2026-11-03): "Cent #1264 & Bretton Woods"
+
+- **Script:** the user's edits of v0.3 (`/mnt/project-files/single-cent-series/1264/1264_proposal_v0.4.md`).
+  - Opens on the value gap from the project description.
+  - Then Bretton Woods, 1971, the user's lines on materiality, and the Glickstein quote (Spike, 13 May 2026).
+  - Then the year, the traits, and the comparison: "Two very different histories within one history."
+- **Narration:**
+  - eee, eleven_v4. Take 2 is used: generation GFwdjN6uXRfOplUbKXQ1, 170.19 s, 459 words.
+  - The scribe transcript equals `audio/tts_text.txt`.
+  - 24 holds give 192.4 s of audio. Two of them fell back to quiet runs: "worth." (below -60 dB) and "dominant." (the soft tail of the word, about -48 dB).
+- **Code:** `CentLook` takes an optional `title`. It may run to two lines, set at 68 px (`pre-line`), so it and the inscription line clear the coin on the opening card.
+- **Asset:** a14, the pour footage. It is registered from the objecthood film, shown at 560 px or less, and never looped.

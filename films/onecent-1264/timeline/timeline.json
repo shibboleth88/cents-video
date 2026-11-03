@@ -14,9 +14,9 @@
     "at_start": true
    },
    "end": {
-    "at_phrase": "Twenty-two of the"
+    "at_phrase": "How it came about"
    },
-   "purpose": "Standard opening: the 3DCENTS turn of #1264 plays once, then settles on the 1050px front at the same size. Story time pill on frame 0. Year zoom, then the mint-mark area under the date (no mark: Philadelphia). Boxes are Claude's reading of the front.",
+   "purpose": "Standard opening card with the Story time pill; episode title 'Cent #1264 & Bretton Woods' (user, 2026-11-03). The value gap is from the project description, dated 2024-03-26 (copper approximately 3.1 cents), so 'when Chang released CENTS in March 2024'. Concept C02 on screen.",
    "visual_kind": "code",
    "component": "CentLook",
    "props": {
@@ -36,9 +36,43 @@
      "credit": "3D render: 3DCENTS by sinvalli",
      "credit_at_end": true
     },
+    "reads": [
+     {
+      "at_phrase": "the copper in one penny",
+      "readout": "3.1¢",
+      "caption": "of copper, March 2024"
+     }
+    ],
+    "kicker": {
+     "text": "Story time",
+     "look": "pill",
+     "hold": 3.4
+    },
+    "title": "Cent #1264 &\nBretton Woods",
+    "concept": {
+     "at_phrase": "CENTS begins its exploration",
+     "label": "Assigned versus material value"
+    }
+   }
+  },
+  {
+   "shot_id": "s01b_story",
+   "start": {
+    "at_phrase": "How it came about"
+   },
+   "end": {
+    "at_phrase": "In July"
+   },
+   "purpose": "A separate visual for 'How it came about runs through the story of Cent #1264' (user, 2026-11-03): the year zoom, 1944.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65957688,
+    "n": 1264,
+    "front": "hires/1264.webp",
     "moves": [
      {
-      "at_phrase": "nineteen forty-four with no mint",
+      "at_phrase": "runs through the story",
       "box": [
        0.64,
        0.6,
@@ -46,40 +80,184 @@
        0.7
       ],
       "mark": true,
-      "dur": 0.8
-     },
-     {
-      "at_phrase": "no mint mark",
-      "box": [
-       0.66,
-       0.67,
-       0.86,
-       0.78
-      ],
-      "mark": true,
-      "dur": 0.7
+      "dur": 0.9
      }
     ],
     "reads": [
      {
-      "at_phrase": "struck in nineteen forty-four",
-      "readout": "1944"
+      "at_phrase": "runs through the story",
+      "readout": "1944",
+      "caption": "the year it was struck"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s04_bretton",
+   "start": {
+    "at_phrase": "In July"
+   },
+   "end": {
+    "at_phrase": "On August fifteenth"
+   },
+   "purpose": "Bretton Woods, July 1944: 44 nations, currencies pegged to the dollar, the dollar to gold (Federal Reserve History, 'Creation of the Bretton Woods System', as sourced in films/secret-history/script/essay.txt [3]). Public-domain OWI photograph (NARA RG 208).",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "bw1944",
+   "props": {
+    "caption": "Opening of the Bretton Woods Conference, July 1944",
+    "maxWidth": 706
+   }
+  },
+  {
+   "shot_id": "s05_1971",
+   "start": {
+    "at_phrase": "On August fifteenth"
+   },
+   "end": {
+    "at_phrase": "had wide-ranging"
+   },
+   "purpose": "C56 on screen. 15 Aug 1971: the US stopped exchanging dollars for gold (for foreign governments; Federal Reserve History, 'Nixon Ends Convertibility'); Bretton Woods collapsed by 1973 and rates floated (Lehnen, 'Reflections on Mint Years', Mar 2025). Two slow moves (in to Lincoln, back out) keep a 20 s card from freezing (v3 delivery check: 7.7 s frozen).",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65957688,
+    "n": 1264,
+    "front": "hires/1264.webp",
+    "concept": {
+     "at_phrase": "On August fifteenth",
+     "label": "1971 and the end of gold"
+    },
+    "moves": [
+     {
+      "at_phrase": "Within two years",
+      "box": [
+       0.2,
+       0.15,
+       0.85,
+       0.8
+      ],
+      "dur": 3.0
      },
      {
-      "at_phrase": "no mint mark",
-      "readout": "1944",
-      "caption": "no mint mark"
-     },
+      "at_phrase": "U.S. currency became",
+      "box": null,
+      "dur": 3.0
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s05b_material",
+   "start": {
+    "at_phrase": "had wide-ranging"
+   },
+   "end": {
+    "at_phrase": "These effects continue"
+   },
+   "purpose": "The user's lines on materiality over real footage of CENTS Block Copper being cast (asset a14, from the objecthood film; cents.gallery media, cleared). Starts at 'had wide-ranging effects' so the 8 s clip covers its shot without looping.",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "a14",
+   "props": {
+    "caption": "Casting CENTS Block Copper",
+    "maxWidth": 560
+   }
+  },
+  {
+   "shot_id": "s05b2_effects",
+   "start": {
+    "at_phrase": "These effects continue"
+   },
+   "end": {
+    "at_phrase": "In the words of"
+   },
+   "purpose": "The user's line on lasting effects in economics and art; concept C07 'Value itself becomes the medium' (Lehnen) named on screen. The pour clip is 8 s, so it is not looped across this line.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65957688,
+    "n": 1264,
+    "front": "hires/1264.webp",
+    "concept": {
+     "at_phrase": "These effects continue",
+     "label": "Value itself becomes the medium"
+    }
+   }
+  },
+  {
+   "shot_id": "s05c_quote",
+   "start": {
+    "at_phrase": "In the words of"
+   },
+   "end": {
+    "at_phrase": "It is in the strange"
+   },
+   "purpose": "Verbatim quote from Adina Glickstein, 'User Error: Never Midcurve', Spike Art Magazine, 13 May 2026 (user supplied; matched to the published text via search, 2026-11-03). Attributed aloud and on the card.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65957688,
+    "n": 1264,
+    "front": "hires/1264.webp",
+    "quote": {
+     "at_phrase": "Post-Bretton Woods as",
+     "text": "Post-Bretton Woods as much as post-internet, hasn’t contemporary art become, if not exactly a commercial product, the financial instrument par excellence?",
+     "credit": "Adina Glickstein, “Never Midcurve”, Spike"
+    }
+   }
+  },
+  {
+   "shot_id": "s05d_tension",
+   "start": {
+    "at_phrase": "It is in the strange"
+   },
+   "end": {
+    "at_phrase": "Among collectors"
+   },
+   "purpose": "The user's line on where CENTS resides; C12 named on screen.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65957688,
+    "n": 1264,
+    "front": "hires/1264.webp",
+    "concept": {
+     "at_phrase": "between absence of an",
+     "label": "Blockchain as this era's objecthood"
+    }
+   }
+  },
+  {
+   "shot_id": "s03_years",
+   "start": {
+    "at_phrase": "Among collectors"
+   },
+   "end": {
+    "at_phrase": "Twenty-two of the"
+   },
+   "purpose": "Concept C55 named on screen, over the date. The line is the user's own (2026-11-02), not a quote.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65957688,
+    "n": 1264,
+    "front": "hires/1264.webp",
+    "moves": [
      {
-      "at_phrase": "generally indicating",
-      "readout": "1944",
-      "caption": "Philadelphia"
+      "at_phrase": "Among collectors",
+      "box": [
+       0.6,
+       0.56,
+       0.9,
+       0.74
+      ],
+      "dur": 0.9
      }
     ],
-    "kicker": {
-     "text": "Story time",
-     "look": "pill",
-     "hold": 3.4
+    "concept": {
+     "at_phrase": "Among collectors",
+     "label": "Years that carry meaning"
     }
    }
   },
@@ -89,7 +267,7 @@
     "at_phrase": "Twenty-two of the"
    },
    "end": {
-    "at_phrase": "Coins from significant"
+    "at_phrase": "Nineteen forty-four also"
    },
    "purpose": "Every Cent dated 1944 (Sep 2026 export: 22), #1264 ringed. No Cent in CENTS is dated 1943 (export: 0), the steel-cent year (Wikipedia, 1943 steel cent).",
    "visual_kind": "code",
@@ -123,79 +301,8 @@
     "mark": 1264,
     "readout": "22",
     "caption": "of 10,000 Cents",
-    "until": "Coins from significant",
+    "until": "Nineteen forty-four also",
     "cols": 3
-   }
-  },
-  {
-   "shot_id": "s03_years",
-   "start": {
-    "at_phrase": "Coins from significant"
-   },
-   "end": {
-    "at_phrase": "In July"
-   },
-   "purpose": "Concept C55 named on screen, over the date. The line is the user's own (2026-11-02), not a quote.",
-   "visual_kind": "code",
-   "component": "CentLook",
-   "props": {
-    "inscription": 65957688,
-    "n": 1264,
-    "front": "hires/1264.webp",
-    "moves": [
-     {
-      "at_phrase": "Coins from significant",
-      "box": [
-       0.6,
-       0.56,
-       0.9,
-       0.74
-      ],
-      "dur": 0.9
-     }
-    ],
-    "concept": {
-     "at_phrase": "Coins from significant",
-     "label": "Years that carry meaning"
-    }
-   }
-  },
-  {
-   "shot_id": "s04_bretton",
-   "start": {
-    "at_phrase": "In July"
-   },
-   "end": {
-    "at_phrase": "In nineteen seventy-one"
-   },
-   "purpose": "Bretton Woods, July 1944: 44 nations, currencies pegged to the dollar, the dollar to gold (Federal Reserve History, 'Creation of the Bretton Woods System', as sourced in films/secret-history/script/essay.txt [3]). Public-domain OWI photograph (NARA RG 208).",
-   "visual_kind": "real",
-   "component": "Plate",
-   "asset_id": "bw1944",
-   "props": {
-    "caption": "Opening of the Bretton Woods Conference, July 1944",
-    "maxWidth": 706
-   }
-  },
-  {
-   "shot_id": "s05_1971",
-   "start": {
-    "at_phrase": "In nineteen seventy-one"
-   },
-   "end": {
-    "at_phrase": "Nineteen forty-four also"
-   },
-   "purpose": "Concept C56 named on screen. 15 Aug 1971: direct convertibility of the dollar to gold suspended, effectively making it fiat (Wikipedia, Nixon shock, fetched 2026-11-02; wording follows the Secret History line the user approved). Value tie: what a cent is worth, and who decides.",
-   "visual_kind": "code",
-   "component": "CentLook",
-   "props": {
-    "inscription": 65957688,
-    "n": 1264,
-    "front": "hires/1264.webp",
-    "concept": {
-     "at_phrase": "In nineteen seventy-one",
-     "label": "1971 and the end of gold"
-    }
    }
   },
   {
@@ -513,7 +620,7 @@
     },
     "swaps": [
      {
-      "at_phrase": "Only one of them",
+      "at_phrase": "Two very different",
       "to": "a"
      }
     ]
@@ -525,10 +632,10 @@
     "at_phrase": "Struck in the year"
    },
    "end": {
-    "after_phrase": "no one planned",
+    "after_phrase": "come between.",
     "plus": 0.3
    },
-   "purpose": "Coincidence said as coincidence (C56 caution): no intent by Chang is implied.",
+   "purpose": "Closing line (user, 2026-11-03): struck in the peg year, bearing the marks of what came between. Whole front.",
    "visual_kind": "code",
    "component": "CentLook",
    "props": {
@@ -538,26 +645,7 @@
     "moves": [
      {
       "at_phrase": "Struck in the year",
-      "box": [
-       0.18,
-       0.47,
-       0.63,
-       0.92
-      ],
-      "marks": [
-       [
-        0.18,
-        0.47,
-        0.5,
-        0.69
-       ],
-       [
-        0.43,
-        0.71,
-        0.62,
-        0.92
-       ]
-      ],
+      "box": null,
       "dur": 0.9
      }
     ],
@@ -565,7 +653,7 @@
      {
       "at_phrase": "Struck in the year",
       "readout": "1944",
-      "caption": "toned gold"
+      "caption": "and all that's come between"
      }
     ]
    }
@@ -573,7 +661,7 @@
   {
    "shot_id": "s12_card",
    "start": {
-    "after_phrase": "no one planned",
+    "after_phrase": "come between.",
     "plus": 0.3
    },
    "end": {
@@ -624,7 +712,8 @@
      "Images: Rutherford Chang",
      "3D render: 3DCENTS by sinvalli",
      "Trait names and definitions: Traits Atlas, CENTS Trait Council",
-     "Photograph: Bretton Woods Conference, 1944, US National Archives"
+     "Photograph: Bretton Woods Conference, 1944, US National Archives",
+     "Quote: Adina Glickstein, “Never Midcurve”, Spike Art Magazine"
     ],
     "url": "cents.gallery"
    }

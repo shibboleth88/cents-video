@@ -86,8 +86,10 @@ export const CentLook: React.FC<Anchored & {
    *  settle on the photo at the same size and place, so the zooms follow without a cut. */
   spin?: Clip;
   kicker?: Kicker;
+  /** An episode title in place of "Cent #n", e.g. "Cent #1264 & Bretton Woods" (user, 2026-11-03). It may take two lines. */
+  title?: string;
 }> = (props) => {
-  const { inscription, n, front, back, moves = [], flip_at, reads = [], concept, quote, spin, kicker } = props;
+  const { inscription, n, front, back, moves = [], flip_at, reads = [], concept, quote, spin, kicker, title } = props;
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const fade = useShotFade();
@@ -192,7 +194,7 @@ export const CentLook: React.FC<Anchored & {
           )) : null}
         </div>
       </Imagery>
-      <NameBand title={`Cent #${n}`} subtitle={`Inscription #${inscription}`} />
+      <NameBand title={title ?? `Cent #${n}`} subtitle={`Inscription #${inscription}`} lines={title ? 2 : 1} />
       {spin && settle < 1 && !spin.credit_at_end ? (
         <div style={{ position: "absolute", left: X0, top: STAGE.y1 - 46, width: X1 - X0, opacity: 0.8 * (1 - settle) }}>
           <SafeText role="label" fontSize={42} maxLines={1} color={COLOR.inkDim} style={{ fontFamily: TYPE.body, textAlign: "center" }}>{spin.credit}</SafeText>
@@ -254,13 +256,14 @@ export const CentLook: React.FC<Anchored & {
 };
 
 /** The Cent's name is the largest text on screen; the inscription number sits under it. */
-const NameBand: React.FC<{ title: string; subtitle?: string }> = ({ title, subtitle }) => {
+const NameBand: React.FC<{ title: string; subtitle?: string; lines?: number }> = ({ title, subtitle, lines = 1 }) => {
   const e = useEntrance("rise", 0);
   const opening = React.useContext(OpeningShotCtx);
   return (
     <div style={{ position: "absolute", left: X0, top: TITLE.y0, width: X1 - X0,
                   opacity: opening ? 1 : e.opacity, transform: `translateY(${opening ? 0 : e.y}px)` }}>
-      <SafeText role="display" fontSize={84} maxLines={1} style={{ fontWeight: 700, letterSpacing: -1 }}>{title}</SafeText>
+      {/* a two-line episode title is set at 68px so it and the inscription line clear the coin on the opening card */}
+      <SafeText role="display" fontSize={lines > 1 ? 68 : 84} maxLines={lines} style={{ fontWeight: 700, letterSpacing: -1, lineHeight: lines > 1 ? 1.05 : undefined, whiteSpace: lines > 1 ? "pre-line" : undefined }}>{title}</SafeText>
       {subtitle ? <SafeText role="body" fontSize={46} maxLines={1} color={COLOR.inkDim}>{subtitle}</SafeText> : null}
     </div>
   );

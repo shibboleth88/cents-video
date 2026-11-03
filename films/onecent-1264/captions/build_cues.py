@@ -21,6 +21,8 @@ SPOKEN = {"#1264": "number twelve sixty-four", "1944": "nineteen forty-four", "1
           "12": "twelve", "70": "seventy", "69": "sixty-nine", "1956": "nineteen fifty-six", "#543": "number five forty-three",
           "1971": "nineteen seventy-one", "44": "forty-four", "1909": "nineteen oh nine", "1958": "nineteen fifty-eight",
           "208": "two hundred and eight", "US": "U.S.",
+          "2024": "twenty twenty-four", "3.1": "three point one", "15": "fifteenth", "35": "thirty-five",
+          "20th": "twentieth", "21st": "twenty-first",
           "–": ""}   # the spaced dash in the Lehnen quote is not said: it takes the time of the word before it
 
 script = open(F / "script/voiceover.txt").read().split()
