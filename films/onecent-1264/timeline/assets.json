@@ -209,6 +209,19 @@
    "source": "cents.gallery media library (the user's own site; cleared), https://media.cents.gallery/s0709-copper-futures-copper-pasts-9-dec-24.gif (media id S0709), converted to H.264",
    "rights": "cleared (user's media library)",
    "verified_at": "2026-11-03"
+  },
+  "cube_cents": {
+   "path": "public/assets/v3new/cube_cents.mp4",
+   "staged_as": "v3new/cube_cents.mp4",
+   "width": 702,
+   "height": 702,
+   "motion": true,
+   "kind": "real",
+   "duration": 9.9,
+   "subject": "The CENTS Block model turning over a grid of Cents (animation).",
+   "source": "cents.gallery media library S0719 's0719-cube-with-cents-bkg-14mb.gif', attached by the user 2026-11-03; 234 px GIF scaled 3x (lanczos) to 702 px at the user's request",
+   "rights": "cleared (user's media library)",
+   "verified_at": "2026-11-03"
   }
  }
 }

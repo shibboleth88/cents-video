@@ -68,3 +68,16 @@ In the cloud container, add `--browser-executable=/opt/pw-browsers/chromium_head
 - **#543:** five dissolves, 543 → 1264 → 543 → 1264 → 543 → 1264.
 - **Removed:** the pour footage (a14 stays registered, unused) and the Full Gold shot of #4273.
 - **Code:** `Plate` draws no caption block when the caption is empty (the gold bars and Minecraft carry none; SafeText refuses an empty string). Captions break before "and digital objecthood" (the cue wrapped to three lines and left the safe area).
+
+**Correction to v4, 2026-11-03.** The v4 render played the **v3** voiceover. `public/vo.wav` was staged at 13:28, before the v4 take was built. The captions came from the v4 alignment, so the voice and the captions disagreed, and the user heard it. The v4 delivery check above read the master and the alignment, never the staged file, so it could not catch this. See LEDGER.md, "Rebuilding a master does not rebuild its staged copy".
+
+## v5 (2026-11-03): the user's notes of 18:04Z
+
+- **Voiceover fixed.** The v4 take is now staged in `public/vo.wav` (md5 equal to the master). An independent scribe transcript of that staged file matches every caption start to within 0.38 s.
+- **The cube animation replaces the two UCCA stills.** This is the user's attachment, media library S0719, the Block turning over a grid of Cents. It is a 234 px GIF scaled 3× to 702 px. It runs 9.4 s of its 9.9 s, so it does not loop.
+- **Ends at "…that CENTS resides."**, then "Cent #1264, a great Cent." over the closing card.
+  - The traits section, from "Among collectors…" to "…all that's come between.", is cut from the same take. `CUTS` sits in `build_vo.py`.
+  - The cut text is kept in `archive/held_for_next_video.txt` for another video, as the user asked.
+- **Fix:** when a hold and a cut share an edit point, the hold now sorts first. Before the fix, the concat restarted at the cut and put the whole section back: the file came out 187 s instead of 111 s.
+- **Credits:** the Traits Atlas line is dropped, since no trait is defined in the film any more.
+- **Delivery check (v5 file):** 3337 frames, 111.25 s, decodes clean at −17.6 LUFS. No black ≥0.5 s; the only freeze over 3 s is the credits. The render's audio envelope correlates 1.000 with the staged `public/vo.wav`, against −0.02 for the control, the v3 take.

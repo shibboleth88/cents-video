@@ -81,6 +81,28 @@ them was reasonable.
   left an old `essential.mp4` in place and the safe-area gate re-reported its
   result as a pass. *Caught by:* `g_not_stale`.
 
+- **Rebuilding a master does not rebuild its staged copy.** `build_vo.py`
+  writes `films/<f>/audio/vo.wav`. The render reads `public/vo.wav`, a copy made
+  by `film.py switch`. For #1264 v4 I rebuilt the master after the last switch,
+  so the render played the v3 voice. The captions came from the new alignment.
+  Every check passed, because each one read the master or the alignment, never
+  the file that was rendered:
+  - The transcript equalled the TTS text.
+  - The captions equalled the script.
+  - Loudness and decode were clean.
+
+  The user heard the mismatch (2026-11-03 18:04Z).
+
+  *Separating observation:* `film.py status` reports "public/vo.wav DIFFERS from
+  the master", and an md5 of the two files shows it too.
+
+  *Remedy used for v5:* run `switch` after every `build_vo.py`, and transcribe
+  the staged `public/vo.wav` independently before rendering. The v5 transcript
+  matched the caption timings to within 0.38 s.
+
+  The sibling shape is the stale export above: a check that reads the source
+  instead of the delivered artefact.
+
 - **A scan that returns zero is not a scan that found nothing.** My own
   violation-locator read 0 offending frames because its frame-line regex never
   matched, so the threshold branch never ran. *Rule:* assert a floor on frame

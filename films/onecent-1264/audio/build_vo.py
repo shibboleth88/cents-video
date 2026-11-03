@@ -15,7 +15,7 @@ F = pathlib.Path(__file__).resolve().parents[1]
 SRC = F / "audio/v4_take2.mp3"
 WORDS = [w for w in json.load(open(F / "audio/v4_take2_words.json"))["words"]
          if w["type"] == "word" and not w["text"].startswith("[")]
-CUTS = []
+CUTS = [("Among", "collectors,", "between.")]   # v5: the traits section is held for another video (user, 2026-11-03 18:04Z)
 # v4 leaves short gaps between sentences, so the holds give the picture (and the listener) room.
 # A hold is (word, seconds) or (word, seconds, n) for the n-th time the word is spoken ("trait." is said twice).
 # v4: the opening is the user's two sentences; "sixty-four." and "CENTS." end them. "surface." went with the Full
@@ -23,10 +23,7 @@ CUTS = []
 # the Minecraft clip; "trait." for the back-and-forth with #543.
 HOLDS = [("sixty-four.", 0.8, 1), ("CENTS.", 0.6, 1), ("money.", 0.6),
          ("worth.", 0.6, 1), ("effects,", 1.0), ("equity,", 0.8), ("itself.", 1.5), ("art.", 3.0, 1),
-         ("excellence?\"", 0.8), ("resides.", 0.8),
-         ("resonance.", 0.3), ("steel.", 0.6), ("penny.", 0.8), ("years.", 0.6), ("light.", 0.4), ("Gold.", 0.4),
-         ("later.", 2.0), ("dominant.", 0.5), ("Cent.", 0.8, 1), ("Contaminated.", 0.9),
-         ("trait.", 0.8), ("history.", 0.6), ("between.", 0.6)]
+         ("excellence?\"", 0.8), ("resides.", 1.2)]
 # v4: Nixon's own line from the user's clip is heard (user, 2026-11-03 15:50Z: "the nixon clip should have sound").
 # Its audio goes in at the pause after "dollars for gold." as (word, nth, lead silence, file, tail silence); the shot
 # s05a_nixon starts exactly where the clip's audio starts, so picture and sound stay in sync. The clip is
@@ -98,7 +95,9 @@ for text, nth, lead, path, tail, gain, wpath in CLIPS:
     cd = float(subprocess.run(["ffprobe", "-v", "error", "-select_streams", "a", "-show_entries", "stream=duration",
                                "-of", "csv=p=0", str(path)], capture_output=True, text=True, check=True).stdout)
     edits.append((t, "clip", (lead, path, cd, tail, gain, wpath)))
-edits.sort(key=lambda e: e[0])
+# a hold and a cut can share an edit point (v5: "resides." holds, then the traits section is cut); the hold must
+# come first, or the concat restarts at the cut's start and puts the whole cut section back (seen: 187 s, not ~111).
+edits.sort(key=lambda e: (e[0], e[1] == "cut"))
 
 filt, parts, last, inputs = [], [], 0.0, ["-i", str(SRC)]
 for k, (t, kind, v) in enumerate(edits):
