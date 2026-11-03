@@ -1,0 +1,15 @@
+{
+ "_what": "Picture cuts of The Gap, as narration phrases. Read by src/the-gap/Film.tsx and captions/build_cues.py (no caption spans a cut).",
+ "scenes": [
+  {"id": "open", "from": null, "to": "A year on"},
+  {"id": "round", "from": "A year on", "to": "That same September"},
+  {"id": "copper", "from": "That same September", "to": "The coin says one"},
+  {"id": "gap", "from": "The coin says one", "to": "Rutherford Chang removed"},
+  {"id": "removed", "from": "Rutherford Chang removed", "to": "He melted them"},
+  {"id": "melted", "from": "He melted them", "to": "In March twenty twenty-four"},
+  {"id": "inscribed", "from": "In March twenty twenty-four", "to": "A Cent is a unit"},
+  {"id": "natures", "from": "A Cent is a unit", "to": "And the measures keep"},
+  {"id": "traits", "from": "And the measures keep", "to": "The cent is leaving"},
+  {"id": "close", "from": "The cent is leaving", "to": null}
+ ]
+}

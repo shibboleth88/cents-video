@@ -1,0 +1,1276 @@
+{
+ "_source": "eee v4 take 1 (eleven_v4, [thoughtfully] [calm], script v0.1), scribe_v1; holds by audio/build_vo.py: [('circulation.', 1, 1.0), ('tender.', 1, 0.4), ('country.', 1, 0.6), ('away.', 1, 1.2), ('before.', 1, 0.5), ('cents.', 2, 1.0), ('more.', 1, 1.0), ('begins.', 1, 1.0), ('back.', 1, 0.6), ('kilograms.', 1, 1.4), ('satoshi.', 1, 1.0), ('measure.', 1, 0.8), ('ghost.', 1, 1.2), ('till.', 1, 0.6)]",
+ "duration": 109.05,
+ "words": [
+  {
+   "word": "On",
+   "start": 0.08,
+   "end": 0.16
+  },
+  {
+   "word": "the",
+   "start": 0.24,
+   "end": 0.32
+  },
+  {
+   "word": "twelfth",
+   "start": 0.4,
+   "end": 0.64
+  },
+  {
+   "word": "of",
+   "start": 0.72,
+   "end": 0.8
+  },
+  {
+   "word": "November,",
+   "start": 0.88,
+   "end": 1.6
+  },
+  {
+   "word": "twenty",
+   "start": 1.72,
+   "end": 1.84
+  },
+  {
+   "word": "twenty-five,",
+   "start": 1.92,
+   "end": 2.96
+  },
+  {
+   "word": "the",
+   "start": 3.0,
+   "end": 3.04
+  },
+  {
+   "word": "United",
+   "start": 3.2,
+   "end": 3.36
+  },
+  {
+   "word": "States",
+   "start": 3.52,
+   "end": 3.76
+  },
+  {
+   "word": "Mint",
+   "start": 3.84,
+   "end": 4.08
+  },
+  {
+   "word": "struck",
+   "start": 4.16,
+   "end": 4.4
+  },
+  {
+   "word": "its",
+   "start": 4.52,
+   "end": 4.64
+  },
+  {
+   "word": "last",
+   "start": 4.72,
+   "end": 5.04
+  },
+  {
+   "word": "cent",
+   "start": 5.2,
+   "end": 5.52
+  },
+  {
+   "word": "for",
+   "start": 5.6,
+   "end": 5.68
+  },
+  {
+   "word": "circulation.",
+   "start": 5.76,
+   "end": 7.96
+  },
+  {
+   "word": "A",
+   "start": 8.04,
+   "end": 8.12
+  },
+  {
+   "word": "year",
+   "start": 8.24,
+   "end": 8.36
+  },
+  {
+   "word": "on,",
+   "start": 8.44,
+   "end": 8.84
+  },
+  {
+   "word": "the",
+   "start": 8.92,
+   "end": 9.0
+  },
+  {
+   "word": "cent",
+   "start": 9.08,
+   "end": 9.32
+  },
+  {
+   "word": "is",
+   "start": 9.4,
+   "end": 9.56
+  },
+  {
+   "word": "still",
+   "start": 9.64,
+   "end": 9.88
+  },
+  {
+   "word": "legal",
+   "start": 10.04,
+   "end": 10.2
+  },
+  {
+   "word": "tender.",
+   "start": 10.24,
+   "end": 11.4
+  },
+  {
+   "word": "But",
+   "start": 11.48,
+   "end": 11.56
+  },
+  {
+   "word": "by",
+   "start": 11.6,
+   "end": 11.64
+  },
+  {
+   "word": "July",
+   "start": 11.72,
+   "end": 12.04
+  },
+  {
+   "word": "twenty",
+   "start": 12.12,
+   "end": 12.36
+  },
+  {
+   "word": "twenty-six,",
+   "start": 12.44,
+   "end": 13.28
+  },
+  {
+   "word": "twenty",
+   "start": 13.32,
+   "end": 13.56
+  },
+  {
+   "word": "states",
+   "start": 13.64,
+   "end": 14.04
+  },
+  {
+   "word": "had",
+   "start": 14.12,
+   "end": 14.2
+  },
+  {
+   "word": "passed",
+   "start": 14.36,
+   "end": 14.52
+  },
+  {
+   "word": "laws",
+   "start": 14.6,
+   "end": 14.92
+  },
+  {
+   "word": "letting",
+   "start": 14.96,
+   "end": 15.24
+  },
+  {
+   "word": "shops",
+   "start": 15.4,
+   "end": 15.56
+  },
+  {
+   "word": "round",
+   "start": 15.64,
+   "end": 15.88
+  },
+  {
+   "word": "a",
+   "start": 15.92,
+   "end": 15.96
+  },
+  {
+   "word": "cash",
+   "start": 16.12,
+   "end": 16.28
+  },
+  {
+   "word": "total",
+   "start": 16.48,
+   "end": 16.68
+  },
+  {
+   "word": "to",
+   "start": 16.72,
+   "end": 16.76
+  },
+  {
+   "word": "the",
+   "start": 16.84,
+   "end": 16.92
+  },
+  {
+   "word": "nearest",
+   "start": 17.08,
+   "end": 17.24
+  },
+  {
+   "word": "five",
+   "start": 17.32,
+   "end": 17.48
+  },
+  {
+   "word": "cents.",
+   "start": 17.64,
+   "end": 18.44
+  },
+  {
+   "word": "In",
+   "start": 18.52,
+   "end": 18.6
+  },
+  {
+   "word": "September,",
+   "start": 18.88,
+   "end": 19.32
+  },
+  {
+   "word": "Congress",
+   "start": 19.4,
+   "end": 19.8
+  },
+  {
+   "word": "passed",
+   "start": 19.96,
+   "end": 20.12
+  },
+  {
+   "word": "the",
+   "start": 20.2,
+   "end": 20.28
+  },
+  {
+   "word": "Common",
+   "start": 20.36,
+   "end": 20.6
+  },
+  {
+   "word": "Cents",
+   "start": 20.76,
+   "end": 21.0
+  },
+  {
+   "word": "Act,",
+   "start": 21.08,
+   "end": 21.56
+  },
+  {
+   "word": "which",
+   "start": 21.64,
+   "end": 21.72
+  },
+  {
+   "word": "would",
+   "start": 21.76,
+   "end": 21.8
+  },
+  {
+   "word": "allow",
+   "start": 21.96,
+   "end": 22.12
+  },
+  {
+   "word": "the",
+   "start": 22.2,
+   "end": 22.28
+  },
+  {
+   "word": "same",
+   "start": 22.4,
+   "end": 22.52
+  },
+  {
+   "word": "across",
+   "start": 22.6,
+   "end": 22.92
+  },
+  {
+   "word": "the",
+   "start": 22.96,
+   "end": 23.0
+  },
+  {
+   "word": "country.",
+   "start": 23.08,
+   "end": 24.453
+  },
+  {
+   "word": "The",
+   "start": 24.507,
+   "end": 24.56
+  },
+  {
+   "word": "face",
+   "start": 24.68,
+   "end": 24.8
+  },
+  {
+   "word": "value",
+   "start": 24.88,
+   "end": 25.2
+  },
+  {
+   "word": "of",
+   "start": 25.24,
+   "end": 25.28
+  },
+  {
+   "word": "the",
+   "start": 25.36,
+   "end": 25.44
+  },
+  {
+   "word": "cent",
+   "start": 25.52,
+   "end": 25.92
+  },
+  {
+   "word": "is",
+   "start": 26.0,
+   "end": 26.08
+  },
+  {
+   "word": "being",
+   "start": 26.2,
+   "end": 26.32
+  },
+  {
+   "word": "rounded",
+   "start": 26.4,
+   "end": 26.8
+  },
+  {
+   "word": "away.",
+   "start": 26.88,
+   "end": 28.96
+  },
+  {
+   "word": "That",
+   "start": 29.08,
+   "end": 29.2
+  },
+  {
+   "word": "same",
+   "start": 29.32,
+   "end": 29.44
+  },
+  {
+   "word": "September,",
+   "start": 29.52,
+   "end": 30.24
+  },
+  {
+   "word": "copper",
+   "start": 30.32,
+   "end": 30.56
+  },
+  {
+   "word": "traded",
+   "start": 30.64,
+   "end": 30.96
+  },
+  {
+   "word": "higher",
+   "start": 31.04,
+   "end": 31.36
+  },
+  {
+   "word": "in",
+   "start": 31.44,
+   "end": 31.52
+  },
+  {
+   "word": "London",
+   "start": 31.68,
+   "end": 31.84
+  },
+  {
+   "word": "than",
+   "start": 31.92,
+   "end": 32.0
+  },
+  {
+   "word": "it",
+   "start": 32.12,
+   "end": 32.24
+  },
+  {
+   "word": "ever",
+   "start": 32.4,
+   "end": 32.56
+  },
+  {
+   "word": "had",
+   "start": 32.64,
+   "end": 32.8
+  },
+  {
+   "word": "before.",
+   "start": 33.04,
+   "end": 34.1
+  },
+  {
+   "word": "A",
+   "start": 34.18,
+   "end": 34.26
+  },
+  {
+   "word": "cent",
+   "start": 34.38,
+   "end": 34.5
+  },
+  {
+   "word": "struck",
+   "start": 34.58,
+   "end": 34.82
+  },
+  {
+   "word": "before",
+   "start": 34.9,
+   "end": 35.22
+  },
+  {
+   "word": "the",
+   "start": 35.3,
+   "end": 35.38
+  },
+  {
+   "word": "switch",
+   "start": 35.5,
+   "end": 35.62
+  },
+  {
+   "word": "to",
+   "start": 35.7,
+   "end": 35.78
+  },
+  {
+   "word": "zinc",
+   "start": 35.86,
+   "end": 36.1
+  },
+  {
+   "word": "in",
+   "start": 36.18,
+   "end": 36.26
+  },
+  {
+   "word": "nineteen",
+   "start": 36.3,
+   "end": 36.58
+  },
+  {
+   "word": "eighty-two",
+   "start": 36.66,
+   "end": 37.22
+  },
+  {
+   "word": "is",
+   "start": 37.3,
+   "end": 37.46
+  },
+  {
+   "word": "ninety-five",
+   "start": 37.54,
+   "end": 38.02
+  },
+  {
+   "word": "percent",
+   "start": 38.18,
+   "end": 38.5
+  },
+  {
+   "word": "copper.",
+   "start": 38.54,
+   "end": 39.22
+  },
+  {
+   "word": "At",
+   "start": 39.3,
+   "end": 39.38
+  },
+  {
+   "word": "that",
+   "start": 39.5,
+   "end": 39.62
+  },
+  {
+   "word": "peak,",
+   "start": 39.78,
+   "end": 40.18
+  },
+  {
+   "word": "the",
+   "start": 40.22,
+   "end": 40.26
+  },
+  {
+   "word": "metal",
+   "start": 40.34,
+   "end": 40.58
+  },
+  {
+   "word": "in",
+   "start": 40.66,
+   "end": 40.74
+  },
+  {
+   "word": "one",
+   "start": 40.86,
+   "end": 40.98
+  },
+  {
+   "word": "was",
+   "start": 41.06,
+   "end": 41.22
+  },
+  {
+   "word": "worth",
+   "start": 41.34,
+   "end": 41.46
+  },
+  {
+   "word": "more",
+   "start": 41.54,
+   "end": 41.7
+  },
+  {
+   "word": "than",
+   "start": 41.82,
+   "end": 41.94
+  },
+  {
+   "word": "four",
+   "start": 42.02,
+   "end": 42.26
+  },
+  {
+   "word": "cents.",
+   "start": 42.34,
+   "end": 44.14
+  },
+  {
+   "word": "The",
+   "start": 44.22,
+   "end": 44.3
+  },
+  {
+   "word": "coin",
+   "start": 44.46,
+   "end": 44.62
+  },
+  {
+   "word": "says",
+   "start": 44.7,
+   "end": 44.94
+  },
+  {
+   "word": "one.",
+   "start": 45.1,
+   "end": 45.74
+  },
+  {
+   "word": "For",
+   "start": 45.82,
+   "end": 45.9
+  },
+  {
+   "word": "most",
+   "start": 45.98,
+   "end": 46.14
+  },
+  {
+   "word": "of",
+   "start": 46.22,
+   "end": 46.3
+  },
+  {
+   "word": "twenty",
+   "start": 46.38,
+   "end": 46.62
+  },
+  {
+   "word": "years,",
+   "start": 46.7,
+   "end": 47.34
+  },
+  {
+   "word": "its",
+   "start": 47.42,
+   "end": 47.5
+  },
+  {
+   "word": "copper",
+   "start": 47.58,
+   "end": 47.98
+  },
+  {
+   "word": "has",
+   "start": 48.06,
+   "end": 48.22
+  },
+  {
+   "word": "said",
+   "start": 48.34,
+   "end": 48.46
+  },
+  {
+   "word": "more.",
+   "start": 48.62,
+   "end": 50.18
+  },
+  {
+   "word": "That",
+   "start": 50.3,
+   "end": 50.42
+  },
+  {
+   "word": "gap,",
+   "start": 50.5,
+   "end": 51.06
+  },
+  {
+   "word": "between",
+   "start": 51.22,
+   "end": 51.38
+  },
+  {
+   "word": "what",
+   "start": 51.46,
+   "end": 51.54
+  },
+  {
+   "word": "the",
+   "start": 51.62,
+   "end": 51.7
+  },
+  {
+   "word": "state",
+   "start": 51.82,
+   "end": 51.94
+  },
+  {
+   "word": "decrees",
+   "start": 52.02,
+   "end": 52.58
+  },
+  {
+   "word": "and",
+   "start": 52.66,
+   "end": 52.74
+  },
+  {
+   "word": "what",
+   "start": 52.82,
+   "end": 52.9
+  },
+  {
+   "word": "the",
+   "start": 52.98,
+   "end": 53.06
+  },
+  {
+   "word": "metal",
+   "start": 53.22,
+   "end": 53.38
+  },
+  {
+   "word": "holds,",
+   "start": 53.78,
+   "end": 54.207
+  },
+  {
+   "word": "is",
+   "start": 54.233,
+   "end": 54.26
+  },
+  {
+   "word": "where",
+   "start": 54.34,
+   "end": 54.58
+  },
+  {
+   "word": "CENTS",
+   "start": 54.74,
+   "end": 55.14
+  },
+  {
+   "word": "begins.",
+   "start": 55.26,
+   "end": 57.18
+  },
+  {
+   "word": "Rutherford",
+   "start": 57.26,
+   "end": 57.66
+  },
+  {
+   "word": "Chang",
+   "start": 57.74,
+   "end": 57.98
+  },
+  {
+   "word": "removed",
+   "start": 58.06,
+   "end": 58.46
+  },
+  {
+   "word": "ten",
+   "start": 58.54,
+   "end": 58.7
+  },
+  {
+   "word": "thousand",
+   "start": 58.86,
+   "end": 59.26
+  },
+  {
+   "word": "copper",
+   "start": 59.34,
+   "end": 59.58
+  },
+  {
+   "word": "cents",
+   "start": 59.66,
+   "end": 59.9
+  },
+  {
+   "word": "from",
+   "start": 59.98,
+   "end": 60.06
+  },
+  {
+   "word": "circulation,",
+   "start": 60.14,
+   "end": 60.9
+  },
+  {
+   "word": "and",
+   "start": 60.94,
+   "end": 61.1
+  },
+  {
+   "word": "photographed",
+   "start": 61.18,
+   "end": 61.66
+  },
+  {
+   "word": "each",
+   "start": 61.74,
+   "end": 61.9
+  },
+  {
+   "word": "one,",
+   "start": 61.98,
+   "end": 62.5
+  },
+  {
+   "word": "front",
+   "start": 62.54,
+   "end": 62.86
+  },
+  {
+   "word": "and",
+   "start": 62.94,
+   "end": 63.02
+  },
+  {
+   "word": "back.",
+   "start": 63.1,
+   "end": 64.393
+  },
+  {
+   "word": "He",
+   "start": 64.447,
+   "end": 64.5
+  },
+  {
+   "word": "melted",
+   "start": 64.54,
+   "end": 64.82
+  },
+  {
+   "word": "them",
+   "start": 64.9,
+   "end": 64.98
+  },
+  {
+   "word": "into",
+   "start": 65.1,
+   "end": 65.22
+  },
+  {
+   "word": "a",
+   "start": 65.38,
+   "end": 65.487
+  },
+  {
+   "word": "single",
+   "start": 65.593,
+   "end": 65.7
+  },
+  {
+   "word": "block",
+   "start": 65.78,
+   "end": 66.02
+  },
+  {
+   "word": "of",
+   "start": 66.06,
+   "end": 66.1
+  },
+  {
+   "word": "copper,",
+   "start": 66.18,
+   "end": 66.86
+  },
+  {
+   "word": "thirty-one",
+   "start": 66.9,
+   "end": 67.38
+  },
+  {
+   "word": "kilograms.",
+   "start": 67.46,
+   "end": 69.873
+  },
+  {
+   "word": "In",
+   "start": 69.927,
+   "end": 69.98
+  },
+  {
+   "word": "March",
+   "start": 70.1,
+   "end": 70.22
+  },
+  {
+   "word": "twenty",
+   "start": 70.3,
+   "end": 70.46
+  },
+  {
+   "word": "twenty-four,",
+   "start": 70.54,
+   "end": 71.313
+  },
+  {
+   "word": "the",
+   "start": 71.367,
+   "end": 71.42
+  },
+  {
+   "word": "image",
+   "start": 71.54,
+   "end": 71.66
+  },
+  {
+   "word": "of",
+   "start": 71.74,
+   "end": 71.82
+  },
+  {
+   "word": "each",
+   "start": 71.9,
+   "end": 72.14
+  },
+  {
+   "word": "front",
+   "start": 72.3,
+   "end": 72.46
+  },
+  {
+   "word": "was",
+   "start": 72.5,
+   "end": 72.54
+  },
+  {
+   "word": "inscribed",
+   "start": 72.62,
+   "end": 73.18
+  },
+  {
+   "word": "on",
+   "start": 73.22,
+   "end": 73.26
+  },
+  {
+   "word": "its",
+   "start": 73.34,
+   "end": 73.5
+  },
+  {
+   "word": "own",
+   "start": 73.62,
+   "end": 73.74
+  },
+  {
+   "word": "satoshi.",
+   "start": 73.78,
+   "end": 75.753
+  },
+  {
+   "word": "A",
+   "start": 75.807,
+   "end": 75.86
+  },
+  {
+   "word": "Cent",
+   "start": 76.02,
+   "end": 76.18
+  },
+  {
+   "word": "is",
+   "start": 76.26,
+   "end": 76.34
+  },
+  {
+   "word": "a",
+   "start": 76.38,
+   "end": 76.42
+  },
+  {
+   "word": "unit",
+   "start": 76.5,
+   "end": 76.66
+  },
+  {
+   "word": "of",
+   "start": 76.74,
+   "end": 76.82
+  },
+  {
+   "word": "currency,",
+   "start": 76.9,
+   "end": 77.66
+  },
+  {
+   "word": "a",
+   "start": 77.7,
+   "end": 77.78
+  },
+  {
+   "word": "quantity",
+   "start": 77.98,
+   "end": 78.18
+  },
+  {
+   "word": "of",
+   "start": 78.26,
+   "end": 78.34
+  },
+  {
+   "word": "copper,",
+   "start": 78.38,
+   "end": 79.113
+  },
+  {
+   "word": "part",
+   "start": 79.167,
+   "end": 79.22
+  },
+  {
+   "word": "of",
+   "start": 79.26,
+   "end": 79.3
+  },
+  {
+   "word": "a",
+   "start": 79.38,
+   "end": 79.46
+  },
+  {
+   "word": "sculpture,",
+   "start": 79.54,
+   "end": 80.233
+  },
+  {
+   "word": "a",
+   "start": 80.287,
+   "end": 80.34
+  },
+  {
+   "word": "photograph,",
+   "start": 80.42,
+   "end": 81.087
+  },
+  {
+   "word": "and",
+   "start": 81.113,
+   "end": 81.14
+  },
+  {
+   "word": "a",
+   "start": 81.3,
+   "end": 81.433
+  },
+  {
+   "word": "Bitcoin",
+   "start": 81.567,
+   "end": 81.7
+  },
+  {
+   "word": "inscription.",
+   "start": 82.18,
+   "end": 82.7
+  },
+  {
+   "word": "Each",
+   "start": 82.74,
+   "end": 82.98
+  },
+  {
+   "word": "is",
+   "start": 83.06,
+   "end": 83.14
+  },
+  {
+   "word": "valued",
+   "start": 83.26,
+   "end": 83.54
+  },
+  {
+   "word": "by",
+   "start": 83.62,
+   "end": 83.7
+  },
+  {
+   "word": "a",
+   "start": 83.78,
+   "end": 83.86
+  },
+  {
+   "word": "different",
+   "start": 84.02,
+   "end": 84.18
+  },
+  {
+   "word": "measure.",
+   "start": 84.26,
+   "end": 85.727
+  },
+  {
+   "word": "And",
+   "start": 85.753,
+   "end": 85.78
+  },
+  {
+   "word": "the",
+   "start": 85.86,
+   "end": 85.94
+  },
+  {
+   "word": "measures",
+   "start": 85.98,
+   "end": 86.42
+  },
+  {
+   "word": "keep",
+   "start": 86.54,
+   "end": 86.66
+  },
+  {
+   "word": "moving.",
+   "start": 87.02,
+   "end": 87.42
+  },
+  {
+   "word": "Over",
+   "start": 87.46,
+   "end": 87.7
+  },
+  {
+   "word": "two",
+   "start": 87.82,
+   "end": 87.94
+  },
+  {
+   "word": "years",
+   "start": 88.06,
+   "end": 88.18
+  },
+  {
+   "word": "of",
+   "start": 88.22,
+   "end": 88.26
+  },
+  {
+   "word": "voting,",
+   "start": 88.34,
+   "end": 88.86
+  },
+  {
+   "word": "collectors",
+   "start": 88.9,
+   "end": 89.38
+  },
+  {
+   "word": "named",
+   "start": 89.46,
+   "end": 89.7
+  },
+  {
+   "word": "the",
+   "start": 89.74,
+   "end": 89.78
+  },
+  {
+   "word": "marks",
+   "start": 89.86,
+   "end": 90.1
+  },
+  {
+   "word": "that",
+   "start": 90.18,
+   "end": 90.26
+  },
+  {
+   "word": "circulation",
+   "start": 90.34,
+   "end": 90.9
+  },
+  {
+   "word": "left",
+   "start": 90.98,
+   "end": 91.14
+  },
+  {
+   "word": "on",
+   "start": 91.22,
+   "end": 91.3
+  },
+  {
+   "word": "them:",
+   "start": 91.38,
+   "end": 91.9
+  },
+  {
+   "word": "verdigris,",
+   "start": 91.94,
+   "end": 92.847
+  },
+  {
+   "word": "obsidian,",
+   "start": 92.953,
+   "end": 93.7
+  },
+  {
+   "word": "fingerprints,",
+   "start": 93.78,
+   "end": 94.9
+  },
+  {
+   "word": "ghost.",
+   "start": 95.06,
+   "end": 96.82
+  },
+  {
+   "word": "The",
+   "start": 96.9,
+   "end": 96.98
+  },
+  {
+   "word": "cent",
+   "start": 97.06,
+   "end": 97.38
+  },
+  {
+   "word": "is",
+   "start": 97.5,
+   "end": 97.62
+  },
+  {
+   "word": "leaving",
+   "start": 97.66,
+   "end": 97.94
+  },
+  {
+   "word": "the",
+   "start": 98.02,
+   "end": 98.1
+  },
+  {
+   "word": "till.",
+   "start": 98.14,
+   "end": 99.38
+  },
+  {
+   "word": "In",
+   "start": 99.42,
+   "end": 99.58
+  },
+  {
+   "word": "CENTS,",
+   "start": 99.78,
+   "end": 100.327
+  },
+  {
+   "word": "what",
+   "start": 100.353,
+   "end": 100.38
+  },
+  {
+   "word": "a",
+   "start": 100.46,
+   "end": 100.54
+  },
+  {
+   "word": "cent",
+   "start": 100.62,
+   "end": 100.78
+  },
+  {
+   "word": "is",
+   "start": 100.86,
+   "end": 101.02
+  },
+  {
+   "word": "worth",
+   "start": 101.1,
+   "end": 101.58
+  },
+  {
+   "word": "is",
+   "start": 101.66,
+   "end": 101.74
+  },
+  {
+   "word": "still",
+   "start": 101.9,
+   "end": 102.06
+  },
+  {
+   "word": "being",
+   "start": 102.14,
+   "end": 102.3
+  },
+  {
+   "word": "decided.",
+   "start": 102.38,
+   "end": 103.1
+  }
+ ]
+}
