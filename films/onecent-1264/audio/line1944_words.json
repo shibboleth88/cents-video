@@ -1,0 +1,107 @@
+{
+ "_source": "scribe_v1 on audio/line1944_take2.mp3 (eee, eleven_v4, [thoughtfully] [calm]; generation 708laPUjT4zhVlDoE62b); tags dropped",
+ "words": [
+  {
+   "text": "Cent",
+   "type": "word",
+   "start": 0.24,
+   "end": 0.48
+  },
+  {
+   "text": "number",
+   "type": "word",
+   "start": 0.64,
+   "end": 0.8
+  },
+  {
+   "text": "twelve",
+   "type": "word",
+   "start": 0.88,
+   "end": 1.2
+  },
+  {
+   "text": "sixty-four",
+   "type": "word",
+   "start": 1.28,
+   "end": 2.08
+  },
+  {
+   "text": "was",
+   "type": "word",
+   "start": 2.16,
+   "end": 2.32
+  },
+  {
+   "text": "struck",
+   "type": "word",
+   "start": 2.4,
+   "end": 2.64
+  },
+  {
+   "text": "in",
+   "type": "word",
+   "start": 2.72,
+   "end": 2.8
+  },
+  {
+   "text": "nineteen",
+   "type": "word",
+   "start": 2.88,
+   "end": 3.44
+  },
+  {
+   "text": "forty-four,",
+   "type": "word",
+   "start": 3.56,
+   "end": 4.52
+  },
+  {
+   "text": "the",
+   "type": "word",
+   "start": 4.56,
+   "end": 4.64
+  },
+  {
+   "text": "year",
+   "type": "word",
+   "start": 4.72,
+   "end": 4.88
+  },
+  {
+   "text": "the",
+   "type": "word",
+   "start": 4.96,
+   "end": 5.04
+  },
+  {
+   "text": "postwar",
+   "type": "word",
+   "start": 5.2,
+   "end": 5.52
+  },
+  {
+   "text": "money",
+   "type": "word",
+   "start": 5.6,
+   "end": 5.76
+  },
+  {
+   "text": "system",
+   "type": "word",
+   "start": 5.84,
+   "end": 6.24
+  },
+  {
+   "text": "was",
+   "type": "word",
+   "start": 6.32,
+   "end": 6.4
+  },
+  {
+   "text": "built.",
+   "type": "word",
+   "start": 6.48,
+   "end": 7.04
+  }
+ ]
+}

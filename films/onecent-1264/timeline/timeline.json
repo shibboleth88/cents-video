@@ -71,7 +71,7 @@
     "at_phrase": "by the system that"
    },
    "end": {
-    "at_phrase": "In July"
+    "at_phrase": "Cent number twelve sixty-four was"
    },
    "purpose": "User's pick (18:37Z): media library C018, the CENTS and bitcoin infinity diagram, under 'the system that he created with CENTS'.",
    "visual_kind": "real",
@@ -80,6 +80,43 @@
    "props": {
     "caption": "",
     "maxWidth": 732
+   }
+  },
+  {
+   "shot_id": "s01d_year",
+   "start": {
+    "at_phrase": "Cent number twelve sixty-four was"
+   },
+   "end": {
+    "at_phrase": "In July"
+   },
+   "purpose": "User (2026-11-03 19:14Z): introduce that #1264 is a 1944 before 'In July 1944', zooming to the date. Year box as in v3's s01b_story.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65957688,
+    "n": 1264,
+    "front": "hires/1264.webp",
+    "moves": [
+     {
+      "at_phrase": "struck in nineteen forty-four, the",
+      "box": [
+       0.64,
+       0.6,
+       0.86,
+       0.7
+      ],
+      "mark": true,
+      "dur": 0.9
+     }
+    ],
+    "reads": [
+     {
+      "at_phrase": "struck in nineteen forty-four, the",
+      "readout": "1944",
+      "caption": "no mint mark"
+     }
+    ]
    }
   },
   {
@@ -122,7 +159,7 @@
     "at_phrase": "Gold was the measure"
    },
    "end": {
-    "at_phrase": "Struck in nineteen"
+    "at_phrase": "Cent number twelve sixty-four is"
    },
    "purpose": "Gold bars after the Bretton Woods images, same passage (user, 2026-11-03).",
    "visual_kind": "real",
@@ -135,7 +172,7 @@
   {
    "shot_id": "s04d_oldgold",
    "start": {
-    "at_phrase": "Struck in nineteen"
+    "at_phrase": "Cent number twelve sixty-four is"
    },
    "end": {
     "at_phrase": "On August fifteenth"
@@ -381,8 +418,7 @@
     "at_phrase": "but on materiality"
    },
    "end": {
-    "after_phrase": "materiality itself.",
-    "plus": 0.6
+    "at_phrase": "These effects continue"
    },
    "purpose": "User's bubble popping (18:37Z) with 'materiality itself', before the Minecraft clip; about 2.6 s of 3.48 s.",
    "visual_kind": "real",
@@ -396,13 +432,12 @@
   {
    "shot_id": "s05e2_minecraft",
    "start": {
-    "after_phrase": "materiality itself.",
-    "plus": 0.6
-   },
-   "end": {
     "at_phrase": "These effects continue"
    },
-   "purpose": "User-supplied Minecraft clip around 'materiality itself' (user, 2026-11-03 15:50Z). Of the two uploads, clip 1: the player walks the length of the build, where clip 2 only climbs down one corner. No sound. The 1.5 s hold after 'itself.' keeps the shot (about 3.5 s) inside the 4.68 s clip.",
+   "end": {
+    "at_phrase": "to this day"
+   },
+   "purpose": "User-supplied Minecraft clip around 'materiality itself' (user, 2026-11-03 15:50Z). Of the two uploads, clip 1: the player walks the length of the build, where clip 2 only climbs down one corner. No sound. The 1.5 s hold after 'itself.' keeps the shot (about 3.5 s) inside the 4.68 s clip. v7: under 'These effects continue to bear influence to this day' (user, 19:17Z).",
    "visual_kind": "real",
    "component": "Plate",
    "asset_id": "minecraft",
@@ -414,7 +449,7 @@
   {
    "shot_id": "s05f_polymarket",
    "start": {
-    "at_phrase": "These effects continue"
+    "at_phrase": "to this day"
    },
    "end": {
     "at_phrase": "as well as art"

@@ -15,7 +15,7 @@ F = pathlib.Path(__file__).resolve().parents[1]
 SRC = F / "audio/v6_take2.mp3"
 WORDS = [w for w in json.load(open(F / "audio/v6_take2_words.json"))["words"]
          if w["type"] == "word" and not w["text"].startswith("[")]
-CUTS = []   # v6: re-voiced without the traits section (held for another video)
+CUTS = [("Struck", "in", "forty-four,")]   # v7: "Struck in 1944," cut from the gold line, now said just before (user, 2026-11-03 19:15Z)
 # v4 leaves short gaps between sentences, so the holds give the picture (and the listener) room.
 # A hold is (word, seconds) or (word, seconds, n) for the n-th time the word is spoken ("trait." is said twice).
 # v4: the opening is the user's two sentences; "sixty-four." and "CENTS." end them. "surface." went with the Full
@@ -23,16 +23,19 @@ CUTS = []   # v6: re-voiced without the traits section (held for another video)
 # the Minecraft clip; "trait." for the back-and-forth with #543.
 HOLDS = [("sixty-four.", 0.8, 1), ("CENTS.", 0.6, 1), ("money.", 0.5), ("years.", 0.6),
          ("worth.", 0.6, 1), ("dominant.", 0.4), ("Cent.", 0.5, 1), ("itself.", 0.8, 1),
-         ("effects,", 1.0), ("equity,", 0.8), ("itself.", 2.8, 2), ("art.", 1.0, 1),
+         ("effects,", 1.0), ("equity,", 0.8), ("itself.", 0.6, 2), ("art.", 1.0, 1),
          ("excellence?\"", 0.8), ("resides.", 1.2)]
 # v6 (user, 2026-11-03 18:37Z): "art." holds 1.0 s, not 3.0 (less pause; the banana clip is trimmed to fit);
-# the second "itself." holds 2.8 s for the bubble, then the Minecraft clip.
+# the second "itself." holds 0.6 s: v7 plays Minecraft under "These effects continue to bear" (user, 19:17Z), not in silence.
 # v4: Nixon's own line from the user's clip is heard (user, 2026-11-03 15:50Z: "the nixon clip should have sound").
 # Its audio goes in at the pause after "dollars for gold." as (word, nth, lead silence, file, tail silence); the shot
 # s05a_nixon starts exactly where the clip's audio starts, so picture and sound stay in sync. The clip is
 # -9.1 LUFS against the take's -26.9, so it is turned down 17.5 dB before the whole is normalised.
 CLIPS = [("gold.", 1, 0.25, F.parents[1] / "public/assets/v3new/nixon_your_dollar.mp4", 0.35, -17.5,
-          F / "audio/nixon_words.json")]
+          F / "audio/nixon_words.json", True),
+         # v7 (user, 2026-11-03 19:14Z): "Cent #1264 was struck in 1944, the year the postwar money system was built."
+         # before "In July 1944", voiced alone on the same voice and setting (take 2, -25.9 LUFS against -27.1).
+         ("CENTS.", 1, 0.0, F / "audio/line1944_take2.mp3", 0.5, -1.2, F / "audio/line1944_words.json", False)]
 # The commas of the examples list have no pause that silencedetect (0.2 s) finds; each of those holds goes in
 # the longest run of quiet 10 ms windows (RMS under -35 dB, at least 150 ms: a stop consonant's closure gives 60 ms, as the control after "struck" showed) instead (v3: one close-up per example).
 COMMA_HOLDS = set()
@@ -59,11 +62,6 @@ FALLBACK = False
 
 edits = []   # (source time, kind, value): kind "cut" value = end time, "hold" value = seconds
 removed = set()
-for a, b, last in CUTS:  # (none in #1264)
-    hits = [i for i in range(len(WORDS) - 1) if WORDS[i]["text"] == a and WORDS[i + 1]["text"] == b]
-    if len(hits) != 1: sys.exit(f"REFUSING: cut start {a} {b} found {len(hits)} times")
-    i0 = hits[0]; i1 = next(j for j in range(i0, len(WORDS)) if WORDS[j]["text"] == last)
-    edits.append((gap_after(i0 - 1), "cut", gap_after(i1))); removed |= set(range(i0, i1 + 1))
 import numpy as np
 _pcm = np.frombuffer(subprocess.run(["ffmpeg", "-v", "error", "-i", str(SRC), "-ac", "1", "-ar", "16000", "-f", "s16le", "-"],
                                     capture_output=True, check=True).stdout, np.int16).astype(float) / 32768
@@ -77,6 +75,18 @@ def quiet_after(i):
     if best[0] < 15: sys.exit(f"REFUSING: no quiet run of 150 ms after {WORDS[i]['text']!r}")
     return (lo + best[1] + best[0] / 2) / 100
 QUIET_USED = []
+# v7: a cut edge may sit at a comma with no 0.2 s pause ("forty-four,"); it then goes in the longest quiet run,
+# like a hold, and is recorded in QUIET_USED.
+def edge(i):
+    global FALLBACK
+    FALLBACK = True; t = gap_after(i); FALLBACK = False
+    if t is None: t = quiet_after(i); QUIET_USED.append(WORDS[i]["text"] + " (cut)")
+    return t
+for a, b, last in CUTS:  # (none in #1264)
+    hits = [i for i in range(len(WORDS) - 1) if WORDS[i]["text"] == a and WORDS[i + 1]["text"] == b]
+    if len(hits) != 1: sys.exit(f"REFUSING: cut start {a} {b} found {len(hits)} times")
+    i0 = hits[0]; i1 = next(j for j in range(i0, len(WORDS)) if WORDS[j]["text"] == last)
+    edits.append((edge(i0 - 1), "cut", edge(i1))); removed |= set(range(i0, i1 + 1))
 for text, secs, *nth in HOLDS:
     hits = [i for i, w in enumerate(WORDS) if w["text"] == text and i not in removed]
     if nth: hits = hits[nth[0] - 1:nth[0]]
@@ -90,14 +100,14 @@ for text, secs, *nth in HOLDS:
     if t is None: t = quiet_after(hits[0]); QUIET_USED.append(text)
     edits.append((t, "hold", secs))
 CLIP_AT = []
-for text, nth, lead, path, tail, gain, wpath in CLIPS:
+for text, nth, lead, path, tail, gain, wpath, quoted in CLIPS:
     hits = [i for i, w in enumerate(WORDS) if w["text"] == text and i not in removed][nth - 1:nth]
     if len(hits) != 1: sys.exit(f"REFUSING: clip word {text!r} occurrence {nth} not found")
     FALLBACK = True; t = gap_after(hits[0]); FALLBACK = False
     if t is None: t = quiet_after(hits[0]); QUIET_USED.append(text)
     cd = float(subprocess.run(["ffprobe", "-v", "error", "-select_streams", "a", "-show_entries", "stream=duration",
                                "-of", "csv=p=0", str(path)], capture_output=True, text=True, check=True).stdout)
-    edits.append((t, "clip", (lead, path, cd, tail, gain, wpath)))
+    edits.append((t, "clip", (lead, path, cd, tail, gain, wpath, quoted)))
 # a hold and a cut can share an edit point (v5: "resides." holds, then the traits section is cut); the hold must
 # come first, or the concat restarts at the cut's start and puts the whole cut section back (seen: 187 s, not ~111).
 edits.sort(key=lambda e: (e[0], e[1] == "cut"))
@@ -106,7 +116,7 @@ filt, parts, last, inputs = [], [], 0.0, ["-i", str(SRC)]
 for k, (t, kind, v) in enumerate(edits):
     filt.append(f"[0:a]atrim={last}:{t},asetpts=PTS-STARTPTS[p{k}]"); parts.append(f"[p{k}]")
     if kind == "clip":
-        lead, path, cd, tail, gain, _ = v; inputs += ["-i", str(path)]; j = len(inputs) // 2 - 1
+        lead, path, cd, tail, gain, _, _q = v; inputs += ["-i", str(path)]; j = len(inputs) // 2 - 1
         filt.append(f"anullsrc=r=48000:cl=mono,atrim=0:{lead}[l{k}]")
         filt.append(f"[{j}:a]aformat=sample_rates=48000:channel_layouts=mono,volume={gain}dB,asetpts=PTS-STARTPTS[c{k}]")
         filt.append(f"anullsrc=r=48000:cl=mono,atrim=0:{tail}[t{k}]")
@@ -141,12 +151,12 @@ al = {"_source": "eee v1 take 2 (eleven_v4, [thoughtfully] [calm], script v1), t
 # the clip's own words, at the clip's place: the line is captioned like the narration
 for c, kind, v in edits:
     if kind != "clip": continue
-    lead, path, cd, tail, gain, wpath = v
+    lead, path, cd, tail, gain, wpath, quoted = v
     d0 = sum(LEN(k2, v2) if k2 in ("hold", "clip") else -(v2 - c2) for c2, k2, v2 in edits if c2 < c)
     base = c + d0 + lead
     cw = [{"word": w["text"], "start": round(base + w["start"], 3), "end": round(base + w["end"], 3)}
           for w in json.load(open(wpath))["words"]]
-    cw[0]["word"] = '"' + cw[0]["word"]; cw[-1]["word"] += '."'
+    if quoted: cw[0]["word"] = '"' + cw[0]["word"]; cw[-1]["word"] += '."'
     k = next(i for i, w in enumerate(al["words"]) if w["start"] > base)
     al["words"][k:k] = cw
     print(f"clip {path.name}: audio starts at {base:.3f} s, ends {base + cd:.3f} s")

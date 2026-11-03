@@ -99,3 +99,13 @@ In the cloud container, add `--browser-executable=/opt/pw-browsers/chromium_head
   - No black ≥0.5 s. The only freeze over 3 s is the credits.
   - `public/vo.wav` md5 equals the master.
   - The render's audio envelope correlates 1.000 with the staged VO. The control, the v4 take, gives 0.02.
+
+## v7 (2026-11-03): the user's notes of 19:14Z, 19:15Z and 19:17Z
+
+- **New line before "In July 1944":** "Cent #1264 was struck in 1944, the year the postwar money system was built." This is the user's pick from Claude's proposals. It was voiced alone on the same voice and setting (`audio/line1944_take2.mp3`, gain −1.2 dB) and spliced in through `CLIPS`. Clips now carry a `quoted` flag, so only Nixon's line gets quote marks. Under the line, the picture zooms to the date, ringed, with a "1944" readout.
+- **Gold line:** "Struck in 1944," is cut from it, using `CUTS`. A cut edge may now fall back to a quiet run; the edge after "forty-four," is at -41 to -52 dB. The line now begins "Cent #1264 is the oldest Cent…".
+- **Minecraft** plays under "These effects continue to bear influence" (1.85 s). The bubble runs up to that point. Polymarket runs from "to this day". The hold after "materiality itself." is 0.6 s; measured passage breaks elsewhere are 0.85–1.3 s. The user is fine with 0.6.
+- **Delivery check:**
+  - 4182 frames, 139.41 s, decodes clean at −17.3 LUFS.
+  - No black ≥0.5 s. The only freeze over 3 s is the credits.
+  - Staged VO md5 equals the master. The render's audio envelope correlates 1.000 with the staged VO; the control, the raw v6 take, gives 0.02.
