@@ -4,7 +4,7 @@ This is the one source for the format of every Collector Wall episode. Read it b
 
 The reference episode is **blacktongue** (`films/wall-blacktongue/` on branch `claude/project-thread-nkzn17`, PR #5). Copy its folder layout, timeline shape and caption builder.
 
-Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the Daidatep thread's first findings. 2026-10-26: §5 "Delivery check" added from the GPT WBWA reel handover. 2026-10-27: narration voice changed to "eee" (§5); showcase opener is the series opening (§3); 3DCENTS credit wording approved (§4); badge zooms get the opener-style highlight (§4a); audit against the day's decisions: lead with the Wall's standout fact (§1), graded traits, fronts only, Cents on black, Daidatep (§2), no long still holds (§4a), dated snapshots (§4a). 2026-10-28: find the focus with `wall_focus.py` (§1), plus off-site leads from `stories.py` (candidate, §1); seamless signature hand-offs, card to spin to still, front on cue (§3), approved as the series format; captioned render only (§5); end credits card, 3DCENTS credit moved there (§3 step 10, §4); "Lead" caption look (§5).
+Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the Daidatep thread's first findings. 2026-10-26: §5 "Delivery check" added from the GPT WBWA reel handover. 2026-10-27: narration voice changed to "eee" (§5); showcase opener is the series opening (§3); 3DCENTS credit wording approved (§4); badge zooms get the opener-style highlight (§4a); audit against the day's decisions: lead with the Wall's standout fact (§1), graded traits, fronts only, Cents on black, Daidatep (§2), no long still holds (§4a), dated snapshots (§4a). 2026-10-28: find the focus with `wall_focus.py` (§1), plus off-site leads from `stories.py` (candidate, §1); seamless signature hand-offs, card to spin to still, front on cue (§3), approved as the series format; captioned render only (§5); end credits card, 3DCENTS credit moved there (§3 step 10, §4); "Lead" caption look (§5). 2026-11-03: visual variety for all CENTS videos (§5, before §6).
 
 ## 1. What an episode is
 
@@ -301,6 +301,27 @@ ffmpeg -hide_banner -i "$f" -vf "blackdetect=d=0.1:pix_th=0.10,freezedetect=n=0.
   - With `labelsUnder` and around 20 or more Cents, set `cols: 6`, or the top row runs into the title.
 - **WallStandout captions stay on one line.** A caption that wraps to two lines runs under the burned-in captions.
 - **Readouts:** the 84 px readout fits about 8 characters, so SafeText refuses "1 of 2 collectors". Keep the number in the readout ("1 of 2") and put the words in the caption line beneath it.
+
+### Visual variety (user, 2026-11-03; applies to ALL CENTS videos)
+
+The user wants the same variety in every CENTS video as in Cent #1264 v7:
+- Vary the visuals.
+- Don't stay too long on any one visual.
+- Repeat visuals rarely.
+- Draw imagery from a range of sources.
+
+**Reference: #1264 v7 (2:19).**
+- 24 shots, median 4.7 s, 17 distinct plates.
+- Every shot ran 9 s or less, except two: a Cent card carrying 5 zooms over 27 s, and the quote card (14 s).
+- Sources: NARA photos, a newspaper front page, an archival clip with its own sound, charts, a market screenshot, art-news and internet clips, cents.gallery media library items, 3DCENTS, and the 1050 px fronts.
+
+**How:**
+- Plan a new visual every 3–6 s.
+- On a long passage over one Cent, move or zoom every few seconds.
+- Before reusing a shot, check the media library (cents.gallery/data/cents-media.json; files at media.cents.gallery/<k>) and the public-domain archives.
+- **In a Collector Wall**, the Wall card is the visual that most risks repeating, because each badge zoom returns to it. Between badge zooms, cut away to the Cents themselves, large (hires fronts, `solo_until` rows, the 3DCENTS spin), and to cents.vision screenshots of the Set or trait pages. Only use media-library items that bear on what the Wall holds.
+
+This rule is also in project memory as `cents-visual-variety`, for every film.
 
 ## 6. Badge meanings (as cents.vision words them)
 
