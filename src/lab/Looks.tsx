@@ -91,14 +91,17 @@ const Wipe: React.FC<{ delay?: number; dur?: number; children: React.ReactNode; 
   };
 
 /** The opening spin, its coin centred on (cx, cy) at diameter d. In the
- *  3DCENTS reel the coin sits at (520, 960) with a ~680 px face. */
+ *  3DCENTS reel the face-on coin is 772 px across, centred at (538, 958): measured
+ *  frame by frame on 2026-11-04. Until then this said 680 px at (520, 960), measured
+ *  on a mid-turn frame, so the coin drew 13.5% larger than d and its rim showed
+ *  outside the play poster's dimming disc. */
 const Spin: React.FC<{ cx: number; cy: number; d: number; bg: string }> = ({ cx, cy, d, bg }) => {
-  const k = d / 680;
+  const k = d / 772;
   return (
     <AbsoluteFill style={{ background: bg, isolation: "isolate" }}>
       <OffthreadVideo src={staticFile("look/spin-2616.mp4")} muted
         style={{ position: "absolute", width: 1080 * k, height: 1920 * k,
-                 left: cx - 520 * k, top: cy - 960 * k, mixBlendMode: "lighten" }} />
+                 left: cx - 538 * k, top: cy - 958 * k, mixBlendMode: "lighten" }} />
     </AbsoluteFill>
   );
 };
