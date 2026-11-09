@@ -18,6 +18,27 @@ row moves to `LEDGER_ARCHIVE.md` verbatim in the same edit that supersedes it.
   spoken and flagged rather than overwritten. Anchors match fuzzily
   (`MATCH_MIN`), keeping the ambiguity guard via a margin against the runner-up.
 
+- **A ranking measured over one class and one quantity is not true of the
+  neighbouring class or quantity.** A superlative ("the most", "the fewest",
+  "the only") carries the set it was ranked within and the number it was ranked
+  by. Rewording either makes a new claim that has not been measured, and the new
+  sentence reads just as plausibly as the old one. *Bitten twice.*
+  (1) Introduction film, revision 4 (2026-10-06, `LEDGER_ARCHIVE.md`): the
+  essay's "most reproduced artwork" (the image) was re-stated as "the most
+  reproduced physical object" (all manufactured things). The class changed.
+  (2) DOPEMIND Collector Wall (2026-11-09), caught in drafting: the measured fact
+  was that DOPEMIND *holds* the fewest contaminated Cents (2) of the 58 Walls
+  with a Contamination Set. The draft line was "the only Wall to complete the Set
+  with just two Cents". That is a claim about what Walls *could* do, and it is
+  false: other Walls hold a pair of Cents that covers three types between them.
+  The quantity changed from what a Wall holds to what it could select. A check
+  of every Wall's best pair found it.
+  **Remedy:** write down the class and the quantity next to each superlative,
+  then re-run the ranking under the sentence's own wording before the line is
+  voiced. The narration now says "holds only two contaminated Cents, the fewest
+  of any Wall with this Set". `films/wall-dopemind/data/contamination_sets.py`
+  refuses unless that minimum is held by DOPEMIND alone.
+
 ## Candidates — bitten once
 
 - **A field I can set is not a sign-off I hold.** `approved: true` on an
