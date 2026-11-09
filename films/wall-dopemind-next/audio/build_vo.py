@@ -12,8 +12,8 @@
 """
 import json, pathlib, re, subprocess, sys
 F = pathlib.Path(__file__).resolve().parents[1]
-TAKE = "v1_take1"
-PAD_TO = 128.0
+TAKE = "v2_take1"
+PAD_TO = 167.0
 words = [w for w in json.load(open(F / f"audio/{TAKE}_words.json"))["words"]
          if w.get("type", "word") == "word" and not re.fullmatch(r"\[[a-z ]+\]", w["text"])]
 norm = lambda s: re.sub(r"[^a-z0-9' -]+", " ", s.lower().replace("’", "'")).split()
