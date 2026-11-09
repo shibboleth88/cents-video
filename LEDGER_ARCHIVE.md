@@ -871,3 +871,15 @@ its referent. All three fixed before the line count was touched.
 
 25 lines, 355 words, ~3:11.
 
+## Superseded row — promoted to Failure-shapes (2026-11-09)
+
+Moved unedited from LEDGER.md Candidates when the shape bit a second time (DOPEMIND "what to add next").
+
+- **A shot's start is not the moment its content appears.** A row shot began at
+  one phrase but showed nothing until each Cent's own phrase. With the old voice
+  the gap was short; the re-voiced take paused 2.6 s there, and the ScrappyT v1
+  render held an empty titled frame (blackdetect 91.07-93.67 s, 2026-10-27).
+  Stills at shot midpoints missed it, because the midpoint fell after the first
+  Cent. *Separating observation:* blackdetect on the render, or a still at each
+  shot's first frame, not its middle. Fixed by starting the shot at its first
+  Cent's phrase; caught before delivery.

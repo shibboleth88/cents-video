@@ -1,0 +1,995 @@
+{
+ "baseline": {
+  "add": [],
+  "rendered": {
+   "set_badges": [
+    "Contamination Set (3/12)"
+   ],
+   "meta_badges": [
+    "Diamond Hands",
+    "Dime Club",
+    "Years 1963-1981",
+    "Patina count 9"
+   ],
+   "trait_tags": [
+    "Contaminated Obscure Adhesive x 1",
+    "Contaminated Paint x 1",
+    "Contaminated Speckles x 1",
+    "White Drips And Streaks x 1"
+   ]
+  },
+  "years": [
+   1963,
+   1981
+  ],
+  "count": 12,
+  "sets": {
+   "patina_level": null,
+   "spectrum": false,
+   "full_spectrum": false,
+   "chronicle": false,
+   "full_mint": false,
+   "full_mint_cent_ids": [
+    3010,
+    4599
+   ],
+   "contamination_types": 3,
+   "decade_sets": [],
+   "three_decades": false,
+   "full_decades": false,
+   "all_decades": false
+  },
+  "agg": {
+   "patina": 115,
+   "sig": 29,
+   "fulls": 2,
+   "spectrum": 16,
+   "fullSpectrum": 2,
+   "chronicle": 54,
+   "fullMint": 28,
+   "contaminationSet": 59,
+   "contaminationHoard": 12,
+   "contaminationFull": 3,
+   "threeDecades": 5,
+   "fullDecades": 0,
+   "allDecades": 2,
+   "decade": {
+    "1940": 0,
+    "1950": 0,
+    "1960": 7,
+    "1970": 27,
+    "1980": 109
+   },
+   "diamondHands": 1972,
+   "mintKeeper": 478,
+   "centsTotal": 10000
+  }
+ },
+ "+8657": {
+  "add": [
+   8657
+  ],
+  "rendered": {
+   "set_badges": [
+    "Contamination Set (3/12)"
+   ],
+   "meta_badges": [
+    "Diamond Hands",
+    "Dime Club",
+    "Years 1963-1981",
+    "Patina count 10"
+   ],
+   "trait_tags": [
+    "Contaminated Obscure Adhesive x 1",
+    "Contaminated Paint x 1",
+    "Contaminated Speckles x 1",
+    "White Drips And Streaks x 1"
+   ]
+  },
+  "years": [
+   1963,
+   1981
+  ],
+  "count": 13,
+  "sets": {
+   "patina_level": null,
+   "spectrum": false,
+   "full_spectrum": false,
+   "chronicle": false,
+   "full_mint": false,
+   "full_mint_cent_ids": [
+    3010,
+    4599
+   ],
+   "contamination_types": 3,
+   "decade_sets": [],
+   "three_decades": false,
+   "full_decades": false,
+   "all_decades": false
+  },
+  "agg": {
+   "patina": 115,
+   "sig": 29,
+   "fulls": 2,
+   "spectrum": 16,
+   "fullSpectrum": 2,
+   "chronicle": 54,
+   "fullMint": 28,
+   "contaminationSet": 59,
+   "contaminationHoard": 12,
+   "contaminationFull": 3,
+   "threeDecades": 5,
+   "fullDecades": 0,
+   "allDecades": 2,
+   "decade": {
+    "1940": 0,
+    "1950": 0,
+    "1960": 7,
+    "1970": 27,
+    "1980": 109
+   },
+   "diamondHands": 1971,
+   "mintKeeper": 478,
+   "centsTotal": 10000
+  }
+ },
+ "+8820": {
+  "add": [
+   8820
+  ],
+  "rendered": {
+   "set_badges": [
+    "Patina Set",
+    "Contamination Set (3/12)"
+   ],
+   "meta_badges": [
+    "Diamond Hands",
+    "Dime Club",
+    "Years 1963-1981",
+    "Patina count 11"
+   ],
+   "trait_tags": [
+    "Contaminated Obscure Adhesive x 1",
+    "Contaminated Paint x 1",
+    "Contaminated Speckles x 1",
+    "White Drips And Streaks x 1"
+   ]
+  },
+  "years": [
+   1963,
+   1981
+  ],
+  "count": 13,
+  "sets": {
+   "patina_level": "notable",
+   "spectrum": false,
+   "full_spectrum": false,
+   "chronicle": false,
+   "full_mint": false,
+   "full_mint_cent_ids": [
+    3010,
+    4599
+   ],
+   "contamination_types": 3,
+   "decade_sets": [],
+   "three_decades": false,
+   "full_decades": false,
+   "all_decades": false
+  },
+  "agg": {
+   "patina": 116,
+   "sig": 29,
+   "fulls": 2,
+   "spectrum": 16,
+   "fullSpectrum": 2,
+   "chronicle": 54,
+   "fullMint": 28,
+   "contaminationSet": 59,
+   "contaminationHoard": 12,
+   "contaminationFull": 3,
+   "threeDecades": 5,
+   "fullDecades": 0,
+   "allDecades": 2,
+   "decade": {
+    "1940": 0,
+    "1950": 0,
+    "1960": 7,
+    "1970": 27,
+    "1980": 109
+   },
+   "diamondHands": 1972,
+   "mintKeeper": 478,
+   "centsTotal": 10000
+  }
+ },
+ "+6451": {
+  "add": [
+   6451
+  ],
+  "rendered": {
+   "set_badges": [
+    "Contamination Set (3/12)"
+   ],
+   "meta_badges": [
+    "Diamond Hands",
+    "Dime Club",
+    "Years 1963-1981",
+    "Patina count 10"
+   ],
+   "trait_tags": [
+    "Contaminated Obscure Adhesive x 1",
+    "Contaminated Paint x 1",
+    "Contaminated Speckles x 1",
+    "White Drips And Streaks x 1"
+   ]
+  },
+  "years": [
+   1963,
+   1981
+  ],
+  "count": 13,
+  "sets": {
+   "patina_level": null,
+   "spectrum": false,
+   "full_spectrum": false,
+   "chronicle": false,
+   "full_mint": false,
+   "full_mint_cent_ids": [
+    3010,
+    4599
+   ],
+   "contamination_types": 3,
+   "decade_sets": [],
+   "three_decades": false,
+   "full_decades": false,
+   "all_decades": false
+  },
+  "agg": {
+   "patina": 115,
+   "sig": 29,
+   "fulls": 2,
+   "spectrum": 16,
+   "fullSpectrum": 2,
+   "chronicle": 54,
+   "fullMint": 28,
+   "contaminationSet": 59,
+   "contaminationHoard": 12,
+   "contaminationFull": 3,
+   "threeDecades": 5,
+   "fullDecades": 0,
+   "allDecades": 2,
+   "decade": {
+    "1940": 0,
+    "1950": 0,
+    "1960": 7,
+    "1970": 27,
+    "1980": 109
+   },
+   "diamondHands": 1972,
+   "mintKeeper": 478,
+   "centsTotal": 10000
+  }
+ },
+ "+6875": {
+  "add": [
+   6875
+  ],
+  "rendered": {
+   "set_badges": [
+    "Contamination Set (3/12)"
+   ],
+   "meta_badges": [
+    "Diamond Hands",
+    "Dime Club",
+    "Years 1963-1981",
+    "Patina count 9"
+   ],
+   "trait_tags": [
+    "Contaminated Obscure Adhesive x 1",
+    "Heavily Abraded x 1",
+    "Contaminated Paint x 1",
+    "Contaminated Speckles x 1"
+   ]
+  },
+  "years": [
+   1963,
+   1981
+  ],
+  "count": 13,
+  "sets": {
+   "patina_level": null,
+   "spectrum": false,
+   "full_spectrum": false,
+   "chronicle": false,
+   "full_mint": false,
+   "full_mint_cent_ids": [
+    3010,
+    4599
+   ],
+   "contamination_types": 3,
+   "decade_sets": [],
+   "three_decades": false,
+   "full_decades": false,
+   "all_decades": false
+  },
+  "agg": {
+   "patina": 115,
+   "sig": 29,
+   "fulls": 2,
+   "spectrum": 16,
+   "fullSpectrum": 2,
+   "chronicle": 54,
+   "fullMint": 28,
+   "contaminationSet": 59,
+   "contaminationHoard": 12,
+   "contaminationFull": 3,
+   "threeDecades": 5,
+   "fullDecades": 0,
+   "allDecades": 2,
+   "decade": {
+    "1940": 0,
+    "1950": 0,
+    "1960": 7,
+    "1970": 27,
+    "1980": 109
+   },
+   "diamondHands": 1972,
+   "mintKeeper": 478,
+   "centsTotal": 10000
+  }
+ },
+ "+6782": {
+  "add": [
+   6782
+  ],
+  "rendered": {
+   "set_badges": [
+    "Contamination Set (3/12)"
+   ],
+   "meta_badges": [
+    "Diamond Hands",
+    "Dime Club",
+    "Years 1963-1981",
+    "Patina count 11",
+    "1969 1"
+   ],
+   "trait_tags": [
+    "Contaminated Obscure Adhesive x 1",
+    "Contaminated Paint x 1",
+    "Contaminated Speckles x 1",
+    "White Drips And Streaks x 1"
+   ]
+  },
+  "years": [
+   1963,
+   1981
+  ],
+  "count": 13,
+  "sets": {
+   "patina_level": null,
+   "spectrum": false,
+   "full_spectrum": false,
+   "chronicle": false,
+   "full_mint": false,
+   "full_mint_cent_ids": [
+    3010,
+    4599,
+    6782
+   ],
+   "contamination_types": 3,
+   "decade_sets": [],
+   "three_decades": false,
+   "full_decades": false,
+   "all_decades": false
+  },
+  "agg": {
+   "patina": 115,
+   "sig": 29,
+   "fulls": 2,
+   "spectrum": 16,
+   "fullSpectrum": 2,
+   "chronicle": 54,
+   "fullMint": 28,
+   "contaminationSet": 59,
+   "contaminationHoard": 12,
+   "contaminationFull": 3,
+   "threeDecades": 5,
+   "fullDecades": 0,
+   "allDecades": 2,
+   "decade": {
+    "1940": 0,
+    "1950": 0,
+    "1960": 7,
+    "1970": 27,
+    "1980": 109
+   },
+   "diamondHands": 1972,
+   "mintKeeper": 478,
+   "centsTotal": 10000
+  }
+ },
+ "+5888": {
+  "add": [
+   5888
+  ],
+  "rendered": {
+   "set_badges": [
+    "Contamination Set (3/12)"
+   ],
+   "meta_badges": [
+    "Diamond Hands",
+    "Dime Club",
+    "Years 1956-1981",
+    "Patina count 10",
+    "Wheat 1"
+   ],
+   "trait_tags": [
+    "Contaminated Obscure Adhesive x 1",
+    "Contaminated Paint x 1",
+    "Contaminated Speckles x 1",
+    "White Drips And Streaks x 1"
+   ]
+  },
+  "years": [
+   1956,
+   1981
+  ],
+  "count": 13,
+  "sets": {
+   "patina_level": null,
+   "spectrum": false,
+   "full_spectrum": false,
+   "chronicle": false,
+   "full_mint": false,
+   "full_mint_cent_ids": [
+    3010,
+    4599,
+    5888
+   ],
+   "contamination_types": 3,
+   "decade_sets": [],
+   "three_decades": false,
+   "full_decades": false,
+   "all_decades": false
+  },
+  "agg": {
+   "patina": 115,
+   "sig": 29,
+   "fulls": 2,
+   "spectrum": 16,
+   "fullSpectrum": 2,
+   "chronicle": 54,
+   "fullMint": 28,
+   "contaminationSet": 59,
+   "contaminationHoard": 12,
+   "contaminationFull": 3,
+   "threeDecades": 5,
+   "fullDecades": 0,
+   "allDecades": 2,
+   "decade": {
+    "1940": 0,
+    "1950": 0,
+    "1960": 7,
+    "1970": 27,
+    "1980": 109
+   },
+   "diamondHands": 1972,
+   "mintKeeper": 478,
+   "centsTotal": 10000
+  }
+ },
+ "+all6": {
+  "add": [
+   8657,
+   8820,
+   6451,
+   6875,
+   6782,
+   5888
+  ],
+  "rendered": {
+   "set_badges": [
+    "Patina Set",
+    "Contamination Set (3/12)"
+   ],
+   "meta_badges": [
+    "Diamond Hands",
+    "Dime Club",
+    "Years 1956-1981",
+    "Patina count 16",
+    "1969 1",
+    "Wheat 1"
+   ],
+   "trait_tags": [
+    "Contaminated Obscure Adhesive x 1",
+    "Heavily Abraded x 1",
+    "Contaminated Paint x 1",
+    "Contaminated Speckles x 1"
+   ]
+  },
+  "years": [
+   1956,
+   1981
+  ],
+  "count": 18,
+  "sets": {
+   "patina_level": "notable",
+   "spectrum": false,
+   "full_spectrum": false,
+   "chronicle": false,
+   "full_mint": false,
+   "full_mint_cent_ids": [
+    3010,
+    4599,
+    5888,
+    6782
+   ],
+   "contamination_types": 3,
+   "decade_sets": [],
+   "three_decades": false,
+   "full_decades": false,
+   "all_decades": false
+  },
+  "agg": {
+   "patina": 116,
+   "sig": 29,
+   "fulls": 2,
+   "spectrum": 16,
+   "fullSpectrum": 2,
+   "chronicle": 54,
+   "fullMint": 28,
+   "contaminationSet": 59,
+   "contaminationHoard": 12,
+   "contaminationFull": 3,
+   "threeDecades": 5,
+   "fullDecades": 0,
+   "allDecades": 2,
+   "decade": {
+    "1940": 0,
+    "1950": 0,
+    "1960": 7,
+    "1970": 27,
+    "1980": 109
+   },
+   "diamondHands": 1971,
+   "mintKeeper": 478,
+   "centsTotal": 10000
+  }
+ },
+ "+1971": {
+  "add": [
+   149
+  ],
+  "rendered": {
+   "set_badges": [
+    "Contamination Set (3/12)"
+   ],
+   "meta_badges": [
+    "Diamond Hands",
+    "Dime Club",
+    "Years 1963-1981",
+    "Patina count 9",
+    "1971 1"
+   ],
+   "trait_tags": [
+    "Contaminated Obscure Adhesive x 1",
+    "Contaminated Paint x 1",
+    "Contaminated Speckles x 1",
+    "White Drips And Streaks x 1"
+   ]
+  },
+  "years": [
+   1963,
+   1981
+  ],
+  "count": 13,
+  "sets": {
+   "patina_level": null,
+   "spectrum": false,
+   "full_spectrum": false,
+   "chronicle": false,
+   "full_mint": false,
+   "full_mint_cent_ids": [
+    149,
+    3010,
+    4599
+   ],
+   "contamination_types": 3,
+   "decade_sets": [],
+   "three_decades": false,
+   "full_decades": false,
+   "all_decades": false
+  },
+  "agg": {
+   "patina": 115,
+   "sig": 29,
+   "fulls": 2,
+   "spectrum": 16,
+   "fullSpectrum": 2,
+   "chronicle": 54,
+   "fullMint": 28,
+   "contaminationSet": 59,
+   "contaminationHoard": 12,
+   "contaminationFull": 3,
+   "threeDecades": 5,
+   "fullDecades": 0,
+   "allDecades": 2,
+   "decade": {
+    "1940": 0,
+    "1950": 0,
+    "1960": 7,
+    "1970": 27,
+    "1980": 109
+   },
+   "diamondHands": 1972,
+   "mintKeeper": 478,
+   "centsTotal": 10000
+  }
+ },
+ "+1971+1982": {
+  "add": [
+   149,
+   66
+  ],
+  "rendered": {
+   "set_badges": [
+    "Chronicle Set",
+    "Contamination Set (3/12)"
+   ],
+   "meta_badges": [
+    "Diamond Hands",
+    "Dime Club",
+    "Years 1963-1982",
+    "Patina count 9",
+    "1971 1"
+   ],
+   "trait_tags": [
+    "Contaminated Obscure Adhesive x 1",
+    "Contaminated Paint x 1",
+    "Contaminated Speckles x 1",
+    "White Drips And Streaks x 1"
+   ]
+  },
+  "years": [
+   1963,
+   1982
+  ],
+  "count": 14,
+  "sets": {
+   "patina_level": null,
+   "spectrum": false,
+   "full_spectrum": false,
+   "chronicle": true,
+   "full_mint": false,
+   "full_mint_cent_ids": [
+    66,
+    149,
+    3010,
+    4599
+   ],
+   "contamination_types": 3,
+   "decade_sets": [],
+   "three_decades": false,
+   "full_decades": false,
+   "all_decades": false
+  },
+  "agg": {
+   "patina": 115,
+   "sig": 29,
+   "fulls": 2,
+   "spectrum": 16,
+   "fullSpectrum": 2,
+   "chronicle": 55,
+   "fullMint": 28,
+   "contaminationSet": 59,
+   "contaminationHoard": 12,
+   "contaminationFull": 3,
+   "threeDecades": 5,
+   "fullDecades": 0,
+   "allDecades": 2,
+   "decade": {
+    "1940": 0,
+    "1950": 0,
+    "1960": 7,
+    "1970": 27,
+    "1980": 109
+   },
+   "diamondHands": 1972,
+   "mintKeeper": 478,
+   "centsTotal": 10000
+  }
+ },
+ "+S": {
+  "add": [
+   2
+  ],
+  "rendered": {
+   "set_badges": [
+    "Full Mint Set",
+    "Contamination Set (3/12)"
+   ],
+   "meta_badges": [
+    "Diamond Hands",
+    "Dime Club",
+    "Years 1963-1981",
+    "Patina count 9"
+   ],
+   "trait_tags": [
+    "Contaminated Obscure Adhesive x 1",
+    "Contaminated Paint x 1",
+    "Contaminated Speckles x 1",
+    "White Drips And Streaks x 1"
+   ]
+  },
+  "years": [
+   1963,
+   1981
+  ],
+  "count": 13,
+  "sets": {
+   "patina_level": null,
+   "spectrum": false,
+   "full_spectrum": false,
+   "chronicle": false,
+   "full_mint": true,
+   "full_mint_cent_ids": [
+    2,
+    3010,
+    4599
+   ],
+   "contamination_types": 3,
+   "decade_sets": [],
+   "three_decades": false,
+   "full_decades": false,
+   "all_decades": false
+  },
+  "agg": {
+   "patina": 115,
+   "sig": 29,
+   "fulls": 2,
+   "spectrum": 16,
+   "fullSpectrum": 2,
+   "chronicle": 54,
+   "fullMint": 28,
+   "contaminationSet": 59,
+   "contaminationHoard": 12,
+   "contaminationFull": 3,
+   "threeDecades": 5,
+   "fullDecades": 0,
+   "allDecades": 2,
+   "decade": {
+    "1940": 0,
+    "1950": 0,
+    "1960": 7,
+    "1970": 27,
+    "1980": 109
+   },
+   "diamondHands": 1972,
+   "mintKeeper": 478,
+   "centsTotal": 10000
+  }
+ },
+ "+6451+1982": {
+  "add": [
+   6451,
+   66
+  ],
+  "rendered": {
+   "set_badges": [
+    "Contamination Set (3/12)",
+    "1980s Set"
+   ],
+   "meta_badges": [
+    "Diamond Hands",
+    "Dime Club",
+    "Years 1963-1982",
+    "Patina count 10"
+   ],
+   "trait_tags": [
+    "Contaminated Obscure Adhesive x 1",
+    "Contaminated Paint x 1",
+    "Contaminated Speckles x 1",
+    "White Drips And Streaks x 1"
+   ]
+  },
+  "years": [
+   1963,
+   1982
+  ],
+  "count": 14,
+  "sets": {
+   "patina_level": null,
+   "spectrum": false,
+   "full_spectrum": false,
+   "chronicle": false,
+   "full_mint": false,
+   "full_mint_cent_ids": [
+    66,
+    3010,
+    4599
+   ],
+   "contamination_types": 3,
+   "decade_sets": [
+    1980
+   ],
+   "three_decades": false,
+   "full_decades": false,
+   "all_decades": false
+  },
+  "agg": {
+   "patina": 115,
+   "sig": 29,
+   "fulls": 2,
+   "spectrum": 16,
+   "fullSpectrum": 2,
+   "chronicle": 54,
+   "fullMint": 28,
+   "contaminationSet": 59,
+   "contaminationHoard": 12,
+   "contaminationFull": 3,
+   "threeDecades": 5,
+   "fullDecades": 0,
+   "allDecades": 2,
+   "decade": {
+    "1940": 0,
+    "1950": 0,
+    "1960": 7,
+    "1970": 27,
+    "1980": 110
+   },
+   "diamondHands": 1972,
+   "mintKeeper": 478,
+   "centsTotal": 10000
+  }
+ },
+ "+1982": {
+  "add": [
+   66
+  ],
+  "rendered": {
+   "set_badges": [
+    "Contamination Set (3/12)"
+   ],
+   "meta_badges": [
+    "Diamond Hands",
+    "Dime Club",
+    "Years 1963-1982",
+    "Patina count 9"
+   ],
+   "trait_tags": [
+    "Contaminated Obscure Adhesive x 1",
+    "Contaminated Paint x 1",
+    "Contaminated Speckles x 1",
+    "White Drips And Streaks x 1"
+   ]
+  },
+  "years": [
+   1963,
+   1982
+  ],
+  "count": 13,
+  "sets": {
+   "patina_level": null,
+   "spectrum": false,
+   "full_spectrum": false,
+   "chronicle": false,
+   "full_mint": false,
+   "full_mint_cent_ids": [
+    66,
+    3010,
+    4599
+   ],
+   "contamination_types": 3,
+   "decade_sets": [],
+   "three_decades": false,
+   "full_decades": false,
+   "all_decades": false
+  },
+  "agg": {
+   "patina": 115,
+   "sig": 29,
+   "fulls": 2,
+   "spectrum": 16,
+   "fullSpectrum": 2,
+   "chronicle": 54,
+   "fullMint": 28,
+   "contaminationSet": 59,
+   "contaminationHoard": 12,
+   "contaminationFull": 3,
+   "threeDecades": 5,
+   "fullDecades": 0,
+   "allDecades": 2,
+   "decade": {
+    "1940": 0,
+    "1950": 0,
+    "1960": 7,
+    "1970": 27,
+    "1980": 109
+   },
+   "diamondHands": 1972,
+   "mintKeeper": 478,
+   "centsTotal": 10000
+  }
+ },
+ "+all6+1971": {
+  "add": [
+   8657,
+   8820,
+   6451,
+   6875,
+   6782,
+   5888,
+   149
+  ],
+  "rendered": {
+   "set_badges": [
+    "Patina Set",
+    "Contamination Set (3/12)"
+   ],
+   "meta_badges": [
+    "Diamond Hands",
+    "Dime Club",
+    "Years 1956-1981",
+    "Patina count 16",
+    "1971 1",
+    "1969 1",
+    "Wheat 1"
+   ],
+   "trait_tags": [
+    "Contaminated Obscure Adhesive x 1",
+    "Heavily Abraded x 1",
+    "Contaminated Paint x 1",
+    "Contaminated Speckles x 1"
+   ]
+  },
+  "years": [
+   1956,
+   1981
+  ],
+  "count": 19,
+  "sets": {
+   "patina_level": "notable",
+   "spectrum": false,
+   "full_spectrum": false,
+   "chronicle": false,
+   "full_mint": false,
+   "full_mint_cent_ids": [
+    149,
+    3010,
+    4599,
+    5888,
+    6782
+   ],
+   "contamination_types": 3,
+   "decade_sets": [],
+   "three_decades": false,
+   "full_decades": false,
+   "all_decades": false
+  },
+  "agg": {
+   "patina": 116,
+   "sig": 29,
+   "fulls": 2,
+   "spectrum": 16,
+   "fullSpectrum": 2,
+   "chronicle": 54,
+   "fullMint": 28,
+   "contaminationSet": 59,
+   "contaminationHoard": 12,
+   "contaminationFull": 3,
+   "threeDecades": 5,
+   "fullDecades": 0,
+   "allDecades": 2,
+   "decade": {
+    "1940": 0,
+    "1950": 0,
+    "1960": 7,
+    "1970": 27,
+    "1980": 109
+   },
+   "diamondHands": 1971,
+   "mintKeeper": 478,
+   "centsTotal": 10000
+  }
+ }
+}
