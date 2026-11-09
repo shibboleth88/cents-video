@@ -4,6 +4,8 @@ import { EASE, useEntrance, useShotFade } from "./motion";
 import { COLOR, SAFE, TYPE } from "./tokens";
 import { SafeText } from "./Safe";
 import { findPhrase, type Alignment } from "../lib/timeline";
+import { CentImage, MAX_CENT_PX, MIN_TRAIT_PX, fitGrid } from "./grids";
+import { Imagery } from "./Safe";
 
 /**
  * Charts for Collector Wall episodes, drawn from measured data in the timeline.
@@ -137,5 +139,97 @@ const hex = (c: string): number[] => {
   return [parseInt(m[1]!, 16), parseInt(m[2]!, 16), parseInt(m[3]!, 16)];
 };
 
-export const WALLCHARTS = { DotColumns } as const;
+
+/**
+ * `CentFilter`: every Cent in a measured pool, narrowed step by step as the narration
+ * names each condition. A step with `keep` dims the Cents that fail it; with `regroup`
+ * the survivors also gather, larger, into a grid of their own, and the dimmed ones go.
+ * Each step's `keep` must be drawn from the Cents still shown, so the narrowing can only
+ * narrow. The readout band shows the step's number, which is checked against `keep`.
+ */
+type FilterStep = { at_phrase: string; keep?: number[]; regroup?: boolean; readout: string; caption: string };
+type Spot = { x: number; y: number; s: number; o: number };
+
+export const CentFilter: React.FC<Anchored & {
+  title: string; subtitle?: string; pool: number[]; steps: FilterStep[]; mark?: { n: number; at_phrase: string };
+}> = (props) => {
+  const { title, subtitle, pool, steps, mark } = props;
+  const frame = useCurrentFrame();
+  const fade = useShotFade();
+  const at = useAt(props);
+  const head = useEntrance("rise", 0);
+  if (new Set(pool).size !== pool.length) throw new Error("CentFilter: the pool repeats a Cent");
+  const W = X1 - X0, H = STAGE.y1 - STAGE.y0;
+  const layout = (ns: number[]) => {
+    const g = fitGrid(ns.length, W, H, 0.12);
+    const size = Math.min(MAX_CENT_PX, g.size), step = size + g.gap;
+    const cols = Math.min(ns.length, g.cols), rows = Math.ceil(ns.length / g.cols);
+    const left = X0 + (W - (cols * step - g.gap)) / 2, top = STAGE.y0 + (H - (rows * step - g.gap)) / 2;
+    return new Map(ns.map((n, i) => [n, { x: left + (i % g.cols) * step, y: top + Math.floor(i / g.cols) * step, s: size }]));
+  };
+  const first = layout(pool);
+  const states: Map<number, Spot>[] = [new Map(pool.map((n) => [n, { ...first.get(n)!, o: 1 }]))];
+  const frames = [0];
+  let shown = [...pool];
+  for (const st of steps) {
+    const prev = states[states.length - 1]!;
+    const next = new Map(prev);
+    if (st.keep) {
+      const keep = new Set(st.keep);
+      for (const n of st.keep) if (!shown.includes(n)) throw new Error(`CentFilter: #${n} is not among the Cents still shown`);
+      const kept = pool.filter((n) => keep.has(n));
+      const np = st.regroup ? layout(kept) : null;
+      for (const n of pool) {
+        const q = prev.get(n)!;
+        next.set(n, keep.has(n) ? (np ? { ...np.get(n)!, o: 1 } : q) : { ...q, o: np ? 0 : Math.min(q.o, 0.14) });
+      }
+      shown = kept;
+    }
+    const lit = pool.filter((n) => next.get(n)!.o === 1).length;
+    if (/^\d+$/.test(st.readout) && Number(st.readout) !== lit)
+      throw new Error(`CentFilter: readout ${st.readout} but ${lit} Cents are lit at "${st.at_phrase}"`);
+    states.push(next);
+    frames.push(at(st.at_phrase));
+  }
+  for (let i = 1; i < frames.length; i++)
+    if (frames[i]! < frames[i - 1]!) throw new Error(`CentFilter: "${steps[i - 1]!.at_phrase}" comes before the step above it`);
+  let k = 0;
+  frames.forEach((f, i) => { if (frame >= f) k = i; });
+  const t = k === 0 ? 1 : ease(frame, frames[k]!, 18);
+  const A = states[Math.max(0, k - 1)]!, B = states[k]!;
+  const markT = mark ? ease(frame, at(mark.at_phrase), 12) : 0;
+  return (
+    <div style={{ position: "absolute", inset: 0, opacity: fade }}>
+      <div style={{ position: "absolute", left: X0, top: TITLE.y0, width: X1 - X0, opacity: head.opacity, transform: `translateY(${head.y}px)` }}>
+        <SafeText role="display" fontSize={68} maxLines={1} style={{ fontWeight: 700, letterSpacing: -1 }}>{title}</SafeText>
+        {subtitle ? <SafeText role="body" fontSize={46} maxLines={1} color={COLOR.inkDim}>{subtitle}</SafeText> : null}
+      </div>
+      <Imagery>
+        {pool.map((n, i) => {
+          const a = A.get(n)!, b = B.get(n)!;
+          const x = a.x + (b.x - a.x) * t, y = a.y + (b.y - a.y) * t, sz = a.s + (b.s - a.s) * t, o = a.o + (b.o - a.o) * t;
+          const enter = ease(frame, Math.round((i / pool.length) * 24), 8);
+          if (o * enter <= 0.001) return null;
+          const ring = mark && mark.n === n && markT > 0;
+          return (
+            <div key={n} style={{ position: "absolute", left: x, top: y, width: sz, height: sz, opacity: o * enter,
+                                  transform: `scale(${0.6 + 0.4 * enter})`, borderRadius: "50%",
+                                  boxShadow: ring ? `0 0 0 ${6 * markT}px ${COLOR.bg}, 0 0 0 ${12 * markT}px ${COLOR.accent}, 0 0 ${36 * markT}px ${COLOR.accent}` : "none" }}>
+              <CentImage n={n} size={Math.round(sz)} texture={sz < MIN_TRAIT_PX} />
+            </div>
+          );
+        })}
+      </Imagery>
+      {k > 0 ? (
+        <div key={k} style={{ position: "absolute", left: X0, top: BAND.y0, width: X1 - X0, opacity: ease(frame, frames[k]!, 8) }}>
+          <SafeText role="display" fontSize={84} maxLines={1} color={COLOR.accent} style={{ fontFamily: TYPE.mono, fontWeight: 700 }}>{steps[k - 1]!.readout}</SafeText>
+          <SafeText role="body" fontSize={48} maxLines={1}>{steps[k - 1]!.caption}</SafeText>
+        </div>
+      ) : null}
+    </div>
+  );
+};
+(CentFilter as any).wantsAlignment = true;
+
+export const WALLCHARTS = { DotColumns, CentFilter } as const;
 (DotColumns as any).wantsAlignment = true;

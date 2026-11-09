@@ -463,14 +463,18 @@ export const WallList: React.FC<Anchored & {
  */
 export const WallShot: React.FC<Anchored & {
   src: string; width: number; height: number;
-  moves?: { at_phrase?: string; box: [number, number, number, number]; mark?: boolean }[];
+  /** `focus` dims the picture outside one area (a passage of a quoted post as it is read), easing from the
+   *  previous move's focus; the camera still frames `box`, so a whole text block can stay in view. */
+  moves?: { at_phrase?: string; box: [number, number, number, number]; mark?: boolean; focus?: [number, number, number, number] }[];
+  /** Optional name band above the picture (for a quoted post: who wrote it). The picture then starts below it. */
+  title?: string; subtitle?: string;
 }> = (props) => {
-  const { src, width, height, moves = [] } = props;
+  const { src, width, height, moves = [], title, subtitle } = props;
   const frame = useCurrentFrame();
   const fade = useShotFade();
   const at = useAt(props);
   // Ends where the other shots' content ends, so captions never sit on the white screenshot.
-  const AREA = { x0: 40, x1: 1040, y0: E.y0, y1: BAND.y1 };
+  const AREA = { x0: 40, x1: 1040, y0: title ? STAGE.y0 : E.y0, y1: BAND.y1 };
   const AW = AREA.x1 - AREA.x0, AH = AREA.y1 - AREA.y0;
   const cam = (b: [number, number, number, number]) => {
     const [x0, y0, x1, y1] = b;
@@ -479,9 +483,14 @@ export const WallShot: React.FC<Anchored & {
     const k = Math.min(AW / (x1 - x0), AH / (y1 - y0), 2.6);
     return { k, cx: (x0 + x1) / 2, cy: (y0 + y1) / 2 };
   };
-  const keys = [{ f: 0, box: null as null | number[], mark: false, ...cam([0, 0, width, height]) },
+  for (const m of moves) if (m.focus) {
+    const [x0, y0, x1, y1] = m.focus;
+    if (x0 < m.box[0] || y0 < m.box[1] || x1 > m.box[2] || y1 > m.box[3])
+      throw new Error(`WallShot: focus ${m.focus} is not inside the framed box ${m.box}`);
+  }
+  const keys = [{ f: 0, box: null as null | number[], mark: false, focus: null as null | number[], ...cam([0, 0, width, height]) },
                 ...moves.map((m, i) => ({ f: m.at_phrase ? at(m.at_phrase) : 20 + i * 30, box: m.box as number[],
-                                          mark: !!m.mark, ...cam(m.box) }))];
+                                          mark: !!m.mark, focus: (m.focus ?? null) as null | number[], ...cam(m.box) }))];
   for (let i = 1; i < keys.length; i++)
     if (keys[i]!.f < keys[i - 1]!.f) throw new Error("WallShot: moves are out of spoken order");
   // Hold each framing until the next move's phrase, then ease to it over 18 frames.
@@ -496,13 +505,30 @@ export const WallShot: React.FC<Anchored & {
     mark = b.mark ? { box: b.box!, t: interpolate(frame, [b.f + 14, b.f + 26], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }) } : null;
   }
   const left = AREA.x0 + AW / 2 - c.cx * c.k, top = AREA.y0 + AH / 2 - c.cy * c.k;
+  // The focus of the latest move, eased from the one before (or faded in/out when only one side has one).
+  let focus: null | { box: number[]; o: number } = null;
+  {
+    let j = 0;
+    for (let i = 1; i < keys.length; i++) if (frame >= keys[i]!.f) j = i;
+    const cur = keys[j]!.focus, prev = j ? keys[j - 1]!.focus : null;
+    const t = j ? interpolate(frame, [keys[j]!.f, keys[j]!.f + 18], [0, 1], { extrapolateRight: "clamp", easing: EASE.inOut }) : 1;
+    if (cur && prev) focus = { box: cur.map((v, q) => prev[q]! + (v - prev[q]!) * t), o: 1 };
+    else if (cur) focus = { box: cur, o: t };
+    else if (prev) focus = { box: prev, o: 1 - t };
+  }
   return (
     <div style={{ position: "absolute", inset: 0, opacity: fade }}>
+      {title ? <NameBand title={title} subtitle={subtitle} /> : null}
       <Imagery>
         <div style={{ position: "absolute", left: AREA.x0, top: AREA.y0, width: AW, height: AH, overflow: "hidden",
                       borderRadius: 18 }}>
           <Img src={staticFile(src)} style={{ position: "absolute", left: left - AREA.x0, top: top - AREA.y0,
                                               width: width * c.k, height: height * c.k }} />
+          {focus && focus.o > 0 ? (
+            <div style={{ position: "absolute", left: left - AREA.x0 + focus.box[0]! * c.k, top: top - AREA.y0 + focus.box[1]! * c.k,
+                          width: (focus.box[2]! - focus.box[0]!) * c.k, height: (focus.box[3]! - focus.box[1]!) * c.k,
+                          borderRadius: 12, boxShadow: `0 0 0 4000px rgba(0,0,0,${(0.62 * focus.o).toFixed(3)})` }} />
+          ) : null}
           {mark ? (
             <div style={{ position: "absolute", left: left - AREA.x0 + mark.box[0]! * c.k - 10,
                           top: top - AREA.y0 + mark.box[1]! * c.k - 10,

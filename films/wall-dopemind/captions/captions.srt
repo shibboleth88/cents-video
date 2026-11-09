@@ -1,167 +1,247 @@
 1
-00:00:00,160 --> 00:00:02,680
-This is the Wall of DOPEMIND.
+00:00:00,220 --> 00:00:03,480
+This is the Wall of DOPEMIND. Its signature
 
 2
-00:00:03,160 --> 00:00:04,200
-Its signature Cent,
+00:00:03,640 --> 00:00:07,259
+Cent, number 478, was struck in 1963.
 
 3
-00:00:04,320 --> 00:00:07,812
-number 478, was struck in 1963.
-
-4
-00:00:07,867 --> 00:00:10,240
+00:00:07,740 --> 00:00:09,939
 It carries a significant obsidian patina,
 
-5
-00:00:10,320 --> 00:00:11,839
+4
+00:00:10,220 --> 00:00:11,500
 a notable desert patina,
 
-6
-00:00:11,880 --> 00:00:13,759
+5
+00:00:11,759 --> 00:00:13,500
 and Speckles, small particles
 
-7
-00:00:13,839 --> 00:00:15,439
+6
+00:00:13,539 --> 00:00:14,779
 scattered across the face.
 
-8
-00:00:15,519 --> 00:00:18,079
+7
+00:00:15,279 --> 00:00:17,500
 Notable means clearly visible but local,
 
-9
-00:00:18,120 --> 00:00:21,120
+8
+00:00:17,739 --> 00:00:20,239
 and significant a major presence on the face.
 
-10
-00:00:21,339 --> 00:00:22,559
+9
+00:00:20,760 --> 00:00:22,000
 Speckles is one of the twelve
 
-11
-00:00:22,640 --> 00:00:24,079
+10
+00:00:22,079 --> 00:00:23,280
 types of contamination,
 
-12
-00:00:24,239 --> 00:00:26,239
+11
+00:00:23,600 --> 00:00:25,300
 foreign matter added after minting.
 
+12
+00:00:25,660 --> 00:00:27,420
+Ninety-five Cents carry Speckles.
+
 13
-00:00:26,320 --> 00:00:29,440
-Number 8741, from 1979,
+00:00:27,739 --> 00:00:29,620
+Obsidian is on fewer than one in five
 
 14
-00:00:29,480 --> 00:00:31,440
-one of the three Chronicle Set years,
+00:00:29,739 --> 00:00:32,020
+Cents, but on seventy of these ninety-five.
 
 15
-00:00:31,480 --> 00:00:33,439
-carries two more types at once:
+00:00:32,399 --> 00:00:34,539
+Only five pair Speckles with significant
 
 16
-00:00:33,640 --> 00:00:35,039
-paint, a colored layer,
+00:00:34,600 --> 00:00:37,179
+obsidian, and number 478 is the only
 
 17
-00:00:35,079 --> 00:00:38,479
-and obscure adhesive, thick, cloudy deposits.
+00:00:37,240 --> 00:00:38,560
+one of them with desert as well.
 
 18
-00:00:38,560 --> 00:00:40,240
-Only thirteen of the ten thousand
+00:00:38,960 --> 00:00:41,560
+No other Cent of the 10,000 carries all three.
 
 19
-00:00:40,320 --> 00:00:42,719
-Cents carry two types of contamination.
+00:00:42,060 --> 00:00:44,840
+Number 8741, from 1979,
 
 20
-00:00:42,799 --> 00:00:44,079
-Together, these two Cents
+00:00:45,020 --> 00:00:46,640
+one of the three Chronicle Set years,
 
 21
-00:00:44,159 --> 00:00:45,920
-cover three of the twelve types,
+00:00:46,840 --> 00:00:48,340
+carries two more types at once:
 
 22
-00:00:46,000 --> 00:00:47,759
-which makes a Contamination Set.
+00:00:48,719 --> 00:00:49,960
+paint, a colored layer,
 
 23
-00:00:47,906 --> 00:00:49,679
-As of November 2026,
+00:00:50,299 --> 00:00:53,200
+and obscure adhesive, thick, cloudy deposits.
 
 24
-00:00:49,786 --> 00:00:51,600
-fifty-eight collectors hold one.
+00:00:53,560 --> 00:00:54,799
+Together, these two Cents
 
 25
-00:00:51,652 --> 00:00:53,600
-DOPEMIND holds only two contaminated
+00:00:54,880 --> 00:00:56,420
+cover three of the twelve types,
 
 26
-00:00:53,679 --> 00:00:56,479
-Cents, the fewest of any Wall with this Set.
+00:00:56,539 --> 00:00:58,020
+which makes a Contamination Set.
 
 27
-00:00:56,552 --> 00:01:00,692
-The Wall holds twelve Cents, from 1963 to 1981,
+00:00:58,340 --> 00:00:59,859
+As of November 2026,
 
 28
-00:01:00,746 --> 00:01:02,079
-which puts it in the Dime Club,
+00:01:00,079 --> 00:01:01,619
+fifty-eight collectors hold one.
 
 29
-00:01:02,159 --> 00:01:04,000
-for ten to twenty-four Cents.
+00:01:02,000 --> 00:01:03,899
+DOPEMIND holds only two contaminated
 
 30
-00:01:04,079 --> 00:01:05,519
-Two of them carry a D mint
+00:01:03,979 --> 00:01:06,340
+Cents, the fewest of any Wall with this Set.
 
 31
-00:01:05,599 --> 00:01:07,920
-mark, for Denver, from 1963
+00:01:06,640 --> 00:01:08,620
+Only thirteen of the 10,000 Cents
 
 32
-00:01:08,000 --> 00:01:09,546
-and 1974.
+00:01:08,719 --> 00:01:10,260
+carry two types of contamination
 
 33
-00:01:09,572 --> 00:01:10,719
-The Wall holds both years
+00:01:10,299 --> 00:01:13,099
+at once, and number 8741 is one of them.
 
 34
-00:01:10,879 --> 00:01:12,319
-without a mint mark as well.
+00:01:13,560 --> 00:01:17,359
+The Wall holds twelve Cents, from 1963 to 1981,
 
 35
-00:01:12,540 --> 00:01:16,079
-Number 3396, from 1976, carries white
+00:01:17,540 --> 00:01:18,900
+which puts it in the Dime Club,
 
 36
-00:01:16,120 --> 00:01:19,319
-drips and streaks, pale runs across the patina.
+00:01:19,040 --> 00:01:20,540
+for ten to twenty-four Cents.
 
 37
-00:01:19,359 --> 00:01:21,046
-Eighty-two Cents carry them.
+00:01:20,920 --> 00:01:22,319
+Two of them carry a D mint
 
 38
-00:01:21,120 --> 00:01:23,227
-And the Wall carries Diamond Hands:
+00:01:22,420 --> 00:01:24,640
+mark, for Denver, from 1963
 
 39
-00:01:23,253 --> 00:01:24,799
-it has held its position for at least
+00:01:24,659 --> 00:01:25,780
+and 1974.
 
 40
-00:01:24,879 --> 00:01:27,040
-a year, with little to no selling.
+00:01:26,159 --> 00:01:27,280
+The Wall holds both years
 
 41
-00:01:27,332 --> 00:01:28,480
-Find all of the Collector Walls
+00:01:27,319 --> 00:01:28,540
+without a mint mark as well.
 
 42
-00:01:28,599 --> 00:01:30,799
+00:01:28,920 --> 00:01:32,459
+Number 3396, from 1976, carries white
+
+43
+00:01:32,560 --> 00:01:35,319
+drips and streaks, pale runs across the patina.
+
+44
+00:01:35,700 --> 00:01:37,120
+Eighty-two Cents carry them.
+
+45
+00:01:37,500 --> 00:01:39,200
+And the Wall carries Diamond Hands:
+
+46
+00:01:39,519 --> 00:01:41,099
+it has held its position for at least
+
+47
+00:01:41,159 --> 00:01:43,700
+a year, with little to no selling. DOPEMIND
+
+48
+00:01:43,739 --> 00:01:45,180
+has also written about CENTS:
+
+49
+00:01:45,640 --> 00:01:46,980
+"Mass-produced objects become
+
+50
+00:01:47,040 --> 00:01:48,359
+unique through circulation.
+
+51
+00:01:48,739 --> 00:01:50,640
+Meaning doesn't come from rarity alone.
+
+52
+00:01:50,879 --> 00:01:52,040
+It emerges from time,
+
+53
+00:01:52,299 --> 00:01:54,260
+wear, and accumulated human use.
+
+54
+00:01:54,680 --> 00:01:56,120
+Value is not invented.
+
+55
+00:01:56,400 --> 00:01:58,000
+It is lived into existence."
+
+56
+00:01:58,579 --> 00:02:01,359
+And: "Bitcoin was the defining conceptual
+
+57
+00:02:01,500 --> 00:02:02,859
+artwork of the networked era,
+
+58
+00:02:03,299 --> 00:02:05,959
+authored by cypherpunks, executed in code.
+
+59
+00:02:06,500 --> 00:02:08,060
+CENTS answers it materially,
+
+60
+00:02:08,520 --> 00:02:10,479
+fixing that abstraction into history."
+
+61
+00:02:11,060 --> 00:02:12,580
+Find all of the Collector Walls
+
+62
+00:02:12,620 --> 00:02:14,840
 on cents.vision under Collectors.
