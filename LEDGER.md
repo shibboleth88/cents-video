@@ -150,6 +150,18 @@ them was reasonable.
   over the whole project after any edit to `src/style/`, not a render of one
   film.
 
+- **An allowed domain is not a reachable site.** x.com was added to the
+  environment for DOPEMIND's posts (2026-11-09). His profile and single-post
+  pages loaded, but every image and video lives on `pbs.twimg.com` and
+  `video.twimg.com`, which the proxy still refused (CONNECT 403). Search and the
+  media tab answered **HTTP 200**, and the final URL was the login wall. So the
+  domain "worked" by the homepage test and delivered none of what was needed.
+  *Separating observation:* before calling a site reachable, fetch one deep page
+  (search, an archive listing) and one real media file, and read the final URL
+  after redirects, not the status code. Possibly bitten before: Medium needed
+  `miro.medium.com` for its images (2026-10-25). Record in
+  `/mnt/project-files/collector-wall/dopemind-x/README.md`.
+
 ## Refuted — killed by a measurement, do not re-investigate
 
 - *"The left-band safe-area failure is a mispositioned element."* **Refuted** by
