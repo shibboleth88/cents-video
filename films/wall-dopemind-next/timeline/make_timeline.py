@@ -1,13 +1,16 @@
-"""Timeline for "What should DOPEMIND add next?" (themed Collector Wall episode).
+"""Timeline for "What should DOPEMIND add next?", v2: the first film in the "What to
+add next" format (user, 2026-11-09): a collector's own question, the real Discord
+screenshots read in zoomed sections, then what is listed and what is interesting
+about each suggested Cent.
 
-Every figure is recomputed here from the dated snapshot and checked before it is
+Every figure is recomputed here from the dated snapshots and checked before it is
 written, so a stale number refuses instead of rendering:
 
     python3 -I films/wall-dopemind-next/timeline/make_timeline.py   (from the repo root)
 
-Snapshot: /mnt/project-files/collectors/snapshots/2026-11-09/ (cents.vision, fetched
-2026-11-09 15:56Z). What each suggestion would add to the card was measured by
-replaying collectors.html with the Cent moved onto the Wall (see README).
+Snapshots: /mnt/project-files/collectors/snapshots/2026-11-09/ (cents.vision, fetched
+2026-11-09 15:56Z) and its listings/listings_redacted.json (GET /api/listings,
+18:52Z, prices and addresses removed). v1's timeline is make_timeline_v1.py.
 """
 import collections, json, pathlib, sys
 
@@ -15,7 +18,9 @@ F = pathlib.Path(__file__).resolve().parents[1]
 SNAP = pathlib.Path("/mnt/project-files/collectors/snapshots/2026-11-09")
 m = json.load(open(SNAP / "raw/merged-new2.json"))
 rp = json.load(open(SNAP / "replay.json"))
+lst = json.load(open(SNAP / "listings/listings_redacted.json"))
 al = json.load(open(F / "script/alignment.json"))
+sims = json.load(open(F / "data/sim/sims.json"))
 wall = {w["name"]: w for w in rp["claimed"]}
 D, CEN = wall["DOPEMIND"], wall["centoshi"]
 
@@ -24,181 +29,249 @@ def need(cond, msg):
 
 yr = lambda n: m[str(n)]["year"]
 mint = lambda n: m[str(n)]["mint_mark"]
+traits = lambda n: {k for k, v in m[str(n)].items() if v is True}
 years = collections.Counter(c["year"] for c in m.values())
-PATINA = ("verdigris", "obsidian", "red", "desert")
-pat = lambda n: {p for p in PATINA for k, v in m[str(n)].items() if v is True and k.endswith("_" + p)}
+pool = lambda *ts: sorted(int(n) for n, c in m.items() if all(c.get(t) is True for t in ts))
+VISUAL = {"ghost", "faceless", "vandalized", "assassin", "fingerprint", "striated", "lustrous", "wheat"}  # flags that are traits too
 
-# --- the Wall as narrated -----------------------------------------------------
-need(D["count"] == 12 and D["years"] == [1963, 1981] and D["club"] == "Dime Club", "count/span/club changed")
-need(D["signature"] == 478 and yr(478) == 1963, "signature changed")
-patina_cents = [n for n in D["cent_ids"] if pat(n)]
-need(len(patina_cents) == 8, f"patina Cents now {len(patina_cents)}")
-need(set().union(*(pat(n) for n in D["cent_ids"])) == {"verdigris", "obsidian", "desert"}, "patinas held changed")
-need(D["count1969"] == 0 and D["count1971"] == 0 and D["wheat_count"] == 0, "1969/1971/wheat no longer absent")
-need(1979 in {yr(n) for n in D["cent_ids"]} and 8741 in D["cent_ids"] and yr(8741) == 1979, "the Wall's 1979 changed")
-need(2064 in D["cent_ids"] and yr(2064) == 1981, "the Wall's 1981 changed")
-for n, p in ((951, "verdigris"), (6935, "obsidian"), (3396, "desert")):
-    need(n in D["cent_ids"] and p in pat(n), f"#{n} no longer {p} on the Wall")
-
-# --- centoshi and 1971 ------------------------------------------------------------
+# --- the Wall and centoshi, as narrated -----------------------------------------
+need(D["count"] == 12 and D["years"] == [1963, 1981], "DOPEMIND's count or span changed")
+need(D["count1971"] == 0 and D["count1969"] == 0 and D["wheat_count"] == 0, "the Wall now holds a 1971, a 1969 or a wheat penny")
 c71 = [n for n in CEN["cent_ids"] if yr(n) == 1971]
-need(len(c71) == 16 and CEN["count1971"] == 16, "centoshi's 1971 count changed")
-# "more than any other collector": every Wall (groups merged), the artist wallet excluded
+need(len(c71) == 16, "centoshi's 1971 count changed")
 wi = json.load(open(SNAP / "raw/wallet_index_cents.json")); wg = json.load(open(SNAP / "raw/wallet-groups.json"))
 sec = {s: p for p, ss in wg.items() for s in ss}
 walls = collections.defaultdict(list)
 for w, cs in wi.items(): walls[sec.get(w, w)] += cs
-artist = wall["Rutherford Chang"]["wallet"]
+artist = wall["Rutherford Chang"]["wallet"]          # the artist wallet is not a collector (brief §2)
 best_other = max(sum(yr(c) == 1971 for c in cs) for w, cs in walls.items() if w not in (artist, CEN["wallet"]))
 need(best_other < 16, f"another collector holds {best_other} 1971 Cents")
 
-# --- Daidatep's six ----------------------------------------------------------------
+# --- listings, 9 November 2026 ------------------------------------------------------
+need(lst["fetched_at"].startswith("2026-11-09"), "listings snapshot is not from 9 November 2026")
+listed = {r["cent"] for r in lst["listings"]}
+need(all("price" not in k.lower() and "address" not in k.lower() for r in lst["listings"] for k in r), "listings file carries prices or addresses")
+L71 = sorted(n for n in listed if yr(n) == 1971)
+need(L71 == [2779, 5298, 8556], f"listed 1971s are now {L71}")
+need(years[1971] == 362, "1971 count changed")
 PICKS = [8657, 8820, 6451, 6875, 6782, 5888]
-need(yr(8657) == 1965 and years[1965] == 90, "1965 count changed")
-need(all(years[y] > 90 for y in range(1960, 1970) if y != 1965), "1965 is no longer the scarcest 1960s year")
-need(yr(8820) == 1972 and "red" in pat(8820), "#8820 not a red 1972")
-need(yr(6451) == 1980, "#6451 not 1980")
-heavy = [n for n, c in m.items() if c.get("heavily_abraded")]
-need(yr(6875) == 1967 and m["6875"].get("heavily_abraded") and len(heavy) == 44, "heavily abraded count changed")
-need(yr(6782) == 1969 and mint(6782) == "D", "#6782 not 1969-D")
-need(yr(5888) == 1956 and mint(5888) == "D", "#5888 not 1956-D")
-held = {c for cs in walls.values() for c in cs}
-need(all(p not in D["cent_ids"] for p in PICKS), "a pick is already on the Wall")
+need(all(p in listed for p in PICKS), "a pick is no longer in the listings snapshot")
+need(all(p not in D["cent_ids"] for p in PICKS + L71), "a Cent shown is already on the Wall")
+
+# --- the three listed 1971s ------------------------------------------------------------
+GD = pool("ghost", "full_desert")
+need(traits(2779) == {"ghost", "full_desert"} and len(GD) == 13 and 2779 in GD, "#2779 / Ghost + Full Desert changed")
+need(mint(8556) == "D" and traits(8556) == {"significant_verdigris"} and m["8556"].get("contaminated") == ["Alien Secretion"], "#8556 changed")
+need(traits(5298) == set() and not m["5298"].get("contaminated"), "#5298 now carries a trait")
+G = ("set_badges", "meta_badges", "trait_tags")
+badges = lambda key: {x for g in G for x in sims[key]["rendered"][g]}
+added = lambda key: badges(key) - badges("baseline")
+need(added("+1971") == {"1971 1"}, "replay: a 1971 (#149 in the replay; the badge goes by year) no longer adds only the 1971 Club badge")
+
+# --- Daidatep's six --------------------------------------------------------------------
+need(yr(8657) == 1965 and traits(8657) == {"notable_desert"}, "#8657 changed")
+need(years[1965] == 90 and all(years[y] > 90 for y in range(1960, 1970) if y != 1965), "1965 is no longer the scarcest 1960s year at 90")
+need(all(c["mint_mark"] in (None, "") for c in m.values() if c["year"] == 1965), "a 1965 Cent now carries a mint mark")
+need(yr(8820) == 1972 and traits(8820) == {"notable_verdigris", "significant_red"} and len(pool("significant_red")) == 183, "#8820 / significant red changed")
+need(yr(6451) == 1980 and traits(6451) == {"significant_obsidian"} and len(pool("significant_obsidian")) == 220, "#6451 / significant obsidian changed")
+need(yr(6875) == 1967 and traits(6875) == {"heavily_abraded"} and len(pool("heavily_abraded")) == 44, "#6875 / heavy abrasion changed")
+need(yr(6782) == 1969 and mint(6782) == "D" and traits(6782) == {"notable_obsidian", "significant_verdigris"}, "#6782 changed")
+need(yr(5888) == 1956 and mint(5888) == "D" and traits(5888) == {"notable_verdigris"}, "#5888 changed")
+Y56 = sorted(int(n) for n, c in m.items() if c["year"] == 1956)
+need(len(Y56) == 28 and sum(mint(n) == "D" for n in Y56) == 18, "1956 counts changed")
+for key, badge in (("+8820", "Patina Set"), ("+6782", "1969 1"), ("+5888", "Wheat 1")):
+    need(badge in added(key), f"replay: {key} no longer adds {badge}")
+
+# Inscription numbers, for the name band (knowledge/data/cents_traits.csv, the trait export).
+import csv
+CSV = {int(r["cent"]): r["inscription_number"] for r in csv.DictReader(open("/mnt/project-files/knowledge/data/cents_traits.csv"))}
+INS = {n: m[str(n)]["inscription_number"] for n in L71 + PICKS}
+for n in INS:   # two sources, both required to agree for every Cent named
+    need(CSV[n] and int(CSV[n]) == INS[n], f"#{n}: inscription numbers disagree ({CSV[n]!r} vs {INS[n]})")
 
 # --- shots ----------------------------------------------------------------------------
-TOTAL = round(al["duration"] * 30)
 H = lambda n: f"hires/{n}.webp"
-CLIP = {"width": 1080, "height": 1920, "frames": 150, "coin": {"cx": 539.5, "cy": 959.0, "d": 775},
-        "credit": "3D render: 3DCENTS by sinvalli", "credit_at_end": True}
-PICKS_T = "Daidatep's picks"
+DS = "assets/dopemind/"
+DATE = lambda n: [0.62, 0.56, 0.87, 0.75]    # date (and mint mark, or the empty place for one): measured on each photo, same place on all nine
+def look(n, moves, reads, **kw):
+    return {"component": "CentLook", "props": {"inscription": INS[n], "n": n, "front": H(n), "moves": moves, "reads": reads, **kw}}
+pick = lambda i: f"Daidatep's pick, {i} of 6"
 
 shots = [
- {"shot_id": "n00_open", "start": {"at_start": True}, "end": {"at_phrase": "is number four seventy-eight"},
-  "purpose": "Showcase opener (series format): the card from frame 0, #478 turning in its slot, Cents and badges lighting in turn; zoom onto the signature Cent.",
-  "component": "WallOpener", "props": {"variant": "showcase", "wall": "dopemind", "show": "card", "until_phrase": "Its signature Cent",
-   "moves": [{"at_phrase": "Its signature Cent", "target": {"cent": 478, "in": "signature"}, "mark": True}],
-   "progress": {"total_frames": TOTAL},
-   "clip": {**CLIP, "src": "3dcents/478-360-30fps-alpha.webm", "alpha": True}}},
- {"shot_id": "n01_sig", "start": {"at_phrase": "is number four seventy-eight"}, "end": {"at_phrase": "In the Numismatists Discord"}, "join_prev": True,
-  "purpose": "The signature Cent #478 on its own, turning (3DCENTS). No still: no cue in this sentence lets the turn face front within 0.6-1.6x.",
-  "component": "WallStandout", "props": {"title": "DOPEMIND", "n": 478, "readout": "1963", "caption": "Obsidian · Desert · Speckles",
-   "clip": {**CLIP, "src": "3dcents/478-360-30fps.mp4", "sync": True, "enter_from": {"cx": 540, "cy": 800, "d": 495}}}},
- {"shot_id": "n02_ask", "start": {"at_phrase": "In the Numismatists Discord"}, "end": {"at_phrase": "As of November twenty"},
-  "purpose": "The question, retyped word for word from the user's screenshot (no avatar). It shows from the start of the shot: on its cue (\"Dopemind asked\") the first render held an empty card for 1.7 s.",
-  "component": "ChatCard", "props": {"title": "Numismatists Discord", "subtitle": "November 2026",
-   "messages": [{"name": "DOPEMIND", "text": "What should I add to expand the set? Wondering about the direction for this collection", "at_phrase": "In the Numismatists Discord"}]}},
- {"shot_id": "n03_count", "start": {"at_phrase": "As of November twenty"}, "end": {"at_phrase": "Eight carry a patina"},
-  "purpose": "All 12 Cents, counting up (snapshot 2026-11-09).",
+ {"shot_id": "s00_question", "start": {"at_start": True}, "end": {"at_phrase": "As of November twenty"},
+  "purpose": "DOPEMIND's question, the user's screenshot. Opens readable on frame 0 (name, time, first sentence), then reads the line in sections.",
+  "component": "ScreenCrop", "props": {"title": "Numismatists Discord", "subtitle": "DOPEMIND · 8 November 2026",
+   "src": DS + "discord_question.png", "width": 1662, "height": 240, "start": [20, 40, 800, 215], "min_scale": 1.5,
+   "moves": [{"at_phrase": "What should I add", "box": [155, 150, 795, 215]},
+             {"at_phrase": "Wondering about the", "box": [790, 150, 1430, 215]},
+             {"at_phrase": "for this collection", "box": [990, 150, 1630, 215]}]}},
+ {"shot_id": "s01_wall", "start": {"at_phrase": "As of November twenty"}, "end": {"at_phrase": "centoshi replied"},
+  "purpose": "The Wall's 12 Cents, counting up (snapshot 2026-11-09).",
   "component": "WallBoard", "props": {"wall": "dopemind", "show": "grid",
-   "moves": [{"at_phrase": "As of November twenty", "until_phrase": "Eight carry a patina", "target": {"grid_end": True}}],
-   "readout": {"at_phrase": "the Wall holds twelve", "count": {"from": 0, "to": 12, "until_phrase": "Cents, from nineteen sixty-three to", "suffix": " Cents"}}}},
- {"shot_id": "n04_patina", "start": {"at_phrase": "Eight carry a patina"}, "end": {"at_phrase": "What it does not hold"},
-  "purpose": "The 8 patina Cents ringed: verdigris, obsidian, desert.",
-  "component": "WallBoard", "props": {"wall": "dopemind", "show": "grid", "moves": [{"at_phrase": "Eight carry a patina", "target": {"grid_end": True}}],
-   "highlights": [{"at_phrase": "Eight carry a patina", "cents": patina_cents}],
-   "readout": {"at_phrase": "Eight carry a patina", "text": "8 of 12"}}},
- {"shot_id": "n05_gaps", "start": {"at_phrase": "What it does not hold"}, "end": {"at_phrase": "centoshi replied"},
-  "purpose": "What the Wall does not hold, each ring arriving as it is named.",
-  "component": "GapSlots", "props": {"title": "DOPEMIND", "subtitle": "Not on the Wall", "cols": 2,
-   "slots": [{"label": "Red", "sub": "patina", "appear_at": "hold: a red patina"}, {"label": "Wheat", "sub": "penny", "appear_at": "a wheat penny, or"},
-             {"label": "1969", "appear_at": "Cent from nineteen sixty-nine or"}, {"label": "1971", "appear_at": "sixty-nine or nineteen seventy-one"}]}},
- {"shot_id": "n06_centoshi", "start": {"at_phrase": "centoshi replied"}, "end": {"at_phrase": "centoshi holds sixteen"},
-  "purpose": "centoshi's reply and DOPEMIND's answer, retyped word for word.",
-  "component": "ChatCard", "props": {"title": "Numismatists Discord", "subtitle": "November 2026", "textSize": 64,
-   "messages": [{"name": "centoshi", "text": "You already know my answer", "at_phrase": "centoshi replied"},
-                {"name": "DOPEMIND", "text": "1971", "at_phrase": "Dopemind wrote back"}]}},
- {"shot_id": "n07_c71", "start": {"at_phrase": "centoshi holds sixteen"}, "end": {"at_phrase": "Of nineteen seventy-one, Martin"},
+   "moves": [{"at_phrase": "As of November twenty", "until_phrase": "to nineteen eighty-one", "target": {"grid_end": True}}],
+   "readout": {"at_phrase": "vision holds twelve", "count": {"from": 0, "to": 12, "until_phrase": "Cents, from nineteen sixty-three", "suffix": " Cents"}}}},
+ {"shot_id": "s02_centoshi", "start": {"at_phrase": "centoshi replied"}, "end": {"at_phrase": "Dopemind wrote back"},
+  "purpose": "centoshi's reply, the user's screenshot (pre-cropped above the sticker). Framed on the text: the avatar, which carries uncleared art, stays out.",
+  "component": "ScreenCrop", "props": {"title": "Numismatists Discord", "subtitle": "centoshi · 9 November 2026",
+   "src": DS + "discord_centoshi.png", "width": 1720, "height": 260, "start": [150, 0, 800, 175]}},
+ {"shot_id": "s03_1971", "start": {"at_phrase": "Dopemind wrote back"}, "end": {"at_phrase": "centoshi holds sixteen"},
+  "purpose": "DOPEMIND's answer, the user's screenshot (pre-cropped: no sticker, no later messages).",
+  "component": "ScreenCrop", "props": {"title": "Numismatists Discord", "subtitle": "DOPEMIND · 9 November 2026",
+   "src": DS + "discord_1971.png", "width": 1720, "height": 170, "start": [150, 0, 800, 168]}},
+ {"shot_id": "s04_c71", "start": {"at_phrase": "centoshi holds sixteen"}, "end": {"at_phrase": "Of nineteen seventy-one, Martin"},
   "purpose": "centoshi's Wall: its 16 Cents from 1971 ringed (most of any collector; artist wallet excluded).",
   "component": "WallBoard", "props": {"wall": "centoshi", "show": "grid",
    "moves": [{"at_phrase": "centoshi holds sixteen", "until_phrase": "more than any other", "target": {"grid_end": True}}],
    "highlights": [{"at_phrase": "centoshi holds sixteen", "group": "y1971"}],
    "readout": {"at_phrase": "centoshi holds sixteen", "text": "16 from 1971"}}},
- {"shot_id": "n08_lehnen", "start": {"at_phrase": "Of nineteen seventy-one, Martin"}, "end": {"at_phrase": "A nineteen seventy-one Cent would"},
+ {"shot_id": "s05_lehnen", "start": {"at_phrase": "Of nineteen seventy-one, Martin"}, "end": {"at_phrase": "On November ninth"},
   "purpose": "NYT front page, 16 Aug 1971 (cleared by the user); Lehnen's line, verbatim from 'CENTS – Reflections on Mint Years' (Medium, 8 Mar 2025).",
   "component": "QuoteOver", "props": {"title": "1971", "subtitle": "The year money left gold",
    "src": "assets/dopemind/nyt_1971_crop.jpg", "img_w": 713, "img_h": 391, "img_caption": "The New York Times, 16 August 1971",
    "quote": "“It was the year the United States abandoned the gold standard, severing the connection between currency and tangible value…”",
    "attribution": "Martin Lehnen, 2025", "quote_at": "It was the year", "quoteSize": 50}},
- {"shot_id": "n09_chronicle", "start": {"at_phrase": "A nineteen seventy-one Cent would"}, "end": {"at_phrase": "Daidatep suggested six"},
-  "purpose": "A 1971 adds the 1971 Club badge; Chronicle = 1971 + 1979 + 1982, the Wall has the 1979 (#8741). Measured by replay: +1971 adds '1971 1'; +1971 +1982 adds Chronicle Set.",
-  "component": "GapSlots", "props": {"title": "DOPEMIND", "subtitle": "Chronicle Set",
-   "slots": [{"label": "1971", "appear_at": "A nineteen seventy-one Cent would"},
-             {"label": "1979", "sub": "#8741", "src": H(8741), "fill_at": "With the Wall's nineteen seventy-nine", "appear_at": "With the Wall's nineteen seventy-nine"},
-             {"label": "1982", "appear_at": "Chronicle Set one nineteen eighty-two"}],
-   "readouts": [{"at_phrase": "Cent would add the nineteen seventy-one", "text": "1971 Club", "caption": "a badge for a Cent from 1971"},
-                {"at_phrase": "leave a Chronicle Set", "text": "Chronicle", "caption": "1971 + 1979 + 1982"}]}},
- {"shot_id": "n10_daidatep", "start": {"at_phrase": "Daidatep suggested six"}, "end": {"at_phrase": "Number eighty-six fifty-seven"},
-  "purpose": "Daidatep's reply, retyped word for word (emoji left out).",
-  "component": "ChatCard", "props": {"title": "Numismatists Discord", "subtitle": "November 2026", "textSize": 50,
-   "messages": [{"name": "Daidatep", "text": "Right now I would have a look at: #8657 (only 90 1965 in the collection), #8820, #6451, #6875, #6782, #5888, … I could go on and on", "at_phrase": "Daidatep suggested six"}]}},
- {"shot_id": "n11_8657", "start": {"at_phrase": "Number eighty-six fifty-seven"}, "end": {"at_phrase": "Only ninety Cents are"},
-  "purpose": "#8657, zoom to its date.", "component": "WallStandout",
-  "props": {"title": PICKS_T, "subtitle": "CENT #8657 · 1 of 6", "n": 8657, "readout": "1965", "caption": "No mint mark", "src": H(8657),
-            "zoom": {"at_phrase": "is from nineteen sixty-five", "box": [0.63, 0.57, 0.88, 0.72], "mark": True}}},
- {"shot_id": "n12_years", "start": {"at_phrase": "Only ninety Cents are"}, "end": {"at_phrase": "Number eighty-eight twenty"},
+ {"shot_id": "s06_market71", "start": {"at_phrase": "On November ninth"}, "end": {"at_phrase": "Number twenty-seven seventy-nine"},
+  "purpose": "cents.vision in Market mode, *1971, On Sale: Hits 362, the three listed first. Prices hidden before capture (README).",
+  "component": "ScreenCrop", "props": {"title": "cents.vision", "subtitle": "1971 · Market · 9 Nov 2026",
+   "src": "vision/dm_1971_market.jpg", "width": 2160, "height": 2600, "start": [600, 40, 1300, 400],
+   "moves": [{"at_phrase": "three of the three", "box": [10, 1300, 640, 1560], "mark": True}]}},
+ {"shot_id": "s07_2779", "start": {"at_phrase": "Number twenty-seven seventy-nine"}, "end": {"at_phrase": "Only thirteen Cents"},
+  "purpose": "#2779: the Ghost portrait, then the whole face for the Full desert patina.",
+  **look(2779, [{"at_phrase": "is a Ghost Cent", "box": [0.27, 0.15, 0.73, 0.82], "mark": True},
+                {"at_phrase": "pale toning that", "box": None}],
+         [{"readout": "1971", "caption": "Listed 9 November 2026"},
+          {"at_phrase": "is a Ghost Cent", "readout": "Ghost", "caption": "set apart from the field"},
+          {"at_phrase": "with full desert", "readout": "Full Desert", "caption": "dominates the coin"}])},
+ {"shot_id": "s08_gd", "start": {"at_phrase": "Only thirteen Cents"}, "end": {"at_phrase": "Number eighty-five fifty-six"},
+  "purpose": "All 13 Cents that are both Ghost and Full Desert (trait-pool rule: a small pool is shown whole).",
+  "component": "CentScroll", "props": {"title": "Ghost + Desert", "ns": GD, "mark": 2779, "readout": str(len(GD)), "caption": "Ghost, with Full Desert", "until": "are both", "cols": 4}},
+ {"shot_id": "s09_8556", "start": {"at_phrase": "Number eighty-five fifty-six"}, "end": {"at_phrase": "And number fifty-two"},
+  "purpose": "#8556: date and D, the contaminated patch, then the whole face.",
+  **look(8556, [{"at_phrase": "seventy-one from Denver, is", "box": DATE(8556), "mark": True},
+                {"at_phrase": "is contaminated", "box": [0.55, 0.12, 0.87, 0.37], "mark": True},
+                {"at_phrase": "a major presence", "box": None}],
+         [{"readout": "1971-D", "caption": "Listed 9 November 2026"},
+          {"at_phrase": "is contaminated", "readout": "Contaminated", "caption": "Alien Secretion"},
+          {"at_phrase": "with significant verdigris", "readout": "Verdigris", "caption": "Significant"}])},
+ {"shot_id": "s10_5298", "start": {"at_phrase": "And number fifty-two"}, "end": {"at_phrase": "Any one of them"},
+  "purpose": "#5298: no visual trait; the date.",
+  **look(5298, [{"at_phrase": "a clean record", "box": DATE(5298), "mark": True}],
+         [{"readout": "1971", "caption": "Listed 9 November 2026"},
+          {"at_phrase": "carries no visual", "readout": "No trait", "caption": "a clean record of its year"}])},
+ {"shot_id": "s11_club", "start": {"at_phrase": "Any one of them"}, "end": {"at_phrase": "Daidatep suggested six"},
+  "purpose": "The three listed 1971s; any one adds the 1971 Club badge (replay +1971: '1971 1').",
+  "component": "GapSlots", "props": {"title": "DOPEMIND", "subtitle": "Listed 1971s · 9 Nov 2026", "cols": 3,
+   "slots": [{"label": f"#{n}", "src": H(n)} for n in (2779, 8556, 5298)],
+   "readouts": [{"at_phrase": "seventy-one Club badge", "text": "1971 Club", "caption": "a badge for a 1971 Cent"}]}},
+ {"shot_id": "s12_daidatep", "start": {"at_phrase": "Daidatep suggested six"}, "end": {"at_phrase": "all six were listed"},
+  "purpose": "Daidatep's reply, the user's screenshot, read in four sections (min_scale 1.25: the screenshot's text then stands taller than the 48px captions).",
+  "component": "ScreenCrop", "props": {"title": "Numismatists Discord", "subtitle": "Daidatep · 8 November 2026",
+   "src": DS + "discord_daidatep.png", "width": 1694, "height": 352, "start": [150, 95, 830, 250], "min_scale": 1.25,
+   "moves": [{"at_phrase": "six more", "box": [815, 135, 1610, 250]},
+             {"at_phrase": "I could go on", "box": [150, 190, 940, 250]},
+             {"at_phrase": "On the same day", "box": [300, 190, 1060, 250]}]}},
+ {"shot_id": "s13_market6", "start": {"at_phrase": "all six were listed"}, "end": {"at_phrase": "Number eighty-six fifty-seven"},
+  "purpose": "cents.vision Market, the six numbers, On Sale: all six listed (Hits 6).",
+  "component": "ScreenCrop", "props": {"title": "cents.vision", "subtitle": "Daidatep's six · Market",
+   "src": "vision/dm_six_market.jpg", "width": 2160, "height": 1700, "start": [10, 1290, 1290, 1570],
+   "moves": [{"at_phrase": "listed for sale as well", "box": [10, 1300, 1290, 1560], "mark": True}]}},
+ {"shot_id": "s14_8657", "start": {"at_phrase": "Number eighty-six fifty-seven"}, "end": {"at_phrase": "Only ninety Cents"},
+  "purpose": "#8657: the date.",
+  **look(8657, [{"at_phrase": "is from nineteen sixty-five", "box": DATE(8657), "mark": True}],
+         [{"readout": "1965", "caption": pick(1)}])},
+ {"shot_id": "s15_years", "start": {"at_phrase": "Only ninety Cents"}, "end": {"at_phrase": "and none of them"},
   "purpose": "Cents per year in the 1960s (merged-new2.json, 2026-11-09): 1965 has the fewest, 90.",
-  "component": "YearBars", "props": {"title": "CENTS by year", "subtitle": "the 1960s", "highlight": "1965", "highlight_at": "Only ninety Cents are",
+  "component": "YearBars", "props": {"title": "CENTS by year", "subtitle": "the 1960s", "highlight": "1965", "highlight_at": "Only ninety Cents",
    "bars": [{"label": str(y), "value": years[y]} for y in range(1960, 1970)],
-   "readouts": [{"at_phrase": "Only ninety Cents are", "text": "90", "caption": "the fewest of any 1960s year"}]}},
- {"shot_id": "n13_8820", "start": {"at_phrase": "Number eighty-eight twenty"}, "end": {"at_phrase": "With all four base patinas"},
-  "purpose": "#8820, red patina (whole surface: no zoom).", "component": "WallStandout",
-  "props": {"title": PICKS_T, "subtitle": "CENT #8820 · 2 of 6", "n": 8820, "readout": "1972", "caption": "Red patina", "src": H(8820)}},
- {"shot_id": "n14_patinaset", "start": {"at_phrase": "With all four base patinas"}, "end": {"at_phrase": "Number sixty-four fifty-one"},
+   "readouts": [{"at_phrase": "Only ninety Cents", "text": "90", "caption": "the fewest of any 1960s year"}]}},
+ {"shot_id": "s16_8657b", "start": {"at_phrase": "and none of them"}, "end": {"at_phrase": "Number eighty-eight twenty"},
+  "purpose": "#8657 again: under the date, no mint mark; then the whole face for the notable desert patina (no zoom: the patch is not pinned down on the photo).",
+  **look(8657, [{"at_phrase": "and none of them", "box": [0.62, 0.6, 0.87, 0.79], "mark": True},
+                {"at_phrase": "It has a notable", "box": None}],
+         [{"readout": "No mint mark", "caption": "generally Philadelphia"},
+          {"at_phrase": "It has a notable", "readout": "Desert", "caption": "Notable: visible, local"}])},
+ {"shot_id": "s17_8820", "start": {"at_phrase": "Number eighty-eight twenty"}, "end": {"at_phrase": "On Dopemind's Wall, it"},
+  "purpose": "#8820: date; verdigris along the left rim; red across the face; the pool size.",
+  **look(8820, [{"at_phrase": "from nineteen seventy-two", "box": DATE(8820), "mark": True},
+                {"at_phrase": "verdigris along the rim", "box": [0.06, 0.24, 0.42, 0.9], "mark": True},
+                {"at_phrase": "significant red across", "box": None}],
+         [{"readout": "1972", "caption": pick(2)},
+          {"at_phrase": "verdigris along the rim", "readout": "Verdigris", "caption": "Notable, along the rim"},
+          {"at_phrase": "significant red across", "readout": "Red", "caption": "Significant"},
+          {"at_phrase": "one hundred and eighty-three", "readout": "183", "caption": "with significant red"}])},
+ {"shot_id": "s18_patinaset", "start": {"at_phrase": "On Dopemind's Wall, it"}, "end": {"at_phrase": "Number sixty-four fifty-one"},
   "purpose": "The Wall's verdigris, obsidian and desert, then #8820's red drops in: Patina Set (replay: +8820 adds 'Patina Set').",
   "component": "GapSlots", "props": {"title": "DOPEMIND", "subtitle": "Patina Set", "cols": 4,
    "slots": [{"label": "Verd.", "sub": "#951", "src": H(951)}, {"label": "Obs.", "sub": "#6935", "src": H(6935)},
-             {"label": "Desert", "sub": "#3396", "src": H(3396)}, {"label": "Red", "sub": "#8820", "src": H(8820), "fill_at": "With all four base patinas"}],
-   "readouts": [{"at_phrase": "add a Patina Set", "text": "Patina Set", "caption": "all four base patinas"}]}},
- {"shot_id": "n15_6451", "start": {"at_phrase": "Number sixty-four fifty-one"}, "end": {"at_phrase": "With the Wall's nineteen eighty-one"},
-  "purpose": "#6451, zoom to its date.", "component": "WallStandout",
-  "props": {"title": PICKS_T, "subtitle": "CENT #6451 · 3 of 6", "n": 6451, "readout": "1980", "caption": "Obsidian patina", "src": H(6451),
-            "zoom": {"at_phrase": "is from nineteen eighty", "box": [0.63, 0.56, 0.88, 0.71], "mark": True}}},
- {"shot_id": "n16_1980s", "start": {"at_phrase": "With the Wall's nineteen eighty-one"}, "end": {"at_phrase": "Number sixty-eight seventy-five"},
-  "purpose": "1980s Set = 1980, 1981, 1982; the Wall has 1981 (#2064). Replay: +6451 +1982 adds '1980s Set'.",
-  "component": "GapSlots", "props": {"title": "DOPEMIND", "subtitle": "1980s Set",
-   "slots": [{"label": "1980", "sub": "#6451", "src": H(6451)},
-             {"label": "1981", "sub": "#2064", "src": H(2064), "fill_at": "With the Wall's nineteen eighty-one", "appear_at": "With the Wall's nineteen eighty-one"},
-             {"label": "1982", "appear_at": "eighties Set one nineteen eighty-two"}],
-   "readouts": [{"at_phrase": "leave a nineteen-eighties Set", "text": "1980s Set", "caption": "1980 + 1981 + 1982"}]}},
- {"shot_id": "n17_6875", "start": {"at_phrase": "Number sixty-eight seventy-five"}, "end": {"at_phrase": "In the Traits Atlas"},
-  "purpose": "#6875, zoom onto the gouge.", "component": "WallStandout",
-  "props": {"title": PICKS_T, "subtitle": "CENT #6875 · 4 of 6", "n": 6875, "readout": "1 of 44", "caption": "Heavily abraded", "src": H(6875),
-            "zoom": {"at_phrase": "is heavily abraded", "box": [0.6, 0.15, 0.9, 0.55], "mark": True}}},
- {"shot_id": "n18_atlas", "start": {"at_phrase": "In the Traits Atlas"}, "end": {"at_phrase": "Number sixty-seven eighty-two"},
+             {"label": "Desert", "sub": "#3396", "src": H(3396)}, {"label": "Red", "sub": "#8820", "src": H(8820), "fill_at": "would complete a Patina"}],
+   "readouts": [{"at_phrase": "all four base patinas", "text": "Patina Set", "caption": "all four base patinas"}]}},
+ {"shot_id": "s19_6451", "start": {"at_phrase": "Number sixty-four fifty-one"}, "end": {"at_phrase": "Number sixty-eight seventy-five"},
+  "purpose": "#6451: date; the darkened portrait; the pool size.",
+  **look(6451, [{"at_phrase": "from nineteen eighty", "box": DATE(6451), "mark": True},
+                {"at_phrase": "has significant obsidian", "box": [0.28, 0.12, 0.88, 0.72]},
+                {"at_phrase": "two hundred and twenty", "box": None}],
+         [{"readout": "1980", "caption": pick(3)},
+          {"at_phrase": "has significant obsidian", "readout": "Obsidian", "caption": "Significant"},
+          {"at_phrase": "two hundred and twenty", "readout": "220", "caption": "with significant obsidian"}])},
+ {"shot_id": "s20_6875", "start": {"at_phrase": "Number sixty-eight seventy-five"}, "end": {"at_phrase": "In the Traits Atlas"},
+  "purpose": "#6875: date; the abraded right side.",
+  **look(6875, [{"at_phrase": "from nineteen sixty-seven", "box": DATE(6875), "mark": True},
+                {"at_phrase": "heavily abraded Cents", "box": [0.55, 0.15, 0.92, 0.9], "mark": True}],
+         [{"readout": "1967", "caption": pick(4)},
+          {"at_phrase": "is one of forty-four", "readout": "1 of 44", "caption": "heavily abraded"}])},
+ {"shot_id": "s21_atlas", "start": {"at_phrase": "In the Traits Atlas"}, "end": {"at_phrase": "Number sixty-seven eighty-two"},
   "purpose": "The Atlas's Heavy grade, verbatim (films/traits/script/atlas/abraded.txt).",
-  "component": "QuoteOver", "props": {"title": PICKS_T, "subtitle": "CENT #6875 · 1967", "cent": H(6875),
+  "component": "QuoteOver", "props": {"title": "Cent #6875", "subtitle": "Heavily abraded", "cent": H(6875),
    "quote": "Heavy: “abrasion dominates the read of the coin; broad fields/devices visibly missing metal.”",
    "attribution": "Traits Atlas, CENTS Trait Council", "quote_at": "heavy abrasion", "quoteSize": 52}},
- {"shot_id": "n19_6782", "start": {"at_phrase": "Number sixty-seven eighty-two"}, "end": {"at_phrase": "And number fifty-eight eighty-eight"},
-  "purpose": "#6782, zoom to its date and D mint mark; replay: +6782 adds '1969 1'.", "component": "WallStandout",
-  "props": {"title": PICKS_T, "subtitle": "CENT #6782 · 5 of 6", "n": 6782, "readout": "1969-D", "caption": "Would add the 1969 Club", "src": H(6782),
-            "zoom": {"at_phrase": "a nineteen sixty-nine from Denver", "box": [0.62, 0.56, 0.87, 0.76], "mark": True}}},
- {"shot_id": "n20_5888", "start": {"at_phrase": "And number fifty-eight eighty-eight"}, "end": {"at_phrase": "Find all of the Collector"},
-  "purpose": "#5888 turns to its back: the wheat ears (replay: +5888 adds 'Wheat 1', years 1956-1981).", "component": "CentFlip",
-  "props": {"title": PICKS_T, "subtitle": "CENT #5888 · 6 of 6", "n": 5888, "front": H(5888), "back": "hires/5888_back.webp",
-            "flip_at": "Wall's first wheat penny", "readout": "1956-D", "caption": "Wheat penny"}},
- {"shot_id": "n21_collectors", "start": {"at_phrase": "Find all of the Collector"}, "end": {"at_phrase": "What should Dopemind add"},
-  "purpose": "cents.vision Traits Lab; one zoom, onto Collectors.", "component": "WallShot",
-  "props": {"src": "vision/traits_lab.png", "width": 2964, "height": 1654, "moves": [{"at_phrase": "under Collectors", "box": [1185, 1575, 1358, 1635], "mark": True}]}},
- {"shot_id": "n22_ask", "start": {"at_phrase": "What should Dopemind add"}, "end": {"after_phrase": "Tell us what you think", "plus": 2.0},
+ {"shot_id": "s22_6782", "start": {"at_phrase": "Number sixty-seven eighty-two"}, "end": {"at_phrase": "And number fifty-eight"},
+  "purpose": "#6782: date and D; the green right side; the badge (replay +6782: '1969 1').",
+  **look(6782, [{"at_phrase": "sixty-nine from Denver", "box": DATE(6782), "mark": True},
+                {"at_phrase": "with obsidian and", "box": [0.45, 0.28, 0.97, 0.85]},
+                {"at_phrase": "It would add the nineteen", "box": None}],
+         [{"readout": "1969-D", "caption": pick(5)},
+          {"at_phrase": "with obsidian and", "readout": "Verdigris", "caption": "Significant + obsidian"},
+          {"at_phrase": "It would add the nineteen", "readout": "1969 Club", "caption": "a badge for a 1969 Cent"}])},
+ {"shot_id": "s23_5888", "start": {"at_phrase": "And number fifty-eight"}, "end": {"at_phrase": "Only twenty-eight Cents"},
+  "purpose": "#5888: date and D; the whole face for the notable verdigris (no zoom: not pinned down on the photo).",
+  **look(5888, [{"at_phrase": "fifty-six from Denver", "box": DATE(5888), "mark": True},
+                {"at_phrase": "with notable verdigris", "box": None}],
+         [{"readout": "1956-D", "caption": pick(6)},
+          {"at_phrase": "with notable verdigris", "readout": "Verdigris", "caption": "Notable: visible, local"}])},
+ {"shot_id": "s24_1956", "start": {"at_phrase": "Only twenty-eight Cents"}, "end": {"at_phrase": "It would be the Wall's"},
+  "purpose": "Every Cent from 1956, all 28 (18 from Denver).",
+  "component": "CentScroll", "props": {"title": "1956", "ns": Y56, "mark": 5888, "readout": str(len(Y56)), "caption": "from 1956; 18 from Denver", "until": "of them from Denver", "cols": 4}},
+ {"shot_id": "s25_wheat", "start": {"at_phrase": "It would be the Wall's"}, "end": {"at_phrase": "To see every Cent"},
+  "purpose": "#5888 turns over: the wheat ears (replay +5888: 'Wheat 1').",
+  **look(5888, [], [{"at_phrase": "first wheat penny", "readout": "Wheat", "caption": "the Wall's first"}],
+         back="hires/5888_back.webp", flip_at="first wheat penny")},
+ {"shot_id": "s26_lab", "start": {"at_phrase": "To see every Cent"}, "end": {"at_phrase": "from Lab to Market"},
+  "purpose": "cents.vision Traits Lab, the Lab/Market switch.",
+  "component": "ScreenCrop", "props": {"title": "cents.vision", "subtitle": "Traits Lab", "src": "vision/traits_lab.png", "width": 2964, "height": 1654,
+   "start": [300, 0, 1700, 1210], "moves": [{"at_phrase": "switch cents dot vision", "box": [680, 135, 1020, 225], "mark": True}]}},
+ {"shot_id": "s27_market", "start": {"at_phrase": "from Lab to Market"}, "end": {"at_phrase": "What should Dopemind add"},
+  "purpose": "The same switch, set to Market.",
+  "component": "ScreenCrop", "props": {"title": "cents.vision", "subtitle": "Market", "src": "vision/dm_six_market.jpg", "width": 2160, "height": 1700,
+   "start": [590, 140, 945, 225], "moves": [{"at_phrase": "Lab to Market", "box": [590, 140, 945, 225], "mark": True}]}},
+ {"shot_id": "s28_ask", "start": {"at_phrase": "What should Dopemind add"}, "end": {"after_phrase": "Tell us what you think", "plus": 2.0},
   "purpose": "The question to viewers, over the options the film put forward.", "component": "AskCard",
   "props": {"question": "What should DOPEMIND add next?", "cols": 4, "note": "Tell us what you think",
    "options": [{"label": "1971"}] + [{"label": f"#{n}", "src": H(n)} for n in PICKS]}},
- {"shot_id": "n23_credits", "start": {"after_phrase": "Tell us what you think", "plus": 2.0}, "end": {"at_end": True},
+ {"shot_id": "s29_credits", "start": {"after_phrase": "Tell us what you think", "plus": 2.0}, "end": {"at_end": True},
   "purpose": "End credits.", "component": "Credits",
   "props": {"lines": ["Images: Rutherford Chang via cents.vision (site by Dr. Martin Lehnen)",
-                      "3D render: 3DCENTS by sinvalli",
+                      "Discord: Numismatists server, 8 and 9 November 2026",
+                      "Listings and Collector Walls: cents.vision, 9 November 2026",
                       "Quote: Martin Lehnen, “CENTS – Reflections on Mint Years”, March 2025",
-                      "Trait grade: Traits Atlas, CENTS Trait Council",
-                      "Front page: The New York Times, 16 August 1971",
-                      "Collector Wall data: cents.vision, as of 9 November 2026"], "url": "cents.gallery"}},
+                      "Trait grades: Traits Atlas, CENTS Trait Council",
+                      "Front page: The New York Times, 16 August 1971"], "url": "cents.gallery"}},
 ]
 for s in shots: s["visual_kind"] = "code"
-tl = {"essay": {"title": "Collector Wall", "subtitle": "DOPEMIND: what to add next", "author": "shibboleth",
-                "source": "https://cents.vision/collectors.html", "version": "v1 (2026-11-09)"},
-      "_what": "Themed Collector Wall episode around DOPEMIND's question in the Numismatists Discord. Every coin is a real Cent by number; every figure is checked above against the 2026-11-09 snapshot. No wallet address appears.",
+tl = {"essay": {"title": "What to add next", "subtitle": "DOPEMIND's question", "author": "shibboleth",
+                "source": "Numismatists Discord; https://cents.vision", "version": "v2 (2026-11-09)"},
+      "_what": "First film in the 'What to add next' format: a collector's question, the real Discord screenshots, what is listed and what is interesting about each suggestion. Every coin is a real Cent by number; every figure is checked above against the 2026-11-09 snapshots. No prices, no wallet addresses.",
       "shots": shots}
 json.dump(tl, open(F / "timeline/timeline.json", "w"), indent=1, ensure_ascii=False)
-json.dump({"assets": {}, "_note": "No Plate assets. QuoteOver draws public/assets/dopemind/nyt_1971_crop.jpg (NYT front page, 16 Aug 1971, supplied and cleared by the user in the Cent #1264 thread; cropped below the masthead to drop browser controls)."},
+json.dump({"assets": {}, "_note": "No Plate assets. Screenshots (user's uploads, 2026-11-09) and the NYT crop are in public/assets/dopemind/ (gitignored; copies in /mnt/project-files/collector-wall/dopemind/). cents.vision captures are in public/vision/."},
           open(F / "timeline/assets.json", "w"), indent=1)
 print(f"{len(shots)} shots; all figures checked against {SNAP.name}")

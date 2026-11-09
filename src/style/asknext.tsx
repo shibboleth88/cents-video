@@ -1,6 +1,6 @@
 import React from "react";
 import { Img, interpolate, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
-import { EASE, useEntrance, useShotFade } from "./motion";
+import { EASE, OpeningShotCtx, useEntrance, useShotFade } from "./motion";
 import { COLOR, SAFE, TYPE } from "./tokens";
 import { Imagery, SafeText } from "./Safe";
 import { findPhrase, type Alignment } from "../lib/timeline";
@@ -39,8 +39,10 @@ const fadeIn = (frame: number, from: number, len = 10) =>
 
 const NameBand: React.FC<{ title: string; subtitle?: string }> = ({ title, subtitle }) => {
   const e = useEntrance("rise", 0);
+  const opening = React.useContext(OpeningShotCtx);   // the film's first frame is its preview: already in
   return (
-    <div style={{ position: "absolute", left: X0, top: TITLE.y0, width: X1 - X0, opacity: e.opacity, transform: `translateY(${e.y}px)` }}>
+    <div style={{ position: "absolute", left: X0, top: TITLE.y0, width: X1 - X0,
+                  opacity: opening ? 1 : e.opacity, transform: `translateY(${opening ? 0 : e.y}px)` }}>
       <SafeText role="display" fontSize={68} maxLines={1} style={{ fontWeight: 700, letterSpacing: -1 }}>{title}</SafeText>
       {subtitle ? <SafeText role="body" fontSize={46} maxLines={1} color={COLOR.inkDim}>{subtitle}</SafeText> : null}
     </div>
@@ -343,5 +345,78 @@ export const AskCard: React.FC<Anchored & { question: string; options: Option[];
   );
 };
 
-export const ASKNEXT = { ChatCard, GapSlots, YearBars, QuoteOver, AskCard } as const;
+// ---------------------------------------------------------------------------
+
+type Move = { at_phrase?: string; box: [number, number, number, number]; mark?: boolean };
+
+/** Camera keys over time: hold each framing until the next cue, then ease to it over 18 frames. */
+const useCamera = <K extends { k: number; cx: number; cy: number }>(keys: (K & { f: number })[], frame: number) => {
+  for (let i = 1; i < keys.length; i++)
+    if (keys[i]!.f < keys[i - 1]!.f) throw new Error("camera: moves are out of spoken order");
+  let c = keys[0]!;
+  let arrived = { i: 0, t: 1 };
+  for (let i = 1; i < keys.length; i++) {
+    const a = c, b = keys[i]!;
+    if (frame < b.f) break;
+    const t = interpolate(frame, [b.f, b.f + 18], [0, 1], { extrapolateRight: "clamp", easing: EASE.inOut });
+    c = { ...b, k: a.k + (b.k - a.k) * t, cx: a.cx + (b.cx - a.cx) * t, cy: a.cy + (b.cy - a.cy) * t };
+    arrived = { i, t: interpolate(frame, [b.f + 14, b.f + 26], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }) };
+  }
+  return { c, arrived };
+};
+
+/**
+ * A real screenshot (a Discord message, a cents.vision page), under a title
+ * band, with the camera moving across it as the narration reaches each part,
+ * so a line too long to read whole is read in zoomed sections. Boxes are in
+ * the screenshot's own pixels. `start` is the opening framing (default: the
+ * whole image). With `min_scale`, a move that would leave the text smaller
+ * than that scale refuses: a zoom-in that cannot be read is not a zoom-in.
+ */
+export const ScreenCrop: React.FC<Anchored & {
+  title: string; subtitle?: string; src: string; width: number; height: number;
+  start?: [number, number, number, number]; moves?: Move[]; min_scale?: number;
+}> = (props) => {
+  const { title, subtitle, src, width, height, moves = [], min_scale } = props;
+  const frame = useCurrentFrame();
+  const fade = useShotFade();
+  const at = useAt(props);
+  const AREA = { x0: 40, x1: 1040, y0: STAGE.y0, y1: BAND.y1 };
+  const AW = AREA.x1 - AREA.x0, AH = AREA.y1 - AREA.y0;
+  const cam = (b: [number, number, number, number], check: boolean, mark = false) => {
+    const [x0, y0, x1, y1] = b;
+    if (x0 < 0 || y0 < 0 || x1 > width || y1 > height || x1 <= x0 || y1 <= y0)
+      throw new Error(`ScreenCrop: box ${b} is outside the ${width}x${height} image`);
+    // A marked box leaves room for its ring: a box that filled the stage edge to edge drew a ring with no sides (v2 draft).
+    const k = Math.min(AW / (x1 - x0), AH / (y1 - y0), 2.6) * (mark ? 0.9 : 1);
+    if (check && min_scale && k < min_scale) throw new Error(`ScreenCrop: box ${b} shows the image at ${k.toFixed(2)}x, under min_scale ${min_scale}`);
+    return { k, cx: (x0 + x1) / 2, cy: (y0 + y1) / 2 };
+  };
+  const keys = [{ f: 0, box: null as null | number[], mark: false, ...cam(props.start ?? [0, 0, width, height], false) },
+                ...moves.map((m, i) => ({ f: m.at_phrase ? at(m.at_phrase) : 20 + i * 30, box: m.box as number[], mark: !!m.mark, ...cam(m.box, true, !!m.mark) }))];
+  const { c, arrived } = useCamera(keys, frame);
+  const mk = keys[arrived.i]!;
+  const left = AW / 2 - c.cx * c.k, top = AH / 2 - c.cy * c.k;
+  const enter = useEntrance("place", 0);
+  // Opening the film, the screenshot is the preview frame: in from frame 0 (v2 draft opened at YMAX 11).
+  const opening = React.useContext(OpeningShotCtx);
+  return (
+    <div style={{ position: "absolute", inset: 0, opacity: fade }}>
+      <NameBand title={title} subtitle={subtitle} />
+      <Imagery>
+        <div style={{ position: "absolute", left: AREA.x0, top: AREA.y0, width: AW, height: AH, overflow: "hidden", borderRadius: 18,
+                      opacity: opening ? 1 : enter.opacity }}>
+          <Img src={staticFile(src)} style={{ position: "absolute", left, top, width: width * c.k, height: height * c.k }} />
+          {mk.mark && mk.box ? (
+            <div style={{ position: "absolute", left: left + mk.box[0]! * c.k - 10, top: top + mk.box[1]! * c.k - 10,
+                          width: (mk.box[2]! - mk.box[0]!) * c.k + 20, height: (mk.box[3]! - mk.box[1]!) * c.k + 20,
+                          border: `5px solid ${COLOR.accent}`, borderRadius: 16, opacity: arrived.t }} />
+          ) : null}
+        </div>
+      </Imagery>
+    </div>
+  );
+};
+
+export const ASKNEXT = { ChatCard, GapSlots, YearBars, QuoteOver, AskCard, ScreenCrop } as const;
 for (const C of Object.values(ASKNEXT)) (C as any).wantsAlignment = true;

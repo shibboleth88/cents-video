@@ -34,6 +34,28 @@ row moves to `LEDGER_ARCHIVE.md` verbatim in the same edit that supersedes it.
   *Moved from Candidates on its second bite; the once-bitten row is in
   LEDGER_ARCHIVE.md verbatim.*
 
+- **A render of the film you changed is not a check of the shared code you
+  changed.** Shared shot code serves every film, and a film's own render only
+  exercises its own shots. An edit can be perfect for that film and break another
+  that nothing re-renders. *Bitten twice:*
+  - 2026-10-26: a find-and-replace in `src/style/wall.tsx`, made for #6129, broke
+    Daidatep's `CentFlip` (`ReferenceError: subtitle`). It was found at merge.
+  - 2026-11-09: a new `CentLook` in `src/style/asknext.tsx` (DOPEMIND "what to add
+    next") shared its name with the One Cent `CentLook`. `REGISTRY` spreads
+    `...ONECENT, ...ASKNEXT`, so the new one would have replaced the old one in
+    every One Cent film. The DOPEMIND render would have passed, and so would
+    `tsc`, because timelines are JSON and are not typed against the component.
+    It was caught while writing the timeline.
+
+  **Remedy:**
+  - `npx tsc --noEmit` over the whole project after any edit to `src/style/`.
+  - `components.tsx` now refuses a component name exported by two groups. Control:
+    with the duplicate present, the render refused with `REGISTRY: "CentLook" is
+    exported by both ONECENT and ASKNEXT`.
+
+  *Moved from Candidates on its second bite; the once-bitten row is in
+  LEDGER_ARCHIVE.md verbatim.*
+
 ## Candidates — bitten once
 
 - **A field I can set is not a sign-off I hold.** `approved: true` on an
@@ -167,16 +189,13 @@ them was reasonable.
   frame while seeking. The comparison that depended on it returned "could not
   compare", which read as a missing file rather than a malformed command.
 
-- **A render of the film you changed is not a check of the shared code you
-  changed.** A find-and-replace in a shared component file, made for one film,
-  also hit a component only another film uses. That film's render had already
-  shipped, so nothing re-ran it, and the edit referenced a prop the other
-  component never declared. Found 2026-10-26 while merging: `CentFlip` in
-  `src/style/wall.tsx` (Daidatep's flip shot) threw `ReferenceError: subtitle`
-  after #6129 v2 (16ace98). Seen red with `tsc --noEmit` and `remotion still` at
-  frame 870, green after the fix. *Separating observation:* `npx tsc --noEmit`
-  over the whole project after any edit to `src/style/`, not a render of one
-  film.
+- **A count of what a filter left, taken with the filter's own match, reads zero
+  whether the filter worked or not.** Prices were hidden on cents.vision before
+  capture by matching the ฿ glyph. The match failed and hid 0 elements. The check
+  "visible prices left: 0" used the same match, so it passed. DOPEMIND "what to
+  add next", 2026-11-09. It was caught by looking at the capture: every price was
+  still there. *Separating observation:* count with a different matcher from the
+  one that acted (here, a number regex on all text), or look.
 
 ## Refuted — killed by a measurement, do not re-investigate
 
