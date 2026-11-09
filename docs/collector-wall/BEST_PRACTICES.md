@@ -4,7 +4,7 @@ This is the one source for the format of every Collector Wall episode. Read it b
 
 The reference episode is **blacktongue** (`films/wall-blacktongue/` on branch `claude/project-thread-nkzn17`, PR #5). Copy its folder layout, timeline shape and caption builder.
 
-Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the Daidatep thread's first findings. 2026-10-26: §5 "Delivery check" added from the GPT WBWA reel handover. 2026-10-27: narration voice changed to "eee" (§5); showcase opener is the series opening (§3); 3DCENTS credit wording approved (§4); badge zooms get the opener-style highlight (§4a); audit against the day's decisions: lead with the Wall's standout fact (§1), graded traits, fronts only, Cents on black, Daidatep (§2), no long still holds (§4a), dated snapshots (§4a). 2026-10-28: find the focus with `wall_focus.py` (§1), plus off-site leads from `stories.py` (candidate, §1); seamless signature hand-offs, card to spin to still, front on cue (§3), approved as the series format; captioned render only (§5); end credits card, 3DCENTS credit moved there (§3 step 10, §4); "Lead" caption look (§5). 2026-11-03: visual variety for all CENTS videos (§5, before §6). 2026-11-04: unclaimed Walls allowed, identified by the shortened address (§2). 2026-11-09: DOPEMIND v1 lessons: several zooms on one still (§4), stills budgets, superlatives, DotColumns, end-fade note (§5); two-move close is an open question (§3).
+Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the Daidatep thread's first findings. 2026-10-26: §5 "Delivery check" added from the GPT WBWA reel handover. 2026-10-27: narration voice changed to "eee" (§5); showcase opener is the series opening (§3); 3DCENTS credit wording approved (§4); badge zooms get the opener-style highlight (§4a); audit against the day's decisions: lead with the Wall's standout fact (§1), graded traits, fronts only, Cents on black, Daidatep (§2), no long still holds (§4a), dated snapshots (§4a). 2026-10-28: find the focus with `wall_focus.py` (§1), plus off-site leads from `stories.py` (candidate, §1); seamless signature hand-offs, card to spin to still, front on cue (§3), approved as the series format; captioned render only (§5); end credits card, 3DCENTS credit moved there (§3 step 10, §4); "Lead" caption look (§5). 2026-11-03: visual variety for all CENTS videos (§5, before §6). 2026-11-04: unclaimed Walls allowed, identified by the shortened address (§2). 2026-11-09: DOPEMIND v1 lessons: several zooms on one still (§4), stills budgets, superlatives, DotColumns, end-fade note (§5); two-move close is an open question (§3); DOPEMIND "what next" notes (§5), the scribe word check is not independent (§5).
 
 ## 1. What an episode is
 
@@ -92,6 +92,7 @@ Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the D
        - `"enter_from": {cx, cy, d}` makes the Cent grow out of its slot instead of fading in. Measure the values on the opener's last frame: the slot's centre and the coin's full height, in screen pixels. blacktongue's are 540, 800, 495.
      - **Large spin to still, on cue:** in the clip, `"still": {"src": "hires/<n>.webp", "at_phrase": "<cue>", "r": <coin radius>}`.
        - The turn is retimed, at the speed nearest the export's own and within 0.6 to 1.6x, so the Cent faces fully front (clip frame 0) exactly when the cue starts.
+       - If no cue in a short signature line lets the turn face front within 0.6 to 1.6x (it throws), drop `still` and let the spin run. (DOPEMIND "what next", PR #29.)
        - It then crossfades over 8 frames to the 1050px photo, drawn where any still `WallStandout` of that Cent draws it. A following still shot therefore cuts invisibly, and the shot can go on to a `zoom` on the photo.
        - `r` is the coin's radius as a fraction of the photo: measure it with a threshold on the white background (#5185: 0.41).
        - If no speed within that range can land the front on the cue, the render refuses and names the cue. Pick a cue a little later or earlier.
@@ -246,6 +247,7 @@ For a trait you must see on the coin itself (a date, a mint mark), cut from the 
 - **Transcribe the chosen take** with scribe_v1 (free).
   - Check it word for word against the TTS text.
   - Also run a control with one word changed, which must fail. A normalizer that deletes newlines glues words together, so replace punctuation with spaces.
+  - **This check isn't independent (found 2026-11-09, DOPEMIND "what next").** On ElevenLabs flows, scribe_v1 returned the prompt's own text: it behaves as forced alignment, not recognition, so a passing word check can't catch a misread word. Whisper is blocked by the proxy. Until there is an independent recogniser, the take's words rest on a listen, so listen to the whole take before locking it, and say in the delivery note that you did.
 - **Audio:** `loudnorm=I=-16:TP=-1.5:LRA=11,apad=pad_dur=2.5`, 48 kHz mono.
 - **Captions:**
   - `captions/build_cues.py` maps the spoken numbers back to their written forms.
@@ -309,6 +311,16 @@ ffmpeg -hide_banner -i "$f" -vf "blackdetect=d=0.1:pix_th=0.10,freezedetect=n=0.
   - With `labelsUnder` and around 20 or more Cents, set `cols: 6`, or the top row runs into the title.
 - **WallStandout captions stay on one line.** A caption that wraps to two lines runs under the burned-in captions.
 - **Readouts:** the 84 px readout fits about 8 characters, so SafeText refuses "1 of 2 collectors". Keep the number in the readout ("1 of 2") and put the words in the caption line beneath it.
+
+### Practical notes from DOPEMIND episodes (2026-11-09; PR #28 standard, PR #29 "what should I add next?")
+
+- **Measure "would add X to the card" with the site's own code.** Move the Cent onto the Wall in a copy of `wallet_index_cents.json`, replay collectors.html, and read the badges back (`films/wall-dopemind-next/data/sim/run_sims.py`). Run it both ways as the control: +1971 alone draws no Chronicle Set, while +1971 and +1982 together do. Phrase the result as what the card would show, never as advice to buy.
+- **Two episodes on one Wall share one dated snapshot,** and the split is agreed up front. The DOPEMIND standard episode took the Contamination Set; the sibling took the Discord question.
+- **A shot's start is not the moment its content appears** (LEDGER, on its second occurrence). A chat card cued on a later phrase stood empty for 1.7 s. Blackdetect plus a frame inside each interval caught it; midpoint stills did not. `ChatCard` now refuses to stand empty.
+- **The last change before a render is the one no still has seen.** A flex-wrap tweak went straight to render and put a Cent on top of the note. After the last edit, re-render the affected stills, or look at the export itself at that shot.
+- **Repeated phrases make anchors ambiguous** (for example "one 1982 short", said twice). Lengthen the anchor until it is unique; the anchor resolver throws otherwise.
+- **The project-files store adds a ~6 KB uuid atom to MP4s,** so a file hash never matches the local render. Compare decoded streams instead: `ffmpeg -i <f> -map 0 -c copy -f md5 -`, or framemd5 per frame. (blacktongue v6.1 showed the same: different file md5, identical stream md5.)
+- **Reusable components** in `src/style/asknext.tsx`: `ChatCard`, `GapSlots` (Set slots, filled or dashed, filled on cue), `YearBars`, `QuoteOver` and `AskCard`. `DotColumns` is in `src/style/wallcharts.tsx` (§5 above).
 
 ### Visual variety (user, 2026-11-03; applies to ALL CENTS videos)
 
