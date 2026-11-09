@@ -18,6 +18,44 @@ row moves to `LEDGER_ARCHIVE.md` verbatim in the same edit that supersedes it.
   spoken and flagged rather than overwritten. Anchors match fuzzily
   (`MATCH_MIN`), keeping the ambiguity guard via a margin against the runner-up.
 
+- **A shot's start is not the moment its content appears.** A shot is cut on
+  one phrase and its content is cued on a later one, so the frame between them
+  stands empty: a title over nothing, a card with nothing in it. Stills taken at
+  shot midpoints miss it, because the midpoint falls after the content arrives.
+  *Bitten twice:* ScrappyT v1 held an empty titled row for 2.6 s (2026-10-27);
+  the DOPEMIND "what to add next" first render held an empty chat card for
+  1.7 s (51 frames), the message cued on "Dopemind asked" in a shot that
+  began on "In the Numismatists Discord" (blackdetect 9.30-10.23 s and
+  10.30-11.23 s, 2026-11-09). Both caught before delivery. **Remedy:**
+  blackdetect on the render and a frame inside each interval it lists (brief
+  §5), or a still at each shot's first second rather than its middle. Components that hold a
+  container now refuse to stand empty: `ChatCard` throws when its first message
+  enters more than 0.5 s into the shot (`src/style/asknext.tsx`).
+  *Moved from Candidates on its second bite; the once-bitten row is in
+  LEDGER_ARCHIVE.md verbatim.*
+
+- **A render of the film you changed is not a check of the shared code you
+  changed.** Shared shot code serves every film, and a film's own render only
+  exercises its own shots. An edit can be perfect for that film and break another
+  that nothing re-renders. *Bitten twice:*
+  - 2026-10-26: a find-and-replace in `src/style/wall.tsx`, made for #6129, broke
+    Daidatep's `CentFlip` (`ReferenceError: subtitle`). It was found at merge.
+  - 2026-11-09: a new `CentLook` in `src/style/asknext.tsx` (DOPEMIND "what to add
+    next") shared its name with the One Cent `CentLook`. `REGISTRY` spreads
+    `...ONECENT, ...ASKNEXT`, so the new one would have replaced the old one in
+    every One Cent film. The DOPEMIND render would have passed, and so would
+    `tsc`, because timelines are JSON and are not typed against the component.
+    It was caught while writing the timeline.
+
+  **Remedy:**
+  - `npx tsc --noEmit` over the whole project after any edit to `src/style/`.
+  - `components.tsx` now refuses a component name exported by two groups. Control:
+    with the duplicate present, the render refused with `REGISTRY: "CentLook" is
+    exported by both ONECENT and ASKNEXT`.
+
+  *Moved from Candidates on its second bite; the once-bitten row is in
+  LEDGER_ARCHIVE.md verbatim.*
+
 ## Candidates — bitten once
 
 - **A field I can set is not a sign-off I hold.** `approved: true` on an
@@ -36,14 +74,26 @@ row moves to `LEDGER_ARCHIVE.md` verbatim in the same edit that supersedes it.
   left as is: an over-trigger costs a note, an under-trigger ships an undated
   price.
 
-- **A shot's start is not the moment its content appears.** A row shot began at
-  one phrase but showed nothing until each Cent's own phrase. With the old voice
-  the gap was short; the re-voiced take paused 2.6 s there, and the ScrappyT v1
-  render held an empty titled frame (blackdetect 91.07-93.67 s, 2026-10-27).
-  Stills at shot midpoints missed it, because the midpoint fell after the first
-  Cent. *Separating observation:* blackdetect on the render, or a still at each
-  shot's first frame, not its middle. Fixed by starting the shot at its first
-  Cent's phrase; caught before delivery.
+- **The last change before a render is the one no still has seen.** Review
+  stills were rendered and looked at, then one more layout change (a grid made
+  to wrap so its last row centres) went straight into the full render. It made
+  each option wider than its column, so four columns became three and the
+  seventh Cent sat on the note below. DOPEMIND "what to add next", 2026-11-09;
+  caught on a contact sheet of the export. *Separating observation:* look at
+  the export, or re-render the stills after the last edit. Do not reuse stills
+  from before it. `AskCard` now refuses when its rows would reach the note;
+  a three-column control refused.
+
+- **A transcript identical to the prompt is not evidence of what was said.**
+  The word-for-word check compares a scribe_v1 transcript with the script. On
+  the ElevenLabs creative flows, scribe returned the prompt's own text, so the
+  check passes by construction: it works as forced alignment, not as
+  recognition. A match that comes back exactly identical is the signal to
+  suspect the instrument. *Separating observation:* an independent recogniser
+  (Whisper) on the audio, or a listen. Whisper was blocked here: the proxy
+  refused Hugging Face's file host, then the download returned 403 (DOPEMIND
+  "what to add next", 2026-11-09). Unresolved, so the take's words rest on a
+  listen.
 
 Written as a near-miss identity: the two things are close enough that confusing
 them was reasonable.
@@ -139,16 +189,13 @@ them was reasonable.
   frame while seeking. The comparison that depended on it returned "could not
   compare", which read as a missing file rather than a malformed command.
 
-- **A render of the film you changed is not a check of the shared code you
-  changed.** A find-and-replace in a shared component file, made for one film,
-  also hit a component only another film uses. That film's render had already
-  shipped, so nothing re-ran it, and the edit referenced a prop the other
-  component never declared. Found 2026-10-26 while merging: `CentFlip` in
-  `src/style/wall.tsx` (Daidatep's flip shot) threw `ReferenceError: subtitle`
-  after #6129 v2 (16ace98). Seen red with `tsc --noEmit` and `remotion still` at
-  frame 870, green after the fix. *Separating observation:* `npx tsc --noEmit`
-  over the whole project after any edit to `src/style/`, not a render of one
-  film.
+- **A count of what a filter left, taken with the filter's own match, reads zero
+  whether the filter worked or not.** Prices were hidden on cents.vision before
+  capture by matching the ฿ glyph. The match failed and hid 0 elements. The check
+  "visible prices left: 0" used the same match, so it passed. DOPEMIND "what to
+  add next", 2026-11-09. It was caught by looking at the capture: every price was
+  still there. *Separating observation:* count with a different matcher from the
+  one that acted (here, a number regex on all text), or look.
 
 ## Refuted — killed by a measurement, do not re-investigate
 

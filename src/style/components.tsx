@@ -11,6 +11,7 @@ import { ONECENT } from "./onecent";
 import { WallBoard } from "./wallboard";
 import { WallOpener } from "./wallopener";
 import { TraitTally } from "./traittally";
+import { ASKNEXT } from "./asknext";
 
 const useFade = useShotFade;
 
@@ -188,5 +189,20 @@ export const CaptionLayer: React.FC<{
   );
 };
 
-export const REGISTRY = { TitleCard, PullQuote, StatReveal, AssetShot, Credits, ...SETS, ...NARROWING, ...WALL, WallBoard, WallOpener, TraitTally, ...ONECENT } as const;
+// A name exported by two groups would be decided by spread order: the later one silently
+// replaces the earlier everywhere, in every film. A second CentLook (asknext, 2026-11-09)
+// nearly did that to the One Cent films. Refuse at load instead.
+const GROUPS: Record<string, Record<string, unknown>> = {
+  core: { TitleCard, PullQuote, StatReveal, AssetShot, Credits }, SETS, NARROWING, WALL,
+  single: { WallBoard, WallOpener, TraitTally }, ONECENT, ASKNEXT,
+};
+{
+  const owner = new Map<string, string>();
+  for (const [g, comps] of Object.entries(GROUPS))
+    for (const name of Object.keys(comps)) {
+      if (owner.has(name)) throw new Error(`REGISTRY: "${name}" is exported by both ${owner.get(name)} and ${g}`);
+      owner.set(name, g);
+    }
+}
+export const REGISTRY = { TitleCard, PullQuote, StatReveal, AssetShot, Credits, ...SETS, ...NARROWING, ...WALL, WallBoard, WallOpener, TraitTally, ...ONECENT, ...ASKNEXT } as const;
 export type ComponentName = keyof typeof REGISTRY;

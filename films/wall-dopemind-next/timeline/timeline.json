@@ -1,0 +1,1270 @@
+{
+ "essay": {
+  "title": "What to add next",
+  "subtitle": "DOPEMIND's question",
+  "author": "shibboleth",
+  "source": "Numismatists Discord; https://cents.vision",
+  "version": "v2 (2026-11-09)"
+ },
+ "_what": "First film in the 'What to add next' format: a collector's question, the real Discord screenshots, what is listed and what is interesting about each suggestion. Every coin is a real Cent by number; every figure is checked above against the 2026-11-09 snapshots. No prices, no wallet addresses.",
+ "shots": [
+  {
+   "shot_id": "s00_question",
+   "start": {
+    "at_start": true
+   },
+   "end": {
+    "at_phrase": "As of November twenty"
+   },
+   "purpose": "DOPEMIND's question, the user's screenshot. Opens readable on frame 0 (name, time, first sentence), then reads the line in sections.",
+   "component": "ScreenCrop",
+   "props": {
+    "title": "Numismatists Discord",
+    "subtitle": "DOPEMIND · 8 November 2026",
+    "src": "assets/dopemind/discord_question.png",
+    "width": 1662,
+    "height": 240,
+    "start": [
+     20,
+     40,
+     800,
+     215
+    ],
+    "min_scale": 1.5,
+    "moves": [
+     {
+      "at_phrase": "What should I add",
+      "box": [
+       155,
+       150,
+       795,
+       215
+      ]
+     },
+     {
+      "at_phrase": "Wondering about the",
+      "box": [
+       790,
+       150,
+       1430,
+       215
+      ]
+     },
+     {
+      "at_phrase": "for this collection",
+      "box": [
+       990,
+       150,
+       1630,
+       215
+      ]
+     }
+    ]
+   },
+   "visual_kind": "code"
+  },
+  {
+   "shot_id": "s01_wall",
+   "start": {
+    "at_phrase": "As of November twenty"
+   },
+   "end": {
+    "at_phrase": "centoshi replied"
+   },
+   "purpose": "The Wall's 12 Cents, counting up (snapshot 2026-11-09).",
+   "component": "WallBoard",
+   "props": {
+    "wall": "dopemind",
+    "show": "grid",
+    "moves": [
+     {
+      "at_phrase": "As of November twenty",
+      "until_phrase": "to nineteen eighty-one",
+      "target": {
+       "grid_end": true
+      }
+     }
+    ],
+    "readout": {
+     "at_phrase": "vision holds twelve",
+     "count": {
+      "from": 0,
+      "to": 12,
+      "until_phrase": "Cents, from nineteen sixty-three",
+      "suffix": " Cents"
+     }
+    }
+   },
+   "visual_kind": "code"
+  },
+  {
+   "shot_id": "s02_centoshi",
+   "start": {
+    "at_phrase": "centoshi replied"
+   },
+   "end": {
+    "at_phrase": "Dopemind wrote back"
+   },
+   "purpose": "centoshi's reply, the user's screenshot (pre-cropped above the sticker). Framed on the text: the avatar, which carries uncleared art, stays out.",
+   "component": "ScreenCrop",
+   "props": {
+    "title": "Numismatists Discord",
+    "subtitle": "centoshi · 9 November 2026",
+    "src": "assets/dopemind/discord_centoshi.png",
+    "width": 1720,
+    "height": 260,
+    "start": [
+     150,
+     0,
+     800,
+     175
+    ]
+   },
+   "visual_kind": "code"
+  },
+  {
+   "shot_id": "s03_1971",
+   "start": {
+    "at_phrase": "Dopemind wrote back"
+   },
+   "end": {
+    "at_phrase": "centoshi holds sixteen"
+   },
+   "purpose": "DOPEMIND's answer, the user's screenshot (pre-cropped: no sticker, no later messages).",
+   "component": "ScreenCrop",
+   "props": {
+    "title": "Numismatists Discord",
+    "subtitle": "DOPEMIND · 9 November 2026",
+    "src": "assets/dopemind/discord_1971.png",
+    "width": 1720,
+    "height": 170,
+    "start": [
+     150,
+     0,
+     800,
+     168
+    ]
+   },
+   "visual_kind": "code"
+  },
+  {
+   "shot_id": "s04_c71",
+   "start": {
+    "at_phrase": "centoshi holds sixteen"
+   },
+   "end": {
+    "at_phrase": "Of nineteen seventy-one, Martin"
+   },
+   "purpose": "centoshi's Wall: its 16 Cents from 1971 ringed (most of any collector; artist wallet excluded).",
+   "component": "WallBoard",
+   "props": {
+    "wall": "centoshi",
+    "show": "grid",
+    "moves": [
+     {
+      "at_phrase": "centoshi holds sixteen",
+      "until_phrase": "more than any other",
+      "target": {
+       "grid_end": true
+      }
+     }
+    ],
+    "highlights": [
+     {
+      "at_phrase": "centoshi holds sixteen",
+      "group": "y1971"
+     }
+    ],
+    "readout": {
+     "at_phrase": "centoshi holds sixteen",
+     "text": "16 from 1971"
+    }
+   },
+   "visual_kind": "code"
+  },
+  {
+   "shot_id": "s05_lehnen",
+   "start": {
+    "at_phrase": "Of nineteen seventy-one, Martin"
+   },
+   "end": {
+    "at_phrase": "On November ninth"
+   },
+   "purpose": "NYT front page, 16 Aug 1971 (cleared by the user); Lehnen's line, verbatim from 'CENTS – Reflections on Mint Years' (Medium, 8 Mar 2025).",
+   "component": "QuoteOver",
+   "props": {
+    "title": "1971",
+    "subtitle": "The year money left gold",
+    "src": "assets/dopemind/nyt_1971_crop.jpg",
+    "img_w": 713,
+    "img_h": 391,
+    "img_caption": "The New York Times, 16 August 1971",
+    "quote": "“It was the year the United States abandoned the gold standard, severing the connection between currency and tangible value…”",
+    "attribution": "Martin Lehnen, 2025",
+    "quote_at": "It was the year",
+    "quoteSize": 50
+   },
+   "visual_kind": "code"
+  },
+  {
+   "shot_id": "s06_market71",
+   "start": {
+    "at_phrase": "On November ninth"
+   },
+   "end": {
+    "at_phrase": "Number twenty-seven seventy-nine"
+   },
+   "purpose": "cents.vision in Market mode, *1971, On Sale: Hits 362, the three listed first. Prices hidden before capture (README).",
+   "component": "ScreenCrop",
+   "props": {
+    "title": "cents.vision",
+    "subtitle": "1971 · Market · 9 Nov 2026",
+    "src": "vision/dm_1971_market.jpg",
+    "width": 2160,
+    "height": 2600,
+    "start": [
+     600,
+     40,
+     1300,
+     400
+    ],
+    "moves": [
+     {
+      "at_phrase": "three of the three",
+      "box": [
+       10,
+       1300,
+       640,
+       1560
+      ],
+      "mark": true
+     }
+    ]
+   },
+   "visual_kind": "code"
+  },
+  {
+   "shot_id": "s07_2779",
+   "start": {
+    "at_phrase": "Number twenty-seven seventy-nine"
+   },
+   "end": {
+    "at_phrase": "Only thirteen Cents"
+   },
+   "purpose": "#2779: the Ghost portrait, then the whole face for the Full desert patina.",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65894632,
+    "n": 2779,
+    "front": "hires/2779.webp",
+    "moves": [
+     {
+      "at_phrase": "is a Ghost Cent",
+      "box": [
+       0.27,
+       0.15,
+       0.73,
+       0.82
+      ],
+      "mark": true
+     },
+     {
+      "at_phrase": "pale toning that",
+      "box": null
+     }
+    ],
+    "reads": [
+     {
+      "readout": "1971",
+      "caption": "Listed 9 November 2026"
+     },
+     {
+      "at_phrase": "is a Ghost Cent",
+      "readout": "Ghost",
+      "caption": "set apart from the field"
+     },
+     {
+      "at_phrase": "with full desert",
+      "readout": "Full Desert",
+      "caption": "dominates the coin"
+     }
+    ]
+   },
+   "visual_kind": "code"
+  },
+  {
+   "shot_id": "s08_gd",
+   "start": {
+    "at_phrase": "Only thirteen Cents"
+   },
+   "end": {
+    "at_phrase": "Number eighty-five fifty-six"
+   },
+   "purpose": "All 13 Cents that are both Ghost and Full Desert (trait-pool rule: a small pool is shown whole).",
+   "component": "CentScroll",
+   "props": {
+    "title": "Ghost + Desert",
+    "ns": [
+     2464,
+     2779,
+     3554,
+     4323,
+     4561,
+     5185,
+     6275,
+     6712,
+     7139,
+     7210,
+     8013,
+     8119,
+     8494
+    ],
+    "mark": 2779,
+    "readout": "13",
+    "caption": "Ghost, with Full Desert",
+    "until": "are both",
+    "cols": 4
+   },
+   "visual_kind": "code"
+  },
+  {
+   "shot_id": "s09_8556",
+   "start": {
+    "at_phrase": "Number eighty-five fifty-six"
+   },
+   "end": {
+    "at_phrase": "And number fifty-two"
+   },
+   "purpose": "#8556: date and D, the contaminated patch, then the whole face.",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65987753,
+    "n": 8556,
+    "front": "hires/8556.webp",
+    "moves": [
+     {
+      "at_phrase": "seventy-one from Denver, is",
+      "box": [
+       0.62,
+       0.56,
+       0.87,
+       0.75
+      ],
+      "mark": true
+     },
+     {
+      "at_phrase": "is contaminated",
+      "box": [
+       0.55,
+       0.12,
+       0.87,
+       0.37
+      ],
+      "mark": true
+     },
+     {
+      "at_phrase": "a major presence",
+      "box": null
+     }
+    ],
+    "reads": [
+     {
+      "readout": "1971-D",
+      "caption": "Listed 9 November 2026"
+     },
+     {
+      "at_phrase": "is contaminated",
+      "readout": "Contaminated",
+      "caption": "Alien Secretion"
+     },
+     {
+      "at_phrase": "with significant verdigris",
+      "readout": "Verdigris",
+      "caption": "Significant"
+     }
+    ]
+   },
+   "visual_kind": "code"
+  },
+  {
+   "shot_id": "s10_5298",
+   "start": {
+    "at_phrase": "And number fifty-two"
+   },
+   "end": {
+    "at_phrase": "Any one of them"
+   },
+   "purpose": "#5298: no visual trait; the date.",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65998430,
+    "n": 5298,
+    "front": "hires/5298.webp",
+    "moves": [
+     {
+      "at_phrase": "a clean record",
+      "box": [
+       0.62,
+       0.56,
+       0.87,
+       0.75
+      ],
+      "mark": true
+     }
+    ],
+    "reads": [
+     {
+      "readout": "1971",
+      "caption": "Listed 9 November 2026"
+     },
+     {
+      "at_phrase": "carries no visual",
+      "readout": "No trait",
+      "caption": "a clean record of its year"
+     }
+    ]
+   },
+   "visual_kind": "code"
+  },
+  {
+   "shot_id": "s11_club",
+   "start": {
+    "at_phrase": "Any one of them"
+   },
+   "end": {
+    "at_phrase": "Daidatep suggested six"
+   },
+   "purpose": "The three listed 1971s; any one adds the 1971 Club badge (replay +1971: '1971 1').",
+   "component": "GapSlots",
+   "props": {
+    "title": "DOPEMIND",
+    "subtitle": "Listed 1971s · 9 Nov 2026",
+    "cols": 3,
+    "slots": [
+     {
+      "label": "#2779",
+      "src": "hires/2779.webp"
+     },
+     {
+      "label": "#8556",
+      "src": "hires/8556.webp"
+     },
+     {
+      "label": "#5298",
+      "src": "hires/5298.webp"
+     }
+    ],
+    "readouts": [
+     {
+      "at_phrase": "seventy-one Club badge",
+      "text": "1971 Club",
+      "caption": "a badge for a 1971 Cent"
+     }
+    ]
+   },
+   "visual_kind": "code"
+  },
+  {
+   "shot_id": "s12_daidatep",
+   "start": {
+    "at_phrase": "Daidatep suggested six"
+   },
+   "end": {
+    "at_phrase": "all six were listed"
+   },
+   "purpose": "Daidatep's reply, the user's screenshot, read in four sections (min_scale 1.25: the screenshot's text then stands taller than the 48px captions).",
+   "component": "ScreenCrop",
+   "props": {
+    "title": "Numismatists Discord",
+    "subtitle": "Daidatep · 8 November 2026",
+    "src": "assets/dopemind/discord_daidatep.png",
+    "width": 1694,
+    "height": 352,
+    "start": [
+     150,
+     95,
+     830,
+     250
+    ],
+    "min_scale": 1.25,
+    "moves": [
+     {
+      "at_phrase": "six more",
+      "box": [
+       815,
+       135,
+       1610,
+       250
+      ]
+     },
+     {
+      "at_phrase": "I could go on",
+      "box": [
+       150,
+       190,
+       940,
+       250
+      ]
+     },
+     {
+      "at_phrase": "On the same day",
+      "box": [
+       300,
+       190,
+       1060,
+       250
+      ]
+     }
+    ]
+   },
+   "visual_kind": "code"
+  },
+  {
+   "shot_id": "s13_market6",
+   "start": {
+    "at_phrase": "all six were listed"
+   },
+   "end": {
+    "at_phrase": "Number eighty-six fifty-seven"
+   },
+   "purpose": "cents.vision Market, the six numbers, On Sale: all six listed (Hits 6).",
+   "component": "ScreenCrop",
+   "props": {
+    "title": "cents.vision",
+    "subtitle": "Daidatep's six · Market",
+    "src": "vision/dm_six_market.jpg",
+    "width": 2160,
+    "height": 1700,
+    "start": [
+     10,
+     1290,
+     1290,
+     1570
+    ],
+    "moves": [
+     {
+      "at_phrase": "listed for sale as well",
+      "box": [
+       10,
+       1300,
+       1290,
+       1560
+      ],
+      "mark": true
+     }
+    ]
+   },
+   "visual_kind": "code"
+  },
+  {
+   "shot_id": "s14_8657",
+   "start": {
+    "at_phrase": "Number eighty-six fifty-seven"
+   },
+   "end": {
+    "at_phrase": "Only ninety Cents"
+   },
+   "purpose": "#8657: the date.",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65990985,
+    "n": 8657,
+    "front": "hires/8657.webp",
+    "moves": [
+     {
+      "at_phrase": "is from nineteen sixty-five",
+      "box": [
+       0.62,
+       0.56,
+       0.87,
+       0.75
+      ],
+      "mark": true
+     }
+    ],
+    "reads": [
+     {
+      "readout": "1965",
+      "caption": "Daidatep's pick, 1 of 6"
+     }
+    ]
+   },
+   "visual_kind": "code"
+  },
+  {
+   "shot_id": "s15_years",
+   "start": {
+    "at_phrase": "Only ninety Cents"
+   },
+   "end": {
+    "at_phrase": "and none of them"
+   },
+   "purpose": "Cents per year in the 1960s (merged-new2.json, 2026-11-09): 1965 has the fewest, 90.",
+   "component": "YearBars",
+   "props": {
+    "title": "CENTS by year",
+    "subtitle": "the 1960s",
+    "highlight": "1965",
+    "highlight_at": "Only ninety Cents",
+    "bars": [
+     {
+      "label": "1960",
+      "value": 115
+     },
+     {
+      "label": "1961",
+      "value": 116
+     },
+     {
+      "label": "1962",
+      "value": 112
+     },
+     {
+      "label": "1963",
+      "value": 149
+     },
+     {
+      "label": "1964",
+      "value": 356
+     },
+     {
+      "label": "1965",
+      "value": 90
+     },
+     {
+      "label": "1966",
+      "value": 121
+     },
+     {
+      "label": "1967",
+      "value": 176
+     },
+     {
+      "label": "1968",
+      "value": 258
+     },
+     {
+      "label": "1969",
+      "value": 342
+     }
+    ],
+    "readouts": [
+     {
+      "at_phrase": "Only ninety Cents",
+      "text": "90",
+      "caption": "the fewest of any 1960s year"
+     }
+    ]
+   },
+   "visual_kind": "code"
+  },
+  {
+   "shot_id": "s16_8657b",
+   "start": {
+    "at_phrase": "and none of them"
+   },
+   "end": {
+    "at_phrase": "Number eighty-eight twenty"
+   },
+   "purpose": "#8657 again: under the date, no mint mark; then the whole face for the notable desert patina (no zoom: the patch is not pinned down on the photo).",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65990985,
+    "n": 8657,
+    "front": "hires/8657.webp",
+    "moves": [
+     {
+      "at_phrase": "and none of them",
+      "box": [
+       0.62,
+       0.6,
+       0.87,
+       0.79
+      ],
+      "mark": true
+     },
+     {
+      "at_phrase": "It has a notable",
+      "box": null
+     }
+    ],
+    "reads": [
+     {
+      "readout": "No mint mark",
+      "caption": "generally Philadelphia"
+     },
+     {
+      "at_phrase": "It has a notable",
+      "readout": "Desert",
+      "caption": "Notable: visible, local"
+     }
+    ]
+   },
+   "visual_kind": "code"
+  },
+  {
+   "shot_id": "s17_8820",
+   "start": {
+    "at_phrase": "Number eighty-eight twenty"
+   },
+   "end": {
+    "at_phrase": "On Dopemind's Wall, it"
+   },
+   "purpose": "#8820: date; verdigris along the left rim; red across the face; the pool size.",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65907201,
+    "n": 8820,
+    "front": "hires/8820.webp",
+    "moves": [
+     {
+      "at_phrase": "from nineteen seventy-two",
+      "box": [
+       0.62,
+       0.56,
+       0.87,
+       0.75
+      ],
+      "mark": true
+     },
+     {
+      "at_phrase": "verdigris along the rim",
+      "box": [
+       0.06,
+       0.24,
+       0.42,
+       0.9
+      ],
+      "mark": true
+     },
+     {
+      "at_phrase": "significant red across",
+      "box": null
+     }
+    ],
+    "reads": [
+     {
+      "readout": "1972",
+      "caption": "Daidatep's pick, 2 of 6"
+     },
+     {
+      "at_phrase": "verdigris along the rim",
+      "readout": "Verdigris",
+      "caption": "Notable, along the rim"
+     },
+     {
+      "at_phrase": "significant red across",
+      "readout": "Red",
+      "caption": "Significant"
+     },
+     {
+      "at_phrase": "one hundred and eighty-three",
+      "readout": "183",
+      "caption": "with significant red"
+     }
+    ]
+   },
+   "visual_kind": "code"
+  },
+  {
+   "shot_id": "s18_patinaset",
+   "start": {
+    "at_phrase": "On Dopemind's Wall, it"
+   },
+   "end": {
+    "at_phrase": "Number sixty-four fifty-one"
+   },
+   "purpose": "The Wall's verdigris, obsidian and desert, then #8820's red drops in: Patina Set (replay: +8820 adds 'Patina Set').",
+   "component": "GapSlots",
+   "props": {
+    "title": "DOPEMIND",
+    "subtitle": "Patina Set",
+    "cols": 4,
+    "slots": [
+     {
+      "label": "Verd.",
+      "sub": "#951",
+      "src": "hires/951.webp"
+     },
+     {
+      "label": "Obs.",
+      "sub": "#6935",
+      "src": "hires/6935.webp"
+     },
+     {
+      "label": "Desert",
+      "sub": "#3396",
+      "src": "hires/3396.webp"
+     },
+     {
+      "label": "Red",
+      "sub": "#8820",
+      "src": "hires/8820.webp",
+      "fill_at": "would complete a Patina"
+     }
+    ],
+    "readouts": [
+     {
+      "at_phrase": "all four base patinas",
+      "text": "Patina Set",
+      "caption": "all four base patinas"
+     }
+    ]
+   },
+   "visual_kind": "code"
+  },
+  {
+   "shot_id": "s19_6451",
+   "start": {
+    "at_phrase": "Number sixty-four fifty-one"
+   },
+   "end": {
+    "at_phrase": "Number sixty-eight seventy-five"
+   },
+   "purpose": "#6451: date; the darkened portrait; the pool size.",
+   "component": "CentLook",
+   "props": {
+    "inscription": 66000649,
+    "n": 6451,
+    "front": "hires/6451.webp",
+    "moves": [
+     {
+      "at_phrase": "from nineteen eighty",
+      "box": [
+       0.62,
+       0.56,
+       0.87,
+       0.75
+      ],
+      "mark": true
+     },
+     {
+      "at_phrase": "has significant obsidian",
+      "box": [
+       0.28,
+       0.12,
+       0.88,
+       0.72
+      ]
+     },
+     {
+      "at_phrase": "two hundred and twenty",
+      "box": null
+     }
+    ],
+    "reads": [
+     {
+      "readout": "1980",
+      "caption": "Daidatep's pick, 3 of 6"
+     },
+     {
+      "at_phrase": "has significant obsidian",
+      "readout": "Obsidian",
+      "caption": "Significant"
+     },
+     {
+      "at_phrase": "two hundred and twenty",
+      "readout": "220",
+      "caption": "with significant obsidian"
+     }
+    ]
+   },
+   "visual_kind": "code"
+  },
+  {
+   "shot_id": "s20_6875",
+   "start": {
+    "at_phrase": "Number sixty-eight seventy-five"
+   },
+   "end": {
+    "at_phrase": "In the Traits Atlas"
+   },
+   "purpose": "#6875: date; the abraded right side.",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65993171,
+    "n": 6875,
+    "front": "hires/6875.webp",
+    "moves": [
+     {
+      "at_phrase": "from nineteen sixty-seven",
+      "box": [
+       0.62,
+       0.56,
+       0.87,
+       0.75
+      ],
+      "mark": true
+     },
+     {
+      "at_phrase": "heavily abraded Cents",
+      "box": [
+       0.55,
+       0.15,
+       0.92,
+       0.9
+      ],
+      "mark": true
+     }
+    ],
+    "reads": [
+     {
+      "readout": "1967",
+      "caption": "Daidatep's pick, 4 of 6"
+     },
+     {
+      "at_phrase": "is one of forty-four",
+      "readout": "1 of 44",
+      "caption": "heavily abraded"
+     }
+    ]
+   },
+   "visual_kind": "code"
+  },
+  {
+   "shot_id": "s21_atlas",
+   "start": {
+    "at_phrase": "In the Traits Atlas"
+   },
+   "end": {
+    "at_phrase": "Number sixty-seven eighty-two"
+   },
+   "purpose": "The Atlas's Heavy grade, verbatim (films/traits/script/atlas/abraded.txt).",
+   "component": "QuoteOver",
+   "props": {
+    "title": "Cent #6875",
+    "subtitle": "Heavily abraded",
+    "cent": "hires/6875.webp",
+    "quote": "Heavy: “abrasion dominates the read of the coin; broad fields/devices visibly missing metal.”",
+    "attribution": "Traits Atlas, CENTS Trait Council",
+    "quote_at": "heavy abrasion",
+    "quoteSize": 52
+   },
+   "visual_kind": "code"
+  },
+  {
+   "shot_id": "s22_6782",
+   "start": {
+    "at_phrase": "Number sixty-seven eighty-two"
+   },
+   "end": {
+    "at_phrase": "And number fifty-eight"
+   },
+   "purpose": "#6782: date and D; the green right side; the badge (replay +6782: '1969 1').",
+   "component": "CentLook",
+   "props": {
+    "inscription": 66001558,
+    "n": 6782,
+    "front": "hires/6782.webp",
+    "moves": [
+     {
+      "at_phrase": "sixty-nine from Denver",
+      "box": [
+       0.62,
+       0.56,
+       0.87,
+       0.75
+      ],
+      "mark": true
+     },
+     {
+      "at_phrase": "with obsidian and",
+      "box": [
+       0.45,
+       0.28,
+       0.97,
+       0.85
+      ]
+     },
+     {
+      "at_phrase": "It would add the nineteen",
+      "box": null
+     }
+    ],
+    "reads": [
+     {
+      "readout": "1969-D",
+      "caption": "Daidatep's pick, 5 of 6"
+     },
+     {
+      "at_phrase": "with obsidian and",
+      "readout": "Verdigris",
+      "caption": "Significant + obsidian"
+     },
+     {
+      "at_phrase": "It would add the nineteen",
+      "readout": "1969 Club",
+      "caption": "a badge for a 1969 Cent"
+     }
+    ]
+   },
+   "visual_kind": "code"
+  },
+  {
+   "shot_id": "s23_5888",
+   "start": {
+    "at_phrase": "And number fifty-eight"
+   },
+   "end": {
+    "at_phrase": "Only twenty-eight Cents"
+   },
+   "purpose": "#5888: date and D; the whole face for the notable verdigris (no zoom: not pinned down on the photo).",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65986180,
+    "n": 5888,
+    "front": "hires/5888.webp",
+    "moves": [
+     {
+      "at_phrase": "fifty-six from Denver",
+      "box": [
+       0.62,
+       0.56,
+       0.87,
+       0.75
+      ],
+      "mark": true
+     },
+     {
+      "at_phrase": "with notable verdigris",
+      "box": null
+     }
+    ],
+    "reads": [
+     {
+      "readout": "1956-D",
+      "caption": "Daidatep's pick, 6 of 6"
+     },
+     {
+      "at_phrase": "with notable verdigris",
+      "readout": "Verdigris",
+      "caption": "Notable: visible, local"
+     }
+    ]
+   },
+   "visual_kind": "code"
+  },
+  {
+   "shot_id": "s24_1956",
+   "start": {
+    "at_phrase": "Only twenty-eight Cents"
+   },
+   "end": {
+    "at_phrase": "It would be the Wall's"
+   },
+   "purpose": "Every Cent from 1956, all 28 (18 from Denver).",
+   "component": "CentScroll",
+   "props": {
+    "title": "1956",
+    "ns": [
+     343,
+     514,
+     596,
+     1169,
+     1293,
+     1895,
+     1978,
+     2123,
+     3484,
+     3630,
+     3721,
+     3756,
+     3824,
+     3995,
+     5147,
+     5670,
+     5747,
+     5888,
+     6615,
+     6789,
+     6870,
+     7379,
+     7531,
+     7606,
+     7776,
+     9761,
+     9908,
+     9989
+    ],
+    "mark": 5888,
+    "readout": "28",
+    "caption": "from 1956; 18 from Denver",
+    "until": "of them from Denver",
+    "cols": 4
+   },
+   "visual_kind": "code"
+  },
+  {
+   "shot_id": "s25_wheat",
+   "start": {
+    "at_phrase": "It would be the Wall's"
+   },
+   "end": {
+    "at_phrase": "To see every Cent"
+   },
+   "purpose": "#5888 turns over: the wheat ears (replay +5888: 'Wheat 1').",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65986180,
+    "n": 5888,
+    "front": "hires/5888.webp",
+    "moves": [],
+    "reads": [
+     {
+      "at_phrase": "first wheat penny",
+      "readout": "Wheat",
+      "caption": "the Wall's first"
+     }
+    ],
+    "back": "hires/5888_back.webp",
+    "flip_at": "first wheat penny"
+   },
+   "visual_kind": "code"
+  },
+  {
+   "shot_id": "s26_lab",
+   "start": {
+    "at_phrase": "To see every Cent"
+   },
+   "end": {
+    "at_phrase": "from Lab to Market"
+   },
+   "purpose": "cents.vision Traits Lab, the Lab/Market switch.",
+   "component": "ScreenCrop",
+   "props": {
+    "title": "cents.vision",
+    "subtitle": "Traits Lab",
+    "src": "vision/traits_lab.png",
+    "width": 2964,
+    "height": 1654,
+    "start": [
+     300,
+     0,
+     1700,
+     1210
+    ],
+    "moves": [
+     {
+      "at_phrase": "switch cents dot vision",
+      "box": [
+       680,
+       135,
+       1020,
+       225
+      ],
+      "mark": true
+     }
+    ]
+   },
+   "visual_kind": "code"
+  },
+  {
+   "shot_id": "s27_market",
+   "start": {
+    "at_phrase": "from Lab to Market"
+   },
+   "end": {
+    "at_phrase": "What should Dopemind add"
+   },
+   "purpose": "The same switch, set to Market.",
+   "component": "ScreenCrop",
+   "props": {
+    "title": "cents.vision",
+    "subtitle": "Market",
+    "src": "vision/dm_six_market.jpg",
+    "width": 2160,
+    "height": 1700,
+    "start": [
+     590,
+     140,
+     945,
+     225
+    ],
+    "moves": [
+     {
+      "at_phrase": "Lab to Market",
+      "box": [
+       590,
+       140,
+       945,
+       225
+      ],
+      "mark": true
+     }
+    ]
+   },
+   "visual_kind": "code"
+  },
+  {
+   "shot_id": "s28_ask",
+   "start": {
+    "at_phrase": "What should Dopemind add"
+   },
+   "end": {
+    "after_phrase": "Tell us what you think",
+    "plus": 2.0
+   },
+   "purpose": "The question to viewers, over the options the film put forward.",
+   "component": "AskCard",
+   "props": {
+    "question": "What should DOPEMIND add next?",
+    "cols": 4,
+    "note": "Tell us what you think",
+    "options": [
+     {
+      "label": "1971"
+     },
+     {
+      "label": "#8657",
+      "src": "hires/8657.webp"
+     },
+     {
+      "label": "#8820",
+      "src": "hires/8820.webp"
+     },
+     {
+      "label": "#6451",
+      "src": "hires/6451.webp"
+     },
+     {
+      "label": "#6875",
+      "src": "hires/6875.webp"
+     },
+     {
+      "label": "#6782",
+      "src": "hires/6782.webp"
+     },
+     {
+      "label": "#5888",
+      "src": "hires/5888.webp"
+     }
+    ]
+   },
+   "visual_kind": "code"
+  },
+  {
+   "shot_id": "s29_credits",
+   "start": {
+    "after_phrase": "Tell us what you think",
+    "plus": 2.0
+   },
+   "end": {
+    "at_end": true
+   },
+   "purpose": "End credits.",
+   "component": "Credits",
+   "props": {
+    "lines": [
+     "Images: Rutherford Chang via cents.vision (site by Dr. Martin Lehnen)",
+     "Discord: Numismatists server, 8 and 9 November 2026",
+     "Listings and Collector Walls: cents.vision, 9 November 2026",
+     "Quote: Martin Lehnen, “CENTS – Reflections on Mint Years”, March 2025",
+     "Trait grades: Traits Atlas, CENTS Trait Council",
+     "Front page: The New York Times, 16 August 1971"
+    ],
+    "url": "cents.gallery"
+   },
+   "visual_kind": "code"
+  }
+ ]
+}
