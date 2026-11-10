@@ -231,5 +231,52 @@ export const CentFilter: React.FC<Anchored & {
 };
 (CentFilter as any).wantsAlignment = true;
 
-export const WALLCHARTS = { DotColumns, CentFilter } as const;
+/**
+ * `PostExcerpts`: words a collector posted, quoted verbatim and credited under the title, one
+ * excerpt per block. Each excerpt lights as its phrase is spoken and the others dim. Plain type,
+ * never a mock-up of the platform's interface; the post itself is named in `source`.
+ */
+export const PostExcerpts: React.FC<Anchored & {
+  title: string; subtitle: string; excerpts: { text: string; at_phrase: string }[]; source?: string;
+}> = (props) => {
+  const { title, subtitle, excerpts, source } = props;
+  const frame = useCurrentFrame();
+  const fade = useShotFade();
+  const at = useAt(props);
+  const head = useEntrance("rise", 0);
+  const fs = excerpts.map((e) => at(e.at_phrase));
+  for (let i = 1; i < fs.length; i++) if (fs[i]! < fs[i - 1]!) throw new Error("PostExcerpts: excerpts are out of spoken order");
+  let k = -1;
+  fs.forEach((f, i) => { if (frame >= f) k = i; });
+  const base = 0.6 - 0.28 * (fs.length ? ease(frame, fs[0]!, 12) : 0);   // all half-lit until the first is read
+  const t = k >= 0 ? ease(frame, fs[k]!, 12) : 0;
+  return (
+    <div style={{ position: "absolute", inset: 0, opacity: fade }}>
+      <div style={{ position: "absolute", left: X0, top: TITLE.y0, width: X1 - X0, opacity: head.opacity, transform: `translateY(${head.y}px)` }}>
+        <SafeText role="display" fontSize={68} maxLines={1} style={{ fontWeight: 700, letterSpacing: -1 }}>{title}</SafeText>
+        <SafeText role="body" fontSize={46} maxLines={1} color={COLOR.inkDim}>{subtitle}</SafeText>
+      </div>
+      <div style={{ position: "absolute", left: X0, top: STAGE.y0 + 60, width: X1 - X0, display: "flex", flexDirection: "column", gap: 64 }}>
+        {excerpts.map((e, i) => {
+          const lit = i === k ? t : i === k - 1 ? 1 - t : 0;
+          const enter = ease(frame, 6 + i * 6, 10);
+          return (
+            <div key={i} style={{ display: "flex", gap: 32, opacity: enter * (base + (1 - base) * lit) }}>
+              <div style={{ width: 8, flex: "none", borderRadius: 4, background: COLOR.accent }} />
+              <SafeText role="display" fontSize={66} maxLines={4} style={{ fontWeight: 500, textWrap: "balance" }}>{`\u201c${e.text}\u201d`}</SafeText>
+            </div>
+          );
+        })}
+      </div>
+      {source ? (
+        <div style={{ position: "absolute", left: X0, top: BAND.y0 + 40, width: X1 - X0, opacity: head.opacity }}>
+          <SafeText role="body" fontSize={46} maxLines={1} color={COLOR.inkDim}>{source}</SafeText>
+        </div>
+      ) : null}
+    </div>
+  );
+};
+(PostExcerpts as any).wantsAlignment = true;
+
+export const WALLCHARTS = { DotColumns, CentFilter, PostExcerpts } as const;
 (DotColumns as any).wantsAlignment = true;

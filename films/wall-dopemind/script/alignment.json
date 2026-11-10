@@ -1,5 +1,5 @@
 {
- "_source": "eee v2_take1 (eleven_v4, [thoughtfully] [calm] per line, generation F865Go0eFrPzQiWH2NzB, flow UZNvcf3IBLuAk76tCa40), script v2; word timings from scribe_v1 on the take fetched by URL (asset VgbJUlxrx3F9AUiIfBta, no prompt), mapped onto the TTS text by check_heard.py",
+ "_source": "eee: v2_take1 (generation F865Go0eFrPzQiWH2NzB) with the X-post line v3_line_take2 (generation 9UPj2HFwih1bo6KcObqo) spliced in after the Bitcoin quote; eleven_v4, [thoughtfully] [calm]; flow UZNvcf3IBLuAk76tCa40; script v3; word timings from scribe_v1 on each take fetched by URL (assets VgbJUlxrx3F9AUiIfBta, 0MpLNNislvRfMsRGZBIx), mapped by check_heard.py",
  "words": [
   {
    "word": "This",
@@ -1792,65 +1792,190 @@
    "end": 130.479
   },
   {
-   "word": "Find",
+   "word": "On",
    "start": 131.06,
-   "end": 131.28
+   "end": 131.18
   },
   {
-   "word": "all",
-   "start": 131.46,
-   "end": 131.56
-  },
-  {
-   "word": "of",
-   "start": 131.62,
-   "end": 131.7
-  },
-  {
-   "word": "the",
-   "start": 131.74,
-   "end": 131.8
-  },
-  {
-   "word": "Collector",
-   "start": 131.84,
-   "end": 132.18
-  },
-  {
-   "word": "Walls",
-   "start": 132.26,
-   "end": 132.58
+   "word": "X,",
+   "start": 131.4,
+   "end": 131.72
   },
   {
    "word": "on",
-   "start": 132.62,
-   "end": 132.82
+   "start": 132.16,
+   "end": 132.24
+  },
+  {
+   "word": "November",
+   "start": 132.28,
+   "end": 132.64
+  },
+  {
+   "word": "ninth,",
+   "start": 132.9,
+   "end": 133.1
+  },
+  {
+   "word": "twenty",
+   "start": 133.34,
+   "end": 133.629
+  },
+  {
+   "word": "twenty-six,",
+   "start": 133.629,
+   "end": 134.16
+  },
+  {
+   "word": "Dope",
+   "start": 134.56,
+   "end": 134.75
+  },
+  {
+   "word": "Mind",
+   "start": 134.75,
+   "end": 134.939
+  },
+  {
+   "word": "called",
+   "start": 135.04,
+   "end": 135.24
+  },
+  {
+   "word": "Cents",
+   "start": 135.36,
+   "end": 135.72
+  },
+  {
+   "word": "\"next",
+   "start": 136.02,
+   "end": 136.34
+  },
+  {
+   "word": "level",
+   "start": 136.4,
+   "end": 136.6
+  },
+  {
+   "word": "concept",
+   "start": 136.74,
+   "end": 137.22
+  },
+  {
+   "word": "art\",",
+   "start": 137.3,
+   "end": 137.5
+  },
+  {
+   "word": "and",
+   "start": 137.76,
+   "end": 137.86
+  },
+  {
+   "word": "wrote:",
+   "start": 137.9,
+   "end": 138.16
+  },
+  {
+   "word": "\"This",
+   "start": 138.16,
+   "end": 139.02
+  },
+  {
+   "word": "is",
+   "start": 139.16,
+   "end": 139.28
+  },
+  {
+   "word": "performance",
+   "start": 139.3,
+   "end": 139.86
+  },
+  {
+   "word": "of",
+   "start": 139.92,
+   "end": 140.06
+  },
+  {
+   "word": "value.",
+   "start": 140.1,
+   "end": 140.52
+  },
+  {
+   "word": "I",
+   "start": 141.04,
+   "end": 141.1
+  },
+  {
+   "word": "study",
+   "start": 141.22,
+   "end": 141.48
+  },
+  {
+   "word": "it.\"",
+   "start": 141.54,
+   "end": 141.72
+  },
+  {
+   "word": "Find",
+   "start": 142.26,
+   "end": 142.48
+  },
+  {
+   "word": "all",
+   "start": 142.66,
+   "end": 142.76
+  },
+  {
+   "word": "of",
+   "start": 142.82,
+   "end": 142.9
+  },
+  {
+   "word": "the",
+   "start": 142.94,
+   "end": 143.0
+  },
+  {
+   "word": "Collector",
+   "start": 143.04,
+   "end": 143.38
+  },
+  {
+   "word": "Walls",
+   "start": 143.46,
+   "end": 143.78
+  },
+  {
+   "word": "on",
+   "start": 143.82,
+   "end": 144.02
   },
   {
    "word": "cents",
-   "start": 132.86,
-   "end": 133.88
+   "start": 144.06,
+   "end": 145.08
   },
   {
    "word": "dot",
-   "start": 132.86,
-   "end": 133.88
+   "start": 144.06,
+   "end": 145.08
   },
   {
    "word": "vision",
-   "start": 132.86,
-   "end": 133.88
+   "start": 144.06,
+   "end": 145.08
   },
   {
    "word": "under",
-   "start": 133.92,
-   "end": 134.1
+   "start": 145.12,
+   "end": 145.3
   },
   {
    "word": "Collectors.",
-   "start": 134.2,
-   "end": 134.84
+   "start": 145.4,
+   "end": 146.04
   }
  ],
- "duration": 140.94
+ "duration": 152.14
 }

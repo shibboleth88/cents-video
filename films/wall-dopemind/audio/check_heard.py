@@ -23,7 +23,8 @@ UNITS = {w: i for i, w in enumerate("zero one two three four five six seven eigh
                                     "fourteen fifteen sixteen seventeen eighteen nineteen".split())}
 TENS = {w: 10 * i for i, w in enumerate("_ _ twenty thirty forty fifty sixty seventy eighty ninety".split()) if w != "_"}
 NUMWORDS = set(UNITS) | set(TENS) | {"hundred", "thousand"}
-HOMOPHONES = {("where", "wear")}   # (heard, said)
+HOMOPHONES = {("where", "wear"), ("sense", "cents")}   # (heard, said); v3: "Cents" came back as "Sense"
+ORDINALS = {"ninth": "9"}          # spoken ordinal -> the digits a recogniser writes ("9th" -> "9")
 
 
 def groups_to_digits(ws):
@@ -53,7 +54,9 @@ def norm(text):
     t = text.lower()
     t = re.sub(r"\[[a-z ]+\]", " ", t)                    # direction tags, if any reached the text
     t = re.sub(r"(\d),(\d{3})", r"\1\2", t)               # 10,000 -> 10000
-    t = t.replace("cents.vision", "cents dot vision").replace("dope mind", "dopemind")
+    t = t.replace("cents.vision", "cents dot vision").replace("dope_mind", "dope mind").replace("dope mind", "dopemind")
+    t = re.sub(r"\b(\d+)(st|nd|rd|th)\b", r"\1", t)                  # 9th -> 9
+    for w, d in ORDINALS.items(): t = re.sub(rf"\b{w}\b", d, t)        # ninth -> 9
     # Punctuation ends a number run ("nineteen seventy-nine, one of the three" is 1979 then 1),
     # and is then dropped, so it never has to agree between the two sides.
     t = re.sub(r"[.,;:!?\"]", " | ", t.replace("-", " "))
@@ -102,7 +105,9 @@ if __name__ == "__main__" and "--write-alignment" not in sys.argv:
 def _subtokens(word):
     t = word.lower()
     t = re.sub(r"\[[a-z ]+\]", " ", t)
-    t = re.sub(r"(\d),(\d{3})", r"\1\2", t).replace("cents.vision", "cents dot vision")
+    t = re.sub(r"(\d),(\d{3})", r"\1\2", t).replace("cents.vision", "cents dot vision").replace("dope_mind", "dope mind")
+    t = re.sub(r"\b(\d+)(st|nd|rd|th)\b", r"\1", t)
+    for w, d in ORDINALS.items(): t = re.sub(rf"\b{w}\b", d, t)
     t = re.sub(r"[.,;:!?\"]", " | ", t.replace("-", " "))
     return re.sub(r"[^a-z0-9|]+", " ", t).split()
 

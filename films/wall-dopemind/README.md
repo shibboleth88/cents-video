@@ -29,6 +29,17 @@ hint and Daidatep's picks. The two films share one data snapshot and the #478 sp
   - The hand-off from the card to the spin is seamless. The coin's box was measured either side of the cut: centre (551, 799) → (552, 800), height 490 → 492 px.
 - **Images.** 1050 px cents.vision fronts are in `public/hires/` (gitignored; copies in `/mnt/project-files/collector-wall/highres/`). Traits Atlas captures are in `public/vision/` (copies and the capture script in `/mnt/project-files/collector-wall/dopemind/vision/`).
 
+## v3 (2026-11-10)
+
+DOPEMIND's own post about CENTS, which the user asked for on 2026-11-09 ("can we use dopemind's twitter posts about Cents"), was found on 2026-11-10 through the user's twitterapi.io access (record: `/mnt/project-files/collector-wall/dopemind-x/twitterapi/`). v2 is kept as `script/voiceover_v2.txt`, `script/alignment_v2.json`, `timeline/make_timeline_v2.py` and `audio/tts_text_v2.txt`.
+
+- **The post.** https://x.com/dopemind10/status/2119890111471231434, 9 Nov 2026, 20:29 UTC. Verbatim text re-read from the raw API response (`user_last_tweets_dopemind10_2026-11-10.json`). The film uses two of its lines as he wrote them, "CENTS by Rutherford Chang is next level concept art." and "This is performance of value. I study it.". It leaves out the Ordinals line (its wording joins the penny and the inscription, which our narration keeps apart) and the thank-you line.
+- **Narration.** One new line after the Bitcoin quote: *On X, on November 9, 2026, DOPEMIND called CENTS "next level concept art", and wrote: "This is performance of value. I study it."* It names DOPEMIND rather than "he", so the line still stands if the quote graphics are cut.
+  - Voiced alone (eee, eleven_v4, `[thoughtfully] [calm]`, `audio/tts_prompt_v3.txt`); take 2 (`audio/v3_line_take2.mp3`, generation 9UPj2HFwih1bo6KcObqo) chosen for its pauses at the colon and between the two sentences.
+  - Spliced into v2 take 1 at the pause after "history." (cut 130.73 s; 0.19 s and 0.05 s of silence either side, so both gaps are 0.58 s, the gap v2 left after each quote). `vo.wav` is 152.14 s.
+  - **Words checked by recognition:** the line was pushed, fetched by URL into an asset with no prompt (0MpLNNislvRfMsRGZBIx) and transcribed (`audio/v3_line_take2_urlscribe_words.json`). The two recognised transcripts are joined at the cut (`audio/v3_spliced_urlscribe_words.json`). `check_heard.py`: 377 tokens equal, with two printed homophones ("where" for "wear", "sense" for "Cents"); the control fails. v1 and v2 still pass after the checker learned "9th" = "ninth" and the "Dope_Mind" spelling.
+- **`PostExcerpts`** (`src/style/wallcharts.tsx`): quoted lines of a post, each lit as it is spoken, with the handle and date under the title. Plain type, not a mock-up of X. It refuses excerpts out of spoken order.
+
 ## v2 (2026-11-09)
 
 The user asked for more on Speckles, for what else makes #478's combination unique, for the "13 with two types" line to follow "the fewest of any Wall with this Set", and for DOPEMIND's own posts about Cents. v1 is kept as `script/voiceover_v1.txt`, `script/alignment_v1.json`, `timeline/make_timeline_v1.py` and `audio/tts_text_v1.txt`.
@@ -78,6 +89,7 @@ The user asked for more on Speckles, for what else makes #478's combination uniq
 | **v2:** only five pair Speckles with significant obsidian; #478 is the only one of them with desert | significant is the exact grade: 478, 2900, 5118, 6666, 8063; only #478 has desert (notable) |
 | **v2:** no other Cent of the 10,000 carries all three | 1 under each reading (significant obsidian with desert of any grade; #478's exact grades; obsidian at significant or above). With obsidian of **any** grade it is 6 (478, 7313, 7927, 7965, 8360, 9643), so the on-screen label keeps "significant". #478 is **not** on cents.vision's 1/1 Trait Combo list (38 Cents, unique trait *pairs*), so the film does not call it 1/1 |
 | **v2:** "DOPEMIND has also written about CENTS" and the two quotes | media library C103 and C132, catalogued as DOPEMIND's; **creator credit to confirm with the user** |
+| **v3:** on 9 November 2026 DOPEMIND posted on X: "CENTS by Rutherford Chang is next level concept art." / "This is performance of value. I study it." | x.com/dopemind10/status/2119890111471231434, 20:29 UTC; verbatim in the raw twitterapi.io response of 2026-11-10 |
 
 **The zoom areas are my own reading.** For #8741, I took the white flecks for paint and the raised brown deposit by TRUST for obscure adhesive. For #3396, I took the pale runs at the right rim, by the bust and under LIBERTY for the drips and streaks. Each reading compares the photo with the Atlas definitions. The Atlas assigns the traits but not where they sit on the coin.
 

@@ -4,7 +4,7 @@
   "subtitle": "DOPEMIND",
   "author": "shibboleth",
   "source": "https://cents.vision/collectors.html",
-  "version": "v2 (2026-11-09)"
+  "version": "v3 (2026-11-10)"
  },
  "_what": "Collector Wall: DOPEMIND. Data as of 2026-11-09 (cents.vision snapshot). No wallet address appears.",
  "shots": [
@@ -35,7 +35,7 @@
      }
     ],
     "progress": {
-     "total_frames": 4228
+     "total_frames": 4564
     },
     "clip": {
      "src": "3dcents/478-360-30fps-alpha.webm",
@@ -1200,7 +1200,7 @@
     "at_phrase": "And: Bitcoin was the"
    },
    "end": {
-    "at_phrase": "Find all of the Collector"
+    "at_phrase": "On X, on November"
    },
    "purpose": "DOPEMIND's second graphic (media library C132; creator to confirm). The first two sentences are read; the last (Satoshi Nakamoto) shows on screen.",
    "visual_kind": "code",
@@ -1243,6 +1243,33 @@
       ]
      }
     ]
+   }
+  },
+  {
+   "shot_id": "d14d_xpost",
+   "start": {
+    "at_phrase": "On X, on November"
+   },
+   "end": {
+    "at_phrase": "Find all of the Collector"
+   },
+   "purpose": "DOPEMIND's own post, x.com/dopemind10/status/2119890111471231434 (9 Nov 2026 20:29 UTC), fetched verbatim through twitterapi.io on 2026-11-10 (dopemind-x/twitterapi/). Two of its lines, as written; the thanks line and the Ordinals line are not shown. Added in v3 (user, 2026-11-09: use his posts about Cents).",
+   "visual_kind": "code",
+   "component": "PostExcerpts",
+   "props": {
+    "title": "DOPEMIND",
+    "subtitle": "@dopemind10 on X, 9 Nov 2026",
+    "excerpts": [
+     {
+      "text": "CENTS by Rutherford Chang is next level concept art.",
+      "at_phrase": "called Cents next level"
+     },
+     {
+      "text": "This is performance of value. I study it.",
+      "at_phrase": "This is performance of value"
+     }
+    ],
+    "source": "Two lines of the post, verbatim"
    }
   },
   {
@@ -1302,7 +1329,8 @@
      "3D render: 3DCENTS by sinvalli",
      "Trait definitions and grades: Traits Atlas, CENTS Trait Council",
      "Collector Wall data: cents.vision, as of November 2026",
-     "Quote graphics: DOPEMIND, CENTS Discord"
+     "Quote graphics: DOPEMIND, CENTS Discord",
+     "Post: @dopemind10 on X, 9 November 2026"
     ],
     "url": "cents.gallery"
    }

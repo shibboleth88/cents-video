@@ -239,9 +239,25 @@ CENTS answers it materially,
 fixing that abstraction into history."
 
 61
-00:02:11,060 --> 00:02:12,580
-Find all of the Collector Walls
+00:02:11,060 --> 00:02:14,159
+On X, on November 9, 2026,
 
 62
-00:02:12,620 --> 00:02:14,840
+00:02:14,560 --> 00:02:16,599
+DOPEMIND called CENTS "next level
+
+63
+00:02:16,740 --> 00:02:18,159
+concept art", and wrote:
+
+64
+00:02:18,159 --> 00:02:21,719
+"This is performance of value. I study it."
+
+65
+00:02:22,259 --> 00:02:23,780
+Find all of the Collector Walls
+
+66
+00:02:23,819 --> 00:02:26,039
 on cents.vision under Collectors.
