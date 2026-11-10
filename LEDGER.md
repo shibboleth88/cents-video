@@ -18,6 +18,56 @@ row moves to `LEDGER_ARCHIVE.md` verbatim in the same edit that supersedes it.
   spoken and flagged rather than overwritten. Anchors match fuzzily
   (`MATCH_MIN`), keeping the ambiguity guard via a margin against the runner-up.
 
+- **A ranking measured over one class and one quantity is not true of the
+  neighbouring class or quantity.** A superlative ("the most", "the fewest",
+  "the only") carries the set it was ranked within and the number it was ranked
+  by. Rewording either makes a new claim that has not been measured, and the new
+  sentence reads just as plausibly as the old one. *Bitten twice.*
+  (1) Introduction film, revision 4 (2026-10-06, `LEDGER_ARCHIVE.md`): the
+  essay's "most reproduced artwork" (the image) was re-stated as "the most
+  reproduced physical object" (all manufactured things). The class changed.
+  (2) DOPEMIND Collector Wall (2026-11-09), caught in drafting: the measured fact
+  was that DOPEMIND *holds* the fewest contaminated Cents (2) of the 58 Walls
+  with a Contamination Set. The draft line was "the only Wall to complete the Set
+  with just two Cents". That is a claim about what Walls *could* do, and it is
+  false: other Walls hold a pair of Cents that covers three types between them.
+  The quantity changed from what a Wall holds to what it could select. A check
+  of every Wall's best pair found it.
+  **Remedy:** write down the class and the quantity next to each superlative,
+  then re-run the ranking under the sentence's own wording before the line is
+  voiced. The narration now says "holds only two contaminated Cents, the fewest
+  of any Wall with this Set". `films/wall-dopemind/data/contamination_sets.py`
+  refuses unless that minimum is held by DOPEMIND alone.
+  (3) DOPEMIND v2 (2026-11-09), caught by the re-measure before render: the
+  narration says #478 is the only Cent with Speckles, *significant* obsidian and
+  desert, and that is true (1 of 10,000). The on-screen label shortened it to
+  "Speckles · Obsidian · Desert". With obsidian of any grade, six Cents carry the
+  three. A label is read on its own, without the sentence that set its class, so
+  shortening a label is rewording the claim.
+  `films/wall-dopemind/data/speckles.py` now measures every reading a viewer
+  could give the line and refuses unless each one is #478 alone; it prints the
+  looser count (6) rather than claiming it.
+
+- **A transcript identical to the prompt is not evidence of what was said.**
+  A recogniser that is handed the text it was asked to check can return that
+  text, and the comparison then passes by construction: forced alignment, not
+  recognition. A match that comes back exactly identical, or carries tokens that
+  exist only in the prompt, is the sign to suspect the instrument. *Bitten
+  twice.* (1) DOPEMIND "what to add next" (2026-11-09, candidate on
+  `claude/project-thread-yyfgv7`): scribe_v1 on the ElevenLabs flow's TTS node
+  returned the prompt's own words. (2) DOPEMIND standard episode v1, the same
+  day: my "word-for-word" check passed only after I stripped the
+  `[thoughtfully] [calm]` tags out of the transcript. The tags were in it because
+  it was the prompt. The v1 README and PR claimed a check that had not happened.
+  **Remedy:** give the recogniser audio that carries no text. Fetch the take by
+  URL into a fresh asset (`creative_attach_reference_file` on the pushed file's
+  raw URL) and transcribe that asset. The signs of real recognition are digits
+  ("478", "10,000") and no tag tokens. `films/wall-dopemind/audio/check_heard.py`
+  refuses a transcript containing the tags (INSTRUMENT), compares after reading
+  number words as digits, and prints every homophone it accepts ("where" for
+  "wear" on v2). `--control` deletes one word and must fail. v1 re-checked this
+  way: 233 tokens equal.
+
 ## Candidates — bitten once
 
 - **A field I can set is not a sign-off I hold.** `approved: true` on an

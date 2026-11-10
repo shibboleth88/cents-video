@@ -1,0 +1,52 @@
+{
+ "_source": "2026-11-09 snapshot via wall_focus.load; set-counts.php contaminationSet = 59 (incl. the artist wallet, left out here)",
+ "as_of": "2026-11-09",
+ "collectors": 58,
+ "highlight": {
+  "label": "2",
+  "name": "DOPEMIND"
+ },
+ "bins": [
+  {
+   "label": "2",
+   "count": 1
+  },
+  {
+   "label": "3",
+   "count": 15
+  },
+  {
+   "label": "4",
+   "count": 12
+  },
+  {
+   "label": "5",
+   "count": 10
+  },
+  {
+   "label": "6",
+   "count": 1
+  },
+  {
+   "label": "7",
+   "count": 4
+  },
+  {
+   "label": "8",
+   "count": 4
+  },
+  {
+   "label": "9",
+   "count": 3
+  },
+  {
+   "label": "10",
+   "count": 4
+  },
+  {
+   "label": "11+",
+   "count": 4
+  }
+ ],
+ "artist_wallet_contaminated_cents": 87
+}
