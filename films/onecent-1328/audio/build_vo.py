@@ -1,4 +1,4 @@
-"""Build audio/vo.wav and script/alignment.json for Cent #1328 v1 from an eee take
+"""Build audio/vo.wav and script/alignment.json for Cent #1328 (v2) from an eee take
 (eleven_v4, "[thoughtfully] [calm]" at the start of the prompt; the tags are dropped from the words).
 Copied from films/onecent-1264/audio/build_vo.py (PR #26); only the source, the holds and the pad differ.
 
@@ -12,16 +12,22 @@ the credits.
 """
 import json, pathlib, re, subprocess, sys
 F = pathlib.Path(__file__).resolve().parents[1]
-SRC = F / "audio/v1_take2.mp3"   # take 2 of flow Nh7DBox7bQJKxQzO2cSu
-WORDS = [w for w in json.load(open(F / "audio/v1_take_words.json"))["words"]
+SRC = F / "audio/v2_take2.mp3"   # v2: take 2 of flow bLXkEVed8g5RG5ROED47 (v1 was take 2 of flow Nh7DBox7bQJKxQzO2cSu)
+WORDS = [w for w in json.load(open(F / "audio/v2_take_words.json"))["words"]
          if w["type"] == "word" and not w["text"].startswith("[")]
 CUTS = []
 # Holds give the picture time: the opening turn (the year zoom must start after frame 150), each zoom, the pools,
 # the dissolve, the two quote cards and the pour. A hold is (word, seconds) or (word, seconds, n) for the n-th time.
-HOLDS = [("twenty-eight.", 2.0, 1), ("mint.", 0.5), ("him.", 0.6), ('Fingerprint."', 0.5),
+HOLDS = [("twenty-eight.", 0.6, 1), ('factionalized."', 0.6), ("index.", 0.4), ("style.", 0.4), ("photographs.", 0.3),
+         ('signify."', 0.8), ("air.", 0.5), ("mint.", 0.5), ("him.", 0.6), ('Fingerprint."', 0.5),
          ("it.", 1.6), ("rim.", 0.6), ("toning.", 1.2), ("copper.", 0.5), ("other.", 0.6), ("state.", 0.8),
-         ("index.", 0.6), ('signify."', 0.8), ("knows.", 0.3), ('sorts."', 0.8), ("value.", 0.6, 1), ("Martred:", 0.5),
-         ("not.", 0.4), ("block.", 1.6), ("satoshi.", 0.6), ("white.", 0.4)]
+         ("cause.", 0.3), ("knows.", 0.4), ("out.", 0.6), ("Martred:", 0.9), ('sorts."', 1.0)]
+# v1 holds (kept for the record): [("twenty-eight.", 2.0, 1), ("mint.", 0.5), ("him.", 0.6), ('Fingerprint."', 0.5),
+#   ("it.", 1.6), ("rim.", 0.6), ("toning.", 1.2), ("copper.", 0.5), ("other.", 0.6), ("state.", 0.8), ("index.", 0.6),
+#   ('signify."', 0.8), ("knows.", 0.3), ('sorts."', 0.8), ("value.", 0.6, 1), ("Martred:", 0.5), ("not.", 0.4),
+#   ("block.", 1.6), ("satoshi.", 0.6), ("white.", 0.4)]
+# v2 opens on Krauss, not on the year zoom, so the first hold only has to let the title land; the first camera
+# move ("Notes on the Index") comes at about 8 s, after the 150-frame turn.
 CLIPS = []
 COMMA_HOLDS = set()
 END_PAD = 7.0     # the closing line is spoken over the card, then the credits

@@ -18,7 +18,7 @@ norm = lambda s: re.sub(r"[^a-z0-9 ]", " ", s.lower().replace("-", " ")).split()
 # Written token (punctuation stripped) -> its spoken form, as in audio/tts_text.txt.
 SPOKEN = {"#1328": "thirteen twenty-eight", "1979": "nineteen seventy-nine", "224": "two hundred and twenty-four",
           "82": "eighty-two", "79": "seventy-nine", "#1605": "sixteen-oh-five", "1977": "nineteen seventy-seven",
-          "m4rtr3d": "Martred"}   # m4rtr3d is said "Martred" (respelled in the TTS text only)
+          "m4rtr3d": "Martred", "'70s": "seventies"}   # m4rtr3d is said "Martred" (respelled in the TTS text only)
 
 script = open(F / "script/voiceover.txt").read().split()
 words, out, i = al["words"], [], 0

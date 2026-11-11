@@ -28,23 +28,6 @@
    "staged_as": "a17.jpeg",
    "verified_at": "2026-11-11"
   },
-  "pour": {
-   "path": "public/assets/a14.mp4",
-   "motion": true,
-   "kind": "real",
-   "low_res": true,
-   "max_display_width": 560,
-   "subject": "The casting of CENTS Block Copper outdoors: molten copper poured from a tilted crucible into a brick mould (objecthood a14, an 8 s excerpt of media library C029).",
-   "source": "objecthood asset a14 (supplied by the essay's author 2026-10-07); media library C029",
-   "rights": "cents.gallery media library (cleared). Caption 'Casting CENTS Block Copper' (series rule)",
-   "width": 480,
-   "height": 848,
-   "sha256": "a309518db381880499a27be5a0c767bd004cb18834cd90b3ea399e1092351b1b",
-   "bytes": 1715812,
-   "staged_as": "a14.mp4",
-   "verified_at": "2026-11-11",
-   "duration": 8.0
-  },
   "makes_cents": {
    "path": "public/assets/1328/makes_cents_montage.mp4",
    "motion": true,
@@ -60,22 +43,6 @@
    "verified_at": "2026-11-11",
    "duration": 9.5
   },
-  "inscription": {
-   "path": "public/assets/1328/inscription_1328.webp",
-   "motion": false,
-   "kind": "real",
-   "low_res": true,
-   "max_display_width": 300,
-   "subject": "The 300 x 300 px image of Cent #1328 as inscribed on its satoshi (inscription #66001019, id 0a24c476...81f9i0).",
-   "source": "shibboleth88/sovrn-onchain cents/1328.webp, the user's mirror of the on-chain images (14,078 bytes). ordinals.com, api.hiro.so, ordiscan.com and static.unisat.io are blocked here, so it was not re-fetched from chain",
-   "rights": "Rutherford Chang (CENTS)",
-   "width": 300,
-   "height": 300,
-   "sha256": "b4682f223877798db6e7ef70fb79b622f25f7e4adcf7b38db9833fc7fbd357c1",
-   "bytes": 14078,
-   "staged_as": "1328/inscription_1328.webp",
-   "verified_at": "2026-11-11"
-  },
   "atlas_fp_quote": {
    "path": "public/assets/1328/atlas_fingerprint_quote.png",
    "motion": false,
@@ -89,6 +56,20 @@
    "bytes": 50261,
    "staged_as": "1328/atlas_fingerprint_quote.png",
    "verified_at": "2026-11-11"
+  },
+  "m4rtr3d_cover": {
+   "path": "public/assets/1328/m4rtr3d_makes_cents.jpg",
+   "motion": false,
+   "kind": "real",
+   "subject": "m4rtr3d's MAKES CENTS cover: the collector's skeleton portrait PFP and a worn 1971 Cent over a pale grid of Cents, with the words 'm4rtr3d makes CENTS' (2000 x 2000 px).",
+   "source": "Uploaded by the user to this thread on 2026-11-11 as s0852-m4rtr3d-makes-cents.jpg (cents.gallery media library S0852).",
+   "rights": "cents.gallery media library: the user's own, cleared.",
+   "staged_as": "1328/m4rtr3d_makes_cents.jpg",
+   "sha256": "168abb12cac484bd1f4150420cb690d12f6cb8106f48633c2a6cd201faf3568c",
+   "verified_at": "2026-11-11",
+   "width": 2000,
+   "height": 2000,
+   "bytes": 803326
   }
  }
 }

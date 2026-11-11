@@ -3,10 +3,10 @@
   "title": "Cent #1328",
   "subtitle": "Inscription #66001019",
   "author": "shibboleth",
-  "source": "/mnt/project-files/single-cent-series/1328/1328_proposal_v0.1.md",
-  "version": "v1 (2026-11-11)"
+  "source": "/mnt/project-files/single-cent-series/1328/1328_proposal_v0.2.md",
+  "version": "v2 (2026-11-11)"
  },
- "_what": "Cent #1328 (1979, no mint mark; Fingerprints, White Drips and Streaks). Concepts C24 (the mark as index; Krauss) and C03 (five transformations of value; value tie, one transformation). Counts from the Sep 2026 export, recounted from the 9 Nov 2026 snapshot. Traits read from the front only; the back is shown once for ONE CENT (design).",
+ "_what": "Cent #1328 (1979, no mint mark; Fingerprints, White Drips and Streaks). Concept C24 (the mark as index), opened with Rosalind Krauss's argument in 'Notes on the Index' (1977). v2: the value passage is cut at the user's request. Counts from the Sep 2026 export, recounted from the 9 Nov 2026 snapshot. Traits read from the front only.",
  "shots": [
   {
    "shot_id": "s01_open",
@@ -14,9 +14,9 @@
     "at_start": true
    },
    "end": {
-    "at_phrase": "The Traits Atlas sets"
+    "at_phrase": "Beneath that variety"
    },
-   "purpose": "Opening card: the user's 3DCENTS turn once (front, back, front), then the 1050px front at the same size; Story time pill. Year zoom, then the empty mint-mark spot under the date (series rule 28 Oct), then the fingerprint, ringed (my reading of the photo).",
+   "purpose": "Opening card: the user's 3DCENTS turn once, then the 1050px front; Story time pill. On the essay's title the camera goes to the fingerprint (the date out of frame), then Krauss's opening lines as a lit card.",
    "visual_kind": "code",
    "component": "CentLook",
    "props": {
@@ -41,6 +41,186 @@
      "look": "pill",
      "hold": 3.4
     },
+    "moves": [
+     {
+      "at_phrase": "Notes on the Index",
+      "box": [
+       0.44,
+       0.3,
+       0.84,
+       0.56
+      ],
+      "dur": 1.4
+     }
+    ],
+    "quote": {
+     "at_phrase": "Almost everyone",
+     "text": "Almost everyone is agreed about '70s art. It is diversified, split, factionalized.",
+     "credit": "Rosalind Krauss, 1977",
+     "spoken": {
+      "'70s": "seventies"
+     }
+    }
+   }
+  },
+  {
+   "shot_id": "s02_atlas_prints",
+   "start": {
+    "at_phrase": "Beneath that variety"
+   },
+   "end": {
+    "at_phrase": "In that art"
+   },
+   "purpose": "Two Traits Atlas Fingerprint examples at 1050 px (films/traits/script/atlas/fingerprint.txt): #8400 Exemplary (1965), then the variation #4231 (1980). Varied prints, one kind of sign. A four-Cent set drew the coins at about 210 px, too small to see a print.",
+   "visual_kind": "code",
+   "component": "CentDissolve",
+   "props": {
+    "first": "a",
+    "a": {
+     "n": 8400,
+     "inscription": 65895425,
+     "front": "hires/8400.webp",
+     "readout": "Exemplary",
+     "caption": "Traits Atlas, Fingerprint"
+    },
+    "b": {
+     "n": 4231,
+     "inscription": 65964682,
+     "front": "hires/4231.webp",
+     "readout": "Variation",
+     "caption": "Traits Atlas, Fingerprint"
+    },
+    "swaps": [
+     {
+      "at_phrase": "one shared logic",
+      "to": "b"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s03_presence",
+   "start": {
+    "at_phrase": "In that art"
+   },
+   "end": {
+    "at_phrase": "Indexes are signs"
+   },
+   "purpose": "C24 concept card over #1328; the camera settles on the print.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 66001019,
+    "n": 1328,
+    "front": "hires/1328.webp",
+    "moves": [
+     {
+      "at_phrase": "In that art",
+      "box": [
+       0.44,
+       0.36,
+       0.84,
+       0.62
+      ],
+      "dur": 1.4
+     }
+    ],
+    "concept": {
+     "at_phrase": "In that art",
+     "label": "The mark as index"
+    }
+   }
+  },
+  {
+   "shot_id": "s04_photo",
+   "start": {
+    "at_phrase": "Indexes are signs"
+   },
+   "end": {
+    "at_phrase": "In her words"
+   },
+   "purpose": "Chang's penny photography setup (media library C062) under 'or photographs': each Cent is a photograph of its penny. The act, not the result.",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "photo_setup",
+   "props": {
+    "caption": "Rutherford Chang's studio",
+    "maxWidth": 900
+   }
+  },
+  {
+   "shot_id": "s05_index",
+   "start": {
+    "at_phrase": "In her words"
+   },
+   "end": {
+    "at_phrase": "The marks on a Cent"
+   },
+   "purpose": "The lit Krauss definition (QB-D13) over the ridges.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 66001019,
+    "n": 1328,
+    "front": "hires/1328.webp",
+    "moves": [
+     {
+      "at_phrase": "In her words",
+      "box": [
+       0.46,
+       0.43,
+       0.68,
+       0.6
+      ],
+      "dur": 1.4,
+      "max": 3.6
+     }
+    ],
+    "quote": {
+     "at_phrase": "They are the marks",
+     "text": "They are the marks or traces of a particular cause, and that cause is the thing to which they refer, the object they signify.",
+     "credit": "Rosalind Krauss, 1977"
+    }
+   }
+  },
+  {
+   "shot_id": "s06_traces",
+   "start": {
+    "at_phrase": "The marks on a Cent"
+   },
+   "end": {
+    "at_phrase": "Cent thirteen twenty-eight was"
+   },
+   "purpose": "Three series Cents whose traits are traces: #6129 Faceless (wear), #8462 Vandalized (damage), #2616 Significant Verdigris (air).",
+   "visual_kind": "code",
+   "component": "CentSet",
+   "props": {
+    "title": "Traces",
+    "ns": [
+     6129,
+     8462,
+     2616
+    ],
+    "readout": "3",
+    "caption": "wear, damage, air",
+    "cols": 2
+   }
+  },
+  {
+   "shot_id": "s07_cent",
+   "start": {
+    "at_phrase": "Cent thirteen twenty-eight was"
+   },
+   "end": {
+    "at_phrase": "The Traits Atlas sets"
+   },
+   "purpose": "Back to #1328: year (and, as a plain fact, Chang's birth year), the empty mint-mark spot, then the fingerprint ringed.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 66001019,
+    "n": 1328,
+    "front": "hires/1328.webp",
     "moves": [
      {
       "at_phrase": "struck in nineteen seventy-nine",
@@ -86,6 +266,11 @@
       "at_phrase": "struck in nineteen seventy-nine",
       "readout": "1979",
       "caption": "640 Cents from 1979"
+     },
+     {
+      "at_phrase": "the year Rutherford",
+      "readout": "1979",
+      "caption": "Rutherford Chang's birth year"
      },
      {
       "at_phrase": "with no mint mark",
@@ -573,7 +758,7 @@
     "at_phrase": "Compare Cent"
    },
    "end": {
-    "at_phrase": "The mark as index"
+    "at_phrase": "An index points back"
    },
    "purpose": "Template: #1605, 1979, no mint mark, Lustrous its only trait (the #6129 template). Dissolve.",
    "visual_kind": "code",
@@ -607,61 +792,12 @@
    }
   },
   {
-   "shot_id": "s09_index",
-   "start": {
-    "at_phrase": "The mark as index"
-   },
-   "end": {
-    "at_phrase": "This mark points"
-   },
-   "purpose": "C24 card, then the lit Krauss quote (QB-D13; check_quotes FOUND). The camera rests on the print.",
-   "visual_kind": "code",
-   "component": "CentLook",
-   "props": {
-    "inscription": 66001019,
-    "n": 1328,
-    "front": "hires/1328.webp",
-    "moves": [
-     {
-      "at_phrase": "The mark as index",
-      "box": [
-       0.44,
-       0.36,
-       0.84,
-       0.62
-      ],
-      "dur": 1.2
-     },
-     {
-      "at_phrase": "Rosalind Krauss",
-      "box": [
-       0.46,
-       0.43,
-       0.68,
-       0.6
-      ],
-      "dur": 1.4,
-      "max": 3.6
-     }
-    ],
-    "concept": {
-     "at_phrase": "The mark as index",
-     "label": "The mark as index"
-    },
-    "quote": {
-     "at_phrase": "They are the marks",
-     "text": "They are the marks or traces of a particular cause, and that cause is the thing to which they refer, the object they signify.",
-     "credit": "Rosalind Krauss, 1977"
-    }
-   }
-  },
-  {
    "shot_id": "s10_points",
    "start": {
-    "at_phrase": "This mark points"
+    "at_phrase": "An index points back"
    },
    "end": {
-    "at_phrase": "In the words of collector"
+    "at_phrase": "Someone has dreamed"
    },
    "purpose": "Close on the ridges.",
    "visual_kind": "code",
@@ -672,7 +808,7 @@
     "front": "hires/1328.webp",
     "moves": [
      {
-      "at_phrase": "This mark points",
+      "at_phrase": "An index points back",
       "box": [
        0.52,
        0.42,
@@ -688,10 +824,10 @@
   {
    "shot_id": "s11_makes",
    "start": {
-    "at_phrase": "In the words of collector"
+    "at_phrase": "Someone has dreamed"
    },
    "end": {
-    "at_phrase": "I dream someday"
+    "at_phrase": "In the words of collector"
    },
    "purpose": "MAKES CENTS interview-cover montage (media library C048) under the collector attribution.",
    "visual_kind": "real",
@@ -703,12 +839,30 @@
    }
   },
   {
+   "shot_id": "s11b_m4rtr3d",
+   "start": {
+    "at_phrase": "In the words of collector"
+   },
+   "end": {
+    "at_phrase": "I dream someday"
+   },
+   "purpose": "The m4rtr3d MAKES CENTS cover (the user's upload, media library S0852) under the attribution.",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "m4rtr3d_cover",
+   "props": {
+    "caption": "m4rtr3d, MAKES CENTS",
+    "maxWidth": 732
+   }
+  },
+  {
    "shot_id": "s12_quote",
    "start": {
     "at_phrase": "I dream someday"
    },
    "end": {
-    "at_phrase": "Transformations of value"
+    "after_phrase": "reconciliation of sorts",
+    "plus": 0.3
    },
    "purpose": "m4rtr3d, MAKES CENTS interview (check_quotes FOUND), lit card over the print.",
    "visual_kind": "code",
@@ -737,152 +891,9 @@
    }
   },
   {
-   "shot_id": "s13_value",
-   "start": {
-    "at_phrase": "Transformations of value"
-   },
-   "end": {
-    "at_phrase": "Rutherford Chang photographed"
-   },
-   "purpose": "C03 card (value tie, one transformation). Flip to the back for ONE CENT: the design, not a trait (as the wheat back in #1264).",
-   "visual_kind": "code",
-   "component": "CentLook",
-   "props": {
-    "inscription": 66001019,
-    "n": 1328,
-    "front": "hires/1328.webp",
-    "back": "hires/1328_back.webp",
-    "flip_at": "In circulation",
-    "moves": [
-     {
-      "at_phrase": "set this penny's value",
-      "box": [
-       0.18,
-       0.62,
-       0.81,
-       0.87
-      ],
-      "dur": 1.0
-     }
-    ],
-    "concept": {
-     "at_phrase": "Transformations of value",
-     "label": "Transformations of value"
-    },
-    "reads": [
-     {
-      "at_phrase": "set this penny's value",
-      "readout": "1¢",
-      "caption": "set by the Treasury"
-     }
-    ]
-   }
-  },
-  {
-   "shot_id": "s14_setup",
-   "start": {
-    "at_phrase": "Rutherford Chang photographed"
-   },
-   "end": {
-    "at_phrase": "then melted them all"
-   },
-   "purpose": "Chang's penny photography setup (media library C062).",
-   "visual_kind": "real",
-   "component": "Plate",
-   "asset_id": "photo_setup",
-   "props": {
-    "caption": "Rutherford Chang's studio",
-    "maxWidth": 900
-   }
-  },
-  {
-   "shot_id": "s15_pour",
-   "start": {
-    "at_phrase": "then melted them all"
-   },
-   "end": {
-    "at_phrase": "The fingerprint survives only"
-   },
-   "purpose": "Casting CENTS Block Copper (a14 / C029).",
-   "visual_kind": "real",
-   "component": "Plate",
-   "asset_id": "pour",
-   "props": {
-    "caption": "Casting CENTS Block Copper",
-    "maxWidth": 560
-   }
-  },
-  {
-   "shot_id": "s16_inscription",
-   "start": {
-    "at_phrase": "The fingerprint survives only"
-   },
-   "end": {
-    "at_phrase": "As an image, it is valued"
-   },
-   "purpose": "The inscribed image itself, at its native 300 px.",
-   "visual_kind": "real",
-   "component": "Plate",
-   "asset_id": "inscription",
-   "props": {
-    "caption": "Inscription #66001019, 300 px",
-    "maxWidth": 300
-   }
-  },
-  {
-   "shot_id": "s17_triad",
-   "start": {
-    "at_phrase": "As an image, it is valued"
-   },
-   "end": {
-    "after_phrase": "a run of white.",
-    "plus": 0.3
-   },
-   "purpose": "'a year, a touch, a run of white': the three zooms again.",
-   "visual_kind": "code",
-   "component": "CentLook",
-   "props": {
-    "inscription": 66001019,
-    "n": 1328,
-    "front": "hires/1328.webp",
-    "moves": [
-     {
-      "at_phrase": "a year",
-      "box": [
-       0.65,
-       0.595,
-       0.83,
-       0.685
-      ],
-      "dur": 0.6
-     },
-     {
-      "at_phrase": "a touch",
-      "box": [
-       0.44,
-       0.36,
-       0.84,
-       0.62
-      ],
-      "dur": 0.6
-     },
-     {
-      "at_phrase": "a run of white",
-      "box": [
-       0.765,
-       0.225,
-       0.875,
-       0.425
-      ],
-      "dur": 0.6
-     }
-    ]
-   }
-  },
-  {
    "shot_id": "s18_card",
    "start": {
-    "after_phrase": "a run of white.",
+    "after_phrase": "reconciliation of sorts",
     "plus": 0.3
    },
    "end": {
