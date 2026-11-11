@@ -11,6 +11,7 @@ import { ONECENT } from "./onecent";
 import { WallBoard } from "./wallboard";
 import { WallOpener } from "./wallopener";
 import { TraitTally } from "./traittally";
+import { TraitLadder } from "./traitladder";
 
 const useFade = useShotFade;
 
@@ -188,5 +189,5 @@ export const CaptionLayer: React.FC<{
   );
 };
 
-export const REGISTRY = { TitleCard, PullQuote, StatReveal, AssetShot, Credits, ...SETS, ...NARROWING, ...WALL, WallBoard, WallOpener, TraitTally, ...ONECENT } as const;
+export const REGISTRY = { TitleCard, PullQuote, StatReveal, AssetShot, Credits, ...SETS, ...NARROWING, ...WALL, WallBoard, WallOpener, TraitTally, TraitLadder, ...ONECENT } as const;
 export type ComponentName = keyof typeof REGISTRY;
