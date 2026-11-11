@@ -150,6 +150,16 @@ them was reasonable.
   over the whole project after any edit to `src/style/`, not a render of one
   film.
 
+- **A number in a heading is not a count in the body.** The Cent #1328 v0.1
+  script named its value concept "Five transformations of value" and then
+  walked through four (circulation, photographing, melting, inscribing; not
+  removal from circulation). Every sentence was true, and the quote checks
+  passed; nothing read the heading against the passage. It was found only
+  because the card wrapped to three lines at 64 px (2026-11-11), before voicing.
+  *Separating observation:* count the items the passage names and compare with
+  any number in its title, card or concept name. Fixed by dropping "Five"
+  ("Transformations of value"), for that reason, not for the wrap.
+
 ## Refuted — killed by a measurement, do not re-investigate
 
 - *"The left-band safe-area failure is a mispositioned element."* **Refuted** by
