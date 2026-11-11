@@ -1,0 +1,978 @@
+{
+ "essay": {
+  "title": "Cent #9344",
+  "subtitle": "Inscription #65999011",
+  "author": "shibboleth",
+  "source": "/mnt/project-files/single-cent-series/9344/9344_proposal_v0.2.md",
+  "version": "v1 (2026-11-11): art context, rules instead of taste (C29), value tie C01"
+ },
+ "_what": "Cent #9344 (1974, no mint mark): nine of the nineteen Atlas traits, more than any other Cent. Concepts C29 (rules instead of taste) and C01 (CENTS is a becoming). LeWitt and Groys are lenses, never Chang's sources. Every count from the Sep 2026 trait export. Traits are read from the front only.",
+ "shots": [
+  {
+   "shot_id": "s01_open",
+   "start": {
+    "at_start": true
+   },
+   "end": {
+    "at_phrase": "It carries nine"
+   },
+   "purpose": "Opening card: Cent #9344, the Story time pill, then the year and where a mint mark would be (series opening, 2026-10-28). v1 holds the still photo; the 3DCENTS turn goes in when the user exports it (the year zoom already lands after frame 150).",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65999011,
+    "n": 9344,
+    "front": "hires/9344.webp",
+    "kicker": {
+     "text": "Story time",
+     "look": "pill",
+     "hold": 3.4
+    },
+    "moves": [
+     {
+      "at_phrase": "nineteen seventy-four",
+      "box": [
+       0.657,
+       0.61,
+       0.829,
+       0.695
+      ],
+      "mark": true,
+      "dur": 0.9
+     },
+     {
+      "at_phrase": "with no mint mark",
+      "box": [
+       0.667,
+       0.681,
+       0.819,
+       0.752
+      ],
+      "mark": true,
+      "dur": 0.7
+     }
+    ],
+    "reads": [
+     {
+      "at_phrase": "nineteen seventy-four",
+      "readout": "1974"
+     },
+     {
+      "at_phrase": "with no mint mark",
+      "readout": "No mint mark",
+      "caption": "generally Philadelphia"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s02_tally",
+   "start": {
+    "at_phrase": "It carries nine"
+   },
+   "end": {
+    "at_phrase": "No Cent carries eight"
+   },
+   "purpose": "The nineteen Atlas traits as a checklist; #9344's nine light in the order the film names them (export Sep 2026, Wheat derived from year).",
+   "visual_kind": "code",
+   "component": "TraitTally",
+   "props": {
+    "title": "Cent #9344",
+    "traits": [
+     "Desert",
+     "Ghost",
+     "Verdigris",
+     "Obsidian",
+     "Red",
+     "Gold",
+     "Orange",
+     "Iridescent",
+     "Corroded",
+     "Lustrous",
+     "Striated",
+     "Abraded",
+     "Faceless",
+     "Fingerprint",
+     "White drips",
+     "Contaminated",
+     "Assassin",
+     "Vandalized",
+     "Wheat"
+    ],
+    "items": [
+     {
+      "trait": "Faceless",
+      "n": 9344
+     },
+     {
+      "trait": "Corroded",
+      "n": 9344
+     },
+     {
+      "trait": "Orange",
+      "n": 9344
+     },
+     {
+      "trait": "Verdigris",
+      "n": 9344
+     },
+     {
+      "trait": "Obsidian",
+      "n": 9344
+     },
+     {
+      "trait": "Red",
+      "n": 9344
+     },
+     {
+      "trait": "Gold",
+      "n": 9344
+     },
+     {
+      "trait": "Abraded",
+      "n": 9344
+     },
+     {
+      "trait": "Contaminated",
+      "n": 9344
+     }
+    ],
+    "mode": "grid",
+    "light": [
+     "Faceless",
+     "Corroded",
+     "Orange",
+     "Verdigris",
+     "Obsidian",
+     "Red",
+     "Gold",
+     "Abraded",
+     "Contaminated"
+    ],
+    "at_phrase": "It carries nine",
+    "until_phrase": "more than any other",
+    "thumbs": false
+   }
+  },
+  {
+   "shot_id": "s03_ladder",
+   "start": {
+    "at_phrase": "No Cent carries eight"
+   },
+   "end": {
+    "at_phrase": "Faceless"
+   },
+   "purpose": "Every Cent by how many traits it carries, 9 down to 0, adding to 10,000 (the superlative shown against the whole set). Rows 9 and 7 show their Cents.",
+   "visual_kind": "code",
+   "component": "TraitLadder",
+   "props": {
+    "title": "Traits on one Cent",
+    "subtitle": "All 10,000 Cents, Traits Atlas",
+    "total": 10000,
+    "mark": 9344,
+    "rows": [
+     {
+      "traits": 9,
+      "count": 1,
+      "ns": [
+       9344
+      ]
+     },
+     {
+      "traits": 8,
+      "count": 0
+     },
+     {
+      "traits": 7,
+      "count": 3,
+      "ns": [
+       5575,
+       6404,
+       6991
+      ]
+     },
+     {
+      "traits": 6,
+      "count": 10
+     },
+     {
+      "traits": 5,
+      "count": 50
+     },
+     {
+      "traits": 4,
+      "count": 187
+     },
+     {
+      "traits": 3,
+      "count": 555
+     },
+     {
+      "traits": 2,
+      "count": 1279
+     },
+     {
+      "traits": 1,
+      "count": 2656
+     },
+     {
+      "traits": 0,
+      "count": 5259
+     }
+    ],
+    "steps": [
+     {
+      "rows": [
+       9
+      ]
+     },
+     {
+      "at_phrase": "No Cent carries eight",
+      "plus": 0.5,
+      "rows": [
+       8
+      ]
+     },
+     {
+      "at_phrase": "Three carry seven",
+      "rows": [
+       7
+      ]
+     },
+     {
+      "at_phrase": "Three carry seven",
+      "plus": 1.2,
+      "rows": [
+       6,
+       5,
+       4,
+       3,
+       2,
+       1,
+       0
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s04_traits",
+   "start": {
+    "at_phrase": "Faceless"
+   },
+   "end": {
+    "at_phrase": "found on seventeen"
+   },
+   "purpose": "One zoom per trait, front only. Areas are my reading (9344_zoom_plan_v0.1.jpg); Blood matches the Atlas examples #2359 and #2755, the others are flagged to the user. Grades explained from the Atlas.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65999011,
+    "n": 9344,
+    "front": "hires/9344.webp",
+    "moves": [
+     {
+      "at_phrase": "Faceless",
+      "box": [
+       0.476,
+       0.229,
+       0.762,
+       0.61
+      ],
+      "mark": true,
+      "dur": 0.8
+     },
+     {
+      "at_phrase": "Corroded",
+      "box": [
+       0.733,
+       0.352,
+       0.89,
+       0.61
+      ],
+      "mark": true,
+      "dur": 0.8
+     },
+     {
+      "at_phrase": "Orange",
+      "box": [
+       0.638,
+       0.152,
+       0.819,
+       0.324
+      ],
+      "mark": true,
+      "dur": 0.8
+     },
+     {
+      "at_phrase": "Significant Verdigris",
+      "box": [
+       0.124,
+       0.11,
+       0.724,
+       0.724
+      ],
+      "marks": [
+       [
+        0.286,
+        0.11,
+        0.686,
+        0.219
+       ],
+       [
+        0.124,
+        0.4,
+        0.314,
+        0.571
+       ],
+       [
+        0.571,
+        0.61,
+        0.724,
+        0.724
+       ]
+      ],
+      "dur": 0.8
+     },
+     {
+      "at_phrase": "Obsidian and",
+      "box": [
+       0.41,
+       0.476,
+       0.743,
+       0.686
+      ],
+      "marks": [
+       [
+        0.41,
+        0.533,
+        0.629,
+        0.686
+       ],
+       [
+        0.571,
+        0.476,
+        0.743,
+        0.619
+       ]
+      ],
+      "dur": 0.7
+     },
+     {
+      "at_phrase": "and Red",
+      "box": [
+       0.143,
+       0.219,
+       0.438,
+       0.505
+      ],
+      "mark": true,
+      "dur": 0.7
+     },
+     {
+      "at_phrase": "each a major visual",
+      "box": null,
+      "marks": [
+       [
+        0.286,
+        0.11,
+        0.686,
+        0.219
+       ],
+       [
+        0.124,
+        0.4,
+        0.314,
+        0.571
+       ],
+       [
+        0.571,
+        0.61,
+        0.724,
+        0.724
+       ],
+       [
+        0.41,
+        0.533,
+        0.629,
+        0.686
+       ],
+       [
+        0.571,
+        0.476,
+        0.743,
+        0.619
+       ],
+       [
+        0.143,
+        0.219,
+        0.438,
+        0.505
+       ]
+      ],
+      "dur": 0.9
+     },
+     {
+      "at_phrase": "Notable Gold",
+      "box": [
+       0.286,
+       0.59,
+       0.533,
+       0.781
+      ],
+      "mark": true,
+      "dur": 0.8
+     },
+     {
+      "at_phrase": "Notable Abraded",
+      "box": [
+       0.133,
+       0.105,
+       0.724,
+       0.571
+      ],
+      "marks": [
+       [
+        0.133,
+        0.514,
+        0.333,
+        0.571
+       ],
+       [
+        0.533,
+        0.105,
+        0.724,
+        0.19
+       ]
+      ],
+      "dur": 0.8
+     },
+     {
+      "at_phrase": "And Blood",
+      "box": [
+       0.619,
+       0.3,
+       0.752,
+       0.508
+      ],
+      "mark": true,
+      "dur": 0.8,
+      "max": 3.6
+     }
+    ],
+    "reads": [
+     {
+      "at_phrase": "Faceless",
+      "readout": "Faceless"
+     },
+     {
+      "at_phrase": "Corroded",
+      "readout": "Corroded"
+     },
+     {
+      "at_phrase": "Orange",
+      "readout": "Orange"
+     },
+     {
+      "at_phrase": "Significant Verdigris",
+      "readout": "Verdigris",
+      "caption": "Significant"
+     },
+     {
+      "at_phrase": "Obsidian and",
+      "readout": "Obsidian",
+      "caption": "Significant"
+     },
+     {
+      "at_phrase": "and Red",
+      "readout": "Red",
+      "caption": "Significant"
+     },
+     {
+      "at_phrase": "each a major visual",
+      "readout": "Significant",
+      "caption": "a major visual actor"
+     },
+     {
+      "at_phrase": "Notable Gold",
+      "readout": "Gold",
+      "caption": "Notable, below Full"
+     },
+     {
+      "at_phrase": "Notable Abraded",
+      "readout": "Abraded",
+      "caption": "Notable"
+     },
+     {
+      "at_phrase": "And Blood",
+      "readout": "Blood",
+      "caption": "Contaminated"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s05_blood",
+   "start": {
+    "at_phrase": "found on seventeen"
+   },
+   "end": {
+    "at_phrase": "Beside Cent"
+   },
+   "purpose": "All 17 Blood Cents (export Sep 2026), #9344 ringed, three across so each is large.",
+   "visual_kind": "code",
+   "component": "CentScroll",
+   "props": {
+    "title": "Blood",
+    "ns": [
+     389,
+     1860,
+     1924,
+     2359,
+     2755,
+     3086,
+     3357,
+     3422,
+     3725,
+     5540,
+     6223,
+     6467,
+     6842,
+     7960,
+     9344,
+     9878,
+     9955
+    ],
+    "mark": 9344,
+    "readout": "17",
+    "caption": "Cents with Blood",
+    "until": "Beside Cent",
+    "cols": 3
+   }
+  },
+  {
+   "shot_id": "s06_dissolve",
+   "start": {
+    "at_phrase": "Beside Cent"
+   },
+   "end": {
+    "at_phrase": "No one chose"
+   },
+   "purpose": "Template #851 (1974, no mint mark, Lustrous only), called close to mint state as the voice says; dissolves to #9344 on 'every one of those marks'.",
+   "visual_kind": "code",
+   "component": "CentDissolve",
+   "props": {
+    "first": "b",
+    "swaps": [
+     {
+      "at_phrase": "every one of those",
+      "to": "a"
+     }
+    ],
+    "a": {
+     "n": 9344,
+     "inscription": 65999011,
+     "front": "hires/9344.webp",
+     "readout": "1974",
+     "caption": "nine traits"
+    },
+    "b": {
+     "n": 851,
+     "inscription": 66001179,
+     "front": "hires/851.webp",
+     "readout": "1974",
+     "caption": "close to mint state"
+    }
+   }
+  },
+  {
+   "shot_id": "s07_rules",
+   "start": {
+    "at_phrase": "No one chose"
+   },
+   "end": {
+    "at_phrase": "Chang catalogued"
+   },
+   "purpose": "Concept C29 on screen.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65999011,
+    "n": 9344,
+    "front": "hires/9344.webp",
+    "concept": {
+     "at_phrase": "No one chose",
+     "label": "Rules instead of taste"
+    }
+   }
+  },
+  {
+   "shot_id": "s08_desk",
+   "start": {
+    "at_phrase": "Chang catalogued"
+   },
+   "end": {
+    "at_phrase": "Of his work in general"
+   },
+   "purpose": "Media library C063: pennies laid out in rows on Chang's desk, under 'catalogued each penny by its year and mint mark'.",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "desk_pennies",
+   "props": {
+    "caption": "Pennies on Rutherford Chang's desk",
+    "maxWidth": 732
+   }
+  },
+  {
+   "shot_id": "s09_studio",
+   "start": {
+    "at_phrase": "Of his work in general"
+   },
+   "end": {
+    "at_phrase": "I'm not making aesthetic"
+   },
+   "purpose": "Media library C030: Chang's workbench, under 'of his work in general'.",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "studio_wide",
+   "props": {
+    "caption": "Rutherford Chang's studio",
+    "maxWidth": 732
+   }
+  },
+  {
+   "shot_id": "s10_a18",
+   "start": {
+    "at_phrase": "I'm not making aesthetic"
+   },
+   "end": {
+    "at_phrase": "In the words of Sol"
+   },
+   "purpose": "QB-A18, verbatim, lit word by word. Said to be of his work in general (2017), never a CENTS motive.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65999011,
+    "n": 9344,
+    "front": "hires/9344.webp",
+    "quote": {
+     "at_phrase": "I'm not making aesthetic",
+     "credit": "Rutherford Chang, The Creative Independent, 2017",
+     "text": "I’m not making aesthetic choices during the process. I don’t know how to. I don’t trust my own aesthetic choice."
+    }
+   }
+  },
+  {
+   "shot_id": "s11_lewitt",
+   "start": {
+    "at_phrase": "In the words of Sol"
+   },
+   "end": {
+    "at_phrase": "Through LeWitt's lens"
+   },
+   "purpose": "QB-D18, LeWitt 1967 via Osborne, over a closer view of the Cent. A lens, not a source. The camera goes in on the attribution and back out as the card lights, so the words never sit on a bright close-up.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65999011,
+    "n": 9344,
+    "front": "hires/9344.webp",
+    "moves": [
+     {
+      "at_phrase": "In the words of Sol",
+      "box": [
+       0.2,
+       0.2,
+       0.8,
+       0.8
+      ],
+      "dur": 2.4
+     },
+     {
+      "at_phrase": "The serial artist does",
+      "box": null,
+      "dur": 0.8
+     }
+    ],
+    "quote": {
+     "at_phrase": "The serial artist does",
+     "credit": "Sol LeWitt, Aspen 5–6, 1967",
+     "text": "The serial artist does not attempt to produce a beautiful or mysterious object but functions as a clerk cataloguing the results of the premise."
+    }
+   }
+  },
+  {
+   "shot_id": "s12_rolls",
+   "start": {
+    "at_phrase": "Through LeWitt's lens"
+   },
+   "end": {
+    "at_phrase": "and Cent number ninety-three forty-four is"
+   },
+   "purpose": "Media library C061: penny rolls at Chang's studio, under 'the premise is ten thousand copper pennies'.",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "studio_rolls",
+   "props": {
+    "caption": "Penny rolls, Rutherford Chang's studio",
+    "maxWidth": 732
+   }
+  },
+  {
+   "shot_id": "s13_result",
+   "start": {
+    "at_phrase": "and Cent number ninety-three forty-four is"
+   },
+   "end": {
+    "at_phrase": "photographed and logged"
+   },
+   "purpose": "The Cent itself as one result of the premise.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65999011,
+    "n": 9344,
+    "front": "hires/9344.webp",
+    "moves": [
+     {
+      "at_phrase": "and Cent number ninety-three forty-four is",
+      "box": [
+       0.08,
+       0.08,
+       0.92,
+       0.92
+      ],
+      "dur": 3.0
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s14_camera",
+   "start": {
+    "at_phrase": "photographed and logged"
+   },
+   "end": {
+    "at_phrase": "In the words of Boris"
+   },
+   "purpose": "Media library C062: the camera over a lit table and a laptop showing a penny. 'photographed' is a verb, so the picture is of the act, not a finished photograph.",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "studio_camera",
+   "props": {
+    "caption": "Penny photography setup, Rutherford Chang's studio",
+    "maxWidth": 732
+   }
+  },
+  {
+   "shot_id": "s15_groys",
+   "start": {
+    "at_phrase": "In the words of Boris"
+   },
+   "end": {
+    "at_phrase": "CENTS inscribed images"
+   },
+   "purpose": "QB-D24, Groys, On the New, lit word by word. A lens, not a source. In on the attribution, out as the card lights (legibility).",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65999011,
+    "n": 9344,
+    "front": "hires/9344.webp",
+    "moves": [
+     {
+      "at_phrase": "In the words of Boris",
+      "box": [
+       0.619,
+       0.152,
+       0.89,
+       0.61
+      ],
+      "dur": 2.4
+     },
+     {
+      "at_phrase": "a particularly powerful aura",
+      "box": null,
+      "dur": 0.8
+     }
+    ],
+    "quote": {
+     "at_phrase": "a particularly powerful aura",
+     "credit": "Boris Groys, On the New",
+     "text": "a particularly powerful aura surrounds precisely those works in which the highest possible cultural aspirations are combined with the most profane, insignificant, valueless things."
+    }
+   }
+  },
+  {
+   "shot_id": "s16_images",
+   "start": {
+    "at_phrase": "CENTS inscribed images"
+   },
+   "end": {
+    "at_phrase": "and carried their copper"
+   },
+   "purpose": "Media library C008: a grid of Cent photographs, under 'inscribed images of the humblest of coins on Bitcoin' (the images, not the coins, were inscribed).",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "archivist_grid",
+   "props": {
+    "caption": "Images of Cents",
+    "maxWidth": 640
+   }
+  },
+  {
+   "shot_id": "s17_ucca",
+   "start": {
+    "at_phrase": "and carried their copper"
+   },
+   "end": {
+    "at_phrase": "A Cent's worth"
+   },
+   "purpose": "Media library C037: CENTS Block Copper in its vitrine at UCCA Beijing, under 'carried their copper into the galleries of UCCA Beijing'.",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "ucca_frontal",
+   "props": {
+    "caption": "CENTS Block Copper at UCCA Beijing, 2026",
+    "maxWidth": 732
+   }
+  },
+  {
+   "shot_id": "s18_becoming",
+   "start": {
+    "at_phrase": "A Cent's worth"
+   },
+   "end": {
+    "at_phrase": "The nine traits of"
+   },
+   "purpose": "Concept C01 on screen, the value tie.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65999011,
+    "n": 9344,
+    "front": "hires/9344.webp",
+    "concept": {
+     "at_phrase": "A Cent's worth",
+     "label": "CENTS is a becoming"
+    }
+   }
+  },
+  {
+   "shot_id": "s19_lab",
+   "start": {
+    "at_phrase": "The nine traits of"
+   },
+   "end": {
+    "at_phrase": "after the penny itself"
+   },
+   "purpose": "Media library S1140: the Traits Lab, under 'the nine traits ... were named'.",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "traits_lab",
+   "props": {
+    "caption": "CENTS Traits Lab",
+    "maxWidth": 732
+   }
+  },
+  {
+   "shot_id": "s20_pour",
+   "start": {
+    "at_phrase": "after the penny itself"
+   },
+   "end": {
+    "at_phrase": "by collectors and the Trait"
+   },
+   "purpose": "a14: the pour, under 'after the penny itself was melted'. Named as the user asks.",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "a14",
+   "props": {
+    "caption": "Casting CENTS Block Copper",
+    "maxWidth": 560
+   }
+  },
+  {
+   "shot_id": "s21_council",
+   "start": {
+    "at_phrase": "by collectors and the Trait"
+   },
+   "end": {
+    "at_phrase": "Its value is still"
+   },
+   "purpose": "Media library S1075: the Trait Council document.",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "trait_council",
+   "props": {
+    "caption": "CENTS Trait Council",
+    "maxWidth": 732
+   }
+  },
+  {
+   "shot_id": "s22_collectors",
+   "start": {
+    "at_phrase": "Its value is still"
+   },
+   "end": {
+    "at_phrase": "Cent number ninety-three forty-four, a great Cent"
+   },
+   "purpose": "Media library C027: collectors' profile cards with their Cents and traits, under 'by the people taking part'.",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "collector_cards",
+   "props": {
+    "caption": "Collectors' profiles",
+    "maxWidth": 680
+   }
+  },
+  {
+   "shot_id": "s23_card",
+   "start": {
+    "at_phrase": "Cent number ninety-three forty-four, a great Cent"
+   },
+   "end": {
+    "after_phrase": "a great Cent.",
+    "plus": 1.2
+   },
+   "purpose": "Closing card; 'Cent #9344, a great Cent.' is spoken over it (series ending). v1 still; the 3DCENTS turn replaces it when exported.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65999011,
+    "n": 9344,
+    "front": "hires/9344.webp",
+    "reads": [
+     {
+      "readout": "1974",
+      "caption": "nine traits"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s24_credits",
+   "start": {
+    "after_phrase": "a great Cent.",
+    "plus": 1.2
+   },
+   "end": {
+    "at_end": true
+   },
+   "purpose": "End credits.",
+   "visual_kind": "code",
+   "component": "Credits",
+   "props": {
+    "lines": [
+     "Images: Rutherford Chang; cents.gallery media library",
+     "Trait names and definitions: Traits Atlas, CENTS Trait Council",
+     "Quotes: Rutherford Chang, The Creative Independent, 2017",
+     "Sol LeWitt, Aspen 5–6, 1967, via Peter Osborne",
+     "Boris Groys, On the New",
+     "Rutherford Chang: Hundreds and Thousands, UCCA Beijing, 2026"
+    ],
+    "url": "cents.gallery"
+   }
+  }
+ ]
+}
