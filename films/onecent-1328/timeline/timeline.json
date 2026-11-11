@@ -1,0 +1,953 @@
+{
+ "essay": {
+  "title": "Cent #1328",
+  "subtitle": "Inscription #66001019",
+  "author": "shibboleth",
+  "source": "/mnt/project-files/single-cent-series/1328/1328_proposal_v0.2.md",
+  "version": "v2 (2026-11-11)"
+ },
+ "_what": "Cent #1328 (1979, no mint mark; Fingerprints, White Drips and Streaks). Concept C24 (the mark as index), opened with Rosalind Krauss's argument in 'Notes on the Index' (1977). v2: the value passage is cut at the user's request. Counts from the Sep 2026 export, recounted from the 9 Nov 2026 snapshot. Traits read from the front only.",
+ "shots": [
+  {
+   "shot_id": "s01_open",
+   "start": {
+    "at_start": true
+   },
+   "end": {
+    "at_phrase": "Beneath that variety"
+   },
+   "purpose": "Opening card: the user's 3DCENTS turn once, then the 1050px front; Story time pill. On the essay's title the camera goes to the fingerprint (the date out of frame), then Krauss's opening lines as a lit card.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 66001019,
+    "n": 1328,
+    "front": "hires/1328.webp",
+    "spin": {
+     "src": "3dcents/1328-360-30fps.mp4",
+     "width": 1080,
+     "height": 1920,
+     "frames": 150,
+     "coin": {
+      "cx": 539.5,
+      "cy": 959.5,
+      "d": 768
+     },
+     "credit": "3D render: 3DCENTS by sinvalli",
+     "credit_at_end": true
+    },
+    "kicker": {
+     "text": "Story time",
+     "look": "pill",
+     "hold": 3.4
+    },
+    "moves": [
+     {
+      "at_phrase": "Notes on the Index",
+      "box": [
+       0.44,
+       0.3,
+       0.84,
+       0.56
+      ],
+      "dur": 1.4
+     }
+    ],
+    "quote": {
+     "at_phrase": "Almost everyone",
+     "text": "Almost everyone is agreed about '70s art. It is diversified, split, factionalized.",
+     "credit": "Rosalind Krauss, 1977",
+     "spoken": {
+      "'70s": "seventies"
+     }
+    }
+   }
+  },
+  {
+   "shot_id": "s02_atlas_prints",
+   "start": {
+    "at_phrase": "Beneath that variety"
+   },
+   "end": {
+    "at_phrase": "In that art"
+   },
+   "purpose": "Two Traits Atlas Fingerprint examples at 1050 px (films/traits/script/atlas/fingerprint.txt): #8400 Exemplary (1965), then the variation #4231 (1980). Varied prints, one kind of sign. A four-Cent set drew the coins at about 210 px, too small to see a print.",
+   "visual_kind": "code",
+   "component": "CentDissolve",
+   "props": {
+    "first": "a",
+    "a": {
+     "n": 8400,
+     "inscription": 65895425,
+     "front": "hires/8400.webp",
+     "readout": "Exemplary",
+     "caption": "Traits Atlas, Fingerprint"
+    },
+    "b": {
+     "n": 4231,
+     "inscription": 65964682,
+     "front": "hires/4231.webp",
+     "readout": "Variation",
+     "caption": "Traits Atlas, Fingerprint"
+    },
+    "swaps": [
+     {
+      "at_phrase": "one shared logic",
+      "to": "b"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s03_presence",
+   "start": {
+    "at_phrase": "In that art"
+   },
+   "end": {
+    "at_phrase": "Indexes are signs"
+   },
+   "purpose": "C24 concept card over #1328; the camera settles on the print.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 66001019,
+    "n": 1328,
+    "front": "hires/1328.webp",
+    "moves": [
+     {
+      "at_phrase": "In that art",
+      "box": [
+       0.44,
+       0.36,
+       0.84,
+       0.62
+      ],
+      "dur": 1.4
+     }
+    ],
+    "concept": {
+     "at_phrase": "In that art",
+     "label": "The mark as index"
+    }
+   }
+  },
+  {
+   "shot_id": "s04_photo",
+   "start": {
+    "at_phrase": "Indexes are signs"
+   },
+   "end": {
+    "at_phrase": "In her words"
+   },
+   "purpose": "Chang's penny photography setup (media library C062) under 'or photographs': each Cent is a photograph of its penny. The act, not the result.",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "photo_setup",
+   "props": {
+    "caption": "Rutherford Chang's studio",
+    "maxWidth": 900
+   }
+  },
+  {
+   "shot_id": "s05_index",
+   "start": {
+    "at_phrase": "In her words"
+   },
+   "end": {
+    "at_phrase": "The marks on a Cent"
+   },
+   "purpose": "The lit Krauss definition (QB-D13) over the ridges.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 66001019,
+    "n": 1328,
+    "front": "hires/1328.webp",
+    "moves": [
+     {
+      "at_phrase": "In her words",
+      "box": [
+       0.46,
+       0.43,
+       0.68,
+       0.6
+      ],
+      "dur": 1.4,
+      "max": 3.6
+     }
+    ],
+    "quote": {
+     "at_phrase": "They are the marks",
+     "text": "They are the marks or traces of a particular cause, and that cause is the thing to which they refer, the object they signify.",
+     "credit": "Rosalind Krauss, 1977"
+    }
+   }
+  },
+  {
+   "shot_id": "s06_traces",
+   "start": {
+    "at_phrase": "The marks on a Cent"
+   },
+   "end": {
+    "at_phrase": "Cent thirteen twenty-eight was"
+   },
+   "purpose": "Three series Cents whose traits are traces: #6129 Faceless (wear), #8462 Vandalized (damage), #2616 Significant Verdigris (air).",
+   "visual_kind": "code",
+   "component": "CentSet",
+   "props": {
+    "title": "Traces",
+    "ns": [
+     6129,
+     8462,
+     2616
+    ],
+    "readout": "3",
+    "caption": "wear, damage, air",
+    "cols": 2
+   }
+  },
+  {
+   "shot_id": "s07_cent",
+   "start": {
+    "at_phrase": "Cent thirteen twenty-eight was"
+   },
+   "end": {
+    "at_phrase": "The Traits Atlas sets"
+   },
+   "purpose": "Back to #1328: year (and, as a plain fact, Chang's birth year), the empty mint-mark spot, then the fingerprint ringed.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 66001019,
+    "n": 1328,
+    "front": "hires/1328.webp",
+    "moves": [
+     {
+      "at_phrase": "struck in nineteen seventy-nine",
+      "box": [
+       0.65,
+       0.595,
+       0.83,
+       0.685
+      ],
+      "mark": true,
+      "dur": 0.9
+     },
+     {
+      "at_phrase": "with no mint mark",
+      "box": [
+       0.68,
+       0.68,
+       0.8,
+       0.75
+      ],
+      "mark": true,
+      "dur": 0.8
+     },
+     {
+      "at_phrase": "Philadelphia mint",
+      "box": null,
+      "dur": 0.9
+     },
+     {
+      "at_phrase": "Its first trait",
+      "box": [
+       0.44,
+       0.36,
+       0.84,
+       0.62
+      ],
+      "mark": true,
+      "dur": 1.0
+     }
+    ],
+    "reads": [
+     {
+      "at_phrase": "struck in nineteen seventy-nine",
+      "readout": "1979",
+      "caption": "640 Cents from 1979"
+     },
+     {
+      "at_phrase": "the year Rutherford",
+      "readout": "1979",
+      "caption": "Rutherford Chang's birth year"
+     },
+     {
+      "at_phrase": "with no mint mark",
+      "readout": "No mint mark",
+      "caption": "Philadelphia"
+     },
+     {
+      "at_phrase": "Its first trait",
+      "readout": "Fingerprints",
+      "caption": "trait 1 of 2"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s02_atlas",
+   "start": {
+    "at_phrase": "The Traits Atlas sets"
+   },
+   "end": {
+    "at_phrase": "if one hesitates"
+   },
+   "purpose": "The Traits Atlas Fingerprint entry (cents.vision screenshot), the quoted sentence highlighted.",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "atlas_fp",
+   "props": {
+    "caption": "Traits Atlas, CENTS Trait Council",
+    "maxWidth": 900
+   }
+  },
+  {
+   "shot_id": "s02b_atlas_quote",
+   "start": {
+    "at_phrase": "if one hesitates"
+   },
+   "end": {
+    "at_phrase": "Two hundred and twenty-four"
+   },
+   "purpose": "The quoted sentence itself, close enough to read on a phone",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "atlas_fp_quote",
+   "props": {
+    "caption": "Traits Atlas, Fingerprint",
+    "maxWidth": 696
+   }
+  },
+  {
+   "shot_id": "s03_fp_pool",
+   "start": {
+    "at_phrase": "Two hundred and twenty-four"
+   },
+   "end": {
+    "at_phrase": "Its second trait"
+   },
+   "purpose": "All 224 Fingerprint Cents (Sep 2026 export; 9 Nov 2026 snapshot agrees), #1328 ringed.",
+   "visual_kind": "code",
+   "component": "CentScroll",
+   "props": {
+    "title": "Fingerprints",
+    "ns": [
+     16,
+     93,
+     134,
+     142,
+     221,
+     222,
+     260,
+     264,
+     291,
+     370,
+     415,
+     455,
+     458,
+     505,
+     508,
+     576,
+     606,
+     639,
+     660,
+     662,
+     689,
+     772,
+     791,
+     919,
+     952,
+     959,
+     1007,
+     1052,
+     1056,
+     1087,
+     1093,
+     1102,
+     1170,
+     1216,
+     1249,
+     1270,
+     1328,
+     1379,
+     1387,
+     1389,
+     1394,
+     1485,
+     1514,
+     1550,
+     1719,
+     1783,
+     1784,
+     1804,
+     1840,
+     1852,
+     1863,
+     1884,
+     1910,
+     1929,
+     1953,
+     1957,
+     1973,
+     2045,
+     2303,
+     2348,
+     2416,
+     2434,
+     2435,
+     2459,
+     2548,
+     2549,
+     2710,
+     2839,
+     2865,
+     2894,
+     2974,
+     2996,
+     3035,
+     3172,
+     3192,
+     3243,
+     3244,
+     3284,
+     3297,
+     3410,
+     3478,
+     3496,
+     3584,
+     3702,
+     3722,
+     3731,
+     3744,
+     3815,
+     3834,
+     3936,
+     3953,
+     3971,
+     4009,
+     4053,
+     4132,
+     4159,
+     4160,
+     4168,
+     4184,
+     4231,
+     4356,
+     4448,
+     4598,
+     4641,
+     4653,
+     4765,
+     4786,
+     4819,
+     4918,
+     4978,
+     4979,
+     5000,
+     5018,
+     5057,
+     5069,
+     5129,
+     5132,
+     5170,
+     5211,
+     5329,
+     5341,
+     5423,
+     5438,
+     5444,
+     5558,
+     5697,
+     5705,
+     5857,
+     5930,
+     5985,
+     6004,
+     6122,
+     6124,
+     6186,
+     6201,
+     6243,
+     6249,
+     6338,
+     6356,
+     6392,
+     6486,
+     6488,
+     6557,
+     6568,
+     6578,
+     6652,
+     6665,
+     6672,
+     6675,
+     6706,
+     6728,
+     6732,
+     6859,
+     6862,
+     6863,
+     6962,
+     6965,
+     7038,
+     7043,
+     7059,
+     7070,
+     7095,
+     7105,
+     7138,
+     7218,
+     7282,
+     7295,
+     7297,
+     7322,
+     7386,
+     7392,
+     7396,
+     7443,
+     7465,
+     7473,
+     7488,
+     7539,
+     7635,
+     7689,
+     7692,
+     7710,
+     7728,
+     7770,
+     7773,
+     7827,
+     7875,
+     7887,
+     7932,
+     7952,
+     8060,
+     8073,
+     8130,
+     8200,
+     8216,
+     8235,
+     8248,
+     8318,
+     8325,
+     8358,
+     8400,
+     8414,
+     8478,
+     8506,
+     8522,
+     8538,
+     8568,
+     8577,
+     8602,
+     8604,
+     8637,
+     8898,
+     9046,
+     9065,
+     9067,
+     9207,
+     9296,
+     9304,
+     9343,
+     9534,
+     9810,
+     9896,
+     9907,
+     9925,
+     9951
+    ],
+    "mark": 1328,
+    "readout": "224",
+    "caption": "of 10,000 Cents",
+    "until": "Its second trait",
+    "cols": 4
+   }
+  },
+  {
+   "shot_id": "s04_drip",
+   "start": {
+    "at_phrase": "Its second trait"
+   },
+   "end": {
+    "at_phrase": "Of the eighty-two"
+   },
+   "purpose": "The drip running down from the rim beside TRUST, ringed (my reading of the photo).",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 66001019,
+    "n": 1328,
+    "front": "hires/1328.webp",
+    "moves": [
+     {
+      "at_phrase": "pale runs of residue",
+      "box": [
+       0.765,
+       0.225,
+       0.875,
+       0.425
+      ],
+      "mark": true,
+      "dur": 1.0
+     }
+    ],
+    "reads": [
+     {
+      "at_phrase": "Its second trait",
+      "readout": "White Drips",
+      "caption": "and Streaks, trait 2 of 2"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s05_wd_pool",
+   "start": {
+    "at_phrase": "Of the eighty-two"
+   },
+   "end": {
+    "at_phrase": "This is one of three"
+   },
+   "purpose": "All 82 White Drips and Streaks Cents, #1328 ringed. 79 of them are also Desert (both sources).",
+   "visual_kind": "code",
+   "component": "CentScroll",
+   "props": {
+    "title": "White Drips",
+    "ns": [
+     17,
+     37,
+     67,
+     178,
+     217,
+     336,
+     358,
+     685,
+     712,
+     748,
+     766,
+     839,
+     997,
+     1000,
+     1084,
+     1138,
+     1170,
+     1221,
+     1328,
+     1355,
+     1640,
+     1835,
+     1965,
+     2011,
+     2062,
+     2185,
+     2272,
+     2305,
+     2312,
+     2329,
+     2460,
+     2654,
+     2658,
+     2727,
+     2808,
+     2879,
+     3038,
+     3255,
+     3269,
+     3289,
+     3396,
+     3606,
+     3641,
+     3892,
+     3983,
+     4240,
+     4405,
+     4852,
+     5079,
+     5190,
+     5336,
+     5484,
+     5626,
+     6022,
+     6291,
+     6336,
+     6349,
+     6375,
+     6381,
+     6556,
+     6744,
+     6991,
+     7259,
+     7292,
+     7543,
+     7643,
+     7734,
+     8129,
+     8353,
+     8400,
+     8527,
+     8617,
+     8729,
+     8774,
+     9023,
+     9533,
+     9620,
+     9627,
+     9682,
+     9828,
+     9884,
+     9972
+    ],
+    "mark": 1328,
+    "readout": "82",
+    "caption": "79 of them also Desert",
+    "until": "This is one of three",
+    "cols": 4
+   }
+  },
+  {
+   "shot_id": "s06_not_desert",
+   "start": {
+    "at_phrase": "This is one of three"
+   },
+   "end": {
+    "at_phrase": "Only three Cents carry"
+   },
+   "purpose": "The three White Drips Cents that are not Desert: #217 (1973), #1328, #5626 (1982).",
+   "visual_kind": "code",
+   "component": "CentSet",
+   "props": {
+    "title": "Not Desert",
+    "ns": [
+     217,
+     5626,
+     1328
+    ],
+    "readout": "3",
+    "caption": "of the 82",
+    "cols": 2
+   }
+  },
+  {
+   "shot_id": "s07_both",
+   "start": {
+    "at_phrase": "Only three Cents carry"
+   },
+   "end": {
+    "at_phrase": "Compare Cent"
+   },
+   "purpose": "The three Cents with both traits: #1170 (1979; + Notable Obsidian, Significant Desert), #1328, #8400 (1965; + Notable Desert; the Atlas's Exemplary Fingerprint).",
+   "visual_kind": "code",
+   "component": "CentSet",
+   "props": {
+    "title": "Both traits",
+    "ns": [
+     1170,
+     8400,
+     1328
+    ],
+    "readout": "3",
+    "caption": "only #1328 has no other",
+    "cols": 2
+   }
+  },
+  {
+   "shot_id": "s08_compare",
+   "start": {
+    "at_phrase": "Compare Cent"
+   },
+   "end": {
+    "at_phrase": "An index points back"
+   },
+   "purpose": "Template: #1605, 1979, no mint mark, Lustrous its only trait (the #6129 template). Dissolve.",
+   "visual_kind": "code",
+   "component": "CentDissolve",
+   "props": {
+    "first": "b",
+    "a": {
+     "n": 1328,
+     "inscription": 66001019,
+     "front": "hires/1328.webp",
+     "readout": "1979",
+     "caption": "Fingerprints, White Drips"
+    },
+    "b": {
+     "n": 1605,
+     "inscription": 66001324,
+     "front": "hires/1605.webp",
+     "readout": "1979",
+     "caption": "close to mint state"
+    },
+    "swaps": [
+     {
+      "at_phrase": "also from nineteen",
+      "to": "a"
+     },
+     {
+      "at_phrase": "close to mint state",
+      "to": "b"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s10_points",
+   "start": {
+    "at_phrase": "An index points back"
+   },
+   "end": {
+    "at_phrase": "Someone has dreamed"
+   },
+   "purpose": "Close on the ridges.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 66001019,
+    "n": 1328,
+    "front": "hires/1328.webp",
+    "moves": [
+     {
+      "at_phrase": "An index points back",
+      "box": [
+       0.52,
+       0.42,
+       0.8,
+       0.62
+      ],
+      "dur": 1.2,
+      "max": 3.6
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s11_makes",
+   "start": {
+    "at_phrase": "Someone has dreamed"
+   },
+   "end": {
+    "at_phrase": "In the words of collector"
+   },
+   "purpose": "MAKES CENTS interview-cover montage (media library C048) under the collector attribution.",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "makes_cents",
+   "props": {
+    "caption": "MAKES CENTS interviews",
+    "maxWidth": 760
+   }
+  },
+  {
+   "shot_id": "s11b_m4rtr3d",
+   "start": {
+    "at_phrase": "In the words of collector"
+   },
+   "end": {
+    "at_phrase": "I dream someday"
+   },
+   "purpose": "The m4rtr3d MAKES CENTS cover (the user's upload, media library S0852) under the attribution.",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "m4rtr3d_cover",
+   "props": {
+    "caption": "m4rtr3d, MAKES CENTS",
+    "maxWidth": 732
+   }
+  },
+  {
+   "shot_id": "s12_quote",
+   "start": {
+    "at_phrase": "I dream someday"
+   },
+   "end": {
+    "after_phrase": "reconciliation of sorts",
+    "plus": 0.3
+   },
+   "purpose": "m4rtr3d, MAKES CENTS interview (check_quotes FOUND), lit card over the print.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 66001019,
+    "n": 1328,
+    "front": "hires/1328.webp",
+    "moves": [
+     {
+      "at_phrase": "I dream someday",
+      "box": [
+       0.44,
+       0.36,
+       0.84,
+       0.62
+      ],
+      "dur": 0.1
+     }
+    ],
+    "quote": {
+     "at_phrase": "I dream someday",
+     "text": "I dream someday to be able to match one of the fingerprints found on a few Cents, with the real person owning that fingerprint, it would be a kind of cosmic reconciliation of sorts.",
+     "credit": "m4rtr3d, MAKES CENTS interview"
+    }
+   }
+  },
+  {
+   "shot_id": "s18_card",
+   "start": {
+    "after_phrase": "reconciliation of sorts",
+    "plus": 0.3
+   },
+   "end": {
+    "after_phrase": "a great Cent",
+    "plus": 1.8
+   },
+   "purpose": "The opening card again; 'Cent #1328, a great Cent.' over one turn.",
+   "visual_kind": "code",
+   "component": "CentSpin",
+   "props": {
+    "inscription": 66001019,
+    "n": 1328,
+    "clip": {
+     "src": "3dcents/1328-360-30fps.mp4",
+     "width": 1080,
+     "height": 1920,
+     "frames": 150,
+     "coin": {
+      "cx": 539.5,
+      "cy": 959.5,
+      "d": 768
+     },
+     "credit": "3D render: 3DCENTS by sinvalli",
+     "credit_at_end": true
+    },
+    "size": 560,
+    "reads": [
+     {
+      "readout": "1979"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s19_credits",
+   "start": {
+    "after_phrase": "a great Cent",
+    "plus": 1.8
+   },
+   "end": {
+    "at_end": true
+   },
+   "purpose": "End credits.",
+   "visual_kind": "code",
+   "component": "Credits",
+   "props": {
+    "lines": [
+     "Images: Rutherford Chang; cents.gallery media library",
+     "3D render: 3DCENTS by sinvalli",
+     "Traits Atlas, CENTS Trait Council, via cents.vision",
+     "Quotes: Rosalind Krauss, “Notes on the Index”, October, 1977; m4rtr3d, MAKES CENTS"
+    ],
+    "url": "cents.gallery"
+   }
+  }
+ ]
+}

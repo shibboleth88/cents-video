@@ -1,0 +1,1686 @@
+{
+ "_source": "eee v1 take (eleven_v4, [thoughtfully] [calm], script v1), transcribed with scribe_v1; equal to audio/tts_text.txt; build_vo.py held [('twenty-eight.', 0.6, 1), ('factionalized.\"', 0.6), ('index.', 0.4), ('style.', 0.4), ('photographs.', 0.3), ('signify.\"', 0.8), ('air.', 0.5), ('mint.', 0.5), ('him.', 0.6), ('Fingerprint.\"', 0.5), ('it.', 1.6), ('rim.', 0.6), ('toning.', 1.2), ('copper.', 0.5), ('other.', 0.6), ('state.', 0.8), ('cause.', 0.3), ('knows.', 0.4), ('out.', 0.6), ('Martred:', 0.9), ('sorts.\"', 1.0)]",
+ "duration": 141.18,
+ "words": [
+  {
+   "word": "Cent",
+   "start": 0.24,
+   "end": 0.5
+  },
+  {
+   "word": "thirteen",
+   "start": 0.62,
+   "end": 1.1
+  },
+  {
+   "word": "twenty-eight.",
+   "start": 1.1,
+   "end": 1.88
+  },
+  {
+   "word": "In",
+   "start": 3.18,
+   "end": 3.24
+  },
+  {
+   "word": "the",
+   "start": 3.28,
+   "end": 3.34
+  },
+  {
+   "word": "words",
+   "start": 3.38,
+   "end": 3.62
+  },
+  {
+   "word": "of",
+   "start": 3.66,
+   "end": 3.74
+  },
+  {
+   "word": "the",
+   "start": 3.78,
+   "end": 3.86
+  },
+  {
+   "word": "art",
+   "start": 3.92,
+   "end": 4.04
+  },
+  {
+   "word": "historian",
+   "start": 4.1,
+   "end": 4.659
+  },
+  {
+   "word": "Rosalind",
+   "start": 4.76,
+   "end": 5.16
+  },
+  {
+   "word": "Krauss,",
+   "start": 5.28,
+   "end": 5.76
+  },
+  {
+   "word": "in",
+   "start": 5.96,
+   "end": 6.04
+  },
+  {
+   "word": "her",
+   "start": 6.08,
+   "end": 6.2
+  },
+  {
+   "word": "nineteen",
+   "start": 6.22,
+   "end": 6.601
+  },
+  {
+   "word": "seventy-seven",
+   "start": 6.601,
+   "end": 7.22
+  },
+  {
+   "word": "essay",
+   "start": 7.3,
+   "end": 7.66
+  },
+  {
+   "word": "\"Notes",
+   "start": 7.86,
+   "end": 8.18
+  },
+  {
+   "word": "on",
+   "start": 8.24,
+   "end": 8.3
+  },
+  {
+   "word": "the",
+   "start": 8.34,
+   "end": 8.4
+  },
+  {
+   "word": "Index\":",
+   "start": 8.48,
+   "end": 8.98
+  },
+  {
+   "word": "\"Almost",
+   "start": 9.48,
+   "end": 9.9
+  },
+  {
+   "word": "everyone",
+   "start": 9.98,
+   "end": 10.44
+  },
+  {
+   "word": "is",
+   "start": 10.5,
+   "end": 10.58
+  },
+  {
+   "word": "agreed",
+   "start": 10.62,
+   "end": 10.96
+  },
+  {
+   "word": "about",
+   "start": 11.04,
+   "end": 11.26
+  },
+  {
+   "word": "seventies",
+   "start": 11.26,
+   "end": 11.74
+  },
+  {
+   "word": "art.",
+   "start": 11.82,
+   "end": 12.04
+  },
+  {
+   "word": "It",
+   "start": 12.44,
+   "end": 12.5
+  },
+  {
+   "word": "is",
+   "start": 12.54,
+   "end": 12.66
+  },
+  {
+   "word": "diversified,",
+   "start": 12.7,
+   "end": 13.5
+  },
+  {
+   "word": "split,",
+   "start": 13.84,
+   "end": 14.1
+  },
+  {
+   "word": "factionalized.\"",
+   "start": 14.52,
+   "end": 15.36
+  },
+  {
+   "word": "Beneath",
+   "start": 16.48,
+   "end": 16.78
+  },
+  {
+   "word": "that",
+   "start": 16.82,
+   "end": 16.96
+  },
+  {
+   "word": "variety,",
+   "start": 17.02,
+   "end": 17.48
+  },
+  {
+   "word": "she",
+   "start": 17.66,
+   "end": 17.8
+  },
+  {
+   "word": "saw",
+   "start": 17.84,
+   "end": 18.1
+  },
+  {
+   "word": "one",
+   "start": 18.2,
+   "end": 18.36
+  },
+  {
+   "word": "shared",
+   "start": 18.5,
+   "end": 18.78
+  },
+  {
+   "word": "logic:",
+   "start": 18.86,
+   "end": 19.28
+  },
+  {
+   "word": "the",
+   "start": 19.76,
+   "end": 19.86
+  },
+  {
+   "word": "index.",
+   "start": 19.92,
+   "end": 20.46
+  },
+  {
+   "word": "In",
+   "start": 21.34,
+   "end": 21.44
+  },
+  {
+   "word": "that",
+   "start": 21.5,
+   "end": 21.64
+  },
+  {
+   "word": "art,",
+   "start": 21.72,
+   "end": 21.94
+  },
+  {
+   "word": "the",
+   "start": 22.18,
+   "end": 22.28
+  },
+  {
+   "word": "record",
+   "start": 22.32,
+   "end": 22.62
+  },
+  {
+   "word": "of",
+   "start": 22.68,
+   "end": 22.74
+  },
+  {
+   "word": "a",
+   "start": 22.8,
+   "end": 22.88
+  },
+  {
+   "word": "physical",
+   "start": 22.92,
+   "end": 23.24
+  },
+  {
+   "word": "presence",
+   "start": 23.36,
+   "end": 23.8
+  },
+  {
+   "word": "replaces",
+   "start": 23.9,
+   "end": 24.48
+  },
+  {
+   "word": "the",
+   "start": 24.52,
+   "end": 24.58
+  },
+  {
+   "word": "conventions",
+   "start": 24.62,
+   "end": 25.16
+  },
+  {
+   "word": "of",
+   "start": 25.2,
+   "end": 25.26
+  },
+  {
+   "word": "style.",
+   "start": 25.4,
+   "end": 25.76
+  },
+  {
+   "word": "Indexes",
+   "start": 26.66,
+   "end": 27.12
+  },
+  {
+   "word": "are",
+   "start": 27.16,
+   "end": 27.32
+  },
+  {
+   "word": "signs",
+   "start": 27.4,
+   "end": 27.82
+  },
+  {
+   "word": "with",
+   "start": 27.84,
+   "end": 27.92
+  },
+  {
+   "word": "a",
+   "start": 27.94,
+   "end": 28.06
+  },
+  {
+   "word": "physical",
+   "start": 28.1,
+   "end": 28.44
+  },
+  {
+   "word": "link",
+   "start": 28.54,
+   "end": 28.78
+  },
+  {
+   "word": "to",
+   "start": 28.82,
+   "end": 28.88
+  },
+  {
+   "word": "what",
+   "start": 28.92,
+   "end": 29.04
+  },
+  {
+   "word": "they",
+   "start": 29.06,
+   "end": 29.2
+  },
+  {
+   "word": "stand",
+   "start": 29.28,
+   "end": 29.56
+  },
+  {
+   "word": "for,",
+   "start": 29.6,
+   "end": 29.8
+  },
+  {
+   "word": "like",
+   "start": 30.08,
+   "end": 30.26
+  },
+  {
+   "word": "footprints,",
+   "start": 30.32,
+   "end": 30.86
+  },
+  {
+   "word": "cast",
+   "start": 31.1,
+   "end": 31.36
+  },
+  {
+   "word": "shadows,",
+   "start": 31.42,
+   "end": 31.9
+  },
+  {
+   "word": "or",
+   "start": 31.98,
+   "end": 32.04
+  },
+  {
+   "word": "photographs.",
+   "start": 32.14,
+   "end": 32.76
+  },
+  {
+   "word": "In",
+   "start": 33.48,
+   "end": 33.56
+  },
+  {
+   "word": "her",
+   "start": 33.6,
+   "end": 33.76
+  },
+  {
+   "word": "words:",
+   "start": 33.8,
+   "end": 34.12
+  },
+  {
+   "word": "\"They",
+   "start": 34.48,
+   "end": 34.559
+  },
+  {
+   "word": "are",
+   "start": 34.58,
+   "end": 34.66
+  },
+  {
+   "word": "the",
+   "start": 34.7,
+   "end": 34.779
+  },
+  {
+   "word": "marks",
+   "start": 34.84,
+   "end": 35.18
+  },
+  {
+   "word": "or",
+   "start": 35.22,
+   "end": 35.28
+  },
+  {
+   "word": "traces",
+   "start": 35.4,
+   "end": 35.86
+  },
+  {
+   "word": "of",
+   "start": 35.9,
+   "end": 35.98
+  },
+  {
+   "word": "a",
+   "start": 36.02,
+   "end": 36.06
+  },
+  {
+   "word": "particular",
+   "start": 36.1,
+   "end": 36.58
+  },
+  {
+   "word": "cause,",
+   "start": 36.72,
+   "end": 37.22
+  },
+  {
+   "word": "and",
+   "start": 37.48,
+   "end": 37.58
+  },
+  {
+   "word": "that",
+   "start": 37.62,
+   "end": 37.8
+  },
+  {
+   "word": "cause",
+   "start": 37.88,
+   "end": 38.3
+  },
+  {
+   "word": "is",
+   "start": 38.34,
+   "end": 38.46
+  },
+  {
+   "word": "the",
+   "start": 38.5,
+   "end": 38.6
+  },
+  {
+   "word": "thing",
+   "start": 38.64,
+   "end": 38.86
+  },
+  {
+   "word": "to",
+   "start": 38.88,
+   "end": 38.96
+  },
+  {
+   "word": "which",
+   "start": 38.98,
+   "end": 39.16
+  },
+  {
+   "word": "they",
+   "start": 39.2,
+   "end": 39.3
+  },
+  {
+   "word": "refer,",
+   "start": 39.34,
+   "end": 39.78
+  },
+  {
+   "word": "the",
+   "start": 40.12,
+   "end": 40.22
+  },
+  {
+   "word": "object",
+   "start": 40.3,
+   "end": 40.76
+  },
+  {
+   "word": "they",
+   "start": 40.76,
+   "end": 40.92
+  },
+  {
+   "word": "signify.\"",
+   "start": 40.98,
+   "end": 41.5
+  },
+  {
+   "word": "The",
+   "start": 42.82,
+   "end": 42.9
+  },
+  {
+   "word": "marks",
+   "start": 42.94,
+   "end": 43.18
+  },
+  {
+   "word": "on",
+   "start": 43.2,
+   "end": 43.28
+  },
+  {
+   "word": "a",
+   "start": 43.34,
+   "end": 43.42
+  },
+  {
+   "word": "Cent",
+   "start": 43.48,
+   "end": 43.76
+  },
+  {
+   "word": "are",
+   "start": 43.8,
+   "end": 43.9
+  },
+  {
+   "word": "of",
+   "start": 43.98,
+   "end": 44.08
+  },
+  {
+   "word": "this",
+   "start": 44.12,
+   "end": 44.3
+  },
+  {
+   "word": "kind:",
+   "start": 44.34,
+   "end": 44.68
+  },
+  {
+   "word": "traces",
+   "start": 45.08,
+   "end": 45.5
+  },
+  {
+   "word": "of",
+   "start": 45.56,
+   "end": 45.68
+  },
+  {
+   "word": "real",
+   "start": 45.72,
+   "end": 45.9
+  },
+  {
+   "word": "events,",
+   "start": 45.96,
+   "end": 46.42
+  },
+  {
+   "word": "of",
+   "start": 46.76,
+   "end": 46.84
+  },
+  {
+   "word": "wear,",
+   "start": 46.96,
+   "end": 47.28
+  },
+  {
+   "word": "of",
+   "start": 47.62,
+   "end": 47.76
+  },
+  {
+   "word": "damage,",
+   "start": 47.8,
+   "end": 48.28
+  },
+  {
+   "word": "of",
+   "start": 48.64,
+   "end": 48.72
+  },
+  {
+   "word": "the",
+   "start": 48.76,
+   "end": 48.88
+  },
+  {
+   "word": "slow",
+   "start": 48.98,
+   "end": 49.24
+  },
+  {
+   "word": "work",
+   "start": 49.34,
+   "end": 49.6
+  },
+  {
+   "word": "of",
+   "start": 49.74,
+   "end": 49.9
+  },
+  {
+   "word": "air.",
+   "start": 50.0,
+   "end": 50.22
+  },
+  {
+   "word": "Cent",
+   "start": 51.38,
+   "end": 51.58
+  },
+  {
+   "word": "thirteen",
+   "start": 51.66,
+   "end": 52.036
+  },
+  {
+   "word": "twenty-eight",
+   "start": 52.036,
+   "end": 52.6
+  },
+  {
+   "word": "was",
+   "start": 52.64,
+   "end": 52.76
+  },
+  {
+   "word": "struck",
+   "start": 52.84,
+   "end": 53.1
+  },
+  {
+   "word": "in",
+   "start": 53.16,
+   "end": 53.26
+  },
+  {
+   "word": "nineteen",
+   "start": 53.3,
+   "end": 53.727
+  },
+  {
+   "word": "seventy-nine,",
+   "start": 53.727,
+   "end": 54.42
+  },
+  {
+   "word": "the",
+   "start": 54.66,
+   "end": 54.74
+  },
+  {
+   "word": "year",
+   "start": 54.78,
+   "end": 54.92
+  },
+  {
+   "word": "Rutherford",
+   "start": 54.98,
+   "end": 55.34
+  },
+  {
+   "word": "Chang",
+   "start": 55.46,
+   "end": 55.68
+  },
+  {
+   "word": "was",
+   "start": 55.72,
+   "end": 55.88
+  },
+  {
+   "word": "born,",
+   "start": 55.9,
+   "end": 56.16
+  },
+  {
+   "word": "with",
+   "start": 56.42,
+   "end": 56.6
+  },
+  {
+   "word": "no",
+   "start": 56.66,
+   "end": 56.78
+  },
+  {
+   "word": "mint",
+   "start": 56.9,
+   "end": 57.08
+  },
+  {
+   "word": "mark,",
+   "start": 57.12,
+   "end": 57.36
+  },
+  {
+   "word": "generally",
+   "start": 57.64,
+   "end": 58.0
+  },
+  {
+   "word": "indicating",
+   "start": 58.04,
+   "end": 58.52
+  },
+  {
+   "word": "the",
+   "start": 58.54,
+   "end": 58.64
+  },
+  {
+   "word": "Philadelphia",
+   "start": 58.66,
+   "end": 59.22
+  },
+  {
+   "word": "mint.",
+   "start": 59.3,
+   "end": 59.54
+  },
+  {
+   "word": "Its",
+   "start": 60.5,
+   "end": 60.66
+  },
+  {
+   "word": "first",
+   "start": 60.72,
+   "end": 60.96
+  },
+  {
+   "word": "trait",
+   "start": 61.0,
+   "end": 61.28
+  },
+  {
+   "word": "is",
+   "start": 61.34,
+   "end": 61.4
+  },
+  {
+   "word": "a",
+   "start": 61.46,
+   "end": 61.54
+  },
+  {
+   "word": "fingerprint.",
+   "start": 61.58,
+   "end": 62.16
+  },
+  {
+   "word": "The",
+   "start": 62.52,
+   "end": 62.62
+  },
+  {
+   "word": "ridges",
+   "start": 62.64,
+   "end": 63.0
+  },
+  {
+   "word": "run",
+   "start": 63.06,
+   "end": 63.16
+  },
+  {
+   "word": "across",
+   "start": 63.2,
+   "end": 63.54
+  },
+  {
+   "word": "Lincoln's",
+   "start": 63.62,
+   "end": 64.0
+  },
+  {
+   "word": "neck",
+   "start": 64.04,
+   "end": 64.34
+  },
+  {
+   "word": "and",
+   "start": 64.38,
+   "end": 64.48
+  },
+  {
+   "word": "into",
+   "start": 64.54,
+   "end": 64.74
+  },
+  {
+   "word": "the",
+   "start": 64.78,
+   "end": 64.88
+  },
+  {
+   "word": "field",
+   "start": 64.94,
+   "end": 65.2
+  },
+  {
+   "word": "beside",
+   "start": 65.24,
+   "end": 65.62
+  },
+  {
+   "word": "him.",
+   "start": 65.66,
+   "end": 65.82
+  },
+  {
+   "word": "The",
+   "start": 66.84,
+   "end": 66.92
+  },
+  {
+   "word": "Traits",
+   "start": 66.96,
+   "end": 67.2
+  },
+  {
+   "word": "Atlas",
+   "start": 67.3,
+   "end": 67.62
+  },
+  {
+   "word": "sets",
+   "start": 67.66,
+   "end": 67.84
+  },
+  {
+   "word": "a",
+   "start": 67.88,
+   "end": 67.96
+  },
+  {
+   "word": "strict",
+   "start": 68.06,
+   "end": 68.28
+  },
+  {
+   "word": "bar:",
+   "start": 68.38,
+   "end": 68.64
+  },
+  {
+   "word": "\"if",
+   "start": 69.1,
+   "end": 69.219
+  },
+  {
+   "word": "one",
+   "start": 69.28,
+   "end": 69.439
+  },
+  {
+   "word": "hesitates",
+   "start": 69.48,
+   "end": 69.98
+  },
+  {
+   "word": "to",
+   "start": 70.04,
+   "end": 70.14
+  },
+  {
+   "word": "see",
+   "start": 70.2,
+   "end": 70.32
+  },
+  {
+   "word": "a",
+   "start": 70.36,
+   "end": 70.42
+  },
+  {
+   "word": "fingerprint,",
+   "start": 70.46,
+   "end": 70.98
+  },
+  {
+   "word": "it",
+   "start": 71.24,
+   "end": 71.38
+  },
+  {
+   "word": "isn't",
+   "start": 71.44,
+   "end": 71.74
+  },
+  {
+   "word": "a",
+   "start": 71.78,
+   "end": 71.84
+  },
+  {
+   "word": "Fingerprint.\"",
+   "start": 71.9,
+   "end": 72.44
+  },
+  {
+   "word": "Two",
+   "start": 73.44,
+   "end": 73.592
+  },
+  {
+   "word": "hundred",
+   "start": 73.592,
+   "end": 73.948
+  },
+  {
+   "word": "and",
+   "start": 73.948,
+   "end": 74.101
+  },
+  {
+   "word": "twenty-four",
+   "start": 74.101,
+   "end": 74.66
+  },
+  {
+   "word": "Cents",
+   "start": 74.8,
+   "end": 75.1
+  },
+  {
+   "word": "carry",
+   "start": 75.22,
+   "end": 75.5
+  },
+  {
+   "word": "it.",
+   "start": 75.56,
+   "end": 75.7
+  },
+  {
+   "word": "Its",
+   "start": 77.82,
+   "end": 77.94
+  },
+  {
+   "word": "second",
+   "start": 78.02,
+   "end": 78.3
+  },
+  {
+   "word": "trait",
+   "start": 78.34,
+   "end": 78.6
+  },
+  {
+   "word": "is",
+   "start": 78.72,
+   "end": 78.88
+  },
+  {
+   "word": "White",
+   "start": 78.92,
+   "end": 79.14
+  },
+  {
+   "word": "Drips",
+   "start": 79.16,
+   "end": 79.5
+  },
+  {
+   "word": "and",
+   "start": 79.52,
+   "end": 79.62
+  },
+  {
+   "word": "Streaks:",
+   "start": 79.8,
+   "end": 80.2
+  },
+  {
+   "word": "pale",
+   "start": 80.6,
+   "end": 80.86
+  },
+  {
+   "word": "runs",
+   "start": 80.96,
+   "end": 81.22
+  },
+  {
+   "word": "of",
+   "start": 81.26,
+   "end": 81.36
+  },
+  {
+   "word": "residue,",
+   "start": 81.4,
+   "end": 81.84
+  },
+  {
+   "word": "like",
+   "start": 82.04,
+   "end": 82.18
+  },
+  {
+   "word": "this",
+   "start": 82.22,
+   "end": 82.38
+  },
+  {
+   "word": "one",
+   "start": 82.44,
+   "end": 82.58
+  },
+  {
+   "word": "falling",
+   "start": 82.72,
+   "end": 83.02
+  },
+  {
+   "word": "from",
+   "start": 83.04,
+   "end": 83.18
+  },
+  {
+   "word": "the",
+   "start": 83.22,
+   "end": 83.3
+  },
+  {
+   "word": "rim.",
+   "start": 83.34,
+   "end": 83.6
+  },
+  {
+   "word": "Of",
+   "start": 84.64,
+   "end": 84.72
+  },
+  {
+   "word": "the",
+   "start": 84.76,
+   "end": 84.86
+  },
+  {
+   "word": "eighty-two",
+   "start": 84.92,
+   "end": 85.32
+  },
+  {
+   "word": "Cents",
+   "start": 85.44,
+   "end": 85.7
+  },
+  {
+   "word": "with",
+   "start": 85.74,
+   "end": 85.86
+  },
+  {
+   "word": "this",
+   "start": 85.92,
+   "end": 86.1
+  },
+  {
+   "word": "trait,",
+   "start": 86.14,
+   "end": 86.4
+  },
+  {
+   "word": "seventy-nine",
+   "start": 86.7,
+   "end": 87.32
+  },
+  {
+   "word": "are",
+   "start": 87.36,
+   "end": 87.46
+  },
+  {
+   "word": "also",
+   "start": 87.54,
+   "end": 87.8
+  },
+  {
+   "word": "Desert,",
+   "start": 87.94,
+   "end": 88.34
+  },
+  {
+   "word": "a",
+   "start": 88.62,
+   "end": 88.68
+  },
+  {
+   "word": "pale",
+   "start": 88.74,
+   "end": 88.96
+  },
+  {
+   "word": "toning.",
+   "start": 89.06,
+   "end": 89.4
+  },
+  {
+   "word": "This",
+   "start": 91.06,
+   "end": 91.3
+  },
+  {
+   "word": "is",
+   "start": 91.36,
+   "end": 91.46
+  },
+  {
+   "word": "one",
+   "start": 91.52,
+   "end": 91.58
+  },
+  {
+   "word": "of",
+   "start": 91.62,
+   "end": 91.78
+  },
+  {
+   "word": "three",
+   "start": 91.84,
+   "end": 92.08
+  },
+  {
+   "word": "that",
+   "start": 92.18,
+   "end": 92.28
+  },
+  {
+   "word": "are",
+   "start": 92.3,
+   "end": 92.4
+  },
+  {
+   "word": "not:",
+   "start": 92.44,
+   "end": 92.74
+  },
+  {
+   "word": "here",
+   "start": 93.14,
+   "end": 93.48
+  },
+  {
+   "word": "the",
+   "start": 93.52,
+   "end": 93.62
+  },
+  {
+   "word": "white",
+   "start": 93.64,
+   "end": 93.84
+  },
+  {
+   "word": "runs",
+   "start": 93.96,
+   "end": 94.28
+  },
+  {
+   "word": "over",
+   "start": 94.32,
+   "end": 94.58
+  },
+  {
+   "word": "bright",
+   "start": 94.6,
+   "end": 94.8
+  },
+  {
+   "word": "copper.",
+   "start": 94.92,
+   "end": 95.28
+  },
+  {
+   "word": "Only",
+   "start": 96.26,
+   "end": 96.54
+  },
+  {
+   "word": "three",
+   "start": 96.6,
+   "end": 96.76
+  },
+  {
+   "word": "Cents",
+   "start": 96.88,
+   "end": 97.2
+  },
+  {
+   "word": "carry",
+   "start": 97.24,
+   "end": 97.42
+  },
+  {
+   "word": "both",
+   "start": 97.52,
+   "end": 97.72
+  },
+  {
+   "word": "traits,",
+   "start": 97.8,
+   "end": 98.14
+  },
+  {
+   "word": "and",
+   "start": 98.4,
+   "end": 98.52
+  },
+  {
+   "word": "this",
+   "start": 98.6,
+   "end": 98.84
+  },
+  {
+   "word": "is",
+   "start": 98.88,
+   "end": 98.96
+  },
+  {
+   "word": "the",
+   "start": 99.0,
+   "end": 99.1
+  },
+  {
+   "word": "only",
+   "start": 99.16,
+   "end": 99.38
+  },
+  {
+   "word": "one",
+   "start": 99.46,
+   "end": 99.6
+  },
+  {
+   "word": "with",
+   "start": 99.64,
+   "end": 99.78
+  },
+  {
+   "word": "no",
+   "start": 99.84,
+   "end": 100.0
+  },
+  {
+   "word": "other.",
+   "start": 100.08,
+   "end": 100.28
+  },
+  {
+   "word": "Compare",
+   "start": 101.32,
+   "end": 101.62
+  },
+  {
+   "word": "Cent",
+   "start": 101.74,
+   "end": 101.94
+  },
+  {
+   "word": "sixteen-oh-five,",
+   "start": 102.06,
+   "end": 103.0
+  },
+  {
+   "word": "also",
+   "start": 103.26,
+   "end": 103.52
+  },
+  {
+   "word": "from",
+   "start": 103.54,
+   "end": 103.68
+  },
+  {
+   "word": "nineteen",
+   "start": 103.7,
+   "end": 104.1
+  },
+  {
+   "word": "seventy-nine",
+   "start": 104.1,
+   "end": 104.7
+  },
+  {
+   "word": "and",
+   "start": 104.74,
+   "end": 104.82
+  },
+  {
+   "word": "close",
+   "start": 104.9,
+   "end": 105.14
+  },
+  {
+   "word": "to",
+   "start": 105.18,
+   "end": 105.24
+  },
+  {
+   "word": "mint",
+   "start": 105.28,
+   "end": 105.42
+  },
+  {
+   "word": "state.",
+   "start": 105.54,
+   "end": 105.78
+  },
+  {
+   "word": "An",
+   "start": 107.0,
+   "end": 107.12
+  },
+  {
+   "word": "index",
+   "start": 107.18,
+   "end": 107.56
+  },
+  {
+   "word": "points",
+   "start": 107.68,
+   "end": 108.0
+  },
+  {
+   "word": "back",
+   "start": 108.04,
+   "end": 108.28
+  },
+  {
+   "word": "to",
+   "start": 108.32,
+   "end": 108.42
+  },
+  {
+   "word": "its",
+   "start": 108.44,
+   "end": 108.62
+  },
+  {
+   "word": "cause.",
+   "start": 108.68,
+   "end": 109.14
+  },
+  {
+   "word": "Here,",
+   "start": 109.88,
+   "end": 110.14
+  },
+  {
+   "word": "the",
+   "start": 110.32,
+   "end": 110.4
+  },
+  {
+   "word": "cause",
+   "start": 110.46,
+   "end": 110.78
+  },
+  {
+   "word": "is",
+   "start": 110.82,
+   "end": 110.9
+  },
+  {
+   "word": "a",
+   "start": 110.94,
+   "end": 111.02
+  },
+  {
+   "word": "finger,",
+   "start": 111.08,
+   "end": 111.42
+  },
+  {
+   "word": "and",
+   "start": 111.76,
+   "end": 111.88
+  },
+  {
+   "word": "whose,",
+   "start": 111.98,
+   "end": 112.38
+  },
+  {
+   "word": "no",
+   "start": 112.54,
+   "end": 112.62
+  },
+  {
+   "word": "one",
+   "start": 112.7,
+   "end": 112.8
+  },
+  {
+   "word": "knows.",
+   "start": 112.88,
+   "end": 113.28
+  },
+  {
+   "word": "Someone",
+   "start": 114.2,
+   "end": 114.58
+  },
+  {
+   "word": "has",
+   "start": 114.62,
+   "end": 114.84
+  },
+  {
+   "word": "dreamed",
+   "start": 114.88,
+   "end": 115.28
+  },
+  {
+   "word": "of",
+   "start": 115.32,
+   "end": 115.42
+  },
+  {
+   "word": "finding",
+   "start": 115.48,
+   "end": 115.8
+  },
+  {
+   "word": "out.",
+   "start": 115.9,
+   "end": 116.08
+  },
+  {
+   "word": "In",
+   "start": 117.16,
+   "end": 117.2
+  },
+  {
+   "word": "the",
+   "start": 117.24,
+   "end": 117.3
+  },
+  {
+   "word": "words",
+   "start": 117.34,
+   "end": 117.56
+  },
+  {
+   "word": "of",
+   "start": 117.6,
+   "end": 117.7
+  },
+  {
+   "word": "collector",
+   "start": 117.74,
+   "end": 118.06
+  },
+  {
+   "word": "Martred:",
+   "start": 118.16,
+   "end": 118.58
+  },
+  {
+   "word": "\"I",
+   "start": 119.86,
+   "end": 120.06
+  },
+  {
+   "word": "dream",
+   "start": 120.1,
+   "end": 120.34
+  },
+  {
+   "word": "someday",
+   "start": 120.48,
+   "end": 120.92
+  },
+  {
+   "word": "to",
+   "start": 120.96,
+   "end": 121.04
+  },
+  {
+   "word": "be",
+   "start": 121.06,
+   "end": 121.16
+  },
+  {
+   "word": "able",
+   "start": 121.22,
+   "end": 121.4
+  },
+  {
+   "word": "to",
+   "start": 121.44,
+   "end": 121.54
+  },
+  {
+   "word": "match",
+   "start": 121.6,
+   "end": 121.88
+  },
+  {
+   "word": "one",
+   "start": 121.92,
+   "end": 122.0
+  },
+  {
+   "word": "of",
+   "start": 122.04,
+   "end": 122.1
+  },
+  {
+   "word": "the",
+   "start": 122.14,
+   "end": 122.24
+  },
+  {
+   "word": "fingerprints",
+   "start": 122.28,
+   "end": 122.8
+  },
+  {
+   "word": "found",
+   "start": 122.9,
+   "end": 123.12
+  },
+  {
+   "word": "on",
+   "start": 123.16,
+   "end": 123.22
+  },
+  {
+   "word": "a",
+   "start": 123.26,
+   "end": 123.32
+  },
+  {
+   "word": "few",
+   "start": 123.36,
+   "end": 123.5
+  },
+  {
+   "word": "Cents,",
+   "start": 123.64,
+   "end": 124.0
+  },
+  {
+   "word": "with",
+   "start": 124.22,
+   "end": 124.34
+  },
+  {
+   "word": "the",
+   "start": 124.36,
+   "end": 124.52
+  },
+  {
+   "word": "real",
+   "start": 124.56,
+   "end": 124.74
+  },
+  {
+   "word": "person",
+   "start": 124.88,
+   "end": 125.3
+  },
+  {
+   "word": "owning",
+   "start": 125.36,
+   "end": 125.62
+  },
+  {
+   "word": "that",
+   "start": 125.68,
+   "end": 125.82
+  },
+  {
+   "word": "fingerprint,",
+   "start": 125.86,
+   "end": 126.38
+  },
+  {
+   "word": "it",
+   "start": 126.76,
+   "end": 126.8
+  },
+  {
+   "word": "would",
+   "start": 126.82,
+   "end": 126.92
+  },
+  {
+   "word": "be",
+   "start": 126.96,
+   "end": 127.02
+  },
+  {
+   "word": "a",
+   "start": 127.08,
+   "end": 127.12
+  },
+  {
+   "word": "kind",
+   "start": 127.18,
+   "end": 127.36
+  },
+  {
+   "word": "of",
+   "start": 127.42,
+   "end": 127.64
+  },
+  {
+   "word": "cosmic",
+   "start": 127.7,
+   "end": 128.12
+  },
+  {
+   "word": "reconciliation",
+   "start": 128.2,
+   "end": 129.02
+  },
+  {
+   "word": "of",
+   "start": 129.06,
+   "end": 129.12
+  },
+  {
+   "word": "sorts.\"",
+   "start": 129.22,
+   "end": 129.58
+  },
+  {
+   "word": "Cent",
+   "start": 131.2,
+   "end": 131.4
+  },
+  {
+   "word": "thirteen",
+   "start": 131.54,
+   "end": 131.951
+  },
+  {
+   "word": "twenty-eight,",
+   "start": 131.951,
+   "end": 132.62
+  },
+  {
+   "word": "a",
+   "start": 133.1,
+   "end": 133.22
+  },
+  {
+   "word": "great",
+   "start": 133.28,
+   "end": 133.56
+  },
+  {
+   "word": "Cent.",
+   "start": 133.66,
+   "end": 133.98
+  }
+ ]
+}

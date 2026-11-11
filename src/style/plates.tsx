@@ -106,12 +106,14 @@ export const Plate: React.FC<{ asset: Asset; caption: string; maxWidth?: number 
                                         background: "#0f0f10" }} />
         </div>
       </Imagery>
+      {/* A plate may carry no caption (#1264 v4: gold bars, Minecraft); SafeText rightly refuses to measure an empty string. */}
+      {caption ? (
       <div style={{ width: boxW - 60, display: "flex", justifyContent: "center", opacity: cap0.opacity, transform: `translateY(${cap0.y}px)` }}>
         <SafeText role="label" fontSize={MIN_FONT_PX.label} color={COLOR.inkDim} maxLines={3}
                   style={{ textAlign: "center", fontFamily: TYPE.body }}>
           {caption}
         </SafeText>
-      </div>
+      </div>) : null}
     </div>
   );
 };
