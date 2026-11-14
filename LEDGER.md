@@ -268,6 +268,17 @@ them was reasonable.
   a staged cutout is RGBA with transparent corners; the raw image is RGB with
   white ones. Stage through the script, never by copying.
 
+- **A still that passes the text gate is a pass for that frame, not for the
+  shot.** The same episode: 33 stills on scratch timing, all passing, and on the
+  real voice the first frames of two quote shots were refused. `QuoteOver` lays
+  the quote out under the picture before its cue, unseen; under a square picture
+  at full size that unseen quote sits below the essential box, and SafeText
+  measures it anyway. The scratch stills had all landed after the cue, when the
+  picture had shrunk. A full render would have died at the first such frame.
+  *Separating observation:* sample each shot around its transitions (just before
+  a cue, at it, and as it settles), not only at its middle and end; a shot's
+  layout changes at its cues, and the gate only sees the frames it is given.
+
 ## Refuted — killed by a measurement, do not re-investigate
 
 - *"The left-band safe-area failure is a mispositioned element."* **Refuted** by

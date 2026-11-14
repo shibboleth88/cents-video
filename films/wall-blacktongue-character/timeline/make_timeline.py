@@ -70,7 +70,7 @@ shots = [
       "each column lights as its grade is explained (Traits Atlas wording). Gold has no significant grade (dash). Orange has no grades: "
       "#1757 drawn across the columns on a rule, dimmed whenever a single grade is lit."),
  shot("k02_strips", "No other collector's Wall", "Writing about Chang's earlier", "GradeStrips",
-      {"title": "Patinas and grades held", "subtitle": "As of November 2026", "groups": [3, 3, 3, 3, 2, 1], "keys": KEYS,
+      {"title": "Patinas held", "subtitle": "As of November 2026", "groups": [3, 3, 3, 3, 2, 1], "keys": KEYS,
        "patinas": [r["label"] for r in C["ladder"]] + ["orange"],
        "rows": strips, "mark_missing_at": "reach thirteen"},
       f"Fifteen dots per Wall (the fourteen grades, then orange): blacktongue 15; CL7 and Daidatep (the two largest collector Walls) 13, each missing a full gold "
@@ -110,12 +110,12 @@ shots = [
  shot("k08_quote_interview", "In a twenty twenty-four", "Some of the best pieces", "QuoteOver",
       dict(MAKES, title=T, subtitle="MAKES CENTS interview", img_caption="@sovrnart on X, 20 Nov 2024",
            quote="“…finding additional value in the artistic merit and time-worn aesthetic of each coin.”",
-           attribution="blacktongue, 2024", quote_at="finding additional value in"),
+           attribution="blacktongue, 2024", quote_at="finding additional value in", shrinkTo=0.44, order="picture-first"),
       "The MAKES CENTS card (sovrnart, 20 Nov 2024; it shows blacktongue's Ghost #9684), then the interview line, verbatim."),
  shot("k08b_quote_patient", "Some of the best pieces", "In August twenty twenty-six", "QuoteOver",
       dict(WALL25_IMG, title=T, subtitle="MAKES CENTS interview", img_caption="The Wall, November 2026",
            quote="“…by being patient and trusting my eye (and gut).”",
-           attribution="blacktongue, 2024", quote_at="by being patient and"),
+           attribution="blacktongue, 2024", quote_at="by being patient and", shrinkTo=0.44, order="picture-first"),
       "The second interview line over the whole Wall as it stands (all 25 fronts on black). No single Cent is paired with it: "
       "the interview does not say which pieces came that way."),
  shot("k09_quote_5755", "In August twenty twenty-six", "The newest Cent is", "QuoteOver",
@@ -190,7 +190,7 @@ shots = [
   "purpose": "End credits.", "visual_kind": "code", "component": "Credits",
   "props": {"lines": ["Images: Rutherford Chang via cents.vision (site by Dr. Martin Lehnen)", CREDIT,
                       "Trait definitions and grades: Traits Atlas, CENTS Trait Council",
-                      "Quote: Jim Drobnick, “Rutherford Chang. The Record Collector as Artist-Curator”, Revue musicale OICRM, 2023",
+                      "Quote: Jim Drobnick, “Rutherford Chang. The Record Collector as Artist-Curator” (2023)",
                       "Collector Wall data: cents.vision, as of November 2026",
                       "Interview: MAKES CENTS, @sovrnart on X, 20 November 2024",
                       "Post: blacktongue (@blktng) on X, 21 August 2026"], "url": "cents.gallery"}},

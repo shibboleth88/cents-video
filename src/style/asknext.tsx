@@ -243,18 +243,29 @@ export const QuoteOver: React.FC<Anchored & {
   title: string; subtitle?: string;
   src?: string; img_w?: number; img_h?: number; img_caption?: string; cent?: string;
   quote: string; attribution: string; quote_at: string; quoteSize?: number;
+  /** Picture width once the quote is in, as a fraction of its first width (default 0.6). A square
+   *  picture under a three-line quote needs less, or the quote runs under the essential box. */
+  shrinkTo?: number;
+  /** "together" (default): the picture shrinks as the quote fades in, the quote laid out (unseen) from the
+   *  start. "picture-first": the picture shrinks in the 14 frames before the cue, and the quote is mounted
+   *  only at its cue, already in its final place. A tall picture needs this: laid out under the
+   *  full-size picture, the unseen quote sits below the essential box and SafeText refuses it. */
+  order?: "together" | "picture-first";
 }> = (props) => {
-  const { title, subtitle, src, img_w, img_h, img_caption, cent, quote, attribution, quote_at, quoteSize = 52 } = props;
+  const { title, subtitle, src, img_w, img_h, img_caption, cent, quote, attribution, quote_at, quoteSize = 52, shrinkTo = 0.6, order = "together" } = props;
+  if (!(shrinkTo > 0.2 && shrinkTo <= 1)) throw new Error(`QuoteOver: shrinkTo ${shrinkTo} outside (0.2, 1]`);
   if (!!src === !!cent) throw new Error("QuoteOver: give a picture (src) or a Cent (cent), not both or neither");
   if (src && !(img_w && img_h)) throw new Error("QuoteOver: a picture needs its img_w and img_h");
   const frame = useCurrentFrame();
   const fade = useShotFade();
   const at = useAt(props);
   const q = at(quote_at);
+  const first = order === "picture-first";
   const t = interpolate(frame, [q, q + 16], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: EASE.inOut });
+  const s = first ? interpolate(frame, [q - 14, q], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: EASE.inOut }) : t;
   const W = X1 - X0;
   // The picture reads alone first, then shrinks to make room for the quote.
-  const k = 1 - 0.4 * t;
+  const k = 1 - (1 - shrinkTo) * s;
   const picW = src ? Math.round(Math.min(W, img_w!) * k) : 0;
   const picH = src ? Math.round(picW * img_h! / img_w!) : Math.round(360 * k);
   const top0 = STAGE.y0 + 120, top1 = STAGE.y0;
@@ -263,7 +274,7 @@ export const QuoteOver: React.FC<Anchored & {
   return (
     <div style={{ position: "absolute", inset: 0, opacity: fade }}>
       <NameBand title={title} subtitle={subtitle} />
-      <div style={{ position: "absolute", left: X0, top: top0 + (top1 - top0) * t, width: W,
+      <div style={{ position: "absolute", left: X0, top: top0 + (top1 - top0) * s, width: W,
                     display: "flex", flexDirection: "column", alignItems: "center", opacity: pic.opacity }}>
         <Imagery>
           {src ? (
@@ -279,10 +290,12 @@ export const QuoteOver: React.FC<Anchored & {
             <SafeText role="label" fontSize={42} maxLines={1} color={COLOR.inkDim} style={{ textAlign: "center", fontFamily: TYPE.body }}>{img_caption}</SafeText>
           </div>
         ) : null}
-        <div style={{ marginTop: 34, width: W, opacity: t, transform: `translateY(${(1 - t) * 20}px)` }}>
+        {first && frame < q ? null : (
+        <div style={{ marginTop: 34, width: W, opacity: t, transform: `translateY(${(1 - t) * (first ? 0 : 20)}px)` }}>
           <SafeText role="body" fontSize={quoteSize} maxLines={6} style={{ lineHeight: 1.22, fontWeight: 500 }}>{quote}</SafeText>
           <SafeText role="body" fontSize={46} maxLines={2} color={COLOR.accent} style={{ marginTop: 18 }}>{attribution}</SafeText>
         </div>
+        )}
       </div>
     </div>
   );
