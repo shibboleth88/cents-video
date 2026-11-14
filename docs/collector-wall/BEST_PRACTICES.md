@@ -4,11 +4,11 @@ This is the one source for the format of every Collector Wall episode. Read it b
 
 The reference episode is **blacktongue** (`films/wall-blacktongue/` on branch `claude/project-thread-nkzn17`, PR #5). Copy its folder layout, timeline shape and caption builder.
 
-Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the Daidatep thread's first findings. 2026-10-26: §5 "Delivery check" added from the GPT WBWA reel handover. 2026-10-27: narration voice changed to "eee" (§5); showcase opener is the series opening (§3); 3DCENTS credit wording approved (§4); badge zooms get the opener-style highlight (§4a); audit against the day's decisions: lead with the Wall's standout fact (§1), graded traits, fronts only, Cents on black, Daidatep (§2), no long still holds (§4a), dated snapshots (§4a). 2026-10-28: find the focus with `wall_focus.py` (§1); seamless signature hand-offs, card to spin to still, front on cue (§3), approved as the series format; captioned render only (§5); end credits card, 3DCENTS credit moved there (§3 step 10, §4); "Lead" caption look (§5).
+Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the Daidatep thread's first findings. 2026-10-26: §5 "Delivery check" added from the GPT WBWA reel handover. 2026-10-27: narration voice changed to "eee" (§5); showcase opener is the series opening (§3); 3DCENTS credit wording approved (§4); badge zooms get the opener-style highlight (§4a); audit against the day's decisions: lead with the Wall's standout fact (§1), graded traits, fronts only, Cents on black, Daidatep (§2), no long still holds (§4a), dated snapshots (§4a). 2026-10-28: find the focus with `wall_focus.py` (§1), plus off-site leads from `stories.py` (candidate, §1); seamless signature hand-offs, card to spin to still, front on cue (§3), approved as the series format; captioned render only (§5); end credits card, 3DCENTS credit moved there (§3 step 10, §4); "Lead" caption look (§5). 2026-11-03: visual variety for all CENTS videos (§5, before §6). 2026-11-04: unclaimed Walls allowed, identified by the shortened address (§2). 2026-11-09: DOPEMIND v1 lessons: several zooms on one still (§4), stills budgets, superlatives, DotColumns, end-fade note (§5); two-move close is an open question (§3); DOPEMIND "what next" notes (§5), the scribe word check is not independent, and DOPEMIND v2 found the fix (§5). 2026-11-14: wall_focus.py gaps and the "character" pattern (§1), CentRow overlap and stage_cents.py (§5); iridescent is not a patina (§2), sample stills around cues, take choice by URL-scribe (§5).
 
 ## 1. What an episode is
 
-- One claimed Wall per episode, as it appears on cents.vision/collectors.html under the Claimed filter.
+- One Wall per episode, as it appears on cents.vision/collectors.html. Usually a claimed Wall (the Claimed filter); unclaimed Walls are allowed from 2026-11-04 (§2).
 - The tone is matter-of-fact. Each episode just walks through what that collector has: standout Cents, Sets and badges.
 - Don't add essayistic framing or a reflection at the close. The user cut "the traits were named by collectors…" and "every Wall is a record that keeps changing".
 - **Find the focus by analysis, then lead with it (user, 2026-10-27/28).** In the user's words: "we should look for what the most notable quality of the wall is to find a focus for the video, and sometimes that is not the most rare Set". Build the episode around that quality and keep the rest short.
@@ -19,16 +19,31 @@ Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the D
     - The report for every claimed Wall is in `/mnt/project-files/collector-wall/focus/` (`wall_focus_2026-10-27.txt`).
   - **Lead with the top row.** When rows are close, prefer coverage or a Set over a hoard (such as "most Glue Cents"), and use hoards as second beats.
   - **An editor still chooses,** and the claim is verified on the dated snapshot before any script is written.
+  - **Known gaps in `wall_focus.py`** (reported 2026-11-14 by the blacktongue "character" thread, PR #33; the tool is not fixed yet). Its Set rows don't subtract the artist wallet for the patina-tier and contamination Sets. Its contamination thresholds are 4 and 8, where cents.vision uses 3 and 6. Until it is fixed, recount any Set or contamination row you lead with in your own data script, using the site's thresholds and leaving the artist wallet out.
+  - **A "character" episode** is a second pattern, after the standard walk-through (blacktongue "character", PR #33). It measures what the whole Wall holds against every other Wall (the artist wallet is never a rival). A data script refuses each sentence the snapshot stops supporting. The film opens on those qualities, then gives the standard material.
+  - **Off-site leads: `pipeline/stories.py` (CANDIDATE, 2026-10-28, from the "Find surprising stories" thread; draft PR #23; the user has not reviewed it).** Run it next to wall_focus.py with `python3 pipeline/stories.py --wall <Name>`. Every finding gets a surprise score in bits and an `on_site` flag, which says whether cents.vision already shows it on the card or the Set badges. A finding the site doesn't show is what collectors may not know.
+    - Suggested rule: lead with the strongest off-site finding when it scores about 10 bits or more and can be shown on screen. Otherwise use the wall_focus lead. Until the user reviews the tool, offer the off-site lead as an option rather than choosing it alone.
+    - Before scripting, recount the chosen finding from a second source (`claimed_walls.json` plus `knowledge/data/cents_by_trait.json`), and look at the Cents by eye.
+    - The wording stays a count, for example "7 of its 41 Cents are Orange, about twelve times its share". Never give a reason why. "The only collector" excludes the artist wallet. An unclaimed Wall is identified only as §2 allows: by its shortened address, never by a Council-only name.
+    - Leads already found: Van Arman holds #9526 (1910), the oldest Faceless Cent by 34 years. Plutonium F is the only collector with both an Iridescent and a Full Gold. CL7 is one Vandalized Cent short of all 19 traits, and Daidatep is one Iridescent short. The full list is `/mnt/project-files/stories/FINDINGS_2026-10-28.md`.
+    - **Round 2 (2026-10-28, also not yet reviewed by the user; FINDINGS §7-9):**
+      - Bits are now corrected for how many things each lens tried. That drops the "only collector holding both X and Y" lens to chance level. Such a line can be stated as a fact, but never used as evidence of what a collector focuses on.
+      - The oldest Cent of a trait is worth mentioning even when it isn't the oldest by a wide margin (user note, as relayed by the stories thread).
+      - Don't explain inscription-order patterns (for example, Cents from early in the inscription run) until the user has said how the minting worked.
+      - New leads: Daidatep holds the oldest Cent of five different traits, in five Cents. 37 of Van Arman's 63 Cents are among the first tenth inscribed, and 33 sit in one run of 150 consecutive inscriptions. All 7 of Pedro Martino's Cents are dated 1971. On claimed Walls only 31% of Cents carry no trait, against 55% on unclaimed Walls.
+      - **Unclaimed Walls:** confirmed by the user on 2026-11-04. See §2 for how they are identified. The voiceover wording is still open.
   - **What it found:** ScrappyT has one Cent of every one of the 19 visual traits, and no other Wall does, not even the artist wallet. The user accepted v2, built around that: "this is a good video". The tool also agrees with the earlier picks: blacktongue's Full Spectrum with all 5 fulls (no other collector), and Daidatep's 12 of 12 contamination types (one of 2).
 - The length is whatever the Wall needs: blacktongue v5 is 84 s, ScrappyT about 2 min.
 - One thread per episode.
 
 ## 2. What may appear
 
-- **Allowed:** only what the claimed Wall shows publicly:
+- **Allowed:** only what the Wall shows publicly:
   - the name exactly as the card renders it
   - the Cents, the Sets, and the badges
-- **No wallet address**, ever. When capturing cents.vision, hide `.collector-wallet`.
+- **Unclaimed Walls can have episodes too (user, 2026-11-04: "yes we can also do videos on unclaimed walls").** An unclaimed Wall has no name, so it is identified by its address, **exactly as the card headline shows it**: the first 5 characters, "...", then the last 5 (`headlineAddress()` in collectors.html). Never show or say the full address. The voiceover wording is still to be decided with the user (see the open question below). Never fill the gap with a Council-only name.
+  - The tools (`wall_board.py`, `wall_focus.py`) are built and tested on `claimed_walls.json`. An unclaimed episode takes its Cents from `wallet_index_cents.json`, joined through `wallet-groups.json` as in the cents-bot notes. Check that the board renders the shortened address as its title before scripting.
+- **No full wallet address**, ever. On a claimed Wall, show no address at all: when capturing cents.vision, hide `.collector-wallet`. (This line said "No wallet address, ever" until 2026-11-04.)
 - **Never use `wallets-names.json`.** Those are Council-only names given without consent. Block `**/*wallets-names*` when capturing pages.
 - **No prices, no finances, no speculation.**
 - **Never link sovrn.art.**
@@ -39,6 +54,7 @@ Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the D
 - **Date every claim that can change.** Sets held, holder counts, Diamond Hands and claims all change daily. Say "As of <Month Year>". Re-fetch the data before an episode locks, and put the absolute date in the credits.
 - **Wording:**
   - Say "pre-1983", never "pre-1982".
+  - **Iridescent is not a patina** (user, 2026-11-14, via the blacktongue "character" thread). Never write "eight patinas". A Wall's patina range counts the graded patina cells plus Orange, which has no grades: fifteen values.
   - CENTS has no ending.
   - Use the past tense for Rutherford Chang.
   - Never imply Chang's intent.
@@ -79,6 +95,7 @@ Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the D
        - `"enter_from": {cx, cy, d}` makes the Cent grow out of its slot instead of fading in. Measure the values on the opener's last frame: the slot's centre and the coin's full height, in screen pixels. blacktongue's are 540, 800, 495.
      - **Large spin to still, on cue:** in the clip, `"still": {"src": "hires/<n>.webp", "at_phrase": "<cue>", "r": <coin radius>}`.
        - The turn is retimed, at the speed nearest the export's own and within 0.6 to 1.6x, so the Cent faces fully front (clip frame 0) exactly when the cue starts.
+       - If no cue in a short signature line lets the turn face front within 0.6 to 1.6x (it throws), drop `still` and let the spin run. (DOPEMIND "what next", PR #29.)
        - It then crossfades over 8 frames to the 1050px photo, drawn where any still `WallStandout` of that Cent draws it. A following still shot therefore cuts invisibly, and the shot can go on to a `zoom` on the photo.
        - `r` is the coin's radius as a fraction of the photo: measure it with a threshold on the white background (#5185: 0.41).
        - If no speed within that range can land the front on the cue, the render refuses and names the cue. Pick a cue a little later or earlier.
@@ -102,6 +119,7 @@ Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the D
    - It sits over the cents.vision Traits Lab screenshot (`films/wall-blacktongue/data/traits_lab.png`).
    - The camera makes **one** zoom, onto "Collectors" in the menu, as the word is spoken. Add no other move before it.
    - End it at `{"after_phrase": "under Collectors", "plus": 1.5}`, not at the end of the audio.
+   - *Open question (DOPEMIND v1, PR #28, 2026-11-09):* that episode closed in two moves, first onto the Cents row and the site menu, then onto Collectors. Its thread found that the single move held the whole screenshot, unreadable at phone size, for 2.5 s. This goes against the one-zoom rule above, which came from the user, so it stays an exception until the user rules on it.
 10. **End credits card (user, 2026-10-28).** A wordless `Credits` shot, the same component as the One Cent series, from that cue to `{"at_end": true}`:
     ```json
     {"component": "Credits", "props": {"lines": [
@@ -147,6 +165,7 @@ Last updated 2026-10-25, from the user's notes on blacktongue v1 to v4 and the D
 - **Zoom to show the trait.** When narration names a trait that sits in one place on the coin (a date, a mint mark, a contamination spot, a die feature), zoom onto that part of the coin.
   - Use `WallStandout` with `src: "hires/<n>.webp"` and `zoom: {at_phrase, box: [x0,y0,x1,y1] as fractions of the image, mark: true}`.
   - Measure the box on the image; don't guess it.
+  - **Several zooms on one still:** `zooms: [{at_phrase, box | null, mark | marks}, …]` eases from step to step without a cut (for example the date, then trait A, then trait B). `box: null` eases back to the whole coin. One step draws what `zoom` drew, and setting both throws. (DOPEMIND v1, PR #28.)
   - Traits that cover the whole surface (full gold, full desert and other full patinas, Ghost, a coin scratched all over) get no zoom.
 - **Zoom onto badges** on the Wall screenshot with `WallShot`.
   - Use `moves: [{at_phrase, box, mark: true}]`, with the box measured in screenshot pixels.
@@ -231,6 +250,10 @@ For a trait you must see on the coin itself (a date, a mint mark), cut from the 
 - **Transcribe the chosen take** with scribe_v1 (free).
   - Check it word for word against the TTS text.
   - Also run a control with one word changed, which must fail. A normalizer that deletes newlines glues words together, so replace punctuation with spaces.
+  - **This check isn't independent (found 2026-11-09, DOPEMIND "what next").** On ElevenLabs flows, scribe_v1 returned the prompt's own text: it behaves as forced alignment, not recognition, so a passing word check can't catch a misread word. Whisper is blocked by the proxy.
+    - **The fix (DOPEMIND v2, PR #28):** push the take to a URL, attach it as a fresh asset with `creative_attach_reference_file` (raw URL), and transcribe *that* asset, not the TTS node. Real recognition gives itself away: numbers come back as digits and there are no direction tags. Compare with `films/wall-dopemind/audio/check_heard.py`. This is now a LEDGER failure shape.
+    - Still listen to the whole take before locking it.
+    - The URL-scribe check can also choose between takes: on blacktongue "character", take 1 was heard as "CLS7" where the script says "C L seven", and take 2 passed with all 468 tokens equal. Use the shared-normaliser copy of `check_heard.py` in `films/wall-blacktongue-character/audio/`. It folds the recogniser's written forms ("No." for number, 2.4, 1,000 for "a thousand", CL7, "1960s") and prints every fold it uses. The recogniser spells Daidatep "DidaTep", so the voice's pronunciation of names still needs a listen.
 - **Audio:** `loudnorm=I=-16:TP=-1.5:LRA=11,apad=pad_dur=2.5`, 48 kHz mono.
 - **Captions:**
   - `captions/build_cues.py` maps the spoken numbers back to their written forms.
@@ -244,7 +267,11 @@ For a trait you must see on the coin itself (a date, a mint mark), cut from the 
 - **Timeline anchors** are phrases from the alignment.
   - They must be unique. Use four words or more when a phrase repeats.
   - A move's phrase must fall after the start of its shot.
-- **Before rendering:** render stills of every shot. `SafeText` fails a render when a label wraps past its line count, so shorten the label rather than the check.
+- **Before rendering:** render stills of every shot, and **sample each shot three times: just before each cue, at the cue, and as it settles.** One passing still only proves that frame (blacktongue "character": stills on scratch timing all passed, then on the real voice SafeText refused the first frames of two `QuoteOver` shots, where the quote is laid out off-screen before its cue). `QuoteOver` now takes `order: "picture-first"` with `shrinkTo` for that case. `SafeText` fails a render when a label wraps past its line count, so shorten the label rather than the check.
+  - Budgets: a `CentScroll` title (84 px) fits about 17 characters, and a `CentRow` subtitle about 30. On DOPEMIND v1, 6 of 35 stills failed on the first pass.
+- **A caption cue that straddles a sentence end next to a cut:** move the cut to the first words of the next sentence. Don't re-cut the cue.
+- **Superlatives carry their class and their quantity** (a LEDGER failure shape, DOPEMIND v1). "Holds only two contaminated Cents, the fewest of any Wall with this Set" was measured and is true. "The only Wall to complete it with two" is false, because other Walls hold a pair that would also complete it. Before any "only", "fewest" or "first", say what it is measured against, and check that the claim is about that measurement and not a stronger one.
+- **Chart: `DotColumns`** (`src/style/wallcharts.tsx`, PR #28) places the Wall among all Walls on one measured value. It draws one dot per Wall, stacked into columns, with this Wall in copper and named. It refuses bins that don't sum to the total. Put the name in the band above the tallest column, with a leader line: placed just above its dot, the name covered dots in the next columns.
 - **Render the captioned version only** (`VideoCaptioned`), plus the SRT (user, 2026-10-28). A clean version is no longer delivered by default. It can be rendered from the same committed timeline at any time with the `Video` composition, so keep each delivered version reproducible: commit its timeline, and keep its audio and its `public/` assets (3DCENTS clips, hires fronts) in `/mnt/project-files/collector-wall/`.
   - Use `--browser-executable=/opt/pw-browsers/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell`.
   - Deliver to `/mnt/project-files/collector-wall/wall-<name>_vN_captioned.mp4` and `_vN.srt` (a `_vN_clean.mp4` only when asked).
@@ -270,7 +297,7 @@ ffmpeg -hide_banner -i "$f" -vf "select=eq(n\,0),signalstats,metadata=print:key=
 ffmpeg -hide_banner -i "$f" -vf "blackdetect=d=0.1:pix_th=0.10,freezedetect=n=0.001:d=2" -an -f null - 2>&1 | grep -oE "black_start:[0-9.]+ black_end:[0-9.]+|freeze_start: [0-9.]+"
 ```
 
-- **Black on our stage is often by design.** The approved #6129 v3.1 has seven dips of 0.2–0.6 s between shots and a dark credits card, all flagged by step 4. A zero count is therefore not the target. Look at a frame inside each interval and fail only a black frame 0, a black run that is not a transition, or a black tail.
+- **Black on our stage is often by design.** The approved #6129 v3.1 has seven dips of 0.2–0.6 s between shots and a dark credits card, all flagged by step 4. A zero count is therefore not the target. Look at a frame inside each interval and fail only a black frame 0, a black run that is not a transition, or a black tail. The shot fade-out leaves the very last frame dark (YMAX about 26 on ScrappyT v2, DOPEMIND v1 and blacktongue v6.1). That is the designed end fade, not a black tail, as long as the credits card is readable up to the last ~0.3 s.
 - **Also:** look at the last frame; confirm each change the user asked for in the export, not the timeline; on a visual-only revision, keep the audio and compare it with the previous version.
 - **Report it as "exported and verified"**, saying which checks ran. Only the user approves.
 - More from that handover (repeats, asset usage counts, portraits, press marks, footage labels): `docs/gpt-handover.md` in the repo.
@@ -290,6 +317,43 @@ ffmpeg -hide_banner -i "$f" -vf "blackdetect=d=0.1:pix_th=0.10,freezedetect=n=0.
   - With `labelsUnder` and around 20 or more Cents, set `cols: 6`, or the top row runs into the title.
 - **WallStandout captions stay on one line.** A caption that wraps to two lines runs under the burned-in captions.
 - **Readouts:** the 84 px readout fits about 8 characters, so SafeText refuses "1 of 2 collectors". Keep the number in the readout ("1 of 2") and put the words in the caption line beneath it.
+
+### Practical notes from DOPEMIND episodes (2026-11-09; PR #28 standard, PR #29 "what should I add next?")
+
+- **Measure "would add X to the card" with the site's own code.** Move the Cent onto the Wall in a copy of `wallet_index_cents.json`, replay collectors.html, and read the badges back (`films/wall-dopemind-next/data/sim/run_sims.py`). Run it both ways as the control: +1971 alone draws no Chronicle Set, while +1971 and +1982 together do. Phrase the result as what the card would show, never as advice to buy.
+- **Two episodes on one Wall share one dated snapshot,** and the split is agreed up front. The DOPEMIND standard episode took the Contamination Set; the sibling took the Discord question.
+- **A shot's start is not the moment its content appears** (LEDGER, on its second occurrence). A chat card cued on a later phrase stood empty for 1.7 s. Blackdetect plus a frame inside each interval caught it; midpoint stills did not. `ChatCard` now refuses to stand empty.
+- **The last change before a render is the one no still has seen.** A flex-wrap tweak went straight to render and put a Cent on top of the note. After the last edit, re-render the affected stills, or look at the export itself at that shot.
+- **Repeated phrases make anchors ambiguous** (for example "one 1982 short", said twice). Lengthen the anchor until it is unique; the anchor resolver throws otherwise.
+- **The project-files store adds a ~6 KB uuid atom to MP4s,** so a file hash never matches the local render. Compare decoded streams instead: `ffmpeg -i <f> -map 0 -c copy -f md5 -`, or framemd5 per frame. (blacktongue v6.1 showed the same: different file md5, identical stream md5.)
+- **A short on-screen label is read on its own** (DOPEMIND v2). "Speckles · Obsidian · Desert / 1 of 10,000" was false: six Cents share that trio when the obsidian can be of any grade. Keep the grade in labels, and for every uniqueness line, measure each reading a viewer could give it.
+- **Write "10,000" in figures in the script,** with an entry in the spoken table. The caption renderer turns the word "ten" into "10", so a spelled-out "ten thousand" captions wrongly.
+- **Text graphics:** give a quoted post or other text graphic a camera box with the picture area's aspect (1000×860), so no line is cut at the edge. `WallShot` takes `title`/`subtitle` for quoted posts, and a move with `focus` lights the passage being read.
+- **`CentFilter`** (`src/style/wallcharts.tsx`) narrows a pool step by step, for "of these, how many also…" passages.
+- **`CentRow` with fixed `cols` leaves the label band out of the cell height** (a LEDGER candidate, blacktongue "character"). With many labelled Cents (25 in five rows) the grid ran over its subtitle and readout, and the text gate passed every string because each string fit on its own. Keep labelled rows few, or use `CentTiers`, `GradeStrips` or `PatinaLadder` (`src/style/character.tsx`, PR #33). Look at the still; the gate can't see overlap.
+- **Stage Cent images through `pipeline/stage_cents.py`.** Cents fetched straight into `public/cents/` render as white squares (a LEDGER candidate).
+- **Reusable components** in `src/style/asknext.tsx`: `ChatCard`, `GapSlots` (Set slots, filled or dashed, filled on cue), `YearBars`, `QuoteOver` and `AskCard`. `DotColumns` is in `src/style/wallcharts.tsx` (§5 above).
+
+### Visual variety (user, 2026-11-03; applies to ALL CENTS videos)
+
+The user wants the same variety in every CENTS video as in Cent #1264 v7:
+- Vary the visuals.
+- Don't stay too long on any one visual.
+- Repeat visuals rarely.
+- Draw imagery from a range of sources.
+
+**Reference: #1264 v7 (2:19).**
+- 24 shots, median 4.7 s, 17 distinct plates.
+- Every shot ran 9 s or less, except two: a Cent card carrying 5 zooms over 27 s, and the quote card (14 s).
+- Sources: NARA photos, a newspaper front page, an archival clip with its own sound, charts, a market screenshot, art-news and internet clips, cents.gallery media library items, 3DCENTS, and the 1050 px fronts.
+
+**How:**
+- Plan a new visual every 3–6 s.
+- On a long passage over one Cent, move or zoom every few seconds.
+- Before reusing a shot, check the media library (cents.gallery/data/cents-media.json; files at media.cents.gallery/<k>) and the public-domain archives.
+- **In a Collector Wall**, the Wall card is the visual that most risks repeating, because each badge zoom returns to it. Between badge zooms, cut away to the Cents themselves, large (hires fronts, `solo_until` rows, the 3DCENTS spin), and to cents.vision screenshots of the Set or trait pages. Only use media-library items that bear on what the Wall holds.
+
+This rule is also in project memory as `cents-visual-variety`, for every film.
 
 ## 6. Badge meanings (as cents.vision words them)
 
