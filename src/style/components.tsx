@@ -13,6 +13,7 @@ import { WallOpener } from "./wallopener";
 import { TraitTally } from "./traittally";
 import { WALLCHARTS } from "./wallcharts";
 import { ASKNEXT } from "./asknext";
+import { CHARACTER } from "./character";
 
 const useFade = useShotFade;
 
@@ -195,7 +196,7 @@ export const CaptionLayer: React.FC<{
 // nearly did that to the One Cent films. Refuse at load instead.
 const GROUPS: Record<string, Record<string, unknown>> = {
   core: { TitleCard, PullQuote, StatReveal, AssetShot, Credits }, SETS, NARROWING, WALL,
-  single: { WallBoard, WallOpener, TraitTally }, ONECENT, ASKNEXT, WALLCHARTS,
+  single: { WallBoard, WallOpener, TraitTally }, ONECENT, ASKNEXT, WALLCHARTS, CHARACTER,
 };
 {
   const owner = new Map<string, string>();
@@ -205,5 +206,5 @@ const GROUPS: Record<string, Record<string, unknown>> = {
       owner.set(name, g);
     }
 }
-export const REGISTRY = { TitleCard, PullQuote, StatReveal, AssetShot, Credits, ...SETS, ...NARROWING, ...WALL, WallBoard, WallOpener, TraitTally, ...ONECENT, ...ASKNEXT, ...WALLCHARTS } as const;
+export const REGISTRY = { TitleCard, PullQuote, StatReveal, AssetShot, Credits, ...SETS, ...NARROWING, ...WALL, WallBoard, WallOpener, TraitTally, ...ONECENT, ...ASKNEXT, ...WALLCHARTS, ...CHARACTER } as const;
 export type ComponentName = keyof typeof REGISTRY;

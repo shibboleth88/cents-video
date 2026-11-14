@@ -247,6 +247,27 @@ them was reasonable.
   still there. *Separating observation:* count with a different matcher from the
   one that acted (here, a number regex on all text), or look.
 
+- **Every element inside the safe box is not every element clear of the
+  others.** The text gate checks each string alone: font floor, wrap, and that
+  its glyph box sits inside the essential area. It never compares one element
+  with another. blacktongue "character" episode, 2026-11-14 (scratch-timed
+  stills): `CentRow` with fixed `cols` sizes a cell by width and leaves the label
+  band out of the height, so 25 labelled Cents in five rows ran up over the
+  shot's own subtitle and down into the readout. Every string passed. It was
+  caught by looking at the still. The shot now uses a component built for the
+  count (`CentTiers`); `CentRow` is unchanged, since shipped films use it.
+  *Separating observation:* look at a still of every shot at its fullest frame;
+  no gate here measures overlap between text and imagery.
+
+- **A file at the path the renderer reads is not a file in the form it
+  expects.** The same day: eight Full Gold Cents fetched straight from the
+  on-chain image repo into `public/cents/` rendered as white squares beside the
+  25 Wall Cents, which had been through `pipeline/stage_cents.py` (crop to the
+  measured coin, transparent circle outside). The renderer found every file and
+  nothing refused an unstaged one. Caught by looking. *Separating observation:*
+  a staged cutout is RGBA with transparent corners; the raw image is RGB with
+  white ones. Stage through the script, never by copying.
+
 ## Refuted — killed by a measurement, do not re-investigate
 
 - *"The left-band safe-area failure is a mispositioned element."* **Refuted** by
