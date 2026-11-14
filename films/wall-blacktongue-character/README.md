@@ -69,3 +69,21 @@ standard blacktongue episode is `films/wall-blacktongue/` (v1 to v3).
     full-size picture, below the essential box, and SafeText refused those
     frames. "picture-first" shrinks the picture in the 14 frames before the cue
     and mounts the quote only at its cue, already in place.
+  - The credits were shortened ("Wall data: cents.vision, 14 Nov 2026", "Post: @blktng on X,
+    21 Aug 2026", the Drobnick title without the journal) after the first full render died
+    in them: the last line crossed the box bottom while rising in. Every credits frame was
+    then rendered alone (`--frames=5370-5556`) before the full render.
+  - The second full render had 1.03 s of empty stage at 61.5 s (blackdetect): the wear
+    shot opened on its title alone until "close to mint state". #2489 now enters with the
+    shot.
+- **Render.** `VideoCaptioned`, delivered as
+  `/mnt/project-files/collector-wall/wall-blacktongue-character_v1_captioned.mp4`
+  with `wall-blacktongue-character_v1.srt` (72 cues). Checks run on the rendered
+  file: 1080x1920, 30 fps, 5,557 frames, 185.24 s, AAC 48 kHz; full decode with no
+  errors (local file and the delivered copy); first frame is the Wall card, last is
+  the credits fading out. blackdetect (0.3 s) finds only the two shot fades (0.3 s at
+  48.2 s, 0.4 s into the credits); freezedetect finds only the credits hold (4.3 s);
+  the only long silence is the 7.4 s tail under the credits; -17.5 LUFS. The
+  delivered copy differs from the local file only by a `uuid` box the shared folder
+  adds at the head: the video and audio packet hashes are identical.
+- **Not approved.** Exported and checked; only the user approves a version.

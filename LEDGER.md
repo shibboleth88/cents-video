@@ -278,6 +278,17 @@ them was reasonable.
   *Separating observation:* sample each shot around its transitions (just before
   a cue, at it, and as it settles), not only at its middle and end; a shot's
   layout changes at its cues, and the gate only sees the frames it is given.
+  *Second bite, the same evening:* with the quote fixed, the full render died
+  in the credits. Settled stills of the credits passed; the last line, rising
+  in from below, crossed the box bottom during its entrance. Rendering every
+  frame of the one shot (`--frames=`) is the check that covers entrances.
+
+- **A background job's exit status is its wrapper's, not the job's.** The same
+  render was launched as `render > log; echo "exit $?" >> log; tail log`. The
+  task notice said "completed (exit code 0)": the code of `tail`. The log said
+  `exit 1` and no file had been written. Caught by reading the log before the
+  delivery checks. *Separating observation:* end the wrapper with `exit $rc`
+  of the job itself, and check the output file exists before checking it.
 
 ## Refuted — killed by a measurement, do not re-investigate
 
