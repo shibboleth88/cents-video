@@ -27,7 +27,11 @@ NAME = "blacktongue"
 BASE = ["verdigris", "obsidian", "desert", "red"]
 GRADES = ["notable", "significant", "full"]
 GRADED = [f"{g}_{b}" for b in BASE for g in GRADES] + ["notable_gold", "full_gold"]
-PATINA8 = ["verdigris", "obsidian", "desert", "red", "gold", "orange", "corroded", "iridescent"]
+# Draft 3 (user, 2026-11-14): line 2 lists orange after the graded values, so the counted set is
+# the fourteen grades plus orange, fifteen in all. Orange has no grades.
+HELD = GRADED + ["orange"]
+# Draft 2 counted "eight patinas" with iridescent the one missing. The user cut that line and
+# corrected the premise: iridescent is not a patina. The PATINA8 list and its check are gone.
 # The ladder: rows are patinas, columns notable / significant / full. One Cent per cell,
 # each a different Cent, each carrying exactly that grade. Gold has no significant grade.
 LADDER = [
@@ -37,6 +41,7 @@ LADDER = [
     ("red", [3217, 9684, 8185]),
     ("gold", [7449, None, 3231]),
 ]
+ORANGE = 1757   # orange has no grades: one Cent, drawn across the grade columns
 
 
 class Refuse(SystemExit):
@@ -51,30 +56,32 @@ def need(ok, sentence, detail):
 def measure(meta, walls, names, control=None):
     by_name = {n: w for w, n in names.items()}
     me, artist = by_name[NAME], by_name["Rutherford Chang"]
+    # The fifteen counted values a Cent carries: its graded patina values, plus orange.
+    vals15 = lambda n: (wf.values(meta[str(n)]) & set(GRADED)) | ({"orange"} if "orange" in wf.traits(meta[str(n)]) else set())
     if control == "plant":
         # Control: give another collector's Wall the two grades it lacks; "no other collector" must fail.
         rival = by_name["Plutonium F"]
-        has = {k for n in walls[rival] for k in wf.values(meta[str(n)]) if k in GRADED}
-        donors = [n for n in walls[me] if (wf.values(meta[str(n)]) & set(GRADED)) - has]
+        has = {k for n in walls[rival] for k in vals15(n)}
+        donors = [n for n in walls[me] if vals15(n) - has]
         walls = dict(walls); walls[rival] = list(walls[rival]) + donors
     vals = lambda n: wf.values(meta[str(n)])
     trs = lambda n: wf.traits(meta[str(n)])
     ids = walls[me]
     N = len(ids)
     need(N > 0, "the Wall holds Cents", "zero Cents")
-    held = lambda w: {k for n in walls[w] for k in vals(n) if k in GRADED}
+    held = lambda w: {k for n in walls[w] for k in vals15(n)}
     mine = held(me)
-    need(len(mine) == len(GRADED), "every grade of patina recorded in CENTS", f"holds {len(mine)} of {len(GRADED)}: missing {sorted(set(GRADED) - mine)}")
+    need(len(mine) == len(HELD), "every grade of patina recorded in CENTS ... and orange", f"holds {len(mine)} of {len(HELD)}: missing {sorted(set(HELD) - mine)}")
     rivals = sorted(((len(held(w)), names.get(w, "unclaimed"), len(walls[w])) for w in walls if w not in (me, artist)), reverse=True)
-    need(rivals[0][0] < len(GRADED), "No other collector's Wall holds all fourteen", f"{rivals[0]} also holds all")
+    need(rivals[0][0] < len(HELD), "No other collector's Wall holds all fifteen", f"{rivals[0]} also holds all")
     best_other = rivals[0][0]
-    need(len(held(artist)) == len(GRADED) and len(walls[artist]) == 1000, "the artist wallet, with a thousand Cents (holds all fourteen)",
-         f"artist holds {len(held(artist))} grades, {len(walls[artist])} Cents")
-    for nm, n_cents in (("CL7", None), ("Daidatep", None)):
+    need(len(held(artist)) == len(HELD) and len(walls[artist]) == 1000, "the artist wallet, with a thousand Cents (holds all fifteen)",
+         f"artist holds {len(held(artist))}, {len(walls[artist])} Cents")
+    for nm in ("CL7", "Daidatep"):
         w = by_name[nm]
-        need(len(held(w)) == 12 and len(walls[w]) > 100, f"Even CL7 and Daidatep, with more than a hundred Cents each, reach twelve",
-             f"{nm}: {len(held(w))} grades, {len(walls[w])} Cents")
-    need(best_other == 12, "reach twelve (the best any other collector reaches)", f"best other collector reaches {best_other}")
+        need(len(held(w)) == 13 and len(walls[w]) > 100, "Even CL7 and Daidatep, with more than a hundred Cents each, reach thirteen",
+             f"{nm}: {len(held(w))}, {len(walls[w])} Cents")
+    need(best_other == 13, "reach thirteen (the best any other collector reaches)", f"best other collector reaches {best_other}")
 
     # Ladder cells: each Cent on the Wall and carrying exactly that grade.
     used = set()
@@ -87,8 +94,7 @@ def measure(meta, walls, names, control=None):
             need(meta[str(n)].get(f"{g}_{patina}") is True, f"ladder {patina}/{g}: #{n} carries {g} {patina}", f"#{n} values {sorted(vals(n))}")
             need(n not in used, f"ladder: #{n} once", "repeated"); used.add(n)
 
-    kinds = {t for n in ids for t in trs(n) if t in PATINA8}
-    need(kinds == set(PATINA8) - {"iridescent"}, "of the eight patinas, only iridescent is missing", f"holds {sorted(kinds)}")
+    need(ORANGE in ids and "orange" in trs(ORANGE) and ORANGE not in used, "and orange (the ladder's orange Cent)", f"#{ORANGE} {sorted(trs(ORANGE))}")
 
     # Traits per Cent (visual traits, grades folded, wheat not counted), two sources.
     export = {int(r["cent"]): int(r["visual_trait_count"]) for r in csv.DictReader(open(EXPORT_CSV))}
@@ -149,17 +155,17 @@ def measure(meta, walls, names, control=None):
 
     # The strips shot: which of the fourteen grades each named Wall holds, in GRADED order.
     strips = [{"name": nm if nm != "Rutherford Chang" else "Artist wallet", "cents": len(walls[by_name[nm]]),
-               "held": [g in held(by_name[nm]) for g in GRADED]} for nm in (NAME, "CL7", "Daidatep", "Rutherford Chang")]
-    need([sum(s["held"]) for s in strips] == [14, 12, 12, 14], "the strips: 14, 12, 12, 14", [sum(s["held"]) for s in strips])
+               "held": [g in held(by_name[nm]) for g in HELD]} for nm in (NAME, "CL7", "Daidatep", "Rutherford Chang")]
+    need([sum(s["held"]) for s in strips] == [15, 13, 13, 15], "the strips: 15, 13, 13, 15", [sum(s["held"]) for s in strips])
 
     bins = collections.Counter(len(held(w)) for w in big)
     return {
         "_source": f"{SNAP} (fetched 2026-11-14 18:51-18:52Z); second source {EXPORT_CSV.name}",
         "as_of": "2026-11-14", "name": NAME, "count": N, "cents": sorted(ids),
-        "ladder": [{"label": p, "cells": c} for p, c in LADDER],
+        "ladder": [{"label": p, "cells": c} for p, c in LADDER], "orange": ORANGE,
         "grades_held": {"walls_10plus": len(big), "bins": [{"label": str(k), "count": bins.get(k, 0)} for k in range(0, len(GRADED) + 1)],
                         "best_other_collector": best_other, "rivals_top": rivals[:6], "artist": len(held(artist)),
-                        "order": GRADED, "strips": strips},
+                        "order": HELD, "strips": strips},
         "traits_per_cent": {"wall": round(mine_tpc, 3), "runner_up_10plus": round(runner_up, 3), "population": round(pop, 3),
                             "per_cent": {str(n): per_cent[n] for n in sorted(ids)}},
         "wear": {"close_to_mint_state": lus, "faceless": fac, "smallest_walls_with_both": both[:3]},
@@ -190,7 +196,7 @@ def main():
         sys.exit(0 if reds == 2 else f"CONTROLS: only {reds} of 2 went red")
     out = measure(meta, walls, names)
     json.dump(out, open(OUT, "w"), indent=1)
-    print(f"wrote {OUT.name}: {out['count']} Cents, grades 14/14 (best other collector {out['grades_held']['best_other_collector']}), "
+    print(f"wrote {OUT.name}: {out['count']} Cents, grades + orange 15/15 (best other collector {out['grades_held']['best_other_collector']}), "
           f"traits/Cent {out['traits_per_cent']['wall']} (next {out['traits_per_cent']['runner_up_10plus']}, CENTS {out['traits_per_cent']['population']})")
 
 

@@ -47,7 +47,9 @@ const Coin: React.FC<{ n: number; d: number }> = ({ n, d }) => {
   );
 };
 
-type LadderRow = { label: string; at_phrase: string; cells: (number | null)[] };
+type LadderRow = { label: string; at_phrase: string; cells: (number | null)[];
+  /** A patina with no grades (orange): one Cent, drawn across every grade column on a rule, and lit only when no single grade is. */
+  ungraded?: boolean };
 type ColumnLight = { at_phrase: string; column: number | null };
 
 export const PatinaLadder: React.FC<Anchored & {
@@ -60,7 +62,10 @@ export const PatinaLadder: React.FC<Anchored & {
   const fade = useShotFade();
   const at = useAt(props);
   if (rows.length === 0) throw new Error("PatinaLadder: no rows");
-  rows.forEach((r) => { if (r.cells.length !== columns.length) throw new Error(`PatinaLadder: row "${r.label}" has ${r.cells.length} cells for ${columns.length} columns`); });
+  rows.forEach((r) => {
+    if (r.ungraded) { if (r.cells.length !== 1 || r.cells[0] === null) throw new Error(`PatinaLadder: ungraded row "${r.label}" takes exactly one Cent`); return; }
+    if (r.cells.length !== columns.length) throw new Error(`PatinaLadder: row "${r.label}" has ${r.cells.length} cells for ${columns.length} columns`);
+  });
   const seen = new Set<number>();
   rows.forEach((r) => r.cells.forEach((n) => {
     if (n === null) return;
@@ -95,6 +100,12 @@ export const PatinaLadder: React.FC<Anchored & {
     const before = li <= 0 ? 1 : prevLit === null || prevLit === c ? 1 : 0.32;
     return before + (now - before) * litT;
   };
+  // An ungraded row belongs to no single column: full while nothing is lit, dimmed while any one column is.
+  const spanAlpha = () => {
+    const now = lit === null ? 1 : 0.32;
+    const before = li <= 0 ? 1 : prevLit === null ? 1 : 0.32;
+    return before + (now - before) * litT;
+  };
   const drift = interpolate(frame, [0, 600], [1, 1.035], { extrapolateRight: "clamp" });
 
   return (
@@ -118,7 +129,23 @@ export const PatinaLadder: React.FC<Anchored & {
             <div style={{ position: "absolute", left: labelX0, top: y - 30, width: labelW, opacity: labelT, transform: `translateX(${(1 - labelT) * 14}px)` }}>
               <SafeText role="label" fontSize={42} maxLines={1} color={COLOR.ink} style={{ fontFamily: TYPE.body, whiteSpace: "nowrap" }}>{r.label}</SafeText>
             </div>
-            <Imagery>
+            {r.ungraded ? (() => {
+              const t = ease(frame, t0 + 3, 12);
+              const xL = cx0 - d / 2, xR = cx0 + (columns.length - 1) * pitch + d / 2;
+              return (
+                <>
+                  <div style={{ position: "absolute", left: xL, top: y - 1.5, width: (xR - xL) * t, height: 3, borderRadius: 2,
+                                background: COLOR.inkDim, opacity: 0.45 * spanAlpha() }} />
+                  <Imagery>
+                    <div style={{ position: "absolute", left: cx0 + pitch * (columns.length - 1) / 2 - d / 2, top: y - d / 2, opacity: t * spanAlpha(),
+                                  transform: `scale(${(0.82 + 0.18 * t) * drift})` }}>
+                      <div style={{ background: COLOR.bg, borderRadius: "50%" }}><Coin n={r.cells[0]!} d={d} /></div>
+                    </div>
+                  </Imagery>
+                </>
+              );
+            })() : null}
+            {r.ungraded ? null : <Imagery>
               {r.cells.map((n, ci) => {
                 const t = ease(frame, t0 + 3 + ci * 4, 12);
                 const x = cx0 + ci * pitch;
@@ -133,7 +160,7 @@ export const PatinaLadder: React.FC<Anchored & {
                   </div>
                 );
               })}
-            </Imagery>
+            </Imagery>}
           </React.Fragment>
         );
       })}
@@ -142,9 +169,10 @@ export const PatinaLadder: React.FC<Anchored & {
 };
 
 /**
- * `GradeStrips`: which of the fourteen recorded patina grades each named Wall holds,
- * one strip of fourteen dots per Wall, in the ladder's order (verdigris, obsidian,
- * desert and red at notable, significant and full; gold at notable and full). Above
+ * `GradeStrips`: which of the counted patina values each named Wall holds, one strip
+ * of dots per Wall, in the ladder's order (verdigris, obsidian, desert and red at
+ * notable, significant and full; gold at notable and full; then orange, which has no
+ * grades: fifteen in the blacktongue episode's draft 3, 2026-11-14). Above
  * the strips, the Wall's own full-grade Cents stand as the key for each patina group.
  * A held grade is a filled dot; a missing one an empty ring, which can be marked
  * (copper) when its absence is spoken. Each row's count is computed from its dots;
@@ -187,15 +215,18 @@ export const GradeStrips: React.FC<Anchored & {
 
   const X0 = E.x0 + 24, X1 = E.x1 - 24, W = X1 - X0;
   const countW = 72;                                           // the row's count, right of its strip
-  const gap = 0.42;                                            // gap between patina groups, in dot pitches
-  const pitch = (W - countW - 12) / (len + gap * (groups.length - 1));
+  // Gaps between patina groups, in dot pitches. A one-dot group (orange) gets a wider gap on
+  // each side, or its key Cent overlaps its neighbour's (seen on the first draft-3 still).
+  const gaps = groups.slice(0, -1).map((g, gi) => 0.42 + (g === 1 || groups[gi + 1] === 1 ? 0.6 : 0));
+  const pitch = (W - countW - 12) / (len + gaps.reduce((a, b) => a + b, 0));
   const d = Math.floor(pitch * 0.8);
   const dotX: number[] = [];                                   // centre of each dot along a strip
   let gx = X0;
-  groups.forEach((g, gi) => { for (let j = 0; j < g; j++) dotX.push(gx + pitch * (j + 0.5)); gx += pitch * (g + (gi < groups.length - 1 ? gap : 0)); });
+  groups.forEach((g, gi) => { for (let j = 0; j < g; j++) dotX.push(gx + pitch * (j + 0.5)); gx += pitch * (g + (gaps[gi] ?? 0)); });
   const groupCx = groups.map((g, gi) => { const first = groups.slice(0, gi).reduce((a, b) => a + b, 0); return (dotX[first]! + dotX[first + g - 1]!) / 2; });
+  const minKeyGap = Math.min(...groupCx.slice(1).map((x, i) => x - groupCx[i]!));
   const titleY = E.y0 + 30;
-  const keyY = titleY + (subtitle ? 150 : 96) + 14, keyD = Math.min(104, Math.floor(pitch * 2.2));
+  const keyY = titleY + (subtitle ? 150 : 96) + 14, keyD = Math.min(104, Math.floor(minKeyGap - 10));
   const rowsY0 = keyY + keyD + 34, rowsY1 = 1320;
   const rowH = (rowsY1 - rowsY0) / rows.length;
 

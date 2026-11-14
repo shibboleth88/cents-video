@@ -37,16 +37,19 @@ stand = lambda n, readout, caption, **kw: dict({"title": T, "n": n, "readout": r
 
 # The ladder, from character.json (character.py checks every cell against the snapshot).
 LADDER_ROWS = [("Verdigris", "Verdigris, obsidian, desert"), ("Obsidian", "obsidian, desert and red"),
-               ("Desert", "desert and red, each"), ("Red", "red, each at notable"), ("Gold", "and gold, at notable")]
+               ("Desert", "desert and red, each"), ("Red", "red, each at notable"), ("Gold", "full; gold, at notable")]
+ORANGE = C["orange"]   # draft 3 (user, 2026-11-14): orange joins the list; it has no grades
 assert [r["label"] for r in C["ladder"]] == [l.lower() for l, _ in LADDER_ROWS]
 ladder = {"columns": ["Notable", "Significant", "Full"],
-          "rows": [{"label": lab, "at_phrase": ph, "cells": r["cells"]} for (lab, ph), r in zip(LADDER_ROWS, C["ladder"])],
+          "rows": [{"label": lab, "at_phrase": ph, "cells": r["cells"]} for (lab, ph), r in zip(LADDER_ROWS, C["ladder"])]
+                  + [{"label": "Orange", "at_phrase": "and full, and orange", "cells": [ORANGE], "ungraded": True}],
           "lights": [{"at_phrase": "Notable means clearly visible", "column": 0},
                      {"at_phrase": "significant a major presence", "column": 1},
                      {"at_phrase": "and full the dominant", "column": 2}]}
 # Key Cents over the strips: the Wall's own full-grade Cent of each patina (the ladder's right-hand column).
-KEYS = [r["cells"][2] for r in C["ladder"]]
+KEYS = [r["cells"][2] for r in C["ladder"]] + [ORANGE]
 STRIP_AT = ["No other collector's Wall", "Even C L seven and", "and Daidatep, with more", "is the artist wallet"]
+DROBNICK = "the patina stores the history of the object through surface and texture"   # QB-B39, check_quotes FOUND 2026-11-14
 strips = [dict(s, count=sum(s["held"]), at_phrase=ph, **({"apart": True} if s["name"] == "Artist wallet" else {}))
           for s, ph in zip(GH["strips"], STRIP_AT)]
 
@@ -64,19 +67,20 @@ shots = [
       "Showcase opener: the card from frame 0, the signature Cent #5185 turning in its slot (3DCENTS, alpha), mosaic and badges lighting in turn."),
  shot("k01_ladder", "Verdigris, obsidian, desert and", "No other collector's Wall", "PatinaLadder", ladder,
       "The claim made visible: the Wall's own Cents as a grid of patina by grade, one different Cent per cell, each row arriving as its patina is named; "
-      "each column lights as its grade is explained (Traits Atlas wording). Gold has no significant grade (dash)."),
- shot("k02_strips", "No other collector's Wall", "The Wall also holds orange", "GradeStrips",
-      {"title": "Grades of patina held", "subtitle": "As of November 2026", "groups": [3, 3, 3, 3, 2], "keys": KEYS,
-       "patinas": [r["label"] for r in C["ladder"]],
-       "rows": strips, "mark_missing_at": "reach twelve"},
-      f"Fourteen dots per Wall: blacktongue 14 of 14; CL7 and Daidatep (the two largest collector Walls) 12, each missing a full gold and one other full; "
-      f"the artist wallet, set apart under a rule, 14. Best any other collector reaches: {GH['best_other_collector']} (character.py)."),
- shot("k03_orange", "The Wall also holds orange", "Of the Walls with ten", "CentRow",
-      {"title": T, "subtitle": "Two more patinas", "cols": 2, "labelsUnder": True,
-       "cents": [{"n": 1757, "caption": "Orange", "at_phrase": "The Wall also holds orange"},
-                 {"n": 1055, "caption": "Corroded", "at_phrase": "and corroded; of the"}],
-       "readout": "7 of 8", "caption": "patinas on the Wall", "readout_at": "only iridescent is missing"},
-      "#1757 (orange) and #1055 (corroded); seven of the eight patinas, iridescent the one missing (character.py)."),
+      "each column lights as its grade is explained (Traits Atlas wording). Gold has no significant grade (dash). Orange has no grades: "
+      "#1757 drawn across the columns on a rule, dimmed whenever a single grade is lit."),
+ shot("k02_strips", "No other collector's Wall", "Writing about Chang's earlier", "GradeStrips",
+      {"title": "Patinas and grades held", "subtitle": "As of November 2026", "groups": [3, 3, 3, 3, 2, 1], "keys": KEYS,
+       "patinas": [r["label"] for r in C["ladder"]] + ["orange"],
+       "rows": strips, "mark_missing_at": "reach thirteen"},
+      f"Fifteen dots per Wall (the fourteen grades, then orange): blacktongue 15; CL7 and Daidatep (the two largest collector Walls) 13, each missing a full gold "
+      f"and one other full; the artist wallet, set apart under a rule, 15. Best any other collector reaches: {GH['best_other_collector']} (character.py)."),
+ shot("k03_drobnick", "Writing about Chang's earlier", "Of the Walls with ten", "QuoteOver",
+      {"title": "Patina", "subtitle": "Cent #6054, full verdigris", "cent": hires(6054),
+       "quote": f"“{DROBNICK}”", "attribution": "Jim Drobnick, on Chang's We Buy White Albums, 2023", "quote_at": "Jim Drobnick noted that"},
+      "Art quote from the bank (QB-B39; Drobnick, Revue musicale OICRM, 2023, p. 19), verbatim and FOUND by check_quotes.py. It is about We Buy White "
+      "Albums, not CENTS; the narration and the attribution both say so. Our narration paraphrases the first half of his sentence (wear lowers an album's "
+      "value to a \"true\" vinyl collector). Shown over the Wall's full verdigris Cent; no motive of Chang's is stated."),
  shot("k04_traits", "Of the Walls with ten", "Number thirty-two seventeen", "CentTiers",
       {"title": T, "subtitle": "Its Cents by trait count", "total": C["count"],
        "tiers": [{"label": str(k), "cents": [n for n in C["cents"] if PER[str(n)] == k]} for k in (4, 3, 2, 1, 0)],
@@ -145,14 +149,11 @@ shots = [
                  {"n": 3231, "patina": "gold", "caption": "Full Gold · #3231", "at_phrase": "a full gold and"},
                  {"n": 1757, "patina": "orange", "caption": "Orange · #1757", "at_phrase": "and an orange"}]},
       "The six Cents of the Full Spectrum Set, each lit as it is named, with the series' patina key dots (the Wall holds two full reds; #8185 stands for them)."),
- shot("k13b_gold", "Only nine Full Spectrum", "As of November twenty", "CentFilter",
+ shot("k13b_gold", "Only nine Full Spectrum", "Its oldest Cent is", "CentFilter",
       {"title": "Full Gold", "subtitle": "Every Full Gold Cent in CENTS", "pool": FULL_GOLD,
        "steps": [{"at_phrase": "only nine Full Gold", "readout": "9", "caption": "Full Gold Cents"}],
        "mark": {"n": 3231, "at_phrase": "only nine Full Gold"}},
       "All nine Full Gold Cents (snapshot meta); blacktongue's #3231 ringed. Nine full golds cap Full Spectrum Sets at nine."),
- shot("k13c_badge", "As of November twenty", "Its oldest Cent is", "WallBoard",
-      board("card", [badge("blacktongue is still the", "Full Spectrum")]),
-      "Full Spectrum badge, lit. Still the only collector with one (the artist wallet holds one too and is not a collector)."),
  shot("k14_1938", "Its oldest Cent is", "with a Cent from nineteen", "CentFlip",
       {"title": T, "n": 8626, "front": hires(8626), "back": "hires/8626_back.webp", "flip_at": "one of two wheat pennies",
        "readout": "1938", "caption": "One of two from 1938"},
@@ -189,12 +190,13 @@ shots = [
   "purpose": "End credits.", "visual_kind": "code", "component": "Credits",
   "props": {"lines": ["Images: Rutherford Chang via cents.vision (site by Dr. Martin Lehnen)", CREDIT,
                       "Trait definitions and grades: Traits Atlas, CENTS Trait Council",
+                      "Quote: Jim Drobnick, “Rutherford Chang. The Record Collector as Artist-Curator”, Revue musicale OICRM, 2023",
                       "Collector Wall data: cents.vision, as of November 2026",
                       "Interview: MAKES CENTS, @sovrnart on X, 20 November 2024",
                       "Post: blacktongue (@blktng) on X, 21 August 2026"], "url": "cents.gallery"}},
 ]
 tl = {"essay": {"title": "Collector Wall", "subtitle": T, "author": "shibboleth", "source": "https://cents.vision/collectors.html",
-                "version": ("SCRATCH timing (no voice yet) - " if SCRATCH else "") + "v1 (2026-11-14), the collection's character"},
+                "version": ("SCRATCH timing (no voice yet) - " if SCRATCH else "") + "v1 (2026-11-14), the collection's character, script draft 3"},
       "_what": "Collector Wall: blacktongue, after #7476. Data as of 2026-11-14 (cents.vision snapshot). No wallet address appears.",
       "shots": shots}
 json.dump(tl, open(F / "timeline.json", "w"), indent=1, ensure_ascii=False)

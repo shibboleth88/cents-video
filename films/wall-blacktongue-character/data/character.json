@@ -72,6 +72,7 @@
    ]
   }
  ],
+ "orange": 1757,
  "grades_held": {
   "walls_10plus": 184,
   "bins": [
@@ -85,91 +86,91 @@
    },
    {
     "label": "2",
-    "count": 29
+    "count": 26
    },
    {
     "label": "3",
-    "count": 28
+    "count": 29
    },
    {
     "label": "4",
-    "count": 40
+    "count": 32
    },
    {
     "label": "5",
-    "count": 19
+    "count": 23
    },
    {
     "label": "6",
-    "count": 13
+    "count": 16
    },
    {
     "label": "7",
-    "count": 14
+    "count": 10
    },
    {
     "label": "8",
-    "count": 7
+    "count": 13
    },
    {
     "label": "9",
-    "count": 9
+    "count": 2
    },
    {
     "label": "10",
-    "count": 6
+    "count": 8
    },
    {
     "label": "11",
-    "count": 2
+    "count": 7
    },
    {
     "label": "12",
-    "count": 4
+    "count": 1
    },
    {
     "label": "13",
-    "count": 0
+    "count": 4
    },
    {
     "label": "14",
-    "count": 2
+    "count": 0
    }
   ],
-  "best_other_collector": 12,
+  "best_other_collector": 13,
   "rivals_top": [
    [
-    12,
+    13,
     "unclaimed",
     34
    ],
    [
-    12,
+    13,
     "Plutonium F",
     19
    ],
    [
-    12,
+    13,
     "Daidatep",
     133
    ],
    [
-    12,
+    13,
     "CL7",
     165
    ],
    [
-    11,
-    "unclaimed",
-    23
+    12,
+    "ScrappyT",
+    41
    ],
    [
     11,
-    "ScrappyT",
-    41
+    "unclaimed",
+    103
    ]
   ],
-  "artist": 14,
+  "artist": 15,
   "order": [
    "notable_verdigris",
    "significant_verdigris",
@@ -184,13 +185,15 @@
    "significant_red",
    "full_red",
    "notable_gold",
-   "full_gold"
+   "full_gold",
+   "orange"
   ],
   "strips": [
    {
     "name": "blacktongue",
     "cents": 25,
     "held": [
+     true,
      true,
      true,
      true,
@@ -224,7 +227,8 @@
      true,
      true,
      true,
-     false
+     false,
+     true
     ]
    },
    {
@@ -244,13 +248,15 @@
      true,
      true,
      true,
-     false
+     false,
+     true
     ]
    },
    {
     "name": "Artist wallet",
     "cents": 1000,
     "held": [
+     true,
      true,
      true,
      true,
