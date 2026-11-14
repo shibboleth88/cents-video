@@ -1,5 +1,5 @@
 {
- "_source": "eee: v1_take2 (generation CKfMIbKEAX88loCGfqBD); eleven_v4, [thoughtfully] [calm] once; flow lAv77x1ptbxSG6nUGk7K; script draft 3; word timings from scribe_v1 on the take fetched by URL (asset zPAxxn2DoVOVHy3IcK6Z, transcript wegNo6FH0zj0Ag87KUGU); vo.wav = take 2, loudnorm I=-16 TP=-1.5 LRA=11, 48 kHz mono, padded to 185.24 s",
+ "_source": "eee: v1_take2 (generation CKfMIbKEAX88loCGfqBD) with the oldest-Cent sentence spliced out at the pauses (143.999-152.147 s removed); eleven_v4, [thoughtfully] [calm] once; flow lAv77x1ptbxSG6nUGk7K; script draft 4; word timings from scribe_v1 on take 2 fetched by URL (asset zPAxxn2DoVOVHy3IcK6Z, transcript wegNo6FH0zj0Ag87KUGU), cut and shifted with the audio; vo.wav loudnorm I=-16 TP=-1.5 LRA=11, 48 kHz mono, padded to 177.09 s",
  "words": [
   {
    "word": "The",
@@ -1912,500 +1912,370 @@
    "end": 143.78
   },
   {
-   "word": "Its",
-   "start": 144.08,
-   "end": 144.26
-  },
-  {
-   "word": "oldest",
-   "start": 144.34,
-   "end": 144.72
-  },
-  {
-   "word": "Cent",
-   "start": 144.82,
-   "end": 145.12
-  },
-  {
-   "word": "is",
-   "start": 145.24,
-   "end": 145.36
-  },
-  {
-   "word": "one",
-   "start": 145.46,
-   "end": 145.54
-  },
-  {
-   "word": "of",
-   "start": 145.58,
-   "end": 145.66
-  },
-  {
-   "word": "only",
-   "start": 145.72,
-   "end": 146.02
-  },
-  {
-   "word": "two",
-   "start": 146.1,
-   "end": 146.44
-  },
-  {
-   "word": "from",
-   "start": 146.48,
-   "end": 146.64
-  },
-  {
-   "word": "nineteen",
-   "start": 146.68,
-   "end": 147.053
-  },
-  {
-   "word": "thirty-eight,",
-   "start": 147.053,
-   "end": 147.66
-  },
-  {
-   "word": "and",
-   "start": 147.9,
-   "end": 148.02
-  },
-  {
-   "word": "one",
-   "start": 148.08,
-   "end": 148.18
-  },
-  {
-   "word": "of",
-   "start": 148.22,
-   "end": 148.34
-  },
-  {
-   "word": "two",
-   "start": 148.42,
-   "end": 148.62
-  },
-  {
-   "word": "wheat",
-   "start": 148.76,
-   "end": 148.94
-  },
-  {
-   "word": "pennies",
-   "start": 149.02,
-   "end": 149.32
-  },
-  {
-   "word": "on",
-   "start": 149.36,
-   "end": 149.44
-  },
-  {
-   "word": "the",
-   "start": 149.48,
-   "end": 149.56
-  },
-  {
-   "word": "Wall,",
-   "start": 149.6,
-   "end": 149.88
-  },
-  {
-   "word": "with",
-   "start": 150.1,
-   "end": 150.2
-  },
-  {
-   "word": "a",
-   "start": 150.22,
-   "end": 150.32
-  },
-  {
-   "word": "Cent",
-   "start": 150.38,
-   "end": 150.64
-  },
-  {
-   "word": "from",
-   "start": 150.68,
-   "end": 150.84
-  },
-  {
-   "word": "nineteen",
-   "start": 150.88,
-   "end": 151.32
-  },
-  {
-   "word": "fifty-eight.",
-   "start": 151.32,
-   "end": 151.98
-  },
-  {
    "word": "Across",
-   "start": 152.34,
-   "end": 152.66
+   "start": 144.192,
+   "end": 144.512
   },
   {
    "word": "its",
-   "start": 152.7,
-   "end": 152.88
+   "start": 144.552,
+   "end": 144.732
   },
   {
    "word": "Cents,",
-   "start": 152.94,
-   "end": 153.28
+   "start": 144.792,
+   "end": 145.132
   },
   {
    "word": "the",
-   "start": 153.48,
-   "end": 153.56
+   "start": 145.332,
+   "end": 145.412
   },
   {
    "word": "Wall",
-   "start": 153.6,
-   "end": 153.76
+   "start": 145.452,
+   "end": 145.612
   },
   {
    "word": "covers",
-   "start": 153.88,
-   "end": 154.18
+   "start": 145.732,
+   "end": 146.032
   },
   {
    "word": "four",
-   "start": 154.36,
-   "end": 154.66
+   "start": 146.212,
+   "end": 146.512
   },
   {
    "word": "of",
-   "start": 154.72,
-   "end": 154.82
+   "start": 146.572,
+   "end": 146.672
   },
   {
    "word": "the",
-   "start": 154.86,
-   "end": 154.94
+   "start": 146.712,
+   "end": 146.792
   },
   {
    "word": "twelve",
-   "start": 154.98,
-   "end": 155.34
+   "start": 146.832,
+   "end": 147.192
   },
   {
    "word": "contamination",
-   "start": 155.38,
-   "end": 156.04
+   "start": 147.232,
+   "end": 147.892
   },
   {
    "word": "types,",
-   "start": 156.12,
-   "end": 156.46
+   "start": 147.972,
+   "end": 148.312
   },
   {
    "word": "which",
-   "start": 156.62,
-   "end": 156.76
+   "start": 148.472,
+   "end": 148.612
   },
   {
    "word": "makes",
-   "start": 156.8,
-   "end": 156.96
+   "start": 148.652,
+   "end": 148.812
   },
   {
    "word": "a",
-   "start": 157,
-   "end": 157.06
+   "start": 148.852,
+   "end": 148.912
   },
   {
    "word": "Contamination",
-   "start": 157.08,
-   "end": 157.78
+   "start": 148.932,
+   "end": 149.632
   },
   {
    "word": "Set.",
-   "start": 157.88,
-   "end": 158.14
+   "start": 149.732,
+   "end": 149.992
   },
   {
    "word": "It",
-   "start": 158.5,
-   "end": 158.58
+   "start": 150.352,
+   "end": 150.432
   },
   {
    "word": "holds",
-   "start": 158.62,
-   "end": 158.86
+   "start": 150.472,
+   "end": 150.712
   },
   {
    "word": "four",
-   "start": 159.04,
-   "end": 159.36
+   "start": 150.892,
+   "end": 151.212
   },
   {
    "word": "of",
-   "start": 159.4,
-   "end": 159.5
+   "start": 151.252,
+   "end": 151.352
   },
   {
    "word": "the",
-   "start": 159.54,
-   "end": 159.66
+   "start": 151.392,
+   "end": 151.512
   },
   {
    "word": "sixty-nine",
-   "start": 159.92,
-   "end": 160.52
+   "start": 151.772,
+   "end": 152.372
   },
   {
    "word": "Corroded",
-   "start": 160.56,
-   "end": 161.04
+   "start": 152.412,
+   "end": 152.892
   },
   {
    "word": "Cents;",
-   "start": 161.12,
-   "end": 161.48
+   "start": 152.972,
+   "end": 153.332
   },
   {
    "word": "only",
-   "start": 161.78,
-   "end": 162.04
+   "start": 153.632,
+   "end": 153.892
   },
   {
    "word": "two",
-   "start": 162.12,
-   "end": 162.36
+   "start": 153.972,
+   "end": 154.212
   },
   {
    "word": "other",
-   "start": 162.42,
-   "end": 162.62
+   "start": 154.272,
+   "end": 154.472
   },
   {
    "word": "collectors",
-   "start": 162.66,
-   "end": 163.12
+   "start": 154.512,
+   "end": 154.972
   },
   {
    "word": "hold",
-   "start": 163.16,
-   "end": 163.34
+   "start": 155.012,
+   "end": 155.192
   },
   {
    "word": "as",
-   "start": 163.38,
-   "end": 163.48
+   "start": 155.232,
+   "end": 155.332
   },
   {
    "word": "many.",
-   "start": 163.54,
-   "end": 163.78
+   "start": 155.392,
+   "end": 155.632
   },
   {
    "word": "Two",
-   "start": 164.14,
-   "end": 164.46
+   "start": 155.992,
+   "end": 156.312
   },
   {
    "word": "are",
-   "start": 164.5,
-   "end": 164.64
+   "start": 156.352,
+   "end": 156.492
   },
   {
    "word": "Ghost",
-   "start": 164.68,
-   "end": 164.98
+   "start": 156.532,
+   "end": 156.832
   },
   {
    "word": "Cents,",
-   "start": 165.06,
-   "end": 165.4
+   "start": 156.912,
+   "end": 157.252
   },
   {
    "word": "and",
-   "start": 165.64,
-   "end": 165.74
+   "start": 157.492,
+   "end": 157.592
   },
   {
    "word": "one",
-   "start": 165.86,
-   "end": 166.16
+   "start": 157.712,
+   "end": 158.012
   },
   {
    "word": "is",
-   "start": 166.2,
-   "end": 166.34
+   "start": 158.052,
+   "end": 158.192
   },
   {
    "word": "Vandalized.",
-   "start": 166.38,
-   "end": 167.08
+   "start": 158.232,
+   "end": 158.932
   },
   {
    "word": "And",
-   "start": 167.48,
-   "end": 167.82
+   "start": 159.332,
+   "end": 159.672
   },
   {
    "word": "the",
-   "start": 167.86,
-   "end": 167.98
+   "start": 159.712,
+   "end": 159.832
   },
   {
    "word": "Wall",
-   "start": 168,
-   "end": 168.16
+   "start": 159.852,
+   "end": 160.012
   },
   {
    "word": "carries",
-   "start": 168.3,
-   "end": 168.62
+   "start": 160.152,
+   "end": 160.472
   },
   {
    "word": "Diamond",
-   "start": 168.74,
-   "end": 169.08
+   "start": 160.592,
+   "end": 160.932
   },
   {
    "word": "Hands:",
-   "start": 169.14,
-   "end": 169.56
+   "start": 160.992,
+   "end": 161.412
   },
   {
    "word": "it",
-   "start": 169.86,
-   "end": 169.92
+   "start": 161.712,
+   "end": 161.772
   },
   {
    "word": "has",
-   "start": 169.96,
-   "end": 170.08
+   "start": 161.812,
+   "end": 161.932
   },
   {
    "word": "held",
-   "start": 170.12,
-   "end": 170.28
+   "start": 161.972,
+   "end": 162.132
   },
   {
    "word": "its",
-   "start": 170.32,
-   "end": 170.48
+   "start": 162.172,
+   "end": 162.332
   },
   {
    "word": "position",
-   "start": 170.5,
-   "end": 170.96
+   "start": 162.352,
+   "end": 162.812
   },
   {
    "word": "for",
-   "start": 171,
-   "end": 171.08
+   "start": 162.852,
+   "end": 162.932
   },
   {
    "word": "at",
-   "start": 171.12,
-   "end": 171.24
+   "start": 162.972,
+   "end": 163.092
   },
   {
    "word": "least",
-   "start": 171.32,
-   "end": 171.58
+   "start": 163.172,
+   "end": 163.432
   },
   {
    "word": "a",
-   "start": 171.64,
-   "end": 171.66
+   "start": 163.492,
+   "end": 163.512
   },
   {
    "word": "year,",
-   "start": 171.78,
-   "end": 172.02
+   "start": 163.632,
+   "end": 163.872
   },
   {
    "word": "with",
-   "start": 172.24,
-   "end": 172.4
+   "start": 164.092,
+   "end": 164.252
   },
   {
    "word": "little",
-   "start": 172.46,
-   "end": 172.72
+   "start": 164.312,
+   "end": 164.572
   },
   {
    "word": "to",
-   "start": 172.78,
-   "end": 172.9
+   "start": 164.632,
+   "end": 164.752
   },
   {
    "word": "no",
-   "start": 172.98,
-   "end": 173.2
+   "start": 164.832,
+   "end": 165.052
   },
   {
    "word": "selling.",
-   "start": 173.24,
-   "end": 173.6
+   "start": 165.092,
+   "end": 165.452
   },
   {
    "word": "Find",
-   "start": 174,
-   "end": 174.26
+   "start": 165.852,
+   "end": 166.112
   },
   {
    "word": "all",
-   "start": 174.34,
-   "end": 174.44
+   "start": 166.192,
+   "end": 166.292
   },
   {
    "word": "of",
-   "start": 174.5,
-   "end": 174.58
+   "start": 166.352,
+   "end": 166.432
   },
   {
    "word": "the",
-   "start": 174.62,
-   "end": 174.68
+   "start": 166.472,
+   "end": 166.532
   },
   {
    "word": "Collector",
-   "start": 174.72,
-   "end": 175.06
+   "start": 166.572,
+   "end": 166.912
   },
   {
    "word": "Walls",
-   "start": 175.14,
-   "end": 175.46
+   "start": 166.992,
+   "end": 167.312
   },
   {
    "word": "on",
-   "start": 175.5,
-   "end": 175.6
+   "start": 167.352,
+   "end": 167.452
   },
   {
    "word": "cents",
-   "start": 175.74,
-   "end": 176.62
+   "start": 167.592,
+   "end": 168.472
   },
   {
    "word": "dot",
-   "start": 175.74,
-   "end": 176.62
+   "start": 167.592,
+   "end": 168.472
   },
   {
    "word": "vision",
-   "start": 175.74,
-   "end": 176.62
+   "start": 167.592,
+   "end": 168.472
   },
   {
    "word": "under",
-   "start": 176.76,
-   "end": 176.96
+   "start": 168.612,
+   "end": 168.812
   },
   {
    "word": "Collectors.",
-   "start": 177.1,
-   "end": 177.74
+   "start": 168.952,
+   "end": 169.592
   }
  ],
- "duration": 185.24
+ "duration": 177.09
 }

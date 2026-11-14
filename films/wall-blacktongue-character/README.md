@@ -33,6 +33,40 @@ standard blacktongue episode is `films/wall-blacktongue/` (v1 to v3).
 - **blacktongue's words.** The MAKES CENTS interview (@sovrnart on X, 20 Nov 2024)
   and blacktongue's post on #5755 (@blktng on X, 21 Aug 2026), quoted verbatim.
 
+## v2 (2026-11-14)
+
+The user set a length rule after v1 (2026-11-14): Collector Wall and single-Cent
+features stay under 3:00, because Instagram doesn't share reels over 3 minutes with
+new followers. v1 ran 3:05.24.
+
+- **Cut.** One whole sentence: "Its oldest Cent is one of only two from 1938, and one
+  of two wheat pennies on the Wall, with a Cent from 1958." Its two shots
+  (`k14_1938`, `k14b_wheat`) go with it. The year range "from 1938 to 1980" stays in
+  the Quarter Club line. Script draft 4 (`script/voiceover_draft4.txt`), 20 lines.
+  - Chosen over the alternatives because it is one whole sentence with a real pause
+    on each side, so no mid-sentence splice is needed. The other way to save the same
+    time was the nine-Full-Spectrum-Sets line plus "only two other collectors hold as
+    many", which splices at a semicolon.
+- **Voice.** Not re-recorded. Take 2 with 143.999 to 152.147 s removed. Both cut points
+  lie inside measured pauses (silencedetect, -45 dB), and the joined pause is 0.26 s.
+  `vo.wav`: loudnorm as v1 (-17.5 LUFS), padded to 177.09 s.
+  - Word check: take 2's recognised words with the same span removed and later words
+    shifted (`audio/v2_spliced_urlscribe_words.json`). The script refuses if any word
+    straddles a cut point. 444 tokens equal `audio/tts_text.txt`.
+  - Controls: one word deleted fails, and the v1 text (which still has the sentence)
+    fails at the cut.
+- **Captions.** 69 cues, text equal to the script; no cue spans any of the 23 cuts
+  (a cut-blind build spans 4).
+- **Render.** `/mnt/project-files/collector-wall/wall-blacktongue-character_v2_captioned.mp4`
+  with `wall-blacktongue-character_v2.srt` (69 cues). It runs 177.11 s (2:57.1), at
+  1080x1920 and 30 fps, with 5,313 frames. It decodes in full with no errors, both the
+  local file and the delivered copy, and their packet hashes are identical.
+  - blackdetect finds only the two shot fades; freezedetect finds only the credits hold.
+  - The only long silence is the 7.4 s tail. Loudness is -17.5 LUFS.
+  - Frames at the cut show the Full Gold shot handing over to the contamination list.
+- v1 is kept as `script/alignment_v1.json`, `timeline/make_timeline_v1.py`,
+  `audio/tts_text_v1.txt`, `captions/cues_v1.json` and `captions/captions_v1.srt`.
+
 ## v1 (2026-11-14)
 
 - **Script.** Draft 3 (`script/voiceover.txt` = `script/voiceover_draft3.txt`),

@@ -149,19 +149,13 @@ shots = [
                  {"n": 3231, "patina": "gold", "caption": "Full Gold · #3231", "at_phrase": "a full gold and"},
                  {"n": 1757, "patina": "orange", "caption": "Orange · #1757", "at_phrase": "and an orange"}]},
       "The six Cents of the Full Spectrum Set, each lit as it is named, with the series' patina key dots (the Wall holds two full reds; #8185 stands for them)."),
- shot("k13b_gold", "Only nine Full Spectrum", "Its oldest Cent is", "CentFilter",
+ shot("k13b_gold", "Only nine Full Spectrum", "Across its Cents", "CentFilter",
       {"title": "Full Gold", "subtitle": "Every Full Gold Cent in CENTS", "pool": FULL_GOLD,
        "steps": [{"at_phrase": "only nine Full Gold", "readout": "9", "caption": "Full Gold Cents"}],
        "mark": {"n": 3231, "at_phrase": "only nine Full Gold"}},
       "All nine Full Gold Cents (snapshot meta); blacktongue's #3231 ringed. Nine full golds cap Full Spectrum Sets at nine."),
- shot("k14_1938", "Its oldest Cent is", "with a Cent from nineteen", "CentFlip",
-      {"title": T, "n": 8626, "front": hires(8626), "back": "hires/8626_back.webp", "flip_at": "one of two wheat pennies",
-       "readout": "1938", "caption": "One of two from 1938"},
-      "#8626 (1938), then its back: the wheat ears."),
- shot("k14b_wheat", "with a Cent from nineteen", "Across its Cents", "CentRow",
-      {"title": T, "subtitle": "Wheat pennies", "cols": 2, "labelsUnder": True,
-       "cents": [{"n": 8626, "caption": "1938"}, {"n": 7863, "caption": "1958", "at_phrase": "with a Cent from nineteen"}]},
-      "The Wall's two wheat pennies, 1938 and 1958."),
+ # v2 (2026-11-14): k14_1938 and k14b_wheat cut with the oldest-Cent sentence, to bring the film under 3:00
+ # (user rule). They are kept in make_timeline_v1.py.
  shot("k15_contam", "Across its Cents", "which makes a Contamination", "WallList",
       {"title": T, "subtitle": "Contamination types", "readout": "4 of 12", "readout_at": "four of the twelve contamination",
        "rows": [{"n": 5755, "label": "Alien Secretion"}, {"n": 7476, "label": "Obscure Adhesive"},
@@ -196,7 +190,7 @@ shots = [
                       "Post: @blktng on X, 21 Aug 2026"], "url": "cents.gallery"}},
 ]
 tl = {"essay": {"title": "Collector Wall", "subtitle": T, "author": "shibboleth", "source": "https://cents.vision/collectors.html",
-                "version": ("SCRATCH timing (no voice yet) - " if SCRATCH else "") + "v1 (2026-11-14), the collection's character, script draft 3"},
+                "version": ("SCRATCH timing (no voice yet) - " if SCRATCH else "") + "v2 (2026-11-14), the collection's character, script draft 4 (under 3:00)"},
       "_what": "Collector Wall: blacktongue, after #7476. Data as of 2026-11-14 (cents.vision snapshot). No wallet address appears.",
       "shots": shots}
 json.dump(tl, open(F / "timeline.json", "w"), indent=1, ensure_ascii=False)
