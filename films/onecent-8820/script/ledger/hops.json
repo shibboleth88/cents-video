@@ -1,0 +1,66 @@
+[
+ {
+  "txid": "9c5d9cddc271d702d5ac367ebacd631ee045476e018e358da70b18a0ab23ecfb",
+  "kind": "reveal (inscribed)",
+  "time": 1711422003,
+  "height": 836322,
+  "vout": 0,
+  "address": "bc1p7t7pmnztlkufn5eyqvhhclul3n5xywuwhvlf0puw5ylkcgc8z7xq6vg83x",
+  "date": "2024-03-26 03:00"
+ },
+ {
+  "txid": "199c3c71b0ade897d6aba754cad4bbadf13fb8cca122ddecd74caa0cfd84270b",
+  "kind": "transfer",
+  "time": 1711474042,
+  "height": 836396,
+  "vout": 1,
+  "offset": 0,
+  "address": "bc1pdg5cf6r69htf5pmwk7f6jcg0mmalgqyntpr7r52apvxa8ch0qz4q4r9609",
+  "value": 546,
+  "date": "2024-03-26 17:27"
+ },
+ {
+  "txid": "04caecf8d2c95d7a2e1e0e7ade1986db005e08284df4265ed38b22024aed69c5",
+  "kind": "transfer",
+  "time": 1793978079,
+  "height": 974818,
+  "vout": 0,
+  "offset": 0,
+  "address": "bc1psfrtev263ee7ryg478eelc59mrsxtt23fjadyhuzq8xj8myksscq54mkg9",
+  "value": 546,
+  "date": "2026-11-06 15:14"
+ },
+ {
+  "txid": "7e3eb18a6a1fdbe401c55a5803080a4d1ff7382395defbafe6a1d143152ee505",
+  "kind": "transfer",
+  "time": 1793979212,
+  "height": 974823,
+  "vout": 0,
+  "offset": 0,
+  "address": "bc1puw6m4j9pqw97644v2ntgmq74zj0gfmty2zgxu9fuafj8alv48qssf70kum",
+  "value": 546,
+  "date": "2026-11-06 15:33"
+ },
+ {
+  "txid": "8c1d156e822aef40eed042577dfcb710fd7ceaa76641bee2db8493015d4368de",
+  "kind": "transfer",
+  "time": 1794654358,
+  "height": 975786,
+  "vout": 0,
+  "offset": 0,
+  "address": "bc1pn7dugln7t6h85pu8ta5rsg8mm4yyszah6jysnr04a2fc008lfnqsd6v43q",
+  "value": 546,
+  "date": "2026-11-14 11:05"
+ },
+ {
+  "txid": "ff215cc7c06090f9c2e9227e44c8a34c5f829c8871446edc393d79b25462d9d3",
+  "kind": "transfer",
+  "time": 1794654358,
+  "height": 975786,
+  "vout": 1,
+  "offset": 0,
+  "address": "bc1ppsdngx9frfrjcw46ucv3p9gyz7uusuhf8ttx6dlsfzu3vcm6q2ksvnmw89",
+  "value": 546,
+  "date": "2026-11-14 11:05"
+ }
+]

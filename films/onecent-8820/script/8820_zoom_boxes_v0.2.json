@@ -1,0 +1,160 @@
+{
+ "image": "cents.vision frontswebp/8820.webp, 1050x1050",
+ "coin_bbox_px": [
+  95,
+  93,
+  958,
+  956
+ ],
+ "red_spots_user_2026-11-15": [
+  {
+   "px": [
+    603,
+    480
+   ],
+   "frac": [
+    0.5743,
+    0.4571
+   ]
+  },
+  {
+   "px": [
+    624,
+    514
+   ],
+   "frac": [
+    0.5943,
+    0.4895
+   ]
+  },
+  {
+   "px": [
+    730,
+    526
+   ],
+   "frac": [
+    0.6952,
+    0.501
+   ]
+  },
+  {
+   "px": [
+    858,
+    628
+   ],
+   "frac": [
+    0.8171,
+    0.5981
+   ]
+  }
+ ],
+ "red_patches_user_2026-11-15": [
+  {
+   "px": [
+    873,
+    628
+   ],
+   "frac": [
+    0.8314,
+    0.5981
+   ],
+   "note": "red patch",
+   "pinned_on": "8820_zoom_plan_v0.3.jpg, left panel (offset 0,90)"
+  },
+  {
+   "px": [
+    575,
+    355
+   ],
+   "frac": [
+    0.5476,
+    0.3381
+   ],
+   "note": "red patch",
+   "pinned_on": "8820_zoom_plan_v0.3.jpg, left panel (offset 0,90)"
+  },
+  {
+   "px": [
+    831,
+    355
+   ],
+   "frac": [
+    0.7914,
+    0.3381
+   ],
+   "note": "top of red patch (right arc)",
+   "pinned_on": "8820_zoom_plan_v0.3.jpg, left panel (offset 0,90)"
+  },
+  {
+   "px": [
+    809,
+    765
+   ],
+   "frac": [
+    0.7705,
+    0.7286
+   ],
+   "note": "bottom of that patch, down the arc",
+   "pinned_on": "8820_zoom_plan_v0.3.jpg, left panel (offset 0,90)"
+  },
+  {
+   "px": [
+    362,
+    252
+   ],
+   "frac": [
+    0.3448,
+    0.24
+   ],
+   "note": "red patch",
+   "pinned_on": "8820_zoom_plan_v0.3.jpg, left panel (offset 0,90)"
+  }
+ ],
+ "red_zoom_boxes_px": {
+  "R1 speckles (spots)": [
+   540,
+   420,
+   790,
+   590
+  ],
+  "R2 patches, head": [
+   300,
+   190,
+   660,
+   420
+  ],
+  "R3 patch, right arc": [
+   760,
+   300,
+   950,
+   820
+  ]
+ },
+ "verdigris_boxes_px": {
+  "V1 lettering": [
+   220,
+   120,
+   600,
+   300
+  ],
+  "V2 LIBERTY": [
+   130,
+   520,
+   420,
+   620
+  ],
+  "V3 rim": [
+   95,
+   240,
+   230,
+   760
+  ],
+  "V4 face patches": [
+   400,
+   280,
+   640,
+   620
+  ]
+ },
+ "note": "Spots: pins on 8820_zoom_plan_v0.2.jpg right panel (offset 1080,90). Patches: pins on v0.3 left panel (offset 0,90). Scale 1:1 with the 1050 px front. V4 face patches confirmed as verdigris by the user (2026-11-15 00:19Z). See knowledge/trait-reading/RED_AND_VERDIGRIS.md."
+}

@@ -1,0 +1,1211 @@
+{
+ "essay": {
+  "title": "Cent #8820",
+  "subtitle": "Inscription #65907201",
+  "author": "shibboleth",
+  "source": "/mnt/project-files/single-cent-series/8820/8820_proposal_v0.2.md",
+  "version": "v1 (2026-11-15): script v0.2, ending order chosen by shibboleth, eee take 1"
+ },
+ "_what": "Cent #8820 (1972, no mint mark): Significant Red and Notable Verdigris, nothing else. Concept C21 (Permanence and decay). Benjamin 1936 (D11, D10) as a lens, never Chang's source. Every count from the Sep 2026 trait export. Traits read from the front only.",
+ "shots": [
+  {
+   "shot_id": "s01_open",
+   "start": {
+    "at_start": true
+   },
+   "end": {
+    "at_phrase": "One hundred and eighty-three"
+   },
+   "purpose": "Opening card (series opening): Cent #8820, the Story time pill, one 3DCENTS turn settling on the front; then the year, where a mint mark would be, the whole face, and the Significant Red zones (shibboleth's red spots and patches, 8820_zoom_boxes_v0.2.json: R1 spots, R2 head patches, R3 right-arc patch).",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65907201,
+    "n": 8820,
+    "front": "hires/8820.webp",
+    "spin": {
+     "src": "3dcents/8820-360-30fps.mp4",
+     "width": 1080,
+     "height": 1920,
+     "frames": 150,
+     "coin": {
+      "cx": 539.5,
+      "cy": 959.5,
+      "d": 776
+     },
+     "credit": "3D render: 3DCENTS by sinvalli",
+     "credit_at_end": true
+    },
+    "kicker": {
+     "text": "Story time",
+     "look": "pill",
+     "hold": 3.4
+    },
+    "moves": [
+     {
+      "at_phrase": "nineteen seventy-two",
+      "box": [
+       0.667,
+       0.624,
+       0.848,
+       0.695
+      ],
+      "mark": true,
+      "dur": 0.9
+     },
+     {
+      "at_phrase": "with no mint mark",
+      "box": [
+       0.7,
+       0.688,
+       0.84,
+       0.762
+      ],
+      "mark": true,
+      "dur": 0.7
+     },
+     {
+      "at_phrase": "Two patinas",
+      "box": null,
+      "dur": 0.9
+     },
+     {
+      "at_phrase": "Significant Red",
+      "box": [
+       0.286,
+       0.181,
+       0.905,
+       0.781
+      ],
+      "marks": [
+       [
+        0.514,
+        0.4,
+        0.752,
+        0.562
+       ],
+       [
+        0.286,
+        0.181,
+        0.629,
+        0.4
+       ],
+       [
+        0.724,
+        0.286,
+        0.905,
+        0.781
+       ]
+      ],
+      "dur": 0.9
+     }
+    ],
+    "reads": [
+     {
+      "at_phrase": "nineteen seventy-two",
+      "readout": "1972"
+     },
+     {
+      "at_phrase": "with no mint mark",
+      "readout": "No mint mark",
+      "caption": "generally Philadelphia"
+     },
+     {
+      "at_phrase": "Two patinas",
+      "readout": "Two patinas"
+     },
+     {
+      "at_phrase": "Significant Red",
+      "readout": "Red",
+      "caption": "Significant"
+     },
+     {
+      "at_phrase": "a major visual actor",
+      "readout": "Significant",
+      "caption": "a major visual actor"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s02_pool",
+   "start": {
+    "at_phrase": "One hundred and eighty-three"
+   },
+   "end": {
+    "at_phrase": "And Notable Verdigris"
+   },
+   "purpose": "All 183 Significant Red Cents (Sep 2026 export, counts.py --write-pools), #8820 ringed. Six across so the pool scrolls at a readable pace; each coin about 140 px, large enough to see the red. #8820 is placed last so the scroll settles on it (rehearsal: in number order it passed by unseen).",
+   "visual_kind": "code",
+   "component": "CentScroll",
+   "props": {
+    "title": "Significant Red",
+    "ns": [
+     328,
+     337,
+     389,
+     446,
+     473,
+     485,
+     525,
+     545,
+     546,
+     578,
+     666,
+     693,
+     792,
+     820,
+     864,
+     904,
+     1040,
+     1089,
+     1143,
+     1208,
+     1268,
+     1377,
+     1399,
+     1474,
+     1515,
+     1557,
+     1582,
+     1767,
+     1838,
+     1860,
+     1924,
+     1935,
+     1950,
+     2008,
+     2012,
+     2032,
+     2075,
+     2240,
+     2254,
+     2271,
+     2288,
+     2359,
+     2402,
+     2462,
+     2481,
+     2742,
+     2748,
+     2755,
+     2765,
+     2797,
+     2818,
+     2873,
+     3058,
+     3086,
+     3106,
+     3140,
+     3163,
+     3212,
+     3240,
+     3317,
+     3357,
+     3422,
+     3489,
+     3515,
+     3591,
+     3615,
+     3617,
+     3620,
+     3689,
+     3695,
+     3730,
+     3734,
+     3779,
+     3812,
+     3822,
+     3871,
+     3890,
+     3899,
+     3933,
+     3982,
+     3997,
+     4013,
+     4089,
+     4098,
+     4162,
+     4167,
+     4234,
+     4258,
+     4373,
+     4413,
+     4639,
+     4640,
+     4665,
+     4686,
+     4722,
+     4764,
+     4846,
+     4876,
+     4902,
+     4980,
+     5048,
+     5055,
+     5230,
+     5289,
+     5395,
+     5419,
+     5435,
+     5540,
+     5575,
+     5717,
+     5756,
+     5784,
+     5831,
+     5842,
+     5904,
+     5921,
+     6180,
+     6182,
+     6271,
+     6278,
+     6429,
+     6467,
+     6535,
+     6570,
+     6582,
+     6711,
+     6842,
+     6862,
+     6878,
+     7110,
+     7136,
+     7255,
+     7310,
+     7333,
+     7368,
+     7449,
+     7595,
+     7611,
+     7621,
+     7658,
+     7697,
+     7740,
+     7799,
+     7848,
+     7858,
+     8059,
+     8092,
+     8110,
+     8149,
+     8210,
+     8292,
+     8420,
+     8443,
+     8500,
+     8641,
+     8664,
+     8767,
+     8774,
+     8845,
+     9030,
+     9068,
+     9097,
+     9101,
+     9195,
+     9284,
+     9326,
+     9340,
+     9342,
+     9344,
+     9359,
+     9381,
+     9396,
+     9507,
+     9522,
+     9527,
+     9590,
+     9632,
+     9684,
+     9707,
+     9726,
+     9865,
+     9878,
+     8820
+    ],
+    "mark": 8820,
+    "readout": "183",
+    "caption": "Cents with Significant Red",
+    "until": "And Notable Verdigris",
+    "cols": 6,
+    "spotlight": true
+   }
+  },
+  {
+   "shot_id": "s03_verdigris",
+   "start": {
+    "at_phrase": "And Notable Verdigris"
+   },
+   "end": {
+    "at_phrase": "Twenty-nine Cents"
+   },
+   "purpose": "Notable Verdigris, front only: all four areas, then the lettering (IN GOD WE TRUST, LIBERTY), the rim, and the grey-green patches on Lincoln's face (confirmed verdigris by shibboleth, 2026-11-15).",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65907201,
+    "n": 8820,
+    "front": "hires/8820.webp",
+    "moves": [
+     {
+      "at_phrase": "And Notable Verdigris",
+      "box": [
+       0.09,
+       0.114,
+       0.61,
+       0.724
+      ],
+      "marks": [
+       [
+        0.21,
+        0.114,
+        0.571,
+        0.286
+       ],
+       [
+        0.124,
+        0.495,
+        0.4,
+        0.59
+       ],
+       [
+        0.09,
+        0.229,
+        0.219,
+        0.724
+       ],
+       [
+        0.381,
+        0.267,
+        0.61,
+        0.59
+       ]
+      ],
+      "dur": 0.9
+     },
+     {
+      "at_phrase": "in the lettering",
+      "box": [
+       0.124,
+       0.114,
+       0.571,
+       0.59
+      ],
+      "marks": [
+       [
+        0.21,
+        0.114,
+        0.571,
+        0.286
+       ],
+       [
+        0.124,
+        0.495,
+        0.4,
+        0.59
+       ]
+      ],
+      "dur": 0.8
+     },
+     {
+      "at_phrase": "along the rim",
+      "box": [
+       0.09,
+       0.229,
+       0.219,
+       0.724
+      ],
+      "mark": true,
+      "dur": 0.8
+     },
+     {
+      "at_phrase": "with grey-green patches",
+      "box": [
+       0.381,
+       0.267,
+       0.61,
+       0.59
+      ],
+      "mark": true,
+      "dur": 0.8
+     }
+    ],
+    "reads": [
+     {
+      "at_phrase": "And Notable Verdigris",
+      "readout": "Verdigris",
+      "caption": "Notable"
+     },
+     {
+      "at_phrase": "localised but clearly",
+      "readout": "Notable",
+      "caption": "clearly visible patches"
+     },
+     {
+      "at_phrase": "in the lettering",
+      "readout": "Verdigris",
+      "caption": "in the lettering"
+     },
+     {
+      "at_phrase": "along the rim",
+      "readout": "Verdigris",
+      "caption": "along the rim"
+     },
+     {
+      "at_phrase": "with grey-green patches",
+      "readout": "Verdigris",
+      "caption": "on Lincoln's face"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s04_pair",
+   "start": {
+    "at_phrase": "Twenty-nine Cents"
+   },
+   "end": {
+    "at_phrase": "Both are oxidation"
+   },
+   "purpose": "The 29 Cents whose whole profile is Significant Red + Notable Verdigris (counts.py), #8820 ringed.",
+   "visual_kind": "code",
+   "component": "CentScroll",
+   "props": {
+    "title": "Exactly this pair",
+    "ns": [
+     578,
+     1089,
+     1208,
+     1557,
+     1950,
+     2012,
+     2254,
+     2748,
+     2818,
+     3058,
+     3140,
+     3822,
+     3890,
+     4373,
+     4639,
+     4846,
+     4980,
+     5289,
+     5419,
+     5831,
+     5921,
+     6182,
+     7858,
+     8092,
+     8443,
+     8820,
+     9101,
+     9340,
+     9726
+    ],
+    "mark": 8820,
+    "readout": "29",
+    "caption": "only these two traits",
+    "until": "Both are oxidation",
+    "cols": 4
+   }
+  },
+  {
+   "shot_id": "s05_both",
+   "start": {
+    "at_phrase": "Both are oxidation"
+   },
+   "end": {
+    "at_phrase": "In the Atlas"
+   },
+   "purpose": "The whole front (rehearsal: seven rings at once on a reduced coin read as clutter).",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65907201,
+    "n": 8820,
+    "front": "hires/8820.webp",
+    "moves": [
+     {
+      "at_phrase": "Both are oxidation",
+      "box": null,
+      "dur": 0.9
+     }
+    ],
+    "reads": [
+     {
+      "at_phrase": "Both are oxidation",
+      "readout": "Oxidation",
+      "caption": "of copper"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s06_atlas",
+   "start": {
+    "at_phrase": "In the Atlas"
+   },
+   "end": {
+    "at_phrase": "Beside Cent"
+   },
+   "purpose": "Traits Atlas, Red Patina, on cents.vision (240 px viewport, 3x, the #1328 method): the 'transitional oxidation phase' sentence highlighted.",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "atlas_red",
+   "props": {
+    "caption": "Traits Atlas, Red Patina",
+    "maxWidth": 880
+   }
+  },
+  {
+   "shot_id": "s07_dissolve",
+   "start": {
+    "at_phrase": "Beside Cent"
+   },
+   "end": {
+    "at_phrase": "Permanence and decay"
+   },
+   "purpose": "Template #8653 (the only 1972 no-mark Cent whose sole trait is Lustrous), close to mint state; dissolves to #8820 on 'you can see how far', back and forth on 'one cent'.",
+   "visual_kind": "code",
+   "component": "CentDissolve",
+   "props": {
+    "first": "b",
+    "swaps": [
+     {
+      "at_phrase": "you can see how far",
+      "to": "a"
+     },
+     {
+      "at_phrase": "As money",
+      "to": "b"
+     },
+     {
+      "at_phrase": "the same one cent",
+      "to": "a"
+     }
+    ],
+    "a": {
+     "n": 8820,
+     "inscription": 65907201,
+     "front": "hires/8820.webp",
+     "readout": "1972",
+     "caption": "red and verdigris"
+    },
+    "b": {
+     "n": 8653,
+     "inscription": 65932821,
+     "front": "hires/8653.webp",
+     "readout": "1972",
+     "caption": "close to mint state"
+    }
+   }
+  },
+  {
+   "shot_id": "s08_concept",
+   "start": {
+    "at_phrase": "Permanence and decay"
+   },
+   "end": {
+    "at_phrase": "Walter Benyameen"
+   },
+   "purpose": "Concept C21 on screen.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65907201,
+    "n": 8820,
+    "front": "hires/8820.webp",
+    "concept": {
+     "at_phrase": "Permanence and decay",
+     "label": "Permanence and decay"
+    }
+   }
+  },
+  {
+   "shot_id": "s09_d11",
+   "start": {
+    "at_phrase": "Walter Benyameen"
+   },
+   "end": {
+    "at_phrase": "A penny is mechanically"
+   },
+   "purpose": "QB-D11, Benjamin 1936 (tr. Zohn), lit word by word. A lens, never a source of Chang's. In on the attribution, out as the card lights.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65907201,
+    "n": 8820,
+    "front": "hires/8820.webp",
+    "moves": [
+     {
+      "at_phrase": "Walter Benyameen",
+      "box": [
+       0.2,
+       0.2,
+       0.8,
+       0.8
+      ],
+      "dur": 2.4
+     },
+     {
+      "at_phrase": "the changes which it",
+      "box": null,
+      "dur": 0.8
+     }
+    ],
+    "quote": {
+     "at_phrase": "the changes which it",
+     "credit": "Walter Benjamin, 1936",
+     "text": "\u2026the changes which it may have suffered in physical condition over the years as well as the various changes in its ownership."
+    }
+   }
+  },
+  {
+   "shot_id": "s10_field",
+   "start": {
+    "at_phrase": "A penny is mechanically"
+   },
+   "end": {
+    "at_phrase": "But Benyameen also"
+   },
+   "purpose": "All 339 Cents struck in 1972 with no mint mark, a stream of alike pennies under 'mechanically reproduced, one of billions'; it settles with #8820 (placed last) ringed at 'Yet time gave Cent #8820 a history of its own'. Rehearsal: as a CentField the 339 came out about 30 px each, dots rather than Cents.",
+   "visual_kind": "code",
+   "component": "CentScroll",
+   "props": {
+    "title": "1972",
+    "ns": [
+     35,
+     41,
+     57,
+     71,
+     123,
+     147,
+     202,
+     214,
+     249,
+     270,
+     295,
+     337,
+     355,
+     365,
+     390,
+     400,
+     451,
+     468,
+     492,
+     513,
+     526,
+     561,
+     577,
+     650,
+     668,
+     684,
+     740,
+     805,
+     829,
+     898,
+     924,
+     931,
+     945,
+     971,
+     1021,
+     1039,
+     1103,
+     1124,
+     1141,
+     1176,
+     1188,
+     1193,
+     1299,
+     1306,
+     1317,
+     1343,
+     1382,
+     1406,
+     1458,
+     1474,
+     1534,
+     1556,
+     1566,
+     1592,
+     1603,
+     1659,
+     1717,
+     1729,
+     1818,
+     1832,
+     1871,
+     1881,
+     1943,
+     1971,
+     1986,
+     2009,
+     2034,
+     2072,
+     2089,
+     2100,
+     2133,
+     2140,
+     2187,
+     2194,
+     2222,
+     2258,
+     2285,
+     2299,
+     2347,
+     2368,
+     2432,
+     2445,
+     2495,
+     2547,
+     2570,
+     2571,
+     2612,
+     2626,
+     2711,
+     2773,
+     2789,
+     2804,
+     2830,
+     2836,
+     2849,
+     2909,
+     2937,
+     2954,
+     2996,
+     3008,
+     3065,
+     3088,
+     3159,
+     3179,
+     3208,
+     3255,
+     3267,
+     3325,
+     3353,
+     3392,
+     3393,
+     3410,
+     3420,
+     3460,
+     3480,
+     3520,
+     3545,
+     3566,
+     3573,
+     3604,
+     3618,
+     3673,
+     3700,
+     3724,
+     3728,
+     3764,
+     3765,
+     3813,
+     3865,
+     3879,
+     3892,
+     3918,
+     3923,
+     3947,
+     3970,
+     3987,
+     4048,
+     4068,
+     4081,
+     4127,
+     4134,
+     4143,
+     4171,
+     4225,
+     4233,
+     4290,
+     4318,
+     4352,
+     4404,
+     4427,
+     4495,
+     4510,
+     4533,
+     4560,
+     4586,
+     4651,
+     4652,
+     4662,
+     4686,
+     4703,
+     4753,
+     4764,
+     4851,
+     4912,
+     4928,
+     4948,
+     4953,
+     5045,
+     5078,
+     5084,
+     5138,
+     5146,
+     5200,
+     5209,
+     5236,
+     5251,
+     5299,
+     5310,
+     5336,
+     5341,
+     5436,
+     5462,
+     5501,
+     5563,
+     5593,
+     5614,
+     5652,
+     5675,
+     5707,
+     5718,
+     5765,
+     5772,
+     5798,
+     5831,
+     5862,
+     5870,
+     5902,
+     5917,
+     5954,
+     5961,
+     5981,
+     6029,
+     6052,
+     6080,
+     6110,
+     6120,
+     6184,
+     6209,
+     6228,
+     6231,
+     6269,
+     6277,
+     6297,
+     6322,
+     6381,
+     6387,
+     6427,
+     6452,
+     6477,
+     6484,
+     6538,
+     6548,
+     6575,
+     6597,
+     6634,
+     6638,
+     6669,
+     6683,
+     6729,
+     6736,
+     6756,
+     6762,
+     6797,
+     6848,
+     6893,
+     6915,
+     6945,
+     7012,
+     7048,
+     7103,
+     7167,
+     7172,
+     7207,
+     7215,
+     7228,
+     7265,
+     7270,
+     7301,
+     7363,
+     7375,
+     7393,
+     7427,
+     7460,
+     7510,
+     7537,
+     7554,
+     7594,
+     7630,
+     7660,
+     7664,
+     7670,
+     7714,
+     7719,
+     7766,
+     7787,
+     7818,
+     7844,
+     7859,
+     7878,
+     7906,
+     7912,
+     7968,
+     7999,
+     8023,
+     8062,
+     8070,
+     8091,
+     8126,
+     8174,
+     8179,
+     8236,
+     8243,
+     8279,
+     8287,
+     8327,
+     8333,
+     8398,
+     8438,
+     8440,
+     8472,
+     8503,
+     8540,
+     8627,
+     8653,
+     8693,
+     8699,
+     8826,
+     8861,
+     8903,
+     8980,
+     9013,
+     9030,
+     9062,
+     9076,
+     9113,
+     9169,
+     9173,
+     9196,
+     9230,
+     9231,
+     9270,
+     9327,
+     9333,
+     9355,
+     9392,
+     9448,
+     9455,
+     9494,
+     9509,
+     9537,
+     9602,
+     9609,
+     9633,
+     9645,
+     9662,
+     9689,
+     9697,
+     9756,
+     9781,
+     9786,
+     9810,
+     9811,
+     9854,
+     9884,
+     9902,
+     9939,
+     9968,
+     9992,
+     8820
+    ],
+    "mark": 8820,
+    "readout": "339",
+    "caption": "Cents with no mint mark",
+    "until": "Yet time gave",
+    "cols": 8,
+    "spotlight": true
+   }
+  },
+  {
+   "shot_id": "s11_d10",
+   "start": {
+    "at_phrase": "But Benyameen also"
+   },
+   "end": {
+    "at_phrase": "The penny itself is gone"
+   },
+   "purpose": "QB-D10, Benjamin 1936, lit word by word.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65907201,
+    "n": 8820,
+    "front": "hires/8820.webp",
+    "moves": [
+     {
+      "at_phrase": "But Benyameen also",
+      "box": [
+       0.25,
+       0.25,
+       0.75,
+       0.75
+      ],
+      "dur": 1.4
+     },
+     {
+      "at_phrase": "The presence of the",
+      "box": null,
+      "dur": 0.8
+     }
+    ],
+    "quote": {
+     "at_phrase": "The presence of the",
+     "credit": "Walter Benjamin, 1936",
+     "text": "The presence of the original is the prerequisite to the concept of authenticity."
+    }
+   }
+  },
+  {
+   "shot_id": "s12_pour",
+   "start": {
+    "at_phrase": "The penny itself is gone"
+   },
+   "end": {
+    "at_phrase": "Through Benyameen's lens"
+   },
+   "purpose": "a14, the pour, under 'The penny itself is gone': the penny's copper went into CENTS Block Copper. Named as the user asks.",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "a14",
+   "props": {
+    "caption": "Casting CENTS Block Copper",
+    "maxWidth": 560
+   }
+  },
+  {
+   "shot_id": "s13_camera",
+   "start": {
+    "at_phrase": "Through Benyameen's lens"
+   },
+   "end": {
+    "at_phrase": "the photograph keeps"
+   },
+   "purpose": "Media library C062, the penny photography setup (the act), under 'CENTS keeps both halves of that history'.",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "studio_camera",
+   "props": {
+    "caption": "Penny photography setup, Rutherford Chang's studio",
+    "maxWidth": 732
+   }
+  },
+  {
+   "shot_id": "s14_kept",
+   "start": {
+    "at_phrase": "the photograph keeps"
+   },
+   "end": {
+    "at_phrase": "and Bitcoin's ledger"
+   },
+   "purpose": "The photograph (the result): the front whole, no rings, under 'the photograph keeps the changes in physical condition'.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65907201,
+    "n": 8820,
+    "front": "hires/8820.webp",
+    "moves": [
+     {
+      "at_phrase": "the photograph keeps",
+      "box": null,
+      "dur": 0.9
+     }
+    ],
+    "reads": [
+     {
+      "at_phrase": "the photograph keeps",
+      "readout": "Red, verdigris",
+      "caption": "as photographed"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s15_ledger",
+   "start": {
+    "at_phrase": "and Bitcoin's ledger"
+   },
+   "end": {
+    "after_phrase": "carries its image.",
+    "plus": 0.4
+   },
+   "purpose": "The satoshi carrying inscription 65907201, followed on Bitcoin's ledger via mempool.space (ledger/LEDGER_8820.md; cross-checked against three cents.vision holder snapshots). Dates and transactions only, no amounts.",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "ledger",
+   "props": {
+    "caption": "Bitcoin's ledger, via mempool.space",
+    "maxWidth": 900
+   }
+  },
+  {
+   "shot_id": "s16_card",
+   "start": {
+    "after_phrase": "carries its image.",
+    "plus": 0.4
+   },
+   "end": {
+    "after_phrase": "a great Cent.",
+    "plus": 1.4
+   },
+   "purpose": "Closing card, one 3DCENTS turn; 'Cent #8820, a great Cent.' spoken over it (series ending). Exactly 150 frames on take 1 (frames 3340 to 3490), one 3DCENTS turn.",
+   "visual_kind": "code",
+   "component": "CentSpin",
+   "props": {
+    "inscription": 65907201,
+    "n": 8820,
+    "clip": {
+     "src": "3dcents/8820-360-30fps.mp4",
+     "width": 1080,
+     "height": 1920,
+     "frames": 150,
+     "coin": {
+      "cx": 539.5,
+      "cy": 959.5,
+      "d": 776
+     },
+     "credit": "3D render: 3DCENTS by sinvalli",
+     "credit_at_end": true
+    },
+    "reads": [
+     {
+      "readout": "1972"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s17_credits",
+   "start": {
+    "after_phrase": "a great Cent.",
+    "plus": 1.4
+   },
+   "end": {
+    "at_end": true
+   },
+   "purpose": "End credits. Brief \u00a74: 'Images: Rutherford Chang' (with the media library, for C062), no cents.vision for the Cent images; cents.vision is credited for the Traits Atlas screenshot it supplies (s06); the quote in full form.",
+   "visual_kind": "code",
+   "component": "Credits",
+   "props": {
+    "lines": [
+     "Images: Rutherford Chang; cents.gallery media library",
+     "3D render: 3DCENTS by sinvalli",
+     "Trait names and definitions: Traits Atlas, CENTS Trait Council, via cents.vision",
+     "Quotes: Walter Benjamin, \u201cThe Work of Art in the Age of Mechanical Reproduction\u201d",
+     "1936, translated by Harry Zohn",
+     "Ledger data: mempool.space"
+    ],
+    "url": "cents.gallery"
+   }
+  }
+ ]
+}
