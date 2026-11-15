@@ -342,8 +342,13 @@ export const CentCompare: React.FC<Anchored & {
  */
 export const CentField: React.FC<Anchored & {
   title: string; ns: number[]; mark: number; readout: string; caption: string;
+  /** Each coin cut out on black, as in CentScroll, instead of on its white square (#8820). */
+  cutout?: boolean;
+  /** The field is shown as texture (a crowd of alike pennies), not as evidence of any trait, so the
+   *  trait-size floor does not apply (#8820: 339 Cents of one year and mint). */
+  texture?: boolean;
 }> = (props) => {
-  const { title, ns, mark, readout, caption } = props;
+  const { title, ns, mark, readout, caption, cutout, texture } = props;
   const frame = useCurrentFrame();
   const fade = useShotFade();
   if (readout !== ns.length.toLocaleString("en-US"))
@@ -365,8 +370,8 @@ export const CentField: React.FC<Anchored & {
           const col = i % lay.cols, row = Math.floor(i / lay.cols);
           return (
             <div key={n} style={{ position: "absolute", left: left + col * step, top: top + row * step, opacity: t * (n === mark ? 1 : 1 - 0.35 * ringT) }}>
-              <CentImage n={n} size={lay.size} />
-              {n === mark ? <div style={{ position: "absolute", inset: -6, border: `4px solid ${COLOR.accent}`, borderRadius: 8, opacity: ringT }} /> : null}
+              <CentImage n={n} size={lay.size} texture={texture} style={cutout ? CUTOUT : undefined} />
+              {n === mark ? <div style={{ position: "absolute", inset: cutout ? -4 : -6, border: `4px solid ${COLOR.accent}`, borderRadius: cutout ? "50%" : 8, opacity: ringT }} /> : null}
             </div>
           );
         })}
@@ -492,8 +497,11 @@ export const CentDissolve: React.FC<Anchored & { a: Card; b: Card; first: "a" | 
  */
 export const CentScroll: React.FC<Anchored & {
   title: string; ns: number[]; mark?: number; readout: string; caption: string; until: string; cols?: number;
+  /** Settle about a second early, then dim the others so the marked Cent stands out, ringed outside its rim
+   *  (#8820: at six or eight across, the inset ring was a hairline on copper and the marked Cent went unseen). */
+  spotlight?: boolean;
 }> = (props) => {
-  const { title, ns, mark, readout, caption, until, cols = 4 } = props;
+  const { title, ns, mark, readout, caption, until, cols = 4, spotlight } = props;
   const frame = useCurrentFrame();
   const fade = useShotFade();
   const at = useAt(props);
@@ -506,7 +514,11 @@ export const CentScroll: React.FC<Anchored & {
   const travel = Math.max(0, rows * step - H);
   const fEnd = at(until);
   // Hold the first rows a moment, run, and settle on the last rows before the cut.
-  const p = interpolate(frame, [8, fEnd - 10], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: EASE.inOut });
+  const settle = spotlight ? 40 : 10;
+  const p = interpolate(frame, [8, fEnd - settle], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: EASE.inOut });
+  const dimT = spotlight ? ramp(frame, fEnd - settle, 12) : 0;
+  // The 300px image's coin edge sits about 0.095 of its width in from the square; a spotlight ring (6px) sits 4px outside it.
+  const ringInset = size * 0.06;
   const y = -travel * p;
   const rT = ramp(frame, 4, 8);
   return (
@@ -519,9 +531,9 @@ export const CentScroll: React.FC<Anchored & {
             const top = Math.floor(i / cols) * step + y;
             if (top < -step || top > H) return null;
             return (
-              <div key={n} style={{ position: "absolute", left: (i % cols) * step + (step - size) / 2, top }}>
+              <div key={n} style={{ position: "absolute", left: (i % cols) * step + (step - size) / 2, top, opacity: n === mark ? 1 : 1 - 0.6 * dimT }}>
                 <CentImage n={n} size={size} style={CUTOUT} />
-                {n === mark ? <div style={{ position: "absolute", inset: size * 0.06, border: `5px solid ${COLOR.accent}`, borderRadius: "50%" }} /> : null}
+                {n === mark ? <div style={{ position: "absolute", inset: spotlight ? size * 0.095 - 10 : ringInset, border: `${spotlight ? 6 : 5}px solid ${COLOR.accent}`, borderRadius: "50%" }} /> : null}
               </div>
             );
           })}

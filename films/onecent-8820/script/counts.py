@@ -1,4 +1,4 @@
-"""Counts behind the #8820 script (v0.1). Run from anywhere:
+"""Counts behind the #8820 script (v0.1, v0.2). Run from anywhere:
 
     python3 -I films/onecent-8820/script/counts.py /mnt/project-files/knowledge/data/cents_traits_sep2026.json
 
@@ -41,6 +41,22 @@ def main(path):
     }
     for k, v in out.items():
         print(f"{k}: {v}")
+
+    # The pools the film shows, written for the timeline (--write-pools PATH). Each list is checked
+    # against the count printed above, so a shown pool can't drift from a spoken number.
+    if "--write-pools" in sys.argv:
+        dest = sys.argv[sys.argv.index("--write-pools") + 1]
+        nums = lambda f: sorted(int(n) for n, r in d.items() if f(r))
+        pools = {
+            "significant_red": nums(lambda r: r.get("significant_red")),
+            "exact_pair": nums(lambda r: profile(r) == pair),
+            "year_1972_no_mark": nums(lambda r: r["year"] == 1972 and not r["mint_mark"]),
+        }
+        for k, v in pools.items():
+            assert len(v) == out[k], (k, len(v), out[k])
+            assert 8820 in v, k
+        json.dump(pools, open(dest, "w"), indent=0)
+        print("pools written:", {k: len(v) for k, v in pools.items()}, "->", dest)
 
 
 if __name__ == "__main__":
