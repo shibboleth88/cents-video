@@ -1,6 +1,6 @@
 {
- "_source": "eee v2_take1 (eleven_v4, [thoughtfully] [calm] per line, gen LEQw2N4yHM7kWBwDkajM); scribe_v1 word timings, tag tokens removed",
- "duration": 167.0,
+ "_source": "eee v2_take1 (eleven_v4, [thoughtfully] [calm] per line); scribe_v1 word timings, tag tokens removed; 3.0 s silence inserted at 156.95 s",
+ "duration": 170.0,
  "words": [
   {
    "word": "In",
@@ -2044,53 +2044,53 @@
   },
   {
    "word": "What",
-   "start": 157.2,
-   "end": 157.28
+   "start": 160.2,
+   "end": 160.28
   },
   {
    "word": "should",
-   "start": 157.36,
-   "end": 157.44
+   "start": 160.36,
+   "end": 160.44
   },
   {
    "word": "Dopemind",
-   "start": 157.52,
-   "end": 157.92
+   "start": 160.52,
+   "end": 160.92
   },
   {
    "word": "add",
-   "start": 158.0,
-   "end": 158.08
+   "start": 161.0,
+   "end": 161.08
   },
   {
    "word": "next?",
-   "start": 158.16,
-   "end": 158.88
+   "start": 161.16,
+   "end": 161.88
   },
   {
    "word": "Tell",
-   "start": 158.96,
-   "end": 159.04
+   "start": 161.96,
+   "end": 162.04
   },
   {
    "word": "us",
-   "start": 159.08,
-   "end": 159.12
+   "start": 162.08,
+   "end": 162.12
   },
   {
    "word": "what",
-   "start": 159.2,
-   "end": 159.28
+   "start": 162.2,
+   "end": 162.28
   },
   {
    "word": "you",
-   "start": 159.36,
-   "end": 159.44
+   "start": 162.36,
+   "end": 162.44
   },
   {
    "word": "think.",
-   "start": 159.6,
-   "end": 160.0
+   "start": 162.6,
+   "end": 163.0
   }
  ]
 }

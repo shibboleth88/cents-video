@@ -11,6 +11,13 @@ written, so a stale number refuses instead of rendering:
 Snapshots: /mnt/project-files/collectors/snapshots/2026-11-09/ (cents.vision, fetched
 2026-11-09 15:56Z) and its listings/listings_redacted.json (GET /api/listings,
 18:52Z, prices and addresses removed). v1's timeline is make_timeline_v1.py.
+
+v2.1 (2026-11-15): #8820 left the listings and is now on Daidatep's Wall. A silent
+3 s card says so before the closing question (the narration is unchanged; the audio
+has 3 s of silence inserted there, see audio/build_vo.py INSERT), and #8820 leaves
+the question's options. Checked against snapshots/2026-11-15/ (ownership index and
+groups, 00:48Z; listings, 00:43Z) and the Wall names in snapshots/2026-11-14/replay.json.
+v2's timeline is timeline_v2.json.
 """
 import collections, json, pathlib, sys
 
@@ -57,6 +64,26 @@ need(years[1971] == 362, "1971 count changed")
 PICKS = [8657, 8820, 6451, 6875, 6782, 5888]
 need(all(p in listed for p in PICKS), "a pick is no longer in the listings snapshot")
 need(all(p not in D["cent_ids"] for p in PICKS + L71), "a Cent shown is already on the Wall")
+
+# --- the update, 15 November 2026 (v2.1) --------------------------------------------
+NOW = pathlib.Path("/mnt/project-files/collectors/snapshots/2026-11-15")
+lst15 = json.load(open(NOW / "listings/listings_redacted.json"))
+need(lst15["fetched_at"].startswith("2026-11-15"), "update listings are not from 15 November 2026")
+listed15 = {r["cent"] for r in lst15["listings"]}
+need(8820 not in listed15, "#8820 is listed again")
+need(all(p in listed15 for p in PICKS if p != 8820), "another pick has left the listings since 9 November")
+wi15 = json.load(open(NOW / "raw/wallet_index_cents.json")); wg15 = json.load(open(NOW / "raw/wallet-groups.json"))
+refs = [c for cs in wi15.values() for c in cs]
+need(len(refs) == 10000 and len(set(refs)) == 10000, "15 November ownership index is not a complete partition")
+own15 = {c: w for w, cs in wi15.items() for c in cs}
+sec15 = {s: p for p, ss in wg15.items() for s in ss}
+W14 = {w["name"]: w for w in json.load(open("/mnt/project-files/collectors/snapshots/2026-11-14/replay.json"))["claimed"]}
+grp = lambda c: sec15.get(own15[c], own15[c])
+need(grp(8820) == W14["Daidatep"]["wallet"], "#8820 is not in Daidatep's Wall group on 15 November")
+need(8820 in W14["Daidatep"]["cent_ids"], "the 14 November replay does not show #8820 on Daidatep's Wall")
+own09 = {c: w for w, cs in wi.items() for c in cs}
+need(sec.get(own09[8820], own09[8820]) != W14["Daidatep"]["wallet"], "#8820 was already on Daidatep's Wall on 9 November")
+ASK = [n for n in PICKS if n != 8820]
 
 # --- the three listed 1971s ------------------------------------------------------------
 GD = pool("ghost", "full_desert")
@@ -249,29 +276,33 @@ shots = [
   "purpose": "cents.vision Traits Lab, the Lab/Market switch.",
   "component": "ScreenCrop", "props": {"title": "cents.vision", "subtitle": "Traits Lab", "src": "vision/traits_lab.png", "width": 2964, "height": 1654,
    "start": [300, 0, 1700, 1210], "moves": [{"at_phrase": "switch cents dot vision", "box": [680, 135, 1020, 225], "mark": True}]}},
- {"shot_id": "s27_market", "start": {"at_phrase": "from Lab to Market"}, "end": {"at_phrase": "What should Dopemind add"},
+ {"shot_id": "s27_market", "start": {"at_phrase": "from Lab to Market"}, "end": {"after_phrase": "from Lab to Market", "plus": 0.25},
   "purpose": "The same switch, set to Market.",
   "component": "ScreenCrop", "props": {"title": "cents.vision", "subtitle": "Market", "src": "vision/dm_six_market.jpg", "width": 2160, "height": 1700,
    "start": [590, 140, 945, 225], "moves": [{"at_phrase": "Lab to Market", "box": [590, 140, 945, 225], "mark": True}]}},
+ {"shot_id": "s27b_update", "start": {"after_phrase": "from Lab to Market", "plus": 0.25}, "end": {"at_phrase": "What should Dopemind add"},
+  "purpose": "v2.1, silent (3 s inserted in the audio): #8820 has left the listings and is on Daidatep's Wall, checked above against 15 November.",
+  "component": "WallStandout", "props": {"title": "Update", "subtitle": "As of 15 November 2026", "n": 8820, "readout": "#8820",
+   "caption": "now on Daidatep's Wall", "src": H(8820)}},
  {"shot_id": "s28_ask", "start": {"at_phrase": "What should Dopemind add"}, "end": {"after_phrase": "Tell us what you think", "plus": 2.0},
   "purpose": "The question to viewers, over the options the film put forward.", "component": "AskCard",
-  "props": {"question": "What should DOPEMIND add next?", "cols": 4, "note": "Tell us what you think",
-   "options": [{"label": "1971"}] + [{"label": f"#{n}", "src": H(n)} for n in PICKS]}},
+  "props": {"question": "What should DOPEMIND add next?", "cols": 3, "note": "Tell us what you think",
+   "options": [{"label": "1971"}] + [{"label": f"#{n}", "src": H(n)} for n in ASK]}},
  {"shot_id": "s29_credits", "start": {"after_phrase": "Tell us what you think", "plus": 2.0}, "end": {"at_end": True},
   "purpose": "End credits.", "component": "Credits",
   "props": {"lines": ["Images: Rutherford Chang via cents.vision (site by Dr. Martin Lehnen)",
                       "Discord: Numismatists server, 8 and 9 November 2026",
-                      "Listings and Collector Walls: cents.vision, 9 November 2026",
+                      "Listings and Collector Walls: cents.vision, 9 and 15 November 2026",
                       "Quote: Martin Lehnen, “CENTS – Reflections on Mint Years”, March 2025",
                       "Trait grades: Traits Atlas, CENTS Trait Council",
                       "Front page: The New York Times, 16 August 1971"], "url": "cents.gallery"}},
 ]
 for s in shots: s["visual_kind"] = "code"
 tl = {"essay": {"title": "What to add next", "subtitle": "DOPEMIND's question", "author": "shibboleth",
-                "source": "Numismatists Discord; https://cents.vision", "version": "v2 (2026-11-09)"},
+                "source": "Numismatists Discord; https://cents.vision", "version": "v2.1 (2026-11-15)"},
       "_what": "First film in the 'What to add next' format: a collector's question, the real Discord screenshots, what is listed and what is interesting about each suggestion. Every coin is a real Cent by number; every figure is checked above against the 2026-11-09 snapshots. No prices, no wallet addresses.",
       "shots": shots}
 json.dump(tl, open(F / "timeline/timeline.json", "w"), indent=1, ensure_ascii=False)
 json.dump({"assets": {}, "_note": "No Plate assets. Screenshots (user's uploads, 2026-11-09) and the NYT crop are in public/assets/dopemind/ (gitignored; copies in /mnt/project-files/collector-wall/dopemind/). cents.vision captures are in public/vision/."},
           open(F / "timeline/assets.json", "w"), indent=1)
-print(f"{len(shots)} shots; all figures checked against {SNAP.name}")
+print(f"{len(shots)} shots; all figures checked against {SNAP.name}, the update against {NOW.name}")
