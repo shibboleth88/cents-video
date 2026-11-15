@@ -2,13 +2,15 @@
 
 An episode of the One Cent series. The series brief is `/mnt/project-files/single-cent-series/BEST_PRACTICES.md`. Working files are in `/mnt/project-files/single-cent-series/8820/`.
 
-**Status: script v0.2 for review (shibboleth's edits applied; the ending is open). Silent rehearsal done on stand-in timing; nothing is voiced or rendered.** Only the user approves a version.
+**Status: v1 rendered for review (script v0.2, ending order chosen by shibboleth, eee take 1), about 2:02.** Only the user approves a version.
 
 - **The Cent.** 1972, no mint mark (Philadelphia), inscription 65907201. Traits: Significant Red and Notable Verdigris, nothing else.
 - **Concept.** C21 "Permanence and decay", with C04 "Value made by consensus" as the value tie.
 - **Art literature.** Walter Benjamin, "The Work of Art in the Age of Mechanical Reproduction" (1936), tr. Harry Zohn: QUOTE_BANK v0.7 rows D11 and D10, read through `art-historical-context.md` §2.7. Both FOUND by `check_quotes.py`; one-word controls went red.
 - **Counts.** `script/counts.py` recomputes every spoken figure from the raw export and refuses to run if its floor (Full Red = 71) fails. The floor was seen red on a copy with one Full Red flag removed.
-- **3DCENTS.** The user's export `cent-8820-360-1080x1920-25fps-reel.mp4` is in "cents shortlist" (150 frames, 25 fps). Not yet retimed.
+- **3DCENTS.** The user's export `cent-8820-360-1080x1920-25fps-reel.mp4` from "cents shortlist" (150 frames, 25 fps), retimed to 30 fps (`setpts=N/30/TB`) as `public/3dcents/8820-360-30fps.mp4` (ignored by git, as for every film). It opens the film and closes it, one turn of exactly 150 frames.
+- **Voice.** eee (`pp4OmJ3yyWS9Jyhejh5f`), eleven_v4, `[thoughtfully] [calm]`, default settings; `audio/tts_text.txt` is the exact text voiced (288 spoken words). Two takes, 102.3 s each. Each was fetched by URL into a prompt-free asset and transcribed by scribe_v1; `audio/check_heard.py` found both equal to the text, 281 of 281 tokens, with three printed folds ("Benjamin" heard for the respelled "Benyameen"). `--control` (one word dropped) went red on both. Take 1 is used: the two are equal on every check, and take 1's transcript reads "verdigris, localized" where take 2's reads "verdigris. Localized", so take 1's reading is nearer the script's colon. That is a recogniser's punctuation, not a listen.
+- **Build.** `python3 -I films/onecent-8820/audio/build_vo.py --take 1` inserts 16 holds at measured pauses (the comma at "rim," has no 0.2 s pause, so its hold goes in the longest quiet run, recorded), loudnorm to -16 LUFS target (measured -17.6 integrated; #9344 measured -17.3), 6.5 s end pad: `audio/vo.wav` 121.62 s and `script/alignment.json`. Captions: `captions/build_cues.py`, 47 cues, text equal to the script, audit clean.
 - **Template.** #8653, the only 1972 no-mark Cent whose sole trait is Lustrous.
 
 ## Revision log
@@ -24,3 +26,4 @@ An episode of the One Cent series. The series brief is `/mnt/project-files/singl
   6. The ledger plate's type was small at the plate's 732 px cap. Redrawn at that width with larger type.
   7. Still open for the build: in the stand-in, the rim zoom and the face-patch zoom land 0.8 s apart ("along the rim, with grey-green patches"). Plan a short hold at "rim," in `build_vo.py`.
 - **Ledger, 2026-11-15.** `script/ledger/`: the satoshi carrying inscription 65907201 traced on mempool.space (five transfers since 26 March 2024, the last on 14 Nov 2026 into a wallet cents.vision groups under Daidatep's Wall), cross-checked against three cents.vision holder snapshots.
+- **v1, 2026-11-15.** Voiced and rendered (see Voice and Build above). shibboleth chose the ending: the D10 line before the "both halves" line, so the film ends on the ledger. Changes from the rehearsal: the closing card is held to exactly 150 frames (`plus` 1.4 after "a great Cent."); a 0.4 s hold at "rim," (rehearsal point 7); the end credits follow the brief ("Images: Rutherford Chang; cents.gallery media library"; cents.vision credited only for the Traits Atlas screenshot it supplies; Benjamin's essay in full, with translator). The first credits wording wrapped one line to four rows and SafeText refused the frame; it is now two lines. Quote cards re-checked on the exact card text (D11, D10 FOUND; controls MISSING); Atlas lines FOUND with `grep -F` in `films/traits/script/atlas/` (control MISSING). Stills at 37 key moments rendered before the full render.

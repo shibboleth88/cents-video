@@ -4,7 +4,7 @@
   "subtitle": "Inscription #65907201",
   "author": "shibboleth",
   "source": "/mnt/project-files/single-cent-series/8820/8820_proposal_v0.2.md",
-  "version": "rehearsal (2026-11-15): script v0.2, recommended ending order, STAND-IN timing"
+  "version": "v1 (2026-11-15): script v0.2, ending order chosen by shibboleth, eee take 1"
  },
  "_what": "Cent #8820 (1972, no mint mark): Significant Red and Notable Verdigris, nothing else. Concept C21 (Permanence and decay). Benjamin 1936 (D11, D10) as a lens, never Chang's source. Every count from the Sep 2026 trait export. Traits read from the front only.",
  "shots": [
@@ -1155,9 +1155,9 @@
    },
    "end": {
     "after_phrase": "a great Cent.",
-    "plus": 1.2
+    "plus": 1.4
    },
-   "purpose": "Closing card, one 3DCENTS turn; 'Cent #8820, a great Cent.' spoken over it (series ending). Hold to exactly 150 frames once the take is in.",
+   "purpose": "Closing card, one 3DCENTS turn; 'Cent #8820, a great Cent.' spoken over it (series ending). Exactly 150 frames on take 1 (frames 3340 to 3490), one 3DCENTS turn.",
    "visual_kind": "code",
    "component": "CentSpin",
    "props": {
@@ -1187,21 +1187,22 @@
    "shot_id": "s17_credits",
    "start": {
     "after_phrase": "a great Cent.",
-    "plus": 1.2
+    "plus": 1.4
    },
    "end": {
     "at_end": true
    },
-   "purpose": "End credits (five lines plus the URL).",
+   "purpose": "End credits. Brief \u00a74: 'Images: Rutherford Chang' (with the media library, for C062), no cents.vision for the Cent images; cents.vision is credited for the Traits Atlas screenshot it supplies (s06); the quote in full form.",
    "visual_kind": "code",
    "component": "Credits",
    "props": {
     "lines": [
-     "Images: Rutherford Chang; cents.vision; cents.gallery",
+     "Images: Rutherford Chang; cents.gallery media library",
      "3D render: 3DCENTS by sinvalli",
-     "Traits Atlas: CENTS Trait Council",
-     "Walter Benjamin, tr. H. Zohn",
-     "Ledger: mempool.space"
+     "Trait names and definitions: Traits Atlas, CENTS Trait Council, via cents.vision",
+     "Quotes: Walter Benjamin, \u201cThe Work of Art in the Age of Mechanical Reproduction\u201d",
+     "1936, translated by Harry Zohn",
+     "Ledger data: mempool.space"
     ],
     "url": "cents.gallery"
    }

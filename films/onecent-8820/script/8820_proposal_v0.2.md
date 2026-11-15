@@ -89,10 +89,10 @@ In shibboleth's order the same pictures apply, with 13a and 13b before the D10 c
 
 ## 7. Open
 
-1. The ending: shibboleth's order (ends on "The penny itself is gone") or the swap in §4 (ends on the ledger). Recommended: the swap.
+1. The ending: shibboleth's order (ends on "The penny itself is gone") or the swap in §4 (ends on the ledger). Recommended: the swap. **Answered (shibboleth, 2026-11-15 01:09Z): "End on the ledger".** The film uses the §4 order.
 2. Benjamin's name: German pronunciation ("BEN-yah-meen") by default, respelled in the voice text only.
 
 ## Revision log
 
 - v0.1, 2026-11-14: `8820_proposal_v0.1.md`.
-- v0.2, 2026-11-15: shibboleth's three edits (line 5 image; lines 10 and 15 cut); relational check of the cut version; ending swap recommended.
+- v0.2, 2026-11-15: shibboleth's three edits (line 5 image; lines 10 and 15 cut); relational check of the cut version; ending swap recommended, and chosen by shibboleth (01:09Z).
