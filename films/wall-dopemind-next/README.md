@@ -1,50 +1,10 @@
 # What to add next: DOPEMIND's question
 
-**v2.1 (2026-11-15) adds a silent update card on #8820; see the next section.** **v2 (2026-11-09) is the first film of a new series, "What to add next"** (user, 2026-11-09 18:50Z: "a new kind of video rather than a collector wall feature - it will be a feature about what's available and what's interesting, and we'll do more of these"). The series brief is `/mnt/project-files/what-to-add/BEST_PRACTICES.md`. v1, a themed Collector Wall episode, is described further down. Its files are kept with a `_v1` suffix. The folder keeps its v1 name.
+**v2 (2026-11-09) is the first film of a new series, "What to add next"** (user, 2026-11-09 18:50Z: "a new kind of video rather than a collector wall feature - it will be a feature about what's available and what's interesting, and we'll do more of these"). The series brief is `/mnt/project-files/what-to-add/BEST_PRACTICES.md`. v1, a themed Collector Wall episode, is described further down. Its files are kept with a `_v1` suffix. The folder keeps its v1 name.
 
 The sibling film is `films/wall-dopemind`, the standard Collector Wall episode (thread "Make Dopemind Collector Wall episode", branch `claude/project-thread-fiom8o`). It covers the Contamination Set and stays off the Discord thread.
 
-## v2.1 (2026-11-15): #8820 is now on Daidatep's Wall
-
-**Why.** After v2 was delivered, #8820, one of Daidatep's six picks, left the listings and moved onto Daidatep's own Wall. The narration says, correctly for its date, "On the same day, all six were listed". It closes by asking what DOPEMIND should add, and one of the options was no longer on offer. The user was asked on a decision card. v2.1 builds the recommended option while that question is open; v2 stays as it was.
-
-**What changed.**
-- **A silent 3 s card before the closing question**: "Update · As of 15 November 2026 · #8820 · now on Daidatep's Wall" (`s27b_update`, a `WallStandout`). The narration is unchanged. `audio/build_vo.py` inserts 3.0 s of silence at 156.95 s of the take, between "from Lab to Market." (ends 156.70) and "What should" (157.20). Every later word moves +3.00 s in the alignment, and `PAD_TO` goes from 167 to 170.
-- **#8820 leaves the closing question's options**: 1971 plus five picks, in three columns.
-- **The credits** read "Listings and Collector Walls: cents.vision, 9 and 15 November 2026".
-- v2's files are kept with a `_v2` suffix: `script/alignment_v2.json`, `captions/captions_v2.srt`, `captions/cues_v2.json`, `timeline/timeline_v2.json`. Setting `INSERT = None` and `PAD_TO = 167.0` in `build_vo.py` rebuilds v2's audio.
-
-**Why the card does not give a date for the move.** The ownership snapshots only bound it. #8820 sat with an ungrouped holder at 9 Nov 15:56Z. By 14 Nov 18:51Z it sat with a secondary wallet in Daidatep's group. Between those, there is no snapshot. So the card says where the Cent is "as of" a date and makes no claim about when or why it moved.
-
-**Claims and their checks** (`make_timeline.py`, section "the update"). The timeline refuses unless all of these hold:
-
-| Claim | Check | Control (mutated data), refused |
-|---|---|---|
-| #8820 is no longer listed | absent from `snapshots/2026-11-15/listings/listings_redacted.json` (`/api/listings`, fetched 00:43Z, source `updatedAt` 00:42:32Z, prices and addresses removed) | #8820 added back: refused |
-| the other five picks are still listed | all present in the same file | #6451 removed: refused |
-| the listings are from 15 Nov | `fetched_at` | date set to 16 Nov: refused |
-| the ownership index is whole | 10,000 references, 10,000 distinct Cents (`snapshots/2026-11-15/raw/wallet_index_cents.json`, 00:48Z) | one reference dropped: refused |
-| #8820 is on Daidatep's Wall | its holder's group primary (through `wallet-groups.json`) is the wallet of the claimed Wall "Daidatep" in `snapshots/2026-11-14/replay.json`, and that replay lists #8820 on the Wall | holder looked up without the groups file: refused; replay asked for #8821: refused |
-| it was not there on 9 Nov | the 9 Nov holder's group is not Daidatep's | 9 Nov index swapped for 15 Nov: refused |
-
-Two notes on the data:
-- **A per-address lookup misses the move.** #8820's holder is a secondary wallet, so the index lists it under an address that is not the Wall's. Only the join through the groups file finds it (the control above). This is the one-directional key mismatch described in cents-bot's CLAUDE.md.
-- **The 15 Nov index is byte-identical to the 14 Nov one** (md5 `1e83a5a4…`), although its `last-modified` moved to 14 Nov 21:25Z. The holder-change counter reads 0 between them. It reads 14 between 9 and 14 Nov, so it can go red.
-
-**Audio checks.** Peak in the inserted gap: −72.2 dB. Speech on either side peaks at −1.5 dB. The word check against the script still passes (418 words), and its control still fails. An insert placed inside a word (156.40 s) refuses.
-
-**v2.1 delivery check (brief §5)**, run on `/mnt/project-files/what-to-add/what-to-add-dopemind_v2.1_captioned.mp4` and its render:
-- **Format and decode.** h264, 1080x1920, 30/1, 5100 frames, 170.0 s. A full decode reports 0 errors.
-- **First and last frame.** YMAX 255 (the question screenshot, as in v2) and 13 (the credits' fade-out).
-- **Black intervals.** With a 0.5 s minimum, as in v2: one, at 164.83–165.33 s, the dip into the credits (v2's 161.83–162.33 s, moved +3). With a 0.1 s minimum, every cut also shows as a 0.17–0.37 s dip. Frames inside two of them (8.5 s, 105.25 s) show black between two different shots, which is the house cut fade. Up to 156 s the list is identical to v2's. The two new dips are the cuts into and out of the update card (156.93 s, 160.03 s).
-  - Control: a clip of 2 s black, then 2 s of moving test pattern, gives black 0–2 s.
-- **Frozen intervals.** One is new: 157.7–159.97 s, the update card holding still and silent. That is the option as offered. The other frozen intervals are v2's, moved +3 s after the card: the credits hold at 166.3–169.77 s.
-  - Control: the same clip gives frozen 0–2 s.
-- **Audio.** Correlation with `vo.wav` is 1.000 at 5, 60, 115, 150 and 160.3 s (the last after the insert). With the reference offset by 1 s, the control gives −0.001 to 0.015.
-- **Captions.** 62 cues, text equal to the script, audit clean. No cue falls in the silent card: "from Lab to Market." ends 156.80 s, and the next cue starts 160.20 s. Stills at 160.4 s and 161.33 s show "should" and "next?" lit, against alignment starts of 160.36 s and 161.16 s.
-- **Shared copy.** Same decoded video frames (framemd5) and same audio (md5) as the render. The SRT is byte-identical to `captions/captions.srt`. The copy reports 5,875 bytes more than the render, and so did v2's copy (59,153,901 against 59,148,026). That is why the copies are compared by decode rather than by file hash.
-- **Script scan** over the narration, every on-screen string in the timeline, and the SRT: 0 hits for forbidden phrasing, prices, marketplaces or addresses. A control with two planted lines gets 4 hits (four patterns in two lines).
-- **Not run:** `pipeline/fidelity.py`. It reads an `essay.txt`, which this film does not have.
+**v2.1, set aside (2026-11-15).** #8820 left the listings after v2 and moved onto Daidatep's own Wall. A v2.1 with a silent update card was built while the user's decision was pending (commit `f6ec133`, reverted). The user kept v2: "I'll say if we should make any new videos". The v2.1 files in `/mnt/project-files/what-to-add/` are not for use.
 
 ## v2: what changed and why
 
@@ -145,7 +105,7 @@ These checks were run on `/mnt/project-files/what-to-add/what-to-add-dopemind_v2
   - The previous render opened at YMAX 11, because `ScreenCrop` and its title faded in like any other shot.
   - Both now honour `OpeningShotCtx`, as the One Cent shots do.
   - Last frame: YMAX 13, the credits' fade-out.
-- **Black and frozen intervals.** Black is detected at 161.8–162.3 s, the dip between the ask card and the credits. *[Correction, 2026-11-15: this is the result with a 0.5 s minimum. With 0.1 s, every cut also shows a 0.17–0.37 s dip, the house cut fade; see the v2.1 delivery check.]* Frozen is detected at 163.3–166.8 s, the credits card holding. A frame inside each was looked at, and both are by design, as in v1.
+- **Black and frozen intervals.** Black is detected at 161.8–162.3 s, the dip between the ask card and the credits. *[Correction, 2026-11-15: this is the result with a 0.5 s minimum. With 0.1 s, every cut also shows a 0.17–0.37 s dip, between two different shots: the house cut fade (frames at 8.5 s and 105.25 s were looked at).]* Frozen is detected at 163.3–166.8 s, the credits card holding. A frame inside each was looked at, and both are by design, as in v1.
   - Control: blackdetect finds 0–2 s in a test clip of 2 s black plus 2 s grey.
 - **Audio.** It matches `vo.wav`, with a correlation of 1.000 at 5, 60, 115 and 150 s. With the reference offset by 1 s, the control gives between −0.002 and 0.024.
 - **Shared copy.** The project-files copy has the same decoded video frames (framemd5) and the same audio (md5) as the render. The SRT is byte-identical to `captions/captions.srt`.

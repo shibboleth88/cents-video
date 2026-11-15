@@ -4,7 +4,7 @@
   "subtitle": "DOPEMIND's question",
   "author": "shibboleth",
   "source": "Numismatists Discord; https://cents.vision",
-  "version": "v2.1 (2026-11-15)"
+  "version": "v2 (2026-11-09)"
  },
  "_what": "First film in the 'What to add next' format: a collector's question, the real Discord screenshots, what is listed and what is interesting about each suggestion. Every coin is a real Cent by number; every figure is checked above against the 2026-11-09 snapshots. No prices, no wallet addresses.",
  "shots": [
@@ -1164,8 +1164,7 @@
     "at_phrase": "from Lab to Market"
    },
    "end": {
-    "after_phrase": "from Lab to Market",
-    "plus": 0.25
+    "at_phrase": "What should Dopemind add"
    },
    "purpose": "The same switch, set to Market.",
    "component": "ScreenCrop",
@@ -1197,27 +1196,6 @@
    "visual_kind": "code"
   },
   {
-   "shot_id": "s27b_update",
-   "start": {
-    "after_phrase": "from Lab to Market",
-    "plus": 0.25
-   },
-   "end": {
-    "at_phrase": "What should Dopemind add"
-   },
-   "purpose": "v2.1, silent (3 s inserted in the audio): #8820 has left the listings and is on Daidatep's Wall, checked above against 15 November.",
-   "component": "WallStandout",
-   "props": {
-    "title": "Update",
-    "subtitle": "As of 15 November 2026",
-    "n": 8820,
-    "readout": "#8820",
-    "caption": "now on Daidatep's Wall",
-    "src": "hires/8820.webp"
-   },
-   "visual_kind": "code"
-  },
-  {
    "shot_id": "s28_ask",
    "start": {
     "at_phrase": "What should Dopemind add"
@@ -1230,7 +1208,7 @@
    "component": "AskCard",
    "props": {
     "question": "What should DOPEMIND add next?",
-    "cols": 3,
+    "cols": 4,
     "note": "Tell us what you think",
     "options": [
      {
@@ -1239,6 +1217,10 @@
      {
       "label": "#8657",
       "src": "hires/8657.webp"
+     },
+     {
+      "label": "#8820",
+      "src": "hires/8820.webp"
      },
      {
       "label": "#6451",
@@ -1275,7 +1257,7 @@
     "lines": [
      "Images: Rutherford Chang via cents.vision (site by Dr. Martin Lehnen)",
      "Discord: Numismatists server, 8 and 9 November 2026",
-     "Listings and Collector Walls: cents.vision, 9 and 15 November 2026",
+     "Listings and Collector Walls: cents.vision, 9 November 2026",
      "Quote: Martin Lehnen, “CENTS – Reflections on Mint Years”, March 2025",
      "Trait grades: Traits Atlas, CENTS Trait Council",
      "Front page: The New York Times, 16 August 1971"
