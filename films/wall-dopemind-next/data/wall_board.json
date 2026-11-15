@@ -1,0 +1,102 @@
+{
+ "_source": "snapshots/2026-11-09/replay.json + raw/merged-new2.json via pipeline/wall_board.py; as of 2026-11-09",
+ "as_of": "2026-11-09",
+ "name": "DOPEMIND",
+ "signature": 478,
+ "count": 12,
+ "mosaic": [
+  478,
+  8741,
+  3396,
+  3451,
+  1900,
+  6935,
+  951,
+  8021,
+  2064,
+  4599,
+  3010,
+  8800
+ ],
+ "cents": [
+  478,
+  951,
+  1900,
+  2064,
+  3010,
+  3396,
+  3451,
+  4599,
+  6935,
+  8021,
+  8741,
+  8800
+ ],
+ "years": {
+  "478": 1963,
+  "951": 1967,
+  "1900": 1970,
+  "2064": 1981,
+  "3010": 1974,
+  "3396": 1976,
+  "3451": 1975,
+  "4599": 1963,
+  "6935": 1964,
+  "8021": 1976,
+  "8741": 1979,
+  "8800": 1974
+ },
+ "badges": {
+  "tags": [
+   "Contaminated Obscure Adhesive x 1",
+   "Contaminated Paint x 1",
+   "Contaminated Speckles x 1",
+   "White Drips And Streaks x 1"
+  ],
+  "sets": [
+   "Contamination Set (3/12)"
+  ],
+  "fulls": [],
+  "meta": [
+   "Diamond Hands",
+   "Dime Club",
+   "Years 1963-1981",
+   "Patina count 9"
+  ]
+ },
+ "groups": {
+  "wheat": [],
+  "y1971": [],
+  "y1969": [],
+  "one_of_one_year": [],
+  "one_of_one_mint": [],
+  "trait_combo": [],
+  "mint_keeper": [],
+  "full_mint": [
+   3010,
+   4599
+  ],
+  "full_verdigris": [],
+  "full_obsidian": [],
+  "full_red": [],
+  "full_desert": [],
+  "full_gold": [],
+  "full_any": [],
+  "contamination": {
+   "Speckles": [
+    478
+   ],
+   "Paint": [
+    8741
+   ],
+   "Obscure Adhesive": [
+    8741
+   ]
+  },
+  "contamination_one_each": [
+   8741,
+   8741,
+   478
+  ]
+ }
+}
