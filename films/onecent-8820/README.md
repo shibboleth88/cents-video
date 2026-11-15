@@ -2,7 +2,7 @@
 
 An episode of the One Cent series. The series brief is `/mnt/project-files/single-cent-series/BEST_PRACTICES.md`. Working files are in `/mnt/project-files/single-cent-series/8820/`.
 
-**Status: script v0.1 for review. Nothing is voiced or rendered.** Only the user approves a version.
+**Status: script v0.2 for review (shibboleth's edits applied; the ending is open). Nothing is voiced or rendered.** Only the user approves a version.
 
 - **The Cent.** 1972, no mint mark (Philadelphia), inscription 65907201. Traits: Significant Red and Notable Verdigris, nothing else.
 - **Concept.** C21 "Permanence and decay", with C04 "Value made by consensus" as the value tie.
@@ -14,3 +14,4 @@ An episode of the One Cent series. The series brief is `/mnt/project-files/singl
 ## Revision log
 
 - **v0.1 script, 2026-11-14.** `script/8820_proposal_v0.1.md` (copy of the project-files proposal). Open questions there: length A or B, whether the grey-green patches on Lincoln's face count as verdigris, and Benjamin's pronunciation.
+- **v0.2 script, 2026-11-15.** `script/8820_proposal_v0.2.md`. shibboleth's three edits: line 5 ends "like daubs of paint laid by time"; the photographed/inscribed/melted line and the "set and reset by the people" line are cut. The cut version ends on "The penny itself is gone"; the proposal recommends swapping the last two Benjamin lines so the film ends on the ledger. About 282 spoken words, about 1:50 to 2:10.
