@@ -1,0 +1,123 @@
+# Collector Wall: blacktongue, the collection's character
+
+An updated episode for blacktongue's Wall, made after the Wall collected Cent
+#7476 (user, 2026-11-14). It opens on the overall character of the collection,
+not the standard walk-through: every grade of every patina, then traits per
+Cent, the range of wear, the 1960s, and blacktongue's own words. It follows the
+series brief (`/mnt/project-files/collector-wall/BEST_PRACTICES.md`). The
+standard blacktongue episode is `films/wall-blacktongue/` (v1 to v3).
+
+## Sources
+
+- **Data.** The collector snapshot of 2026-11-14
+  (`/mnt/project-files/collectors/snapshots/2026-11-14/`). Every claim in the
+  narration is measured by `data/character.py`, which writes
+  `data/character.json` and refuses when a claim fails. `--control` goes red twice
+  (a rival planted with the missing values; ladder cells swapped). Findings and
+  the corrections beside them: `/mnt/project-files/collector-wall/blacktongue-character/FINDINGS_2026-11-14.md`.
+- **The fifteen values.** The user's list (2026-11-14): verdigris, obsidian,
+  desert and red at notable, significant and full; gold at notable and full; and
+  orange, which has no grades. blacktongue holds all fifteen with 25 Cents. The
+  best other collector holds thirteen (CL7 with 165 Cents and Daidatep with 133
+  are two of them). The artist wallet also holds fifteen, with 1,000 Cents, and is
+  never counted as a collector.
+  - *Correction, 2026-11-14 (draft 3):* draft 2 counted fourteen graded values
+    (best other collector twelve) and said "of the eight patinas, only iridescent
+    is missing". Iridescent is not a patina (user); that line was cut, and orange
+    joined the counted list.
+- **Art quote.** Jim Drobnick, "Rutherford Chang. The Record Collector as
+  Artist-Curator", *Revue musicale OICRM* 10 no. 1 (June 2023), p. 19, on Chang's
+  *We Buy White Albums*, never on CENTS (quote bank QB-B39). The quoted words are
+  checked against the verified excerpt by `check_quotes.py --quote`; the control
+  ("…surface and colour") is MISSING.
+- **blacktongue's words.** The MAKES CENTS interview (@sovrnart on X, 20 Nov 2024)
+  and blacktongue's post on #5755 (@blktng on X, 21 Aug 2026), quoted verbatim.
+
+## v2 (2026-11-14)
+
+The user set a length rule after v1 (2026-11-14): Collector Wall and single-Cent
+features stay under 3:00, because Instagram doesn't share reels over 3 minutes with
+new followers. v1 ran 3:05.24.
+
+- **Cut.** One whole sentence: "Its oldest Cent is one of only two from 1938, and one
+  of two wheat pennies on the Wall, with a Cent from 1958." Its two shots
+  (`k14_1938`, `k14b_wheat`) go with it. The year range "from 1938 to 1980" stays in
+  the Quarter Club line. Script draft 4 (`script/voiceover_draft4.txt`), 20 lines.
+  - Chosen over the alternatives because it is one whole sentence with a real pause
+    on each side, so no mid-sentence splice is needed. The other way to save the same
+    time was the nine-Full-Spectrum-Sets line plus "only two other collectors hold as
+    many", which splices at a semicolon.
+- **Voice.** Not re-recorded. Take 2 with 143.999 to 152.147 s removed. Both cut points
+  lie inside measured pauses (silencedetect, -45 dB), and the joined pause is 0.26 s.
+  `vo.wav`: loudnorm as v1 (-17.5 LUFS), padded to 177.09 s.
+  - Word check: take 2's recognised words with the same span removed and later words
+    shifted (`audio/v2_spliced_urlscribe_words.json`). The script refuses if any word
+    straddles a cut point. 444 tokens equal `audio/tts_text.txt`.
+  - Controls: one word deleted fails, and the v1 text (which still has the sentence)
+    fails at the cut.
+- **Captions.** 69 cues, text equal to the script; no cue spans any of the 23 cuts
+  (a cut-blind build spans 4).
+- **Render.** `/mnt/project-files/collector-wall/wall-blacktongue-character_v2_captioned.mp4`
+  with `wall-blacktongue-character_v2.srt` (69 cues). It runs 177.11 s (2:57.1), at
+  1080x1920 and 30 fps, with 5,313 frames. It decodes in full with no errors, both the
+  local file and the delivered copy, and their packet hashes are identical.
+  - blackdetect finds only the two shot fades; freezedetect finds only the credits hold.
+  - The only long silence is the 7.4 s tail. Loudness is -17.5 LUFS.
+  - Frames at the cut show the Full Gold shot handing over to the contamination list.
+- v1 is kept as `script/alignment_v1.json`, `timeline/make_timeline_v1.py`,
+  `audio/tts_text_v1.txt`, `captions/cues_v1.json` and `captions/captions_v1.srt`.
+
+## v1 (2026-11-14)
+
+- **Script.** Draft 3 (`script/voiceover.txt` = `script/voiceover_draft3.txt`),
+  21 lines, the user's edits to draft 2 applied. Drafts 1 and 2 are kept beside it.
+- **Narration.** eee (`pp4OmJ3yyWS9Jyhejh5f`) on eleven_v4, `[thoughtfully] [calm]`
+  once at the head of the prompt (`audio/tts_prompt_v1.txt`, 2,973 characters),
+  flow lAv77x1ptbxSG6nUGk7K.
+  - Take 2 (`audio/v1_take2.mp3`, 177.95 s, generation CKfMIbKEAX88loCGfqBD) was
+    chosen. Take 1 (176.51 s) was heard as "CLS7" where the script says "C L seven".
+  - **Words checked by recognition.** Each take was fetched by URL into an asset
+    with no prompt and transcribed with scribe_v1 (`audio/v1_take*_urlscribe_words.json`).
+    `audio/check_heard.py` (copied from the DOPEMIND film, with the recogniser's
+    written conventions folded and each fold printed): take 2, 468 tokens equal;
+    take 1 fails at "CLS7". Controls: one word deleted fails; "thirteen" swapped
+    for "fourteen" fails. The new checker still passes DOPEMIND v3 (377 tokens).
+  - The recogniser spelled Daidatep "DidaTep" (take 2) and "Die2Tepp" (take 1).
+    The spelling is accepted from a fixed list. How the voice says the name has
+    not been checked by ear.
+  - `vo.wav`: take 2, loudnorm I=-16, TP=-1.5, LRA=11 (measures -17.5 LUFS; the
+    true-peak ceiling holds it under target, as on DOPEMIND at -17.3), 48 kHz
+    mono, padded to 185.24 s.
+  - `script/alignment.json` takes its word timings from the recognised transcript
+    (`check_heard.py --write-alignment`).
+- **Captions.** `captions/build_cues.py` (from the DOPEMIND film) writes 72 cues
+  whose text joins to exactly `script/voiceover.txt`, using `script/spoken.json`.
+  No cue spans any of the 25 picture cuts; a cut-blind build spans 5 (control).
+  `captions/captions.srt` is written from the same cues.
+- **Pictures.** 26 shots (`timeline/make_timeline.py`); the cover is gapless from
+  0 to 185.24 s. New components in `src/style/character.tsx`: `PatinaLadder`,
+  `GradeStrips`, `CentTiers`.
+  - `QuoteOver` (`src/style/asknext.tsx`) gains `shrinkTo` and `order:
+    "picture-first"`, both optional; other films are unchanged. Under the square
+    MAKES card and the Wall picture, the quote was laid out (unseen) under the
+    full-size picture, below the essential box, and SafeText refused those
+    frames. "picture-first" shrinks the picture in the 14 frames before the cue
+    and mounts the quote only at its cue, already in place.
+  - The credits were shortened ("Wall data: cents.vision, 14 Nov 2026", "Post: @blktng on X,
+    21 Aug 2026", the Drobnick title without the journal) after the first full render died
+    in them: the last line crossed the box bottom while rising in. Every credits frame was
+    then rendered alone (`--frames=5370-5556`) before the full render.
+  - The second full render had 1.03 s of empty stage at 61.5 s (blackdetect): the wear
+    shot opened on its title alone until "close to mint state". #2489 now enters with the
+    shot.
+- **Render.** `VideoCaptioned`, delivered as
+  `/mnt/project-files/collector-wall/wall-blacktongue-character_v1_captioned.mp4`
+  with `wall-blacktongue-character_v1.srt` (72 cues). Checks run on the rendered
+  file: 1080x1920, 30 fps, 5,557 frames, 185.24 s, AAC 48 kHz; full decode with no
+  errors (local file and the delivered copy); first frame is the Wall card, last is
+  the credits fading out. blackdetect (0.3 s) finds only the two shot fades (0.3 s at
+  48.2 s, 0.4 s into the credits); freezedetect finds only the credits hold (4.3 s);
+  the only long silence is the 7.4 s tail under the credits; -17.5 LUFS. The
+  delivered copy differs from the local file only by a `uuid` box the shared folder
+  adds at the head: the video and audio packet hashes are identical.
+- **Not approved.** Exported and checked; only the user approves a version.

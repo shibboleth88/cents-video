@@ -1,0 +1,1339 @@
+{
+ "essay": {
+  "title": "Collector Wall",
+  "subtitle": "DOPEMIND",
+  "author": "shibboleth",
+  "source": "https://cents.vision/collectors.html",
+  "version": "v3 (2026-11-10)"
+ },
+ "_what": "Collector Wall: DOPEMIND. Data as of 2026-11-09 (cents.vision snapshot). No wallet address appears.",
+ "shots": [
+  {
+   "shot_id": "d00_open",
+   "start": {
+    "at_start": true
+   },
+   "end": {
+    "at_phrase": "Cent, number four seventy-eight"
+   },
+   "purpose": "Showcase opener: the card from frame 0, #478 turning in its slot (3DCENTS, alpha), mosaic and badges lighting in turn; zoom onto the signature Cent.",
+   "visual_kind": "code",
+   "component": "WallOpener",
+   "props": {
+    "variant": "showcase",
+    "wall": "dopemind",
+    "show": "card",
+    "until_phrase": "Its signature Cent",
+    "moves": [
+     {
+      "at_phrase": "Its signature Cent",
+      "target": {
+       "cent": 478,
+       "in": "signature"
+      },
+      "mark": true
+     }
+    ],
+    "progress": {
+     "total_frames": 4564
+    },
+    "clip": {
+     "src": "3dcents/478-360-30fps-alpha.webm",
+     "width": 1080,
+     "height": 1920,
+     "frames": 150,
+     "coin": {
+      "cx": 539.5,
+      "cy": 958.5,
+      "d": 775
+     },
+     "credit": "3D render: 3DCENTS by sinvalli",
+     "credit_at_end": true,
+     "alpha": true
+    }
+   }
+  },
+  {
+   "shot_id": "d01_sig",
+   "start": {
+    "at_phrase": "Cent, number four seventy-eight"
+   },
+   "end": {
+    "at_phrase": "Notable means clearly visible"
+   },
+   "purpose": "Signature #478 grows out of its slot still turning, faces front as its patina is named, then three zooms on the front: obsidian, desert, Speckles.",
+   "visual_kind": "code",
+   "component": "WallStandout",
+   "props": {
+    "title": "DOPEMIND",
+    "n": 478,
+    "readout": "1963",
+    "caption": "Obsidian · Desert · Speckles",
+    "src": "hires/478.webp",
+    "clip": {
+     "src": "3dcents/478-360-30fps.mp4",
+     "width": 1080,
+     "height": 1920,
+     "frames": 150,
+     "coin": {
+      "cx": 539.5,
+      "cy": 958.5,
+      "d": 775
+     },
+     "credit": "3D render: 3DCENTS by sinvalli",
+     "credit_at_end": true,
+     "sync": true,
+     "enter_from": {
+      "cx": 540,
+      "cy": 800,
+      "d": 495
+     },
+     "still": {
+      "src": "hires/478.webp",
+      "at_phrase": "a significant obsidian patina",
+      "r": 0.41
+     }
+    },
+    "zooms": [
+     {
+      "at_phrase": "obsidian patina, a notable",
+      "box": [
+       0.485,
+       0.16,
+       0.79,
+       0.32
+      ],
+      "mark": true
+     },
+     {
+      "at_phrase": "notable desert patina",
+      "box": [
+       0.26,
+       0.12,
+       0.68,
+       0.62
+      ],
+      "marks": [
+       [
+        0.28,
+        0.14,
+        0.4,
+        0.22
+       ],
+       [
+        0.55,
+        0.53,
+        0.64,
+        0.6
+       ]
+      ]
+     },
+     {
+      "at_phrase": "and Speckles, small particles",
+      "box": [
+       0.1,
+       0.38,
+       0.82,
+       0.85
+      ],
+      "marks": [
+       [
+        0.12,
+        0.4,
+        0.48,
+        0.69
+       ],
+       [
+        0.49,
+        0.65,
+        0.8,
+        0.83
+       ]
+      ]
+     }
+    ]
+   },
+   "join_prev": true
+  },
+  {
+   "shot_id": "d02_grades",
+   "start": {
+    "at_phrase": "Notable means clearly visible"
+   },
+   "end": {
+    "at_phrase": "Speckles is one of the"
+   },
+   "purpose": "What the grades mean (Traits Atlas wording), shown with this Wall's own obsidian Cents: #6935 notable, #478 significant.",
+   "visual_kind": "code",
+   "component": "CentRow",
+   "props": {
+    "title": "DOPEMIND",
+    "subtitle": "Obsidian, two grades",
+    "cols": 2,
+    "labelsUnder": true,
+    "cents": [
+     {
+      "n": 6935,
+      "caption": "Notable",
+      "at_phrase": "Notable means clearly visible"
+     },
+     {
+      "n": 478,
+      "caption": "Significant",
+      "at_phrase": "and significant a major presence"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "d03_atlas_speckles",
+   "start": {
+    "at_phrase": "Speckles is one of the"
+   },
+   "end": {
+    "at_phrase": "foreign matter added after"
+   },
+   "purpose": "cents.vision Traits Atlas, Contaminated: the Speckles entry and its example Cent (captured 2026-11-09).",
+   "visual_kind": "code",
+   "component": "WallShot",
+   "props": {
+    "src": "vision/atlas_contaminated_speckles.png",
+    "width": 1080,
+    "height": 1920,
+    "moves": [
+     {
+      "box": [
+       20,
+       20,
+       1060,
+       940
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "d03b_atlas_top",
+   "start": {
+    "at_phrase": "foreign matter added after"
+   },
+   "end": {
+    "at_phrase": "Ninety-five Cents carry Speckles"
+   },
+   "purpose": "Traits Atlas, Contaminated: the summary (foreign material adhered after minting).",
+   "visual_kind": "code",
+   "component": "WallShot",
+   "props": {
+    "src": "vision/atlas_contaminated_top.png",
+    "width": 1080,
+    "height": 1920,
+    "moves": [
+     {
+      "box": [
+       20,
+       460,
+       1060,
+       1110
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "d03c_speckles",
+   "start": {
+    "at_phrase": "Ninety-five Cents carry Speckles"
+   },
+   "end": {
+    "at_phrase": "Only five pair Speckles"
+   },
+   "purpose": "All 95 Speckles Cents; the 70 that also carry obsidian (any grade) stay lit. Obsidian is on 1,757 of 10,000 (17.6%). merged-new2.json, 2026-11-09.",
+   "visual_kind": "code",
+   "component": "CentFilter",
+   "props": {
+    "title": "Speckles",
+    "subtitle": "Contaminated: Speckles",
+    "pool": [
+     128,
+     138,
+     233,
+     237,
+     478,
+     744,
+     752,
+     810,
+     1045,
+     1083,
+     1107,
+     1118,
+     1161,
+     1311,
+     1331,
+     1527,
+     1570,
+     1636,
+     1999,
+     2163,
+     2257,
+     2387,
+     2457,
+     2538,
+     2550,
+     2678,
+     2712,
+     2856,
+     2900,
+     2909,
+     3011,
+     3122,
+     3171,
+     3312,
+     3581,
+     3690,
+     3865,
+     3988,
+     4394,
+     4431,
+     4521,
+     4704,
+     4799,
+     5089,
+     5118,
+     5200,
+     5441,
+     5519,
+     5948,
+     6018,
+     6069,
+     6150,
+     6210,
+     6328,
+     6392,
+     6502,
+     6666,
+     6683,
+     6823,
+     6915,
+     6993,
+     7010,
+     7085,
+     7091,
+     7168,
+     7313,
+     7609,
+     7927,
+     7965,
+     8017,
+     8063,
+     8160,
+     8231,
+     8277,
+     8305,
+     8340,
+     8360,
+     8498,
+     8881,
+     9080,
+     9083,
+     9084,
+     9302,
+     9389,
+     9463,
+     9514,
+     9643,
+     9689,
+     9702,
+     9707,
+     9730,
+     9796,
+     9816,
+     9876,
+     9982
+    ],
+    "steps": [
+     {
+      "at_phrase": "Ninety-five Cents carry Speckles",
+      "readout": "95",
+      "caption": "Cents carry Speckles"
+     },
+     {
+      "at_phrase": "Obsidian is on fewer",
+      "readout": "17.6%",
+      "caption": "of all 10,000 carry obsidian"
+     },
+     {
+      "at_phrase": "but on seventy of these",
+      "keep": [
+       128,
+       138,
+       237,
+       478,
+       810,
+       1045,
+       1083,
+       1118,
+       1331,
+       1570,
+       1636,
+       1999,
+       2163,
+       2257,
+       2457,
+       2538,
+       2550,
+       2678,
+       2856,
+       2900,
+       3011,
+       3171,
+       3690,
+       3865,
+       3988,
+       4394,
+       4431,
+       4521,
+       4704,
+       4799,
+       5089,
+       5118,
+       5200,
+       5519,
+       5948,
+       6018,
+       6069,
+       6210,
+       6328,
+       6392,
+       6666,
+       6683,
+       6823,
+       6915,
+       6993,
+       7010,
+       7085,
+       7091,
+       7313,
+       7609,
+       7927,
+       7965,
+       8017,
+       8063,
+       8160,
+       8231,
+       8305,
+       8360,
+       8498,
+       8881,
+       9080,
+       9084,
+       9302,
+       9643,
+       9689,
+       9707,
+       9730,
+       9796,
+       9816,
+       9876
+      ],
+      "readout": "70",
+      "caption": "of the 95 also carry obsidian"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "d03d_five",
+   "start": {
+    "at_phrase": "Only five pair Speckles"
+   },
+   "end": {
+    "at_phrase": "No other Cent of the"
+   },
+   "purpose": "The five Speckles Cents with significant obsidian (478, 2900, 5118, 6666, 8063); only #478 also carries desert (notable).",
+   "visual_kind": "code",
+   "component": "CentFilter",
+   "props": {
+    "title": "Speckles",
+    "subtitle": "with significant obsidian",
+    "pool": [
+     478,
+     2900,
+     5118,
+     6666,
+     8063
+    ],
+    "steps": [
+     {
+      "at_phrase": "Only five pair Speckles",
+      "readout": "5",
+      "caption": "with significant obsidian"
+     },
+     {
+      "at_phrase": "the only one of them with",
+      "keep": [
+       478
+      ],
+      "regroup": true,
+      "readout": "1",
+      "caption": "with desert as well: #478"
+     }
+    ],
+    "mark": {
+     "n": 478,
+     "at_phrase": "the only one of them with"
+    }
+   }
+  },
+  {
+   "shot_id": "d03e_unique",
+   "start": {
+    "at_phrase": "No other Cent of the"
+   },
+   "end": {
+    "at_phrase": "Number eighty-seven forty-one, from"
+   },
+   "purpose": "#478 large: no other Cent carries Speckles, significant obsidian and desert together (data/speckles.py: 1 under every reading; with obsidian of ANY grade it is 6, so the label must keep \"significant\"). Not on cents.vision's 1/1 Trait Combo list, which counts unique pairs; the film does not call it 1/1.",
+   "visual_kind": "code",
+   "component": "WallStandout",
+   "props": {
+    "title": "Speckles",
+    "n": 478,
+    "readout": "1 of 10,000",
+    "caption": "#478 carries all three",
+    "src": "hires/478.webp",
+    "subtitle": "+ significant obsidian + desert",
+    "zooms": [
+     {
+      "at_phrase": "carries all three",
+      "box": [
+       0.12,
+       0.12,
+       0.88,
+       0.88
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "d04_8741",
+   "start": {
+    "at_phrase": "Number eighty-seven forty-one, from"
+   },
+   "end": {
+    "at_phrase": "Together, these two Cents"
+   },
+   "purpose": "#8741: its date (1979, a Chronicle Set year), then the paint flecks and the adhesive deposit. Which spot is which type is a reading of the photo against the Atlas definitions.",
+   "visual_kind": "code",
+   "component": "WallStandout",
+   "props": {
+    "title": "DOPEMIND",
+    "n": 8741,
+    "readout": "1979",
+    "caption": "Paint · Obscure Adhesive",
+    "src": "hires/8741.webp",
+    "zooms": [
+     {
+      "at_phrase": "from nineteen seventy-nine, one",
+      "box": [
+       0.64,
+       0.59,
+       0.86,
+       0.72
+      ],
+      "mark": true
+     },
+     {
+      "at_phrase": "carries two more types",
+      "box": null
+     },
+     {
+      "at_phrase": "paint, a colored layer",
+      "box": [
+       0.5,
+       0.58,
+       0.82,
+       0.82
+      ],
+      "marks": [
+       [
+        0.71,
+        0.64,
+        0.76,
+        0.69
+       ],
+       [
+        0.54,
+        0.74,
+        0.58,
+        0.79
+       ]
+      ]
+     },
+     {
+      "at_phrase": "and obscure adhesive, thick",
+      "box": [
+       0.46,
+       0.13,
+       0.72,
+       0.35
+      ],
+      "marks": [
+       [
+        0.535,
+        0.19,
+        0.62,
+        0.29
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "d06_together",
+   "start": {
+    "at_phrase": "Together, these two Cents"
+   },
+   "end": {
+    "at_phrase": "which makes a Contamination Set"
+   },
+   "purpose": "The two Cents together: three of the twelve types.",
+   "visual_kind": "code",
+   "component": "CentRow",
+   "props": {
+    "title": "DOPEMIND",
+    "subtitle": "Two contaminated Cents",
+    "cols": 2,
+    "labelsUnder": true,
+    "cents": [
+     {
+      "n": 478,
+      "caption": "#478"
+     },
+     {
+      "n": 8741,
+      "caption": "#8741"
+     }
+    ],
+    "readout": "3 of 12",
+    "caption": "contamination types",
+    "readout_at": "cover three of the twelve"
+   }
+  },
+  {
+   "shot_id": "d07_badge",
+   "start": {
+    "at_phrase": "which makes a Contamination Set"
+   },
+   "end": {
+    "at_phrase": "As of November twenty"
+   },
+   "purpose": "Contamination Set (3/12) badge, lit.",
+   "visual_kind": "code",
+   "component": "WallBoard",
+   "props": {
+    "wall": "dopemind",
+    "show": "card",
+    "moves": [
+     {
+      "at_phrase": "which makes a Contamination Set",
+      "target": {
+       "badge": "Contamination Set"
+      },
+      "mark": true
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "d08_chart",
+   "start": {
+    "at_phrase": "As of November twenty"
+   },
+   "end": {
+    "at_phrase": "Only thirteen of the ten"
+   },
+   "purpose": "Every collector with a Contamination Set, one dot each, by how many contaminated Cents they hold (snapshot 2026-11-09; 59 Walls in set-counts.php, the artist wallet with 87 left out). DOPEMIND alone at 2.",
+   "visual_kind": "code",
+   "component": "DotColumns",
+   "props": {
+    "title": "Contamination Sets",
+    "subtitle": "58 collectors, November 2026",
+    "axis": "contaminated Cents held",
+    "bins": [
+     {
+      "label": "2",
+      "count": 1
+     },
+     {
+      "label": "3",
+      "count": 15
+     },
+     {
+      "label": "4",
+      "count": 12
+     },
+     {
+      "label": "5",
+      "count": 10
+     },
+     {
+      "label": "6",
+      "count": 1
+     },
+     {
+      "label": "7",
+      "count": 4
+     },
+     {
+      "label": "8",
+      "count": 4
+     },
+     {
+      "label": "9",
+      "count": 3
+     },
+     {
+      "label": "10",
+      "count": 4
+     },
+     {
+      "label": "11+",
+      "count": 4
+     }
+    ],
+    "total": 58,
+    "dots_at": "fifty-eight collectors hold one",
+    "highlight": {
+     "bin": "2",
+     "name": "DOPEMIND",
+     "at_phrase": "Mind holds only two"
+    },
+    "reads": [
+     {
+      "at_phrase": "fifty-eight collectors hold one",
+      "readout": "58",
+      "caption": "collectors hold one"
+     },
+     {
+      "at_phrase": "Mind holds only two",
+      "readout": "2",
+      "caption": "the fewest of any Wall with one"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "d05_thirteen",
+   "start": {
+    "at_phrase": "Only thirteen of the ten"
+   },
+   "end": {
+    "at_phrase": "The Wall holds twelve Cents"
+   },
+   "purpose": "All 13 Cents with two contamination types (merged-new2.json, 2026-11-09; recounted from cents_by_trait.json); #8741 ringed. None has three. Moved after the chart in v2 (user, 2026-11-09).",
+   "visual_kind": "code",
+   "component": "CentScroll",
+   "props": {
+    "title": "Two types at once",
+    "ns": [
+     1161,
+     1657,
+     1924,
+     6434,
+     6582,
+     6823,
+     7901,
+     7965,
+     8465,
+     8741,
+     9524,
+     9786,
+     9992
+    ],
+    "mark": 8741,
+    "readout": "13",
+    "caption": "Cents, of all 10,000",
+    "until": "The Wall holds twelve Cents",
+    "cols": 4
+   }
+  },
+  {
+   "shot_id": "d09_count",
+   "start": {
+    "at_phrase": "The Wall holds twelve Cents"
+   },
+   "end": {
+    "at_phrase": "which puts it in the Dime"
+   },
+   "purpose": "The opened collection: all 12 Cents with a count.",
+   "visual_kind": "code",
+   "component": "WallBoard",
+   "props": {
+    "wall": "dopemind",
+    "show": "grid",
+    "moves": [
+     {
+      "at_phrase": "The Wall holds twelve Cents",
+      "until_phrase": "which puts it in the Dime",
+      "target": {
+       "grid_end": true
+      }
+     }
+    ],
+    "readout": {
+     "at_phrase": "The Wall holds twelve Cents",
+     "count": {
+      "from": 0,
+      "to": 12,
+      "until_phrase": "from nineteen sixty-three to",
+      "suffix": " Cents"
+     }
+    }
+   }
+  },
+  {
+   "shot_id": "d10_dime",
+   "start": {
+    "at_phrase": "which puts it in the Dime"
+   },
+   "end": {
+    "at_phrase": "Two of them carry a D"
+   },
+   "purpose": "Dime Club badge.",
+   "visual_kind": "code",
+   "component": "WallBoard",
+   "props": {
+    "wall": "dopemind",
+    "show": "card",
+    "moves": [
+     {
+      "at_phrase": "which puts it in the Dime",
+      "target": {
+       "badge": "Dime Club"
+      },
+      "mark": true
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "d11_4599",
+   "start": {
+    "at_phrase": "Two of them carry a D"
+   },
+   "end": {
+    "at_phrase": "and nineteen seventy-four."
+   },
+   "purpose": "#4599, 1963-D: zoom onto the date and the D.",
+   "visual_kind": "code",
+   "component": "WallStandout",
+   "props": {
+    "title": "DOPEMIND",
+    "n": 4599,
+    "readout": "1963-D",
+    "caption": "D: the Denver mint",
+    "src": "hires/4599.webp",
+    "zooms": [
+     {
+      "at_phrase": "a D mint mark, for",
+      "box": [
+       0.64,
+       0.59,
+       0.86,
+       0.76
+      ],
+      "mark": true
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "d11b_3010",
+   "start": {
+    "at_phrase": "and nineteen seventy-four."
+   },
+   "end": {
+    "at_phrase": "The Wall holds both years"
+   },
+   "purpose": "#3010, 1974-D: the date and the D.",
+   "visual_kind": "code",
+   "component": "WallStandout",
+   "props": {
+    "title": "DOPEMIND",
+    "n": 3010,
+    "readout": "1974-D",
+    "caption": "D: the Denver mint",
+    "src": "hires/3010.webp",
+    "zooms": [
+     {
+      "at_phrase": "and nineteen seventy-four.",
+      "box": [
+       0.64,
+       0.57,
+       0.86,
+       0.76
+      ],
+      "mark": true
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "d11c_pairs",
+   "start": {
+    "at_phrase": "The Wall holds both years"
+   },
+   "end": {
+    "at_phrase": "Number thirty-three ninety-six"
+   },
+   "purpose": "1963 and 1974, each with and without a mint mark.",
+   "visual_kind": "code",
+   "component": "CentRow",
+   "props": {
+    "title": "DOPEMIND",
+    "subtitle": "Two years, with and without a D",
+    "cols": 2,
+    "labelsUnder": true,
+    "cents": [
+     {
+      "n": 4599,
+      "caption": "1963-D"
+     },
+     {
+      "n": 478,
+      "caption": "1963"
+     },
+     {
+      "n": 3010,
+      "caption": "1974-D"
+     },
+     {
+      "n": 8800,
+      "caption": "1974"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "d12_3396",
+   "start": {
+    "at_phrase": "Number thirty-three ninety-six"
+   },
+   "end": {
+    "at_phrase": "Eighty-two Cents carry them"
+   },
+   "purpose": "#3396: the date, then the pale runs (white drips and streaks).",
+   "visual_kind": "code",
+   "component": "WallStandout",
+   "props": {
+    "title": "DOPEMIND",
+    "n": 3396,
+    "readout": "1976",
+    "caption": "White Drips and Streaks",
+    "src": "hires/3396.webp",
+    "zooms": [
+     {
+      "at_phrase": "from nineteen seventy-six",
+      "box": [
+       0.64,
+       0.59,
+       0.84,
+       0.7
+      ],
+      "mark": true
+     },
+     {
+      "at_phrase": "carries white drips and streaks",
+      "box": [
+       0.5,
+       0.2,
+       0.94,
+       0.8
+      ],
+      "marks": [
+       [
+        0.77,
+        0.25,
+        0.88,
+        0.49
+       ],
+       [
+        0.53,
+        0.58,
+        0.65,
+        0.75
+       ]
+      ]
+     },
+     {
+      "at_phrase": "pale runs across the",
+      "box": [
+       0.1,
+       0.45,
+       0.68,
+       0.85
+      ],
+      "marks": [
+       [
+        0.13,
+        0.55,
+        0.34,
+        0.68
+       ],
+       [
+        0.53,
+        0.58,
+        0.65,
+        0.75
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "d13_drips",
+   "start": {
+    "at_phrase": "Eighty-two Cents carry them"
+   },
+   "end": {
+    "at_phrase": "And the Wall carries Diamond"
+   },
+   "purpose": "All 82 white-drips Cents (merged-new2.json, 2026-11-09), #3396 ringed.",
+   "visual_kind": "code",
+   "component": "CentScroll",
+   "props": {
+    "title": "Drips and Streaks",
+    "ns": [
+     17,
+     37,
+     67,
+     178,
+     217,
+     336,
+     358,
+     685,
+     712,
+     748,
+     766,
+     839,
+     997,
+     1000,
+     1084,
+     1138,
+     1170,
+     1221,
+     1328,
+     1355,
+     1640,
+     1835,
+     1965,
+     2011,
+     2062,
+     2185,
+     2272,
+     2305,
+     2312,
+     2329,
+     2460,
+     2654,
+     2658,
+     2727,
+     2808,
+     2879,
+     3038,
+     3255,
+     3269,
+     3289,
+     3396,
+     3606,
+     3641,
+     3892,
+     3983,
+     4240,
+     4405,
+     4852,
+     5079,
+     5190,
+     5336,
+     5484,
+     5626,
+     6022,
+     6291,
+     6336,
+     6349,
+     6375,
+     6381,
+     6556,
+     6744,
+     6991,
+     7259,
+     7292,
+     7543,
+     7643,
+     7734,
+     8129,
+     8353,
+     8400,
+     8527,
+     8617,
+     8729,
+     8774,
+     9023,
+     9533,
+     9620,
+     9627,
+     9682,
+     9828,
+     9884,
+     9972
+    ],
+    "mark": 3396,
+    "readout": "82",
+    "caption": "Cents carry them",
+    "until": "And the Wall carries Diamond",
+    "cols": 7
+   }
+  },
+  {
+   "shot_id": "d14_diamond",
+   "start": {
+    "at_phrase": "And the Wall carries Diamond"
+   },
+   "end": {
+    "at_phrase": "has also written about"
+   },
+   "purpose": "Diamond Hands badge, lit; then the whole card.",
+   "visual_kind": "code",
+   "component": "WallBoard",
+   "props": {
+    "wall": "dopemind",
+    "show": "card",
+    "moves": [
+     {
+      "at_phrase": "And the Wall carries Diamond",
+      "target": {
+       "badge": "Diamond"
+      },
+      "mark": true
+     },
+     {
+      "at_phrase": "with little to no selling",
+      "target": {
+       "card": true
+      }
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "d14b_quote_value",
+   "start": {
+    "at_phrase": "has also written about"
+   },
+   "end": {
+    "at_phrase": "And: Bitcoin was the"
+   },
+   "purpose": "DOPEMIND's quote graphic (cents.gallery media library C103, shared in the CENTS graphics channel; creator to confirm), read in full; the camera holds the whole text and lights each passage as it is spoken.",
+   "visual_kind": "code",
+   "component": "WallShot",
+   "props": {
+    "src": "media/dopemind_quote_value.jpg",
+    "width": 1024,
+    "height": 1024,
+    "title": "DOPEMIND",
+    "subtitle": "Shared in the CENTS Discord",
+    "moves": [
+     {
+      "at_phrase": "Mass-produced objects become",
+      "box": [
+       82,
+       66,
+       909,
+       777
+      ],
+      "focus": [
+       183,
+       245,
+       797,
+       380
+      ]
+     },
+     {
+      "at_phrase": "Meaning doesn't come from",
+      "box": [
+       82,
+       66,
+       909,
+       777
+      ],
+      "focus": [
+       104,
+       392,
+       887,
+       571
+      ]
+     },
+     {
+      "at_phrase": "Value is not invented",
+      "box": [
+       82,
+       66,
+       909,
+       777
+      ],
+      "focus": [
+       217,
+       599,
+       737,
+       727
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "d14c_quote_bitcoin",
+   "start": {
+    "at_phrase": "And: Bitcoin was the"
+   },
+   "end": {
+    "at_phrase": "On X, on November"
+   },
+   "purpose": "DOPEMIND's second graphic (media library C132; creator to confirm). The first two sentences are read; the last (Satoshi Nakamoto) shows on screen.",
+   "visual_kind": "code",
+   "component": "WallShot",
+   "props": {
+    "src": "media/dopemind_quote_bitcoin.png",
+    "width": 1024,
+    "height": 1024,
+    "title": "DOPEMIND",
+    "subtitle": "Shared in the CENTS Discord",
+    "moves": [
+     {
+      "at_phrase": "Bitcoin was the defining",
+      "box": [
+       70,
+       113,
+       964,
+       882
+      ],
+      "focus": [
+       85,
+       114,
+       950,
+       482
+      ]
+     },
+     {
+      "at_phrase": "Cents answers it materially",
+      "box": [
+       70,
+       113,
+       964,
+       882
+      ],
+      "focus": [
+       85,
+       405,
+       950,
+       596
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "d14d_xpost",
+   "start": {
+    "at_phrase": "On X, on November"
+   },
+   "end": {
+    "at_phrase": "Find all of the Collector"
+   },
+   "purpose": "DOPEMIND's own post, x.com/dopemind10/status/2119890111471231434 (9 Nov 2026 20:29 UTC), fetched verbatim through twitterapi.io on 2026-11-10 (dopemind-x/twitterapi/). Two of its lines, as written; the thanks line and the Ordinals line are not shown. Added in v3 (user, 2026-11-09: use his posts about Cents).",
+   "visual_kind": "code",
+   "component": "PostExcerpts",
+   "props": {
+    "title": "DOPEMIND",
+    "subtitle": "@dopemind10 on X, 9 Nov 2026",
+    "excerpts": [
+     {
+      "text": "CENTS by Rutherford Chang is next level concept art.",
+      "at_phrase": "called Cents next level"
+     },
+     {
+      "text": "This is performance of value. I study it.",
+      "at_phrase": "This is performance of value"
+     }
+    ],
+    "source": "Two lines of the post, verbatim"
+   }
+  },
+  {
+   "shot_id": "d15_collectors",
+   "start": {
+    "at_phrase": "Find all of the Collector"
+   },
+   "end": {
+    "after_phrase": "under Collectors",
+    "plus": 1.5
+   },
+   "purpose": "cents.vision Traits Lab; in to the Cents row and the site menu, then onto Collectors.",
+   "visual_kind": "code",
+   "component": "WallShot",
+   "props": {
+    "src": "vision/traits_lab.png",
+    "width": 2964,
+    "height": 1654,
+    "moves": [
+     {
+      "at_phrase": "Collector Walls on cents",
+      "box": [
+       600,
+       1250,
+       2200,
+       1654
+      ]
+     },
+     {
+      "at_phrase": "under Collectors",
+      "box": [
+       1185,
+       1575,
+       1358,
+       1635
+      ],
+      "mark": true
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "d16_credits",
+   "start": {
+    "after_phrase": "under Collectors",
+    "plus": 1.5
+   },
+   "end": {
+    "at_end": true
+   },
+   "purpose": "End credits.",
+   "visual_kind": "code",
+   "component": "Credits",
+   "props": {
+    "lines": [
+     "Images: Rutherford Chang via cents.vision (site by Dr. Martin Lehnen)",
+     "3D render: 3DCENTS by sinvalli",
+     "Trait definitions and grades: Traits Atlas, CENTS Trait Council",
+     "Collector Wall data: cents.vision, as of November 2026",
+     "Quote graphics: DOPEMIND, CENTS Discord",
+     "Post: @dopemind10 on X, 9 November 2026"
+    ],
+    "url": "cents.gallery"
+   }
+  }
+ ]
+}

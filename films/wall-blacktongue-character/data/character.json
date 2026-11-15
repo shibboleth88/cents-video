@@ -1,0 +1,365 @@
+{
+ "_source": "/mnt/project-files/collectors/snapshots/2026-11-14 (fetched 2026-11-14 18:51-18:52Z); second source cents_traits.csv",
+ "as_of": "2026-11-14",
+ "name": "blacktongue",
+ "count": 25,
+ "cents": [
+  189,
+  555,
+  1055,
+  1757,
+  1935,
+  2489,
+  3217,
+  3231,
+  3317,
+  4674,
+  5185,
+  5755,
+  6054,
+  7395,
+  7449,
+  7476,
+  7863,
+  7906,
+  8059,
+  8185,
+  8626,
+  9064,
+  9684,
+  9840,
+  9991
+ ],
+ "ladder": [
+  {
+   "label": "verdigris",
+   "cells": [
+    9840,
+    7476,
+    6054
+   ]
+  },
+  {
+   "label": "obsidian",
+   "cells": [
+    7395,
+    1935,
+    555
+   ]
+  },
+  {
+   "label": "desert",
+   "cells": [
+    3317,
+    8059,
+    5185
+   ]
+  },
+  {
+   "label": "red",
+   "cells": [
+    3217,
+    9684,
+    8185
+   ]
+  },
+  {
+   "label": "gold",
+   "cells": [
+    7449,
+    null,
+    3231
+   ]
+  }
+ ],
+ "orange": 1757,
+ "grades_held": {
+  "walls_10plus": 184,
+  "bins": [
+   {
+    "label": "0",
+    "count": 4
+   },
+   {
+    "label": "1",
+    "count": 7
+   },
+   {
+    "label": "2",
+    "count": 26
+   },
+   {
+    "label": "3",
+    "count": 29
+   },
+   {
+    "label": "4",
+    "count": 32
+   },
+   {
+    "label": "5",
+    "count": 23
+   },
+   {
+    "label": "6",
+    "count": 16
+   },
+   {
+    "label": "7",
+    "count": 10
+   },
+   {
+    "label": "8",
+    "count": 13
+   },
+   {
+    "label": "9",
+    "count": 2
+   },
+   {
+    "label": "10",
+    "count": 8
+   },
+   {
+    "label": "11",
+    "count": 7
+   },
+   {
+    "label": "12",
+    "count": 1
+   },
+   {
+    "label": "13",
+    "count": 4
+   },
+   {
+    "label": "14",
+    "count": 0
+   }
+  ],
+  "best_other_collector": 13,
+  "rivals_top": [
+   [
+    13,
+    "unclaimed",
+    34
+   ],
+   [
+    13,
+    "Plutonium F",
+    19
+   ],
+   [
+    13,
+    "Daidatep",
+    133
+   ],
+   [
+    13,
+    "CL7",
+    165
+   ],
+   [
+    12,
+    "ScrappyT",
+    41
+   ],
+   [
+    11,
+    "unclaimed",
+    103
+   ]
+  ],
+  "artist": 15,
+  "order": [
+   "notable_verdigris",
+   "significant_verdigris",
+   "full_verdigris",
+   "notable_obsidian",
+   "significant_obsidian",
+   "full_obsidian",
+   "notable_desert",
+   "significant_desert",
+   "full_desert",
+   "notable_red",
+   "significant_red",
+   "full_red",
+   "notable_gold",
+   "full_gold",
+   "orange"
+  ],
+  "strips": [
+   {
+    "name": "blacktongue",
+    "cents": 25,
+    "held": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ]
+   },
+   {
+    "name": "CL7",
+    "cents": 165,
+    "held": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     false,
+     true,
+     true,
+     true,
+     true,
+     false,
+     true
+    ]
+   },
+   {
+    "name": "Daidatep",
+    "cents": 133,
+    "held": [
+     true,
+     true,
+     false,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     false,
+     true
+    ]
+   },
+   {
+    "name": "Artist wallet",
+    "cents": 1000,
+    "held": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ]
+   }
+  ]
+ },
+ "traits_per_cent": {
+  "wall": 2.44,
+  "runner_up_10plus": 2.304,
+  "population": 0.776,
+  "per_cent": {
+   "189": 2,
+   "555": 2,
+   "1055": 3,
+   "1757": 1,
+   "1935": 4,
+   "2489": 1,
+   "3217": 4,
+   "3231": 1,
+   "3317": 3,
+   "4674": 1,
+   "5185": 4,
+   "5755": 3,
+   "6054": 2,
+   "7395": 2,
+   "7449": 4,
+   "7476": 3,
+   "7863": 0,
+   "7906": 4,
+   "8059": 3,
+   "8185": 4,
+   "8626": 0,
+   "9064": 1,
+   "9684": 4,
+   "9840": 2,
+   "9991": 3
+  }
+ },
+ "wear": {
+  "close_to_mint_state": [
+   2489,
+   4674
+  ],
+  "faceless": [
+   1935,
+   7906,
+   9991
+  ],
+  "smallest_walls_with_both": [
+   25,
+   25,
+   34
+  ]
+ },
+ "decades": {
+  "1930s": 1,
+  "1950s": 1,
+  "1960s": 14,
+  "1970s": 8,
+  "1980s": 1
+ },
+ "population_1960s_share": 0.1835,
+ "contamination_types": [
+  "Alien Secretion",
+  "Dark Grime",
+  "Obscure Adhesive",
+  "Special Oddities"
+ ],
+ "corroded": {
+  "wall": 4,
+  "pool": 69,
+  "collectors_as_many": [
+   [
+    "CL7",
+    9
+   ],
+   [
+    "ScrappyT",
+    4
+   ]
+  ]
+ },
+ "ghost": [
+  5185,
+  9684
+ ],
+ "vandalized": [
+  7395
+ ],
+ "wheat": [
+  7863,
+  8626
+ ]
+}

@@ -18,6 +18,94 @@ row moves to `LEDGER_ARCHIVE.md` verbatim in the same edit that supersedes it.
   spoken and flagged rather than overwritten. Anchors match fuzzily
   (`MATCH_MIN`), keeping the ambiguity guard via a margin against the runner-up.
 
+- **A ranking measured over one class and one quantity is not true of the
+  neighbouring class or quantity.** A superlative ("the most", "the fewest",
+  "the only") carries the set it was ranked within and the number it was ranked
+  by. Rewording either makes a new claim that has not been measured, and the new
+  sentence reads just as plausibly as the old one. *Bitten twice.*
+  (1) Introduction film, revision 4 (2026-10-06, `LEDGER_ARCHIVE.md`): the
+  essay's "most reproduced artwork" (the image) was re-stated as "the most
+  reproduced physical object" (all manufactured things). The class changed.
+  (2) DOPEMIND Collector Wall (2026-11-09), caught in drafting: the measured fact
+  was that DOPEMIND *holds* the fewest contaminated Cents (2) of the 58 Walls
+  with a Contamination Set. The draft line was "the only Wall to complete the Set
+  with just two Cents". That is a claim about what Walls *could* do, and it is
+  false: other Walls hold a pair of Cents that covers three types between them.
+  The quantity changed from what a Wall holds to what it could select. A check
+  of every Wall's best pair found it.
+  **Remedy:** write down the class and the quantity next to each superlative,
+  then re-run the ranking under the sentence's own wording before the line is
+  voiced. The narration now says "holds only two contaminated Cents, the fewest
+  of any Wall with this Set". `films/wall-dopemind/data/contamination_sets.py`
+  refuses unless that minimum is held by DOPEMIND alone.
+  (3) DOPEMIND v2 (2026-11-09), caught by the re-measure before render: the
+  narration says #478 is the only Cent with Speckles, *significant* obsidian and
+  desert, and that is true (1 of 10,000). The on-screen label shortened it to
+  "Speckles · Obsidian · Desert". With obsidian of any grade, six Cents carry the
+  three. A label is read on its own, without the sentence that set its class, so
+  shortening a label is rewording the claim.
+  `films/wall-dopemind/data/speckles.py` now measures every reading a viewer
+  could give the line and refuses unless each one is #478 alone; it prints the
+  looser count (6) rather than claiming it.
+
+- **A transcript identical to the prompt is not evidence of what was said.**
+  A recogniser that is handed the text it was asked to check can return that
+  text, and the comparison then passes by construction: forced alignment, not
+  recognition. A match that comes back exactly identical, or carries tokens that
+  exist only in the prompt, is the sign to suspect the instrument. *Bitten
+  twice.* (1) DOPEMIND "what to add next" (2026-11-09, candidate on
+  `claude/project-thread-yyfgv7`): scribe_v1 on the ElevenLabs flow's TTS node
+  returned the prompt's own words. (2) DOPEMIND standard episode v1, the same
+  day: my "word-for-word" check passed only after I stripped the
+  `[thoughtfully] [calm]` tags out of the transcript. The tags were in it because
+  it was the prompt. The v1 README and PR claimed a check that had not happened.
+  **Remedy:** give the recogniser audio that carries no text. Fetch the take by
+  URL into a fresh asset (`creative_attach_reference_file` on the pushed file's
+  raw URL) and transcribe that asset. The signs of real recognition are digits
+  ("478", "10,000") and no tag tokens. `films/wall-dopemind/audio/check_heard.py`
+  refuses a transcript containing the tags (INSTRUMENT), compares after reading
+  number words as digits, and prints every homophone it accepts ("where" for
+  "wear" on v2). `--control` deletes one word and must fail. v1 re-checked this
+  way: 233 tokens equal.
+
+- **A shot's start is not the moment its content appears.** A shot is cut on
+  one phrase and its content is cued on a later one, so the frame between them
+  stands empty: a title over nothing, a card with nothing in it. Stills taken at
+  shot midpoints miss it, because the midpoint falls after the content arrives.
+  *Bitten twice:* ScrappyT v1 held an empty titled row for 2.6 s (2026-10-27);
+  the DOPEMIND "what to add next" first render held an empty chat card for
+  1.7 s (51 frames), the message cued on "Dopemind asked" in a shot that
+  began on "In the Numismatists Discord" (blackdetect 9.30-10.23 s and
+  10.30-11.23 s, 2026-11-09). Both caught before delivery. **Remedy:**
+  blackdetect on the render and a frame inside each interval it lists (brief
+  §5), or a still at each shot's first second rather than its middle. Components that hold a
+  container now refuse to stand empty: `ChatCard` throws when its first message
+  enters more than 0.5 s into the shot (`src/style/asknext.tsx`).
+  *Moved from Candidates on its second bite; the once-bitten row is in
+  LEDGER_ARCHIVE.md verbatim.*
+
+- **A render of the film you changed is not a check of the shared code you
+  changed.** Shared shot code serves every film, and a film's own render only
+  exercises its own shots. An edit can be perfect for that film and break another
+  that nothing re-renders. *Bitten twice:*
+  - 2026-10-26: a find-and-replace in `src/style/wall.tsx`, made for #6129, broke
+    Daidatep's `CentFlip` (`ReferenceError: subtitle`). It was found at merge.
+  - 2026-11-09: a new `CentLook` in `src/style/asknext.tsx` (DOPEMIND "what to add
+    next") shared its name with the One Cent `CentLook`. `REGISTRY` spreads
+    `...ONECENT, ...ASKNEXT`, so the new one would have replaced the old one in
+    every One Cent film. The DOPEMIND render would have passed, and so would
+    `tsc`, because timelines are JSON and are not typed against the component.
+    It was caught while writing the timeline.
+
+  **Remedy:**
+  - `npx tsc --noEmit` over the whole project after any edit to `src/style/`.
+  - `components.tsx` now refuses a component name exported by two groups. Control:
+    with the duplicate present, the render refused with `REGISTRY: "CentLook" is
+    exported by both ONECENT and ASKNEXT`.
+
+  *Moved from Candidates on its second bite; the once-bitten row is in
+  LEDGER_ARCHIVE.md verbatim.*
+
 ## Candidates — bitten once
 
 - **A field I can set is not a sign-off I hold.** `approved: true` on an
@@ -36,14 +124,26 @@ row moves to `LEDGER_ARCHIVE.md` verbatim in the same edit that supersedes it.
   left as is: an over-trigger costs a note, an under-trigger ships an undated
   price.
 
-- **A shot's start is not the moment its content appears.** A row shot began at
-  one phrase but showed nothing until each Cent's own phrase. With the old voice
-  the gap was short; the re-voiced take paused 2.6 s there, and the ScrappyT v1
-  render held an empty titled frame (blackdetect 91.07-93.67 s, 2026-10-27).
-  Stills at shot midpoints missed it, because the midpoint fell after the first
-  Cent. *Separating observation:* blackdetect on the render, or a still at each
-  shot's first frame, not its middle. Fixed by starting the shot at its first
-  Cent's phrase; caught before delivery.
+- **The last change before a render is the one no still has seen.** Review
+  stills were rendered and looked at, then one more layout change (a grid made
+  to wrap so its last row centres) went straight into the full render. It made
+  each option wider than its column, so four columns became three and the
+  seventh Cent sat on the note below. DOPEMIND "what to add next", 2026-11-09;
+  caught on a contact sheet of the export. *Separating observation:* look at
+  the export, or re-render the stills after the last edit. Do not reuse stills
+  from before it. `AskCard` now refuses when its rows would reach the note;
+  a three-column control refused.
+
+- **A transcript identical to the prompt is not evidence of what was said.**
+  The word-for-word check compares a scribe_v1 transcript with the script. On
+  the ElevenLabs creative flows, scribe returned the prompt's own text, so the
+  check passes by construction: it works as forced alignment, not as
+  recognition. A match that comes back exactly identical is the signal to
+  suspect the instrument. *Separating observation:* an independent recogniser
+  (Whisper) on the audio, or a listen. Whisper was blocked here: the proxy
+  refused Hugging Face's file host, then the download returned 403 (DOPEMIND
+  "what to add next", 2026-11-09). Unresolved, so the take's words rest on a
+  listen.
 
 Written as a near-miss identity: the two things are close enough that confusing
 them was reasonable.
@@ -139,16 +239,56 @@ them was reasonable.
   frame while seeking. The comparison that depended on it returned "could not
   compare", which read as a missing file rather than a malformed command.
 
-- **A render of the film you changed is not a check of the shared code you
-  changed.** A find-and-replace in a shared component file, made for one film,
-  also hit a component only another film uses. That film's render had already
-  shipped, so nothing re-ran it, and the edit referenced a prop the other
-  component never declared. Found 2026-10-26 while merging: `CentFlip` in
-  `src/style/wall.tsx` (Daidatep's flip shot) threw `ReferenceError: subtitle`
-  after #6129 v2 (16ace98). Seen red with `tsc --noEmit` and `remotion still` at
-  frame 870, green after the fix. *Separating observation:* `npx tsc --noEmit`
-  over the whole project after any edit to `src/style/`, not a render of one
-  film.
+- **A count of what a filter left, taken with the filter's own match, reads zero
+  whether the filter worked or not.** Prices were hidden on cents.vision before
+  capture by matching the ฿ glyph. The match failed and hid 0 elements. The check
+  "visible prices left: 0" used the same match, so it passed. DOPEMIND "what to
+  add next", 2026-11-09. It was caught by looking at the capture: every price was
+  still there. *Separating observation:* count with a different matcher from the
+  one that acted (here, a number regex on all text), or look.
+
+- **Every element inside the safe box is not every element clear of the
+  others.** The text gate checks each string alone: font floor, wrap, and that
+  its glyph box sits inside the essential area. It never compares one element
+  with another. blacktongue "character" episode, 2026-11-14 (scratch-timed
+  stills): `CentRow` with fixed `cols` sizes a cell by width and leaves the label
+  band out of the height, so 25 labelled Cents in five rows ran up over the
+  shot's own subtitle and down into the readout. Every string passed. It was
+  caught by looking at the still. The shot now uses a component built for the
+  count (`CentTiers`); `CentRow` is unchanged, since shipped films use it.
+  *Separating observation:* look at a still of every shot at its fullest frame;
+  no gate here measures overlap between text and imagery.
+
+- **A file at the path the renderer reads is not a file in the form it
+  expects.** The same day: eight Full Gold Cents fetched straight from the
+  on-chain image repo into `public/cents/` rendered as white squares beside the
+  25 Wall Cents, which had been through `pipeline/stage_cents.py` (crop to the
+  measured coin, transparent circle outside). The renderer found every file and
+  nothing refused an unstaged one. Caught by looking. *Separating observation:*
+  a staged cutout is RGBA with transparent corners; the raw image is RGB with
+  white ones. Stage through the script, never by copying.
+
+- **A still that passes the text gate is a pass for that frame, not for the
+  shot.** The same episode: 33 stills on scratch timing, all passing, and on the
+  real voice the first frames of two quote shots were refused. `QuoteOver` lays
+  the quote out under the picture before its cue, unseen; under a square picture
+  at full size that unseen quote sits below the essential box, and SafeText
+  measures it anyway. The scratch stills had all landed after the cue, when the
+  picture had shrunk. A full render would have died at the first such frame.
+  *Separating observation:* sample each shot around its transitions (just before
+  a cue, at it, and as it settles), not only at its middle and end; a shot's
+  layout changes at its cues, and the gate only sees the frames it is given.
+  *Second bite, the same evening:* with the quote fixed, the full render died
+  in the credits. Settled stills of the credits passed; the last line, rising
+  in from below, crossed the box bottom during its entrance. Rendering every
+  frame of the one shot (`--frames=`) is the check that covers entrances.
+
+- **A background job's exit status is its wrapper's, not the job's.** The same
+  render was launched as `render > log; echo "exit $?" >> log; tail log`. The
+  task notice said "completed (exit code 0)": the code of `tail`. The log said
+  `exit 1` and no file had been written. Caught by reading the log before the
+  delivery checks. *Separating observation:* end the wrapper with `exit $rc`
+  of the job itself, and check the output file exists before checking it.
 
 ## Refuted — killed by a measurement, do not re-investigate
 

@@ -1,0 +1,1034 @@
+{
+ "essay": {
+  "title": "Collector Wall",
+  "subtitle": "blacktongue",
+  "author": "shibboleth",
+  "source": "https://cents.vision/collectors.html",
+  "version": "v2 (2026-11-14), the collection's character, script draft 4 (under 3:00)"
+ },
+ "_what": "Collector Wall: blacktongue, after #7476. Data as of 2026-11-14 (cents.vision snapshot). No wallet address appears.",
+ "shots": [
+  {
+   "shot_id": "k00_open",
+   "start": {
+    "at_start": true
+   },
+   "end": {
+    "at_phrase": "Verdigris, obsidian, desert and"
+   },
+   "purpose": "Showcase opener: the card from frame 0, the signature Cent #5185 turning in its slot (3DCENTS, alpha), mosaic and badges lighting in turn.",
+   "visual_kind": "code",
+   "component": "WallOpener",
+   "props": {
+    "variant": "showcase",
+    "wall": "blacktongue-character",
+    "show": "card",
+    "until_phrase": "Verdigris, obsidian, desert and",
+    "moves": [],
+    "progress": {
+     "total_frames": 5313
+    },
+    "clip": {
+     "src": "3dcents/5185-360-30fps-alpha.webm",
+     "width": 1080,
+     "height": 1920,
+     "frames": 150,
+     "coin": {
+      "cx": 539.5,
+      "cy": 959.5,
+      "d": 776
+     },
+     "credit": "3D render: 3DCENTS by sinvalli",
+     "credit_at_end": true,
+     "alpha": true
+    }
+   }
+  },
+  {
+   "shot_id": "k01_ladder",
+   "start": {
+    "at_phrase": "Verdigris, obsidian, desert and"
+   },
+   "end": {
+    "at_phrase": "No other collector's Wall"
+   },
+   "purpose": "The claim made visible: the Wall's own Cents as a grid of patina by grade, one different Cent per cell, each row arriving as its patina is named; each column lights as its grade is explained (Traits Atlas wording). Gold has no significant grade (dash). Orange has no grades: #1757 drawn across the columns on a rule, dimmed whenever a single grade is lit.",
+   "visual_kind": "code",
+   "component": "PatinaLadder",
+   "props": {
+    "columns": [
+     "Notable",
+     "Significant",
+     "Full"
+    ],
+    "rows": [
+     {
+      "label": "Verdigris",
+      "at_phrase": "Verdigris, obsidian, desert",
+      "cells": [
+       9840,
+       7476,
+       6054
+      ]
+     },
+     {
+      "label": "Obsidian",
+      "at_phrase": "obsidian, desert and red",
+      "cells": [
+       7395,
+       1935,
+       555
+      ]
+     },
+     {
+      "label": "Desert",
+      "at_phrase": "desert and red, each",
+      "cells": [
+       3317,
+       8059,
+       5185
+      ]
+     },
+     {
+      "label": "Red",
+      "at_phrase": "red, each at notable",
+      "cells": [
+       3217,
+       9684,
+       8185
+      ]
+     },
+     {
+      "label": "Gold",
+      "at_phrase": "full; gold, at notable",
+      "cells": [
+       7449,
+       null,
+       3231
+      ]
+     },
+     {
+      "label": "Orange",
+      "at_phrase": "and full, and orange",
+      "cells": [
+       1757
+      ],
+      "ungraded": true
+     }
+    ],
+    "lights": [
+     {
+      "at_phrase": "Notable means clearly visible",
+      "column": 0
+     },
+     {
+      "at_phrase": "significant a major presence",
+      "column": 1
+     },
+     {
+      "at_phrase": "and full the dominant",
+      "column": 2
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "k02_strips",
+   "start": {
+    "at_phrase": "No other collector's Wall"
+   },
+   "end": {
+    "at_phrase": "Writing about Chang's earlier"
+   },
+   "purpose": "Fifteen dots per Wall (the fourteen grades, then orange): blacktongue 15; CL7 and Daidatep (the two largest collector Walls) 13, each missing a full gold and one other full; the artist wallet, set apart under a rule, 15. Best any other collector reaches: 13 (character.py).",
+   "visual_kind": "code",
+   "component": "GradeStrips",
+   "props": {
+    "title": "Patinas held",
+    "subtitle": "As of November 2026",
+    "groups": [
+     3,
+     3,
+     3,
+     3,
+     2,
+     1
+    ],
+    "keys": [
+     6054,
+     555,
+     5185,
+     8185,
+     3231,
+     1757
+    ],
+    "patinas": [
+     "verdigris",
+     "obsidian",
+     "desert",
+     "red",
+     "gold",
+     "orange"
+    ],
+    "rows": [
+     {
+      "name": "blacktongue",
+      "cents": 25,
+      "held": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "count": 15,
+      "at_phrase": "No other collector's Wall"
+     },
+     {
+      "name": "CL7",
+      "cents": 165,
+      "held": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       false,
+       true,
+       true,
+       true,
+       true,
+       false,
+       true
+      ],
+      "count": 13,
+      "at_phrase": "Even C L seven and"
+     },
+     {
+      "name": "Daidatep",
+      "cents": 133,
+      "held": [
+       true,
+       true,
+       false,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       false,
+       true
+      ],
+      "count": 13,
+      "at_phrase": "and Daidatep, with more"
+     },
+     {
+      "name": "Artist wallet",
+      "cents": 1000,
+      "held": [
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true,
+       true
+      ],
+      "count": 15,
+      "at_phrase": "is the artist wallet",
+      "apart": true
+     }
+    ],
+    "mark_missing_at": "reach thirteen"
+   }
+  },
+  {
+   "shot_id": "k03_drobnick",
+   "start": {
+    "at_phrase": "Writing about Chang's earlier"
+   },
+   "end": {
+    "at_phrase": "Of the Walls with ten"
+   },
+   "purpose": "Art quote from the bank (QB-B39; Drobnick, Revue musicale OICRM, 2023, p. 19), verbatim and FOUND by check_quotes.py. It is about We Buy White Albums, not CENTS; the narration and the attribution both say so. Our narration paraphrases the first half of his sentence (wear lowers an album's value to a \"true\" vinyl collector). Shown over the Wall's full verdigris Cent; no motive of Chang's is stated.",
+   "visual_kind": "code",
+   "component": "QuoteOver",
+   "props": {
+    "title": "Patina",
+    "subtitle": "Cent #6054, full verdigris",
+    "cent": "hires/6054.webp",
+    "quote": "“the patina stores the history of the object through surface and texture”",
+    "attribution": "Jim Drobnick, on Chang's We Buy White Albums, 2023",
+    "quote_at": "Jim Drobnick noted that"
+   }
+  },
+  {
+   "shot_id": "k04_traits",
+   "start": {
+    "at_phrase": "Of the Walls with ten"
+   },
+   "end": {
+    "at_phrase": "Number thirty-two seventeen"
+   },
+   "purpose": "The Wall's 25 Cents in rows by their count of visual traits (grades folded, wheat not counted; snapshot and Sep 2026 export agree): seven carry four. Mean 2.44, the highest of any Wall with 10+ (next 2.304); CENTS 0.776.",
+   "visual_kind": "code",
+   "component": "CentTiers",
+   "props": {
+    "title": "blacktongue",
+    "subtitle": "Its Cents by trait count",
+    "total": 25,
+    "tiers": [
+     {
+      "label": "4",
+      "cents": [
+       1935,
+       3217,
+       5185,
+       7449,
+       7906,
+       8185,
+       9684
+      ]
+     },
+     {
+      "label": "3",
+      "cents": [
+       1055,
+       3317,
+       5755,
+       7476,
+       8059,
+       9991
+      ]
+     },
+     {
+      "label": "2",
+      "cents": [
+       189,
+       555,
+       6054,
+       7395,
+       9840
+      ]
+     },
+     {
+      "label": "1",
+      "cents": [
+       1757,
+       2489,
+       3231,
+       4674,
+       9064
+      ]
+     },
+     {
+      "label": "0",
+      "cents": [
+       7863,
+       8626
+      ]
+     }
+    ],
+    "reads": [
+     {
+      "at_phrase": "two point four on",
+      "readout": "2.4",
+      "caption": "traits per Cent, on average"
+     },
+     {
+      "at_phrase": "against under one across",
+      "readout": "0.78",
+      "caption": "across all 10,000 Cents"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "k05_3217",
+   "start": {
+    "at_phrase": "Number thirty-two seventeen"
+   },
+   "end": {
+    "at_phrase": "The wear runs from"
+   },
+   "purpose": "#3217 (1970): all four base patinas on one Cent; a slow push onto the face.",
+   "visual_kind": "code",
+   "component": "WallStandout",
+   "props": {
+    "title": "blacktongue",
+    "n": 3217,
+    "readout": "1970",
+    "caption": "Verdigris · Obsidian · Desert · Red",
+    "src": "hires/3217.webp",
+    "zooms": [
+     {
+      "at_phrase": "carries all four base",
+      "box": [
+       0.18,
+       0.12,
+       0.86,
+       0.8
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "k06_wear",
+   "start": {
+    "at_phrase": "The wear runs from"
+   },
+   "end": {
+    "at_phrase": "And fourteen of the twenty-five"
+   },
+   "purpose": "One Cent at a time, large: #2489 close to mint state (Lustrous trait), then the three Faceless Cents; gathered as the line ends. No smaller Wall holds both traits (smallest Walls with both: 25, 25, 34).",
+   "visual_kind": "code",
+   "component": "CentRow",
+   "props": {
+    "title": "blacktongue",
+    "subtitle": "The range of wear",
+    "cols": 2,
+    "solo_until": "No smaller Wall holds",
+    "cents": [
+     {
+      "n": 2489,
+      "src": "hires/2489.webp",
+      "caption": "Close to mint state",
+      "at_phrase": "The wear runs from"
+     },
+     {
+      "n": 1935,
+      "src": "hires/1935.webp",
+      "caption": "Faceless",
+      "at_phrase": "to three Faceless Cents"
+     },
+     {
+      "n": 7906,
+      "src": "hires/7906.webp",
+      "caption": "Faceless",
+      "at_phrase": "where Lincoln's face is"
+     },
+     {
+      "n": 9991,
+      "src": "hires/9991.webp",
+      "caption": "Faceless",
+      "at_phrase": "all but gone"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "k07_decades",
+   "start": {
+    "at_phrase": "And fourteen of the twenty-five"
+   },
+   "end": {
+    "at_phrase": "In a twenty twenty-four"
+   },
+   "purpose": "The Wall by decade (no Cents from the 1940s); the 1960s lit. Across CENTS 18.4% are from the 1960s.",
+   "visual_kind": "code",
+   "component": "YearBars",
+   "props": {
+    "title": "blacktongue",
+    "subtitle": "Cents by decade",
+    "bars": [
+     {
+      "label": "1930s",
+      "value": 1
+     },
+     {
+      "label": "1950s",
+      "value": 1
+     },
+     {
+      "label": "1960s",
+      "value": 14
+     },
+     {
+      "label": "1970s",
+      "value": 8
+     },
+     {
+      "label": "1980s",
+      "value": 1
+     }
+    ],
+    "highlight": "1960s",
+    "highlight_at": "from the nineteen sixties",
+    "readouts": [
+     {
+      "at_phrase": "fourteen of the twenty-five",
+      "text": "14 of 25",
+      "caption": "from the 1960s"
+     },
+     {
+      "at_phrase": "fewer than one in five",
+      "text": "18%",
+      "caption": "of all 10,000 Cents"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "k08_quote_interview",
+   "start": {
+    "at_phrase": "In a twenty twenty-four"
+   },
+   "end": {
+    "at_phrase": "Some of the best pieces"
+   },
+   "purpose": "The MAKES CENTS card (sovrnart, 20 Nov 2024; it shows blacktongue's Ghost #9684), then the interview line, verbatim.",
+   "visual_kind": "code",
+   "component": "QuoteOver",
+   "props": {
+    "src": "media/makes_cents_blacktongue_2024-11-20.jpg",
+    "img_w": 2000,
+    "img_h": 2000,
+    "title": "blacktongue",
+    "subtitle": "MAKES CENTS interview",
+    "img_caption": "@sovrnart on X, 20 Nov 2024",
+    "quote": "“…finding additional value in the artistic merit and time-worn aesthetic of each coin.”",
+    "attribution": "blacktongue, 2024",
+    "quote_at": "finding additional value in",
+    "shrinkTo": 0.44,
+    "order": "picture-first"
+   }
+  },
+  {
+   "shot_id": "k08b_quote_patient",
+   "start": {
+    "at_phrase": "Some of the best pieces"
+   },
+   "end": {
+    "at_phrase": "In August twenty twenty-six"
+   },
+   "purpose": "The second interview line over the whole Wall as it stands (all 25 fronts on black). No single Cent is paired with it: the interview does not say which pieces came that way.",
+   "visual_kind": "code",
+   "component": "QuoteOver",
+   "props": {
+    "src": "media/blacktongue_wall_25.jpg",
+    "img_w": 1000,
+    "img_h": 1000,
+    "title": "blacktongue",
+    "subtitle": "MAKES CENTS interview",
+    "img_caption": "The Wall, November 2026",
+    "quote": "“…by being patient and trusting my eye (and gut).”",
+    "attribution": "blacktongue, 2024",
+    "quote_at": "by being patient and",
+    "shrinkTo": 0.44,
+    "order": "picture-first"
+   }
+  },
+  {
+   "shot_id": "k09_quote_5755",
+   "start": {
+    "at_phrase": "In August twenty twenty-six"
+   },
+   "end": {
+    "at_phrase": "The newest Cent is"
+   },
+   "purpose": "#5755 (1964), the Cent the post shows (identified from the post image), with the post's line verbatim.",
+   "visual_kind": "code",
+   "component": "QuoteOver",
+   "props": {
+    "title": "blacktongue",
+    "subtitle": "Cent #5755",
+    "cent": "hires/5755.webp",
+    "quote": "“Discoloration and dark deposits have created an accidental work of art.”",
+    "attribution": "blacktongue (@blktng) on X, 21 Aug 2026",
+    "quote_at": "Discoloration and dark deposits"
+   }
+  },
+  {
+   "shot_id": "k10_7476",
+   "start": {
+    "at_phrase": "The newest Cent is"
+   },
+   "end": {
+    "at_phrase": "It brings the Wall to"
+   },
+   "purpose": "#7476: its date, then the green along the upper rim (verdigris); back to the whole Cent for the adhesive, which is not pointed at (not located with confidence on the photo).",
+   "visual_kind": "code",
+   "component": "WallStandout",
+   "props": {
+    "title": "blacktongue",
+    "n": 7476,
+    "readout": "1976",
+    "caption": "Verdigris · Obsidian · Obscure Adhesive",
+    "src": "hires/7476.webp",
+    "subtitle": "Newest: CENT #7476",
+    "zooms": [
+     {
+      "at_phrase": "from nineteen seventy-six. It",
+      "box": [
+       0.6,
+       0.53,
+       0.86,
+       0.71
+      ],
+      "mark": true
+     },
+     {
+      "at_phrase": "a significant verdigris patina",
+      "box": [
+       0.22,
+       0.05,
+       0.92,
+       0.45
+      ]
+     },
+     {
+      "at_phrase": "and obscure adhesive, thick",
+      "box": null
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "k11_count",
+   "start": {
+    "at_phrase": "It brings the Wall to"
+   },
+   "end": {
+    "at_phrase": "and into the Quarter Club"
+   },
+   "purpose": "The opened collection: all 25 Cents with a count.",
+   "visual_kind": "code",
+   "component": "WallBoard",
+   "props": {
+    "wall": "blacktongue-character",
+    "show": "grid",
+    "moves": [
+     {
+      "at_phrase": "It brings the Wall to",
+      "until_phrase": "and into the Quarter Club",
+      "target": {
+       "grid_end": true
+      }
+     }
+    ],
+    "readout": {
+     "at_phrase": "It brings the Wall to",
+     "count": {
+      "from": 0,
+      "to": 25,
+      "until_phrase": "from nineteen thirty-eight to",
+      "suffix": " Cents"
+     }
+    }
+   }
+  },
+  {
+   "shot_id": "k11b_quarter",
+   "start": {
+    "at_phrase": "and into the Quarter Club"
+   },
+   "end": {
+    "at_phrase": "Its signature Cent"
+   },
+   "purpose": "Quarter Club badge (was Dime Club at 24).",
+   "visual_kind": "code",
+   "component": "WallBoard",
+   "props": {
+    "wall": "blacktongue-character",
+    "show": "card",
+    "moves": [
+     {
+      "at_phrase": "into the Quarter Club",
+      "target": {
+       "badge": "Quarter Club"
+      },
+      "mark": true
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "k12_sig",
+   "start": {
+    "at_phrase": "Its signature Cent"
+   },
+   "end": {
+    "at_phrase": "That full desert, with"
+   },
+   "purpose": "Signature #5185 turning (3DCENTS), settling to its front as the patina is named.",
+   "visual_kind": "code",
+   "component": "WallStandout",
+   "props": {
+    "title": "blacktongue",
+    "n": 5185,
+    "readout": "1968",
+    "caption": "Full Desert · Ghost",
+    "src": "hires/5185.webp",
+    "subtitle": "Signature: CENT #5185",
+    "clip": {
+     "src": "3dcents/5185-360-30fps.mp4",
+     "width": 1080,
+     "height": 1920,
+     "frames": 150,
+     "coin": {
+      "cx": 539.5,
+      "cy": 959.5,
+      "d": 776
+     },
+     "credit": "3D render: 3DCENTS by sinvalli",
+     "credit_at_end": true,
+     "still": {
+      "src": "hires/5185.webp",
+      "at_phrase": "carries a full desert patina",
+      "r": 0.41
+     }
+    }
+   }
+  },
+  {
+   "shot_id": "k13_spectrum",
+   "start": {
+    "at_phrase": "That full desert, with"
+   },
+   "end": {
+    "at_phrase": "Only nine Full Spectrum"
+   },
+   "purpose": "The six Cents of the Full Spectrum Set, each lit as it is named, with the series' patina key dots (the Wall holds two full reds; #8185 stands for them).",
+   "visual_kind": "code",
+   "component": "CentRow",
+   "props": {
+    "title": "blacktongue",
+    "subtitle": "Full Spectrum Set",
+    "cols": 3,
+    "cents": [
+     {
+      "n": 5185,
+      "patina": "desert",
+      "caption": "Full Desert · #5185",
+      "at_phrase": "That full desert, with"
+     },
+     {
+      "n": 6054,
+      "patina": "verdigris",
+      "caption": "Full Verdigris · #6054",
+      "at_phrase": "a full verdigris"
+     },
+     {
+      "n": 555,
+      "patina": "obsidian",
+      "caption": "Full Obsidian · #555",
+      "at_phrase": "a full obsidian, a"
+     },
+     {
+      "n": 8185,
+      "patina": "red",
+      "caption": "Full Red · #8185",
+      "at_phrase": "a full red, a"
+     },
+     {
+      "n": 3231,
+      "patina": "gold",
+      "caption": "Full Gold · #3231",
+      "at_phrase": "a full gold and"
+     },
+     {
+      "n": 1757,
+      "patina": "orange",
+      "caption": "Orange · #1757",
+      "at_phrase": "and an orange"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "k13b_gold",
+   "start": {
+    "at_phrase": "Only nine Full Spectrum"
+   },
+   "end": {
+    "at_phrase": "Across its Cents"
+   },
+   "purpose": "All nine Full Gold Cents (snapshot meta); blacktongue's #3231 ringed. Nine full golds cap Full Spectrum Sets at nine.",
+   "visual_kind": "code",
+   "component": "CentFilter",
+   "props": {
+    "title": "Full Gold",
+    "subtitle": "Every Full Gold Cent in CENTS",
+    "pool": [
+     1040,
+     1864,
+     1924,
+     2930,
+     3231,
+     4273,
+     8002,
+     9085,
+     9581
+    ],
+    "steps": [
+     {
+      "at_phrase": "only nine Full Gold",
+      "readout": "9",
+      "caption": "Full Gold Cents"
+     }
+    ],
+    "mark": {
+     "n": 3231,
+     "at_phrase": "only nine Full Gold"
+    }
+   }
+  },
+  {
+   "shot_id": "k15_contam",
+   "start": {
+    "at_phrase": "Across its Cents"
+   },
+   "end": {
+    "at_phrase": "which makes a Contamination"
+   },
+   "purpose": "One Cent for each of the four contamination types on the Wall (#6054 also carries Obscure Adhesive; #7476 stands for it, as the newest).",
+   "visual_kind": "code",
+   "component": "WallList",
+   "props": {
+    "title": "blacktongue",
+    "subtitle": "Contamination types",
+    "readout": "4 of 12",
+    "readout_at": "four of the twelve contamination",
+    "rows": [
+     {
+      "n": 5755,
+      "label": "Alien Secretion"
+     },
+     {
+      "n": 7476,
+      "label": "Obscure Adhesive"
+     },
+     {
+      "n": 8185,
+      "label": "Special Oddities"
+     },
+     {
+      "n": 9840,
+      "label": "Dark Grime"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "k15b_badge",
+   "start": {
+    "at_phrase": "which makes a Contamination"
+   },
+   "end": {
+    "at_phrase": "It holds four of the"
+   },
+   "purpose": "Contamination Set (4/12) badge, lit.",
+   "visual_kind": "code",
+   "component": "WallBoard",
+   "props": {
+    "wall": "blacktongue-character",
+    "show": "card",
+    "moves": [
+     {
+      "at_phrase": "which makes a Contamination",
+      "target": {
+       "badge": "Contamination Set"
+      },
+      "mark": true
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "k16_corroded",
+   "start": {
+    "at_phrase": "It holds four of the"
+   },
+   "end": {
+    "at_phrase": "Two are Ghost Cents"
+   },
+   "purpose": "The Wall's four Corroded Cents; only CL7, ScrappyT hold as many (character.py).",
+   "visual_kind": "code",
+   "component": "CentRow",
+   "props": {
+    "title": "blacktongue",
+    "subtitle": "Corroded",
+    "cols": 2,
+    "labelsUnder": true,
+    "cents": [
+     {
+      "n": 1055,
+      "caption": "#1055"
+     },
+     {
+      "n": 1935,
+      "caption": "#1935"
+     },
+     {
+      "n": 7449,
+      "caption": "#7449"
+     },
+     {
+      "n": 7906,
+      "caption": "#7906"
+     }
+    ],
+    "readout": "4 of 69",
+    "caption": "Corroded Cents",
+    "readout_at": "four of the sixty-nine"
+   }
+  },
+  {
+   "shot_id": "k16b_ghost",
+   "start": {
+    "at_phrase": "Two are Ghost Cents"
+   },
+   "end": {
+    "at_phrase": "And the Wall carries Diamond"
+   },
+   "purpose": "Ghost #5185 and #9684, Vandalized #7395.",
+   "visual_kind": "code",
+   "component": "CentRow",
+   "props": {
+    "title": "blacktongue",
+    "subtitle": "Ghost and Vandalized",
+    "cols": 2,
+    "labelsUnder": true,
+    "cents": [
+     {
+      "n": 5185,
+      "caption": "Ghost",
+      "at_phrase": "Two are Ghost Cents"
+     },
+     {
+      "n": 9684,
+      "caption": "Ghost",
+      "at_phrase": "Two are Ghost Cents"
+     },
+     {
+      "n": 7395,
+      "caption": "Vandalized",
+      "at_phrase": "and one is Vandalized"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "k17_diamond",
+   "start": {
+    "at_phrase": "And the Wall carries Diamond"
+   },
+   "end": {
+    "at_phrase": "Find all of the Collector"
+   },
+   "purpose": "Diamond Hands badge, lit; then the whole card.",
+   "visual_kind": "code",
+   "component": "WallBoard",
+   "props": {
+    "wall": "blacktongue-character",
+    "show": "card",
+    "moves": [
+     {
+      "at_phrase": "And the Wall carries Diamond",
+      "target": {
+       "badge": "Diamond"
+      },
+      "mark": true
+     },
+     {
+      "at_phrase": "with little to no selling",
+      "target": {
+       "card": true
+      }
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "k18_collectors",
+   "start": {
+    "at_phrase": "Find all of the Collector"
+   },
+   "end": {
+    "after_phrase": "under Collectors",
+    "plus": 1.5
+   },
+   "purpose": "cents.vision Traits Lab; in to the site menu, then onto Collectors.",
+   "visual_kind": "code",
+   "component": "WallShot",
+   "props": {
+    "src": "vision/traits_lab.png",
+    "width": 2964,
+    "height": 1654,
+    "moves": [
+     {
+      "at_phrase": "Collector Walls on cents",
+      "box": [
+       600,
+       1250,
+       2200,
+       1654
+      ]
+     },
+     {
+      "at_phrase": "under Collectors",
+      "box": [
+       1185,
+       1575,
+       1358,
+       1635
+      ],
+      "mark": true
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "k19_credits",
+   "start": {
+    "after_phrase": "under Collectors",
+    "plus": 1.5
+   },
+   "end": {
+    "at_end": true
+   },
+   "purpose": "End credits.",
+   "visual_kind": "code",
+   "component": "Credits",
+   "props": {
+    "lines": [
+     "Images: Rutherford Chang via cents.vision (site by Dr. Martin Lehnen)",
+     "3D render: 3DCENTS by sinvalli",
+     "Trait definitions and grades: Traits Atlas, CENTS Trait Council",
+     "Quote: Jim Drobnick, “Rutherford Chang. The Record Collector as Artist-Curator” (2023)",
+     "Wall data: cents.vision, 14 Nov 2026",
+     "Interview: MAKES CENTS, @sovrnart on X, 20 November 2024",
+     "Post: @blktng on X, 21 Aug 2026"
+    ],
+    "url": "cents.gallery"
+   }
+  }
+ ]
+}
