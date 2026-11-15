@@ -114,7 +114,7 @@ About 21 shots and 15 distinct plates; no shot over 9 s except the opening card'
 ## 7. Open questions
 
 1. A (about 2:20–2:40) or B (about 2:05–2:20)?
-2. The grey-green patches on Lincoln's cheek, jaw and collar (box V4 in `8820_zoom_plan_v0.1.jpg`): I read them as part of the Notable Verdigris (the Atlas lists "Silver-grey" among verdigris tonings, #1047), and the bright green in the lettering and rim as the clearer part. If you don't see them as verdigris, line 5 drops "with grey-green patches on Lincoln's face".
+2. The grey-green patches on Lincoln's cheek, jaw and collar (box V4 in `8820_zoom_plan_v0.2.jpg`. *Correction, 2026-11-15:* this pointed at `8820_zoom_plan_v0.1.jpg`, which also paints in bright green every pixel a colour test read as green, with no legend, so it looked as if the coin itself had neon green on it. v0.2 shows the untouched photo beside the boxes.): I read them as part of the Notable Verdigris (the Atlas lists "Silver-grey" among verdigris tonings, #1047), and the bright green in the lettering and rim as the clearer part. If you don't see them as verdigris, line 5 drops "with grey-green patches on Lincoln's face".
 3. Benjamin's name: German pronunciation ("BEN-yah-meen") by default, respelled in the voice text only.
 
 ## 8. Build plan, once the script is agreed
