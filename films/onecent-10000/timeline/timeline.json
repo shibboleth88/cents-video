@@ -1,0 +1,711 @@
+{
+ "essay": {
+  "title": "Cent #10000",
+  "subtitle": "Inscription #65987682",
+  "author": "shibboleth",
+  "source": "/mnt/project-files/single-cent-series/10000/10000_proposal_v0.1.md",
+  "version": "v1 (2026-11-21): script v0.1 approved by shibboleth, with one referent fix (line 9) and the series closing form; remotion-video-builder trial"
+ },
+ "_what": "Cent #10000 (1976, no mint mark): Assassin and Notable Verdigris, nothing else. Concept C22 (An open signifier), Reiss; Lippard and Chandler 1968 (D37) as a lens, never Chang's source. Every count from the Sep 2026 trait export. Traits read from the front only.",
+ "shots": [
+  {
+   "shot_id": "s01_open",
+   "start": {
+    "at_start": true
+   },
+   "end": {
+    "at_phrase": "The Cents came with"
+   },
+   "purpose": "Series opening: Cent #10000, the Story time pill, one 3DCENTS turn settling on the front; then the year, where a mint mark would be, the whole face, and the Assassin spot (spot A of 10000_zoom_plan_v0.1.jpg, the only green on the front).",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65987682,
+    "n": 10000,
+    "front": "hires/10000.webp",
+    "spin": {
+     "src": "3dcents/10000-STANDIN-flat-30fps.mp4",
+     "width": 1080,
+     "height": 1920,
+     "frames": 150,
+     "coin": {
+      "cx": 539.5,
+      "cy": 959.5,
+      "d": 776
+     },
+     "credit": "3D render: 3DCENTS by sinvalli",
+     "credit_at_end": true
+    },
+    "kicker": {
+     "text": "Story time",
+     "look": "pill",
+     "hold": 3.4
+    },
+    "moves": [
+     {
+      "at_phrase": "A penny struck in",
+      "box": [
+       0.65,
+       0.61,
+       0.83,
+       0.7
+      ],
+      "mark": true,
+      "dur": 0.9
+     },
+     {
+      "at_phrase": "with no mint mark",
+      "box": [
+       0.67,
+       0.685,
+       0.81,
+       0.765
+      ],
+      "mark": true,
+      "dur": 0.7
+     },
+     {
+      "at_phrase": "carries two traits",
+      "box": null,
+      "dur": 0.9
+     },
+     {
+      "at_phrase": "the rarer is Assassin",
+      "box": [
+       0.35,
+       0.425,
+       0.42,
+       0.495
+      ],
+      "mark": true,
+      "max": 4.0,
+      "dur": 0.9
+     }
+    ],
+    "reads": [
+     {
+      "at_phrase": "A penny struck in",
+      "readout": "1976"
+     },
+     {
+      "at_phrase": "with no mint mark",
+      "readout": "No mint mark",
+      "caption": "generally Philadelphia"
+     },
+     {
+      "at_phrase": "carries two traits",
+      "readout": "Two traits"
+     },
+     {
+      "at_phrase": "the rarer is Assassin",
+      "readout": "Assassin",
+      "caption": "the rarer trait"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s02_mosaic",
+   "start": {
+    "at_phrase": "The Cents came with"
+   },
+   "end": {
+    "at_phrase": "In the words of Steven"
+   },
+   "purpose": "Eighty-one Cents, a 9 x 9 section of media library C001 (the obverse mosaic), each coin cut out onto the stage colour as stage_cents.py does, under 'The Cents came with no traits'. The library file is truncated (no JPEG end marker; the last 0.8% of rows decode grey), so only a section from the middle is used, and nothing claims it is all 10,000 or in number order (a correlation test of cells against fronts was inconclusive).",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "mosaic_section",
+   "props": {
+    "caption": "From a mosaic of Cent fronts",
+    "maxWidth": 732
+   }
+  },
+  {
+   "shot_id": "s03_reiss1",
+   "start": {
+    "at_phrase": "In the words of Steven"
+   },
+   "end": {
+    "at_phrase": "In the Traits Atlas"
+   },
+   "purpose": "Reiss on the community naming the traits (C50 origin), lit word by word: the trait's origin is said before its description, so no property reads as Chang's choice. In on the attribution, out as the card lights (#9344 lesson). #478 quoted a longer passage that contains these two sentences.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65987682,
+    "n": 10000,
+    "front": "hires/10000.webp",
+    "moves": [
+     {
+      "at_phrase": "In the words of Steven",
+      "box": [
+       0.2,
+       0.2,
+       0.8,
+       0.8
+      ],
+      "dur": 2.4
+     },
+     {
+      "at_phrase": "The community therefore",
+      "box": null,
+      "dur": 0.8
+     }
+    ],
+    "quote": {
+     "at_phrase": "The community therefore",
+     "credit": "Steven Reiss, \u201cMateriality and Signification\u201d",
+     "text": "The community therefore began naming the spontaneous variations. Traits like 'Ghost', 'Faceless', or 'Assassin' were born."
+    }
+   }
+  },
+  {
+   "shot_id": "s04_atlas",
+   "start": {
+    "at_phrase": "In the Traits Atlas"
+   },
+   "end": {
+    "at_phrase": "head, neck, or torso"
+   },
+   "purpose": "Traits Atlas, Assassin, on cents.vision (240 px viewport, 3x): the summary sentence highlighted. Control: the sentence with 'bullet' for 'projectile' was refused (SENTENCE NOT FOUND).",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "atlas_assassin",
+   "props": {
+    "caption": "Traits Atlas, Assassin",
+    "maxWidth": 720
+   }
+  },
+  {
+   "shot_id": "s05_examples",
+   "start": {
+    "at_phrase": "head, neck, or torso"
+   },
+   "end": {
+    "at_phrase": "Here it is a single"
+   },
+   "purpose": "The Atlas's own Assassin examples, in its order of the words: #1894 Headshot, #2755 Neck shot, #6595 Bodyshot (assassin.txt). All three are in the 42-Cent pool.",
+   "visual_kind": "code",
+   "component": "CentSet",
+   "props": {
+    "title": "Atlas examples",
+    "ns": [
+     1894,
+     2755,
+     6595
+    ],
+    "readout": "3",
+    "caption": "head, neck and torso",
+    "cols": 2
+   }
+  },
+  {
+   "shot_id": "s06_spot",
+   "start": {
+    "at_phrase": "Here it is a single"
+   },
+   "end": {
+    "at_phrase": "Forty-two Cents carry"
+   },
+   "purpose": "Back to #10000: the ringed zoom on spot A, at the back of Lincoln's neck.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65987682,
+    "n": 10000,
+    "front": "hires/10000.webp",
+    "moves": [
+     {
+      "at_phrase": "Here it is a single",
+      "box": null,
+      "dur": 0.4
+     },
+     {
+      "at_phrase": "single green spot",
+      "box": [
+       0.35,
+       0.425,
+       0.42,
+       0.495
+      ],
+      "mark": true,
+      "max": 4.0,
+      "dur": 0.9
+     }
+    ],
+    "reads": [
+     {
+      "at_phrase": "single green spot",
+      "readout": "Assassin",
+      "caption": "back of the neck"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s07_pool",
+   "start": {
+    "at_phrase": "Forty-two Cents carry"
+   },
+   "end": {
+    "at_phrase": "Two of them were"
+   },
+   "purpose": "All 42 Assassin Cents (Sep 2026 export, counts.py --write-pools; floor 42 seen red), #10000 placed last with the spotlight (#8820 lesson). Five across, each about 134 px.",
+   "visual_kind": "code",
+   "component": "CentScroll",
+   "props": {
+    "title": "Assassin",
+    "ns": [
+     188,
+     222,
+     310,
+     359,
+     633,
+     739,
+     822,
+     1413,
+     1837,
+     1894,
+     2181,
+     2233,
+     2568,
+     2755,
+     2972,
+     3262,
+     3398,
+     3461,
+     3693,
+     3844,
+     4485,
+     4933,
+     5166,
+     5478,
+     5545,
+     5607,
+     5886,
+     6211,
+     6595,
+     6751,
+     7002,
+     7199,
+     7584,
+     7807,
+     8477,
+     8803,
+     8907,
+     9376,
+     9446,
+     9758,
+     9915,
+     10000
+    ],
+    "mark": 10000,
+    "readout": "42",
+    "caption": "Cents with Assassin",
+    "until": "Two of them were",
+    "cols": 5,
+    "spotlight": true
+   }
+  },
+  {
+   "shot_id": "s08_1976",
+   "start": {
+    "at_phrase": "Two of them were"
+   },
+   "end": {
+    "at_phrase": "The second trait is"
+   },
+   "purpose": "The two Assassins struck in 1976 (counts.py): #1413 and #10000.",
+   "visual_kind": "code",
+   "component": "CentSet",
+   "props": {
+    "title": "1976",
+    "ns": [
+     1413,
+     10000
+    ],
+    "readout": "2",
+    "caption": "Assassins struck in 1976",
+    "cols": 2
+   }
+  },
+  {
+   "shot_id": "s09_verdigris",
+   "start": {
+    "at_phrase": "The second trait is"
+   },
+   "end": {
+    "at_phrase": "Cent number twelve fifty-six"
+   },
+   "purpose": "Notable Verdigris, front only. The colour test finds green only in spot A, the Assassin spot itself (user not asked again; the default stated in the thread on 2026-11-21: spot A only).",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65987682,
+    "n": 10000,
+    "front": "hires/10000.webp",
+    "moves": [
+     {
+      "at_phrase": "The second trait is",
+      "box": null,
+      "dur": 0.6
+     },
+     {
+      "at_phrase": "the spot itself is",
+      "box": [
+       0.35,
+       0.425,
+       0.42,
+       0.495
+      ],
+      "mark": true,
+      "max": 4.0,
+      "dur": 0.9
+     }
+    ],
+    "reads": [
+     {
+      "at_phrase": "The second trait is",
+      "readout": "Verdigris",
+      "caption": "Notable"
+     },
+     {
+      "at_phrase": "localised but clearly",
+      "readout": "Notable",
+      "caption": "clearly visible patches"
+     },
+     {
+      "at_phrase": "the spot itself is",
+      "readout": "Verdigris",
+      "caption": "the spot itself"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s10_dissolve",
+   "start": {
+    "at_phrase": "Cent number twelve fifty-six"
+   },
+   "end": {
+    "at_phrase": "An open signifier. Steven"
+   },
+   "purpose": "Template #1256 (1976, no mint mark, Lustrous only; one of 15 such Cents), close to mint state, then the dissolve to #10000 and back on 'As money, both meant exactly one cent'.",
+   "visual_kind": "code",
+   "component": "CentDissolve",
+   "props": {
+    "first": "b",
+    "swaps": [
+     {
+      "at_phrase": "As money, both",
+      "to": "a"
+     },
+     {
+      "at_phrase": "exactly one cent",
+      "to": "b"
+     }
+    ],
+    "a": {
+     "n": 10000,
+     "inscription": 65987682,
+     "front": "hires/10000.webp",
+     "readout": "1976",
+     "caption": "two traits"
+    },
+    "b": {
+     "n": 1256,
+     "inscription": 65909676,
+     "front": "hires/1256.webp",
+     "readout": "1976",
+     "caption": "close to mint state"
+    }
+   }
+  },
+  {
+   "shot_id": "s11_concept",
+   "start": {
+    "at_phrase": "An open signifier. Steven"
+   },
+   "end": {
+    "at_phrase": "Steven Rice again"
+   },
+   "purpose": "Concept C22 on screen, by name.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65987682,
+    "n": 10000,
+    "front": "hires/10000.webp",
+    "concept": {
+     "at_phrase": "An open signifier. Steven",
+     "label": "An open signifier"
+    }
+   }
+  },
+  {
+   "shot_id": "s12_reiss2a",
+   "start": {
+    "at_phrase": "Steven Rice again"
+   },
+   "end": {
+    "at_phrase": "The penny becomes an"
+   },
+   "purpose": "C22, first of Reiss's two adjacent sentences (34 words, so two cards): the value tie, 'a vessel for socially agreed value'.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65987682,
+    "n": 10000,
+    "front": "hires/10000.webp",
+    "moves": [
+     {
+      "at_phrase": "Steven Rice again",
+      "box": [
+       0.25,
+       0.25,
+       0.75,
+       0.75
+      ],
+      "dur": 1.2
+     },
+     {
+      "at_phrase": "Their former economic",
+      "box": null,
+      "dur": 0.8
+     }
+    ],
+    "quote": {
+     "at_phrase": "Their former economic",
+     "credit": "Steven Reiss, \u201cMateriality and Signification\u201d",
+     "text": "Their former economic meaning is unhooked from the object and turned into a vessel for socially agreed value."
+    }
+   }
+  },
+  {
+   "shot_id": "s13_reiss2b",
+   "start": {
+    "at_phrase": "The penny becomes an"
+   },
+   "end": {
+    "at_phrase": "The portrait is Abraham"
+   },
+   "purpose": "C22, the second sentence: 'an open signifier that can point to many signifieds'. The spaced hyphen is the source's, kept on the card; it lights with the word before it.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65987682,
+    "n": 10000,
+    "front": "hires/10000.webp",
+    "quote": {
+     "at_phrase": "The penny becomes an",
+     "credit": "Steven Reiss, \u201cMateriality and Signification\u201d",
+     "text": "The penny becomes an open signifier that can point to many signifieds - artistic, collector, historical, crypto."
+    }
+   }
+  },
+  {
+   "shot_id": "s14_plaque",
+   "start": {
+    "at_phrase": "The portrait is Abraham"
+   },
+   "end": {
+    "at_phrase": "the Assassin's singular"
+   },
+   "purpose": "Media library C047: Victor David Brenner's Lincoln plaque (1809-1865 on its foot), native size, under 'The portrait is Abraham Lincoln, assassinated in 1865'. Picture with words: this relief is the penny's Lincoln, by the cent's designer. True.",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "brenner_plaque",
+   "props": {
+    "caption": "Lincoln plaque by Victor David Brenner, who designed the Lincoln cent",
+    "maxWidth": 640
+   }
+  },
+  {
+   "shot_id": "s15_spot2",
+   "start": {
+    "at_phrase": "the Assassin's singular"
+   },
+   "end": {
+    "at_phrase": "In nineteen sixty-eight"
+   },
+   "purpose": "The spot again under the Atlas's 'singular placement transforms decay into narrative': one historical reading of the Council's name, offered after Reiss's 'historical', said as the Atlas's words.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65987682,
+    "n": 10000,
+    "front": "hires/10000.webp",
+    "moves": [
+     {
+      "at_phrase": "the Assassin's singular",
+      "box": [
+       0.35,
+       0.425,
+       0.42,
+       0.495
+      ],
+      "mark": true,
+      "max": 4.0,
+      "dur": 0.9
+     }
+    ],
+    "reads": [
+     {
+      "at_phrase": "the Assassin's singular",
+      "readout": "Assassin",
+      "caption": "decay into narrative"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s16_d37",
+   "start": {
+    "at_phrase": "In nineteen sixty-eight"
+   },
+   "end": {
+    "at_phrase": "To look at"
+   },
+   "purpose": "QUOTE_BANK D37, Lippard and Chandler 1968, p. 273 of the 1971 reprint: a lens, said 'long before CENTS' (About CENTS? No). The card keeps '(rarely)'; the voice reads it as an aside.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65987682,
+    "n": 10000,
+    "front": "hires/10000.webp",
+    "moves": [
+     {
+      "at_phrase": "In nineteen sixty-eight",
+      "box": [
+       0.2,
+       0.2,
+       0.8,
+       0.8
+      ],
+      "dur": 2.4
+     },
+     {
+      "at_phrase": "What something looks like",
+      "box": null,
+      "dur": 0.8
+     }
+    ],
+    "quote": {
+     "at_phrase": "What something looks like",
+     "credit": "Lucy Lippard and John Chandler, 1968",
+     "text": "What something looks like and what it is about may be complementary but not necessarily (rarely) identical."
+    }
+   }
+  },
+  {
+   "shot_id": "s17_look",
+   "start": {
+    "at_phrase": "To look at"
+   },
+   "end": {
+    "at_phrase": "What it means, and"
+   },
+   "purpose": "The whole front under 'To look at, Cent #10000 is a 1976 penny with one green spot.' No rings.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 65987682,
+    "n": 10000,
+    "front": "hires/10000.webp",
+    "moves": [
+     {
+      "at_phrase": "To look at",
+      "box": null,
+      "dur": 0.6
+     }
+    ],
+    "reads": [
+     {
+      "at_phrase": "To look at",
+      "readout": "1976",
+      "caption": "one green spot"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s18_makes",
+   "start": {
+    "at_phrase": "What it means, and"
+   },
+   "end": {
+    "after_phrase": "keep deciding.",
+    "plus": 0.4
+   },
+   "purpose": "Media library C048, the MAKES CENTS interview-cover montage, under 'the people who collect CENTS keep deciding'. Picture with words: these are people of the collection; an ongoing process, not a conclusion (CENTS has no ending).",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "makes_cents",
+   "props": {
+    "caption": "MAKES CENTS interviews",
+    "maxWidth": 720
+   }
+  },
+  {
+   "shot_id": "s19_card",
+   "start": {
+    "after_phrase": "keep deciding.",
+    "plus": 0.4
+   },
+   "end": {
+    "after_phrase": "a great Cent.",
+    "plus": 1.133
+   },
+   "purpose": "Closing card, one 3DCENTS turn; 'Cent #10000, a great Cent.' spoken over it (series ending). Exactly 150 frames on take 2 (frames 4057 to 4207): plus 1.133 s after 'a great Cent.'.",
+   "visual_kind": "code",
+   "component": "CentSpin",
+   "props": {
+    "inscription": 65987682,
+    "n": 10000,
+    "clip": {
+     "src": "3dcents/10000-STANDIN-flat-30fps.mp4",
+     "width": 1080,
+     "height": 1920,
+     "frames": 150,
+     "coin": {
+      "cx": 539.5,
+      "cy": 959.5,
+      "d": 776
+     },
+     "credit": "3D render: 3DCENTS by sinvalli",
+     "credit_at_end": true
+    },
+    "reads": [
+     {
+      "readout": "1976"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s20_credits",
+   "start": {
+    "after_phrase": "a great Cent.",
+    "plus": 1.133
+   },
+   "end": {
+    "at_end": true
+   },
+   "purpose": "End credits (brief \u00a74): images, 3DCENTS, the Atlas via cents.vision (it supplies the screenshot), each quote in full form. Rehearsal: the Reiss title on one line wrapped to four rows and SafeText refused the frame, so it is split over two lines (#8820 lesson).",
+   "visual_kind": "code",
+   "component": "Credits",
+   "props": {
+    "lines": [
+     "Images: Rutherford Chang; cents.gallery media library",
+     "3D render: 3DCENTS by sinvalli",
+     "Trait names and definitions: Traits Atlas, CENTS Trait Council, via cents.vision",
+     "Quotes: Steven Reiss, \u201cMateriality and Signification:",
+     "Rutherford Chang\u2019s CENTS and Semiotics\u201d",
+     "Lucy R. Lippard and John Chandler, \u201cThe Dematerialization of Art\u201d, 1968"
+    ],
+    "url": "cents.gallery"
+   }
+  }
+ ]
+}

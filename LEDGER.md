@@ -28,6 +28,20 @@ row moves to `LEDGER_ARCHIVE.md` verbatim in the same edit that supersedes it.
   consonant's closure does not count), never infer it from the text. The
   #1264 builder falls back to the quiet run and prints which holds used it.
 
+- **When two subjects share the passage, "the" is a pronoun.** A referent pass
+  that looks for stray pronouns ("it", "its", "this one") passes a noun phrase
+  with a definite article, and in a passage about two things that phrase points
+  wherever the listener puts it. *Bitten twice:* #1328 v2, "this one" after a
+  comparison Cent could point at the wrong Cent (series brief); #10000 v0.1,
+  "Beside Cent #1256, struck the same year and close to mint state, the portrait
+  is unmarked" has no subject, so "the portrait" could be #10000's, which is the
+  one with the spot. My v0.1 referent pass had checked pronouns only; it was
+  caught on rereading for the build, before voicing (2026-11-21). **Separating
+  observation:** in any passage that names two Cents, every phrase about a Cent
+  either carries its number or is the subject named in that same sentence. Fixed
+  as "Cent #1256 was struck the same year, and is close to mint state. Its
+  portrait is unmarked."
+
 ## Candidates — bitten once
 
 - **A field I can set is not a sign-off I hold.** `approved: true` on an
@@ -181,6 +195,26 @@ them was reasonable.
   frame 870, green after the fix. *Separating observation:* `npx tsc --noEmit`
   over the whole project after any edit to `src/style/`, not a render of one
   film.
+
+- **A copy that still names its source acts on the source.** A per-film script
+  copied for a new film carried its source film's path in a constant. The patch
+  that retargeted it raised an error, the next command ran the copy anyway, and
+  it rebuilt the SOURCE film's captions (#10000, copying #8820's
+  `build_cues.py`, 2026-11-21). Harmless only because the inputs were unchanged:
+  `git status` showed no diff in `films/onecent-8820/`. *Separating
+  observation:* grep the copy for the source film's slug before its first run,
+  or have the script find its film from its own path
+  (`Path(__file__).parents[1]`, as `make_standin.py` does), so a copy cannot
+  point anywhere else.
+
+- **A file whose size matches its catalogue is not a complete file.** Media
+  library C001 (the 26,000 px obverse mosaic) downloaded at exactly the
+  catalogue's byte count, which reads as a verified copy; the library's own file
+  is truncated. It ends on a JPEG restart marker (`ff d3`), not the end marker
+  (`ff d9`), and decoding it fills the last 0.8% of rows with flat grey
+  (2026-11-21, #10000). *Separating observation:* decode the whole file (PIL
+  raises "image file is truncated" unless told to tolerate it) or check the end
+  marker; a size check only compares two copies of the same damage.
 
 ## Refuted — killed by a measurement, do not re-investigate
 
