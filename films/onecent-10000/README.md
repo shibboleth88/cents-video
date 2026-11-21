@@ -60,6 +60,16 @@ no render is delivered while any shot names a STANDIN file. Only the user approv
   2. The mosaic section at 9 x 11 came out height-limited, each coin about 68 px. Now 9 x 9 at 732 px,
      about 81 px a coin.
   Stills on the real take 2 timing (37 key moments): all render, none refused.
+- **Full rehearsal render, stand-in turn, 2026-11-21.** The whole captioned film on take 2 with the flat
+  STAND-IN turn at the open and close (not v1; never to be published). Copied to
+  `/mnt/project-files/single-cent-series/10000/rehearsal/one-cent-10000_rehearsal_STAND-IN-turn.mp4` with
+  its `.srt` (stream MD5s of the two copies equal) so the cut can be reviewed while the export is pending.
+  Delivery check on it (Collector Wall brief §5): h264 1080x1920, 30/1, 4376 frames, 145.88 s, AAC; decodes
+  end to end with no errors; first frame YMAX 255 (the turn, not black); 20 black dips of 0.13 to 0.6 s,
+  19 at the 19 shot boundaries (resolved by `resolveShots`) and one the end fade (last 0.13 s, last frame
+  YMAX 13); one frozen run, 141.5 to 145.6 s, the still credits card. Closing card 135.23 to 140.23 s,
+  150 frames. Audio against `public/vo.wav` (equal to `audio/vo.wav`): best lag 0 ms, correlation 1.000
+  (control, shifted 0.5 s: 0.000); -17.5 LUFS integrated. v1 repeats these checks after the turn is swapped.
 - **Atlas.** `script/atlas_shoot.cjs` (renamed from #8820's `.js`: the repo's package.json makes `.js`
   an ES module, so `require` failed). Assassin entry shot at a 240 px viewport, 3x, summary sentence
   highlighted, cropped to whole lines; control with "bullet" for "projectile" refused. The entry names
