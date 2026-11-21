@@ -216,6 +216,19 @@ them was reasonable.
   raises "image file is truncated" unless told to tolerate it) or check the end
   marker; a size check only compares two copies of the same damage.
 
+- **A recorded "can't" is a claim too, and it ages.** A note from 2026-10-25
+  said the container's headless Chromium had no H.264 encoder, so 3DCENTS turns
+  had to come from the user's Mac. The #10000 thread (2026-11-21) read that,
+  built the whole film around a stand-in turn, and asked the user twice for the
+  export. When the user asked "are you able to... if not, why not?", one run of
+  the site's own MP4 button produced the exact file in 17 minutes. Part of the
+  old claim may have come from probing the wrong context: on `about:blank`
+  there is no `VideoEncoder` at all (WebCodecs needs a secure context), while
+  on the site's page `isConfigSupported` says yes. My own first probe repeated
+  that error. *Separating observation:* before routing work around a recorded
+  limitation, run the one cheap test that would show it is still true, in the
+  subject's own context (the real page, not a blank one).
+
 ## Refuted — killed by a measurement, do not re-investigate
 
 - *"The left-band safe-area failure is a mispositioned element."* **Refuted** by
