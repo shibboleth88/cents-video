@@ -1,0 +1,90 @@
+{
+ "image": "cents.vision frontswebp/8820.webp, 1050x1050",
+ "coin_bbox_px": [
+  95,
+  93,
+  958,
+  956
+ ],
+ "red_pins_user_2026-11-15": [
+  {
+   "px": [
+    603,
+    480
+   ],
+   "frac": [
+    0.5743,
+    0.4571
+   ]
+  },
+  {
+   "px": [
+    624,
+    514
+   ],
+   "frac": [
+    0.5943,
+    0.4895
+   ]
+  },
+  {
+   "px": [
+    730,
+    526
+   ],
+   "frac": [
+    0.6952,
+    0.501
+   ]
+  },
+  {
+   "px": [
+    858,
+    628
+   ],
+   "frac": [
+    0.8171,
+    0.5981
+   ]
+  }
+ ],
+ "R_union_box_px": [
+  543,
+  420,
+  918,
+  688
+ ],
+ "R_union_box_frac": [
+  0.5171,
+  0.4,
+  0.8743,
+  0.6552
+ ],
+ "note": "Red pins converted from the user's comments on 8820_zoom_plan_v0.2.jpg (2130x1140; right panel at x+1080, y+90, scale 1:1). V boxes are Claude's reading; V4 (face patches) confirmed as verdigris by the user, 2026-11-15 00:19Z.",
+ "verdigris_boxes_px": {
+  "V1 lettering": [
+   220,
+   120,
+   600,
+   300
+  ],
+  "V2 LIBERTY": [
+   130,
+   520,
+   420,
+   620
+  ],
+  "V3 rim": [
+   95,
+   240,
+   230,
+   760
+  ],
+  "V4 face patches": [
+   400,
+   280,
+   640,
+   620
+  ]
+ }
+}
