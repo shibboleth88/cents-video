@@ -1,5 +1,5 @@
 import React from "react";
-import { Easing, Freeze, Img, OffthreadVideo, Sequence, interpolate, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
+import { Easing, Freeze, Img, OffthreadVideo, Sequence, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import { EASE, useShotFade } from "./motion";
 import { Imagery, SafeText } from "./Safe";
 import { findPhrase, type Alignment } from "../lib/timeline";
@@ -85,10 +85,70 @@ const PlayPoster: React.FC = () => {
   );
 };
 
+/**
+ * A playful die-cut sticker for the opening (shibboleth, 2026-11-25: "a kind of emoji or sticker thing ... like
+ * one might see on tiktok ... something playful"). Drawn here, not an emoji font, so it looks the same on every
+ * machine (the fonts.ts rule). Cartoon eyes and a short line on a cream sticker with a white die-cut edge. It pops
+ * on once play is pressed, the eyes glance down at the coin and blink, it bobs while the Cent turns, and it pops
+ * off just before the camera moves in, so "look closer" is answered by the camera.
+ */
+const Eyes: React.FC<{ f: number }> = ({ f }) => {
+  // pupils: at the viewer, then down and to the right at the coin, then back up
+  const gx = interpolate(f, [14, 22, 92, 100], [0, 7, 7, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  const gy = interpolate(f, [14, 22, 92, 100], [0, 9, 9, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  const lid = f >= 58 && f < 64 ? 0.12 : 1;   // one blink
+  const eye = (cx: number) => (
+    <g transform={`translate(${cx} 34) scale(1 ${lid}) translate(${-cx} -34)`}>
+      <ellipse cx={cx} cy={34} rx={20} ry={27} fill="#ffffff" stroke={L.bg} strokeWidth={5} />
+      <circle cx={cx + gx} cy={36 + gy} r={10} fill={L.bg} />
+      <circle cx={cx + gx + 4} cy={32 + gy} r={3.4} fill="#ffffff" />
+    </g>
+  );
+  return <svg width={128} height={93} viewBox="0 0 96 70" style={{ display: "block" }}>{eye(25)}{eye(71)}</svg>;
+};
+
+const Sticker: React.FC<{ text: string; from: number; to: number }> = ({ text, from, to }) => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  if (frame < from || frame >= to) return null;
+  const f = frame - from;
+  const pop = spring({ frame: f, fps, config: { damping: 9, stiffness: 160, mass: 0.7 } });
+  const off = interpolate(frame, [to - 9, to], [1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.in(Easing.back(2)) });
+  const k = 0.04 + 0.96 * pop * off;   // never 0: the safe-area gate measures every frame
+  const rot = -7 + (1 - pop) * -16 + Math.sin(f / 11) * 1.6 + (1 - off) * 25;
+  const bob = Math.sin(f / 9) * 4;
+  // little copper sparks that fly out as it lands
+  const spark = interpolate(f, [2, 16], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.out(Easing.cubic) });
+  return (
+    <div style={{ position: "absolute", left: 470 - 330, width: 660, top: 336 + bob, display: "flex", justifyContent: "center",
+                  transform: `rotate(${rot}deg) scale(${k})`, transformOrigin: "50% 60%" }}>
+      {spark > 0 && spark < 1 ? (
+        <Imagery>
+          <svg width={720} height={300} style={{ position: "absolute", left: -30, top: -70, overflow: "visible" }}>
+            {[[-1, -0.6], [-0.9, 0.5], [1, -0.7], [0.95, 0.45], [0.1, -1]].map(([dx, dy], i) => {
+              const x = 360 + dx! * (250 + 100 * spark), y = 150 + dy! * (85 + 60 * spark);
+              return <path key={i} transform={`translate(${x} ${y}) scale(${2.2 * (1 - spark)})`}
+                           d="M0 -16 L4 -4 L16 0 L4 4 L0 16 L-4 4 L-16 0 L-4 -4 Z" fill={i % 2 ? L.ink : L.hi} />;
+            })}
+          </svg>
+        </Imagery>
+      ) : null}
+      <div style={{ display: "flex", alignItems: "center", gap: 14, padding: "14px 38px 18px 24px", borderRadius: 999,
+                    background: L.ink, border: "11px solid #ffffff",
+                    boxShadow: "0 10px 24px rgba(0,0,0,0.55), 0 2px 0 rgba(0,0,0,0.25)" }}>
+        <Eyes f={f} />
+        <SafeText role="label" fontSize={72} maxLines={2} color={L.bg}
+                  style={{ ...fraunces(100, 72), fontVariationSettings: '"opsz" 72, "SOFT" 100, "WONK" 1', fontStyle: "italic",
+                           fontWeight: 700, lineHeight: 1.1, whiteSpace: "nowrap" }}>{text}</SafeText>
+      </div>
+    </div>
+  );
+};
+
 export const StoryOpen: React.FC<Anchored & {
-  n: number; inscription: number; front: string; spin: Clip; moves?: Move[]; reads?: Read[];
+  n: number; inscription: number; front: string; spin: Clip; moves?: Move[]; reads?: Read[]; sticker?: string;
 }> = (props) => {
-  const { n, inscription, front, spin, moves = [], reads = [], alignment, shotStartFrame } = props;
+  const { n, inscription, front, spin, moves = [], reads = [], sticker, alignment, shotStartFrame } = props;
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const fade = useShotFade();
@@ -178,6 +238,7 @@ export const StoryOpen: React.FC<Anchored & {
         ) : null}
       </Imagery>
       <PlayPoster />
+      {sticker ? <Sticker text={sticker} from={PRESS_END + 8} to={turned - 6} /> : null}
 
       {/* name below the coin, a copper rule, then the inscription line, which the reads replace */}
       <div style={{ position: "absolute", left: 104, width: 732, top: 1062, textAlign: "center" }}>
