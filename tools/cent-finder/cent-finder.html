@@ -1,0 +1,533 @@
+<title>Cent Finder</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a working bench. Left, the photo with the coin circle you can move; right, the verdict card. Batch list below. */
+:root {
+  --bg: #f3f5f4;
+  --surface: #ffffff;
+  --ink: #17201d;
+  --muted: #5b6863;
+  --line: #d8dfdc;
+  --copper: #a2552c;
+  --copper-soft: #f1e2d8;
+  --verdigris: #2f7d6a;
+  --ok-bg: #dcefe8; --ok-fg: #1f5e4f;
+  --warn-bg: #f6ead0; --warn-fg: #7a5410;
+  --no-bg: #ece6e6; --no-fg: #6b3b3b;
+  --display: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --radius: 10px;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #111614; --surface: #1a211e; --ink: #e8eeeb; --muted: #9aa8a2; --line: #2c3632;
+  --copper: #e08a5a; --copper-soft: #3a261b; --verdigris: #5fbfa6;
+  --ok-bg: #173a31; --ok-fg: #9fe0cc; --warn-bg: #3b2f14; --warn-fg: #f0cf86; --no-bg: #3a2526; --no-fg: #f0b9b9;
+  color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #111614; --surface: #1a211e; --ink: #e8eeeb; --muted: #9aa8a2; --line: #2c3632;
+  --copper: #e08a5a; --copper-soft: #3a261b; --verdigris: #5fbfa6;
+  --ok-bg: #173a31; --ok-fg: #9fe0cc; --warn-bg: #3b2f14; --warn-fg: #f0cf86; --no-bg: #3a2526; --no-fg: #f0b9b9;
+  color-scheme: dark }
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-block: 28px 48px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 22px; }
+header { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 10px 24px; }
+h1 { font-family: var(--display); font-weight: 600; font-size: clamp(1.7rem, 4vw, 2.3rem); letter-spacing: -0.01em; margin: 0; line-height: 1.1; }
+h1 span { color: var(--copper); }
+.lede { margin: 6px 0 0; color: var(--muted); max-width: 60ch; }
+.status { font-family: var(--mono); font-size: 0.8rem; color: var(--muted); }
+.status b { color: var(--ink); font-weight: 500; }
+.bench { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 22px; align-items: start; }
+@media (max-width: 820px) { .bench { grid-template-columns: minmax(0, 1fr); } }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; display: grid; gap: 14px; min-width: 0; }
+.drop { display: grid; place-items: center; text-align: center; gap: 4px; border: 1.5px dashed var(--line); border-radius: 8px; padding: 18px 12px; cursor: pointer; transition: border-color .15s, background .15s; }
+.drop:hover, .drop.over { border-color: var(--copper); background: var(--copper-soft); }
+.drop:focus-within { outline: 2px solid var(--copper); outline-offset: 2px; }
+.drop strong { font-family: var(--display); font-weight: 600; font-size: 1.05rem; }
+.drop small { color: var(--muted); }
+.drop input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.stage { position: relative; background: repeating-conic-gradient(var(--bg) 0 25%, var(--surface) 0 50%) 0 0/18px 18px; border-radius: 8px; border: 1px solid var(--line); overflow: hidden; display: grid; place-items: center; min-height: 220px; touch-action: none; }
+.stage canvas { display: block; max-width: 100%; height: auto; cursor: grab; }
+.stage canvas.dragging { cursor: grabbing; }
+.controls { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; }
+.controls label { font-size: 0.85rem; color: var(--muted); display: flex; align-items: center; gap: 8px; }
+input[type=range] { accent-color: var(--copper); width: 160px; max-width: 100%; }
+button { font: inherit; font-size: 0.88rem; font-weight: 500; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 7px; padding: 6px 12px; cursor: pointer; }
+button:hover { border-color: var(--copper); }
+button:focus-visible { outline: 2px solid var(--copper); outline-offset: 2px; }
+.hint { font-size: 0.82rem; color: var(--muted); margin: 0; }
+.verdict { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+.pill { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 3px 9px; border-radius: 99px; }
+.pill.ok { background: var(--ok-bg); color: var(--ok-fg); }
+.pill.warn { background: var(--warn-bg); color: var(--warn-fg); }
+.pill.no { background: var(--no-bg); color: var(--no-fg); }
+.pill.wait { background: var(--line); color: var(--muted); }
+.why { font-size: 0.85rem; color: var(--muted); }
+.centno { font-family: var(--display); font-weight: 600; font-size: clamp(2.2rem, 6vw, 3.1rem); line-height: 1; letter-spacing: -0.02em; margin: 2px 0 0; font-variant-numeric: tabular-nums; }
+.centno small { font-size: 0.42em; color: var(--muted); font-weight: 500; letter-spacing: 0; margin-right: 4px; }
+.pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.pair figure { margin: 0; display: grid; gap: 6px; justify-items: center; }
+.pair figcaption { font-size: 0.78rem; color: var(--muted); }
+.coin { width: 100%; max-width: 170px; aspect-ratio: 1; border-radius: 50%; background-color: var(--bg); background-repeat: no-repeat; background-size: 1000% 1000%; }
+canvas.coin { display: block; }
+.meta { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 4px 14px; margin: 0; font-size: 0.9rem; }
+.meta dt { color: var(--muted); }
+.meta dd { margin: 0; font-variant-numeric: tabular-nums; }
+.mono { font-family: var(--mono); font-size: 0.85rem; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 0.8rem; padding: 2px 9px; border-radius: 99px; border: 1px solid var(--line); background: var(--bg); }
+.chip.patina { border-color: var(--verdigris); }
+.chip.none { color: var(--muted); }
+.links { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 0.88rem; }
+a { color: var(--copper); text-underline-offset: 2px; }
+h2 { font-family: var(--display); font-weight: 600; font-size: 0.95rem; margin: 0; }
+.others { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+.other { display: grid; gap: 4px; justify-items: center; text-align: center; background: none; border: 1px solid transparent; padding: 6px 4px; }
+.other:hover { border-color: var(--line); }
+.other .coin { max-width: 76px; }
+.other span { font-size: 0.8rem; font-variant-numeric: tabular-nums; }
+.other em { font-style: normal; font-size: 0.72rem; color: var(--muted); font-family: var(--mono); }
+.batch table { width: 100%; border-collapse: collapse; font-size: 0.88rem; font-variant-numeric: tabular-nums; }
+.batch th, .batch td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); vertical-align: middle; }
+.batch th { font-weight: 500; color: var(--muted); font-size: 0.78rem; letter-spacing: 0.04em; text-transform: uppercase; }
+.batch tr[data-i] { cursor: pointer; }
+.batch tr[data-i]:hover td { background: var(--bg); }
+.batch td.file { max-width: 260px; overflow-wrap: anywhere; }
+.tablewrap { overflow-x: auto; }
+.batchhead { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px; }
+.about { color: var(--muted); font-size: 0.85rem; max-width: 75ch; display: grid; gap: 6px; }
+.about p { margin: 0; }
+.example { font-size: 0.78rem; color: var(--muted); }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Cent <span>Finder</span></h1>
+      <p class="lede">Drop a photo or screenshot of a Cent's obverse. It is compared with all 10,000 Cents in CENTS and the closest match is shown with its traits.</p>
+    </div>
+    <div class="status" id="status" aria-live="polite">Loading the index…</div>
+  </header>
+
+  <div class="bench">
+    <section class="panel" aria-label="Your image">
+      <label class="drop" id="drop" for="file">
+        <strong>Drop images here, or choose files</strong>
+        <small>You can also paste a screenshot (⌘V or Ctrl+V). Several images at once make a batch list.</small>
+        <input type="file" id="file" accept="image/*" multiple>
+      </label>
+      <div class="stage" id="stage"><canvas id="view" width="10" height="10" aria-label="Your image with the coin circle"></canvas></div>
+      <div class="controls">
+        <label for="size">Circle size <input type="range" id="size" min="20" max="200" value="100"></label>
+        <button type="button" id="auto">Find the coin again</button>
+      </div>
+      <p class="hint">The copper circle marks the coin the finder is reading. If it's off, drag it into place and set its size; the result updates as you go.</p>
+      <p class="example" id="example">Example loaded: the photo you sent on 24 November 2026.</p>
+    </section>
+
+    <section class="panel" aria-label="Result" id="result" aria-live="polite">
+      <div class="verdict"><span class="pill wait" id="pill">Waiting</span><span class="why" id="why">Loading the index of 10,000 obverses.</span></div>
+      <p class="centno" id="centno"><small>CENTS</small>#—</p>
+      <div class="pair">
+        <figure><canvas class="coin" id="yours" width="240" height="240" aria-label="Your coin, cropped"></canvas><figcaption>Your image</figcaption></figure>
+        <figure><div class="coin" id="match" role="img" aria-label="Matched Cent"></div><figcaption id="matchcap">Matched Cent</figcaption></figure>
+      </div>
+      <dl class="meta">
+        <dt>Year</dt><dd id="year">—</dd>
+        <dt>Mint mark</dt><dd id="mint">—</dd>
+        <dt>Similarity</dt><dd class="mono" id="score">—</dd>
+        <dt>Inscription</dt><dd class="mono" id="insc">—</dd>
+      </dl>
+      <div class="chips" id="chips"></div>
+      <div class="links" id="links"></div>
+      <h2>Next closest</h2>
+      <div class="others" id="others"></div>
+    </section>
+  </div>
+
+  <section class="panel batch" id="batch" hidden>
+    <div class="batchhead"><h2 id="batchtitle">Batch</h2><button type="button" id="copy">Copy results</button></div>
+    <div class="tablewrap"><table><thead><tr><th>Image</th><th>Cent</th><th>Result</th><th>Year</th><th>Similarity</th></tr></thead><tbody id="rows"></tbody></table></div>
+  </section>
+
+  <section class="about">
+    <p><b>How it reads a photo.</b> It finds the coin's circle, crops to it, evens out brightness and colour cast, and reduces the face to a 16 × 16 colour fingerprint. That is compared with the same fingerprint of all 10,000 obverses, at five small rotations. Every Cent's patina is different, so the right one stands well clear of the rest.</p>
+    <p><b>How far to trust it.</b> Tested on 118 Cents from cents.vision and the Instagram set, each in ten kinds of copy (original, heavy JPEG, 120 px, dark and light screenshots, tight crop, 4° rotation, colour cast with blur, phone-style with JPEG, black background). The right Cent came first in 1,179 of 1,180 trials and second in the other. "Match" was shown 1,098 times and was right every time. With the true Cent removed from the index, "Match" never appeared in 1,180 trials.</p>
+    <p><b>What it can't do.</b> Only obverses are indexed, so a reverse will not match. A brand-new photo of a coin, under different light, is a harder problem than a copy of an official image and has not been tested. Images stay in your browser; nothing is uploaded.</p>
+  </section>
+</div>
+
+<script>
+(() => {
+'use strict';
+const N = 10000, NPIX = 148, D = NPIX * 3, ROTS = [0, -5, 5, -10, 10];
+const MATCH_SCORE = 0.86, MATCH_GAP = 0.08, CHECK_SCORE = 0.75;
+const $ = id => document.getElementById(id);
+
+// pixel positions inside the coin face on a 16 x 16 grid (row-major), 148 of them
+const CIRC = [];
+for (let y = 0; y < 16; y++) for (let x = 0; x < 16; x++) if ((x - 7.5) ** 2 + (y - 7.5) ** 2 <= (7.5 * 0.92) ** 2) CIRC.push(y * 16 + x);
+
+let IDX = null, MEAN = null, DATA = null;
+
+function chanNorm(px) { // px: Float32Array(NPIX*3) pixel-major -> per-channel z-score
+  const out = new Float32Array(D);
+  for (let c = 0; c < 3; c++) {
+    let m = 0; for (let p = 0; p < NPIX; p++) m += px[p * 3 + c]; m /= NPIX;
+    let v = 0; for (let p = 0; p < NPIX; p++) { const d = px[p * 3 + c] - m; v += d * d; }
+    const sd = Math.sqrt(v / NPIX) + 1e-3;
+    for (let p = 0; p < NPIX; p++) out[p * 3 + c] = (px[p * 3 + c] - m) / sd;
+  }
+  return out;
+}
+function finish(v) {
+  let s = 0; for (let i = 0; i < D; i++) { v[i] -= MEAN[i]; s += v[i] * v[i]; }
+  s = 1 / (Math.sqrt(s) + 1e-9); for (let i = 0; i < D; i++) v[i] *= s;
+  return v;
+}
+
+async function loadIndex() {
+  // index.png: one row per Cent, 148 face pixels of RGB, stored losslessly
+  const [png, js] = await Promise.all([
+    fetch('index.png').then(r => { if (!r.ok) throw new Error('index ' + r.status); return r.blob(); }),
+    fetch('cents.json').then(r => { if (!r.ok) throw new Error('cents ' + r.status); return r.json(); })
+  ]);
+  const bmp = await createImageBitmap(png, { colorSpaceConversion: 'none', premultiplyAlpha: 'none' });
+  if (bmp.width !== NPIX || bmp.height !== N) throw new Error('index size ' + bmp.width + 'x' + bmp.height);
+  const ic = document.createElement('canvas'); ic.width = NPIX; ic.height = N;
+  const ig = ic.getContext('2d', { willReadFrequently: true }); ig.drawImage(bmp, 0, 0);
+  const rgba = ig.getImageData(0, 0, NPIX, N).data;
+  const raw = new Uint8Array(N * D);
+  for (let i = 0, j = 0; i < rgba.length; i += 4) { raw[j++] = rgba[i]; raw[j++] = rgba[i + 1]; raw[j++] = rgba[i + 2]; }
+  let sum = 0; for (let i = 0; i < raw.length; i++) sum += raw[i];
+  if (sum !== 504037788) throw new Error('index checksum ' + sum);
+  DATA = js;
+  IDX = new Float32Array(N * D); MEAN = new Float32Array(D);
+  const px = new Float32Array(D);
+  for (let i = 0; i < N; i++) {
+    for (let k = 0; k < D; k++) px[k] = raw[i * D + k];
+    const v = chanNorm(px); IDX.set(v, i * D);
+    for (let k = 0; k < D; k++) MEAN[k] += v[k];
+  }
+  for (let k = 0; k < D; k++) MEAN[k] /= N;
+  for (let i = 0; i < N; i++) {
+    let s = 0; const o = i * D;
+    for (let k = 0; k < D; k++) { IDX[o + k] -= MEAN[k]; s += IDX[o + k] ** 2; }
+    s = 1 / (Math.sqrt(s) + 1e-9); for (let k = 0; k < D; k++) IDX[o + k] *= s;
+  }
+}
+
+// ---------- finding the coin ----------
+function components(mask, w, h) {
+  const lab = new Int32Array(w * h), out = []; let cur = 0; const stack = [];
+  for (let i = 0; i < w * h; i++) {
+    if (!mask[i] || lab[i]) continue;
+    cur++; lab[i] = cur; stack.push(i);
+    let n = 0, x1 = w, y1 = h, x2 = -1, y2 = -1;
+    while (stack.length) {
+      const j = stack.pop(), y = (j / w) | 0, x = j - y * w; n++;
+      if (x < x1) x1 = x; if (x > x2) x2 = x; if (y < y1) y1 = y; if (y > y2) y2 = y;
+      if (y + 1 < h && mask[j + w] && !lab[j + w]) { lab[j + w] = cur; stack.push(j + w); }
+      if (y > 0 && mask[j - w] && !lab[j - w]) { lab[j - w] = cur; stack.push(j - w); }
+      if (x + 1 < w && mask[j + 1] && !lab[j + 1]) { lab[j + 1] = cur; stack.push(j + 1); }
+      if (x > 0 && mask[j - 1] && !lab[j - 1]) { lab[j - 1] = cur; stack.push(j - 1); }
+    }
+    out.push([n, x1, y1, x2, y2]);
+  }
+  return out.sort((a, b) => b[0] - a[0]).slice(0, 6);
+}
+function median(a) { const s = Float64Array.from(a).sort(); const m = s.length >> 1; return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2; }
+
+function candidateDiscs(src, rx, ry, rw, rh, depth) {
+  const s = 200 / Math.max(rw, rh);
+  const w = Math.max(1, Math.round(rw * s)), h = Math.max(1, Math.round(rh * s));
+  const c = document.createElement('canvas'); c.width = w; c.height = h;
+  const g = c.getContext('2d', { willReadFrequently: true }); g.imageSmoothingEnabled = true; g.imageSmoothingQuality = 'high';
+  g.drawImage(src, rx, ry, rw, rh, 0, 0, w, h);
+  const d = g.getImageData(0, 0, w, h).data;
+  const bR = [], bG = [], bB = [];
+  const push = i => { bR.push(d[i]); bG.push(d[i + 1]); bB.push(d[i + 2]); };
+  for (let x = 0; x < w; x++) { push(x * 4); push(((h - 1) * w + x) * 4); }
+  for (let y = 0; y < h; y++) { push(y * w * 4); push((y * w + w - 1) * 4); }
+  const bg = [median(bR), median(bG), median(bB)];
+  const mask = new Uint8Array(w * h);
+  for (let i = 0; i < w * h; i++) mask[i] = (Math.abs(d[i * 4] - bg[0]) + Math.abs(d[i * 4 + 1] - bg[1]) + Math.abs(d[i * 4 + 2] - bg[2])) > 40 ? 1 : 0;
+  let out = [];
+  for (const [n, x1, y1, x2, y2] of components(mask, w, h)) {
+    const bw = x2 - x1 + 1, bh = y2 - y1 + 1;
+    if (n < 0.01 * h * w || Math.min(bw, bh) < 12) continue;
+    const aspect = bw / bh, fill = n / (bw * bh);
+    const cx = (x1 + x2 + 1) / 2 / s + rx, cy = (y1 + y2 + 1) / 2 / s + ry;
+    if (aspect >= 0.85 && aspect <= 1.18 && fill >= 0.6 && fill <= 0.9) out.push([cx, cy, Math.max(bw, bh) / 2 / s]);
+    else if (fill > 0.9 && depth < 2) {
+      const m = Math.ceil(1.5 / s);
+      const bx1 = Math.trunc(x1 / s) + m, by1 = Math.trunc(y1 / s) + m, bx2 = Math.trunc((x2 + 1) / s) - m, by2 = Math.trunc((y2 + 1) / s) - m;
+      if (bx2 - bx1 > 24 && by2 - by1 > 24) out = out.concat(candidateDiscs(src, rx + bx1, ry + by1, bx2 - bx1, by2 - by1, depth + 1));
+    }
+  }
+  if (depth === 0) { const r0 = Math.min(rw, rh) / 2; for (const k of [1, 1.15, 1.3, 1.45]) out.push([rw / 2, rh / 2, r0 * k]); }
+  return out;
+}
+
+// ---------- fingerprint ----------
+const c64 = document.createElement('canvas'); c64.width = c64.height = 64;
+const g64 = c64.getContext('2d', { willReadFrequently: true });
+const r64 = document.createElement('canvas'); r64.width = r64.height = 64;
+const gr64 = r64.getContext('2d', { willReadFrequently: true });
+function fingerprint(src, disc, rot) {
+  const [cx, cy, r] = disc;
+  const x1 = Math.round(cx - r), y1 = Math.round(cy - r), x2 = Math.round(cx + r), y2 = Math.round(cy + r);
+  g64.setTransform(1, 0, 0, 1, 0, 0); g64.fillStyle = '#000'; g64.fillRect(0, 0, 64, 64);
+  g64.imageSmoothingEnabled = true; g64.imageSmoothingQuality = 'high';
+  drawClipped(g64, src, x1, y1, x2 - x1, y2 - y1, 64);
+  let g = g64;
+  if (rot) {
+    gr64.setTransform(1, 0, 0, 1, 0, 0); gr64.fillStyle = '#000'; gr64.fillRect(0, 0, 64, 64);
+    gr64.translate(32, 32); gr64.rotate(-rot * Math.PI / 180); gr64.drawImage(c64, -32, -32); gr64.setTransform(1, 0, 0, 1, 0, 0);
+    g = gr64;
+  }
+  const d = g.getImageData(0, 0, 64, 64).data;
+  const px = new Float32Array(D);
+  CIRC.forEach((cell, p) => {
+    const cy0 = (cell / 16 | 0) * 4, cx0 = (cell % 16) * 4; let R = 0, G = 0, B = 0;
+    for (let yy = 0; yy < 4; yy++) for (let xx = 0; xx < 4; xx++) { const i = ((cy0 + yy) * 64 + cx0 + xx) * 4; R += d[i]; G += d[i + 1]; B += d[i + 2]; }
+    px[p * 3] = R / 16; px[p * 3 + 1] = G / 16; px[p * 3 + 2] = B / 16;
+  });
+  return finish(chanNorm(px));
+}
+// draw the source square (sx,sy,side) into a size x size box; parts outside the image stay black
+function drawClipped(g, src, sx, sy, sw, sh, size) {
+  const W = src.width, H = src.height;
+  const ax = Math.max(0, sx), ay = Math.max(0, sy), bx = Math.min(W, sx + sw), by = Math.min(H, sy + sh);
+  if (bx <= ax || by <= ay) return;
+  const k = size / sw;
+  g.drawImage(src, ax, ay, bx - ax, by - ay, (ax - sx) * k, (ay - sy) * k, (bx - ax) * k, (by - ay) * k);
+}
+
+function score(src, discs) {
+  const Q = [], who = [];
+  discs.forEach((disc, di) => ROTS.forEach(rot => { Q.push(fingerprint(src, disc, rot)); who.push(di); }));
+  const best = new Float32Array(N), arg = new Int16Array(N);
+  for (let i = 0; i < N; i++) {
+    const o = i * D; let b = -2, a = 0;
+    for (let q = 0; q < Q.length; q++) {
+      const v = Q[q]; let s = 0;
+      for (let k = 0; k < D; k++) s += IDX[o + k] * v[k];
+      if (s > b) { b = s; a = q; }
+    }
+    best[i] = b; arg[i] = who[a];
+  }
+  const order = Array.from({ length: N }, (_, i) => i).sort((a, b) => best[b] - best[a]).slice(0, 8);
+  const top = order.map(i => ({ n: i + 1, score: best[i] }));
+  const gap = top[0].score - top[1].score;
+  const verdict = top[0].score >= MATCH_SCORE && gap >= MATCH_GAP ? 'match' : top[0].score >= CHECK_SCORE ? 'check' : 'none';
+  return { top, gap, verdict, disc: discs[arg[order[0]]] };
+}
+
+// ---------- traits ----------
+const PATINA = ['verdigris', 'obsidian', 'desert', 'red', 'gold', 'orange'];
+function traitName(k) {
+  if (k === 'lustrous') return 'Close to Mint State';
+  if (k === 'white_drips_and_streaks') return 'White Drips and Streaks';
+  return k.split('_').map(w => w[0].toUpperCase() + w.slice(1)).join(' ');
+}
+function traitsOf(n) {
+  const [year, mint, mask, contam] = DATA.cents[n - 1];
+  const out = [];
+  if (year <= 1958) out.push({ t: 'Wheat' });
+  DATA.traits.forEach((k, i) => { if (mask & (1 << i)) out.push({ t: traitName(k), patina: PATINA.some(p => k.endsWith(p)) }); });
+  if (contam) contam.split(';').forEach(c => out.push({ t: 'Contaminated: ' + c }));
+  return out;
+}
+// sprite sheets: 10 x 10 Cents of 120 px each; zoom so the coin (about 82% of a cell) fills the circle
+const ZOOM = 1 / 0.83;
+function thumbStyle(el, n) {
+  const j = (n - 1) % 100, sheet = String((n - 1) / 100 | 0).padStart(2, '0');
+  const pos = i => ((i * ZOOM + (ZOOM - 1) / 2) / (10 * ZOOM - 1) * 100).toFixed(3) + '%';
+  el.style.backgroundImage = `url(thumbs/s${sheet}.webp)`;
+  el.style.backgroundSize = `${(1000 * ZOOM).toFixed(2)}% ${(1000 * ZOOM).toFixed(2)}%`;
+  el.style.backgroundPosition = `${pos(j % 10)} ${pos((j / 10) | 0)}`;
+}
+const mintLabel = m => m ? m : 'None';
+
+// ---------- view ----------
+const view = $('view'), vg = view.getContext('2d');
+let cur = null; // {src, name, disc, auto, result}
+const VERDICT = {
+  match: ['ok', 'Match', 'Clear of every other Cent.'],
+  check: ['warn', 'Check by eye', 'Closest Cent, but not by a clear margin. Compare the two, or adjust the circle.'],
+  none: ['no', 'No clear match', 'Not close to any obverse. It may be a reverse, another coin, or the circle may be off.']
+};
+
+function drawView() {
+  if (!cur) return;
+  const { src, disc } = cur;
+  const maxW = $('stage').clientWidth || 600, maxH = 460;
+  const k = Math.min(maxW / src.width, maxH / src.height, 1.5);
+  const w = Math.round(src.width * k), h = Math.round(src.height * k);
+  const dpr = window.devicePixelRatio || 1;
+  view.width = Math.round(w * dpr); view.height = Math.round(h * dpr); view.style.width = w + 'px'; view.style.height = h + 'px';
+  vg.setTransform(dpr * k, 0, 0, dpr * k, 0, 0);
+  vg.imageSmoothingQuality = 'high';
+  vg.drawImage(src, 0, 0);
+  const cs = getComputedStyle(document.documentElement);
+  vg.lineWidth = 2.5 / k; vg.strokeStyle = cs.getPropertyValue('--copper').trim() || '#a2552c';
+  vg.setLineDash([10 / k, 6 / k]);
+  vg.beginPath(); vg.arc(disc[0], disc[1], disc[2], 0, Math.PI * 2); vg.stroke();
+  vg.setLineDash([]);
+  cur.k = k;
+  // your crop
+  const yc = $('yours'), yg = yc.getContext('2d');
+  yg.fillStyle = cs.getPropertyValue('--bg').trim() || '#fff'; yg.fillRect(0, 0, 240, 240);
+  yg.imageSmoothingQuality = 'high';
+  const [cx, cy, r] = disc;
+  drawClipped(yg, src, cx - r, cy - r, 2 * r, 2 * r, 240);
+  $('size').value = Math.round(100 * disc[2] / (Math.min(src.width, src.height) / 2 * 0.82));
+}
+
+function showResult(res) {
+  const [cls, label, why] = VERDICT[res.verdict];
+  const t = res.top[0];
+  $('pill').className = 'pill ' + cls; $('pill').textContent = label; $('why').textContent = why;
+  $('centno').innerHTML = `<small>CENTS</small>#${t.n}`;
+  const m = $('match'); thumbStyle(m, t.n); m.setAttribute('aria-label', 'CENTS #' + t.n);
+  $('matchcap').textContent = 'CENTS #' + t.n;
+  const [year, mint, , , insc] = DATA.cents[t.n - 1];
+  $('year').textContent = year; $('mint').textContent = mintLabel(mint);
+  $('score').textContent = `${t.score.toFixed(3)}  (next ${res.top[1].score.toFixed(3)})`;
+  $('insc').textContent = insc ? insc.toLocaleString('en-US') : '—';
+  const chips = $('chips'); chips.innerHTML = '';
+  const tr = traitsOf(t.n);
+  if (!tr.length) chips.innerHTML = '<span class="chip none">No visual traits</span>';
+  tr.forEach(x => { const s = document.createElement('span'); s.className = 'chip' + (x.patina ? ' patina' : ''); s.textContent = x.t; chips.appendChild(s); });
+  $('links').innerHTML = `<a href="https://cents.vision/pics/frontswebp/${t.n}.webp" target="_blank" rel="noopener">Full-size obverse</a><a href="https://cents.vision/pics/backswebp/${t.n}.webp" target="_blank" rel="noopener">Full-size reverse</a>`;
+  const others = $('others'); others.innerHTML = '';
+  res.top.slice(1, 5).forEach(o => {
+    const b = document.createElement('button'); b.type = 'button'; b.className = 'other'; b.title = 'Show CENTS #' + o.n;
+    const c = document.createElement('div'); c.className = 'coin'; thumbStyle(c, o.n);
+    b.append(c); b.insertAdjacentHTML('beforeend', `<span>#${o.n}</span><em>${o.score.toFixed(3)}</em>`);
+    b.addEventListener('click', () => showResult({ ...res, top: [o, ...res.top.filter(x => x.n !== o.n)], verdict: 'check' }));
+    others.appendChild(b);
+  });
+}
+
+function runAuto() {
+  if (!cur || !IDX) return;
+  const discs = candidateDiscs(cur.src, 0, 0, cur.src.width, cur.src.height, 0);
+  const res = score(cur.src, discs);
+  cur.disc = res.disc; cur.auto = true; cur.result = res;
+  drawView(); showResult(res);
+  return res;
+}
+let pending = 0;
+function runManual() {
+  if (pending) return;
+  pending = requestAnimationFrame(() => {
+    pending = 0;
+    const res = score(cur.src, [cur.disc]);
+    cur.result = res; drawView(); showResult(res);
+  });
+}
+
+async function toSource(blob) {
+  const bmp = await createImageBitmap(blob);
+  const k = Math.min(1, 2000 / Math.max(bmp.width, bmp.height));
+  const c = document.createElement('canvas'); c.width = Math.round(bmp.width * k); c.height = Math.round(bmp.height * k);
+  c.getContext('2d').drawImage(bmp, 0, 0, c.width, c.height);
+  return c;
+}
+
+async function identifyBlob(blob, name) {
+  const src = await toSource(blob);
+  cur = { src, name, disc: [src.width / 2, src.height / 2, Math.min(src.width, src.height) / 2], auto: true };
+  const res = runAuto();
+  return { name, res, src, disc: cur.disc };
+}
+
+let batch = [];
+async function handleFiles(files) {
+  const imgs = [...files].filter(f => f.type.startsWith('image/'));
+  if (!imgs.length) { setStatus('That file is not an image. Choose a JPEG, PNG, WebP or HEIC-converted image.'); return; }
+  $('example').hidden = true;
+  if (imgs.length === 1) { await identifyBlob(imgs[0], imgs[0].name || 'pasted image'); return; }
+  batch = []; $('rows').innerHTML = ''; $('batch').hidden = false;
+  for (let i = 0; i < imgs.length; i++) {
+    $('batchtitle').textContent = `Batch: ${i + 1} of ${imgs.length}`;
+    await new Promise(r => setTimeout(r, 0));
+    try { const out = await identifyBlob(imgs[i], imgs[i].name); batch.push(out); addRow(out, batch.length - 1); }
+    catch (e) { addErrorRow(imgs[i].name); }
+  }
+  $('batchtitle').textContent = `Batch: ${imgs.length} images`;
+}
+function addRow(out, i) {
+  const t = out.res.top[0], [cls, label] = VERDICT[out.res.verdict];
+  const tr = document.createElement('tr'); tr.dataset.i = i; tr.tabIndex = 0;
+  tr.innerHTML = `<td class="file"></td><td><b>#${t.n}</b></td><td><span class="pill ${cls}">${label}</span></td><td>${DATA.cents[t.n - 1][0]}</td><td class="mono">${t.score.toFixed(3)}</td>`;
+  tr.firstChild.textContent = out.name;
+  const open = () => { cur = { src: out.src, name: out.name, disc: out.disc, auto: true, result: out.res }; drawView(); showResult(out.res); $('result').scrollIntoView({ behavior: 'smooth', block: 'nearest' }); };
+  tr.addEventListener('click', open); tr.addEventListener('keydown', e => { if (e.key === 'Enter') open(); });
+  $('rows').appendChild(tr);
+}
+function addErrorRow(name) {
+  const tr = document.createElement('tr'); tr.innerHTML = '<td class="file"></td><td colspan="4">Could not read this image.</td>'; tr.firstChild.textContent = name; $('rows').appendChild(tr);
+}
+$('copy').addEventListener('click', async () => {
+  const text = ['image\tcent\tresult\tyear\tsimilarity'].concat(batch.map(b => [b.name, '#' + b.res.top[0].n, VERDICT[b.res.verdict][1], DATA.cents[b.res.top[0].n - 1][0], b.res.top[0].score.toFixed(3)].join('\t'))).join('\n');
+  try { await navigator.clipboard.writeText(text); $('copy').textContent = 'Copied'; }
+  catch (e) { const ta = document.createElement('textarea'); ta.value = text; document.body.appendChild(ta); ta.select(); $('copy').textContent = 'Press ⌘C or Ctrl+C'; setTimeout(() => ta.remove(), 8000); }
+  setTimeout(() => { $('copy').textContent = 'Copy results'; }, 2500);
+});
+
+// ---------- input ----------
+$('file').addEventListener('change', e => { handleFiles(e.target.files); e.target.value = ''; });
+const drop = $('drop');
+['dragenter', 'dragover'].forEach(t => document.addEventListener(t, e => { e.preventDefault(); drop.classList.add('over'); }));
+['dragleave', 'drop'].forEach(t => document.addEventListener(t, e => { e.preventDefault(); if (t === 'drop' || e.target === document.documentElement) drop.classList.remove('over'); }));
+document.addEventListener('drop', e => { if (e.dataTransfer?.files?.length) handleFiles(e.dataTransfer.files); });
+document.addEventListener('paste', e => {
+  const files = [...(e.clipboardData?.items || [])].filter(i => i.type.startsWith('image/')).map(i => i.getAsFile()).filter(Boolean);
+  if (files.length) handleFiles(files);
+});
+$('auto').addEventListener('click', () => runAuto());
+$('size').addEventListener('input', e => {
+  if (!cur) return; const base = Math.min(cur.src.width, cur.src.height) / 2 * 0.82;
+  cur.disc = [cur.disc[0], cur.disc[1], base * e.target.value / 100]; runManual();
+});
+let drag = null;
+view.addEventListener('pointerdown', e => {
+  if (!cur) return; view.setPointerCapture(e.pointerId); view.classList.add('dragging');
+  drag = { x: e.clientX, y: e.clientY, d: cur.disc.slice() };
+});
+view.addEventListener('pointermove', e => {
+  if (!drag) return; const k = cur.k || 1;
+  cur.disc = [drag.d[0] + (e.clientX - drag.x) / k, drag.d[1] + (e.clientY - drag.y) / k, drag.d[2]]; runManual();
+});
+['pointerup', 'pointercancel'].forEach(t => view.addEventListener(t, () => { drag = null; view.classList.remove('dragging'); }));
+window.addEventListener('resize', () => drawView());
+matchMedia('(prefers-color-scheme: dark)').addEventListener?.('change', () => drawView());
+
+function setStatus(t) { $('status').innerHTML = t; }
+
+// test hook: identify a blob and return the top matches
+window.centFinder = { identify: async (blob) => { const o = await identifyBlob(blob, 'test'); return { top: o.res.top.slice(0, 3), verdict: o.res.verdict, gap: o.res.gap }; }, ready: null };
+
+window.centFinder.ready = (async () => {
+  try {
+    const t0 = performance.now();
+    await loadIndex();
+    setStatus(`<b>10,000</b> obverses indexed · ${Math.round(performance.now() - t0)} ms`);
+    const blob = await fetch('sample.jpg').then(r => r.blob());
+    await identifyBlob(blob, 'example');
+  } catch (e) {
+    setStatus('The index did not load. Reload the page to try again.');
+    $('why').textContent = 'The index did not load (' + e.message + ').';
+  }
+})();
+})();
+</script>
