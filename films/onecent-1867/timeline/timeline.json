@@ -3,8 +3,8 @@
   "title": "Cent #1867",
   "subtitle": "Inscription #66001799",
   "author": "shibboleth",
-  "source": "/mnt/project-files/single-cent-series/1867/1867_proposal_v0.2.md",
-  "version": "rehearsal (2026-11-25): opening only, script v0.2 NOT yet approved; STAND-IN timing"
+  "source": "/mnt/project-files/single-cent-series/1867/1867_proposal_v0.3.md",
+  "version": "rehearsal (2026-11-25): script v0.3 NOT yet approved; STAND-IN timing; opening to the Kruger quote built, the rest a stub"
  },
  "_what": "Cent #1867 (1964, no mint mark): Significant Obsidian, Significant Verdigris, Contaminated (Alien Secretion). Concept C20 (Circulation leaves traces).",
  "shots": [
@@ -16,7 +16,7 @@
    "end": {
     "at_phrase": "Circulation leaves traces"
    },
-   "purpose": "Look C opening (PR #25 v3.1, title below): play button, CENTS STORY TIME, one 3DCENTS turn; then the lens on the date and where a mint mark would be (boxes 1 and 2 of 1867_zoom_plan_v0.1.jpg).",
+   "purpose": "Look C opening (PR #25 v3.1, title below): play button, CENTS STORY TIME, the \"look closer\" sticker (approved 2026-11-25), one 3DCENTS turn. No year or mint-mark zoom (user, 2026-11-25).",
    "visual_kind": "code",
    "component": "StoryOpen",
    "props": {
@@ -36,50 +36,6 @@
      "credit": "3D render: 3DCENTS by sinvalli",
      "credit_at_end": true
     },
-    "moves": [
-     {
-      "at_phrase": "A penny dated",
-      "box": [
-       0.648,
-       0.61,
-       0.848,
-       0.695
-      ],
-      "mark": true,
-      "dur": 0.9
-     },
-     {
-      "at_phrase": "with no mint mark",
-      "box": [
-       0.705,
-       0.695,
-       0.838,
-       0.762
-      ],
-      "mark": true,
-      "dur": 0.7
-     },
-     {
-      "at_phrase": "generally indicating the",
-      "plus": 0.6,
-      "box": null,
-      "dur": 0.9
-     }
-    ],
-    "reads": [
-     {
-      "at_phrase": "A penny dated",
-      "chip": "1964"
-     },
-     {
-      "at_phrase": "with no mint mark",
-      "chip": "No mint mark"
-     },
-     {
-      "at_phrase": "generally indicating the",
-      "chip": "Generally Philadelphia"
-     }
-    ],
     "sticker": "look closer"
    }
   },

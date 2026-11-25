@@ -46,7 +46,7 @@ bounds = [start_of(s["start"]["at_phrase"]) if "at_phrase" in s["start"] else st
           for s in tl["shots"] if ("at_phrase" in s["start"] or "after_phrase" in s["start"]) and s["shot_id"] not in RUN_ON]
 
 # Breaks at phrase edges where the length rule alone would split a phrase.
-EXTRA_BREAKS = ["with no mint mark", "writing on Rutherford Chang", "quotes the artist", "Three traits record", "and Alien Secretion names", "In the Atlas's words", "and is close to", "and the physical coin", "set again each time"]
+EXTRA_BREAKS = ["writing on Rutherford Chang", "quotes the artist", "Three traits record", "and Alien Secretion names", "is close to mint", "In the Atlas's words", "in his article", "the decentralized formation", "and the physical coin", "set again each time"]
 bounds = sorted(bounds + [start_of(ph) for ph in EXTRA_BREAKS])
 cues = C.build(out, bounds)
 problems = C.audit(cues, bounds)

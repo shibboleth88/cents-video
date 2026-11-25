@@ -1,6 +1,6 @@
 {
  "_source": "STAND-IN for the silent rehearsal: fake timings from audio/tts_text.txt, not a recording. Replace with the heard take (check_heard.py --write-alignment).",
- "duration": 149.72,
+ "duration": 143.34,
  "words": [
   {
    "word": "Cent",
@@ -23,1604 +23,1564 @@
    "end": 2.928
   },
   {
-   "word": "A",
-   "start": 6.468,
-   "end": 6.594
-  },
-  {
-   "word": "penny",
-   "start": 6.634,
-   "end": 6.944
-  },
-  {
-   "word": "dated",
-   "start": 6.984,
-   "end": 7.294
-  },
-  {
-   "word": "nineteen",
-   "start": 7.334,
-   "end": 7.782
-  },
-  {
-   "word": "sixty-four,",
-   "start": 7.822,
-   "end": 8.316
-  },
-  {
-   "word": "with",
-   "start": 8.506,
-   "end": 8.77
-  },
-  {
-   "word": "no",
-   "start": 8.81,
-   "end": 8.982
-  },
-  {
-   "word": "mint",
-   "start": 9.022,
-   "end": 9.286
-  },
-  {
-   "word": "mark,",
-   "start": 9.326,
-   "end": 9.59
-  },
-  {
-   "word": "generally",
-   "start": 9.78,
-   "end": 10.274
-  },
-  {
-   "word": "indicating",
-   "start": 10.314,
-   "end": 10.854
-  },
-  {
-   "word": "the",
-   "start": 10.894,
-   "end": 11.112
-  },
-  {
-   "word": "Philadelphia",
-   "start": 11.152,
-   "end": 11.784
-  },
-  {
-   "word": "mint.",
-   "start": 11.824,
-   "end": 12.088
-  },
-  {
    "word": "Circulation",
-   "start": 13.028,
-   "end": 13.614
+   "start": 6.468,
+   "end": 7.054
   },
   {
    "word": "leaves",
-   "start": 13.654,
-   "end": 14.01
+   "start": 7.094,
+   "end": 7.45
   },
   {
    "word": "traces.",
-   "start": 14.05,
-   "end": 14.406
+   "start": 7.49,
+   "end": 7.846
   },
   {
    "word": "In",
-   "start": 15.646,
-   "end": 15.818
+   "start": 9.086,
+   "end": 9.258
   },
   {
    "word": "the",
-   "start": 15.858,
-   "end": 16.076
+   "start": 9.298,
+   "end": 9.516
   },
   {
    "word": "words",
-   "start": 16.116,
-   "end": 16.426
+   "start": 9.556,
+   "end": 9.866
   },
   {
    "word": "of",
-   "start": 16.466,
-   "end": 16.638
+   "start": 9.906,
+   "end": 10.078
   },
   {
    "word": "Emily",
-   "start": 16.678,
-   "end": 16.988
+   "start": 10.118,
+   "end": 10.428
   },
   {
    "word": "Watlington,",
-   "start": 17.028,
-   "end": 17.568
+   "start": 10.468,
+   "end": 11.008
   },
   {
    "word": "writing",
-   "start": 17.758,
-   "end": 18.16
+   "start": 11.198,
+   "end": 11.6
   },
   {
    "word": "on",
-   "start": 18.2,
-   "end": 18.372
+   "start": 11.64,
+   "end": 11.812
   },
   {
    "word": "Rutherford",
-   "start": 18.412,
-   "end": 18.952
+   "start": 11.852,
+   "end": 12.392
   },
   {
    "word": "Chang",
-   "start": 18.992,
-   "end": 19.302
+   "start": 12.432,
+   "end": 12.742
   },
   {
    "word": "in",
-   "start": 19.342,
-   "end": 19.514
+   "start": 12.782,
+   "end": 12.954
   },
   {
    "word": "Art",
-   "start": 19.554,
-   "end": 19.772
+   "start": 12.994,
+   "end": 13.212
   },
   {
    "word": "in",
-   "start": 19.812,
-   "end": 19.984
+   "start": 13.252,
+   "end": 13.424
   },
   {
    "word": "America:",
-   "start": 20.024,
-   "end": 20.426
+   "start": 13.464,
+   "end": 13.866
   },
   {
    "word": "\"Circulation",
-   "start": 20.616,
-   "end": 21.202
+   "start": 14.056,
+   "end": 14.642
   },
   {
    "word": "is",
-   "start": 21.242,
-   "end": 21.414
+   "start": 14.682,
+   "end": 14.854
   },
   {
    "word": "another",
-   "start": 21.454,
-   "end": 21.856
+   "start": 14.894,
+   "end": 15.296
   },
   {
    "word": "of",
-   "start": 21.896,
-   "end": 22.068
+   "start": 15.336,
+   "end": 15.508
   },
   {
    "word": "Chang's",
-   "start": 22.108,
-   "end": 22.464
+   "start": 15.548,
+   "end": 15.904
   },
   {
    "word": "key",
-   "start": 22.504,
-   "end": 22.722
+   "start": 15.944,
+   "end": 16.162
   },
   {
    "word": "themes:",
-   "start": 22.762,
-   "end": 23.118
+   "start": 16.202,
+   "end": 16.558
   },
   {
    "word": "how",
-   "start": 23.308,
-   "end": 23.526
+   "start": 16.748,
+   "end": 16.966
   },
   {
    "word": "do",
-   "start": 23.566,
-   "end": 23.738
+   "start": 17.006,
+   "end": 17.178
   },
   {
    "word": "things",
-   "start": 23.778,
-   "end": 24.134
+   "start": 17.218,
+   "end": 17.574
   },
   {
    "word": "change",
-   "start": 24.174,
-   "end": 24.53
+   "start": 17.614,
+   "end": 17.97
   },
   {
    "word": "as",
-   "start": 24.57,
-   "end": 24.742
+   "start": 18.01,
+   "end": 18.182
   },
   {
    "word": "they",
-   "start": 24.782,
-   "end": 25.046
+   "start": 18.222,
+   "end": 18.486
   },
   {
    "word": "move",
-   "start": 25.086,
-   "end": 25.35
+   "start": 18.526,
+   "end": 18.79
   },
   {
    "word": "through",
-   "start": 25.39,
-   "end": 25.792
+   "start": 18.83,
+   "end": 19.232
   },
   {
    "word": "the",
-   "start": 25.832,
-   "end": 26.05
+   "start": 19.272,
+   "end": 19.49
   },
   {
    "word": "world?\"",
-   "start": 26.09,
-   "end": 26.4
+   "start": 19.53,
+   "end": 19.84
   },
   {
    "word": "Rhea",
-   "start": 27.24,
-   "end": 27.504
+   "start": 20.68,
+   "end": 20.944
   },
   {
    "word": "Myers,",
-   "start": 27.544,
-   "end": 27.854
+   "start": 20.984,
+   "end": 21.294
   },
   {
    "word": "in",
-   "start": 28.044,
-   "end": 28.216
+   "start": 21.484,
+   "end": 21.656
   },
   {
    "word": "her",
-   "start": 28.256,
-   "end": 28.474
+   "start": 21.696,
+   "end": 21.914
   },
   {
    "word": "book",
-   "start": 28.514,
-   "end": 28.778
+   "start": 21.954,
+   "end": 22.218
   },
   {
    "word": "Proof",
-   "start": 28.818,
-   "end": 29.128
+   "start": 22.258,
+   "end": 22.568
   },
   {
    "word": "of",
-   "start": 29.168,
-   "end": 29.34
+   "start": 22.608,
+   "end": 22.78
   },
   {
    "word": "Work,",
-   "start": 29.38,
-   "end": 29.644
+   "start": 22.82,
+   "end": 23.084
   },
   {
    "word": "quotes",
-   "start": 29.834,
-   "end": 30.19
+   "start": 23.274,
+   "end": 23.63
   },
   {
    "word": "the",
-   "start": 30.23,
-   "end": 30.448
+   "start": 23.67,
+   "end": 23.888
   },
   {
    "word": "artist",
-   "start": 30.488,
-   "end": 30.844
+   "start": 23.928,
+   "end": 24.284
   },
   {
    "word": "Barbara",
-   "start": 30.884,
-   "end": 31.286
+   "start": 24.324,
+   "end": 24.726
   },
   {
    "word": "Kruger:",
-   "start": 31.326,
-   "end": 31.682
+   "start": 24.766,
+   "end": 25.122
   },
   {
    "word": "\"Money",
-   "start": 31.872,
-   "end": 32.182
+   "start": 25.312,
+   "end": 25.622
   },
   {
    "word": "is",
-   "start": 32.222,
-   "end": 32.394
+   "start": 25.662,
+   "end": 25.834
   },
   {
    "word": "an",
-   "start": 32.434,
-   "end": 32.606
+   "start": 25.874,
+   "end": 26.046
   },
   {
    "word": "information-destroying",
-   "start": 32.646,
-   "end": 33.692
+   "start": 26.086,
+   "end": 27.132
   },
   {
    "word": "medium.\"",
-   "start": 33.732,
-   "end": 34.088
+   "start": 27.172,
+   "end": 27.528
   },
   {
    "word": "A",
-   "start": 35.428,
-   "end": 35.554
+   "start": 28.868,
+   "end": 28.994
   },
   {
    "word": "circulated",
-   "start": 35.594,
-   "end": 36.134
+   "start": 29.034,
+   "end": 29.574
   },
   {
    "word": "copper",
-   "start": 36.174,
-   "end": 36.53
+   "start": 29.614,
+   "end": 29.97
   },
   {
    "word": "cent",
-   "start": 36.57,
-   "end": 36.834
+   "start": 30.01,
+   "end": 30.274
   },
   {
    "word": "is",
-   "start": 36.874,
-   "end": 37.046
+   "start": 30.314,
+   "end": 30.486
   },
   {
    "word": "the",
-   "start": 37.086,
-   "end": 37.304
+   "start": 30.526,
+   "end": 30.744
   },
   {
    "word": "exception.",
-   "start": 37.344,
-   "end": 37.838
+   "start": 30.784,
+   "end": 31.278
   },
   {
    "word": "Three",
-   "start": 38.278,
-   "end": 38.588
+   "start": 31.718,
+   "end": 32.028
   },
   {
    "word": "traits",
-   "start": 38.628,
-   "end": 38.984
+   "start": 32.068,
+   "end": 32.424
   },
   {
    "word": "record",
-   "start": 39.024,
-   "end": 39.38
+   "start": 32.464,
+   "end": 32.82
   },
   {
    "word": "where",
-   "start": 39.42,
-   "end": 39.73
+   "start": 32.86,
+   "end": 33.17
   },
   {
    "word": "Cent",
-   "start": 39.77,
-   "end": 40.034
+   "start": 33.21,
+   "end": 33.474
   },
   {
    "word": "number",
-   "start": 40.074,
-   "end": 40.43
+   "start": 33.514,
+   "end": 33.87
   },
   {
    "word": "eighteen",
-   "start": 40.47,
-   "end": 40.918
+   "start": 33.91,
+   "end": 34.358
   },
   {
    "word": "sixty-seven",
-   "start": 40.958,
-   "end": 41.498
+   "start": 34.398,
+   "end": 34.938
   },
   {
    "word": "has",
-   "start": 41.538,
-   "end": 41.756
+   "start": 34.978,
+   "end": 35.196
   },
   {
    "word": "been:",
-   "start": 41.796,
-   "end": 42.06
+   "start": 35.236,
+   "end": 35.5
   },
   {
    "word": "two",
-   "start": 42.25,
-   "end": 42.468
+   "start": 35.69,
+   "end": 35.908
   },
   {
    "word": "patinas",
-   "start": 42.508,
-   "end": 42.91
+   "start": 35.948,
+   "end": 36.35
   },
   {
    "word": "and",
-   "start": 42.95,
-   "end": 43.168
+   "start": 36.39,
+   "end": 36.608
   },
   {
    "word": "a",
-   "start": 43.208,
-   "end": 43.334
+   "start": 36.648,
+   "end": 36.774
   },
   {
    "word": "contamination.",
-   "start": 43.374,
-   "end": 44.052
+   "start": 36.814,
+   "end": 37.492
   },
   {
    "word": "A",
-   "start": 44.892,
-   "end": 45.018
+   "start": 38.332,
+   "end": 38.458
   },
   {
    "word": "dark",
-   "start": 45.058,
-   "end": 45.322
+   "start": 38.498,
+   "end": 38.762
   },
   {
    "word": "band",
-   "start": 45.362,
-   "end": 45.626
+   "start": 38.802,
+   "end": 39.066
   },
   {
    "word": "of",
-   "start": 45.666,
-   "end": 45.838
+   "start": 39.106,
+   "end": 39.278
   },
   {
    "word": "Significant",
-   "start": 45.878,
-   "end": 46.464
+   "start": 39.318,
+   "end": 39.904
   },
   {
    "word": "Obsidian",
-   "start": 46.504,
-   "end": 46.952
+   "start": 39.944,
+   "end": 40.392
   },
   {
    "word": "crosses",
-   "start": 46.992,
-   "end": 47.394
+   "start": 40.432,
+   "end": 40.834
   },
   {
    "word": "the",
-   "start": 47.434,
-   "end": 47.652
+   "start": 40.874,
+   "end": 41.092
   },
   {
    "word": "upper",
-   "start": 47.692,
-   "end": 48.002
+   "start": 41.132,
+   "end": 41.442
   },
   {
    "word": "left,",
-   "start": 48.042,
-   "end": 48.306
+   "start": 41.482,
+   "end": 41.746
   },
   {
    "word": "over",
-   "start": 48.496,
-   "end": 48.76
+   "start": 41.936,
+   "end": 42.2
   },
   {
    "word": "the",
-   "start": 48.8,
-   "end": 49.018
+   "start": 42.24,
+   "end": 42.458
   },
   {
    "word": "motto",
-   "start": 49.058,
-   "end": 49.368
+   "start": 42.498,
+   "end": 42.808
   },
   {
    "word": "and",
-   "start": 49.408,
-   "end": 49.626
+   "start": 42.848,
+   "end": 43.066
   },
   {
    "word": "Lincoln's",
-   "start": 49.666,
-   "end": 50.114
+   "start": 43.106,
+   "end": 43.554
   },
   {
    "word": "head.",
-   "start": 50.154,
-   "end": 50.418
+   "start": 43.594,
+   "end": 43.858
   },
   {
    "word": "Green",
-   "start": 51.258,
-   "end": 51.568
+   "start": 44.698,
+   "end": 45.008
   },
   {
    "word": "patches",
-   "start": 51.608,
-   "end": 52.01
+   "start": 45.048,
+   "end": 45.45
   },
   {
    "word": "of",
-   "start": 52.05,
-   "end": 52.222
+   "start": 45.49,
+   "end": 45.662
   },
   {
    "word": "Significant",
-   "start": 52.262,
-   "end": 52.848
+   "start": 45.702,
+   "end": 46.288
   },
   {
    "word": "Verdigris",
-   "start": 52.888,
-   "end": 53.382
+   "start": 46.328,
+   "end": 46.822
   },
   {
    "word": "gather",
-   "start": 53.422,
-   "end": 53.778
+   "start": 46.862,
+   "end": 47.218
   },
   {
    "word": "on",
-   "start": 53.818,
-   "end": 53.99
+   "start": 47.258,
+   "end": 47.43
   },
   {
    "word": "his",
-   "start": 54.03,
-   "end": 54.248
+   "start": 47.47,
+   "end": 47.688
   },
   {
    "word": "cheek,",
-   "start": 54.288,
-   "end": 54.598
+   "start": 47.728,
+   "end": 48.038
   },
   {
    "word": "behind",
-   "start": 54.788,
-   "end": 55.144
+   "start": 48.228,
+   "end": 48.584
   },
   {
    "word": "his",
-   "start": 55.184,
-   "end": 55.402
+   "start": 48.624,
+   "end": 48.842
   },
   {
    "word": "head",
-   "start": 55.442,
-   "end": 55.706
+   "start": 48.882,
+   "end": 49.146
   },
   {
    "word": "and",
-   "start": 55.746,
-   "end": 55.964
+   "start": 49.186,
+   "end": 49.404
   },
   {
    "word": "at",
-   "start": 56.004,
-   "end": 56.176
+   "start": 49.444,
+   "end": 49.616
   },
   {
    "word": "his",
-   "start": 56.216,
-   "end": 56.434
+   "start": 49.656,
+   "end": 49.874
   },
   {
    "word": "collar.",
-   "start": 56.474,
-   "end": 56.83
-  },
-  {
-   "word": "Two",
-   "start": 57.67,
-   "end": 57.888
-  },
-  {
-   "word": "hundred",
-   "start": 57.928,
-   "end": 58.33
-  },
-  {
-   "word": "and",
-   "start": 58.37,
-   "end": 58.588
-  },
-  {
-   "word": "twenty",
-   "start": 58.628,
-   "end": 58.984
-  },
-  {
-   "word": "Cents",
-   "start": 59.024,
-   "end": 59.334
-  },
-  {
-   "word": "carry",
-   "start": 59.374,
-   "end": 59.684
-  },
-  {
-   "word": "Significant",
-   "start": 59.724,
-   "end": 60.31
-  },
-  {
-   "word": "Obsidian,",
-   "start": 60.35,
-   "end": 60.798
-  },
-  {
-   "word": "and",
-   "start": 60.988,
-   "end": 61.206
-  },
-  {
-   "word": "three",
-   "start": 61.246,
-   "end": 61.556
-  },
-  {
-   "word": "hundred",
-   "start": 61.596,
-   "end": 61.998
-  },
-  {
-   "word": "and",
-   "start": 62.038,
-   "end": 62.256
-  },
-  {
-   "word": "seventy-six",
-   "start": 62.296,
-   "end": 62.836
-  },
-  {
-   "word": "Significant",
-   "start": 62.876,
-   "end": 63.462
-  },
-  {
-   "word": "Verdigris.",
-   "start": 63.502,
-   "end": 63.996
-  },
-  {
-   "word": "Twenty-nine",
-   "start": 64.436,
-   "end": 64.976
-  },
-  {
-   "word": "carry",
-   "start": 65.016,
-   "end": 65.326
-  },
-  {
-   "word": "both.",
-   "start": 65.366,
-   "end": 65.63
-  },
-  {
-   "word": "Both",
-   "start": 66.87,
-   "end": 67.134
-  },
-  {
-   "word": "patinas",
-   "start": 67.174,
-   "end": 67.576
-  },
-  {
-   "word": "grew",
-   "start": 67.616,
-   "end": 67.88
-  },
-  {
-   "word": "from",
-   "start": 67.92,
-   "end": 68.184
-  },
-  {
-   "word": "the",
-   "start": 68.224,
-   "end": 68.442
-  },
-  {
-   "word": "copper.",
-   "start": 68.482,
-   "end": 68.838
-  },
-  {
-   "word": "In",
-   "start": 69.278,
-   "end": 69.45
-  },
-  {
-   "word": "the",
-   "start": 69.49,
-   "end": 69.708
-  },
-  {
-   "word": "Traits",
-   "start": 69.748,
-   "end": 70.104
-  },
-  {
-   "word": "Atlas,",
-   "start": 70.144,
-   "end": 70.454
-  },
-  {
-   "word": "a",
-   "start": 70.644,
-   "end": 70.77
-  },
-  {
-   "word": "patina",
-   "start": 70.81,
-   "end": 71.166
-  },
-  {
-   "word": "\"arises",
-   "start": 71.206,
-   "end": 71.562
-  },
-  {
-   "word": "from",
-   "start": 71.602,
-   "end": 71.866
-  },
-  {
-   "word": "internal",
-   "start": 71.906,
-   "end": 72.354
-  },
-  {
-   "word": "chemistry\".",
-   "start": 72.394,
-   "end": 72.888
+   "start": 49.914,
+   "end": 50.27
   },
   {
    "word": "The",
-   "start": 73.828,
-   "end": 74.046
+   "start": 51.11,
+   "end": 51.328
   },
   {
    "word": "third",
-   "start": 74.086,
-   "end": 74.396
+   "start": 51.368,
+   "end": 51.678
   },
   {
    "word": "trait",
-   "start": 74.436,
-   "end": 74.746
+   "start": 51.718,
+   "end": 52.028
   },
   {
    "word": "came",
-   "start": 74.786,
-   "end": 75.05
+   "start": 52.068,
+   "end": 52.332
   },
   {
    "word": "from",
-   "start": 75.09,
-   "end": 75.354
+   "start": 52.372,
+   "end": 52.636
   },
   {
    "word": "outside:",
-   "start": 75.394,
-   "end": 75.796
+   "start": 52.676,
+   "end": 53.078
   },
   {
    "word": "Contaminated,",
-   "start": 75.986,
-   "end": 76.618
+   "start": 53.268,
+   "end": 53.9
   },
   {
    "word": "Alien",
-   "start": 76.808,
-   "end": 77.118
+   "start": 54.09,
+   "end": 54.4
   },
   {
    "word": "Secretion.",
-   "start": 77.158,
-   "end": 77.652
+   "start": 54.44,
+   "end": 54.934
   },
   {
    "word": "In",
-   "start": 78.092,
-   "end": 78.264
+   "start": 55.374,
+   "end": 55.546
   },
   {
    "word": "the",
-   "start": 78.304,
-   "end": 78.522
+   "start": 55.586,
+   "end": 55.804
+  },
+  {
+   "word": "Traits",
+   "start": 55.844,
+   "end": 56.2
   },
   {
    "word": "Atlas,",
-   "start": 78.562,
-   "end": 78.872
+   "start": 56.24,
+   "end": 56.55
   },
   {
    "word": "contamination",
-   "start": 79.062,
-   "end": 79.74
+   "start": 56.74,
+   "end": 57.418
   },
   {
    "word": "is",
-   "start": 79.78,
-   "end": 79.952
+   "start": 57.458,
+   "end": 57.63
   },
   {
    "word": "\"matter",
-   "start": 79.992,
-   "end": 80.348
+   "start": 57.67,
+   "end": 58.026
   },
   {
    "word": "imposed",
-   "start": 80.388,
-   "end": 80.79
+   "start": 58.066,
+   "end": 58.468
   },
   {
    "word": "upon",
-   "start": 80.83,
-   "end": 81.094
+   "start": 58.508,
+   "end": 58.772
   },
   {
    "word": "copper\",",
-   "start": 81.134,
-   "end": 81.49
+   "start": 58.812,
+   "end": 59.168
   },
   {
    "word": "and",
-   "start": 81.68,
-   "end": 81.898
+   "start": 59.358,
+   "end": 59.576
   },
   {
    "word": "Alien",
-   "start": 81.938,
-   "end": 82.248
+   "start": 59.616,
+   "end": 59.926
   },
   {
    "word": "Secretion",
-   "start": 82.288,
-   "end": 82.782
+   "start": 59.966,
+   "end": 60.46
   },
   {
    "word": "names",
-   "start": 82.822,
-   "end": 83.132
+   "start": 60.5,
+   "end": 60.81
   },
   {
    "word": "\"unidentifiable",
-   "start": 83.172,
-   "end": 83.896
+   "start": 60.85,
+   "end": 61.574
   },
   {
    "word": "translucent",
-   "start": 83.936,
-   "end": 84.522
+   "start": 61.614,
+   "end": 62.2
   },
   {
    "word": "or",
-   "start": 84.562,
-   "end": 84.734
+   "start": 62.24,
+   "end": 62.412
   },
   {
    "word": "greenish",
-   "start": 84.774,
-   "end": 85.222
+   "start": 62.452,
+   "end": 62.9
   },
   {
    "word": "films\".",
-   "start": 85.262,
-   "end": 85.572
-  },
-  {
-   "word": "The",
-   "start": 86.612,
-   "end": 86.83
-  },
-  {
-   "word": "Trait",
-   "start": 86.87,
-   "end": 87.18
-  },
-  {
-   "word": "Council",
-   "start": 87.22,
-   "end": 87.622
-  },
-  {
-   "word": "names",
-   "start": 87.662,
-   "end": 87.972
-  },
-  {
-   "word": "such",
-   "start": 88.012,
-   "end": 88.276
-  },
-  {
-   "word": "residues",
-   "start": 88.316,
-   "end": 88.764
-  },
-  {
-   "word": "by",
-   "start": 88.804,
-   "end": 88.976
-  },
-  {
-   "word": "reading",
-   "start": 89.016,
-   "end": 89.418
-  },
-  {
-   "word": "the",
-   "start": 89.458,
-   "end": 89.676
-  },
-  {
-   "word": "surface,",
-   "start": 89.716,
-   "end": 90.118
-  },
-  {
-   "word": "without",
-   "start": 90.308,
-   "end": 90.71
-  },
-  {
-   "word": "testing",
-   "start": 90.75,
-   "end": 91.152
-  },
-  {
-   "word": "it.",
-   "start": 91.192,
-   "end": 91.364
-  },
-  {
-   "word": "In",
-   "start": 91.804,
-   "end": 91.976
-  },
-  {
-   "word": "the",
-   "start": 92.016,
-   "end": 92.234
-  },
-  {
-   "word": "Atlas's",
-   "start": 92.274,
-   "end": 92.63
-  },
-  {
-   "word": "words:",
-   "start": 92.67,
-   "end": 92.98
-  },
-  {
-   "word": "\"The",
-   "start": 93.17,
-   "end": 93.388
-  },
-  {
-   "word": "subtrait",
-   "start": 93.428,
-   "end": 93.876
-  },
-  {
-   "word": "names",
-   "start": 93.916,
-   "end": 94.226
-  },
-  {
-   "word": "are",
-   "start": 94.266,
-   "end": 94.484
-  },
-  {
-   "word": "therefore",
-   "start": 94.524,
-   "end": 95.018
-  },
-  {
-   "word": "not",
-   "start": 95.058,
-   "end": 95.276
-  },
-  {
-   "word": "claims",
-   "start": 95.316,
-   "end": 95.672
-  },
-  {
-   "word": "of",
-   "start": 95.712,
-   "end": 95.884
-  },
-  {
-   "word": "chemistry,",
-   "start": 95.924,
-   "end": 96.418
-  },
-  {
-   "word": "but",
-   "start": 96.608,
-   "end": 96.826
-  },
-  {
-   "word": "field",
-   "start": 96.866,
-   "end": 97.176
-  },
-  {
-   "word": "names,",
-   "start": 97.216,
-   "end": 97.526
-  },
-  {
-   "word": "tools",
-   "start": 97.716,
-   "end": 98.026
-  },
-  {
-   "word": "for",
-   "start": 98.066,
-   "end": 98.284
-  },
-  {
-   "word": "seeing.\"",
-   "start": 98.324,
-   "end": 98.68
+   "start": 62.94,
+   "end": 63.25
   },
   {
    "word": "Seventy-nine",
-   "start": 99.92,
-   "end": 100.506
+   "start": 64.29,
+   "end": 64.876
   },
   {
    "word": "Cents",
-   "start": 100.546,
-   "end": 100.856
+   "start": 64.916,
+   "end": 65.226
   },
   {
    "word": "carry",
-   "start": 100.896,
-   "end": 101.206
+   "start": 65.266,
+   "end": 65.576
   },
   {
    "word": "Alien",
-   "start": 101.246,
-   "end": 101.556
+   "start": 65.616,
+   "end": 65.926
   },
   {
    "word": "Secretion,",
-   "start": 101.596,
-   "end": 102.09
+   "start": 65.966,
+   "end": 66.46
   },
   {
    "word": "and",
-   "start": 102.28,
-   "end": 102.498
+   "start": 66.65,
+   "end": 66.868
   },
   {
    "word": "seventy",
-   "start": 102.538,
-   "end": 102.94
+   "start": 66.908,
+   "end": 67.31
   },
   {
    "word": "of",
-   "start": 102.98,
-   "end": 103.152
+   "start": 67.35,
+   "end": 67.522
   },
   {
    "word": "them",
-   "start": 103.192,
-   "end": 103.456
+   "start": 67.562,
+   "end": 67.826
   },
   {
    "word": "carry",
-   "start": 103.496,
-   "end": 103.806
+   "start": 67.866,
+   "end": 68.176
   },
   {
    "word": "verdigris",
-   "start": 103.846,
-   "end": 104.34
+   "start": 68.216,
+   "end": 68.71
   },
   {
    "word": "too.",
-   "start": 104.38,
-   "end": 104.598
+   "start": 68.75,
+   "end": 68.968
   },
   {
-   "word": "No",
+   "word": "Cent",
+   "start": 70.008,
+   "end": 70.272
+  },
+  {
+   "word": "number",
+   "start": 70.312,
+   "end": 70.668
+  },
+  {
+   "word": "forty-four",
+   "start": 70.708,
+   "end": 71.202
+  },
+  {
+   "word": "twenty-one,",
+   "start": 71.242,
+   "end": 71.736
+  },
+  {
+   "word": "dated",
+   "start": 71.926,
+   "end": 72.236
+  },
+  {
+   "word": "nineteen",
+   "start": 72.276,
+   "end": 72.724
+  },
+  {
+   "word": "sixty-four",
+   "start": 72.764,
+   "end": 73.258
+  },
+  {
+   "word": "like",
+   "start": 73.298,
+   "end": 73.562
+  },
+  {
+   "word": "Cent",
+   "start": 73.602,
+   "end": 73.866
+  },
+  {
+   "word": "number",
+   "start": 73.906,
+   "end": 74.262
+  },
+  {
+   "word": "eighteen",
+   "start": 74.302,
+   "end": 74.75
+  },
+  {
+   "word": "sixty-seven,",
+   "start": 74.79,
+   "end": 75.33
+  },
+  {
+   "word": "is",
+   "start": 75.52,
+   "end": 75.692
+  },
+  {
+   "word": "close",
+   "start": 75.732,
+   "end": 76.042
+  },
+  {
+   "word": "to",
+   "start": 76.082,
+   "end": 76.254
+  },
+  {
+   "word": "mint",
+   "start": 76.294,
+   "end": 76.558
+  },
+  {
+   "word": "state.",
+   "start": 76.598,
+   "end": 76.908
+  },
+  {
+   "word": "Its",
+   "start": 77.348,
+   "end": 77.566
+  },
+  {
+   "word": "portrait",
+   "start": 77.606,
+   "end": 78.054
+  },
+  {
+   "word": "is",
+   "start": 78.094,
+   "end": 78.266
+  },
+  {
+   "word": "clean",
+   "start": 78.306,
+   "end": 78.616
+  },
+  {
+   "word": "and",
+   "start": 78.656,
+   "end": 78.874
+  },
+  {
+   "word": "bright.",
+   "start": 78.914,
+   "end": 79.27
+  },
+  {
+   "word": "The",
+   "start": 80.31,
+   "end": 80.528
+  },
+  {
+   "word": "Trait",
+   "start": 80.568,
+   "end": 80.878
+  },
+  {
+   "word": "Council",
+   "start": 80.918,
+   "end": 81.32
+  },
+  {
+   "word": "named",
+   "start": 81.36,
+   "end": 81.67
+  },
+  {
+   "word": "every",
+   "start": 81.71,
+   "end": 82.02
+  },
+  {
+   "word": "kind",
+   "start": 82.06,
+   "end": 82.324
+  },
+  {
+   "word": "of",
+   "start": 82.364,
+   "end": 82.536
+  },
+  {
+   "word": "residue",
+   "start": 82.576,
+   "end": 82.978
+  },
+  {
+   "word": "by",
+   "start": 83.018,
+   "end": 83.19
+  },
+  {
+   "word": "reading",
+   "start": 83.23,
+   "end": 83.632
+  },
+  {
+   "word": "the",
+   "start": 83.672,
+   "end": 83.89
+  },
+  {
+   "word": "surface,",
+   "start": 83.93,
+   "end": 84.332
+  },
+  {
+   "word": "without",
+   "start": 84.522,
+   "end": 84.924
+  },
+  {
+   "word": "testing",
+   "start": 84.964,
+   "end": 85.366
+  },
+  {
+   "word": "it.",
+   "start": 85.406,
+   "end": 85.578
+  },
+  {
+   "word": "In",
+   "start": 86.018,
+   "end": 86.19
+  },
+  {
+   "word": "the",
+   "start": 86.23,
+   "end": 86.448
+  },
+  {
+   "word": "Atlas's",
+   "start": 86.488,
+   "end": 86.844
+  },
+  {
+   "word": "words:",
+   "start": 86.884,
+   "end": 87.194
+  },
+  {
+   "word": "\"The",
+   "start": 87.384,
+   "end": 87.602
+  },
+  {
+   "word": "subtrait",
+   "start": 87.642,
+   "end": 88.09
+  },
+  {
+   "word": "names",
+   "start": 88.13,
+   "end": 88.44
+  },
+  {
+   "word": "are",
+   "start": 88.48,
+   "end": 88.698
+  },
+  {
+   "word": "therefore",
+   "start": 88.738,
+   "end": 89.232
+  },
+  {
+   "word": "not",
+   "start": 89.272,
+   "end": 89.49
+  },
+  {
+   "word": "claims",
+   "start": 89.53,
+   "end": 89.886
+  },
+  {
+   "word": "of",
+   "start": 89.926,
+   "end": 90.098
+  },
+  {
+   "word": "chemistry,",
+   "start": 90.138,
+   "end": 90.632
+  },
+  {
+   "word": "but",
+   "start": 90.822,
+   "end": 91.04
+  },
+  {
+   "word": "field",
+   "start": 91.08,
+   "end": 91.39
+  },
+  {
+   "word": "names,",
+   "start": 91.43,
+   "end": 91.74
+  },
+  {
+   "word": "tools",
+   "start": 91.93,
+   "end": 92.24
+  },
+  {
+   "word": "for",
+   "start": 92.28,
+   "end": 92.498
+  },
+  {
+   "word": "seeing.\"",
+   "start": 92.538,
+   "end": 92.894
+  },
+  {
+   "word": "Names",
+   "start": 94.134,
+   "end": 94.444
+  },
+  {
+   "word": "like",
+   "start": 94.484,
+   "end": 94.748
+  },
+  {
+   "word": "these",
+   "start": 94.788,
+   "end": 95.098
+  },
+  {
+   "word": "were",
+   "start": 95.138,
+   "end": 95.402
+  },
+  {
+   "word": "put",
+   "start": 95.442,
+   "end": 95.66
+  },
+  {
+   "word": "forward",
+   "start": 95.7,
+   "end": 96.102
+  },
+  {
+   "word": "and",
+   "start": 96.142,
+   "end": 96.36
+  },
+  {
+   "word": "agreed",
+   "start": 96.4,
+   "end": 96.756
+  },
+  {
+   "word": "on",
+   "start": 96.796,
+   "end": 96.968
+  },
+  {
+   "word": "together.",
+   "start": 97.008,
+   "end": 97.456
+  },
+  {
+   "word": "In",
+   "start": 97.896,
+   "end": 98.068
+  },
+  {
+   "word": "the",
+   "start": 98.108,
+   "end": 98.326
+  },
+  {
+   "word": "words",
+   "start": 98.366,
+   "end": 98.676
+  },
+  {
+   "word": "of",
+   "start": 98.716,
+   "end": 98.888
+  },
+  {
+   "word": "Martin",
+   "start": 98.928,
+   "end": 99.284
+  },
+  {
+   "word": "Lehnen,",
+   "start": 99.324,
+   "end": 99.68
+  },
+  {
+   "word": "in",
+   "start": 99.87,
+   "end": 100.042
+  },
+  {
+   "word": "his",
+   "start": 100.082,
+   "end": 100.3
+  },
+  {
+   "word": "article",
+   "start": 100.34,
+   "end": 100.742
+  },
+  {
+   "word": "\"CENTS",
+   "start": 100.782,
+   "end": 101.092
+  },
+  {
+   "word": "as",
+   "start": 101.132,
+   "end": 101.304
+  },
+  {
+   "word": "an",
+   "start": 101.344,
+   "end": 101.516
+  },
+  {
+   "word": "artistic",
+   "start": 101.556,
+   "end": 102.004
+  },
+  {
+   "word": "expression",
+   "start": 102.044,
+   "end": 102.584
+  },
+  {
+   "word": "of",
+   "start": 102.624,
+   "end": 102.796
+  },
+  {
+   "word": "Bitcoin's",
+   "start": 102.836,
+   "end": 103.284
+  },
+  {
+   "word": "core",
+   "start": 103.324,
+   "end": 103.588
+  },
+  {
+   "word": "ideas\":",
+   "start": 103.628,
+   "end": 103.938
+  },
+  {
+   "word": "\"the",
+   "start": 104.128,
+   "end": 104.346
+  },
+  {
+   "word": "decentralized",
+   "start": 104.386,
+   "end": 105.064
+  },
+  {
+   "word": "formation",
+   "start": 105.104,
+   "end": 105.598
+  },
+  {
+   "word": "of",
    "start": 105.638,
    "end": 105.81
   },
   {
-   "word": "other",
+   "word": "meaning",
    "start": 105.85,
-   "end": 106.16
-  },
-  {
-   "word": "Cent",
-   "start": 106.2,
-   "end": 106.464
-  },
-  {
-   "word": "has",
-   "start": 106.504,
-   "end": 106.722
-  },
-  {
-   "word": "exactly",
-   "start": 106.762,
-   "end": 107.164
-  },
-  {
-   "word": "this",
-   "start": 107.204,
-   "end": 107.468
-  },
-  {
-   "word": "set",
-   "start": 107.508,
-   "end": 107.726
-  },
-  {
-   "word": "of",
-   "start": 107.766,
-   "end": 107.938
-  },
-  {
-   "word": "traits.",
-   "start": 107.978,
-   "end": 108.334
-  },
-  {
-   "word": "Cent",
-   "start": 109.574,
-   "end": 109.838
-  },
-  {
-   "word": "number",
-   "start": 109.878,
-   "end": 110.234
-  },
-  {
-   "word": "forty-four",
-   "start": 110.274,
-   "end": 110.768
-  },
-  {
-   "word": "twenty-one",
-   "start": 110.808,
-   "end": 111.302
-  },
-  {
-   "word": "is",
-   "start": 111.342,
-   "end": 111.514
-  },
-  {
-   "word": "dated",
-   "start": 111.554,
-   "end": 111.864
-  },
-  {
-   "word": "the",
-   "start": 111.904,
-   "end": 112.122
-  },
-  {
-   "word": "same",
-   "start": 112.162,
-   "end": 112.426
-  },
-  {
-   "word": "year,",
-   "start": 112.466,
-   "end": 112.73
+   "end": 106.252
   },
   {
    "word": "and",
-   "start": 112.92,
-   "end": 113.138
-  },
-  {
-   "word": "is",
-   "start": 113.178,
-   "end": 113.35
-  },
-  {
-   "word": "close",
-   "start": 113.39,
-   "end": 113.7
-  },
-  {
-   "word": "to",
-   "start": 113.74,
-   "end": 113.912
-  },
-  {
-   "word": "mint",
-   "start": 113.952,
-   "end": 114.216
-  },
-  {
-   "word": "state.",
-   "start": 114.256,
-   "end": 114.566
-  },
-  {
-   "word": "Its",
-   "start": 115.006,
-   "end": 115.224
-  },
-  {
-   "word": "portrait",
-   "start": 115.264,
-   "end": 115.712
-  },
-  {
-   "word": "is",
-   "start": 115.752,
-   "end": 115.924
-  },
-  {
-   "word": "clean",
-   "start": 115.964,
-   "end": 116.274
-  },
-  {
-   "word": "and",
-   "start": 116.314,
-   "end": 116.532
-  },
-  {
-   "word": "bright.",
-   "start": 116.572,
-   "end": 116.928
-  },
-  {
-   "word": "In",
-   "start": 117.968,
-   "end": 118.14
-  },
-  {
-   "word": "March",
-   "start": 118.18,
-   "end": 118.49
-  },
-  {
-   "word": "twenty",
-   "start": 118.53,
-   "end": 118.886
-  },
-  {
-   "word": "twenty-four,",
-   "start": 118.926,
-   "end": 119.466
-  },
-  {
-   "word": "Chang",
-   "start": 119.656,
-   "end": 119.966
-  },
-  {
-   "word": "inscribed",
-   "start": 120.006,
-   "end": 120.5
-  },
-  {
-   "word": "the",
-   "start": 120.54,
-   "end": 120.758
-  },
-  {
-   "word": "image",
-   "start": 120.798,
-   "end": 121.108
-  },
-  {
-   "word": "of",
-   "start": 121.148,
-   "end": 121.32
-  },
-  {
-   "word": "Cent",
-   "start": 121.36,
-   "end": 121.624
-  },
-  {
-   "word": "number",
-   "start": 121.664,
-   "end": 122.02
-  },
-  {
-   "word": "eighteen",
-   "start": 122.06,
-   "end": 122.508
-  },
-  {
-   "word": "sixty-seven",
-   "start": 122.548,
-   "end": 123.088
-  },
-  {
-   "word": "on",
-   "start": 123.128,
-   "end": 123.3
-  },
-  {
-   "word": "a",
-   "start": 123.34,
-   "end": 123.466
-  },
-  {
-   "word": "satoshi,",
-   "start": 123.506,
-   "end": 123.908
-  },
-  {
-   "word": "and",
-   "start": 124.098,
-   "end": 124.316
-  },
-  {
-   "word": "the",
-   "start": 124.356,
-   "end": 124.574
-  },
-  {
-   "word": "physical",
-   "start": 124.614,
-   "end": 125.062
-  },
-  {
-   "word": "coin",
-   "start": 125.102,
-   "end": 125.366
-  },
-  {
-   "word": "was",
-   "start": 125.406,
-   "end": 125.624
-  },
-  {
-   "word": "melted",
-   "start": 125.664,
-   "end": 126.02
-  },
-  {
-   "word": "into",
-   "start": 126.06,
-   "end": 126.324
-  },
-  {
-   "word": "CENTS",
-   "start": 126.364,
-   "end": 126.674
-  },
-  {
-   "word": "Block",
-   "start": 126.714,
-   "end": 127.024
-  },
-  {
-   "word": "Copper.",
-   "start": 127.064,
-   "end": 127.42
-  },
-  {
-   "word": "Released",
-   "start": 128.46,
-   "end": 128.908
-  },
-  {
-   "word": "at",
-   "start": 128.948,
-   "end": 129.12
-  },
-  {
-   "word": "one",
-   "start": 129.16,
-   "end": 129.378
-  },
-  {
-   "word": "satoshi,",
-   "start": 129.418,
-   "end": 129.82
-  },
-  {
-   "word": "the",
-   "start": 130.01,
-   "end": 130.228
-  },
-  {
-   "word": "Cent's",
-   "start": 130.268,
-   "end": 130.578
+   "start": 106.292,
+   "end": 106.51
   },
   {
    "word": "value",
-   "start": 130.618,
-   "end": 130.928
+   "start": 106.55,
+   "end": 106.86
   },
   {
-   "word": "moved",
-   "start": 130.968,
-   "end": 131.278
+   "word": "consensus",
+   "start": 106.9,
+   "end": 107.394
   },
   {
-   "word": "from",
-   "start": 131.318,
-   "end": 131.582
+   "word": "around",
+   "start": 107.434,
+   "end": 107.79
   },
   {
-   "word": "a",
-   "start": 131.622,
-   "end": 131.748
+   "word": "CENTS",
+   "start": 107.83,
+   "end": 108.14
   },
   {
-   "word": "figure",
-   "start": 131.788,
-   "end": 132.144
+   "word": "functions",
+   "start": 108.18,
+   "end": 108.674
   },
   {
-   "word": "set",
-   "start": 132.184,
-   "end": 132.402
-  },
-  {
-   "word": "by",
-   "start": 132.442,
-   "end": 132.614
-  },
-  {
-   "word": "the",
-   "start": 132.654,
-   "end": 132.872
-  },
-  {
-   "word": "state",
-   "start": 132.912,
-   "end": 133.222
-  },
-  {
-   "word": "into",
-   "start": 133.262,
-   "end": 133.526
+   "word": "as",
+   "start": 108.714,
+   "end": 108.886
   },
   {
    "word": "an",
-   "start": 133.566,
-   "end": 133.738
+   "start": 108.926,
+   "end": 109.098
   },
   {
-   "word": "ongoing",
-   "start": 133.778,
-   "end": 134.18
+   "word": "artwork",
+   "start": 109.138,
+   "end": 109.54
   },
   {
-   "word": "process,",
-   "start": 134.22,
-   "end": 134.622
+   "word": "in",
+   "start": 109.58,
+   "end": 109.752
   },
   {
-   "word": "set",
-   "start": 134.812,
-   "end": 135.03
+   "word": "itself.\"",
+   "start": 109.792,
+   "end": 110.148
   },
   {
-   "word": "again",
-   "start": 135.07,
-   "end": 135.38
+   "word": "In",
+   "start": 111.588,
+   "end": 111.76
   },
   {
-   "word": "each",
-   "start": 135.42,
-   "end": 135.684
+   "word": "March",
+   "start": 111.8,
+   "end": 112.11
   },
   {
-   "word": "time",
-   "start": 135.724,
-   "end": 135.988
+   "word": "twenty",
+   "start": 112.15,
+   "end": 112.506
   },
   {
-   "word": "someone",
-   "start": 136.028,
-   "end": 136.43
+   "word": "twenty-four,",
+   "start": 112.546,
+   "end": 113.086
   },
   {
-   "word": "reads",
-   "start": 136.47,
-   "end": 136.78
+   "word": "Chang",
+   "start": 113.276,
+   "end": 113.586
   },
   {
-   "word": "it,",
-   "start": 136.82,
-   "end": 136.992
+   "word": "inscribed",
+   "start": 113.626,
+   "end": 114.12
   },
   {
-   "word": "keeps",
-   "start": 137.182,
-   "end": 137.492
+   "word": "the",
+   "start": 114.16,
+   "end": 114.378
   },
   {
-   "word": "it",
-   "start": 137.532,
-   "end": 137.704
+   "word": "image",
+   "start": 114.418,
+   "end": 114.728
   },
   {
-   "word": "or",
-   "start": 137.744,
-   "end": 137.916
-  },
-  {
-   "word": "lets",
-   "start": 137.956,
-   "end": 138.22
-  },
-  {
-   "word": "it",
-   "start": 138.26,
-   "end": 138.432
-  },
-  {
-   "word": "go.",
-   "start": 138.472,
-   "end": 138.644
+   "word": "of",
+   "start": 114.768,
+   "end": 114.94
   },
   {
    "word": "Cent",
-   "start": 140.084,
-   "end": 140.348
+   "start": 114.98,
+   "end": 115.244
   },
   {
    "word": "number",
-   "start": 140.388,
-   "end": 140.744
+   "start": 115.284,
+   "end": 115.64
   },
   {
    "word": "eighteen",
-   "start": 140.784,
-   "end": 141.232
+   "start": 115.68,
+   "end": 116.128
   },
   {
-   "word": "sixty-seven,",
-   "start": 141.272,
-   "end": 141.812
+   "word": "sixty-seven",
+   "start": 116.168,
+   "end": 116.708
+  },
+  {
+   "word": "on",
+   "start": 116.748,
+   "end": 116.92
   },
   {
    "word": "a",
-   "start": 142.002,
-   "end": 142.128
+   "start": 116.96,
+   "end": 117.086
+  },
+  {
+   "word": "satoshi,",
+   "start": 117.126,
+   "end": 117.528
+  },
+  {
+   "word": "and",
+   "start": 117.718,
+   "end": 117.936
+  },
+  {
+   "word": "the",
+   "start": 117.976,
+   "end": 118.194
+  },
+  {
+   "word": "physical",
+   "start": 118.234,
+   "end": 118.682
+  },
+  {
+   "word": "coin",
+   "start": 118.722,
+   "end": 118.986
+  },
+  {
+   "word": "was",
+   "start": 119.026,
+   "end": 119.244
+  },
+  {
+   "word": "melted",
+   "start": 119.284,
+   "end": 119.64
+  },
+  {
+   "word": "into",
+   "start": 119.68,
+   "end": 119.944
+  },
+  {
+   "word": "CENTS",
+   "start": 119.984,
+   "end": 120.294
+  },
+  {
+   "word": "Block",
+   "start": 120.334,
+   "end": 120.644
+  },
+  {
+   "word": "Copper.",
+   "start": 120.684,
+   "end": 121.04
+  },
+  {
+   "word": "Released",
+   "start": 122.08,
+   "end": 122.528
+  },
+  {
+   "word": "at",
+   "start": 122.568,
+   "end": 122.74
+  },
+  {
+   "word": "one",
+   "start": 122.78,
+   "end": 122.998
+  },
+  {
+   "word": "satoshi,",
+   "start": 123.038,
+   "end": 123.44
+  },
+  {
+   "word": "the",
+   "start": 123.63,
+   "end": 123.848
+  },
+  {
+   "word": "Cent's",
+   "start": 123.888,
+   "end": 124.198
+  },
+  {
+   "word": "value",
+   "start": 124.238,
+   "end": 124.548
+  },
+  {
+   "word": "moved",
+   "start": 124.588,
+   "end": 124.898
+  },
+  {
+   "word": "from",
+   "start": 124.938,
+   "end": 125.202
+  },
+  {
+   "word": "a",
+   "start": 125.242,
+   "end": 125.368
+  },
+  {
+   "word": "figure",
+   "start": 125.408,
+   "end": 125.764
+  },
+  {
+   "word": "set",
+   "start": 125.804,
+   "end": 126.022
+  },
+  {
+   "word": "by",
+   "start": 126.062,
+   "end": 126.234
+  },
+  {
+   "word": "the",
+   "start": 126.274,
+   "end": 126.492
+  },
+  {
+   "word": "state",
+   "start": 126.532,
+   "end": 126.842
+  },
+  {
+   "word": "into",
+   "start": 126.882,
+   "end": 127.146
+  },
+  {
+   "word": "an",
+   "start": 127.186,
+   "end": 127.358
+  },
+  {
+   "word": "ongoing",
+   "start": 127.398,
+   "end": 127.8
+  },
+  {
+   "word": "process,",
+   "start": 127.84,
+   "end": 128.242
+  },
+  {
+   "word": "set",
+   "start": 128.432,
+   "end": 128.65
+  },
+  {
+   "word": "again",
+   "start": 128.69,
+   "end": 129.0
+  },
+  {
+   "word": "each",
+   "start": 129.04,
+   "end": 129.304
+  },
+  {
+   "word": "time",
+   "start": 129.344,
+   "end": 129.608
+  },
+  {
+   "word": "someone",
+   "start": 129.648,
+   "end": 130.05
+  },
+  {
+   "word": "reads",
+   "start": 130.09,
+   "end": 130.4
+  },
+  {
+   "word": "it,",
+   "start": 130.44,
+   "end": 130.612
+  },
+  {
+   "word": "keeps",
+   "start": 130.802,
+   "end": 131.112
+  },
+  {
+   "word": "it",
+   "start": 131.152,
+   "end": 131.324
+  },
+  {
+   "word": "or",
+   "start": 131.364,
+   "end": 131.536
+  },
+  {
+   "word": "lets",
+   "start": 131.576,
+   "end": 131.84
+  },
+  {
+   "word": "it",
+   "start": 131.88,
+   "end": 132.052
+  },
+  {
+   "word": "go.",
+   "start": 132.092,
+   "end": 132.264
+  },
+  {
+   "word": "Cent",
+   "start": 133.704,
+   "end": 133.968
+  },
+  {
+   "word": "number",
+   "start": 134.008,
+   "end": 134.364
+  },
+  {
+   "word": "eighteen",
+   "start": 134.404,
+   "end": 134.852
+  },
+  {
+   "word": "sixty-seven,",
+   "start": 134.892,
+   "end": 135.432
+  },
+  {
+   "word": "a",
+   "start": 135.622,
+   "end": 135.748
   },
   {
    "word": "great",
-   "start": 142.168,
-   "end": 142.478
+   "start": 135.788,
+   "end": 136.098
   },
   {
    "word": "Cent.",
-   "start": 142.518,
-   "end": 142.782
+   "start": 136.138,
+   "end": 136.402
   }
  ]
 }

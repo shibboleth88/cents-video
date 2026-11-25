@@ -11,12 +11,12 @@ import json, pathlib, re, subprocess
 F = pathlib.Path(__file__).resolve().parents[1]
 text = open(F / "audio/tts_text.txt").read()
 text = re.sub(r"\[[a-z ]+\]", "", text).split()
-# Holds after these words (seconds), as planned for build_vo.py (#1867, script v0.2). The narration starts at 1.2 s, once
-# play is pressed; "sixty-seven." holds the 3DCENTS turn so the year zoom lands after frame 184 (34 + 150).
+# Holds after these words (seconds), as planned for build_vo.py (#1867, script v0.3). The narration starts at 1.2 s, once
+# play is pressed; "sixty-seven." holds the 3DCENTS turn so the concept arrives after frame 184 (34 + 150).
 LEAD = 1.2
-HOLDS = {"sixty-seven.": 3.1, "mint.": 0.5, "traces.": 0.8, "world?\"": 0.8, "medium.\"": 0.9, "contamination.": 0.4,
-         "head.": 0.4, "collar.": 0.4, "both.": 0.8, "chemistry\".": 0.5, "films\".": 0.6, "seeing.\"": 0.8,
-         "too.": 0.6, "traits.": 0.8, "bright.": 0.6, "Copper.": 0.6, "go.": 1.0}
+HOLDS = {"sixty-seven.": 3.1, "traces.": 0.8, "world?\"": 0.8, "medium.\"": 0.9, "contamination.": 0.4,
+         "head.": 0.4, "collar.": 0.4, "films\".": 0.6, "too.": 0.6, "bright.": 0.6, "seeing.\"": 0.8,
+         "itself.\"": 1.0, "Copper.": 0.6, "go.": 1.0}
 PAD = 6.5   # closing turn and credits
 t, words = LEAD, []
 for w in text:
