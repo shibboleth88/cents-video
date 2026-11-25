@@ -34,7 +34,7 @@ const useAt = ({ alignment, shotStartFrame }: Anchored) => {
  * word for word (punctuation and parentheses aside): a mismatch fails the render.
  */
 const nrmWord = (w: string) => w.toLowerCase().replace(/[\u2019']/g, "").replace(/[^a-z0-9]/g, "");
-const useSpokenWords = ({ alignment, shotStartFrame }: Anchored, quote?: { at_phrase: string; text: string; spoken?: Record<string, string> }) => {
+export const useSpokenWords = ({ alignment, shotStartFrame }: Anchored, quote?: { at_phrase: string; text: string; spoken?: Record<string, string> }) => {
   const { fps } = useVideoConfig();
   if (!quote) return [] as number[];
   const card = quote.text.split(/\s+/);

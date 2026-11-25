@@ -45,8 +45,13 @@ function numeral(tok: string): string {
   return n === undefined ? tok : `${n}${m[2]}`;
 }
 
-/** A hyphen inside a word must not become a line break ("thirty- / three"). */
-const nobreak = (tok: string) => tok.replace(/(\w)-(\w)/g, "$1‑$2");
+/** A hyphen inside a NUMBER must not become a line break ("thirty- / three"). Other compounds may break at
+ *  their hyphen, as print does: until 2026-11-25 every hyphen was held, and "information-destroying" (Kruger,
+ *  #1867) became one 22-letter word that pushed a two-line caption to three and out of the safe area. */
+const isNumWord = (w: string) => { const k = w.toLowerCase(); return k in SMALL || k in TENS || k in UNITS; };
+const nobreak = (tok: string) =>
+  tok.replace(/([A-Za-z0-9]+)-([A-Za-z0-9]+)/g, (m, a: string, b: string) =>
+    /\d/.test(m) || (isNumWord(a) && isNumWord(b)) ? `${a}‑${b}` : m);
 const isNumber = (tok: string) => /\d/.test(tok);
 
 const norm = (w: string) => w.toLowerCase().replace(/[^a-z0-9']/g, "");

@@ -5,20 +5,20 @@ pauses at punctuation, plus the holds build_vo.py is expected to insert) and a s
 the same length, so the whole film renders as stills before any voice credits are spent. Every run
 marks the alignment "_source": "STAND-IN" so it can't be mistaken for a heard take.
 
-    python3 -I films/onecent-10000/audio/make_standin.py   (from the repo root)
+    python3 -I films/onecent-1867/audio/make_standin.py   (from the repo root)
 """
 import json, pathlib, re, subprocess
 F = pathlib.Path(__file__).resolve().parents[1]
 text = open(F / "audio/tts_text.txt").read()
 text = re.sub(r"\[[a-z ]+\]", "", text).split()
-# Holds after these words (seconds), as planned for build_vo.py. "thousand." and "all." hold the 3DCENTS turn so the
-# year zoom lands after frame 150; "Assassin." (the pool line) gives the 42 Cents their scroll.
-HOLDS = {"thousand.": 0.8, "all.": 0.5, "mint.": 0.4, "born.\"": 0.8, "projectile.\"": 0.6, "neck.": 0.5,
-         "Assassin.": 1.4, "seventy-six.": 0.8, "films\".": 0.3, "verdigris.": 0.8, "state.": 0.4, "unmarked.": 0.6,
-         "cent.": 0.8, "signifier.": 1.0, "value.": 0.6, "crypto.\"": 0.8, "sixty-five.": 0.6, "narrative\".": 0.8,
-         "identical.\"": 0.8, "spot.": 0.4, "deciding.": 1.0}
+# Holds after these words (seconds), as planned for build_vo.py (#1867, script v0.2). The narration starts at 1.2 s, once
+# play is pressed; "sixty-seven." holds the 3DCENTS turn so the year zoom lands after frame 184 (34 + 150).
+LEAD = 1.2
+HOLDS = {"sixty-seven.": 3.1, "mint.": 0.5, "traces.": 0.8, "world?\"": 0.8, "medium.\"": 0.9, "contamination.": 0.4,
+         "head.": 0.4, "collar.": 0.4, "both.": 0.8, "chemistry\".": 0.5, "films\".": 0.6, "seeing.\"": 0.8,
+         "too.": 0.6, "traits.": 0.8, "bright.": 0.6, "Copper.": 0.6, "go.": 1.0}
 PAD = 6.5   # closing turn and credits
-t, words = 0.3, []
+t, words = LEAD, []
 for w in text:
     letters = len(re.sub(r"[^A-Za-z]", "", w))
     d = 0.08 + 0.046 * letters

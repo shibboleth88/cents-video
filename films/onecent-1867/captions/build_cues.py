@@ -1,24 +1,24 @@
-"""Captions for One Cent #10000 (copied from films/onecent-8820/captions/build_cues.py): cut-aware cues on the current eee take, with each
+"""Captions for One Cent #1867 (copied from films/onecent-10000/captions/build_cues.py): cut-aware cues on the current eee take, with each
 spoken number written back the way the script writes it. Each script word is
 paired with its spoken words by a table of how many words it takes to say, so
 the written form inherits their exact timing. Refuses unless the cue text
 joins to exactly script/voiceover.txt.
 
-    python3 -I films/onecent-10000/captions/build_cues.py   (run from the repo root)
+    python3 -I films/onecent-1867/captions/build_cues.py   (run from the repo root)
 """
 import json, re, sys, pathlib
 ROOT = pathlib.Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT / "pipeline"))
 import cues as C
-F = ROOT / "films" / "onecent-10000"
+F = ROOT / "films" / "onecent-1867"
 al = json.load(open(F / "script/alignment.json"))
 tl = json.load(open(F / "timeline/timeline.json"))
 norm = lambda s: re.sub(r"[^a-z0-9 ]", " ", s.lower().replace("-", " ")).split()
 
 # Written token (punctuation stripped) -> its spoken form, as in audio/tts_text.txt.
-SPOKEN = {"#10000": "number ten thousand", "#1256": "number twelve fifty-six", "1976": "nineteen seventy-six",
-          "42": "Forty-two", "1865": "eighteen sixty-five", "1968": "nineteen sixty-eight",
-          "Reiss": "Rice", "\u2013": "", "-": ""}
+SPOKEN = {"#1867": "number eighteen sixty-seven", "#4421": "number forty-four twenty-one", "1964": "nineteen sixty-four",
+          "220": "Two hundred and twenty", "376": "three hundred and seventy-six", "29": "Twenty-nine", "79": "Seventy-nine",
+          "70": "seventy", "2024": "twenty twenty-four", "\u2013": "", "-": ""}
 
 script = open(F / "script/voiceover.txt").read().split()
 words, out, i = al["words"], [], 0
@@ -46,7 +46,7 @@ bounds = [start_of(s["start"]["at_phrase"]) if "at_phrase" in s["start"] else st
           for s in tl["shots"] if ("at_phrase" in s["start"] or "after_phrase" in s["start"]) and s["shot_id"] not in RUN_ON]
 
 # Breaks at phrase edges where the length rule alone would split a phrase.
-EXTRA_BREAKS = ["with no mint mark", "Its number is also", "in his article", "Traits like", "the mark of an imagined", "the spot itself is", "Its portrait is", "The penny becomes an", "transforms decay", "Lucy Lippard and", "may be complementary", "What it means and", "the people who collect"]
+EXTRA_BREAKS = ["with no mint mark", "writing on Rutherford Chang", "quotes the artist", "Three traits record", "and Alien Secretion names", "In the Atlas's words", "and is close to", "and the physical coin", "set again each time"]
 bounds = sorted(bounds + [start_of(ph) for ph in EXTRA_BREAKS])
 cues = C.build(out, bounds)
 problems = C.audit(cues, bounds)

@@ -1,0 +1,172 @@
+{
+ "essay": {
+  "title": "Cent #1867",
+  "subtitle": "Inscription #66001799",
+  "author": "shibboleth",
+  "source": "/mnt/project-files/single-cent-series/1867/1867_proposal_v0.2.md",
+  "version": "rehearsal (2026-11-25): opening only, script v0.2 NOT yet approved; STAND-IN timing"
+ },
+ "_what": "Cent #1867 (1964, no mint mark): Significant Obsidian, Significant Verdigris, Contaminated (Alien Secretion). Concept C20 (Circulation leaves traces).",
+ "shots": [
+  {
+   "shot_id": "s01_open",
+   "start": {
+    "at_start": true
+   },
+   "end": {
+    "at_phrase": "Circulation leaves traces"
+   },
+   "purpose": "Look C opening (PR #25 v3.1, title below): play button, CENTS STORY TIME, one 3DCENTS turn; then the lens on the date and where a mint mark would be (boxes 1 and 2 of 1867_zoom_plan_v0.1.jpg).",
+   "visual_kind": "code",
+   "component": "StoryOpen",
+   "props": {
+    "inscription": 66001799,
+    "n": 1867,
+    "front": "hires/1867.webp",
+    "spin": {
+     "src": "3dcents/1867-360-30fps.mp4",
+     "width": 1080,
+     "height": 1920,
+     "frames": 150,
+     "coin": {
+      "cx": 539.5,
+      "cy": 958.5,
+      "d": 776
+     },
+     "credit": "3D render: 3DCENTS by sinvalli",
+     "credit_at_end": true
+    },
+    "moves": [
+     {
+      "at_phrase": "A penny dated",
+      "box": [
+       0.648,
+       0.61,
+       0.848,
+       0.695
+      ],
+      "mark": true,
+      "dur": 0.9
+     },
+     {
+      "at_phrase": "with no mint mark",
+      "box": [
+       0.705,
+       0.695,
+       0.838,
+       0.762
+      ],
+      "mark": true,
+      "dur": 0.7
+     },
+     {
+      "at_phrase": "generally indicating the",
+      "plus": 0.6,
+      "box": null,
+      "dur": 0.9
+     }
+    ],
+    "reads": [
+     {
+      "at_phrase": "A penny dated",
+      "chip": "1964"
+     },
+     {
+      "at_phrase": "with no mint mark",
+      "chip": "No mint mark"
+     },
+     {
+      "at_phrase": "generally indicating the",
+      "chip": "Generally Philadelphia"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s02_concept",
+   "start": {
+    "at_phrase": "Circulation leaves traces"
+   },
+   "end": {
+    "at_phrase": "In the words of Emily"
+   },
+   "purpose": "Concept C20 in Look C: the concept takes the name's place under the coin the opening ends on.",
+   "visual_kind": "code",
+   "component": "StoryCard",
+   "props": {
+    "n": 1867,
+    "front": "hires/1867.webp",
+    "concept": {
+     "at_phrase": "Circulation leaves traces",
+     "label": "Circulation leaves traces"
+    }
+   },
+   "join_prev": true
+  },
+  {
+   "shot_id": "s03_watlington",
+   "start": {
+    "at_phrase": "In the words of Emily"
+   },
+   "end": {
+    "at_phrase": "Rhea Myers, in her"
+   },
+   "purpose": "Watlington, lit, in Look C: the coin rises to the top, the quote on a copper rule. (Proposal v0.1 plan: UCCA photo at the attribution first; not built yet.)",
+   "visual_kind": "code",
+   "component": "StoryCard",
+   "props": {
+    "n": 1867,
+    "front": "hires/1867.webp",
+    "quote": {
+     "at_phrase": "Circulation is another",
+     "text": "Circulation is another of Chang’s key themes: how do things change as they move through the world?",
+     "who": "Emily Watlington",
+     "where": "Art in America, 1 May 2026"
+    }
+   },
+   "join_prev": true
+  },
+  {
+   "shot_id": "s04_kruger",
+   "start": {
+    "at_phrase": "Rhea Myers, in her"
+   },
+   "end": {
+    "at_phrase": "A circulated copper cent"
+   },
+   "purpose": "Kruger as quoted by Myers (QUOTE_BANK H25), lit, in Look C.",
+   "visual_kind": "code",
+   "component": "StoryCard",
+   "props": {
+    "n": 1867,
+    "front": "hires/1867.webp",
+    "from_top": true,
+    "quote": {
+     "at_phrase": "Money is an",
+     "text": "Money is an information-destroying medium.",
+     "size": 72,
+     "who": "Barbara Kruger",
+     "where": "quoted by Rhea Myers, Proof of Work (2022)"
+    }
+   },
+   "join_prev": true
+  },
+  {
+   "shot_id": "s05_rest",
+   "start": {
+    "at_phrase": "A circulated copper cent"
+   },
+   "end": {
+    "at_end": true
+   },
+   "purpose": "REHEARSAL STUB: the rest of the film, not built yet.",
+   "visual_kind": "code",
+   "component": "CentLook",
+   "props": {
+    "inscription": 66001799,
+    "n": 1867,
+    "front": "hires/1867.webp"
+   }
+  }
+ ]
+}
