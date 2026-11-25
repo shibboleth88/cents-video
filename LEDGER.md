@@ -229,6 +229,15 @@ them was reasonable.
   limitation, run the one cheap test that would show it is still true, in the
   subject's own context (the real page, not a blank one).
 
+- **"About N" is not "within N".** A duration rounded to fit a sentence, then
+  repeated as a bound, becomes a claim that hours can falsify. The #1867 ledger
+  note said three transfers came "all within three weeks" of the reveal; the
+  third came 21 days 6 hours after it. The phrase went on into a closing option
+  sent to the user and into memory before a script draft measured the gap
+  (2026-11-25). Corrected beside each copy. *Separating observation:* before
+  writing "within", "all" or "only" about times, subtract the timestamps and
+  compare against the bound; when the result is close, give the dates instead.
+
 ## Refuted — killed by a measurement, do not re-investigate
 
 - *"The left-band safe-area failure is a mispositioned element."* **Refuted** by

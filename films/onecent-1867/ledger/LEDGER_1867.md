@@ -9,7 +9,9 @@ Traced 2026-11-25 from mempool.space (public API) for the closing line ("set aga
 | 2024-03-28 09:10 | transfer | d6b2f703f4d2… |
 | 2024-04-17 08:13 | transfer | b704c695147e… (unspent when traced) |
 
-Three transfers after the reveal, all within three weeks of it; the same wallet has held it since 17 April 2024 (as of 25 November 2026).
+Three transfers after the reveal, ~~all within three weeks of it~~; the same wallet has held it since 17 April 2024 (as of 25 November 2026).
+
+*Correction, 2026-11-25 (22:50Z):* "all within three weeks" was false. Measured from the timestamps above, the transfers came 15 h 40 min, 1 d 7 h 19 min and 21 d 6 h 22 min after the reveal, so the third falls just over three weeks after it (and 19 d 23 h after the second). Accurate wordings: "twice in its first two days, and once more on 17 April 2024", or "three times by 17 April 2024".
 
 ## Checked against a source the trace didn't use
 
