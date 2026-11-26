@@ -32,6 +32,9 @@ Copied for Cent #10000 from films/onecent-8820/audio/check_heard.py. Change: "Ri
 respelling of Reiss, for its pronunciation) is folded from what a recogniser may write ("Reiss", "Reis",
 "Rise"), and each such fold is printed.
 
+Copied for Cent #1867 v1 from films/onecent-10000/audio/check_heard.py. Change: "cents.gallery" is folded
+to "cents dot gallery", as "cents.vision" already was (the end card names both sites).
+
 `--control` drops one word from the expected text and must fail.
 """
 import json, re, sys
@@ -75,7 +78,7 @@ def norm(text):
     t = text.lower()
     t = re.sub(r"\[[a-z ]+\]", " ", t)                    # direction tags, if any reached the text
     t = re.sub(r"(\d),(\d{3})", r"\1\2", t)               # 10,000 -> 10000
-    t = t.replace("cents.vision", "cents dot vision").replace("dope_mind", "dope mind").replace("dope mind", "dopemind")
+    t = t.replace("cents.vision", "cents dot vision").replace("cents.gallery", "cents dot gallery").replace("dope_mind", "dope mind").replace("dope mind", "dopemind")
     t = re.sub(r"\b(\d+)(st|nd|rd|th)\b", r"\1", t)                  # 9th -> 9
     for w, d in ORDINALS.items(): t = re.sub(rf"\b{w}\b", d, t)        # ninth -> 9
     # Punctuation ends a number run ("nineteen seventy-nine, one of the three" is 1979 then 1),
@@ -144,7 +147,7 @@ if __name__ == "__main__" and "--write-alignment" not in sys.argv:
 def _subtokens(word):
     t = word.lower()
     t = re.sub(r"\[[a-z ]+\]", " ", t)
-    t = re.sub(r"(\d),(\d{3})", r"\1\2", t).replace("cents.vision", "cents dot vision").replace("dope_mind", "dope mind")
+    t = re.sub(r"(\d),(\d{3})", r"\1\2", t).replace("cents.vision", "cents dot vision").replace("cents.gallery", "cents dot gallery").replace("dope_mind", "dope mind")
     t = re.sub(r"\b(\d+)(st|nd|rd|th)\b", r"\1", t)
     for w, d in ORDINALS.items(): t = re.sub(rf"\b{w}\b", d, t)
     t = re.sub(r"[.,;:!?\"]", " | ", t.replace("-", " "))

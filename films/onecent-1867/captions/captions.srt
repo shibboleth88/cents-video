@@ -1,203 +1,143 @@
 1
-00:00:01,199 --> 00:00:02,927
+00:00:01,199 --> 00:00:03,240
 Cent #1867.
 
 2
-00:00:06,468 --> 00:00:07,846
-Circulation leaves traces.
+00:00:06,900 --> 00:00:09,220
+Every physical coin joins two things:
 
 3
-00:00:09,086 --> 00:00:11,007
-In the words of Emily Watlington,
+00:00:09,660 --> 00:00:10,900
+metal and stamp.
 
 4
-00:00:11,198 --> 00:00:13,865
-writing on Rutherford Chang in Art in America:
+00:00:12,140 --> 00:00:12,960
+In a copper cent,
 
 5
-00:00:14,055 --> 00:00:16,557
-"Circulation is another of Chang's key themes:
+00:00:13,160 --> 00:00:15,480
+the coin's face and its metal had come apart.
 
 6
-00:00:16,748 --> 00:00:18,486
-how do things change as they
+00:00:16,179 --> 00:00:18,839
+Hoarding such coins, Chang said in 2017,
 
 7
-00:00:18,525 --> 00:00:19,839
-move through the world?"
+00:00:19,579 --> 00:00:22,079
+was like "buying 1.7 cents of copper
 
 8
-00:00:20,679 --> 00:00:23,083
-Rhea Myers, in her book Proof of Work,
+00:00:22,179 --> 00:00:24,660
+for one cent and it's still worth one cent."
 
 9
-00:00:23,274 --> 00:00:25,121
-quotes the artist Barbara Kruger:
+00:00:26,000 --> 00:00:27,239
+Chang took the two apart.
 
 10
-00:00:25,312 --> 00:00:27,527
-"Money is an information-destroying medium."
+00:00:27,879 --> 00:00:30,539
+He inscribed the image of each obverse on Bitcoin,
 
 11
-00:00:28,867 --> 00:00:31,277
-A circulated copper cent is the exception.
+00:00:30,679 --> 00:00:32,859
+and had the physical coins melted and cast
 
 12
-00:00:31,718 --> 00:00:34,938
-Three traits record where Cent #1867
+00:00:32,899 --> 00:00:35,399
+into one block, CENTS Block Copper.
 
 13
-00:00:34,978 --> 00:00:37,491
-has been: two patinas and a contamination.
+00:00:36,560 --> 00:00:39,000
+Boris Groys describes two ways of archiving:
 
 14
-00:00:38,332 --> 00:00:40,834
-A dark band of Significant Obsidian crosses
+00:00:39,359 --> 00:00:40,700
+"the object without an aura"
 
 15
-00:00:40,874 --> 00:00:43,857
-the upper left, over the motto and Lincoln's head.
+00:00:41,039 --> 00:00:42,960
+and "the aura without an object."
 
 16
-00:00:44,698 --> 00:00:47,218
-Green patches of Significant Verdigris gather
+00:00:43,820 --> 00:00:44,939
+CENTS keeps both.
 
 17
-00:00:47,258 --> 00:00:50,270
-on his cheek, behind his head and at his collar.
+00:00:46,179 --> 00:00:48,560
+In the image of Cent #1867,
 
 18
-00:00:51,109 --> 00:00:53,078
-The third trait came from outside:
+00:00:48,799 --> 00:00:50,159
+the copper's own chemistry
 
 19
-00:00:53,268 --> 00:00:54,933
-Contaminated, Alien Secretion.
+00:00:50,320 --> 00:00:52,079
+spreads over the stamp of the state.
 
 20
-00:00:55,374 --> 00:00:56,549
-In the Traits Atlas,
+00:00:53,259 --> 00:00:55,719
+A dark band of Significant Obsidian crosses
 
 21
-00:00:56,740 --> 00:00:59,167
-contamination is "matter imposed upon copper",
+00:00:55,759 --> 00:00:58,340
+the upper left, over the motto and Lincoln's head.
 
 22
-00:00:59,357 --> 00:01:01,573
-and Alien Secretion names "unidentifiable
+00:00:59,479 --> 00:01:01,859
+Green patches of Significant Verdigris gather
 
 23
-00:01:01,613 --> 00:01:03,250
-translucent or greenish films".
+00:01:01,899 --> 00:01:04,480
+on his cheek, behind his head and at his collar.
 
 24
-00:01:04,290 --> 00:01:06,459
-79 Cents carry Alien Secretion,
+00:01:05,700 --> 00:01:07,379
+A third trait came from outside:
 
 25
-00:01:06,650 --> 00:01:08,968
-and 70 of them carry verdigris too.
+00:01:07,760 --> 00:01:09,819
+Contaminated, Alien Secretion.
 
 26
-00:01:10,007 --> 00:01:15,329
-Cent #4421, dated 1964 like Cent #1867,
+00:01:10,239 --> 00:01:12,640
+In the Traits Atlas, Alien Secretion names
 
 27
-00:01:15,519 --> 00:01:16,908
-is close to mint state.
+00:01:12,859 --> 00:01:15,760
+"unidentifiable translucent or greenish films".
 
 28
-00:01:17,347 --> 00:01:19,269
-Its portrait is clean and bright.
+00:01:16,700 --> 00:01:18,920
+Compare it to Cent #4421,
 
 29
-00:01:20,310 --> 00:01:22,977
-The Trait Council named every kind of residue
+00:01:19,260 --> 00:01:22,079
+also dated 1964 and close to mint state.
 
 30
-00:01:23,018 --> 00:01:25,578
-by reading the surface, without testing it.
+00:01:23,219 --> 00:01:25,879
+A cent held at one cent by the state became
 
 31
-00:01:26,018 --> 00:01:28,439
-In the Atlas's words: "The subtrait names
+00:01:25,920 --> 00:01:27,560
+a Cent whose value and meaning
 
 32
-00:01:28,480 --> 00:01:30,632
-are therefore not claims of chemistry,
+00:01:27,599 --> 00:01:29,159
+are set, and set again,
 
 33
-00:01:30,822 --> 00:01:32,894
-but field names – tools for seeing."
+00:01:29,319 --> 00:01:31,920
+by the people who keep, read and exchange it.
 
 34
-00:01:34,134 --> 00:01:35,659
-Names like these were put
+00:01:33,379 --> 00:01:36,540
+Cent #1867, a great Cent.
 
 35
-00:01:35,700 --> 00:01:37,456
-forward and agreed on together.
+00:01:38,200 --> 00:01:40,799
+Find out more about the project on cents.gallery,
 
 36
-00:01:37,896 --> 00:01:39,680
-In the words of Martin Lehnen,
-
-37
-00:01:39,870 --> 00:01:42,004
-in his article "CENTS as an artistic
-
-38
-00:01:42,043 --> 00:01:43,938
-expression of Bitcoin's core ideas":
-
-39
-00:01:44,128 --> 00:01:46,251
-"the decentralized formation of meaning
-
-40
-00:01:46,292 --> 00:01:48,674
-and value consensus around CENTS functions
-
-41
-00:01:48,713 --> 00:01:53,085
-as an artwork in itself." In March 2024,
-
-42
-00:01:53,275 --> 00:01:54,727
-Chang inscribed the image
-
-43
-00:01:54,768 --> 00:01:57,528
-of Cent #1867 on a satoshi,
-
-44
-00:01:57,718 --> 00:01:59,243
-and the physical coin was
-
-45
-00:01:59,284 --> 00:02:01,040
-melted into CENTS Block Copper.
-
-46
-00:02:02,079 --> 00:02:04,897
-Released at one satoshi, the Cent's value moved
-
-47
-00:02:04,938 --> 00:02:06,841
-from a figure set by the state
-
-48
-00:02:06,882 --> 00:02:08,241
-into an ongoing process,
-
-49
-00:02:08,431 --> 00:02:10,050
-set again each time someone
-
-50
-00:02:10,090 --> 00:02:12,264
-reads it, keeps it or lets it go.
-
-51
-00:02:13,704 --> 00:02:16,401
-Cent #1867, a great Cent.
+00:01:41,000 --> 00:01:43,299
+and explore the traits on cents.vision.

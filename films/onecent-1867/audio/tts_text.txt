@@ -1,15 +1,13 @@
 [thoughtfully] [calm] Cent number eighteen sixty-seven.
-Circulation leaves traces.
-In the words of Emily Watlington, writing on Rutherford Chang in Art in America: "Circulation is another of Chang's key themes: how do things change as they move through the world?"
-Rhea Myers, in her book Proof of Work, quotes the artist Barbara Kruger: "Money is an information-destroying medium."
-A circulated copper cent is the exception. Three traits record where Cent number eighteen sixty-seven has been: two patinas and a contamination.
+Every physical coin joins two things: metal and stamp.
+In a copper cent, the coin's face and its metal had come apart. Hoarding such coins, Chang said in twenty seventeen, was like "buying one point seven cents of copper for one cent and it's still worth one cent."
+Chang took the two apart. He inscribed the image of each obverse on Bitcoin, and had the physical coins melted and cast into one block, CENTS Block Copper.
+Boris Groys describes two ways of archiving: "the object without an aura" and "the aura without an object." CENTS keeps both.
+In the image of Cent number eighteen sixty-seven, the copper's own chemistry spreads over the stamp of the state.
 A dark band of Significant Obsidian crosses the upper left, over the motto and Lincoln's head.
 Green patches of Significant Verdigris gather on his cheek, behind his head and at his collar.
-The third trait came from outside: Contaminated, Alien Secretion. In the Traits Atlas, contamination is "matter imposed upon copper", and Alien Secretion names "unidentifiable translucent or greenish films".
-Seventy-nine Cents carry Alien Secretion, and seventy of them carry verdigris too.
-Cent number forty-four twenty-one, dated nineteen sixty-four like Cent number eighteen sixty-seven, is close to mint state. Its portrait is clean and bright.
-The Trait Council named every kind of residue by reading the surface, without testing it. In the Atlas's words: "The subtrait names are therefore not claims of chemistry, but field names, tools for seeing."
-Names like these were put forward and agreed on together. In the words of Martin Lehnen, in his article "CENTS as an artistic expression of Bitcoin's core ideas": "the decentralized formation of meaning and value consensus around CENTS functions as an artwork in itself."
-In March twenty twenty-four, Chang inscribed the image of Cent number eighteen sixty-seven on a satoshi, and the physical coin was melted into CENTS Block Copper.
-Released at one satoshi, the Cent's value moved from a figure set by the state into an ongoing process, set again each time someone reads it, keeps it or lets it go.
+A third trait came from outside: Contaminated, Alien Secretion. In the Traits Atlas, Alien Secretion names "unidentifiable translucent or greenish films".
+Compare it to Cent number forty-four twenty-one, also dated nineteen sixty-four and close to mint state.
+A cent held at one cent by the state became a Cent whose value and meaning are set, and set again, by the people who keep, read and exchange it.
 Cent number eighteen sixty-seven, a great Cent.
+Find out more about the project on cents dot gallery, and explore the traits on cents dot vision.

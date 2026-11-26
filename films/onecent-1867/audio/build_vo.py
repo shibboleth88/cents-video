@@ -1,40 +1,42 @@
-"""Build audio/vo.wav and script/alignment.json for Cent #10000 v1 from an eee v1 take
+"""Build audio/vo.wav and script/alignment.json for Cent #1867 v1 from an eee v1 take
 (eleven_v4, "[thoughtfully] [calm]" at the start of the prompt; the tags are dropped from the words).
-Copied from films/onecent-8820/audio/build_vo.py (which keeps the #9344 clip-timing fix); only the
-holds and the text of the record differ. #9344's re-voiced clip mechanism stays, unused (CLIPS is empty). TAKE picks the take; `--dry` only finds the edit points.
+Copied from films/onecent-10000/audio/build_vo.py (which keeps the #9344 clip-timing fix). Changes for #1867:
+the holds, the text of the record, take 2 as the default, and LEAD, a silence before the first word so the
+"Cent number eighteen sixty-seven" is heard after the play button is pressed (it was 0.2 s in on the take).
+CLIPS and CUTS stay, unused. `--dry` only finds the edit points.
 
 The word timings come from scribe_v1 run on the take fetched by URL (check_heard.py --write-alignment),
 not from a transcript of the TTS node, which echoes the prompt. check_heard.py found both takes equal to
-audio/tts_text.txt, 281 of 281 tokens (folds printed: "Benjamin" heard for "Benyameen", 3 times).
+audio/tts_text.txt (script v0.8, approved by shibboleth 2026-11-26 00:45Z), 244 of 244 words.
 
-Silent HOLDS are inserted in sentence gaps so the picture has time for the year zoom, the trait zooms, the
-two pools, the dissolve with #8653 and the quote cards. Every edit point is the middle of a pause that
-ffmpeg finds; where there is none, the longest quiet run (150 ms or more), recorded. Word timings are
-remapped through the edits. The end is padded for the closing card and the credits.
+Silent HOLDS are inserted in sentence gaps so the picture has time for the opening turn, the concept card,
+the quote cards, the block, the trait zooms, the Atlas, the dissolve with #4421 and the closing turn. Every
+edit point is the middle of a pause that ffmpeg finds; where there is none, the longest quiet run (150 ms or
+more), recorded. Word timings are remapped through the edits. The end is padded for the end card and credits.
 
-    python3 -I films/onecent-10000/audio/build_vo.py [--take N] [--dry]   (from the repo root)
+    python3 -I films/onecent-1867/audio/build_vo.py [--take N] [--dry]   (from the repo root)
 """
 import json, pathlib, re, subprocess, sys
 F = pathlib.Path(__file__).resolve().parents[1]
-TAKE = int(sys.argv[sys.argv.index("--take") + 1]) if "--take" in sys.argv else 1
+TAKE = int(sys.argv[sys.argv.index("--take") + 1]) if "--take" in sys.argv else 2
 DRY = "--dry" in sys.argv
 SRC = F / f"audio/v1_take{TAKE}.mp3"
 WORDS = [w for w in json.load(open(F / f"audio/v1_take{TAKE}_words.json"))["words"]
          if w["type"] == "word" and not w["text"].startswith("[")]
 CUTS = []
-# A hold is (word, seconds) or (word, seconds, n) for the n-th time the word is spoken. Taken from the silent
-# rehearsal (audio/make_standin.py), where each was seen to give its shot enough time.
-# "thousand." and "all." hold the opening card so the year zoom lands after frame 150 (the 3DCENTS turn);
-# the second "Assassin." gives the 42 Assassin Cents their scroll, "seventy-six." the 1976 pair, "verdigris."
-# then "state.", "unmarked." and "cent." the dissolve with #1256, "signifier." the concept card,
-# "sixty-five." the plaque, "deciding." the MAKES CENTS montage before the closing card.
-HOLDS = [("thousand.", 0.8), ("all.", 0.5), ("mint.", 0.4), ("Assassin.", 0.6, 1), ('born."', 0.8), ('projectile."', 0.6),
-         ("neck.", 0.5), ("Assassin.", 1.4, 2), ("seventy-six.", 0.8), ('films".', 0.3), ("verdigris.", 0.8),
-         ("state.", 0.4), ("unmarked.", 0.6), ("cent.", 0.8), ("signifier.", 1.0), ("value.", 0.6), ('crypto."', 0.8),
-         ("sixty-five.", 0.6), ('narrative".', 0.8), ('identical."', 0.8), ("spot.", 0.4), ("deciding.", 1.0)]
+# A hold is (word, seconds) or (word, seconds, n) for the n-th time the word is spoken.
+# "sixty-seven." holds the opening card until the 150-frame turn has settled (it ends at frame 184, 6.13 s);
+# "stamp." the concept card; "apart." (1) the face and metal chips; "seventeen," lets the Chang quote card come
+# up before "was like buying"; 'cent."' the lit card; "apart." (2) the coin; "Copper." the block; 'object."' and
+# "both." the Groys two-up; "state." (1) the push-in; "head." and "collar." the trait zooms; 'films".' the Atlas;
+# "state." (2) the dissolve with #4421; "it." the collector cards; "Cent." the closing turn (150 frames).
+HOLDS = [("sixty-seven.", 3.0), ("stamp.", 0.8), ("apart.", 0.4, 1), ("seventeen,", 0.5), ('cent."', 0.8),
+         ("apart.", 0.3, 2), ("Copper.", 0.7), ('object."', 0.4), ("both.", 0.8), ("state.", 0.8, 1),
+         ("head.", 0.8), ("collar.", 0.8), ('films".', 0.6), ("state.", 0.8, 2), ("it.", 1.0), ("Cent.", 1.2)]
 CLIPS = []
 COMMA_HOLDS = set()
-END_PAD = 6.5     # the closing line is spoken over the card, then the credits
+END_PAD = 6.0     # the credits after the end card
+LEAD = 1.0        # silence before the first word (the play button is pressed at about 0.5 s)
 
 # scribe word ENDS run ~0.4 s into the following pause on v4 takes (seen by the #2616 thread, confirmed here:
 # 9 of 15 gap midpoints fell on the next word's attack). So each edit point is the middle of a pause that
@@ -77,7 +79,7 @@ def edge(i):
     FALLBACK = True; t = gap_after(i); FALLBACK = False
     if t is None: t = quiet_after(i); QUIET_USED.append(WORDS[i]["text"] + " (cut)")
     return t
-for a, b, last in CUTS:  # (none in #1264)
+for a, b, last in CUTS:  # (none in #1867)
     hits = [i for i in range(len(WORDS) - 1) if WORDS[i]["text"] == a and WORDS[i + 1]["text"] == b]
     if len(hits) != 1: sys.exit(f"REFUSING: cut start {a} {b} found {len(hits)} times")
     i0 = hits[0]; i1 = next(j for j in range(i0, len(WORDS)) if WORDS[j]["text"] == last)
@@ -110,7 +112,7 @@ if DRY:
     print(f"take {TAKE}: {len(SILENCES)} pauses; {len(edits)} edit points; in quiet runs (no 0.2 s pause): {QUIET_USED}")
     sys.exit(0)
 
-filt, parts, last, inputs = [], [], 0.0, ["-i", str(SRC)]
+filt, parts, last, inputs = [f"anullsrc=r=48000:cl=mono,atrim=0:{LEAD}[lead]"], ["[lead]"], 0.0, ["-i", str(SRC)]
 for k, (t, kind, v) in enumerate(edits):
     filt.append(f"[0:a]atrim={last}:{t},asetpts=PTS-STARTPTS[p{k}]"); parts.append(f"[p{k}]")
     if kind == "clip":
@@ -133,7 +135,7 @@ dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=d
 
 LEN = lambda kind, v: v if kind == "hold" else (v[0] + v[2] + v[3])
 def shift(t):
-    d = 0.0
+    d = LEAD
     for c, kind, v in edits:
         if c < t: d += LEN(kind, v) if kind in ("hold", "clip") else -(v - c)
     return round(t + d, 3)
@@ -142,8 +144,8 @@ def shift(t):
 def end_at(w):
     inside = [c for c, kind, _ in edits if w["start"] < c < w["end"]]
     return min(inside) - 1e-6 if inside else w["end"]
-al = {"_source": f"eee v1 take {TAKE} (eleven_v4, [thoughtfully] [calm], script v0.1 approved by shibboleth, line 9 referent fix), heard by scribe_v1 from the take "
-                 f"fetched by URL; equal to audio/tts_text.txt (check_heard.py); build_vo.py held {HOLDS}",
+al = {"_source": f"eee v1 take {TAKE} (eleven_v4, [thoughtfully] [calm], script v0.8 approved by shibboleth 2026-11-26), heard by scribe_v1 from the take "
+                 f"fetched by URL; equal to audio/tts_text.txt (check_heard.py); build_vo.py led {LEAD} s and held {HOLDS}",
       "duration": round(dur, 2),
       "words": [{"word": w["text"], "start": shift(w["start"]), "end": shift(end_at(w))} for i, w in enumerate(WORDS) if i not in removed]}
 # the clip's own words, at the clip's place: the line is captioned like the narration
@@ -152,7 +154,7 @@ for idx, (c, kind, v) in enumerate(edits):
     lead, path, cd, tail, gain, wpath, quoted = v
     # #9344: every edit BEFORE this one in the concat order, not only those at an earlier time. With "c2 < c", a hold
     # at the same pause as the clip (played first) was left out, which would place the clip's words a hold too early.
-    d0 = sum(LEN(k2, v2) if k2 in ("hold", "clip") else -(v2 - c2) for c2, k2, v2 in edits[:idx])
+    d0 = LEAD + sum(LEN(k2, v2) if k2 in ("hold", "clip") else -(v2 - c2) for c2, k2, v2 in edits[:idx])
     base = c + d0 + lead
     cw = [{"word": w["text"], "start": round(base + w["start"], 3), "end": round(base + w["end"], 3)}
           for w in json.load(open(wpath))["words"]]

@@ -17,8 +17,8 @@ norm = lambda s: re.sub(r"[^a-z0-9 ]", " ", s.lower().replace("-", " ")).split()
 
 # Written token (punctuation stripped) -> its spoken form, as in audio/tts_text.txt.
 SPOKEN = {"#1867": "number eighteen sixty-seven", "#4421": "number forty-four twenty-one", "1964": "nineteen sixty-four",
-          "220": "Two hundred and twenty", "376": "three hundred and seventy-six", "29": "Twenty-nine", "79": "Seventy-nine",
-          "70": "seventy", "2024": "twenty twenty-four", "\u2013": "", "-": ""}
+          "2017": "twenty seventeen", "1.7": "one point seven", "cents.gallery": "cents dot gallery", "cents.vision": "cents dot vision",
+          "\u2013": "", "-": ""}
 
 script = open(F / "script/voiceover.txt").read().split()
 words, out, i = al["words"], [], 0
@@ -46,7 +46,7 @@ bounds = [start_of(s["start"]["at_phrase"]) if "at_phrase" in s["start"] else st
           for s in tl["shots"] if ("at_phrase" in s["start"] or "after_phrase" in s["start"]) and s["shot_id"] not in RUN_ON]
 
 # Breaks at phrase edges where the length rule alone would split a phrase.
-EXTRA_BREAKS = ["writing on Rutherford Chang", "quotes the artist", "Three traits record", "and Alien Secretion names", "is close to mint", "In the Atlas's words", "in his article", "the decentralized formation", "and the physical coin", "set again each time"]
+EXTRA_BREAKS = ["metal and stamp", "the coin's face and", "the object without an", "and the aura without", "CENTS keeps both"]
 bounds = sorted(bounds + [start_of(ph) for ph in EXTRA_BREAKS])
 cues = C.build(out, bounds)
 problems = C.audit(cues, bounds)

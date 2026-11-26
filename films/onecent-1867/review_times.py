@@ -1,7 +1,7 @@
 """Times (s) for rehearsal stills: key moments of every shot, resolved from the timeline's anchors on
 the current alignment (exact token match, as build_cues.py does). Prints space-separated seconds.
 
-    python3 -I films/onecent-10000/review_times.py
+    python3 -I films/onecent-1867/review_times.py   (copied from #10000; Look C components added for #1867)
 """
 import json, re, pathlib
 F = pathlib.Path(__file__).resolve().parent
@@ -24,8 +24,11 @@ for s in tl["shots"]:
     picks = [at(k) + 1.1 for k in keys if t0 <= at(k) < t1] or [(t0 + t1) / 2]
     if "quote" in p: picks.append(t1 - 0.3)
     if s["component"] in ("CentScroll",): picks = [t0 + 0.8, t1 - 0.3]
-    if s["component"] == "CentDissolve": picks = [t0 + 0.8] + [at(w["at_phrase"]) + 0.8 for w in p["swaps"]]
-    if s["shot_id"] == "s01_open": picks = [2.0, 4.9] + picks
+    if s["component"] in ("CentDissolve", "StoryDissolve"): picks = [t0 + 0.8] + [at(w["at_phrase"]) + 0.8 for w in p["swaps"]]
+    if s["component"] == "StoryPair": picks = [t0 + 0.8, at(p["left"]["quote"]["at_phrase"]) + 1.0, at(p["right"]["quote"]["at_phrase"]) + 1.0, t1 - 0.3]
+    if s["component"] == "StoryOpen" and p.get("reads") and not p.get("moves"): picks = [at(r["at_phrase"]) + 0.6 for r in p["reads"]]
+    if s["component"] == "StoryOpen" and p.get("mode") == "close": picks = [t0 + 1.0, t0 + 3.0, t1 - 0.3]
+    if s["shot_id"] == "s01_open": picks = [0.0, 0.6, 2.0, 4.9, 6.5]
     for t in picks: ts.append((round(min(t, t1 - 0.05), 2), s["shot_id"]))
 print(" ".join(str(t) for t, _ in ts))
 json.dump(ts, open(F / "review/times.json", "w"))
