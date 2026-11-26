@@ -9,6 +9,7 @@ import { NARROWING } from "../narrowing/shots";
 import { WALL } from "./wall";
 import { ONECENT } from "./onecent";
 import { STORYOPEN } from "./storyopen";
+import { STORYKIT } from "./storykit";
 import { WallBoard } from "./wallboard";
 import { WallOpener } from "./wallopener";
 import { TraitTally } from "./traittally";
@@ -190,5 +191,5 @@ export const CaptionLayer: React.FC<{
   );
 };
 
-export const REGISTRY = { TitleCard, PullQuote, StatReveal, AssetShot, Credits, ...SETS, ...NARROWING, ...WALL, WallBoard, WallOpener, TraitTally, TraitLadder, ...ONECENT, ...STORYOPEN } as const;
+export const REGISTRY = { TitleCard, PullQuote, StatReveal, AssetShot, Credits, ...SETS, ...NARROWING, ...WALL, WallBoard, WallOpener, TraitTally, TraitLadder, ...ONECENT, ...STORYOPEN, ...STORYKIT } as const;
 export type ComponentName = keyof typeof REGISTRY;
