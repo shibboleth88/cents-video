@@ -1,0 +1,70 @@
+{
+ "assets": {
+  "a14": {
+   "path": "public/assets/a14.mp4",
+   "sha256": "a309518db381880499a27be5a0c767bd004cb18834cd90b3ea399e1092351b1b",
+   "bytes": 1715812,
+   "width": 480,
+   "height": 848,
+   "motion": true,
+   "codec": "h264",
+   "source": "Rutherford Chang's workspace and the casting of the CENTS Block; supplied by the essay's author 2026-10-07",
+   "original_filename": "copper_pour.mp4",
+   "source_caption": "",
+   "subject": "Footage of the CENTS Block being cast outdoors: a crucible of molten copper is tilted on a pivoting arm and poured in a bright orange stream into a square mould built of white refractory brick, smoke rising as it fills. Two figures in heat suits and face shields work the crucible. 8s excerpt from a 110s clip, starting at 76.0s, which is where the tilt and the pour are.",
+   "kind": "real",
+   "rights": "photographs and footage of Rutherford Chang's studio process, supplied by the essay's author for use in films about CENTS",
+   "verified_at": "2026-10-07",
+   "crop_restrictions": "Vertical 480x848 and that is its real resolution, not a thumbnail. Do not display wider than ~560px: at full canvas width it is a 2.25x upscale and goes to mush. Never crop to the stream alone - the mould is what the copper is becoming, and losing it turns a casting into a fire.",
+   "low_res": true,
+   "max_display_width": 560,
+   "duration": 8.0,
+   "frames": 227,
+   "identified_by": "claude, by viewing sampled frames across the source clip",
+   "staged_as": "a14.mp4",
+   "staged_width": 480,
+   "staged_height": 848
+  },
+  "studio_camera": {
+   "path": "public/assets/9344/studio_camera.jpg",
+   "staged_as": "9344/studio_camera.jpg",
+   "sha1": "c3ab589508013471afe7b7f626308da63e499caf",
+   "width": 1500,
+   "height": 1125,
+   "motion": false,
+   "kind": "real",
+   "subject": "Penny photography setup at Rutherford Chang's studio: a camera on a vertical arm above a lit table, a laptop showing a penny, rolls and coin trays nearby.",
+   "source": "cents.gallery media library (the user's own site; cleared): C062 c062-penny-photography-setup-at-rutherford-chang-s-studio.jpg, scaled from 4032 px",
+   "rights": "cleared (user's media library)",
+   "verified_at": "2026-11-11"
+  },
+  "atlas_red": {
+   "path": "public/assets/8820/atlas_red_transitional.png",
+   "staged_as": "8820/atlas_red_transitional.png",
+   "sha1": "c921f43ee67774bf6045b4b919e74089c0d27e79",
+   "bytes": 53530,
+   "width": 720,
+   "height": 465,
+   "motion": false,
+   "kind": "real",
+   "subject": "The Traits Atlas entry for Red Patina on cents.vision: the lines 'layers of tenorite (CuO) or surface carbonates. Red Patina marks a transitional oxidation phase between bright copper and darker patinas.', with that sentence marked by a translucent copper highlight added by us.",
+   "source": "Screenshot of https://cents.vision/traits-atlas/red.html at a 240 px viewport, 3x, taken 2026-11-15 with Playwright (script/atlas_shoot.js); highlight drawn from the sentence's measured client rects; cropped to whole lines. Control: a sentence with words added was refused (SENTENCE NOT FOUND).",
+   "rights": "cents.vision (Dr. Martin Lehnen; all his material cleared by the user); Atlas text by the CENTS Trait Council. Credit cents.vision on the end card",
+   "verified_at": "2026-11-15"
+  },
+  "ledger": {
+   "path": "public/assets/8820/ledger_plate.png",
+   "staged_as": "8820/ledger_plate.png",
+   "sha1": "2a2d19dfb30c6d0d82422b116afbe75640c2ae96",
+   "bytes": 191455,
+   "width": 1464,
+   "height": 1406,
+   "motion": false,
+   "kind": "generated",
+   "subject": "A table drawn by us: the six ledger events of the satoshi carrying inscription 65907201 (inscribed 2024-03-26, then five transfers to 2026-11-14), dates in UTC and shortened transaction ids; no amounts.",
+   "source": "Data from mempool.space's public API, traced 2026-11-15 by script/ledger/trace.py (hops.json); cross-checked against cents.vision holder snapshots of 27 Oct, 9 Nov and 14 Nov 2026 (script/ledger/LEDGER_8820.md). Drawn from script/ledger/ledger_plate.html at 2x.",
+   "rights": "our own drawing of public ledger data",
+   "verified_at": "2026-11-15"
+  }
+ }
+}

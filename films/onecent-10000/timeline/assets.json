@@ -1,0 +1,66 @@
+{
+ "assets": {
+  "mosaic_section": {
+   "path": "public/assets/10000/mosaic_section.jpg",
+   "staged_as": "10000/mosaic_section.jpg",
+   "sha1": "dbdf4f051a9191a759d803ff6bacd6c1cb623098",
+   "bytes": 508994,
+   "width": 1166,
+   "height": 1166,
+   "motion": false,
+   "kind": "real",
+   "subject": "Eighty-one Cent fronts, 9 across and 9 down, each coin cut out onto the stage colour (#0b0a0a).",
+   "source": "cents.gallery media library C001 'Ten-thousand-cent obverse mosaic' (c001-ten-thousand-cent-obverse-mosaic.jpg, 26000 x 26000). Columns 45-53, rows 45-53 of its 259.2 px grid, cut at full resolution and halved; each coin's box measured (122-125 px at half size) and masked to a circle, as pipeline/stage_cents.py does for the 300 px images. No coin is retouched. The library file is truncated: it ends on an RST marker (ff d3), not EOI (ff d9), and its last 26 of 3250 rows at 1/8 scale decode as flat grey, so the whole mosaic is not shown.",
+   "rights": "cleared (user's media library)",
+   "verified_at": "2026-11-21"
+  },
+  "atlas_assassin": {
+   "path": "public/assets/10000/atlas_assassin.png",
+   "staged_as": "10000/atlas_assassin.png",
+   "sha1": "0eb84b74631fb0a7a752c73b5ce51aa0a01e9958",
+   "bytes": 67318,
+   "width": 720,
+   "height": 592,
+   "max_display_width": 720,
+   "motion": false,
+   "kind": "real",
+   "subject": "The Traits Atlas entry for Assassin on cents.vision: the heading 'Assassin (Motif)' and the summary 'Prominent spherical obsidian, verdigris or contamination striking Abe\u2019s head, neck, or torso \u2013 the mark of an imagined projectile.', marked by a translucent copper highlight added by us.",
+   "source": "Screenshot of https://cents.vision/traits-atlas/assassin.html at a 240 px viewport, 3x, taken 2026-11-21 with Playwright (script/atlas_shoot.cjs, from #8820's); highlight drawn from the sentence's measured client rects; cropped to whole lines. Control: the sentence with 'bullet' for 'projectile' was refused (SENTENCE NOT FOUND).",
+   "rights": "cents.vision (Dr. Martin Lehnen; all his material cleared by the user); Atlas text by the CENTS Trait Council. Credit cents.vision on the end card",
+   "verified_at": "2026-11-21"
+  },
+  "brenner_plaque": {
+   "path": "public/assets/10000/brenner_plaque.jpg",
+   "staged_as": "10000/brenner_plaque.jpg",
+   "sha1": "c32c247333496927ecd852a24f4cd2371f910836",
+   "bytes": 303955,
+   "width": 810,
+   "height": 1080,
+   "max_display_width": 810,
+   "motion": false,
+   "kind": "real",
+   "subject": "Photograph of a bronze relief plaque: Abraham Lincoln in profile facing right, 'ABRAHAM LINCOLN 1809 1865' on its foot.",
+   "source": "cents.gallery media library C047 'Victor David Brenner Lincoln portrait plaque, the Lincoln portrait used on Lincoln cents' (c047-...jpg), unchanged, native size",
+   "rights": "cleared (user's media library)",
+   "verified_at": "2026-11-21"
+  },
+  "makes_cents": {
+   "path": "public/assets/10000/makes_cents.mp4",
+   "staged_as": "10000/makes_cents.mp4",
+   "sha1": "a37ba58fba2e16012c6b27f949fe4b275124d800",
+   "bytes": 2803124,
+   "width": 900,
+   "height": 900,
+   "max_display_width": 900,
+   "motion": true,
+   "duration": 9.5,
+   "frames": 570,
+   "codec": "h264",
+   "kind": "real",
+   "subject": "Square animated montage of MAKES CENTS interview covers (each a person or avatar with a Cent and 'makes CENTS') around a rotating CENTS Block and the title MAKES CENTS.",
+   "source": "cents.gallery media library C048 'MAKES CENTS interview-cover montage' (c048-makes-cents-interview-cover-montage.mp4, 9.5 s, 60 fps), audio stream removed, video stream copied unchanged",
+   "rights": "cleared (user's media library)",
+   "verified_at": "2026-11-21"
+  }
+ }
+}

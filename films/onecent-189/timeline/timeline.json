@@ -1,0 +1,1304 @@
+{
+ "essay": {
+  "title": "Cent #189",
+  "subtitle": "Inscription #66001226",
+  "author": "shibboleth",
+  "source": "/mnt/project-files/single-cent-series/189/189_proposal_v0.2.md",
+  "version": "v1 (2026-11-26): script v0.2 approved by shibboleth ('go ahead with the video creation please', 02:43Z)"
+ },
+ "_what": "Cent #189 (1960 D): Full Red, Notable Desert. Baseline format: concept C26 (coin collecting turned over) from the baseline text's 'Now', Kruger via Myers, then the traits, then value set again (C04). A new picture about every 2-3 s.",
+ "shots": [
+  {
+   "shot_id": "s01_open",
+   "start": {
+    "at_start": true
+   },
+   "end": {
+    "at_phrase": "Cards, sneakers, watches"
+   },
+   "purpose": "Look C opening as #1867: play button, CENTS STORY TIME, the 'look closer' sticker, one 3DCENTS turn. No year or mint opening.",
+   "visual_kind": "code",
+   "component": "StoryOpen",
+   "props": {
+    "inscription": 66001226,
+    "n": 189,
+    "front": "hires/189.webp",
+    "spin": {
+     "src": "3dcents/189-360-30fps.mp4",
+     "width": 1080,
+     "height": 1920,
+     "frames": 150,
+     "coin": {
+      "cx": 539.5,
+      "cy": 959.5,
+      "d": 776
+     },
+     "credit": "3D render: 3DCENTS by sinvalli",
+     "credit_at_end": true
+    },
+    "sticker": "look closer"
+   }
+  },
+  {
+   "shot_id": "s02_words",
+   "start": {
+    "at_phrase": "Cards, sneakers, watches"
+   },
+   "end": {
+    "at_phrase": "and coins are graded"
+   },
+   "purpose": "Each kind of collectible as it is said. No picture claims to show grading.",
+   "visual_kind": "code",
+   "component": "StoryWords",
+   "props": {
+    "words": [
+     {
+      "at_phrase": "Cards, sneakers",
+      "text": "Cards"
+     },
+     {
+      "at_phrase": "sneakers, watches and",
+      "text": "Sneakers"
+     },
+     {
+      "at_phrase": "watches and coins",
+      "text": "Watches"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s03_convention",
+   "start": {
+    "at_phrase": "and coins are graded"
+   },
+   "end": {
+    "at_phrase": "traded like securities"
+   },
+   "purpose": "Coins. LoC photo of coins on display at a numismatic convention; it is not said to show grading.",
+   "visual_kind": "real",
+   "asset_id": "loc_convention_1937",
+   "props": {
+    "caption": "Rare coins on display at a numismatic convention, Washington, D.C., 1937",
+    "maxWidth": 732
+   },
+   "join_prev": true
+  },
+  {
+   "shot_id": "s04_sale",
+   "start": {
+    "at_phrase": "traded like securities"
+   },
+   "end": {
+    "at_phrase": "and a grade rewards"
+   },
+   "purpose": "Traded: a coin offered for sale at a store counter, 1967.",
+   "visual_kind": "real",
+   "asset_id": "loc_coin_sale_1967",
+   "props": {
+    "caption": "A coin for sale at a department store counter, Washington, D.C., 1967",
+    "maxWidth": 732
+   },
+   "join_prev": true
+  },
+  {
+   "shot_id": "s05_scale",
+   "start": {
+    "at_phrase": "and a grade rewards"
+   },
+   "end": {
+    "at_phrase": "The collectors of CENTS"
+   },
+   "purpose": "The grade scale of the source (Littleton's terms and numbers); the marker reaches 70 as 'how little has happened' is said. Says nothing about any Cent.",
+   "visual_kind": "code",
+   "component": "StoryScale",
+   "props": {
+    "kicker": "Coin grades",
+    "source": "Grading terms: Littleton Coin Company",
+    "ticks": [
+     {
+      "v": 1,
+      "label": "Poor"
+     },
+     {
+      "v": 12,
+      "label": "Fine"
+     },
+     {
+      "v": 20,
+      "label": "Very Fine"
+     },
+     {
+      "v": 40,
+      "label": "Extra Fine"
+     },
+     {
+      "v": 50,
+      "label": "About Uncirculated"
+     },
+     {
+      "v": 60,
+      "label": "Uncirculated"
+     },
+     {
+      "v": 70,
+      "label": "Perfect Uncirculated"
+     }
+    ],
+    "stops": [
+     {
+      "at_phrase": "and a grade rewards",
+      "to": 30,
+      "dur": 1.0
+     },
+     {
+      "at_phrase": "how little has happened",
+      "to": 70,
+      "dur": 1.0
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s06_concept",
+   "start": {
+    "at_phrase": "The collectors of CENTS"
+   },
+   "end": {
+    "at_phrase": "In a conversation in"
+   },
+   "purpose": "Concept C26 named on screen with the episode's Cent, at the turn from grading to CENTS.",
+   "visual_kind": "code",
+   "component": "StoryCard",
+   "props": {
+    "n": 189,
+    "front": "hires/189.webp",
+    "concept": {
+     "at_phrase": "The collectors of CENTS",
+     "label": "Coin collecting turned over"
+    }
+   }
+  },
+  {
+   "shot_id": "s07_book",
+   "start": {
+    "at_phrase": "In a conversation in"
+   },
+   "end": {
+    "at_phrase": "Barbara Kruger"
+   },
+   "purpose": "Where Myers quoted Kruger (shibboleth 02:10Z): the book, typeset. QUOTE_BANK E111/H25.",
+   "visual_kind": "code",
+   "component": "StoryText",
+   "props": {
+    "chip": "Book",
+    "title": "Proof of Work",
+    "italic": true,
+    "lines": [
+     {
+      "text": "Rhea Myers, 2022",
+      "look": "sub"
+     },
+     {
+      "text": "In conversation with Maya B. Kronic",
+      "look": "note"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s08_kruger",
+   "start": {
+    "at_phrase": "Barbara Kruger"
+   },
+   "end": {
+    "at_phrase": "A circulated copper cent"
+   },
+   "purpose": "Kruger's line on plain black, lit word by word, so it is not presented as being about these coins (QUOTE_BANK H25: About CENTS? No).",
+   "visual_kind": "code",
+   "component": "StoryQuote",
+   "props": {
+    "quote": {
+     "at_phrase": "Money is an information",
+     "text": "Money is an information-destroying medium."
+    },
+    "who": "Barbara Kruger",
+    "where": "quoted by Rhea Myers, Proof of Work (2022)"
+   }
+  },
+  {
+   "shot_id": "s09_pitching",
+   "start": {
+    "at_phrase": "A circulated copper cent"
+   },
+   "end": {
+    "at_phrase": "is the exception"
+   },
+   "purpose": "Pennies in circulation, 1940 (bronze, 95% copper, so 'copper cent' holds).",
+   "visual_kind": "real",
+   "asset_id": "loc_pitching_1940",
+   "props": {
+    "caption": "Pitching pennies at a band concert, Lincoln, Vermont, 1940",
+    "maxWidth": 732
+   }
+  },
+  {
+   "shot_id": "s10_scramble",
+   "start": {
+    "at_phrase": "is the exception"
+   },
+   "end": {
+    "at_phrase": "Its wear and patina"
+   },
+   "purpose": "Pennies in circulation, 1910.",
+   "visual_kind": "real",
+   "asset_id": "loc_scramble_1910",
+   "props": {
+    "caption": "Scramble for pennies, Thanksgiving, 1910",
+    "maxWidth": 732
+   },
+   "join_prev": true
+  },
+  {
+   "shot_id": "s11_diving",
+   "start": {
+    "at_phrase": "Its wear and patina"
+   },
+   "end": {
+    "at_phrase": "record where it has"
+   },
+   "purpose": "Pennies in circulation, 1915.",
+   "visual_kind": "real",
+   "asset_id": "loc_diving_1915",
+   "props": {
+    "caption": "Diving for pennies, Madison Square, 1915",
+    "maxWidth": 732
+   },
+   "join_prev": true
+  },
+  {
+   "shot_id": "s12_desk",
+   "start": {
+    "at_phrase": "record where it has"
+   },
+   "end": {
+    "at_phrase": "In the image of Cent"
+   },
+   "purpose": "Pennies Chang gathered, at his studio.",
+   "visual_kind": "real",
+   "asset_id": "desk_c063",
+   "props": {
+    "caption": "Pennies at Rutherford Chang's studio",
+    "maxWidth": 732
+   },
+   "join_prev": true
+  },
+  {
+   "shot_id": "s13_setup",
+   "start": {
+    "at_phrase": "In the image of Cent"
+   },
+   "end": {
+    "at_phrase": "that record is red"
+   },
+   "purpose": "'In the image of': the setup in which each coin was photographed. The script does not call the Cent a photograph.",
+   "visual_kind": "real",
+   "asset_id": "photo_setup_c062",
+   "props": {
+    "caption": "Rutherford Chang's penny photography setup",
+    "maxWidth": 732
+   },
+   "join_prev": true
+  },
+  {
+   "shot_id": "s14_red",
+   "start": {
+    "at_phrase": "that record is red"
+   },
+   "end": {
+    "at_phrase": "In the Traits Atlas"
+   },
+   "purpose": "#189 itself, slow push-in, the trait as a chip.",
+   "visual_kind": "code",
+   "component": "StoryOpen",
+   "props": {
+    "inscription": 66001226,
+    "n": 189,
+    "front": "hires/189.webp",
+    "mode": "lens",
+    "moves": [
+     {
+      "at_phrase": "that record is red",
+      "box": null,
+      "zoom": 1.12,
+      "dur": 2.0
+     }
+    ],
+    "reads": [
+     {
+      "at_phrase": "a trait called Full",
+      "chip": "Full Red"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s15_atlas_red",
+   "start": {
+    "at_phrase": "In the Traits Atlas"
+   },
+   "end": {
+    "at_phrase": "surface film resulting"
+   },
+   "purpose": "The Atlas entry, its definition highlighted.",
+   "visual_kind": "real",
+   "asset_id": "atlas_red",
+   "props": {
+    "caption": "Traits Atlas, Red Patina",
+    "maxWidth": 720
+   }
+  },
+  {
+   "shot_id": "s16_chem",
+   "start": {
+    "at_phrase": "surface film resulting"
+   },
+   "end": {
+    "at_phrase": "and Full Red means"
+   },
+   "purpose": "The Atlas's chemistry line, quoted with its 'primarily'. No claim about #189's own chemistry.",
+   "visual_kind": "code",
+   "component": "StoryText",
+   "props": {
+    "chip": "Traits Atlas: chemistry",
+    "title": "Cu₂O",
+    "titleSize": 200,
+    "lines": [
+     {
+      "text": "cuprite",
+      "look": "sub"
+     },
+     {
+      "text": "“Primarily composed of cuprite”",
+      "look": "quote"
+     }
+    ]
+   },
+   "join_prev": true
+  },
+  {
+   "shot_id": "s17_red_ladder",
+   "start": {
+    "at_phrase": "and Full Red means"
+   },
+   "end": {
+    "at_phrase": "generally over about"
+   },
+   "purpose": "The Atlas's own three red examples with its scale, qualifiers kept ('roughly', 'or less if', 'generally').",
+   "visual_kind": "code",
+   "component": "StoryLadder",
+   "props": {
+    "title": "Atlas scale: red",
+    "credit": "Traits Atlas, CENTS Trait Council",
+    "rows": [
+     {
+      "n": 4075,
+      "front": "hires/4075.webp",
+      "level": "Notable",
+      "range": "roughly up to 20%"
+     },
+     {
+      "n": 9507,
+      "front": "hires/9507.webp",
+      "level": "Significant",
+      "range": "about 20–70%, or less if strongly red"
+     },
+     {
+      "n": 9427,
+      "front": "hires/9427.webp",
+      "level": "Full",
+      "range": "generally over about 70%",
+      "at_phrase": "dominant surface condition"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s18_full",
+   "start": {
+    "at_phrase": "generally over about"
+   },
+   "end": {
+    "at_phrase": "Seventy-one Cents are"
+   },
+   "purpose": "The Atlas's Full red example, then #189, which the Trait Council placed in Full Red. No coverage is measured or drawn on #189.",
+   "visual_kind": "code",
+   "component": "StoryDissolve",
+   "props": {
+    "first": "a",
+    "cards": {
+     "a": {
+      "n": 9427,
+      "inscription": 66001191,
+      "front": "hires/9427.webp",
+      "chip": "Atlas example: Full"
+     },
+     "b": {
+      "inscription": 66001226,
+      "n": 189,
+      "front": "hires/189.webp",
+      "chip": "Full Red"
+     }
+    },
+    "swaps": [
+     {
+      "at_phrase": "percent of the coin",
+      "to": "b"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s19_dots",
+   "start": {
+    "at_phrase": "Seventy-one Cents are"
+   },
+   "end": {
+    "at_phrase": "Cent number one eighty-nine is the only"
+   },
+   "purpose": "All 10,000 in number order, the 71 Full Red lit, #189 ringed (Sep 2026 export, recounted from raw flags).",
+   "visual_kind": "code",
+   "component": "StoryDots",
+   "props": {
+    "lit": [
+     189,
+     218,
+     271,
+     313,
+     321,
+     493,
+     653,
+     937,
+     947,
+     994,
+     1073,
+     1186,
+     1360,
+     1404,
+     1543,
+     1727,
+     1771,
+     1808,
+     2308,
+     2366,
+     2410,
+     2426,
+     2479,
+     2529,
+     2586,
+     2616,
+     3168,
+     3228,
+     3602,
+     4128,
+     4236,
+     5056,
+     5123,
+     5277,
+     5302,
+     5382,
+     5602,
+     6147,
+     6216,
+     6415,
+     6491,
+     6500,
+     6588,
+     7016,
+     7074,
+     7076,
+     7129,
+     7177,
+     7485,
+     7671,
+     7920,
+     7975,
+     8185,
+     8232,
+     8347,
+     8533,
+     8566,
+     8580,
+     8584,
+     8758,
+     8815,
+     8823,
+     9258,
+     9303,
+     9427,
+     9442,
+     9466,
+     9541,
+     9597,
+     9866,
+     9924
+    ],
+    "mark": 189,
+    "count": "71",
+    "label": "Full Red"
+   }
+  },
+  {
+   "shot_id": "s20_scroll",
+   "start": {
+    "at_phrase": "Cent number one eighty-nine is the only"
+   },
+   "end": {
+    "at_phrase": "dated nineteen sixty"
+   },
+   "purpose": "The whole Full Red pool, fast, settling on #189 (spotlight).",
+   "visual_kind": "code",
+   "component": "StoryScroll",
+   "props": {
+    "ns": [
+     218,
+     271,
+     313,
+     321,
+     493,
+     653,
+     937,
+     947,
+     994,
+     1073,
+     1186,
+     1360,
+     1404,
+     1543,
+     1727,
+     1771,
+     1808,
+     2308,
+     2366,
+     2410,
+     2426,
+     2479,
+     2529,
+     2586,
+     2616,
+     3168,
+     3228,
+     3602,
+     4128,
+     4236,
+     5056,
+     5123,
+     5277,
+     5302,
+     5382,
+     5602,
+     6147,
+     6216,
+     6415,
+     6491,
+     6500,
+     6588,
+     7016,
+     7074,
+     7076,
+     7129,
+     7177,
+     7485,
+     7671,
+     7920,
+     7975,
+     8185,
+     8232,
+     8347,
+     8533,
+     8566,
+     8580,
+     8584,
+     8758,
+     8815,
+     8823,
+     9258,
+     9303,
+     9427,
+     9442,
+     9466,
+     9541,
+     9597,
+     9866,
+     9924,
+     189
+    ],
+    "dir": "assets/189/thumbs",
+    "label": "Full Red",
+    "count": "71",
+    "mark": 189,
+    "until": "dated nineteen sixty"
+   },
+   "join_prev": true
+  },
+  {
+   "shot_id": "s21_date",
+   "start": {
+    "at_phrase": "dated nineteen sixty"
+   },
+   "end": {
+    "at_phrase": "Pale, sandy films"
+   },
+   "purpose": "The date and the D on #189.",
+   "visual_kind": "code",
+   "component": "StoryOpen",
+   "props": {
+    "inscription": 66001226,
+    "n": 189,
+    "front": "hires/189.webp",
+    "mode": "lens",
+    "moves": [
+     {
+      "at_phrase": "dated nineteen sixty",
+      "box": [
+       0.6,
+       0.58,
+       0.88,
+       0.77
+      ],
+      "mark": true,
+      "dur": 0.6
+     }
+    ],
+    "reads": [
+     {
+      "at_phrase": "dated nineteen sixty",
+      "chip": "Dated 1960"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s22_desert_ladder",
+   "start": {
+    "at_phrase": "Pale, sandy films"
+   },
+   "end": {
+    "at_phrase": "lie on Lincoln's hair"
+   },
+   "purpose": "The Atlas desert scale, Notable lit, the others dim.",
+   "visual_kind": "code",
+   "component": "StoryLadder",
+   "props": {
+    "title": "Atlas scale: desert",
+    "credit": "Traits Atlas, CENTS Trait Council",
+    "rows": [
+     {
+      "n": 7884,
+      "front": "hires/7884.webp",
+      "level": "Notable",
+      "range": "roughly up to 20%"
+     },
+     {
+      "n": 5553,
+      "front": "hires/5553.webp",
+      "level": "Significant",
+      "range": "about 20–70%, or less if strongly colored",
+      "lit": false
+     },
+     {
+      "n": 5320,
+      "front": "hires/5320.webp",
+      "level": "Full",
+      "range": "generally over about 70%",
+      "lit": false
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s23_zooms",
+   "start": {
+    "at_phrase": "lie on Lincoln's hair"
+   },
+   "end": {
+    "at_phrase": "clearly visible, but local"
+   },
+   "purpose": "The three desert areas on #189, each as it is named. The areas are Claude's reading (flagged to shibboleth).",
+   "visual_kind": "code",
+   "component": "StoryOpen",
+   "props": {
+    "inscription": 66001226,
+    "n": 189,
+    "front": "hires/189.webp",
+    "mode": "lens",
+    "moves": [
+     {
+      "at_phrase": "Lincoln's hair",
+      "box": [
+       0.32,
+       0.22,
+       0.52,
+       0.4
+      ],
+      "mark": true,
+      "dur": 0.5
+     },
+     {
+      "at_phrase": "cheek and coat",
+      "box": [
+       0.5,
+       0.3,
+       0.64,
+       0.5
+      ],
+      "mark": true,
+      "dur": 0.4
+     },
+     {
+      "at_phrase": "and coat clearly",
+      "box": [
+       0.24,
+       0.64,
+       0.4,
+       0.8
+      ],
+      "mark": true,
+      "dur": 0.4
+     }
+    ],
+    "reads": [
+     {
+      "at_phrase": "lie on Lincoln's",
+      "chip": "Notable Desert"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s24_atlas_desert",
+   "start": {
+    "at_phrase": "clearly visible, but local"
+   },
+   "end": {
+    "at_phrase": "up to about a fifth"
+   },
+   "purpose": "The Atlas's own words for Notable desert, highlighted.",
+   "visual_kind": "real",
+   "asset_id": "atlas_desert",
+   "props": {
+    "caption": "Traits Atlas, Desert",
+    "maxWidth": 720
+   }
+  },
+  {
+   "shot_id": "s25_whole",
+   "start": {
+    "at_phrase": "up to about a fifth"
+   },
+   "end": {
+    "at_phrase": "Compare Cent number"
+   },
+   "purpose": "#189 whole again.",
+   "visual_kind": "code",
+   "component": "StoryOpen",
+   "props": {
+    "inscription": 66001226,
+    "n": 189,
+    "front": "hires/189.webp",
+    "mode": "lens",
+    "moves": [
+     {
+      "at_phrase": "up to about a fifth",
+      "box": null,
+      "zoom": 1.06,
+      "dur": 1.2
+     }
+    ],
+    "reads": [
+     {
+      "at_phrase": "up to about a fifth",
+      "chip": "Notable Desert"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s26_flip",
+   "start": {
+    "at_phrase": "Compare Cent number"
+   },
+   "end": {
+    "at_phrase": "As money, any cent"
+   },
+   "purpose": "The fast back-and-forth (shibboleth 02:10Z): about 0.6 s a side, the name swapping with the coin, both zoomed to the date and D, back out for 'close to mint state', settling on #189.",
+   "visual_kind": "code",
+   "component": "StoryFlip",
+   "props": {
+    "a": {
+     "inscription": 66001226,
+     "n": 189,
+     "front": "hires/189.webp",
+     "chip": "Two traits"
+    },
+    "b": {
+     "n": 9794,
+     "inscription": 65966150,
+     "front": "hires/9794.webp",
+     "chip": "Close to mint state"
+    },
+    "period": 0.6,
+    "settle": "close to mint state",
+    "chips_at": "and close to mint",
+    "moves": [
+     {
+      "at_phrase": "also a nineteen sixty",
+      "box": [
+       0.6,
+       0.58,
+       0.88,
+       0.77
+      ],
+      "dur": 0.6
+     },
+     {
+      "at_phrase": "and close to mint",
+      "box": null,
+      "dur": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s27_1960",
+   "start": {
+    "at_phrase": "As money, any cent"
+   },
+   "end": {
+    "at_phrase": "As a Cent, none is"
+   },
+   "purpose": "Every Cent dated 1960, fast: as money each was as good as any other.",
+   "visual_kind": "code",
+   "component": "StoryScroll",
+   "props": {
+    "ns": [
+     42,
+     92,
+     106,
+     167,
+     189,
+     228,
+     247,
+     568,
+     748,
+     999,
+     1053,
+     1147,
+     1213,
+     1237,
+     1250,
+     1271,
+     1350,
+     1409,
+     1519,
+     1738,
+     1951,
+     2244,
+     2260,
+     2321,
+     2340,
+     2385,
+     2402,
+     2493,
+     2720,
+     2882,
+     2953,
+     3027,
+     3106,
+     3128,
+     3160,
+     3229,
+     3241,
+     3283,
+     3309,
+     3370,
+     3390,
+     3467,
+     4054,
+     4113,
+     4130,
+     4183,
+     4206,
+     4257,
+     4273,
+     4351,
+     4375,
+     4394,
+     4439,
+     4530,
+     4616,
+     4771,
+     5005,
+     5021,
+     5117,
+     5178,
+     5261,
+     5404,
+     5562,
+     5771,
+     5984,
+     6013,
+     6073,
+     6091,
+     6137,
+     6164,
+     6227,
+     6270,
+     6328,
+     6358,
+     6422,
+     6437,
+     6481,
+     6508,
+     6735,
+     6914,
+     7071,
+     7237,
+     7327,
+     7424,
+     7474,
+     7487,
+     7727,
+     7861,
+     7937,
+     7955,
+     8012,
+     8035,
+     8090,
+     8136,
+     8150,
+     8221,
+     8309,
+     8357,
+     8450,
+     8607,
+     8885,
+     9040,
+     9114,
+     9220,
+     9299,
+     9366,
+     9377,
+     9395,
+     9481,
+     9507,
+     9552,
+     9567,
+     9631,
+     9654,
+     9794
+    ],
+    "dir": "assets/189/thumbs",
+    "label": "Dated 1960",
+    "until": "As a Cent, none is"
+   }
+  },
+  {
+   "shot_id": "s28_alone",
+   "start": {
+    "at_phrase": "As a Cent, none is"
+   },
+   "end": {
+    "at_phrase": "A Cent's worth is set"
+   },
+   "purpose": "#189 alone.",
+   "visual_kind": "code",
+   "component": "StoryOpen",
+   "props": {
+    "inscription": 66001226,
+    "n": 189,
+    "front": "hires/189.webp",
+    "mode": "lens",
+    "moves": [
+     {
+      "at_phrase": "As a Cent, none",
+      "box": null,
+      "zoom": 1.08,
+      "dur": 1.2
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s29_people",
+   "start": {
+    "at_phrase": "A Cent's worth is set"
+   },
+   "end": {
+    "at_phrase": "exchange, catalog and"
+   },
+   "purpose": "The people of the collection (MAKES CENTS), no wallet addresses.",
+   "visual_kind": "real",
+   "asset_id": "makes_cents",
+   "props": {
+    "caption": "MAKES CENTS interviews",
+    "maxWidth": 720
+   }
+  },
+  {
+   "shot_id": "s30_ledger",
+   "start": {
+    "at_phrase": "exchange, catalog and"
+   },
+   "end": {
+    "at_phrase": "catalog and compare"
+   },
+   "purpose": "Exchange: the satoshi's moves on Bitcoin (ledger/LEDGER_189.md), dates and short transaction ids only.",
+   "visual_kind": "code",
+   "component": "StoryText",
+   "props": {
+    "chip": "Moves on Bitcoin",
+    "title": "Cent #189",
+    "titleSize": 96,
+    "rows": [
+     [
+      "2024-03-27",
+      "92359bf66d51"
+     ],
+     [
+      "2024-03-27",
+      "0fc719e0f8f2"
+     ],
+     [
+      "2024-03-28",
+      "1ab265842851"
+     ],
+     [
+      "2024-12-06",
+      "8ea313674b85"
+     ],
+     [
+      "2025-06-30",
+      "a6c64c23e7e3"
+     ],
+     [
+      "2025-06-30",
+      "817e651055d0"
+     ],
+     [
+      "2025-07-28",
+      "aadc83405eaa"
+     ],
+     [
+      "2025-09-21",
+      "5a066613910c"
+     ],
+     [
+      "2025-09-21",
+      "6964dcd7e681"
+     ],
+     [
+      "2026-02-28",
+      "d0a03e93bb59"
+     ],
+     [
+      "2026-11-23",
+      "5b18a85a4cb1"
+     ],
+     [
+      "2026-11-23",
+      "4d0876db442f"
+     ]
+    ],
+    "rows_head": [
+     "Date",
+     "Transaction"
+    ],
+    "rows_top": 610
+   },
+   "join_prev": true
+  },
+  {
+   "shot_id": "s31_council",
+   "start": {
+    "at_phrase": "catalog and compare"
+   },
+   "end": {
+    "at_phrase": "compare it, and set"
+   },
+   "purpose": "Catalog: the Trait Council's process document.",
+   "visual_kind": "real",
+   "asset_id": "trait_council_s1075",
+   "props": {
+    "caption": "Trait Council",
+    "maxWidth": 732
+   },
+   "join_prev": true
+  },
+  {
+   "shot_id": "s32_compare",
+   "start": {
+    "at_phrase": "compare it, and set"
+   },
+   "end": {
+    "at_phrase": "and set again each"
+   },
+   "purpose": "Compare: two Cents side by side (cents.gallery).",
+   "visual_kind": "real",
+   "asset_id": "shiny_wild_s0565",
+   "props": {
+    "caption": "Shiny and wild",
+    "maxWidth": 732
+   },
+   "join_prev": true
+  },
+  {
+   "shot_id": "s33_zoomout",
+   "start": {
+    "at_phrase": "and set again each"
+   },
+   "end": {
+    "after_phrase": "each time.",
+    "plus": 0.3
+   },
+   "purpose": "The field of Cents, pulling back.",
+   "visual_kind": "real",
+   "asset_id": "zoom_out_c020",
+   "props": {
+    "caption": "",
+    "maxWidth": 732
+   },
+   "join_prev": true
+  },
+  {
+   "shot_id": "s34_close",
+   "start": {
+    "after_phrase": "each time.",
+    "plus": 0.3
+   },
+   "end": {
+    "at_phrase": "Find out more about"
+   },
+   "purpose": "Closing card, one turn (as #1867).",
+   "visual_kind": "code",
+   "component": "StoryOpen",
+   "props": {
+    "inscription": 66001226,
+    "n": 189,
+    "front": "hires/189.webp",
+    "mode": "close",
+    "spin": {
+     "src": "3dcents/189-360-30fps.mp4",
+     "width": 1080,
+     "height": 1920,
+     "frames": 150,
+     "coin": {
+      "cx": 539.5,
+      "cy": 959.5,
+      "d": 776
+     },
+     "credit": "3D render: 3DCENTS by sinvalli",
+     "credit_at_end": true
+    }
+   }
+  },
+  {
+   "shot_id": "s35_gallery",
+   "start": {
+    "at_phrase": "Find out more about"
+   },
+   "end": {
+    "at_phrase": "and explore the traits"
+   },
+   "purpose": "End card: cents.gallery (reused from #1867).",
+   "visual_kind": "real",
+   "asset_id": "endcard_gallery",
+   "props": {
+    "caption": "cents.gallery",
+    "maxWidth": 600
+   }
+  },
+  {
+   "shot_id": "s36_vision",
+   "start": {
+    "at_phrase": "and explore the traits"
+   },
+   "end": {
+    "after_phrase": "on cents dot vision.",
+    "plus": 0.6
+   },
+   "purpose": "End card: cents.vision (reused from #1867).",
+   "visual_kind": "real",
+   "asset_id": "endcard_vision",
+   "props": {
+    "caption": "cents.vision",
+    "maxWidth": 732
+   }
+  },
+  {
+   "shot_id": "s37_credits",
+   "start": {
+    "after_phrase": "on cents dot vision.",
+    "plus": 0.6
+   },
+   "end": {
+    "after_phrase": "on cents dot vision.",
+    "plus": 3.3
+   },
+   "purpose": "Credits 1.",
+   "visual_kind": "code",
+   "component": "Credits",
+   "props": {
+    "lines": [
+     "Images: Rutherford Chang; cents.gallery media library",
+     "3D render: 3DCENTS by sinvalli",
+     "Traits Atlas: CENTS Trait Council, via cents.vision",
+     "cents.vision screenshots courtesy Dr. Martin Lehnen"
+    ]
+   }
+  },
+  {
+   "shot_id": "s38_credits",
+   "start": {
+    "after_phrase": "on cents dot vision.",
+    "plus": 3.3
+   },
+   "end": {
+    "after_phrase": "on cents dot vision.",
+    "plus": 6.0
+   },
+   "purpose": "Credits 2: where Myers quoted Kruger, in full.",
+   "visual_kind": "code",
+   "component": "Credits",
+   "props": {
+    "lines": [
+     "Barbara Kruger, quoted by Rhea Myers in conversation with Maya B. Kronic,",
+     "“‘Hurt Me! No, Not Like That!’ A Conversation with Rhea Myers”,",
+     "in Proof of Work (Urbanomic, 2022)"
+    ]
+   },
+   "join_prev": true
+  },
+  {
+   "shot_id": "s39_credits",
+   "start": {
+    "after_phrase": "on cents dot vision.",
+    "plus": 6.0
+   },
+   "end": {
+    "at_end": true
+   },
+   "purpose": "Credits 3.",
+   "visual_kind": "code",
+   "component": "Credits",
+   "props": {
+    "lines": [
+     "Archival photographs: Library of Congress, Prints & Photographs Division",
+     "Grading terms: Littleton Coin Company"
+    ],
+    "url": "cents.gallery"
+   },
+   "join_prev": true
+  }
+ ]
+}
