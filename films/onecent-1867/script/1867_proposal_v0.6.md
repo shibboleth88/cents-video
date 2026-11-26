@@ -1,5 +1,7 @@
 # One Cent #1867: proposal v0.6 (script for review, not voiced)
 
+*Saved draft (shibboleth, 2026-11-26 00:15Z: "let's save this draft"). A new-format draft followed as v0.7.*
+
 2026-11-25. This builds on v0.5, which is kept beside this file. shibboleth chose the angle at 22:34Z: "the patina and the ledger as two records of one coin".
 
 ## 1. What changed
