@@ -1,0 +1,83 @@
+{
+ "_source": "scribe_v1 on the audio of public/assets/v3new/nixon_your_dollar.mp4 (user-supplied, 2026-11-03)",
+ "words": [
+  {
+   "text": "Your",
+   "type": "word",
+   "start": 0.68,
+   "end": 0.82
+  },
+  {
+   "text": "dollar",
+   "type": "word",
+   "start": 0.9,
+   "end": 1.18
+  },
+  {
+   "text": "will",
+   "type": "word",
+   "start": 1.3,
+   "end": 1.42
+  },
+  {
+   "text": "be",
+   "type": "word",
+   "start": 1.44,
+   "end": 1.54
+  },
+  {
+   "text": "worth",
+   "type": "word",
+   "start": 1.58,
+   "end": 1.88
+  },
+  {
+   "text": "just",
+   "type": "word",
+   "start": 1.94,
+   "end": 2.26
+  },
+  {
+   "text": "as",
+   "type": "word",
+   "start": 2.32,
+   "end": 2.48
+  },
+  {
+   "text": "much",
+   "type": "word",
+   "start": 2.52,
+   "end": 2.78
+  },
+  {
+   "text": "tomorrow",
+   "type": "word",
+   "start": 2.8,
+   "end": 3.24
+  },
+  {
+   "text": "as",
+   "type": "word",
+   "start": 3.3,
+   "end": 3.38
+  },
+  {
+   "text": "it",
+   "type": "word",
+   "start": 3.42,
+   "end": 3.48
+  },
+  {
+   "text": "is",
+   "type": "word",
+   "start": 3.52,
+   "end": 3.66
+  },
+  {
+   "text": "today",
+   "type": "word",
+   "start": 3.72,
+   "end": 3.92
+  }
+ ]
+}

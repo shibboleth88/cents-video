@@ -18,6 +18,30 @@ row moves to `LEDGER_ARCHIVE.md` verbatim in the same edit that supersedes it.
   spoken and flagged rather than overwritten. Anchors match fuzzily
   (`MATCH_MIN`), keeping the ambiguity guard via a margin against the runner-up.
 
+- **Punctuation in the script is not a pause in the audio.** A comma or a full
+  stop says where a reader would breathe; it does not say the take has a
+  silence there. *Bitten twice:* #8462 v3's list commas had no 0.2 s pause, and
+  #1264 v1's eleven_v4 take had none after three full stops ("later.",
+  "gold.", "code.""), so a hold builder that looks for silence there refused.
+  **Separating observation:** measure the gap in the audio (silencedetect, or
+  the longest run of quiet 10 ms windows, at least 150 ms so a stop
+  consonant's closure does not count), never infer it from the text. The
+  #1264 builder falls back to the quiet run and prints which holds used it.
+
+- **When two subjects share the passage, "the" is a pronoun.** A referent pass
+  that looks for stray pronouns ("it", "its", "this one") passes a noun phrase
+  with a definite article, and in a passage about two things that phrase points
+  wherever the listener puts it. *Bitten twice:* #1328 v2, "this one" after a
+  comparison Cent could point at the wrong Cent (series brief); #10000 v0.1,
+  "Beside Cent #1256, struck the same year and close to mint state, the portrait
+  is unmarked" has no subject, so "the portrait" could be #10000's, which is the
+  one with the spot. My v0.1 referent pass had checked pronouns only; it was
+  caught on rereading for the build, before voicing (2026-11-21). **Separating
+  observation:** in any passage that names two Cents, every phrase about a Cent
+  either carries its number or is the subject named in that same sentence. Fixed
+  as "Cent #1256 was struck the same year, and is close to mint state. Its
+  portrait is unmarked."
+
 ## Candidates — bitten once
 
 - **A verified source line is not a verified paraphrase.** The qualifier that
@@ -83,6 +107,28 @@ them was reasonable.
 - **A gate reading a stale export measures the previous film.** A failed render
   left an old `essential.mp4` in place and the safe-area gate re-reported its
   result as a pass. *Caught by:* `g_not_stale`.
+
+- **Rebuilding a master does not rebuild its staged copy.** `build_vo.py`
+  writes `films/<f>/audio/vo.wav`. The render reads `public/vo.wav`, a copy made
+  by `film.py switch`. For #1264 v4 I rebuilt the master after the last switch,
+  so the render played the v3 voice. The captions came from the new alignment.
+  Every check passed, because each one read the master or the alignment, never
+  the file that was rendered:
+  - The transcript equalled the TTS text.
+  - The captions equalled the script.
+  - Loudness and decode were clean.
+
+  The user heard the mismatch (2026-11-03 18:04Z).
+
+  *Separating observation:* `film.py status` reports "public/vo.wav DIFFERS from
+  the master", and an md5 of the two files shows it too.
+
+  *Remedy used for v5:* run `switch` after every `build_vo.py`, and transcribe
+  the staged `public/vo.wav` independently before rendering. The v5 transcript
+  matched the caption timings to within 0.38 s.
+
+  The sibling shape is the stale export above: a check that reads the source
+  instead of the delivered artefact.
 
 - **A scan that returns zero is not a scan that found nothing.** My own
   violation-locator read 0 offending frames because its frame-line regex never
@@ -162,6 +208,48 @@ them was reasonable.
   frame 870, green after the fix. *Separating observation:* `npx tsc --noEmit`
   over the whole project after any edit to `src/style/`, not a render of one
   film.
+
+- **A copy that still names its source acts on the source.** A per-film script
+  copied for a new film carried its source film's path in a constant. The patch
+  that retargeted it raised an error, the next command ran the copy anyway, and
+  it rebuilt the SOURCE film's captions (#10000, copying #8820's
+  `build_cues.py`, 2026-11-21). Harmless only because the inputs were unchanged:
+  `git status` showed no diff in `films/onecent-8820/`. *Separating
+  observation:* grep the copy for the source film's slug before its first run,
+  or have the script find its film from its own path
+  (`Path(__file__).parents[1]`, as `make_standin.py` does), so a copy cannot
+  point anywhere else.
+
+- **A file whose size matches its catalogue is not a complete file.** Media
+  library C001 (the 26,000 px obverse mosaic) downloaded at exactly the
+  catalogue's byte count, which reads as a verified copy; the library's own file
+  is truncated. It ends on a JPEG restart marker (`ff d3`), not the end marker
+  (`ff d9`), and decoding it fills the last 0.8% of rows with flat grey
+  (2026-11-21, #10000). *Separating observation:* decode the whole file (PIL
+  raises "image file is truncated" unless told to tolerate it) or check the end
+  marker; a size check only compares two copies of the same damage.
+
+- **A recorded "can't" is a claim too, and it ages.** A note from 2026-10-25
+  said the container's headless Chromium had no H.264 encoder, so 3DCENTS turns
+  had to come from the user's Mac. The #10000 thread (2026-11-21) read that,
+  built the whole film around a stand-in turn, and asked the user twice for the
+  export. When the user asked "are you able to... if not, why not?", one run of
+  the site's own MP4 button produced the exact file in 17 minutes. Part of the
+  old claim may have come from probing the wrong context: on `about:blank`
+  there is no `VideoEncoder` at all (WebCodecs needs a secure context), while
+  on the site's page `isConfigSupported` says yes. My own first probe repeated
+  that error. *Separating observation:* before routing work around a recorded
+  limitation, run the one cheap test that would show it is still true, in the
+  subject's own context (the real page, not a blank one).
+
+- **"About N" is not "within N".** A duration rounded to fit a sentence, then
+  repeated as a bound, becomes a claim that hours can falsify. The #1867 ledger
+  note said three transfers came "all within three weeks" of the reveal; the
+  third came 21 days 6 hours after it. The phrase went on into a closing option
+  sent to the user and into memory before a script draft measured the gap
+  (2026-11-25). Corrected beside each copy. *Separating observation:* before
+  writing "within", "all" or "only" about times, subtract the timestamps and
+  compare against the bound; when the result is close, give the dates instead.
 
 ## Refuted — killed by a measurement, do not re-investigate
 

@@ -1,0 +1,500 @@
+{
+ "essay": {
+  "title": "Cent #1867",
+  "subtitle": "Inscription #66001799",
+  "author": "shibboleth",
+  "source": "/mnt/project-files/single-cent-series/1867/1867_proposal_v0.8.md",
+  "version": "v1 (2026-11-26): script v0.8 approved by shibboleth ('Please make the video', 00:45Z); eee take 2"
+ },
+ "_what": "Cent #1867 (1964, no mint mark): Significant Obsidian, Significant Verdigris, Contaminated (Alien Secretion). Baseline format: concept C02 (metal and stamp) from the baseline text, quotes first (Chang 2017, Groys 2016), then the traits on this Cent, then value set again.",
+ "shots": [
+  {
+   "shot_id": "s01_open",
+   "start": {
+    "at_start": true
+   },
+   "end": {
+    "at_phrase": "Every physical coin"
+   },
+   "purpose": "Look C opening (PR #25 v3.1, title below): play button, CENTS STORY TIME, the 'look closer' sticker (approved 2026-11-25), one 3DCENTS turn, settled at frame 184 (6.13 s) before 'Every' at 6.9 s. No year or mint-mark zoom.",
+   "visual_kind": "code",
+   "component": "StoryOpen",
+   "props": {
+    "inscription": 66001799,
+    "n": 1867,
+    "front": "hires/1867.webp",
+    "spin": {
+     "src": "3dcents/1867-360-30fps.mp4",
+     "width": 1080,
+     "height": 1920,
+     "frames": 150,
+     "coin": {
+      "cx": 539.5,
+      "cy": 958.5,
+      "d": 776
+     },
+     "credit": "3D render: 3DCENTS by sinvalli",
+     "credit_at_end": true
+    },
+    "sticker": "look closer"
+   }
+  },
+  {
+   "shot_id": "s02_concept",
+   "start": {
+    "at_phrase": "Every physical coin"
+   },
+   "end": {
+    "at_phrase": "In a copper cent"
+   },
+   "purpose": "Concept C02 in Look C, named as the script names it: the concept takes the name's place under the coin the opening ends on. Pair: this Cent, and the two things every coin joins. True.",
+   "visual_kind": "code",
+   "component": "StoryCard",
+   "props": {
+    "n": 1867,
+    "front": "hires/1867.webp",
+    "concept": {
+     "at_phrase": "Every physical coin",
+     "label": "Metal and stamp"
+    }
+   },
+   "join_prev": true
+  },
+  {
+   "shot_id": "s03_face_metal",
+   "start": {
+    "at_phrase": "In a copper cent"
+   },
+   "end": {
+    "at_phrase": "Hoarding such coins"
+   },
+   "purpose": "The same coin, now with its name again; a chip for each half as it is said. Pair: this copper cent's face is one cent and its metal is copper. True (a 1964 cent, 95% copper). No metal price on screen: the only figure is Chang's, in his quote.",
+   "visual_kind": "code",
+   "component": "StoryOpen",
+   "props": {
+    "inscription": 66001799,
+    "n": 1867,
+    "front": "hires/1867.webp",
+    "mode": "lens",
+    "reads": [
+     {
+      "at_phrase": "coin's face and its",
+      "chip": "Face: one cent"
+     },
+     {
+      "at_phrase": "its metal had come",
+      "chip": "Metal: copper"
+     }
+    ]
+   },
+   "join_prev": true
+  },
+  {
+   "shot_id": "s04_desk",
+   "start": {
+    "at_phrase": "Hoarding such coins"
+   },
+   "end": {
+    "after_phrase": "Chang said in twenty seventeen,",
+    "plus": 0.05
+   },
+   "purpose": "Media library C063: pennies laid out on a desk at Chang's studio, with rolls, a scale and a box marked COPPER. Pair: these are such coins, hoarded at Chang's studio. True (Chang collected the copper cents that became CENTS).",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "desk_pennies",
+   "props": {
+    "caption": "Pennies at Rutherford Chang's studio",
+    "maxWidth": 732
+   }
+  },
+  {
+   "shot_id": "s05_chang",
+   "start": {
+    "after_phrase": "Chang said in twenty seventeen,",
+    "plus": 0.05
+   },
+   "end": {
+    "at_phrase": "Chang took the two apart"
+   },
+   "purpose": "Chang's own words, lit word by word (check_quotes.py FOUND in The Creative Independent, 7 July 2017; control '1.8 cents' MISSING). The card is up 0.5 s (the 'seventeen,' hold) before 'was like buying'. Starts after the sentence about melting being illegal, as approved.",
+   "visual_kind": "code",
+   "component": "StoryCard",
+   "props": {
+    "n": 1867,
+    "front": "hires/1867.webp",
+    "from_top": true,
+    "quote": {
+     "at_phrase": "buying one point seven",
+     "text": "buying 1.7 cents of copper for one cent and it’s still worth one cent.",
+     "spoken": {
+      "1.7": "one point seven"
+     },
+     "who": "Rutherford Chang",
+     "where": "The Creative Independent, July 7, 2017"
+    }
+   }
+  },
+  {
+   "shot_id": "s06_apart",
+   "start": {
+    "at_phrase": "Chang took the two apart"
+   },
+   "end": {
+    "at_phrase": "He inscribed the image"
+   },
+   "purpose": "Back to #1867 with its inscription line. Pair: Chang took this coin's face and metal apart. True: its obverse image is inscription 66001799, and the coin itself went into the block.",
+   "visual_kind": "code",
+   "component": "StoryOpen",
+   "props": {
+    "inscription": 66001799,
+    "n": 1867,
+    "front": "hires/1867.webp",
+    "mode": "lens"
+   }
+  },
+  {
+   "shot_id": "s07_images",
+   "start": {
+    "at_phrase": "He inscribed the image"
+   },
+   "end": {
+    "at_phrase": "and had the physical"
+   },
+   "purpose": "Media library C008: a grid of Cent obverse images. Pair: these images of obverses are what was inscribed. True: one image of each obverse went onto one satoshi. The image is shown, not the satoshi, the inscription or the penny.",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "archivist_grid",
+   "props": {
+    "caption": "Images of Cent obverses",
+    "maxWidth": 700
+   }
+  },
+  {
+   "shot_id": "s08_pour",
+   "start": {
+    "at_phrase": "and had the physical"
+   },
+   "end": {
+    "at_phrase": "into one block"
+   },
+   "purpose": "a14, the casting (pour visible from its first frame). Pair: this is the coins being melted and cast. True (supplied by the essay's author as the casting of the block).",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "a14",
+   "props": {
+    "caption": "Casting CENTS Block Copper",
+    "maxWidth": 480
+   }
+  },
+  {
+   "shot_id": "s09_block",
+   "start": {
+    "at_phrase": "into one block"
+   },
+   "end": {
+    "at_phrase": "Boris Groys describes"
+   },
+   "purpose": "Media library S0718: CENTS Block Copper alone. Pair: this is the one block the coins were cast into. True. No screen and no model of CENTS Block 839969, so nothing says the block was inscribed.",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "block",
+   "props": {
+    "caption": "CENTS Block Copper",
+    "maxWidth": 620
+   }
+  },
+  {
+   "shot_id": "s10_groys",
+   "start": {
+    "at_phrase": "Boris Groys describes"
+   },
+   "end": {
+    "at_phrase": "In the image of Cent"
+   },
+   "purpose": "Groys, lit half by half (check_quotes.py FOUND in In the Flow, Verso 2016, introduction; control 'aura without a subject' MISSING). The block lights under 'the object without an aura', the image under 'the aura without an object', as the baseline text pairs them.",
+   "visual_kind": "code",
+   "component": "StoryPair",
+   "props": {
+    "who": "Boris Groys",
+    "where": "In the Flow, 2016",
+    "left": {
+     "img": "assets/1867/block_s0718.jpg",
+     "shape": "square",
+     "zoom": 1.45,
+     "quote": {
+      "at_phrase": "the object without an aura and the",
+      "text": "the object without an aura"
+     }
+    },
+    "right": {
+     "img": "hires/1867.webp",
+     "shape": "circle",
+     "quote": {
+      "at_phrase": "the aura without an object. CENTS keeps",
+      "text": "the aura without an object."
+     }
+    }
+   }
+  },
+  {
+   "shot_id": "s11_traits",
+   "start": {
+    "at_phrase": "In the image of Cent"
+   },
+   "end": {
+    "at_phrase": "In the Traits Atlas"
+   },
+   "purpose": "The image of #1867: a slow push-in, then the zooms of 1867_zoom_plan_v0.1.jpg: O (the band over the motto and the head), V (cheek and behind the head), the collar crust, back out, then A? (Alien Secretion, Claude's reading, flagged to shibboleth). Traits read from the obverse only.",
+   "visual_kind": "code",
+   "component": "StoryOpen",
+   "props": {
+    "inscription": 66001799,
+    "n": 1867,
+    "front": "hires/1867.webp",
+    "mode": "lens",
+    "moves": [
+     {
+      "at_phrase": "the copper's own chemistry",
+      "box": null,
+      "zoom": 1.12,
+      "dur": 3.0
+     },
+     {
+      "at_phrase": "A dark band of",
+      "box": [
+       0.143,
+       0.124,
+       0.59,
+       0.446
+      ],
+      "mark": true,
+      "dur": 0.9
+     },
+     {
+      "at_phrase": "Green patches of",
+      "box": [
+       0.297,
+       0.316,
+       0.666,
+       0.531
+      ],
+      "mark": true,
+      "dur": 0.9
+     },
+     {
+      "at_phrase": "and at his collar",
+      "box": [
+       0.53,
+       0.607,
+       0.599,
+       0.68
+      ],
+      "mark": true,
+      "max": 3.5,
+      "dur": 0.9
+     },
+     {
+      "at_phrase": "A third trait came",
+      "box": null,
+      "dur": 0.8
+     },
+     {
+      "at_phrase": "Contaminated, Alien Secretion",
+      "box": [
+       0.42,
+       0.363,
+       0.609,
+       0.561
+      ],
+      "mark": true,
+      "dur": 0.9
+     }
+    ],
+    "reads": [
+     {
+      "at_phrase": "Significant Obsidian crosses",
+      "chip": "Significant Obsidian"
+     },
+     {
+      "at_phrase": "Significant Verdigris gather",
+      "chip": "Significant Verdigris"
+     },
+     {
+      "at_phrase": "Contaminated, Alien Secretion",
+      "chip": "Alien Secretion"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s12_atlas",
+   "start": {
+    "at_phrase": "In the Traits Atlas"
+   },
+   "end": {
+    "at_phrase": "Compare it to"
+   },
+   "purpose": "Traits Atlas, Alien Secretion, on cents.vision, the definition highlighted. Pair: this is the Atlas's definition, quoted. True.",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "atlas_alien",
+   "props": {
+    "caption": "Traits Atlas, Alien Secretion",
+    "maxWidth": 720
+   }
+  },
+  {
+   "shot_id": "s13_compare",
+   "start": {
+    "at_phrase": "Compare it to"
+   },
+   "end": {
+    "at_phrase": "by the people who"
+   },
+   "purpose": "Template #4421 (1964, no mint mark, Lustrous only), close to mint state: dissolve to it on its name, and back to #1867 (inscription line, no chip) on 'A cent held at one cent', which then carries the value line on the coin alone.",
+   "visual_kind": "code",
+   "component": "StoryDissolve",
+   "props": {
+    "first": "a",
+    "cards": {
+     "a": {
+      "inscription": 66001799,
+      "n": 1867,
+      "front": "hires/1867.webp",
+      "chip": "Three traits"
+     },
+     "b": {
+      "n": 4421,
+      "inscription": 65998434,
+      "front": "hires/4421.webp",
+      "chip": "Close to mint state"
+     },
+     "a2": {
+      "inscription": 66001799,
+      "n": 1867,
+      "front": "hires/1867.webp"
+     }
+    },
+    "swaps": [
+     {
+      "at_phrase": "Cent number forty-four",
+      "to": "b"
+     },
+     {
+      "at_phrase": "A cent held at",
+      "to": "a2"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s14_people",
+   "start": {
+    "at_phrase": "by the people who"
+   },
+   "end": {
+    "after_phrase": "read and exchange it.",
+    "plus": 0.4
+   },
+   "purpose": "Media library C048, the MAKES CENTS interview-cover montage, under 'by the people who keep, read and exchange it'. Pair: these are people of the collection. True; an ongoing process, not a conclusion.",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "makes_cents",
+   "props": {
+    "caption": "MAKES CENTS interviews",
+    "maxWidth": 720
+   }
+  },
+  {
+   "shot_id": "s15_close",
+   "start": {
+    "after_phrase": "read and exchange it.",
+    "plus": 0.4
+   },
+   "end": {
+    "at_phrase": "Find out more about"
+   },
+   "purpose": "Closing card in Look C: one 3DCENTS turn from the first frame (150 frames), 'Cent number eighteen sixty-seven, a great Cent.' over it, then the photo until the end card.",
+   "visual_kind": "code",
+   "component": "StoryOpen",
+   "props": {
+    "inscription": 66001799,
+    "n": 1867,
+    "front": "hires/1867.webp",
+    "mode": "close",
+    "spin": {
+     "src": "3dcents/1867-360-30fps.mp4",
+     "width": 1080,
+     "height": 1920,
+     "frames": 150,
+     "coin": {
+      "cx": 539.5,
+      "cy": 958.5,
+      "d": 776
+     },
+     "credit": "3D render: 3DCENTS by sinvalli",
+     "credit_at_end": true
+    }
+   }
+  },
+  {
+   "shot_id": "s16_gallery",
+   "start": {
+    "at_phrase": "Find out more about"
+   },
+   "end": {
+    "at_phrase": "and explore the traits"
+   },
+   "purpose": "End card, first half: the cents.gallery home page (supplied screenshot).",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "endcard_gallery",
+   "props": {
+    "caption": "cents.gallery",
+    "maxWidth": 600
+   }
+  },
+  {
+   "shot_id": "s17_vision",
+   "start": {
+    "at_phrase": "and explore the traits"
+   },
+   "end": {
+    "after_phrase": "on cents dot vision.",
+    "plus": 0.6
+   },
+   "purpose": "End card, second half: the Traits Lab on cents.vision (supplied screenshot; no wallet address).",
+   "visual_kind": "real",
+   "component": "Plate",
+   "asset_id": "endcard_vision",
+   "props": {
+    "caption": "cents.vision",
+    "maxWidth": 732
+   }
+  },
+  {
+   "shot_id": "s18_credits",
+   "start": {
+    "after_phrase": "on cents dot vision.",
+    "plus": 0.6
+   },
+   "end": {
+    "at_end": true
+   },
+   "purpose": "End credits (brief §4): images, 3DCENTS, the Atlas via cents.vision, each quote's source, the cents.vision screenshots.",
+   "visual_kind": "code",
+   "component": "Credits",
+   "props": {
+    "lines": [
+     "Images: Rutherford Chang; cents.gallery media library",
+     "3D render: 3DCENTS by sinvalli",
+     "Traits Atlas: CENTS Trait Council, via cents.vision",
+     "Quotes: Rutherford Chang, The Creative Independent, 2017",
+     "Boris Groys, In the Flow (Verso, 2016)",
+     "cents.vision screenshots courtesy Dr. Martin Lehnen"
+    ],
+    "url": "cents.gallery"
+   }
+  }
+ ]
+}
