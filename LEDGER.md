@@ -20,6 +20,19 @@ row moves to `LEDGER_ARCHIVE.md` verbatim in the same edit that supersedes it.
 
 ## Candidates — bitten once
 
+- **A verified source line is not a verified paraphrase.** The qualifier that
+  limits a claim (which objects, which state, which date) is the first word a
+  paraphrase drops, and a quote check on the source line stays green because the
+  source line is fine. One Cent #189 v0.1 (2026-11-26): the grading sheet says
+  color designations accompany the grade "of a Mint State or Proof copper
+  coin"; the narration said "a copper coin is called red when it keeps its full
+  original color", widening it to every copper coin. check_quotes.py had FOUND
+  the RD line; the user caught the widened claim by asking "is that true?".
+  *Separating observation:* before a paraphrase goes into narration, set it
+  beside the whole source sentence, including the sentence or heading that
+  scopes it, and list the subject's qualifiers in both; any qualifier missing
+  from the paraphrase is a widened claim. No gate does this; it is a reading.
+
 - **A field I can set is not a sign-off I hold.** `approved: true` on an
   addition is meant to record the user's approval, but nothing stops the author
   of the ledger from writing it. I set it on two becoming-film additions while
