@@ -92,26 +92,33 @@ export const TraitTally: React.FC<Anchored & {
   thumbs?: boolean;
   /** grid: from this phrase, one chip stands out and the rest dim (e.g. the trait another Wall lacks). */
   focus?: { trait: string; at_phrase: string };
+  /** grid: only these traits light (in turn, between at_phrase and until_phrase); the rest stay dim, and need
+   *  no Cent. Made for One Cent #9344 (2026-11-11): one Cent's nine traits against the Atlas's nineteen. */
+  light?: string[];
 }> = (props) => {
-  const { title, traits, items, mode, lit_before = [], at_phrase, until_phrase, lit_all, thumbs = true, focus } = props;
+  const { title, traits, items, mode, lit_before = [], at_phrase, until_phrase, lit_all, thumbs = true, focus, light } = props;
   const frame = useCurrentFrame();
   const fade = useShotFade();
   const at = useAt(props);
   const byTrait = new Map(items.map((it) => [it.trait, it]));
   for (const t of [...items.map((i) => i.trait), ...lit_before]) if (!traits.includes(t)) throw new Error(`TraitTally: "${t}" is not one of the traits`);
-  for (const t of traits) if (!byTrait.has(t)) throw new Error(`TraitTally: no Cent for the trait "${t}"`);
+  if (light && mode !== "grid") throw new Error("TraitTally: light is for the grid");
+  for (const t of light ?? []) if (!traits.includes(t)) throw new Error(`TraitTally: light "${t}" is not one of the traits`);
+  // Every trait that can light has a Cent behind it; with `light`, a trait that never lights needs none.
+  for (const t of light ?? traits) if (!byTrait.has(t)) throw new Error(`TraitTally: no Cent for the trait "${t}"`);
+  if (light && thumbs && traits.some((t) => !byTrait.has(t))) throw new Error("TraitTally: thumbs need a Cent for every chip");
   for (const it of items) if (!it.n && !it.cents?.length) throw new Error(`TraitTally: "${it.trait}" has no Cent`);
 
   // When each chip lights (frame), or Infinity.
   const litAt = new Map<string, number>();
   for (const t of lit_before) litAt.set(t, -100);
   if (mode === "grid") {
-    if (lit_all) traits.forEach((t) => litAt.set(t, Math.min(litAt.get(t) ?? 0, 0)));
+    if (lit_all) (light ?? traits).forEach((t) => litAt.set(t, Math.min(litAt.get(t) ?? 0, 0)));
     else {
       if (!at_phrase || !until_phrase) throw new Error("TraitTally grid: needs at_phrase and until_phrase, or lit_all");
       const f0 = at(at_phrase), f1 = at(until_phrase);
       if (f1 <= f0) throw new Error("TraitTally grid: until_phrase comes before at_phrase");
-      const todo = traits.filter((t) => !litAt.has(t));
+      const todo = (light ?? traits).filter((t) => !litAt.has(t));
       todo.forEach((t, i) => litAt.set(t, f0 + ((f1 - f0) * i) / Math.max(1, todo.length)));
     }
   } else {
@@ -144,14 +151,14 @@ export const TraitTally: React.FC<Anchored & {
         <Head title={title} count={count} total={traits.length} />
         <Imagery>
           {traits.map((t, i) => {
-            const it = byTrait.get(t)!;
+            const it = byTrait.get(t);
             const col = Math.floor(i / rows), row = i % rows;      // read down each column
             const on = focus?.trait === t;
             return (
               <div key={t} style={{ position: "absolute", left: x0 + col * cw + gap / 2, top: y0 + row * ch + gap / 2,
                                     opacity: focus && !on ? 1 - 0.75 * fz : 1,
                                     boxShadow: on ? `0 0 ${28 * fz}px rgba(175,107,57,${fz})` : undefined, borderRadius: 14 }}>
-                <Chip label={t} t={tOf(t)} w={cw - gap} h={ch - gap} thumb={thumbs ? thumbOf(it, d) : null} />
+                <Chip label={t} t={tOf(t)} w={cw - gap} h={ch - gap} thumb={thumbs && it ? thumbOf(it, d) : null} />
               </div>
             );
           })}

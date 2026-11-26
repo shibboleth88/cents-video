@@ -1,0 +1,56 @@
+{
+ "totalCollectors": 2084,
+ "holder": {
+  "count": 48,
+  "club": "Quarter Club",
+  "claimed": false,
+  "years": [
+   1961,
+   1982
+  ],
+  "sets": {
+   "patina_level": "significant",
+   "spectrum": false,
+   "full_spectrum": false,
+   "chronicle": false,
+   "full_mint": true,
+   "contamination_types": 5,
+   "decade_sets": [
+    1980
+   ],
+   "three_decades": false,
+   "full_decades": false,
+   "all_decades": false
+  },
+  "top_traits": [
+   [
+    "contaminated_alien_secretion",
+    2
+   ],
+   [
+    "contaminated_unknown_liquid",
+    2
+   ],
+   [
+    "contaminated_3d_black",
+    1
+   ],
+   [
+    "contaminated_obscure_adhesive",
+    2
+   ]
+  ],
+  "diamond_hands": true
+ },
+ "aggregate": {
+  "patina": 115,
+  "sig": 29,
+  "fulls": 2,
+  "contaminationSet": 59,
+  "contaminationHoard": 12,
+  "decade1960": 7,
+  "threeDecades": 5,
+  "allDecades": 2
+ },
+ "_note": "cents.vision collectors page replayed offline (collectors/replay.js adapted) on the 2026-10-24 raw files with the 2026-11-15 wallet index; holder = the one Wall holding #1867 (unclaimed, address omitted)."
+}
