@@ -1,0 +1,1208 @@
+{
+ "essay": {
+  "title": "CENTS",
+  "subtitle": "An introduction",
+  "author": "shibboleth",
+  "source": "/mnt/project-files/intro-videos/intro-2min/intro_proposal_v0.3.md",
+  "version": "v0.3 rehearsal (2026-11-27): script v0.3, awaiting shibboleth's review"
+ },
+ "_what": "The CENTS introduction (about 2:12): Chang's hoarding, then medium and network (shibboleth: lead with it), copper and value, ten thousand photographed, the melt and the inscriptions, every form a cent, the collectors, the statement's 'continue to be redefined'. A new picture about every 2-3 s.",
+ "shots": [
+  {
+   "shot_id": "s01_title",
+   "start": {
+    "at_start": true
+   },
+   "end": {
+    "at_phrase": "I'm going to start"
+   },
+   "purpose": "The web introduction's cent sign melts away and the title rises where it was. Not black at frame 0: the sign is there.",
+   "visual_kind": "code",
+   "component": "IntroTitle",
+   "props": {
+    "melt": "assets/intro/melt.mp4",
+    "titleAt": 40
+   }
+  },
+  {
+   "shot_id": "s02_hoard",
+   "start": {
+    "at_phrase": "I'm going to start"
+   },
+   "end": {
+    "at_phrase": "The penny, he said"
+   },
+   "purpose": "Chang's line lit as he is quoted, over his studio desk of pennies (dimmed).",
+   "visual_kind": "code",
+   "component": "IntroQuote",
+   "props": {
+    "quote": {
+     "at_phrase": "I'm going to start",
+     "text": "I'm going to start hoarding pennies."
+    },
+    "who": "Rutherford Chang",
+    "where": "The Creative Independent, 2017",
+    "bg": {
+     "src": "assets/intro/desk.jpg",
+     "w": 1600,
+     "h": 1200,
+     "dim": 0.74,
+     "from": {
+      "k": 1.15,
+      "x": 0.45,
+      "y": 0.5
+     },
+     "to": {
+      "k": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     }
+    }
+   }
+  },
+  {
+   "shot_id": "s03_table",
+   "start": {
+    "at_phrase": "The penny, he said"
+   },
+   "end": {
+    "at_phrase": "the lowest common"
+   },
+   "purpose": "Copper cents on a table at the studio: the pennies he means.",
+   "visual_kind": "code",
+   "component": "IntroPhoto",
+   "props": {
+    "src": "assets/intro/coins_table.jpg",
+    "w": 640,
+    "h": 640,
+    "label": "Copper cents at Chang's studio",
+    "from": {
+     "k": 1.0,
+     "x": 0.5,
+     "y": 0.5
+    },
+    "to": {
+     "k": 1.1,
+     "x": 0.5,
+     "y": 0.5
+    }
+   }
+  },
+  {
+   "shot_id": "s04_junk",
+   "start": {
+    "at_phrase": "the lowest common"
+   },
+   "end": {
+    "at_phrase": "He had, he said"
+   },
+   "purpose": "'Junk, nothing': many different Cents in fast succession behind the quote. The pictures differ, the words say they are worth nothing.",
+   "visual_kind": "code",
+   "component": "IntroFlash",
+   "props": {
+    "fronts": [
+     "hires/9344.webp",
+     "hires/2616.webp",
+     "hires/1511.webp",
+     "hires/4273.webp",
+     "hires/6129.webp",
+     "hires/189.webp",
+     "hires/1328.webp",
+     "hires/9526.webp",
+     "hires/478.webp"
+    ],
+    "every": 4,
+    "who": "Rutherford Chang",
+    "quote": {
+     "at_phrase": "the lowest common",
+     "text": "the lowest common denominator, it's like junk, it's like nothing."
+    }
+   },
+   "join_prev": true
+  },
+  {
+   "shot_id": "s05_noidea",
+   "start": {
+    "at_phrase": "He had, he said"
+   },
+   "end": {
+    "at_phrase": "What he made, CENTS"
+   },
+   "purpose": "His own words against an invented intention: he did not know what he would make. Over the studio (dimmed).",
+   "visual_kind": "code",
+   "component": "IntroQuote",
+   "props": {
+    "quote": {
+     "at_phrase": "no idea what",
+     "text": "no idea"
+    },
+    "who": "Rutherford Chang",
+    "where": "The Creative Independent, 2017",
+    "size": 130,
+    "top": 700,
+    "bg": {
+     "src": "assets/intro/studio.jpg",
+     "w": 1400,
+     "h": 1050,
+     "dim": 0.76,
+     "from": {
+      "k": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "k": 1.12,
+      "x": 0.55,
+      "y": 0.5
+     }
+    }
+   }
+  },
+  {
+   "shot_id": "s06_title",
+   "start": {
+    "at_phrase": "What he made, CENTS"
+   },
+   "end": {
+    "at_phrase": "Chang inscribed images"
+   },
+   "purpose": "The work named: CENTS, a work of its medium.",
+   "visual_kind": "code",
+   "component": "IntroFigure",
+   "props": {
+    "items": [
+     {
+      "at_phrase": "What he made, CENTS",
+      "big": "CENTS",
+      "small": "a work of its medium"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s07_mosaic",
+   "start": {
+    "at_phrase": "Chang inscribed images"
+   },
+   "end": {
+    "at_phrase": "and the work shows"
+   },
+   "purpose": "Images of ten thousand copper cents: all 10,000 Cents in number order, the camera pulling back from a few to all.",
+   "visual_kind": "code",
+   "component": "IntroPhoto",
+   "props": {
+    "src": "assets/intro/mosaic.jpg",
+    "w": 1600,
+    "h": 1600,
+    "kicker": "10,000 images, inscribed on Bitcoin",
+    "label": "Every Cent in CENTS, in number order",
+    "from": {
+     "k": 5.0,
+     "x": 0.5,
+     "y": 0.5
+    },
+    "to": {
+     "k": 1.0,
+     "x": 0.5,
+     "y": 0.5
+    }
+   }
+  },
+  {
+   "shot_id": "s08_plaque",
+   "start": {
+    "at_phrase": "and the work shows"
+   },
+   "end": {
+    "at_phrase": "from a state to a public"
+   },
+   "purpose": "Money as the state's record: Brenner's Lincoln, the face the cent carries.",
+   "visual_kind": "code",
+   "component": "IntroPhoto",
+   "props": {
+    "src": "assets/intro/plaque.jpg",
+    "w": 810,
+    "h": 1080,
+    "kicker": "Victor David Brenner",
+    "label": "Lincoln plaque. Brenner designed the Lincoln cent of 1909",
+    "from": {
+     "k": 1.0,
+     "x": 0.5,
+     "y": 0.42
+    },
+    "to": {
+     "k": 1.25,
+     "x": 0.55,
+     "y": 0.35
+    }
+   }
+  },
+  {
+   "shot_id": "s09_network",
+   "start": {
+    "at_phrase": "from a state to a public"
+   },
+   "end": {
+    "at_phrase": "Released at one satoshi"
+   },
+   "purpose": "A drawing of the idea, not a map of real nodes: one holder of the record, then many.",
+   "visual_kind": "code",
+   "component": "IntroNetwork",
+   "props": {
+    "net_at": "a public network",
+    "one": "One state",
+    "lines": [
+     {
+      "at_phrase": "a public network",
+      "text": "A public network"
+     },
+     {
+      "at_phrase": "anyone can read",
+      "text": "Anyone can read"
+     },
+     {
+      "at_phrase": "no one runs",
+      "text": "No one runs"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s10_one_sat",
+   "start": {
+    "at_phrase": "Released at one satoshi"
+   },
+   "end": {
+    "at_phrase": "the inscriptions moved"
+   },
+   "purpose": "Released at one satoshi each. No dollar price.",
+   "visual_kind": "code",
+   "component": "IntroFigure",
+   "props": {
+    "items": [
+     {
+      "at_phrase": "Released at one satoshi",
+      "big": "1 satoshi",
+      "small": "each, at release"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s11_ongoing",
+   "start": {
+    "at_phrase": "the inscriptions moved"
+   },
+   "end": {
+    "at_phrase": "set and set again"
+   },
+   "purpose": "From a figure the state sets to a process.",
+   "visual_kind": "code",
+   "component": "IntroFigure",
+   "props": {
+    "items": [
+     {
+      "at_phrase": "from a figure set",
+      "big": "1¢",
+      "small": "a figure set by the state"
+     },
+     {
+      "at_phrase": "into an ongoing",
+      "big": "ongoing",
+      "small": "a process"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s12_people",
+   "start": {
+    "at_phrase": "set and set again"
+   },
+   "end": {
+    "at_phrase": "It began with copper"
+   },
+   "purpose": "The people: collectors (MAKES CENTS), a reader at UCCA, the block's image at Christie's on 'exchange'.",
+   "visual_kind": "code",
+   "component": "IntroSeq",
+   "props": {
+    "items": [
+     {
+      "src": "assets/intro/mc_rees.jpg",
+      "w": 1400,
+      "h": 1400,
+      "label": "MAKES CENTS: David Rees"
+     },
+     {
+      "src": "assets/intro/mc_archivist.jpg",
+      "w": 1600,
+      "h": 1600,
+      "at_phrase": "set again by",
+      "label": "MAKES CENTS: Archivist"
+     },
+     {
+      "src": "assets/intro/mc_olly.jpg",
+      "w": 1400,
+      "h": 1400,
+      "at_phrase": "the people who",
+      "label": "MAKES CENTS: ol1y"
+     },
+     {
+      "src": "assets/intro/mc_sk.jpg",
+      "w": 1400,
+      "h": 1400,
+      "at_phrase": "who keep",
+      "label": "MAKES CENTS: SK"
+     },
+     {
+      "src": "assets/intro/ucca_book.jpg",
+      "w": 1200,
+      "h": 1600,
+      "at_phrase": "read and exchange",
+      "label": "Reading the CENTS book, UCCA Beijing"
+     },
+     {
+      "src": "assets/intro/block_christies.jpg",
+      "w": 1500,
+      "h": 1500,
+      "at_phrase": "and exchange each",
+      "label": "The image of CENTS Block 839969 used at Christie's"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s13_1974",
+   "start": {
+    "at_phrase": "It began with copper"
+   },
+   "end": {
+    "at_phrase": "holds more than"
+   },
+   "purpose": "Copper cents, each from before 1983: four Cents dated 1974.",
+   "visual_kind": "code",
+   "component": "IntroPhoto",
+   "props": {
+    "src": "assets/intro/one_year_1974.jpg",
+    "w": 1600,
+    "h": 390,
+    "fit": "contain",
+    "label": "Four Cents dated 1974",
+    "from": {
+     "k": 1.0,
+     "x": 0.5,
+     "y": 0.5
+    },
+    "to": {
+     "k": 1.5,
+     "x": 0.38,
+     "y": 0.5
+    }
+   }
+  },
+  {
+   "shot_id": "s14_stamp",
+   "start": {
+    "at_phrase": "holds more than"
+   },
+   "end": {
+    "at_phrase": "Hoarding them, he said"
+   },
+   "purpose": "More copper than a cent's worth: one design, many decades of Cents.",
+   "visual_kind": "code",
+   "component": "IntroPhoto",
+   "props": {
+    "src": "assets/intro/one_stamp.jpg",
+    "w": 1600,
+    "h": 793,
+    "fit": "contain",
+    "label": "One design, struck across decades",
+    "from": {
+     "k": 1.0,
+     "x": 0.5,
+     "y": 0.5
+    },
+    "to": {
+     "k": 1.1,
+     "x": 0.5,
+     "y": 0.5
+    }
+   },
+   "join_prev": true
+  },
+  {
+   "shot_id": "s15_copper",
+   "start": {
+    "at_phrase": "Hoarding them, he said"
+   },
+   "end": {
+    "at_phrase": "Chang's statement for the work"
+   },
+   "purpose": "The arithmetic set large as it is said, then Chang's words lit.",
+   "visual_kind": "code",
+   "component": "IntroQuote",
+   "props": {
+    "quote": {
+     "at_phrase": "buying one point seven",
+     "text": "buying 1.7 cents of copper for one cent and it's still worth one cent.",
+     "spoken": {
+      "1.7": "one point seven"
+     }
+    },
+    "who": "Rutherford Chang",
+    "where": "The Creative Independent, 2017",
+    "top": 700,
+    "size": 74,
+    "figure": {
+     "text": "1.7¢ for 1¢",
+     "at_phrase": "one point seven cents",
+     "size": 130
+    }
+   }
+  },
+  {
+   "shot_id": "s16_discrepancy",
+   "start": {
+    "at_phrase": "Chang's statement for the work"
+   },
+   "end": {
+    "at_phrase": "He took ten thousand"
+   },
+   "purpose": "The statement's own words (Chang's), over every Cent dated 1971 (dimmed).",
+   "visual_kind": "code",
+   "component": "IntroQuote",
+   "props": {
+    "quote": {
+     "at_phrase": "discrepancies in value",
+     "text": "discrepancies in value"
+    },
+    "who": "Rutherford Chang",
+    "where": "Statement for CENTS",
+    "size": 110,
+    "top": 640,
+    "bg": {
+     "src": "assets/intro/struck_1971.jpg",
+     "w": 1600,
+     "h": 860,
+     "dim": 0.8,
+     "from": {
+      "k": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "k": 1.15,
+      "x": 0.5,
+      "y": 0.5
+     }
+    }
+   }
+  },
+  {
+   "shot_id": "s17_rolls",
+   "start": {
+    "at_phrase": "He took ten thousand"
+   },
+   "end": {
+    "at_phrase": "and photographed every"
+   },
+   "purpose": "Out of circulation: penny rolls at the studio.",
+   "visual_kind": "code",
+   "component": "IntroPhoto",
+   "props": {
+    "src": "assets/intro/rolls.jpg",
+    "w": 1600,
+    "h": 1200,
+    "label": "Penny rolls at Chang's studio",
+    "from": {
+     "k": 1.0,
+     "x": 0.5,
+     "y": 0.5
+    },
+    "to": {
+     "k": 1.1,
+     "x": 0.5,
+     "y": 0.5
+    }
+   }
+  },
+  {
+   "shot_id": "s18_setup",
+   "start": {
+    "at_phrase": "and photographed every"
+   },
+   "end": {
+    "at_phrase": "Coins made to be identical"
+   },
+   "purpose": "The setup in which every coin was photographed.",
+   "visual_kind": "code",
+   "component": "IntroPhoto",
+   "props": {
+    "src": "assets/intro/setup.jpg",
+    "w": 1600,
+    "h": 1200,
+    "label": "Chang's penny photography setup",
+    "from": {
+     "k": 1.2,
+     "x": 0.5,
+     "y": 0.45
+    },
+    "to": {
+     "k": 1.0,
+     "x": 0.5,
+     "y": 0.5
+    }
+   },
+   "join_prev": true
+  },
+  {
+   "shot_id": "s19_die",
+   "start": {
+    "at_phrase": "Coins made to be identical"
+   },
+   "end": {
+    "at_phrase": "turned out to differ"
+   },
+   "purpose": "Made to be identical: a die strikes every cent alike.",
+   "visual_kind": "code",
+   "component": "IntroPhoto",
+   "props": {
+    "src": "assets/intro/die.jpg",
+    "w": 1290,
+    "h": 860,
+    "label": "A die for the Lincoln cent, 2025",
+    "kicker": "United States Mint",
+    "from": {
+     "k": 1.0,
+     "x": 0.5,
+     "y": 0.5
+    },
+    "to": {
+     "k": 1.25,
+     "x": 0.52,
+     "y": 0.42
+    }
+   }
+  },
+  {
+   "shot_id": "s20_1971",
+   "start": {
+    "at_phrase": "turned out to differ"
+   },
+   "end": {
+    "at_phrase": "each marked by its"
+   },
+   "purpose": "Turned out to differ: every Cent dated 1971, side by side.",
+   "visual_kind": "code",
+   "component": "IntroPhoto",
+   "props": {
+    "src": "assets/intro/struck_1971.jpg",
+    "w": 1600,
+    "h": 860,
+    "fit": "contain",
+    "label": "Every Cent dated 1971 in CENTS",
+    "from": {
+     "k": 1.0,
+     "x": 0.5,
+     "y": 0.5
+    },
+    "to": {
+     "k": 1.8,
+     "x": 0.3,
+     "y": 0.4
+    }
+   },
+   "join_prev": true
+  },
+  {
+   "shot_id": "s21_three",
+   "start": {
+    "at_phrase": "each marked by its"
+   },
+   "end": {
+    "at_phrase": "He had the coins melted"
+   },
+   "purpose": "Wear, toning, color, one Cent each as the word is said. Traits from the Trait Council's data (Sep 2026).",
+   "visual_kind": "code",
+   "component": "IntroTriple",
+   "props": {
+    "cents": [
+     {
+      "at_phrase": "each marked by its",
+      "front": "hires/4336.webp",
+      "n": 4336,
+      "chip": "Wear",
+      "trait": "Heavily Abraded",
+      "box": [
+       0.3,
+       0.3,
+       0.7,
+       0.7
+      ]
+     },
+     {
+      "at_phrase": "toning and color",
+      "front": "hires/1511.webp",
+      "n": 1511,
+      "chip": "Toning",
+      "trait": "Full Obsidian",
+      "box": [
+       0.3,
+       0.3,
+       0.7,
+       0.7
+      ]
+     },
+     {
+      "at_phrase": "and color",
+      "front": "hires/4273.webp",
+      "n": 4273,
+      "chip": "Color",
+      "trait": "Full Gold",
+      "box": [
+       0.3,
+       0.3,
+       0.7,
+       0.7
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s22_pour",
+   "start": {
+    "at_phrase": "He had the coins melted"
+   },
+   "end": {
+    "at_phrase": "cast into one block"
+   },
+   "purpose": "Casting CENTS Block Copper: the outdoor pour, at its own resolution (contained, not blown up).",
+   "visual_kind": "code",
+   "component": "IntroPhoto",
+   "props": {
+    "src": "assets/intro/pour.mp4",
+    "w": 480,
+    "h": 848,
+    "video": true,
+    "fit": "contain",
+    "kicker": "Casting CENTS Block Copper",
+    "label": "The pour",
+    "from": {
+     "k": 1.0,
+     "x": 0.5,
+     "y": 0.5
+    },
+    "to": {
+     "k": 1.0,
+     "x": 0.5,
+     "y": 0.5
+    }
+   }
+  },
+  {
+   "shot_id": "s23_block",
+   "start": {
+    "at_phrase": "cast into one block"
+   },
+   "end": {
+    "at_phrase": "In March twenty twenty-four"
+   },
+   "purpose": "The block itself, a photograph on a floor.",
+   "visual_kind": "code",
+   "component": "IntroPhoto",
+   "props": {
+    "src": "assets/intro/block_floor.jpg",
+    "w": 1600,
+    "h": 1600,
+    "kicker": "CENTS Block Copper",
+    "label": "About 31 kg, cast from the coins",
+    "from": {
+     "k": 1.0,
+     "x": 0.5,
+     "y": 0.55
+    },
+    "to": {
+     "k": 1.2,
+     "x": 0.5,
+     "y": 0.6
+    }
+   },
+   "join_prev": true
+  },
+  {
+   "shot_id": "s24_obverses",
+   "start": {
+    "at_phrase": "In March twenty twenty-four"
+   },
+   "end": {
+    "at_phrase": "one image to one satoshi"
+   },
+   "purpose": "The image of each obverse: Cents in fast succession (not the ones in the opening flash).",
+   "visual_kind": "code",
+   "component": "IntroFlash",
+   "props": {
+    "fronts": [
+     "hires/1.webp",
+     "hires/2.webp",
+     "hires/3.webp",
+     "hires/4.webp",
+     "hires/5.webp",
+     "hires/6.webp",
+     "hires/7.webp",
+     "hires/8820.webp",
+     "hires/5553.webp",
+     "hires/219.webp",
+     "hires/4336.webp",
+     "hires/1264.webp",
+     "hires/9002.webp",
+     "hires/6749.webp",
+     "hires/8462.webp",
+     "hires/1867.webp",
+     "hires/10000.webp",
+     "hires/1605.webp",
+     "hires/3525.webp",
+     "hires/9794.webp"
+    ],
+    "every": 3,
+    "label": "The image of each obverse"
+   }
+  },
+  {
+   "shot_id": "s25_sats",
+   "start": {
+    "at_phrase": "one image to one satoshi"
+   },
+   "end": {
+    "at_phrase": "and in April the block's"
+   },
+   "purpose": "One image to one satoshi; the satoshi as the smallest unit of bitcoin.",
+   "visual_kind": "code",
+   "component": "IntroFigure",
+   "props": {
+    "items": [
+     {
+      "at_phrase": "one image to one",
+      "big": "1 image",
+      "small": "on 1 satoshi"
+     },
+     {
+      "at_phrase": "the smallest unit",
+      "big": "100,000,000",
+      "small": "satoshis make 1 bitcoin",
+      "size": 120
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s26_model",
+   "start": {
+    "at_phrase": "and in April the block's"
+   },
+   "end": {
+    "at_phrase": "which fills a whole"
+   },
+   "purpose": "The block's model, turning.",
+   "visual_kind": "code",
+   "component": "IntroPhoto",
+   "props": {
+    "src": "assets/intro/model.mp4",
+    "w": 720,
+    "h": 720,
+    "video": true,
+    "fit": "contain",
+    "kicker": "The block's model",
+    "label": "The 3D model of CENTS Block Copper",
+    "from": {
+     "k": 1.0,
+     "x": 0.5,
+     "y": 0.5
+    },
+    "to": {
+     "k": 1.0,
+     "x": 0.5,
+     "y": 0.5
+    }
+   }
+  },
+  {
+   "shot_id": "s27_mempool",
+   "start": {
+    "at_phrase": "which fills a whole"
+   },
+   "end": {
+    "at_phrase": "CENTS Block eight three"
+   },
+   "purpose": "The whole block of the chain that the model fills.",
+   "visual_kind": "code",
+   "component": "IntroPhoto",
+   "props": {
+    "src": "assets/intro/mempool.jpg",
+    "w": 1122,
+    "h": 677,
+    "fit": "contain",
+    "kicker": "Bitcoin block 839,969",
+    "label": "As mempool.space shows it",
+    "from": {
+     "k": 1.0,
+     "x": 0.5,
+     "y": 0.5
+    },
+    "to": {
+     "k": 1.25,
+     "x": 0.75,
+     "y": 0.55
+    }
+   }
+  },
+  {
+   "shot_id": "s28_839969",
+   "start": {
+    "at_phrase": "CENTS Block eight three"
+   },
+   "end": {
+    "at_phrase": "His statement calls it"
+   },
+   "purpose": "The name said over the model again (later in the clip), so CENTS Block 839969 is shown as the model, never the copper.",
+   "visual_kind": "code",
+   "component": "IntroPhoto",
+   "props": {
+    "src": "assets/intro/model.mp4",
+    "w": 720,
+    "h": 720,
+    "video": true,
+    "startFrom": 150,
+    "fit": "contain",
+    "kicker": "CENTS Block 839969",
+    "label": "The block's model, inscribed on Bitcoin",
+    "from": {
+     "k": 1.0,
+     "x": 0.5,
+     "y": 0.5
+    },
+    "to": {
+     "k": 1.12,
+     "x": 0.5,
+     "y": 0.5
+    }
+   }
+  },
+  {
+   "shot_id": "s29_monument",
+   "start": {
+    "at_phrase": "His statement calls it"
+   },
+   "end": {
+    "at_phrase": "The coin, its image"
+   },
+   "purpose": "Chang's words for the inscription, over block 839,969 as mempool.space shows it (dimmed).",
+   "visual_kind": "code",
+   "component": "IntroQuote",
+   "props": {
+    "quote": {
+     "at_phrase": "an immutable digital",
+     "text": "an immutable digital monument."
+    },
+    "who": "Rutherford Chang",
+    "where": "Statement for CENTS, on CENTS Block 839969",
+    "size": 96,
+    "top": 640,
+    "bg": {
+     "src": "assets/intro/mempool.jpg",
+     "w": 1122,
+     "h": 677,
+     "dim": 0.88,
+     "from": {
+      "k": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "k": 1.15,
+      "x": 0.5,
+      "y": 0.5
+     }
+    }
+   }
+  },
+  {
+   "shot_id": "s30_forms",
+   "start": {
+    "at_phrase": "The coin, its image"
+   },
+   "end": {
+    "at_phrase": "Collectors preferred"
+   },
+   "purpose": "Five forms, one tile per word: physical coins, a Cent's image, its inscription number, the copper block, the model. Then all five.",
+   "visual_kind": "code",
+   "component": "IntroForms",
+   "props": {
+    "tiles": [
+     {
+      "at_phrase": "The coin, its",
+      "label": "the coin",
+      "src": "assets/intro/coins_table.jpg"
+     },
+     {
+      "at_phrase": "its image, its",
+      "label": "its image",
+      "src": "hires/1867.webp",
+      "disc": true
+     },
+     {
+      "at_phrase": "its inscription, the",
+      "label": "its inscription",
+      "text": [
+       "Inscription",
+       "66001799"
+      ]
+     },
+     {
+      "at_phrase": "the copper and",
+      "label": "the copper",
+      "src": "assets/intro/block_floor.jpg"
+     },
+     {
+      "at_phrase": "and the model each",
+      "label": "the model",
+      "src": "assets/intro/model_still.jpg"
+     }
+    ],
+    "all_at": "each is a cent",
+    "chip": "Each a cent"
+   }
+  },
+  {
+   "shot_id": "s31_flip",
+   "start": {
+    "at_phrase": "Collectors preferred"
+   },
+   "end": {
+    "at_phrase": "A council of collectors"
+   },
+   "purpose": "Damaged and close to mint state, swapping fast (brief: comparisons cut back and forth), settling on the damaged one.",
+   "visual_kind": "code",
+   "component": "StoryFlip",
+   "props": {
+    "a": {
+     "n": 9344,
+     "inscription": 65999011,
+     "front": "hires/9344.webp",
+     "chip": "Nine traits"
+    },
+    "b": {
+     "n": 4421,
+     "inscription": 65998434,
+     "front": "hires/4421.webp",
+     "chip": "Close to mint state"
+    },
+    "period": 0.3,
+    "settle": "to the clean",
+    "chips_at": "Collectors preferred"
+   }
+  },
+  {
+   "shot_id": "s32_council",
+   "start": {
+    "at_phrase": "A council of collectors"
+   },
+   "end": {
+    "at_phrase": "voted on all ten"
+   },
+   "purpose": "The Trait Council's own process document.",
+   "visual_kind": "code",
+   "component": "IntroPhoto",
+   "props": {
+    "src": "assets/189/trait_council_s1075.jpg",
+    "w": 1600,
+    "h": 1124,
+    "fit": "contain",
+    "label": "The Trait Council's process",
+    "from": {
+     "k": 1.0,
+     "x": 0.5,
+     "y": 0.5
+    },
+    "to": {
+     "k": 1.1,
+     "x": 0.5,
+     "y": 0.5
+    }
+   }
+  },
+  {
+   "shot_id": "s33_rounds",
+   "start": {
+    "at_phrase": "voted on all ten"
+   },
+   "end": {
+    "at_phrase": "and agreed on nineteen"
+   },
+   "purpose": "All ten thousand, three times.",
+   "visual_kind": "code",
+   "component": "IntroFigure",
+   "props": {
+    "items": [
+     {
+      "at_phrase": "voted on all ten",
+      "big": "10,000",
+      "small": "Cents reviewed",
+      "size": 150
+     },
+     {
+      "at_phrase": "three times",
+      "big": "×3",
+      "small": "three rounds of votes"
+     }
+    ]
+   },
+   "join_prev": true
+  },
+  {
+   "shot_id": "s34_traits",
+   "start": {
+    "at_phrase": "and agreed on nineteen"
+   },
+   "end": {
+    "at_phrase": "Chang's statement ends"
+   },
+   "purpose": "The nineteen traits (still from the web introduction).",
+   "visual_kind": "code",
+   "component": "IntroPhoto",
+   "props": {
+    "src": "assets/intro/traits19.jpg",
+    "w": 1600,
+    "h": 900,
+    "fit": "contain",
+    "label": "The nineteen traits",
+    "from": {
+     "k": 1.0,
+     "x": 0.5,
+     "y": 0.5
+    },
+    "to": {
+     "k": 1.6,
+     "x": 0.6,
+     "y": 0.45
+    }
+   }
+  },
+  {
+   "shot_id": "s35_shown",
+   "start": {
+    "at_phrase": "Chang's statement ends"
+   },
+   "end": {
+    "at_phrase": "its value can continue"
+   },
+   "purpose": "Where the work has been shown, while the statement is introduced.",
+   "visual_kind": "code",
+   "component": "IntroSeq",
+   "props": {
+    "items": [
+     {
+      "src": "assets/intro/ucca_case.jpg",
+      "w": 1200,
+      "h": 1600,
+      "label": "UCCA Beijing: the block, the book, the model"
+     },
+     {
+      "src": "assets/intro/bankable.jpg",
+      "w": 761,
+      "h": 761,
+      "fit": "contain",
+      "at_phrase": "statement ends",
+      "plus": 0.5,
+      "label": "BANKABLE, Basel Social Club, 2025"
+     }
+    ]
+   }
+  },
+  {
+   "shot_id": "s36_redefined",
+   "start": {
+    "at_phrase": "its value can continue"
+   },
+   "end": {
+    "after_phrase": "their transformation.",
+    "plus": 1.2
+   },
+   "purpose": "The statement's last sentence lit over all 10,000 Cents, the camera pulling back from a few to all. The film ends on 'continue to be redefined', not on an ending.",
+   "visual_kind": "code",
+   "component": "IntroQuote",
+   "props": {
+    "quote": {
+     "at_phrase": "its value can continue",
+     "text": "its value can continue to be redefined through this digitally scarce set of 10,000 and the block that encapsulates their transformation.",
+     "spoken": {
+      "10,000": "ten thousand"
+     }
+    },
+    "who": "Rutherford Chang",
+    "where": "Statement for CENTS",
+    "size": 66,
+    "maxLines": 10,
+    "top": 520,
+    "bg": {
+     "src": "assets/intro/mosaic.jpg",
+     "w": 1600,
+     "h": 1600,
+     "dim": 0.72,
+     "from": {
+      "k": 4.0,
+      "x": 0.5,
+      "y": 0.5
+     },
+     "to": {
+      "k": 1.0,
+      "x": 0.5,
+      "y": 0.5
+     }
+    }
+   }
+  },
+  {
+   "shot_id": "s37_end",
+   "start": {
+    "after_phrase": "their transformation.",
+    "plus": 1.2
+   },
+   "end": {
+    "after_phrase": "their transformation.",
+    "plus": 4.4
+   },
+   "purpose": "End card.",
+   "visual_kind": "code",
+   "component": "IntroEnd",
+   "props": {
+    "sites": [
+     "cents.gallery",
+     "cents.vision"
+    ]
+   }
+  },
+  {
+   "shot_id": "s38_credits",
+   "start": {
+    "after_phrase": "their transformation.",
+    "plus": 4.4
+   },
+   "end": {
+    "at_end": true
+   },
+   "purpose": "Credits.",
+   "visual_kind": "code",
+   "component": "Credits",
+   "props": {
+    "lines": [
+     "Words: Rutherford Chang, The Creative Independent, 2017, and his statement for CENTS",
+     "Images: Rutherford Chang; cents.gallery media library",
+     "UCCA Beijing installation views; MAKES CENTS",
+     "mempool.space · Princeton University Art Museum · U.S. Mint (public domain)"
+    ],
+    "url": "cents.gallery"
+   }
+  }
+ ]
+}

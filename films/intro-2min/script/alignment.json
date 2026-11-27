@@ -1,0 +1,1701 @@
+{
+ "_source": "STAND-IN for the silent rehearsal: fake timings from audio/tts_text.txt, not a recording. Replace with the heard take (check_heard.py --write-alignment).",
+ "duration": 137.5,
+ "words": [
+  {
+   "word": "In",
+   "start": 0.8,
+   "end": 0.972
+  },
+  {
+   "word": "twenty",
+   "start": 1.012,
+   "end": 1.368
+  },
+  {
+   "word": "seventeen",
+   "start": 1.408,
+   "end": 1.902
+  },
+  {
+   "word": "Rutherford",
+   "start": 1.942,
+   "end": 2.482
+  },
+  {
+   "word": "Chang",
+   "start": 2.522,
+   "end": 2.832
+  },
+  {
+   "word": "said:",
+   "start": 2.872,
+   "end": 3.136
+  },
+  {
+   "word": "\"I'm",
+   "start": 3.326,
+   "end": 3.498
+  },
+  {
+   "word": "going",
+   "start": 3.538,
+   "end": 3.848
+  },
+  {
+   "word": "to",
+   "start": 3.888,
+   "end": 4.06
+  },
+  {
+   "word": "start",
+   "start": 4.1,
+   "end": 4.41
+  },
+  {
+   "word": "hoarding",
+   "start": 4.45,
+   "end": 4.898
+  },
+  {
+   "word": "pennies.\"",
+   "start": 4.938,
+   "end": 5.34
+  },
+  {
+   "word": "The",
+   "start": 5.78,
+   "end": 5.998
+  },
+  {
+   "word": "penny,",
+   "start": 6.038,
+   "end": 6.348
+  },
+  {
+   "word": "he",
+   "start": 6.538,
+   "end": 6.71
+  },
+  {
+   "word": "said,",
+   "start": 6.75,
+   "end": 7.014
+  },
+  {
+   "word": "is",
+   "start": 7.204,
+   "end": 7.376
+  },
+  {
+   "word": "\"the",
+   "start": 7.416,
+   "end": 7.634
+  },
+  {
+   "word": "lowest",
+   "start": 7.674,
+   "end": 8.03
+  },
+  {
+   "word": "common",
+   "start": 8.07,
+   "end": 8.426
+  },
+  {
+   "word": "denominator,",
+   "start": 8.466,
+   "end": 9.052
+  },
+  {
+   "word": "it's",
+   "start": 9.242,
+   "end": 9.46
+  },
+  {
+   "word": "like",
+   "start": 9.5,
+   "end": 9.764
+  },
+  {
+   "word": "junk,",
+   "start": 9.804,
+   "end": 10.068
+  },
+  {
+   "word": "it's",
+   "start": 10.258,
+   "end": 10.476
+  },
+  {
+   "word": "like",
+   "start": 10.516,
+   "end": 10.78
+  },
+  {
+   "word": "nothing.\"",
+   "start": 10.82,
+   "end": 11.222
+  },
+  {
+   "word": "He",
+   "start": 11.962,
+   "end": 12.134
+  },
+  {
+   "word": "had,",
+   "start": 12.174,
+   "end": 12.392
+  },
+  {
+   "word": "he",
+   "start": 12.582,
+   "end": 12.754
+  },
+  {
+   "word": "said,",
+   "start": 12.794,
+   "end": 13.058
+  },
+  {
+   "word": "\"no",
+   "start": 13.248,
+   "end": 13.42
+  },
+  {
+   "word": "idea\"",
+   "start": 13.46,
+   "end": 13.724
+  },
+  {
+   "word": "what",
+   "start": 13.764,
+   "end": 14.028
+  },
+  {
+   "word": "he",
+   "start": 14.068,
+   "end": 14.24
+  },
+  {
+   "word": "would",
+   "start": 14.28,
+   "end": 14.59
+  },
+  {
+   "word": "make",
+   "start": 14.63,
+   "end": 14.894
+  },
+  {
+   "word": "of",
+   "start": 14.934,
+   "end": 15.106
+  },
+  {
+   "word": "them.",
+   "start": 15.146,
+   "end": 15.41
+  },
+  {
+   "word": "What",
+   "start": 16.45,
+   "end": 16.714
+  },
+  {
+   "word": "he",
+   "start": 16.754,
+   "end": 16.926
+  },
+  {
+   "word": "made,",
+   "start": 16.966,
+   "end": 17.23
+  },
+  {
+   "word": "CENTS,",
+   "start": 17.42,
+   "end": 17.73
+  },
+  {
+   "word": "is",
+   "start": 17.92,
+   "end": 18.092
+  },
+  {
+   "word": "a",
+   "start": 18.132,
+   "end": 18.258
+  },
+  {
+   "word": "work",
+   "start": 18.298,
+   "end": 18.562
+  },
+  {
+   "word": "of",
+   "start": 18.602,
+   "end": 18.774
+  },
+  {
+   "word": "its",
+   "start": 18.814,
+   "end": 19.032
+  },
+  {
+   "word": "medium.",
+   "start": 19.072,
+   "end": 19.428
+  },
+  {
+   "word": "Chang",
+   "start": 19.868,
+   "end": 20.178
+  },
+  {
+   "word": "inscribed",
+   "start": 20.218,
+   "end": 20.712
+  },
+  {
+   "word": "images",
+   "start": 20.752,
+   "end": 21.108
+  },
+  {
+   "word": "of",
+   "start": 21.148,
+   "end": 21.32
+  },
+  {
+   "word": "ten",
+   "start": 21.36,
+   "end": 21.578
+  },
+  {
+   "word": "thousand",
+   "start": 21.618,
+   "end": 22.066
+  },
+  {
+   "word": "copper",
+   "start": 22.106,
+   "end": 22.462
+  },
+  {
+   "word": "cents",
+   "start": 22.502,
+   "end": 22.812
+  },
+  {
+   "word": "on",
+   "start": 22.852,
+   "end": 23.024
+  },
+  {
+   "word": "Bitcoin,",
+   "start": 23.064,
+   "end": 23.466
+  },
+  {
+   "word": "and",
+   "start": 23.656,
+   "end": 23.874
+  },
+  {
+   "word": "the",
+   "start": 23.914,
+   "end": 24.132
+  },
+  {
+   "word": "work",
+   "start": 24.172,
+   "end": 24.436
+  },
+  {
+   "word": "shows",
+   "start": 24.476,
+   "end": 24.786
+  },
+  {
+   "word": "what",
+   "start": 24.826,
+   "end": 25.09
+  },
+  {
+   "word": "happens",
+   "start": 25.13,
+   "end": 25.532
+  },
+  {
+   "word": "to",
+   "start": 25.572,
+   "end": 25.744
+  },
+  {
+   "word": "money",
+   "start": 25.784,
+   "end": 26.094
+  },
+  {
+   "word": "when",
+   "start": 26.134,
+   "end": 26.398
+  },
+  {
+   "word": "its",
+   "start": 26.438,
+   "end": 26.656
+  },
+  {
+   "word": "record",
+   "start": 26.696,
+   "end": 27.052
+  },
+  {
+   "word": "passes",
+   "start": 27.092,
+   "end": 27.448
+  },
+  {
+   "word": "from",
+   "start": 27.488,
+   "end": 27.752
+  },
+  {
+   "word": "a",
+   "start": 27.792,
+   "end": 27.918
+  },
+  {
+   "word": "state",
+   "start": 27.958,
+   "end": 28.268
+  },
+  {
+   "word": "to",
+   "start": 28.308,
+   "end": 28.48
+  },
+  {
+   "word": "a",
+   "start": 28.52,
+   "end": 28.646
+  },
+  {
+   "word": "public",
+   "start": 28.686,
+   "end": 29.042
+  },
+  {
+   "word": "network",
+   "start": 29.082,
+   "end": 29.484
+  },
+  {
+   "word": "that",
+   "start": 29.524,
+   "end": 29.788
+  },
+  {
+   "word": "anyone",
+   "start": 29.828,
+   "end": 30.184
+  },
+  {
+   "word": "can",
+   "start": 30.224,
+   "end": 30.442
+  },
+  {
+   "word": "read",
+   "start": 30.482,
+   "end": 30.746
+  },
+  {
+   "word": "and",
+   "start": 30.786,
+   "end": 31.004
+  },
+  {
+   "word": "no",
+   "start": 31.044,
+   "end": 31.216
+  },
+  {
+   "word": "one",
+   "start": 31.256,
+   "end": 31.474
+  },
+  {
+   "word": "runs.",
+   "start": 31.514,
+   "end": 31.778
+  },
+  {
+   "word": "Released",
+   "start": 32.218,
+   "end": 32.666
+  },
+  {
+   "word": "at",
+   "start": 32.706,
+   "end": 32.878
+  },
+  {
+   "word": "one",
+   "start": 32.918,
+   "end": 33.136
+  },
+  {
+   "word": "satoshi",
+   "start": 33.176,
+   "end": 33.578
+  },
+  {
+   "word": "each,",
+   "start": 33.618,
+   "end": 33.882
+  },
+  {
+   "word": "the",
+   "start": 34.072,
+   "end": 34.29
+  },
+  {
+   "word": "inscriptions",
+   "start": 34.33,
+   "end": 34.962
+  },
+  {
+   "word": "moved",
+   "start": 35.002,
+   "end": 35.312
+  },
+  {
+   "word": "each",
+   "start": 35.352,
+   "end": 35.616
+  },
+  {
+   "word": "cent's",
+   "start": 35.656,
+   "end": 35.966
+  },
+  {
+   "word": "value",
+   "start": 36.006,
+   "end": 36.316
+  },
+  {
+   "word": "from",
+   "start": 36.356,
+   "end": 36.62
+  },
+  {
+   "word": "a",
+   "start": 36.66,
+   "end": 36.786
+  },
+  {
+   "word": "figure",
+   "start": 36.826,
+   "end": 37.182
+  },
+  {
+   "word": "set",
+   "start": 37.222,
+   "end": 37.44
+  },
+  {
+   "word": "by",
+   "start": 37.48,
+   "end": 37.652
+  },
+  {
+   "word": "the",
+   "start": 37.692,
+   "end": 37.91
+  },
+  {
+   "word": "state",
+   "start": 37.95,
+   "end": 38.26
+  },
+  {
+   "word": "into",
+   "start": 38.3,
+   "end": 38.564
+  },
+  {
+   "word": "an",
+   "start": 38.604,
+   "end": 38.776
+  },
+  {
+   "word": "ongoing",
+   "start": 38.816,
+   "end": 39.218
+  },
+  {
+   "word": "process,",
+   "start": 39.258,
+   "end": 39.66
+  },
+  {
+   "word": "set",
+   "start": 39.85,
+   "end": 40.068
+  },
+  {
+   "word": "and",
+   "start": 40.108,
+   "end": 40.326
+  },
+  {
+   "word": "set",
+   "start": 40.366,
+   "end": 40.584
+  },
+  {
+   "word": "again",
+   "start": 40.624,
+   "end": 40.934
+  },
+  {
+   "word": "by",
+   "start": 40.974,
+   "end": 41.146
+  },
+  {
+   "word": "the",
+   "start": 41.186,
+   "end": 41.404
+  },
+  {
+   "word": "people",
+   "start": 41.444,
+   "end": 41.8
+  },
+  {
+   "word": "who",
+   "start": 41.84,
+   "end": 42.058
+  },
+  {
+   "word": "keep,",
+   "start": 42.098,
+   "end": 42.362
+  },
+  {
+   "word": "read",
+   "start": 42.552,
+   "end": 42.816
+  },
+  {
+   "word": "and",
+   "start": 42.856,
+   "end": 43.074
+  },
+  {
+   "word": "exchange",
+   "start": 43.114,
+   "end": 43.562
+  },
+  {
+   "word": "each",
+   "start": 43.602,
+   "end": 43.866
+  },
+  {
+   "word": "Cent.",
+   "start": 43.906,
+   "end": 44.17
+  },
+  {
+   "word": "It",
+   "start": 45.41,
+   "end": 45.582
+  },
+  {
+   "word": "began",
+   "start": 45.622,
+   "end": 45.932
+  },
+  {
+   "word": "with",
+   "start": 45.972,
+   "end": 46.236
+  },
+  {
+   "word": "copper.",
+   "start": 46.276,
+   "end": 46.632
+  },
+  {
+   "word": "A",
+   "start": 47.072,
+   "end": 47.198
+  },
+  {
+   "word": "copper",
+   "start": 47.238,
+   "end": 47.594
+  },
+  {
+   "word": "cent",
+   "start": 47.634,
+   "end": 47.898
+  },
+  {
+   "word": "struck",
+   "start": 47.938,
+   "end": 48.294
+  },
+  {
+   "word": "before",
+   "start": 48.334,
+   "end": 48.69
+  },
+  {
+   "word": "nineteen",
+   "start": 48.73,
+   "end": 49.178
+  },
+  {
+   "word": "eighty-three",
+   "start": 49.218,
+   "end": 49.804
+  },
+  {
+   "word": "holds",
+   "start": 49.844,
+   "end": 50.154
+  },
+  {
+   "word": "more",
+   "start": 50.194,
+   "end": 50.458
+  },
+  {
+   "word": "than",
+   "start": 50.498,
+   "end": 50.762
+  },
+  {
+   "word": "a",
+   "start": 50.802,
+   "end": 50.928
+  },
+  {
+   "word": "cent's",
+   "start": 50.968,
+   "end": 51.278
+  },
+  {
+   "word": "worth",
+   "start": 51.318,
+   "end": 51.628
+  },
+  {
+   "word": "of",
+   "start": 51.668,
+   "end": 51.84
+  },
+  {
+   "word": "copper.",
+   "start": 51.88,
+   "end": 52.236
+  },
+  {
+   "word": "Hoarding",
+   "start": 52.676,
+   "end": 53.124
+  },
+  {
+   "word": "them,",
+   "start": 53.164,
+   "end": 53.428
+  },
+  {
+   "word": "he",
+   "start": 53.618,
+   "end": 53.79
+  },
+  {
+   "word": "said,",
+   "start": 53.83,
+   "end": 54.094
+  },
+  {
+   "word": "was",
+   "start": 54.284,
+   "end": 54.502
+  },
+  {
+   "word": "like",
+   "start": 54.542,
+   "end": 54.806
+  },
+  {
+   "word": "\"buying",
+   "start": 54.846,
+   "end": 55.202
+  },
+  {
+   "word": "one",
+   "start": 55.242,
+   "end": 55.46
+  },
+  {
+   "word": "point",
+   "start": 55.5,
+   "end": 55.81
+  },
+  {
+   "word": "seven",
+   "start": 55.85,
+   "end": 56.16
+  },
+  {
+   "word": "cents",
+   "start": 56.2,
+   "end": 56.51
+  },
+  {
+   "word": "of",
+   "start": 56.55,
+   "end": 56.722
+  },
+  {
+   "word": "copper",
+   "start": 56.762,
+   "end": 57.118
+  },
+  {
+   "word": "for",
+   "start": 57.158,
+   "end": 57.376
+  },
+  {
+   "word": "one",
+   "start": 57.416,
+   "end": 57.634
+  },
+  {
+   "word": "cent",
+   "start": 57.674,
+   "end": 57.938
+  },
+  {
+   "word": "and",
+   "start": 57.978,
+   "end": 58.196
+  },
+  {
+   "word": "it's",
+   "start": 58.236,
+   "end": 58.454
+  },
+  {
+   "word": "still",
+   "start": 58.494,
+   "end": 58.804
+  },
+  {
+   "word": "worth",
+   "start": 58.844,
+   "end": 59.154
+  },
+  {
+   "word": "one",
+   "start": 59.194,
+   "end": 59.412
+  },
+  {
+   "word": "cent.\"",
+   "start": 59.452,
+   "end": 59.716
+  },
+  {
+   "word": "Chang's",
+   "start": 60.156,
+   "end": 60.512
+  },
+  {
+   "word": "statement",
+   "start": 60.552,
+   "end": 61.046
+  },
+  {
+   "word": "for",
+   "start": 61.086,
+   "end": 61.304
+  },
+  {
+   "word": "the",
+   "start": 61.344,
+   "end": 61.562
+  },
+  {
+   "word": "work",
+   "start": 61.602,
+   "end": 61.866
+  },
+  {
+   "word": "begins",
+   "start": 61.906,
+   "end": 62.262
+  },
+  {
+   "word": "from",
+   "start": 62.302,
+   "end": 62.566
+  },
+  {
+   "word": "such",
+   "start": 62.606,
+   "end": 62.87
+  },
+  {
+   "word": "\"discrepancies",
+   "start": 62.91,
+   "end": 63.588
+  },
+  {
+   "word": "in",
+   "start": 63.628,
+   "end": 63.8
+  },
+  {
+   "word": "value.\"",
+   "start": 63.84,
+   "end": 64.15
+  },
+  {
+   "word": "He",
+   "start": 65.19,
+   "end": 65.362
+  },
+  {
+   "word": "took",
+   "start": 65.402,
+   "end": 65.666
+  },
+  {
+   "word": "ten",
+   "start": 65.706,
+   "end": 65.924
+  },
+  {
+   "word": "thousand",
+   "start": 65.964,
+   "end": 66.412
+  },
+  {
+   "word": "copper",
+   "start": 66.452,
+   "end": 66.808
+  },
+  {
+   "word": "cents",
+   "start": 66.848,
+   "end": 67.158
+  },
+  {
+   "word": "out",
+   "start": 67.198,
+   "end": 67.416
+  },
+  {
+   "word": "of",
+   "start": 67.456,
+   "end": 67.628
+  },
+  {
+   "word": "circulation",
+   "start": 67.668,
+   "end": 68.254
+  },
+  {
+   "word": "and",
+   "start": 68.294,
+   "end": 68.512
+  },
+  {
+   "word": "photographed",
+   "start": 68.552,
+   "end": 69.184
+  },
+  {
+   "word": "every",
+   "start": 69.224,
+   "end": 69.534
+  },
+  {
+   "word": "coin.",
+   "start": 69.574,
+   "end": 69.838
+  },
+  {
+   "word": "Coins",
+   "start": 70.278,
+   "end": 70.588
+  },
+  {
+   "word": "made",
+   "start": 70.628,
+   "end": 70.892
+  },
+  {
+   "word": "to",
+   "start": 70.932,
+   "end": 71.104
+  },
+  {
+   "word": "be",
+   "start": 71.144,
+   "end": 71.316
+  },
+  {
+   "word": "identical",
+   "start": 71.356,
+   "end": 71.85
+  },
+  {
+   "word": "turned",
+   "start": 71.89,
+   "end": 72.246
+  },
+  {
+   "word": "out",
+   "start": 72.286,
+   "end": 72.504
+  },
+  {
+   "word": "to",
+   "start": 72.544,
+   "end": 72.716
+  },
+  {
+   "word": "differ,",
+   "start": 72.756,
+   "end": 73.112
+  },
+  {
+   "word": "each",
+   "start": 73.302,
+   "end": 73.566
+  },
+  {
+   "word": "marked",
+   "start": 73.606,
+   "end": 73.962
+  },
+  {
+   "word": "by",
+   "start": 74.002,
+   "end": 74.174
+  },
+  {
+   "word": "its",
+   "start": 74.214,
+   "end": 74.432
+  },
+  {
+   "word": "own",
+   "start": 74.472,
+   "end": 74.69
+  },
+  {
+   "word": "wear,",
+   "start": 74.73,
+   "end": 74.994
+  },
+  {
+   "word": "toning",
+   "start": 75.184,
+   "end": 75.54
+  },
+  {
+   "word": "and",
+   "start": 75.58,
+   "end": 75.798
+  },
+  {
+   "word": "color.",
+   "start": 75.838,
+   "end": 76.148
+  },
+  {
+   "word": "He",
+   "start": 77.088,
+   "end": 77.26
+  },
+  {
+   "word": "had",
+   "start": 77.3,
+   "end": 77.518
+  },
+  {
+   "word": "the",
+   "start": 77.558,
+   "end": 77.776
+  },
+  {
+   "word": "coins",
+   "start": 77.816,
+   "end": 78.126
+  },
+  {
+   "word": "melted",
+   "start": 78.166,
+   "end": 78.522
+  },
+  {
+   "word": "and",
+   "start": 78.562,
+   "end": 78.78
+  },
+  {
+   "word": "cast",
+   "start": 78.82,
+   "end": 79.084
+  },
+  {
+   "word": "into",
+   "start": 79.124,
+   "end": 79.388
+  },
+  {
+   "word": "one",
+   "start": 79.428,
+   "end": 79.646
+  },
+  {
+   "word": "block,",
+   "start": 79.686,
+   "end": 79.996
+  },
+  {
+   "word": "CENTS",
+   "start": 80.186,
+   "end": 80.496
+  },
+  {
+   "word": "Block",
+   "start": 80.536,
+   "end": 80.846
+  },
+  {
+   "word": "Copper.",
+   "start": 80.886,
+   "end": 81.242
+  },
+  {
+   "word": "In",
+   "start": 81.682,
+   "end": 81.854
+  },
+  {
+   "word": "March",
+   "start": 81.894,
+   "end": 82.204
+  },
+  {
+   "word": "twenty",
+   "start": 82.244,
+   "end": 82.6
+  },
+  {
+   "word": "twenty-four",
+   "start": 82.64,
+   "end": 83.18
+  },
+  {
+   "word": "he",
+   "start": 83.22,
+   "end": 83.392
+  },
+  {
+   "word": "inscribed",
+   "start": 83.432,
+   "end": 83.926
+  },
+  {
+   "word": "the",
+   "start": 83.966,
+   "end": 84.184
+  },
+  {
+   "word": "image",
+   "start": 84.224,
+   "end": 84.534
+  },
+  {
+   "word": "of",
+   "start": 84.574,
+   "end": 84.746
+  },
+  {
+   "word": "each",
+   "start": 84.786,
+   "end": 85.05
+  },
+  {
+   "word": "obverse,",
+   "start": 85.09,
+   "end": 85.492
+  },
+  {
+   "word": "one",
+   "start": 85.682,
+   "end": 85.9
+  },
+  {
+   "word": "image",
+   "start": 85.94,
+   "end": 86.25
+  },
+  {
+   "word": "to",
+   "start": 86.29,
+   "end": 86.462
+  },
+  {
+   "word": "one",
+   "start": 86.502,
+   "end": 86.72
+  },
+  {
+   "word": "satoshi,",
+   "start": 86.76,
+   "end": 87.162
+  },
+  {
+   "word": "the",
+   "start": 87.352,
+   "end": 87.57
+  },
+  {
+   "word": "smallest",
+   "start": 87.61,
+   "end": 88.058
+  },
+  {
+   "word": "unit",
+   "start": 88.098,
+   "end": 88.362
+  },
+  {
+   "word": "of",
+   "start": 88.402,
+   "end": 88.574
+  },
+  {
+   "word": "bitcoin,",
+   "start": 88.614,
+   "end": 89.016
+  },
+  {
+   "word": "and",
+   "start": 89.206,
+   "end": 89.424
+  },
+  {
+   "word": "in",
+   "start": 89.464,
+   "end": 89.636
+  },
+  {
+   "word": "April",
+   "start": 89.676,
+   "end": 89.986
+  },
+  {
+   "word": "the",
+   "start": 90.026,
+   "end": 90.244
+  },
+  {
+   "word": "block's",
+   "start": 90.284,
+   "end": 90.64
+  },
+  {
+   "word": "model,",
+   "start": 90.68,
+   "end": 90.99
+  },
+  {
+   "word": "which",
+   "start": 91.18,
+   "end": 91.49
+  },
+  {
+   "word": "fills",
+   "start": 91.53,
+   "end": 91.84
+  },
+  {
+   "word": "a",
+   "start": 91.88,
+   "end": 92.006
+  },
+  {
+   "word": "whole",
+   "start": 92.046,
+   "end": 92.356
+  },
+  {
+   "word": "block",
+   "start": 92.396,
+   "end": 92.706
+  },
+  {
+   "word": "of",
+   "start": 92.746,
+   "end": 92.918
+  },
+  {
+   "word": "the",
+   "start": 92.958,
+   "end": 93.176
+  },
+  {
+   "word": "chain:",
+   "start": 93.216,
+   "end": 93.526
+  },
+  {
+   "word": "CENTS",
+   "start": 93.716,
+   "end": 94.026
+  },
+  {
+   "word": "Block",
+   "start": 94.066,
+   "end": 94.376
+  },
+  {
+   "word": "eight",
+   "start": 94.416,
+   "end": 94.726
+  },
+  {
+   "word": "three",
+   "start": 94.766,
+   "end": 95.076
+  },
+  {
+   "word": "nine",
+   "start": 95.116,
+   "end": 95.38
+  },
+  {
+   "word": "nine",
+   "start": 95.42,
+   "end": 95.684
+  },
+  {
+   "word": "six",
+   "start": 95.724,
+   "end": 95.942
+  },
+  {
+   "word": "nine.",
+   "start": 95.982,
+   "end": 96.246
+  },
+  {
+   "word": "His",
+   "start": 96.686,
+   "end": 96.904
+  },
+  {
+   "word": "statement",
+   "start": 96.944,
+   "end": 97.438
+  },
+  {
+   "word": "calls",
+   "start": 97.478,
+   "end": 97.788
+  },
+  {
+   "word": "it",
+   "start": 97.828,
+   "end": 98.0
+  },
+  {
+   "word": "\"an",
+   "start": 98.04,
+   "end": 98.212
+  },
+  {
+   "word": "immutable",
+   "start": 98.252,
+   "end": 98.746
+  },
+  {
+   "word": "digital",
+   "start": 98.786,
+   "end": 99.188
+  },
+  {
+   "word": "monument.\"",
+   "start": 99.228,
+   "end": 99.676
+  },
+  {
+   "word": "The",
+   "start": 100.716,
+   "end": 100.934
+  },
+  {
+   "word": "coin,",
+   "start": 100.974,
+   "end": 101.238
+  },
+  {
+   "word": "its",
+   "start": 101.428,
+   "end": 101.646
+  },
+  {
+   "word": "image,",
+   "start": 101.686,
+   "end": 101.996
+  },
+  {
+   "word": "its",
+   "start": 102.186,
+   "end": 102.404
+  },
+  {
+   "word": "inscription,",
+   "start": 102.444,
+   "end": 103.03
+  },
+  {
+   "word": "the",
+   "start": 103.22,
+   "end": 103.438
+  },
+  {
+   "word": "copper",
+   "start": 103.478,
+   "end": 103.834
+  },
+  {
+   "word": "and",
+   "start": 103.874,
+   "end": 104.092
+  },
+  {
+   "word": "the",
+   "start": 104.132,
+   "end": 104.35
+  },
+  {
+   "word": "model:",
+   "start": 104.39,
+   "end": 104.7
+  },
+  {
+   "word": "each",
+   "start": 104.89,
+   "end": 105.154
+  },
+  {
+   "word": "is",
+   "start": 105.194,
+   "end": 105.366
+  },
+  {
+   "word": "a",
+   "start": 105.406,
+   "end": 105.532
+  },
+  {
+   "word": "cent",
+   "start": 105.572,
+   "end": 105.836
+  },
+  {
+   "word": "in",
+   "start": 105.876,
+   "end": 106.048
+  },
+  {
+   "word": "its",
+   "start": 106.088,
+   "end": 106.306
+  },
+  {
+   "word": "own",
+   "start": 106.346,
+   "end": 106.564
+  },
+  {
+   "word": "way.",
+   "start": 106.604,
+   "end": 106.822
+  },
+  {
+   "word": "Collectors",
+   "start": 107.862,
+   "end": 108.402
+  },
+  {
+   "word": "preferred",
+   "start": 108.442,
+   "end": 108.936
+  },
+  {
+   "word": "the",
+   "start": 108.976,
+   "end": 109.194
+  },
+  {
+   "word": "damaged",
+   "start": 109.234,
+   "end": 109.636
+  },
+  {
+   "word": "to",
+   "start": 109.676,
+   "end": 109.848
+  },
+  {
+   "word": "the",
+   "start": 109.888,
+   "end": 110.106
+  },
+  {
+   "word": "clean.",
+   "start": 110.146,
+   "end": 110.456
+  },
+  {
+   "word": "A",
+   "start": 110.896,
+   "end": 111.022
+  },
+  {
+   "word": "council",
+   "start": 111.062,
+   "end": 111.464
+  },
+  {
+   "word": "of",
+   "start": 111.504,
+   "end": 111.676
+  },
+  {
+   "word": "collectors",
+   "start": 111.716,
+   "end": 112.256
+  },
+  {
+   "word": "reviewed",
+   "start": 112.296,
+   "end": 112.744
+  },
+  {
+   "word": "and",
+   "start": 112.784,
+   "end": 113.002
+  },
+  {
+   "word": "voted",
+   "start": 113.042,
+   "end": 113.352
+  },
+  {
+   "word": "on",
+   "start": 113.392,
+   "end": 113.564
+  },
+  {
+   "word": "all",
+   "start": 113.604,
+   "end": 113.822
+  },
+  {
+   "word": "ten",
+   "start": 113.862,
+   "end": 114.08
+  },
+  {
+   "word": "thousand",
+   "start": 114.12,
+   "end": 114.568
+  },
+  {
+   "word": "Cents",
+   "start": 114.608,
+   "end": 114.918
+  },
+  {
+   "word": "three",
+   "start": 114.958,
+   "end": 115.268
+  },
+  {
+   "word": "times,",
+   "start": 115.308,
+   "end": 115.618
+  },
+  {
+   "word": "and",
+   "start": 115.808,
+   "end": 116.026
+  },
+  {
+   "word": "agreed",
+   "start": 116.066,
+   "end": 116.422
+  },
+  {
+   "word": "on",
+   "start": 116.462,
+   "end": 116.634
+  },
+  {
+   "word": "nineteen",
+   "start": 116.674,
+   "end": 117.122
+  },
+  {
+   "word": "traits.",
+   "start": 117.162,
+   "end": 117.518
+  },
+  {
+   "word": "Chang's",
+   "start": 118.558,
+   "end": 118.914
+  },
+  {
+   "word": "statement",
+   "start": 118.954,
+   "end": 119.448
+  },
+  {
+   "word": "ends:",
+   "start": 119.488,
+   "end": 119.752
+  },
+  {
+   "word": "\"its",
+   "start": 119.942,
+   "end": 120.16
+  },
+  {
+   "word": "value",
+   "start": 120.2,
+   "end": 120.51
+  },
+  {
+   "word": "can",
+   "start": 120.55,
+   "end": 120.768
+  },
+  {
+   "word": "continue",
+   "start": 120.808,
+   "end": 121.256
+  },
+  {
+   "word": "to",
+   "start": 121.296,
+   "end": 121.468
+  },
+  {
+   "word": "be",
+   "start": 121.508,
+   "end": 121.68
+  },
+  {
+   "word": "redefined",
+   "start": 121.72,
+   "end": 122.214
+  },
+  {
+   "word": "through",
+   "start": 122.254,
+   "end": 122.656
+  },
+  {
+   "word": "this",
+   "start": 122.696,
+   "end": 122.96
+  },
+  {
+   "word": "digitally",
+   "start": 123.0,
+   "end": 123.494
+  },
+  {
+   "word": "scarce",
+   "start": 123.534,
+   "end": 123.89
+  },
+  {
+   "word": "set",
+   "start": 123.93,
+   "end": 124.148
+  },
+  {
+   "word": "of",
+   "start": 124.188,
+   "end": 124.36
+  },
+  {
+   "word": "ten",
+   "start": 124.4,
+   "end": 124.618
+  },
+  {
+   "word": "thousand",
+   "start": 124.658,
+   "end": 125.106
+  },
+  {
+   "word": "and",
+   "start": 125.146,
+   "end": 125.364
+  },
+  {
+   "word": "the",
+   "start": 125.404,
+   "end": 125.622
+  },
+  {
+   "word": "block",
+   "start": 125.662,
+   "end": 125.972
+  },
+  {
+   "word": "that",
+   "start": 126.012,
+   "end": 126.276
+  },
+  {
+   "word": "encapsulates",
+   "start": 126.316,
+   "end": 126.948
+  },
+  {
+   "word": "their",
+   "start": 126.988,
+   "end": 127.298
+  },
+  {
+   "word": "transformation.\"",
+   "start": 127.338,
+   "end": 128.062
+  }
+ ]
+}
