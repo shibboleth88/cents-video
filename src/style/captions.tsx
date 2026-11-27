@@ -35,9 +35,11 @@ const UNITS: Record<string, number> = {
 };
 
 /** "thirty-three," -> "33,". Only 10 to 99, so "one of them" and "two wallets" stay words. */
-function numeral(tok: string): string {
+function numeral(tok: string, next?: string): string {
   const m = tok.match(/^([A-Za-z-]+)([^A-Za-z]*)$/);
   if (!m) return tok;
+  // "ten thousand" stays words: "10 thousand" is neither the script's form nor a numeral (intro film, 2026-11-27).
+  if (next && /^(hundred|thousand|million|billion)/i.test(next)) return tok;
   const [a = "", b] = m[1]!.toLowerCase().split("-");
   let n: number | undefined;
   if (b === undefined) n = SMALL[a] ?? TENS[a];
@@ -112,7 +114,7 @@ const Lead: React.FC<{ cue: Cue; alignment?: Alignment }> = ({ cue, alignment })
   const { fps } = useVideoConfig();
   const t = f / fps;
   const { words, times } = cueWords(cue, alignment);
-  const shown = words.map((w) => nobreak(numeral(w)));
+  const shown = words.map((w, i) => nobreak(numeral(w, words[i + 1])));
   let op: number[] | undefined;
   let col: (string | undefined)[] | undefined;
   if (times) {
@@ -139,7 +141,7 @@ const Keys: React.FC<{ cue: Cue; alignment?: Alignment }> = ({ cue, alignment })
   const { fps } = useVideoConfig();
   const t = f / fps;
   const { words, times } = cueWords(cue, alignment);
-  const shown = words.map((w) => nobreak(numeral(w)));
+  const shown = words.map((w, i) => nobreak(numeral(w, words[i + 1])));
   const lastStart = times ? times[times.length - 1]! + 0.25 : cue.end;
   const fill = interpolate(t, [cue.start, lastStart], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   const enter = interpolate(t, [cue.start - 0.05, cue.start + 0.15], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
@@ -189,7 +191,7 @@ const Phrase: React.FC<{ cue: Cue; alignment?: Alignment }> = ({ cue, alignment 
   const { fps } = useVideoConfig();
   const t = f / fps;
   const { words, times: timed } = cueWords(cue, alignment);
-  const shown = words.map((w) => nobreak(numeral(w)));
+  const shown = words.map((w, i) => nobreak(numeral(w, words[i + 1])));
   // A whole cue does not fit at this size, so an untimed cue still goes phrase by
   // phrase, its words spread over the cue by length.
   const chars = shown.map((w) => w.length + 1);
